@@ -1,0 +1,36 @@
+{
+  "name": "@app/app-global-test",
+  "version": "0.6.0",
+  "private": false,
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Stokedbits"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "depenence.update": "ncu -u",
+    "rm.assets": "rm -rf @types",
+    "ready.assets": "run-s  ready:*",
+    "ready:definitive": "cpx \"../appDefinitive/@types/**/*.*\" ./@types",
+    "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+    "test.global": "jest --config jest.config.js --env=node --colors --coverage test"
+  },
+  "dependencies": {
+    "@app/tools": "0.6.0",
+    "@app/types": "0.6.0",
+    "@app/avatar": "0.6.0",
+    "@app/mocks": "0.6.0",
+    "@app/shared-components": "0.6.0",
+    "@types/node": "11.9.4",
+    "@types/react": "16.7.18",
+    "@types/chroma-js": "1.3.3",
+    "chroma-js": "1.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.6",
+    "jest": "24.1.0",
+    "typescript": "3.3.3"
+  }
+}
