@@ -2,6 +2,7 @@ import * as React from 'react';
 import { render, Artboard, Text, View } from 'react-sketchapp';
 import chroma from 'chroma-js';
 
+
 // take a hex and give us a nice text color to put over it
 const textColor = (hex: string) => {
   const vsWhite = chroma.contrast(hex, 'white');

@@ -5,7 +5,7 @@
     "jsx": "react-native",
     "allowJs": true,
     "strict": true,
-      "moduleResolution": "node",
+    "moduleResolution": "node",
     "outDir": "./.ts-compiled",
     "rootDir": "./src",
     "allowSyntheticDefaultImports": true
