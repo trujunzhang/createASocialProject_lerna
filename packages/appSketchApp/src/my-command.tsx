@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render, Artboard } from 'react-sketchapp';
 import {
   Swatch
-} from '@app/shared-components'
+} from './shared-components'
 
 interface SwatchProps {
   name: string,

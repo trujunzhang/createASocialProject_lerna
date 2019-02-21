@@ -39,7 +39,7 @@
     "@types/react-dom": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-art": "16.5.2",
-    "react-native-web": "^0.10.0"
+    "react-native-web": "0.10.0"
   },
   "peerDependencies": {
     "prop-types": ">=15",
@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@app/mocks": "0.6.0",
-    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-module-resolver": "3.2.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",

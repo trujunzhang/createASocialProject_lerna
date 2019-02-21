@@ -25,9 +25,13 @@ production-cloud/*
 
 static/
 
-
 .check/*
 
+# sketchplugin
+**/*.sketchplugin
+
+# libs
+src/shared-component/**/*
 
 
 # definitive

@@ -22,10 +22,10 @@
   "dependencies": {
     "@app/types": "0.6.0",
     "@app/tools": "0.6.0",
-    "@app/shared-components": "0.6.0",
     "react-native": "0.42.3",
     "@types/react-primitives": "0.6.2",
     "react-primitives": "0.7.0",
+    "react-native-web": "0.10.0",
     "@skpm/builder": "0.4.0",
     "@types/react-sketchapp": "0.12.1",
     "typescript": "3.3.3"
