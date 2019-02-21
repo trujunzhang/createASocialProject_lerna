@@ -11,7 +11,9 @@
       "scripts": {
             "*****  The following is for lerna ****": "",
             "bootstrap": "lerna bootstrap  --concurrency 30",
-            "postinstall": "yarn bootstrap",
+            "ready.assets": "lerna run ready.assets",
+            "build": "lerna run build --stream",
+            "postinstall": "yarn ready.assets && yarn bootstrap",
             " *****  The following is for sketch app****": "",
             "app:sketch": "lerna run render --scope=app-sketch --stream",
             "app:sketch.build": "lerna run build:js --scope=app-sketch --stream",
