@@ -9,8 +9,6 @@
     "rm.assets": "rm -rf @types",
     "ready.assets": "run-s  ready:*",
     "ready:appSharedComps": "cpx \"../appLibrary/appSharedComps/src/**/*.*\" ./src/shared-components",
-    "build:js.last": "babel src --out-dir .ts-compiled --extensions \".ts,.tsx\" ",
-    "build:js": "rollup -c",
     "build": "npm run typescript:once && skpm-build",
     "watch": "skpm-build --watch & npm run typescript",
     "render": "skpm-build --watch --run & npm run typescript",
@@ -19,6 +17,7 @@
     "typescript.last": "tsc --watch",
     "typescript": "echo 'typescript watch'",
     "typescript:once": "tsc",
+    "build:js": "yarn typescript:once",
     "typescript:once.error": "yarn build:js",
     "typescript:clean": "rm -rf ./.ts-compiled"
   },

@@ -751,22 +751,6 @@
   resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.9.tgz#f2d14df87b0739041bc53a7d75e3d77d726a3ec0"
   integrity sha1-8tFN+HsHOQQbxTp9dePXfXJqPsA=
 
-"@types/react-native@*":
-  version "0.57.37"
-  resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.57.37.tgz#8cc9d142d5c6a2b7580fec9673984edfbd125194"
-  integrity sha1-jMnRQtXGordYD+yWc5hO370SUZQ=
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/react" "*"
-
-"@types/react-primitives@0.6.2":
-  version "0.6.2"
-  resolved "http://registry.npm.taobao.org/@types/react-primitives/download/@types/react-primitives-0.6.2.tgz#c1490667968a42029ed6eb4555808e1542e9ccd8"
-  integrity sha1-wUkGZ5aKQgKe1utFVYCOFULpzNg=
-  dependencies:
-    "@types/react" "*"
-    "@types/react-native" "*"
-
 "@types/react-test-renderer@16.0.3":
   version "16.0.3"
   resolved "http://registry.npm.taobao.org/@types/react-test-renderer/download/@types/react-test-renderer-16.0.3.tgz#cce5c983d66cc5c3582e7c2f44b274ab635a8acc"
@@ -3603,19 +3587,19 @@ react-art@16.5.2:
     schedule "^0.5.0"
 
 react-dom@^16.8.2:
-  version "16.8.2"
-  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.8.2.tgz#7c8a69545dd554d45d66442230ba04a6a0a3c3d3"
-  integrity sha1-fIppVF3VVNRdZkQiMLoEpqCjw9M=
+  version "16.8.3"
+  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.8.3.tgz#ae236029e66210783ac81999d3015dfc475b9c32"
+  integrity sha1-riNgKeZiEHg6yBmZ0wFd/EdbnDI=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.2"
+    scheduler "^0.13.3"
 
 react-is@^16.7.0, react-is@^16.8.1:
-  version "16.8.2"
-  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
-  integrity sha1-CYkdMkytHLDB8tkfcKcaS+403w8=
+  version "16.8.3"
+  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
+  integrity sha1-StiwKcKnGPwM/HRsjU4bciHlOH0=
 
 react-native-web@0.10.0:
   version "0.10.0"
@@ -3738,9 +3722,9 @@ regenerator-runtime@^0.12.0:
   integrity sha1-+hpxVEdkwDb4xJsToIsllMn4oN4=
 
 regenerator-transform@^0.13.3:
-  version "0.13.3"
-  resolved "http://registry.npm.taobao.org/regenerator-transform/download/regenerator-transform-0.13.3.tgz#264bd9ff38a8ce24b06e0636496b2c856b57bcbb"
-  integrity sha1-JkvZ/zioziSwbgY2SWsshWtXvLs=
+  version "0.13.4"
+  resolved "http://registry.npm.taobao.org/regenerator-transform/download/regenerator-transform-0.13.4.tgz#18f6763cf1382c69c36df76c6ce122cc694284fb"
+  integrity sha1-GPZ2PPE4LGnDbfdsbOEizGlChPs=
   dependencies:
     private "^0.1.6"
 
@@ -3960,10 +3944,10 @@ scheduler@^0.12.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-scheduler@^0.13.2:
-  version "0.13.2"
-  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.13.2.tgz#969eaee2764a51d2e97b20a60963b2546beff8fa"
-  integrity sha1-lp6u4nZKUdLpeyCmCWOyVGvv+Po=
+scheduler@^0.13.3:
+  version "0.13.3"
+  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.13.3.tgz#bed3c5850f62ea9c716a4d781f9daeb9b2a58896"
+  integrity sha1-vtPFhQ9i6pxxak14H52uubKliJY=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
