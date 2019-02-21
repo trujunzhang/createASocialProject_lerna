@@ -12,6 +12,12 @@
             "*****  The following is for lerna ****": "",
             "bootstrap": "lerna bootstrap  --concurrency 30",
             "postinstall": "yarn bootstrap",
-            " *****  The following is for next ****": ""
+            " *****  The following is for next ****": "",
+            "  *****  The following is for apps ****": "",
+            "fix": "lerna run fix",
+            "fix.current": "lerna run fix.current --stream",
+            "all:current": "run-s  *.current",
+            "build.current": "lerna run build.current --stream",
+            "build.current.pending": "lerna run build.current.pending --stream"
       }
 }
