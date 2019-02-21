@@ -1,10 +1,9 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 import { render, Artboard, Text, View } from 'react-sketchapp';
 import chroma from 'chroma-js';
 
 // take a hex and give us a nice text color to put over it
-const textColor = hex => {
+const textColor = (hex: string) => {
   const vsWhite = chroma.contrast(hex, 'white');
   if (vsWhite > 4) {
     return '#FFF';
@@ -14,8 +13,14 @@ const textColor = hex => {
     .hex();
 };
 
-const Swatch = ({ name, hex }) => (
+interface SwatchProps {
+  name: string,
+  hex: string,
+}
+
+const Swatch = ({ name, hex }: SwatchProps) => (
   <View
+    name={`Swatch ${name}`}
     style={{
       height: 96,
       width: 96,
@@ -24,23 +29,22 @@ const Swatch = ({ name, hex }) => (
       padding: 8,
     }}
   >
-    <Text style={{ color: textColor(hex), fontWeight: 'bold' }}>
+    <Text
+      name="Swatch Name"
+      style={{ color: textColor(hex), fontWeight: 'bold' }}
+    >
       {name}
     </Text>
-    <Text style={{ color: textColor(hex) }}>
+    <Text name="Swatch Hex" style={{ color: textColor(hex) }}>
       {hex}
     </Text>
   </View>
 );
 
-const Color = {
-  hex: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-};
-
-Swatch.propTypes = Color;
-
-const Document = ({ colors }) => (
+interface DocumentProps {
+  colors: { [key: string]: string }
+}
+const Document = ({ colors }: DocumentProps) => (
   <Artboard
     name="Swatches"
     style={{
@@ -55,9 +59,6 @@ const Document = ({ colors }) => (
   </Artboard>
 );
 
-Document.propTypes = {
-  colors: PropTypes.objectOf(PropTypes.string).isRequired,
-};
 
 export default () => {
   const colorList = {
@@ -69,6 +70,7 @@ export default () => {
     'Peach Dark': '#E37059',
     Pear: '#93DAAB',
     'Pear Dark': '#2E854B',
+    'TypeScript Blue': '#007ACC',
   };
 
   render(<Document colors={colorList} />, context.document.currentPage());
