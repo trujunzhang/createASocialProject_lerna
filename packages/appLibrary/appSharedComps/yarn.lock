@@ -751,25 +751,10 @@
   resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.9.tgz#f2d14df87b0739041bc53a7d75e3d77d726a3ec0"
   integrity sha1-8tFN+HsHOQQbxTp9dePXfXJqPsA=
 
-"@types/react-dom@^16.8.2":
-  version "16.8.2"
-  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.8.2.tgz#9bd7d33f908b243ff0692846ef36c81d4941ad12"
-  integrity sha1-m9fTP5CLJD/waShG7zbIHUlBrRI=
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-native@*":
   version "0.57.37"
   resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.57.37.tgz#8cc9d142d5c6a2b7580fec9673984edfbd125194"
   integrity sha1-jMnRQtXGordYD+yWc5hO370SUZQ=
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/react" "*"
-
-"@types/react-native@0.57.17":
-  version "0.57.17"
-  resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.57.17.tgz#5e092f7ae04fd9538d78bb051ab3f0299591627f"
-  integrity sha1-XgkveuBP2VONeLsFGrPwKZWRYn8=
   dependencies:
     "@types/prop-types" "*"
     "@types/react" "*"
@@ -782,14 +767,6 @@
     "@types/react" "*"
     "@types/react-native" "*"
 
-"@types/react-redux@6.0.12":
-  version "6.0.12"
-  resolved "http://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-6.0.12.tgz#f3e9a400b8d40db43ffd8949ce14db4aa17a53ce"
-  integrity sha1-8+mkALjUDbQ//YlJzhTbSqF6U84=
-  dependencies:
-    "@types/react" "*"
-    redux "^4.0.0"
-
 "@types/react-test-renderer@16.0.3":
   version "16.0.3"
   resolved "http://registry.npm.taobao.org/@types/react-test-renderer/download/@types/react-test-renderer-16.0.3.tgz#cce5c983d66cc5c3582e7c2f44b274ab635a8acc"
@@ -801,14 +778,6 @@
   version "16.8.4"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.8.4.tgz#134307f5266e866d5e7c25e47f31f9abd5b2ea34"
   integrity sha1-E0MH9SZuhm1efCXkfzH5q9Wy6jQ=
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
-
-"@types/react@16.7.7":
-  version "16.7.7"
-  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.7.7.tgz#1e5e23e7dd922968ed4b484cdec00a5402c9f31b"
-  integrity sha1-Hl4j592SKWjtS0hM3sAKVALJ8xs=
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -1059,7 +1028,7 @@ babel-plugin-jest-hoist@^24.1.0:
   resolved "http://registry.npm.taobao.org/babel-plugin-jest-hoist/download/babel-plugin-jest-hoist-24.1.0.tgz#dfecc491fb15e2668abbd690a697a8fd1411a7f8"
   integrity sha1-3+zEkfsV4maKu9aQppeo/RQRp/g=
 
-babel-plugin-module-resolver@^3.2.0:
+babel-plugin-module-resolver@3.2.0:
   version "3.2.0"
   resolved "http://registry.npm.taobao.org/babel-plugin-module-resolver/download/babel-plugin-module-resolver-3.2.0.tgz#ddfa5e301e3b9aa12d852a9979f18b37881ff5a7"
   integrity sha1-3fpeMB47mqEthSqZefGLN4gf9ac=
@@ -3648,7 +3617,7 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
   integrity sha1-CYkdMkytHLDB8tkfcKcaS+403w8=
 
-react-native-web@^0.10.0:
+react-native-web@0.10.0:
   version "0.10.0"
   resolved "http://registry.npm.taobao.org/react-native-web/download/react-native-web-0.10.0.tgz#7c67a25d1262f01d462b3a11cc603aef47537d18"
   integrity sha1-fGeiXRJi8B1GKzoRzGA670dTfRg=
@@ -3750,14 +3719,6 @@ realpath-native@^1.0.0, realpath-native@^1.0.2:
   integrity sha1-IAMpT+oj+wZy8kduviL89Jii1lw=
   dependencies:
     util.promisify "^1.0.0"
-
-redux@^4.0.0:
-  version "4.0.1"
-  resolved "http://registry.npm.taobao.org/redux/download/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
-  integrity sha1-Q2yubMQPvkcnaJ18j65EgI8b/vU=
-  dependencies:
-    loose-envify "^1.4.0"
-    symbol-observable "^1.2.0"
 
 regenerate-unicode-properties@^7.0.0:
   version "7.0.0"
@@ -4295,11 +4256,6 @@ supports-color@^6.0.0, supports-color@^6.1.0:
   integrity sha1-B2Srxpxj1ayELdSGfo0CXogN+PM=
   dependencies:
     has-flag "^3.0.0"
-
-symbol-observable@^1.2.0:
-  version "1.2.0"
-  resolved "http://registry.npm.taobao.org/symbol-observable/download/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
-  integrity sha1-wiaIrtTqs83C3+rLtWFmBWCgCAQ=
 
 symbol-tree@^3.2.2:
   version "3.2.2"

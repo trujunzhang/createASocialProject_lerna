@@ -16,6 +16,7 @@ interface SwatchProps {
     hex: string,
 }
 
+// name={`Swatch ${name}`}
 export const Swatch = ({ name, hex }: SwatchProps) => (
     <View
         style={{
