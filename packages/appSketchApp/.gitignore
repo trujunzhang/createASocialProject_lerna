@@ -31,7 +31,7 @@ static/
 **/*.sketchplugin
 
 # libs
-src/shared-component/**/*
+src/shared-components/**/*
 
 
 # definitive
