@@ -6,13 +6,16 @@
     "manifest": "./manifest.json"
   },
   "scripts": {
+    "build:js": "babel src --out-dir .ts-compiled --extensions \".ts,.tsx\" ",
     "build": "npm run typescript:once && skpm-build",
     "watch": "skpm-build --watch & npm run typescript",
     "render": "skpm-build --watch --run & npm run typescript",
     "render:once": "npm run typescript:once && skpm-build --run",
     "postinstall": "npm run build && skpm-link",
-    "typescript": "tsc --watch",
-    "typescript:once": "tsc",
+    "typescript.last": "tsc --watch",
+    "typescript": "echo 'typescript watch'",
+    "typescript:once.last": "tsc",
+    "typescript:once": "yarn build:js",
     "typescript:clean": "rm -rf ./.ts-compiled"
   },
   "dependencies": {

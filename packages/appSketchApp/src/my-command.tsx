@@ -1,48 +1,13 @@
 import * as React from 'react';
-import { render, Artboard, Text, View } from 'react-sketchapp';
-import chroma from 'chroma-js';
+import { render, Artboard } from 'react-sketchapp';
 import {
   Swatch
 } from '@app/shared-components'
-
-// take a hex and give us a nice text color to put over it
-const textColor = (hex: string) => {
-  const vsWhite = chroma.contrast(hex, 'white');
-  if (vsWhite > 4) {
-    return '#FFF';
-  }
-  return chroma(hex)
-    .darken(3)
-    .hex();
-};
 
 interface SwatchProps {
   name: string,
   hex: string,
 }
-
-// const Swatch = ({ name, hex }: SwatchProps) => (
-//   <View
-//     name={`Swatch ${name}`}
-//     style={{
-//       height: 96,
-//       width: 96,
-//       margin: 4,
-//       backgroundColor: hex,
-//       padding: 8,
-//     }}
-//   >
-//     <Text
-//       name="Swatch Name"
-//       style={{ color: textColor(hex), fontWeight: 'bold' }}
-//     >
-//       {name}
-//     </Text>
-//     <Text name="Swatch Hex" style={{ color: textColor(hex) }}>
-//       {hex}
-//     </Text>
-//   </View>
-// );
 
 interface DocumentProps {
   colors: { [key: string]: string }
