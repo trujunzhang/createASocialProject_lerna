@@ -20,11 +20,11 @@
   "license": "MIT",
   "devDependencies": {
     "@skpm/builder": "0.4.0",
-    "@types/chroma-js": "1.3.3",
     "@types/react-sketchapp": "0.12.1",
     "typescript": "3.3.3"
   },
   "dependencies": {
+    "@types/chroma-js": "1.3.3",
     "chroma-js": "1.2.2",
     "prop-types": "15.5.8",
     "react": "16.3.2",
