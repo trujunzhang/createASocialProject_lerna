@@ -11,7 +11,7 @@
     "watch": "skpm-build --watch & npm run typescript",
     "render": "skpm-build --watch --run & npm run typescript",
     "render:once": "npm run typescript:once && skpm-build --run",
-    "postinstall": "npm run build && skpm-link",
+    "build.sketch.plugin": "npm run build && skpm-link",
     "typescript": "tsc --watch",
     "typescript:once": "tsc",
     "typescript:clean": "rm -rf ./.ts-compiled"

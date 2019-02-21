@@ -12,7 +12,7 @@
     "render": "skpm-build --watch --run",
     "render:once": "skpm-build --run",
     "web": "react run src/web.js",
-    "postinstall": "npm run build && skpm-link"
+    "build.sketch.plugin": "npm run build && skpm-link"
   },
   "author": "Jon Gold <jon.gold@airbnb.com>",
   "license": "MIT",

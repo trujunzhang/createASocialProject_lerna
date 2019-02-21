@@ -22,7 +22,7 @@ interface SwatchProps {
     hex: string,
 }
 
-const Swatch = ({ name, hex }: SwatchProps) => (
+export const Swatch = ({ name, hex }: SwatchProps) => (
     <View
         style={{
             height: 96,

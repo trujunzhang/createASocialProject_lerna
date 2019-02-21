@@ -1,0 +1,22 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "react-sketchapp: Basic Setup with Typescript",
+      "identifier": "main",
+      "script": "my-command.js"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "main"
+    ]
+  },
+  "version": "2.0.0",
+  "name": "app-sketch",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Phuc Nguyen Hoang"
+}
