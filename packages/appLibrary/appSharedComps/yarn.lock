@@ -734,11 +734,6 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@types/chroma-js@1.3.3":
-  version "1.3.3"
-  resolved "http://registry.npm.taobao.org/@types/chroma-js/download/@types/chroma-js-1.3.3.tgz#2f8ddbaed996166c23305f8c6ff0784bea5c2a87"
-  integrity sha1-L43brtmWFmwjMF+Mb/B4S+pcKoc=
-
 "@types/jest-diff@*":
   version "20.0.1"
   resolved "http://registry.npm.taobao.org/@types/jest-diff/download/@types/jest-diff-20.0.1.tgz#35cc15b9c4f30a18ef21852e255fdb02f6d59b89"
@@ -1249,11 +1244,6 @@ chownr@^1.1.1:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/chownr/download/chownr-1.1.1.tgz#54726b8b8fff4df053c42187e801fb4412df1494"
   integrity sha1-VHJri4//TfBTxCGH6AH7RBLfFJQ=
-
-chroma-js@1.2.2:
-  version "1.2.2"
-  resolved "http://registry.npm.taobao.org/chroma-js/download/chroma-js-1.2.2.tgz#4171ae7c468dae7380853239fa109cbbe266d5ee"
-  integrity sha1-QXGufEaNrnOAhTI5+hCcu+Jm1e4=
 
 ci-info@^2.0.0:
   version "2.0.0"
