@@ -6,6 +6,9 @@
     "manifest": "./manifest.json"
   },
   "scripts": {
+    "rm.assets": "rm -rf @types",
+    "ready.assets": "run-s  ready:*",
+    "ready:appSharedComps": "cpx \"../appLibrary/appSharedComps/src/**/*.*\" ./src/shared-components",
     "build:js.last": "babel src --out-dir .ts-compiled --extensions \".ts,.tsx\" ",
     "build:js": "rollup -c",
     "build": "npm run typescript:once && skpm-build",
