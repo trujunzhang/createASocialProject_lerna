@@ -33,3 +33,7 @@ yarn-error.log*
 # definitive
 @types/*
 @types/**/*
+
+# Compiled typescript.
+**/*.js
+**/*.jsx
