@@ -1,0 +1,27 @@
+{
+  "name": "@app/color",
+  "version": "0.6.0",
+  "private": false,
+  "license": "Apache-2.0",
+  "main": "src/color.js",
+  "author": {
+    "name": "Stokedbits"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "color-convert": "1.9.1",
+    "color-string": "1.5.2"
+  },
+  "scripts": {
+    "depenence.update": "ncu -u"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.6",
+    "jest": "23.5.0"
+  },
+  "files": [
+    "build/lib"
+  ]
+}

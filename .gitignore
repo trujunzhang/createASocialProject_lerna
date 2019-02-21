@@ -1,0 +1,48 @@
+node_modules/
+dist/
+webpack-assets.json
+webpack-stats.json
+npm-debug.log
+*.swp
+
+logs/*
+
+.next/
+
+build/
+
+yarn-error.log
+
+.env
+
+production-server/*
+production-cloud/*
+
+.expo/*
+
+bak.git
+
+lerna-debug.*
+
+# JetBrains
+**/.idea/**/*.xml
+.idea/**/*
+
+.expo/
+
+# vim
+\#**
+
+# jest
+coverage/**/*
+
+.expo/*
+
+static/
+
+.check/*
+
+
+# definitive
+@types/*
+@types/**/*

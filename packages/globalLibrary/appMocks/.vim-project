@@ -1,0 +1,12 @@
+
+
+import { I18nextProvider } from '@app/intl'
+
+
+import * as PaginationTerms  from '@web/components/utils/paginationTerms'
+
+
+  static getDetailedMaintainTaskLink(task) {
+
+
+// PagesLinker 

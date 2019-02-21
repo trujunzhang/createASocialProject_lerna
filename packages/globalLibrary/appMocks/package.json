@@ -1,0 +1,56 @@
+{
+  "name": "@app/mocks",
+  "version": "0.6.0",
+  "private": false,
+  "license": "Apache-2.0",
+  "main": "build/lib/index.js",
+  "author": {
+    "name": "Stokedbits"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "depenence.update": "ncu -u",
+    "rm.assets": "rm -rf @types",
+    "ready.assets": "run-s  ready:*",
+    "ready:definitive": "cpx \"../../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
+    "ready:copy_static": "cpx \"../../appWeb/static/**/*.*\" ./static",
+    "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+    "fix.current": "yarn fix",
+    "build.reset": "rm -rf build",
+    "build.clean": "echo 'build empty clean'",
+    "build:js": "tsc -p tsconfig.json",
+    "copy.assets.to.build": "cpx \"./static/**/*.*\" ./build/static",
+    "build-lib": "yarn build.clean && yarn build:js && yarn copy.assets.to.build",
+    "build.current.pending": "yarn build-lib",
+    "postinstall": "yarn build-lib"
+  },
+  "dependencies": {
+    "@app/types": "0.6.0",
+    "@app/tools": "0.6.0",
+    "react": "16.7.0",
+    "@types/node": "11.9.4",
+    "@types/react": "16.7.18"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "@types/jest": "24.0.6",
+    "jest": "24.1.0",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/runtime": "7.3.1",
+    "@babel/runtime-corejs2": "7.3.1",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
+    "typescript": "3.3.3"
+  },
+  "files": [
+    "build/lib"
+  ]
+}

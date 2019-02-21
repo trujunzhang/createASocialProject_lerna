@@ -1,0 +1,50 @@
+{
+  "name": "@app/avatar",
+  "version": "0.6.0",
+  "description": "",
+  "scripts": {
+    "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check -- --watch",
+    "test.lib.pending": "jest --env=node --colors --coverage test",
+    "test.current.pending": "yarn test.lib",
+    "build:clean": "rm -rf dist",
+    "build:js": "tsc -p tsconfig.lib.json",
+    "build": "yarn build:clean && yarn build:js",
+    "postinstall": "yarn build"
+  },
+  "author": {
+    "name": "trujunzhang",
+    "email": "trujunzhang@gmail.com"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "10.12.18",
+    "@types/react": "16.7.18",
+    "@types/react-dom": "16.0.11",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "ts-md5": "1.2.4"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "@types/jest": "24.0.6",
+    "jest": "24.1.0",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/runtime": "7.3.1",
+    "@babel/runtime-corejs2": "7.3.1",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
+    "@types/react-test-renderer": "16.0.3",
+    "react-test-renderer": "16.7.0",
+    "typescript": "3.3.3"
+  }
+}

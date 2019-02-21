@@ -1,0 +1,63 @@
+{
+  "name": "@app/shared-components",
+  "version": "0.6.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "repository": "/@app/shared-components",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "depenence.update": "ncu -u",
+    "rm.assets": "rm -rf @types",
+    "ready.assets": "run-s  ready:*",
+    "ready:definitive": "cpx \"../../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
+    "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+    "fix.current": "yarn run fix",
+    "test.lib": "jest --env=node --colors --coverage test",
+    "test.current": "yarn test.lib",
+    "build.reset": "rm -rf build",
+    "build.clean": "echo 'build empty clean'",
+    "build:js": "tsc -p tsconfig.lib.json",
+    "build-lib": "yarn build.clean && yarn build:js",
+    "build.current.pending": "yarn run build-lib",
+    "postinstall": "yarn build-lib"
+  },
+  "dependencies": {
+    "@app/types": "0.6.0",
+    "@app/tools": "0.6.0",
+    "@types/react-redux": "6.0.12",
+    "@types/react": "16.7.7",
+    "@types/react-native": "0.57.17",
+    "react": "16.5.0"
+  },
+  "peerDependencies": {
+    "prop-types": "15.6.2",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@app/mocks": "0.6.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "@types/jest": "24.0.6",
+    "jest": "24.1.0",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/runtime": "7.3.1",
+    "@babel/runtime-corejs2": "7.3.1",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
+    "@types/react-test-renderer": "16.0.3",
+    "react-test-renderer": "16.7.0",
+    "typescript": "3.3.3"
+  }
+}

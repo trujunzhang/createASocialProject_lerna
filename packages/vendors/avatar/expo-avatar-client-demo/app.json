@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "expo-avatar",
+    "description": "A avatar project.",
+    "slug": "expo-avatar",
+    "privacy": "public",
+    "sdkVersion": "32.0.0"
+  }
+}
