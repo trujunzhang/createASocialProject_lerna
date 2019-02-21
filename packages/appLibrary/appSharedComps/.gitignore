@@ -30,10 +30,6 @@ yarn-error.log*
 # jetbrains
 /.idea
 
-# definitive
-@types/*
-@types/**/*
-
 # Compiled typescript.
 **/*.js
 **/*.jsx

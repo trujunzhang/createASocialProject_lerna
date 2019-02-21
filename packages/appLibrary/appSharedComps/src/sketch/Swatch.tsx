@@ -2,9 +2,9 @@
 import * as React from 'react';
 
 // import {   Text, View } from 'react-sketchapp';
-// import { View, Text } from 'react-primitives';
+import { View, Text } from 'react-primitives';
 // import { View, Text } from 'react-native';
-import { View, Text } from 'react-native-web';
+// import { View, Text } from 'react-native-web';
 
 // take a hex and give us a nice text color to put over it
 const textColor = (hex: string) => {

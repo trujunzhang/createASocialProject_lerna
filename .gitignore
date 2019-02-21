@@ -45,8 +45,3 @@ static/
 # Sketch app.
 node_modules
 .ts-compiled
-
-
-# definitive
-@types/*
-@types/**/*
