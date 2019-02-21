@@ -13,7 +13,16 @@ module.exports = function(api) {
           regenerator: true,
           useESModules: false
         }
-      ]
+      ],
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "react-native": "react-native-web"
+                },
+                "extensions": ["web.js", ".js"]
+            }
+        ]
     ]
   }
 }

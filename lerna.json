@@ -1,6 +1,12 @@
 {
-  "packages": [
+  "packages:all": [
     "packages/**/*"
+  ],
+  "packages": [
+    "packages/vendors/**/*",
+    "packages/globalLibrary/**/*",
+    "packages/appLibrary/**/*",
+    "packages/appSketchApp"
   ],
   "useWorkspaces": false,
   "npmClient": "yarn",
