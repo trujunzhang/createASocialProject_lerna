@@ -2,7 +2,7 @@
   "name": "app-sketch",
   "version": "2.0.0",
   "skpm": {
-    "main": "basic-setup.sketchplugin",
+    "main": "appSketch.sketchplugin",
     "manifest": "./manifest.json"
   },
   "scripts": {

@@ -10,7 +10,7 @@ export const colorList = {
   'TypeScript Blue': '#007ACC'
 }
 
-export const colorListWithHex = {
+export const textColorList = {
   Haus: '#636464',
   Night: '#FFF',
   Sur: '#004e56',

@@ -2,13 +2,9 @@ import * as React from 'react';
 import { render, Artboard } from 'react-sketchapp';
 import {
   Swatch,
-  colorListWithHex
+  colorList,
+  textColorList
 } from './shared-components'
-
-interface SwatchProps {
-  name: string,
-  hex: string,
-}
 
 interface DocumentProps {
   colors: { [key: string]: string }
@@ -23,12 +19,14 @@ const Document = ({ colors }: DocumentProps) => (
     }}
   >
     {Object.keys(colors).map(color => (
-      <Swatch name={color} hex={colors[color]} key={color} />
+      <Swatch name={color} hex={colors[color]}
+        textColor={textColorList[color]}
+        key={color} />
     ))}
   </Artboard>
 );
 
 
 export default () => {
-  render(<Document colors={colorListWithHex} />, context.document.currentPage());
+  render(<Document colors={colorList} />, context.document.currentPage());
 };
