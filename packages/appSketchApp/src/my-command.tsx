@@ -4,7 +4,7 @@ import {
   Swatch,
   colorList,
   textColorList
-} from './shared-components'
+} from '@app/shared-components'
 
 interface DocumentProps {
   colors: { [key: string]: string }
