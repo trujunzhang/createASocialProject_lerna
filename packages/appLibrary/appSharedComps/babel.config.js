@@ -1,4 +1,4 @@
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true)
   return {
     presets: ['@babel/env', '@babel/typescript'],
@@ -14,15 +14,15 @@ module.exports = function(api) {
           useESModules: false
         }
       ],
-        [
-            "module-resolver",
-            {
-                "alias": {
-                    "react-native": "react-native-web"
-                },
-                "extensions": ["web.js", ".js"]
-            }
-        ]
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "^react-native$": "react-native-web"
+          },
+          "extensions": ["web.js", ".js"]
+        }
+      ]
     ]
   }
 }
