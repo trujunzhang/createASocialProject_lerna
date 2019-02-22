@@ -26,7 +26,6 @@ const Document = ({ colors }: DocumentProps) => (
   </Artboard>
 );
 
-
-export default () => {
+export default (context: any) => {
   render(<Document colors={colorList} />, context.document.currentPage());
 };
