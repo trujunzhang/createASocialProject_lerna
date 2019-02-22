@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render, Artboard } from 'react-sketchapp';
 import {
   Swatch,
-  colorList
+  colorListWithHex
 } from './shared-components'
 
 interface SwatchProps {
@@ -30,5 +30,5 @@ const Document = ({ colors }: DocumentProps) => (
 
 
 export default () => {
-  render(<Document colors={colorList} />, context.document.currentPage());
+  render(<Document colors={colorListWithHex} />, context.document.currentPage());
 };

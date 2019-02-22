@@ -5,45 +5,35 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { ComponentType } from 'react';
+import { ComponentType } from 'react'
 import {
-    Animated,
-    Dimensions,
-    Easing,
-    Image,
-    PixelRatio,
-    PlatformOSType as RNPlatformOSType,
-    StyleSheet,
-    Text,
-    TouchableOpacityProps,
-    View as RNView
-} from 'react-native';
+  Animated,
+  Dimensions,
+  Easing,
+  Image,
+  PixelRatio,
+  PlatformOSType as RNPlatformOSType,
+  StyleSheet,
+  Text,
+  TouchableOpacityProps,
+  View as RNView
+} from 'react-native'
 
 declare module 'react-primitives' {
+  const Touchable: ComponentType<TouchableOpacityProps>
 
-    const Touchable: ComponentType<TouchableOpacityProps>;
+  // react-primitives also supports react-sketchapp and react-vr as platforms
+  type PlatformOSType = RNPlatformOSType | 'sketch' | 'vr'
+  interface PlatformStatic {
+    OS: PlatformOSType
+    Version: number | string
+    select<T>(specifics: { [platform in PlatformOSType | 'default']?: T }): T
+  }
+  const Platform: PlatformStatic
 
-    // react-primitives also supports react-sketchapp and react-vr as platforms
-    type PlatformOSType = RNPlatformOSType | 'sketch' | 'vr';
-    interface PlatformStatic {
-        OS: PlatformOSType;
-        Version: number | string;
-        select<T>(specifics: { [platform in PlatformOSType | 'default']?: T }): T;
-    }
-    const Platform: PlatformStatic;
+  interface View extends RNView {
+    name?: string
+  }
 
-    interface View extends RNView {
-        name?: string
-    }
-
-    export {
-        Animated,
-        Dimensions,
-        Easing,
-        Image,
-        PixelRatio,
-        StyleSheet,
-        Text,
-        View
-    };
+  export { Animated, Dimensions, Easing, Image, PixelRatio, StyleSheet, Text, View }
 }

@@ -1,5 +1,3 @@
-
-
 import * as React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { AppLoading, /* Asset, Font, */ Constants } from 'expo'
