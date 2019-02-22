@@ -5,7 +5,7 @@
   "scripts": {
     "rm.assets": "rm -rf @types",
     "ready.assets": "run-s  ready:*",
-    "ready:definitive": "cpx \"../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
+    "ready:appSharedComps": "cpx \"../appLibrary/appSharedComps/src/**/*.*\" ./src/shared-components",
     "expo:start": " expo start",
     "expo:android": " expo start --android",
     "expo:ios": " expo start --ios",
