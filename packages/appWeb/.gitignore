@@ -29,6 +29,8 @@ production-cloud/*
 # testing
 /coverage
 
+# libs
+src/shared-components/**/*
 
 
 # definitive
