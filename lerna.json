@@ -6,7 +6,8 @@
     "packages/vendors/**/*",
     "packages/globalLibrary/**/*",
     "packages/appLibrary/**/*",
-    "packages/appSketchApp"
+    "packages/appSketchApp",
+    "packages/appWeb"
   ],
   "useWorkspaces": false,
   "npmClient": "yarn",
