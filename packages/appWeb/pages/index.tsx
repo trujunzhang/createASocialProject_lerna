@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -13,8 +13,10 @@ const styles = StyleSheet.create({
   }
 })
 
-export default props => (
-  <View style={styles.container}>
-    <Text style={styles.text}>Welcome to Next.js with react-native-web!</Text>
-  </View>
-)
+export default (props) => {
+  return (
+    <View style={styles.container} >
+      <Text style={styles.text}> {'Welcome to Next.js with react - native - web, with typescript! '} </Text>
+    </View>
+  )
+}

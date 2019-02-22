@@ -906,10 +906,38 @@
   dependencies:
     "@types/jest-diff" "*"
 
+"@types/next@^2.4.8":
+  version "2.4.12"
+  resolved "http://registry.npm.taobao.org/@types/next/download/@types/next-2.4.12.tgz#fb85497ca7d5be9a3f603c6642b77dca5de2cb6e"
+  integrity sha1-+4VJfKfVvpo/YDxmQrd9yl3iy24=
+  dependencies:
+    "@types/node" "*"
+    "@types/react" "*"
+
+"@types/node@*":
+  version "11.9.4"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.9.4.tgz#ceb0048a546db453f6248f2d1d95e937a6f00a14"
+  integrity sha1-zrAEilRttFP2JI8tHZXpN6bwChQ=
+
 "@types/prop-types@*":
   version "15.5.9"
   resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.9.tgz#f2d14df87b0739041bc53a7d75e3d77d726a3ec0"
   integrity sha1-8tFN+HsHOQQbxTp9dePXfXJqPsA=
+
+"@types/react-dom@16.0.11":
+  version "16.0.11"
+  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.0.11.tgz#bd10ccb0d9260343f4b9a49d4f7a8330a5c1f081"
+  integrity sha1-vRDMsNkmA0P0uaSdT3qDMKXB8IE=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-native@0.57.27":
+  version "0.57.27"
+  resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.57.27.tgz#d12a66836f330bf3b6364a44f662b92660170ff4"
+  integrity sha1-0Spmg28zC/O2NkpE9mK5JmAXD/Q=
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
 
 "@types/react-test-renderer@16.0.3":
   version "16.0.3"
@@ -922,6 +950,14 @@
   version "16.8.4"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.8.4.tgz#134307f5266e866d5e7c25e47f31f9abd5b2ea34"
   integrity sha1-E0MH9SZuhm1efCXkfzH5q9Wy6jQ=
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@16.4.8":
+  version "16.4.8"
+  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.4.8.tgz#ff0440429783df0927bdcd430fa1225f7c08cf36"
+  integrity sha1-/wRAQpeD3wknvc1DD6EiX3wIzzY=
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -1401,7 +1437,7 @@ aws4@^1.8.0:
   resolved "http://registry.npm.taobao.org/aws4/download/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha1-8OAD2cqef1nHpQiUXXsu+aBKVC8=
 
-babel-core@7.0.0-bridge.0, babel-core@^7.0.0-bridge.0:
+babel-core@7.0.0-bridge.0:
   version "7.0.0-bridge.0"
   resolved "http://registry.npm.taobao.org/babel-core/download/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
   integrity sha1-laSS3dkPm06aSh2hTrM1uHtjTs4=

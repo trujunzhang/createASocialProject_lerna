@@ -6,7 +6,14 @@
     "build": "next build",
     "start": "next start"
   },
+  "back": {
+    "@app/shared-components": "0.6.0"
+  },
   "dependencies": {
+    "@types/next": "^2.4.8",
+    "@types/react-native": "0.57.27",
+    "@types/react": "16.4.8",
+    "@types/react-dom": "16.0.11",
     "babel-plugin-module-resolver": "3.1.2",
     "next": "latest",
     "react": "16.7.0",
@@ -16,7 +23,7 @@
     "@zeit/next-typescript": "1.1.1"
   },
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",
     "jest": "24.1.0",
