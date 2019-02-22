@@ -2,16 +2,16 @@
   "name": "app-web",
   "version": "2.0.0",
   "scripts": {
-    "ready.assets": "run-s  ready:*",
+    "ready.assets.pending": "run-s  ready:*",
     "ready:appSharedComps": "cpx \"../appLibrary/appSharedComps/src/**/*.*\" ./src/shared-components",
     "dev": "next",
+    "dev-all": "next",
     "build": "next build",
     "start": "next start"
   },
-  "back": {
-    "@app/shared-components": "0.6.0"
-  },
+  "back": {},
   "dependencies": {
+    "@app/shared-components": "0.6.0",
     "@types/next": "^2.4.8",
     "@types/react-native": "0.57.27",
     "@types/react": "16.4.8",

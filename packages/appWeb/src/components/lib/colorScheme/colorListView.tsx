@@ -5,7 +5,7 @@ import {
     Swatch,
     colorList,
     textColorList
-} from '../../../shared-components'
+} from '@app/shared-components'
 
 export const ColorListView = () => {
     const views: any = Object.keys(colorList).map(color => (

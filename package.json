@@ -19,6 +19,8 @@
             "app:sketch.build": "lerna run build:js --scope=app-sketch --stream",
             "  *****  The following is ready for client ****": "",
             "expo:ios": "lerna run expo:ios --scope=app-client --stream",
+            "  *****  The following is for web ****": "",
+            "dev-all": "lerna run dev-all --scope=app-web --stream",
             "  *****  The following is for apps ****": "",
             "fix": "lerna run fix",
             "fix.current": "lerna run fix.current --stream",
