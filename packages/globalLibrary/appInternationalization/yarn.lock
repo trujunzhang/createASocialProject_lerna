@@ -3194,9 +3194,9 @@ npm-bundled@^1.0.1:
   integrity sha1-57qarc75YrthJI+RchzZMrP+a90=
 
 npm-packlist@^1.1.6:
-  version "1.4.0"
-  resolved "http://registry.npm.taobao.org/npm-packlist/download/npm-packlist-1.4.0.tgz#b2c0867af2a396e0734343d2b6b3f7934db935f2"
-  integrity sha1-ssCGevKjluBzQ0PStrP3k025NfI=
+  version "1.4.1"
+  resolved "http://registry.npm.taobao.org/npm-packlist/download/npm-packlist-1.4.1.tgz#19064cdf988da80ea3cee45533879d90192bbfbc"
+  integrity sha1-GQZM35iNqA6jzuRVM4edkBkrv7w=
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
@@ -3546,9 +3546,9 @@ rc@^1.2.7:
     strip-json-comments "~2.0.1"
 
 react-i18next@*:
-  version "10.1.2"
-  resolved "http://registry.npm.taobao.org/react-i18next/download/react-i18next-10.1.2.tgz#29d0b7a6e8e2df62d9f3f412c01796902a9e9b3f"
-  integrity sha1-KdC3puji32LZ8/QSwBeWkCqemz8=
+  version "10.2.0"
+  resolved "http://registry.npm.taobao.org/react-i18next/download/react-i18next-10.2.0.tgz#68674945711d4ccfaca52af9e20fe648f84ffad5"
+  integrity sha1-aGdJRXEdTM+spSr54g/mSPhP+tU=
   dependencies:
     "@babel/runtime" "^7.3.1"
     html-parse-stringify2 "2.0.1"
@@ -3563,9 +3563,9 @@ react-i18next@9.0.2:
     html-parse-stringify2 "2.0.1"
 
 react-is@^16.3.2, react-is@^16.8.1:
-  version "16.8.2"
-  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
-  integrity sha1-CYkdMkytHLDB8tkfcKcaS+403w8=
+  version "16.8.3"
+  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
+  integrity sha1-StiwKcKnGPwM/HRsjU4bciHlOH0=
 
 react@16.5.0:
   version "16.5.0"
@@ -3641,9 +3641,9 @@ regenerator-runtime@^0.12.0:
   integrity sha1-+hpxVEdkwDb4xJsToIsllMn4oN4=
 
 regenerator-transform@^0.13.3:
-  version "0.13.3"
-  resolved "http://registry.npm.taobao.org/regenerator-transform/download/regenerator-transform-0.13.3.tgz#264bd9ff38a8ce24b06e0636496b2c856b57bcbb"
-  integrity sha1-JkvZ/zioziSwbgY2SWsshWtXvLs=
+  version "0.13.4"
+  resolved "http://registry.npm.taobao.org/regenerator-transform/download/regenerator-transform-0.13.4.tgz#18f6763cf1382c69c36df76c6ce122cc694284fb"
+  integrity sha1-GPZ2PPE4LGnDbfdsbOEizGlChPs=
   dependencies:
     private "^0.1.6"
 

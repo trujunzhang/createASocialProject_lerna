@@ -896,9 +896,9 @@
     "@types/jest-diff" "*"
 
 "@types/next-server@*":
-  version "7.0.4"
-  resolved "http://registry.npm.taobao.org/@types/next-server/download/@types/next-server-7.0.4.tgz#69b5e340a923bc7e8ad9228cf4e057eaed955a98"
-  integrity sha1-abXjQKkjvH6K2SKM9OBX6u2VWpg=
+  version "7.0.5"
+  resolved "http://registry.npm.taobao.org/@types/next-server/download/@types/next-server-7.0.5.tgz#1eac1888449d5abb37a7b4b87cd8870b954a7b5e"
+  integrity sha1-HqwYiESdWrs3p7S4fNiHC5VKe14=
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
@@ -5147,9 +5147,9 @@ react-is@16.6.3:
   integrity sha1-0tdGL8/L5uwNpWrWkEfkflbn6sA=
 
 react-is@^16.3.2, react-is@^16.7.0, react-is@^16.8.1:
-  version "16.8.2"
-  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
-  integrity sha1-CYkdMkytHLDB8tkfcKcaS+403w8=
+  version "16.8.3"
+  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
+  integrity sha1-StiwKcKnGPwM/HRsjU4bciHlOH0=
 
 react-test-renderer@16.7.0:
   version "16.7.0"
@@ -5270,9 +5270,9 @@ regenerator-runtime@^0.12.0:
   integrity sha1-+hpxVEdkwDb4xJsToIsllMn4oN4=
 
 regenerator-transform@^0.13.3:
-  version "0.13.3"
-  resolved "http://registry.npm.taobao.org/regenerator-transform/download/regenerator-transform-0.13.3.tgz#264bd9ff38a8ce24b06e0636496b2c856b57bcbb"
-  integrity sha1-JkvZ/zioziSwbgY2SWsshWtXvLs=
+  version "0.13.4"
+  resolved "http://registry.npm.taobao.org/regenerator-transform/download/regenerator-transform-0.13.4.tgz#18f6763cf1382c69c36df76c6ce122cc694284fb"
+  integrity sha1-GPZ2PPE4LGnDbfdsbOEizGlChPs=
   dependencies:
     private "^0.1.6"
 
