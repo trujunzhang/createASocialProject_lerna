@@ -32,6 +32,8 @@
             "fix.current": "lerna run fix.current --stream",
             "all:current": "run-s  *.current",
             "build.current": "lerna run build.current --stream",
-            "build.current.pending": "lerna run build.current.pending --stream"
+            "build.current.pending": "lerna run build.current.pending --stream",
+            "  *****  The following is demo nativebase ****": "",
+            "demo.nativebase.expo:ios": "lerna run expo:ios --scope=expo-nativebase-demo --stream"
       }
 }
