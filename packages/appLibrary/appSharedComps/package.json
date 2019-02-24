@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@app/mocks": "0.6.0",
+    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
     "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",
     "babel-plugin-module-resolver": "3.2.0",
