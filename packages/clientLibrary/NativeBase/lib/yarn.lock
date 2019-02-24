@@ -756,6 +756,18 @@
   resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.9.tgz#f2d14df87b0739041bc53a7d75e3d77d726a3ec0"
   integrity sha1-8tFN+HsHOQQbxTp9dePXfXJqPsA=
 
+"@types/prop-types@15.5.8":
+  version "15.5.8"
+  resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.8.tgz#8ae4e0ea205fe95c3901a5a1df7f66495e3a56ce"
+  integrity sha1-iuTg6iBf6Vw5AaWh339mSV46Vs4=
+
+"@types/react-dom@16.0.11":
+  version "16.0.11"
+  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.0.11.tgz#bd10ccb0d9260343f4b9a49d4f7a8330a5c1f081"
+  integrity sha1-vRDMsNkmA0P0uaSdT3qDMKXB8IE=
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@*":
   version "0.57.38"
   resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.57.38.tgz#2ff6ed1a7cc207afbfd87bf496513d96931d1446"
@@ -3648,15 +3660,15 @@ react-art@16.5.2:
     prop-types "^15.6.2"
     schedule "^0.5.0"
 
-react-dom@^16.8.2:
-  version "16.8.3"
-  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.8.3.tgz#ae236029e66210783ac81999d3015dfc475b9c32"
-  integrity sha1-riNgKeZiEHg6yBmZ0wFd/EdbnDI=
+react-dom@16.7.0:
+  version "16.7.0"
+  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
+  integrity sha1-oXsqfKie5zkLwe1euBeDx0YXSLg=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.3"
+    scheduler "^0.12.0"
 
 react-is@^16.7.0, react-is@^16.8.1:
   version "16.8.3"
@@ -4010,14 +4022,6 @@ scheduler@^0.12.0:
   version "0.12.0"
   resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
   integrity sha1-irF2mZOcCu3FoZamV3Q8SWU4ZHs=
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
-scheduler@^0.13.3:
-  version "0.13.3"
-  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.13.3.tgz#bed3c5850f62ea9c716a4d781f9daeb9b2a58896"
-  integrity sha1-vtPFhQ9i6pxxak14H52uubKliJY=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

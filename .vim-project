@@ -1,3 +1,8 @@
+    "@types/react-dom": "16.0.11",
+    "react-dom": "16.7.0",
+    "@types/prop-types": "15.5.8",
+    "prop-types": "15.6.2",
+
 
 "build:js": "tsc -p tsconfig.lib.json",
 
