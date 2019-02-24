@@ -2,7 +2,8 @@ import { Color } from '@app/color'
 
 import { checkIsIphoneX } from '../../utils'
 
-import { Dimensions, PixelRatio, Platform, StyleSheet } from 'react-native'
+import { Dimensions, PixelRatio, StyleSheet } from 'react-primitives'
+import { Platform } from 'react-native'
 
 import { themeVariables, ThemePlatformFunc } from '@app/native-base-variables'
 

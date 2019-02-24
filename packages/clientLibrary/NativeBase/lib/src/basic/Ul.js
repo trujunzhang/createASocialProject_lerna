@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Text } from 'react-native'
+import { Text } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
@@ -11,7 +11,7 @@ class Ul extends Component {
   }
 }
 
-const childrenType = function(props, propName, component) {
+const childrenType = function (props, propName, component) {
   let error
   const prop = props[propName]
   React.Children.forEach(prop, (child) => {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Animated, PanResponder, Platform, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Animated, PanResponder, Platform, StyleSheet, TouchableOpacity, View } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { Left } from './Left'
 import { Right } from './Right'

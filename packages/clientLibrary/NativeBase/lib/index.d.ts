@@ -470,7 +470,7 @@ namespace NativeBase {
    */
   interface ReactListViewProperties
     extends ReactNative.ScrollViewProperties,
-      React.Props<ReactNative.ListView> {
+    React.Props<ReactNative.ListView> {
     /**
      * Flag indicating whether empty section headers should be rendered.
      * In the future release empty section headers will be rendered by

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
-import { InteractionManager, ViewPropTypes } from "../../utils";
+// import { InteractionManager, ViewPropTypes } from "../../utils";
 const React = require("react");
 const { Component } = React;
 const ReactNative = require("react-native");
@@ -20,7 +20,7 @@ const { DefaultTabBar } = require("./DefaultTabBar");
 const { ScrollableTabBar } = require("./ScrollableTabBar");
 
 class ScrollableTabView extends Component {
-  render(){
+  render() {
     return null
   }
 }

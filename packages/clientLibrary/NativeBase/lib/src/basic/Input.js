@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { TextInput } from 'react-native'
+import { TextInput } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import variable from '../theme/variables/platform'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'

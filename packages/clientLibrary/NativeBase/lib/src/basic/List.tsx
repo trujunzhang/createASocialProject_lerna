@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { ListView, View } from 'react-native'
+import { View } from 'react-primitives'
+import { ListView } from 'react-native'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
 // import { SwipeRow } from "./SwipeRow";
@@ -39,7 +40,7 @@ interface IListState {
   dataSource: any
 }
 
-interface IListDefaultProps {}
+interface IListDefaultProps { }
 
 type ListPropsWithDefaults = IListProps & IListDefaultProps
 
