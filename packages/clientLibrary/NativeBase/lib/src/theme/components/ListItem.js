@@ -1,6 +1,6 @@
 // @flow
 
-import { Platform, PixelRatio } from "react-native";
+import { Platform, PixelRatio } from "react-primitives";
 
 import pickerTheme from "./Picker";
 import variable from "./../variables/platform";

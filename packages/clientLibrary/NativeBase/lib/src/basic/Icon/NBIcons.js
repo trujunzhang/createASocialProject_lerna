@@ -1,4 +1,4 @@
-{
+export default ic = {
   "add": {
     "android": {
       "default": "md-add",

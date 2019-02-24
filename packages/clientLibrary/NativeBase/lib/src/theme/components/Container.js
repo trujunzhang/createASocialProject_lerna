@@ -1,6 +1,6 @@
 // @flow
 
-import { Platform, Dimensions } from "react-native";
+import { Platform, Dimensions } from "react-primitives";
 
 import variable from "./../variables/platform";
 

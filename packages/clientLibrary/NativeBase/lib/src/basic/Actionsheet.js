@@ -9,7 +9,7 @@ import {
   ViewPropTypes,
   FlatList,
   Dimensions
-} from "react-native";
+} from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { Text } from "./Text";
 import { Button } from "./Button";

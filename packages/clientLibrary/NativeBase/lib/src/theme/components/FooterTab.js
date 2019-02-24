@@ -1,6 +1,6 @@
 // @flow
 
-import { Platform } from "react-native";
+import { Platform } from "react-primitives";
 
 import variable from "./../variables/platform";
 

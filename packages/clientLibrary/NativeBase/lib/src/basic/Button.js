@@ -22,7 +22,7 @@ class Button extends Component {
     }
   }
 
-  _root: React$Element<TouchableOpacity | TouchableNativeFeedback>
+  // _root: React$Element<TouchableOpacity | TouchableNativeFeedback>
 
   prepareRootProps() {
     const defaultProps = {

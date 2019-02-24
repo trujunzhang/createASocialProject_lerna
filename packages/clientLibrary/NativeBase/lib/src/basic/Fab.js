@@ -10,7 +10,7 @@ import {
   TouchableNativeFeedback,
   View,
   StyleSheet
-} from "react-native";
+} from "react-primitives";
 import { Icon } from "./Icon";
 import { IconNB } from "./IconNB";
 import { Button } from "./Button";
@@ -24,14 +24,14 @@ const { height, width } = Dimensions.get("window");
 const AnimatedFab = Animated.createAnimatedComponent(Button);
 
 class Fab extends Component {
-  props: Animated.props & {
-    position: ?string
-  };
-
-  state: {
-    buttons: void | React$Element<Button>,
-    active: boolean
-  };
+  // props: Animated.props & {
+  //   position: ?string
+  // };
+  //
+  // state: {
+  //   buttons: void | React$Element<Button>,
+  //   active: boolean
+  // };
   constructor(props) {
     super(props);
     this.containerHeight = new Animated.Value(56);
@@ -45,7 +45,8 @@ class Fab extends Component {
 
   fabTopValue(
     pos
-  ): ?{ top: ?number, bottom: ?number, left: ?number, right: ?number } {
+  // ): ?{ top: ?number, bottom: ?number, left: ?number, right: ?number } {
+  ) {
     if (pos === "topLeft") {
       return {
         top: 20,

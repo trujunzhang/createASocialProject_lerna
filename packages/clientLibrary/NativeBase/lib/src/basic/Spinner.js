@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import variable from "../theme/variables/platform";

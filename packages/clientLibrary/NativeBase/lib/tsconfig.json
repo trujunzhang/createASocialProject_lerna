@@ -9,10 +9,10 @@
       "es2017",
       "dom"
     ], /* Specify library files to be included in the compilation. */
-    // "allowJs": true,                       /* Allow javascript files to be compiled. */
+     "allowJs": true,                       /* Allow javascript files to be compiled. */
     // "checkJs": true,                       /* Report errors in .js files. */
     "jsx": "react", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
-    "declaration": true /* Generates corresponding '.d.ts' file. */,
+    "declaration": false, /* Generates corresponding '.d.ts' file. */
     "sourceMap": true, /* Generates corresponding '.map' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
     "outDir": "build/lib" /* Redirect output structure to the directory. */,
@@ -57,10 +57,17 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "skipLibCheck": true
   },
+  "filesGlob": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "node_modules/typescript/lib/lib.es6.d.ts"
+  ],
   "exclude": [
     "static",
     "build",
     "node_modules",
+    "babel.config.js",
+    "jest.config.js",
     "lib"
   ]
 }

@@ -5,7 +5,7 @@ import {
   FlatList,
   StyleSheet,
   View
-} from "react-native";
+} from "react-primitives";
 import { Text } from "./Text";
 import { Icon } from "./Icon";
 import variable from "../theme/variables/platform";

@@ -1,6 +1,6 @@
 // @flow
 
-import { PixelRatio, StatusBar } from "react-native";
+import { PixelRatio, StatusBar } from "react-primitives";
 
 import variable from "./../variables/platform";
 

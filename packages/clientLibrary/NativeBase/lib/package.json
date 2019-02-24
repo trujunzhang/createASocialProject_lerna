@@ -1,7 +1,8 @@
 {
   "name": "@app/native-base",
   "version": "0.6.0",
-  "main": "src/index.ts",
+  "main.src": "src/index.ts",
+  "main": "build/lib/index.js",
   "typings": "./index.d.ts",
   "description": "Essential cross-platform UI components for React Native",
   "keywords": [
@@ -26,7 +27,7 @@
     "build.clean": "echo 'build empty clean'",
     "build:js": "tsc -p tsconfig.lib.json",
     "build-lib": "yarn build.clean && yarn build:js",
-    "build.current.pending": "yarn build-lib",
+    "build.current": "yarn build-lib",
     "postinstall": "yarn build-lib"
   },
   "license": "Apache-2.0",
@@ -37,8 +38,9 @@
     "@app/native-base-variables": "0.6.0",
     "@app/color": "0.6.0",
     "@app/tools": "0.6.0",
-    "@types/prop-types": "15.5.8",
     "prop-types": "15.6.2",
+    "@types/react": "16.7.7",
+    "@types/react-native": "0.57.27",
     "blueimp-md5": "2.10.0",
     "clamp": "1.0.1",
     "react-tween-state": "0.1.5",
@@ -49,7 +51,8 @@
     "react-native-web": "0.10.0"
   },
   "devDependencies": {
-    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
+    "babel-plugin-module-resolver": "3.2.0",
+    "@types/react-primitives": "0.6.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",
@@ -68,16 +71,17 @@
     "react-test-renderer": "16.7.0",
     "typescript": "3.3.3",
     "@types/node": "10.12.18",
-    "@types/react": "16.7.7",
-    "@types/react-native": "0.57.17",
     "react": "16.5.0"
   },
   "gitHead": "5bbeacc403ba97622703699132c55d8359344004",
   "homepage": "https://github.com/GeekyAnts/NativeBase#readme",
   "optionalDependencies": {},
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "prop-types": ">=15",
+    "react": ">=15",
+    "react-dom": ">=15",
+    "react-native": ">=0.42",
+    "react-native-web": ">=0.0.129"
   },
   "readmeFilename": "README.md",
   "repository": {
