@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 // import {KeyboardAwareScrollView} from "../react-native-keyboard-aware-scroll-view";
 import {connectStyle} from "@app/native-base-shoutem-theme";
 import variable from "../theme/variables/platform";

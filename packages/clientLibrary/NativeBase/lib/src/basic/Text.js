@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import { Text as RNText } from "react-primitives";
 import { LodashUtils as _ } from '@app/tools'
 

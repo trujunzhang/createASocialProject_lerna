@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
 // import { InteractionManager, ViewPropTypes } from "../../utils";

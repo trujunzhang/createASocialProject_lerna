@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import computeProps from "../utils/computeProps";
 // import Button from './../Button';
 import {

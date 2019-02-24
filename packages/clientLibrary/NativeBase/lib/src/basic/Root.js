@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, ViewPropTypes } from "react-primitives";
-import PropTypes from "prop-types";
+import * as PropTypes from "prop-types";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { ToastContainer as Toast } from "./ToastContainer";
