@@ -6,6 +6,7 @@
     "packages/vendors/**/*",
     "packages/globalLibrary/**/*",
     "packages/appLibrary/**/*",
+    "packages/clientLibrary/**/*",
     "packages/appSketchApp",
     "packages/appWeb",
     "packages/appClient"

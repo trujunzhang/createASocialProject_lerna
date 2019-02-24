@@ -1,0 +1,13 @@
+-/.next
+-/node_modules
+-/ios/build
+-/ios/Pods
+-/android/build
+-/android/app/build
+-/build
+-/production-cloud
+-/production-server
+-/android/app/src/main/assets/index.android.bundle
+-/android/app/build
+-/android/build
+-/android/gradle

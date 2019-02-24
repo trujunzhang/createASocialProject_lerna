@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "expo-nativebase-demo",
+    "description": "",
+    "slug": "expo-nativebase-demo",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "version": "1.0.1",
+    "primaryColor": "#fff",
+    "android": {
+      "package": "com.app.expo.nativebase",
+      "versionCode": 7
+    },
+    "ios": {
+      "supportsTablet": true,
+      "loadJSInBackgroundExperimental": true,
+      "bundleIdentifier": "com.app.expo.nativebase",
+      "buildNumber": "7"
+    }
+  }
+}
