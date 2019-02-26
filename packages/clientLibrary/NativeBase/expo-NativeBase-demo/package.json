@@ -5,12 +5,14 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
-    "postinstall": "rndebugger-open --expo",
+    "ready.assets": "run-s  ready:*",
+    "ready:copy_static": "cpx \"../../../appWeb/static/**/*.*\" ./static",
     "expo:android:hashes": "expo fetch:android:hashes",
     "expo:publish": "expo publish",
     "expo:ios": " expo start --ios",
     "expo:android": " expo start --android",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "rndebugger-open --expo"
   },
   "dependencies": {
     "@app/color": "0.6.0",
