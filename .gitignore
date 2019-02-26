@@ -38,6 +38,7 @@ coverage/**/*
 
 .expo/*
 
+static/
 
 .check/*
 
