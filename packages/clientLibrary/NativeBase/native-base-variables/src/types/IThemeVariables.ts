@@ -279,7 +279,6 @@ export interface IOtherVariables {
   inputLineHeight: number
   deviceWidth: number
   deviceHeight: number
-  isIphoneX: boolean
   inputGroupRoundedBorderRadius: number
 }
 export interface IParallaxVariables {
@@ -312,42 +311,42 @@ export interface IIPhoneXSafeAreaVariables {
 // ====================
 export interface themeVariables
   extends IBaseVariables,
-    IAccordionVariables,
-    IAndroidVariables,
-    IBadgeVariables,
-    IButtonVariables,
-    IButtonColorVariables,
-    IButtonFuncVariables,
-    ICardVariables,
-    ICheckBoxVariables,
-    IContainerVariables,
-    IDatePickerVariables,
-    IFontVariables,
-    IFontFuncVariables,
-    IFooterVariables,
-    IFooterTabVariables,
-    IHeaderVariables,
-    IHeaderFuncVariables,
-    IIconVariables,
-    IInputGroupVariables,
-    IInputGroupFuncVariables,
-    ILineHeightVariables,
-    IPageScrollVariables,
-    IListVariables,
-    IProgressBarVariables,
-    IRadioButtonVariables,
-    IRadioButtonFuncVariables,
-    ISegmentVariables,
-    ISpinnerVariables,
-    ITabVariables,
-    ITabsVariables,
-    ITextVariables,
-    ITextFuncVariables,
-    ITitleVariables,
-    IOtherVariables,
-    IParallaxVariables,
-    IIPhoneXSafeAreaVariables {}
+  IAccordionVariables,
+  IAndroidVariables,
+  IBadgeVariables,
+  IButtonVariables,
+  IButtonColorVariables,
+  IButtonFuncVariables,
+  ICardVariables,
+  ICheckBoxVariables,
+  IContainerVariables,
+  IDatePickerVariables,
+  IFontVariables,
+  IFontFuncVariables,
+  IFooterVariables,
+  IFooterTabVariables,
+  IHeaderVariables,
+  IHeaderFuncVariables,
+  IIconVariables,
+  IInputGroupVariables,
+  IInputGroupFuncVariables,
+  ILineHeightVariables,
+  IPageScrollVariables,
+  IListVariables,
+  IProgressBarVariables,
+  IRadioButtonVariables,
+  IRadioButtonFuncVariables,
+  ISegmentVariables,
+  ISpinnerVariables,
+  ITabVariables,
+  ITabsVariables,
+  ITextVariables,
+  ITextFuncVariables,
+  ITitleVariables,
+  IOtherVariables,
+  IParallaxVariables,
+  IIPhoneXSafeAreaVariables { }
 
 //  theme variables.
 // ====================
-export interface themeVariablesWithIconVector extends themeVariables, IIconVectorVariables {}
+export interface themeVariablesWithIconVector extends themeVariables, IIconVectorVariables { }

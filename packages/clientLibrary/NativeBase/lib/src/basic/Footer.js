@@ -5,6 +5,7 @@ import { LodashUtils as _ } from '@app/tools'
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 class Footer extends Component {
   static contextTypes = {
@@ -36,8 +37,8 @@ class Footer extends Component {
     let oldHeight = null;
     if (this.props.style.height != undefined) {
       oldHeight = this.props.style.height;
-    }else if(this.props.style[1]){
-      oldHeight= this.props.style[1].height ? this.props.style[1].height : this.props.style[0].height;
+    } else if (this.props.style[1]) {
+      oldHeight = this.props.style[1].height ? this.props.style[1].height : this.props.style[0].height;
     } else {
       oldHeight = this.props.style[0].height;
     }
@@ -81,7 +82,7 @@ class Footer extends Component {
     const variables = this.context.theme
       ? this.context.theme["@@shoutem.theme/themeStyle"].variables
       : variable;
-    return variable.isIphoneX ? (
+    return isIphoneX() ? (
       <View
         ref={c => (this._root = c)}
         {...this.props}
@@ -101,8 +102,8 @@ class Footer extends Component {
         ]}
       />
     ) : (
-      <View ref={c => (this._root = c)} {...this.props} />
-    );
+        <View ref={c => (this._root = c)} {...this.props} />
+      );
   }
 }
 

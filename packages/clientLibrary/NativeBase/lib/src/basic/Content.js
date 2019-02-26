@@ -4,6 +4,7 @@ import { KeyboardAwareScrollView } from "@app/react-native-keyboard-aware-scroll
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables';
+import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 class Content extends Component {
     static contextTypes = {
@@ -91,7 +92,7 @@ class Content extends Component {
         const variables = this.context.theme
             ? this.context.theme["@@shoutem.theme/themeStyle"].variables
             : variable;
-        return variables.isIphoneX ? (
+        return isIphoneX() ? (
             <KeyboardAwareScrollView
                 automaticallyAdjustContentInsets={false}
                 resetScrollToCoords={

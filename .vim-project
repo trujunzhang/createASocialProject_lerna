@@ -1,7 +1,5 @@
 
 
-const isIphoneX = variable.isIphoneX
-
 
 
 "@types/react-dom": "16.0.11",

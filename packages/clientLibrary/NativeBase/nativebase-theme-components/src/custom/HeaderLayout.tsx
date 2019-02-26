@@ -17,9 +17,7 @@ import {
 import { PixelRatio } from 'react-native'
 import { themeVariables } from '@app/native-base-variables'
 export const headerLayoutTheme = (headerVariables: themeVariables) => {
-  const variables = Object.assign(headerVariables, {
-    isIphoneX: false
-  })
+  const variables = headerVariables
   const platformStyle = variables.platformStyle
   const platform = variables.platform
   const headerLayoutTheme = {

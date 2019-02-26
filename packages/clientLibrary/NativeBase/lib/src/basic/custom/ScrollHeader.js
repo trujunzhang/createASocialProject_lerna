@@ -4,6 +4,7 @@ import { View, StatusBar, ViewPropTypes, StyleSheet } from 'react-native'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
+import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 import { LodashUtils as _ } from '@app/tools'
 
@@ -114,7 +115,7 @@ class ScrollHeader extends Component {
   render() {
     return (
       <View onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
-        {variable.isIphoneX ? this.renderForIphoneX() : this.renderCommon()}
+        {isIphoneX() ? this.renderForIphoneX() : this.renderCommon()}
       </View>
     )
   }

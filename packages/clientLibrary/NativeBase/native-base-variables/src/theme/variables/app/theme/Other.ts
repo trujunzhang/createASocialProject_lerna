@@ -1,9 +1,7 @@
 import { PixelRatio } from 'react-native'
 
 import { IOtherVariables } from '../../../../types'
-import { platform, deviceWidth, deviceHeight, isIphoneX } from '../../utils'
-
-console.log(' isIphoneX :', isIphoneX)
+import { platform, deviceWidth, deviceHeight } from '../../utils'
 
 export const otherVariables: IOtherVariables = {
   // Other
@@ -14,6 +12,5 @@ export const otherVariables: IOtherVariables = {
   inputLineHeight: 24,
   deviceWidth,
   deviceHeight,
-  isIphoneX,
   inputGroupRoundedBorderRadius: 30
 }
