@@ -14,6 +14,19 @@ module.exports = function (api) {
           "regenerator": true,
           "useESModules": false
         }
+      ],
+      [
+        "module-resolver",
+        {
+          "cwd": "babelrc",
+          "root": [
+            "."
+          ],
+          "extensions": [".ios.js", ".android.js", ".js", ".jsx", ".json"],
+          "alias": {
+            "@assets": "./static"
+          }
+        }
       ]
     ]
   };

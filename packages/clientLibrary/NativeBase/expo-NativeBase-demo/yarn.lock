@@ -1551,7 +1551,7 @@ babel-plugin-jest-hoist@^24.1.0:
   resolved "http://registry.npm.taobao.org/babel-plugin-jest-hoist/download/babel-plugin-jest-hoist-24.1.0.tgz#dfecc491fb15e2668abbd690a697a8fd1411a7f8"
   integrity sha1-3+zEkfsV4maKu9aQppeo/RQRp/g=
 
-babel-plugin-module-resolver@^3.1.1:
+babel-plugin-module-resolver@3.2.0, babel-plugin-module-resolver@^3.1.1:
   version "3.2.0"
   resolved "http://registry.npm.taobao.org/babel-plugin-module-resolver/download/babel-plugin-module-resolver-3.2.0.tgz#ddfa5e301e3b9aa12d852a9979f18b37881ff5a7"
   integrity sha1-3fpeMB47mqEthSqZefGLN4gf9ac=
