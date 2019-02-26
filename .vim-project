@@ -1,4 +1,10 @@
-    "@types/react-dom": "16.0.11",
+
+
+const isIphoneX = variable.isIphoneX
+
+
+
+"@types/react-dom": "16.0.11",
     "react-dom": "16.7.0",
     "@types/prop-types": "15.5.8",
     "prop-types": "15.6.2",

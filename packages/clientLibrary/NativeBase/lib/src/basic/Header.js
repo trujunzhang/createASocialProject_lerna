@@ -5,9 +5,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
 
-import {
-  HeaderStatusBar
-} from './HeaderStatusBar'
+import { HeaderStatusBar } from './HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
 
 class Header extends Component {
@@ -86,9 +84,7 @@ class Header extends Component {
       return null
     }
 
-    return (
-      <HeaderStatusBar />
-    )
+    return <HeaderStatusBar />
   }
 
   renderCommon() {
@@ -97,8 +93,9 @@ class Header extends Component {
 
   renderForIphoneX() {
     const variables = this.context.theme
-      ? this.context.theme["@@shoutem.theme/themeStyle"].variables
-      : variable;
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
+    debugger
     return (
       <View
         ref={(c) => (this._root = c)}
@@ -115,7 +112,12 @@ class Header extends Component {
   }
 
   render() {
+    const variables = this.context.theme
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
+
     const isIphoneX = variable.isIphoneX
+    debugger
     return (
       <View onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
         {this.renderStatusBar()}
