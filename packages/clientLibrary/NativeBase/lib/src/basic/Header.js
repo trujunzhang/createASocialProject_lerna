@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { View, ViewPropTypes, StyleSheet } from 'react-native'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
-import { platformVariables as variable } from '@app/native-base-variables'
+import { platformVariables as variable, checkIsIphoneX } from '@app/native-base-variables'
 
 import { HeaderStatusBar } from './HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
@@ -112,12 +112,7 @@ class Header extends Component {
   }
 
   render() {
-    const variables = this.context.theme
-      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
-      : variable
-
-    const isIphoneX = variable.isIphoneX
-    debugger
+    const isIphoneX = checkIsIphoneX()
     return (
       <View onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
         {this.renderStatusBar()}

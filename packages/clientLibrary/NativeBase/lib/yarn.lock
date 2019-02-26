@@ -3406,6 +3406,19 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
   integrity sha1-StiwKcKnGPwM/HRsjU4bciHlOH0=
 
+react-native-iphone-x-helper@^1.0.3:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/react-native-iphone-x-helper/download/react-native-iphone-x-helper-1.2.0.tgz#9f8a376eb00bc712115abff4420318a0063fa796"
+  integrity sha1-n4o3brALxxIRWr/0QgMYoAY/p5Y=
+
+react-native-keyboard-aware-scroll-view@0.8.0:
+  version "0.8.0"
+  resolved "http://registry.npm.taobao.org/react-native-keyboard-aware-scroll-view/download/react-native-keyboard-aware-scroll-view-0.8.0.tgz#00bcaa38c91323913bb7a733059ad2bc4875f88c"
+  integrity sha1-ALyqOMkTI5E7t6czBZrSvEh1+Iw=
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-iphone-x-helper "^1.0.3"
+
 react-test-renderer@16.7.0:
   version "16.7.0"
   resolved "http://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-16.7.0.tgz#1ca96c2b450ab47c36ba92cd8c03fcefc52ea01c"
