@@ -1,0 +1,53 @@
+{
+  "name": "@app/react-native-iphone-x-helper",
+  "version": "1.2.0",
+  "description": "A library to help you design your react-native app for the iPhone X",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptelad/react-native-iphone-x-helper.git"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "iphone-x",
+    "iphoneX",
+    "stylesheet"
+  ],
+  "author": "Elad Gil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ptelad/react-native-iphone-x-helper/issues"
+  },
+  "homepage": "https://github.com/ptelad/react-native-iphone-x-helper#readme",
+  "peerDependencies": {
+    "react-native": ">=0.42.0"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "@types/jest": "24.0.6",
+    "jest": "24.1.0",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/runtime": "7.3.1",
+    "@babel/runtime-corejs2": "7.3.1",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
+    "@types/react-test-renderer": "16.0.3",
+    "react-test-renderer": "16.7.0",
+    "typescript": "3.3.3",
+    "@types/node": "10.12.18",
+    "@types/react": "16.7.7",
+    "@types/react-native": "0.57.17",
+    "react": "16.5.0"
+  }
+}
