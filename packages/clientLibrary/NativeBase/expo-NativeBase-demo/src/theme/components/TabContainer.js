@@ -1,4 +1,4 @@
-// @flow
+
 
 import { platformVariables as variables } from "./../variables/platform";
 import { Platform } from "react-native";

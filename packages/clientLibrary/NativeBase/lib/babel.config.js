@@ -3,6 +3,7 @@ module.exports = function (api) {
   return {
     presets: [
       "@babel/env",
+      "@babel/preset-react",
       "@babel/typescript"
     ],
     plugins: [
@@ -15,15 +16,6 @@ module.exports = function (api) {
           "helpers": true,
           "regenerator": true,
           "useESModules": false
-        }
-      ],
-      [
-        "module-resolver",
-        {
-          "alias": {
-            "^react-native$": "react-native-web"
-          },
-          "extensions": ["web.js", ".js"]
         }
       ]
     ]

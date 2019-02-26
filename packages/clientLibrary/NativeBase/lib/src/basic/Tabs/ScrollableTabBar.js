@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
-import { connectStyle, StyleProvider } from "@app/native-base-shoutem-theme";
+import {connectStyle, StyleProvider} from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../../utils/mapPropsToStyleNames";
-import variable from "./../../theme/variables/platform";
-import { TabHeading, Text, TabContainer } from "./../../index";
-import { ViewPropTypes } from "react-primitives";
+import { platformVariables as variable } from '@app/native-base-variables';
+import {TabHeading, Text, TabContainer} from "./../../index";
+import {ViewPropTypes} from "../../utils";
 
 const Button = require("./Button");
 const ReactNative = require("react-native");
@@ -98,14 +98,14 @@ class ScrollableTabBar extends Component {
         newScrollX = newScrollX >= 0 ? newScrollX : 0;
 
         if (Platform.OS === "android") {
-            this._scrollView.scrollTo({ x: newScrollX, y: 0, animated: false });
+            this._scrollView.scrollTo({x: newScrollX, y: 0, animated: false});
         } else {
             const rightBoundScroll =
                 this._tabContainerMeasurements.width -
                 this._containerMeasurements.width;
             newScrollX =
                 newScrollX > rightBoundScroll ? rightBoundScroll : newScrollX;
-            this._scrollView.scrollTo({ x: newScrollX, y: 0, animated: false });
+            this._scrollView.scrollTo({x: newScrollX, y: 0, animated: false});
         }
     }
 
@@ -145,7 +145,7 @@ class ScrollableTabBar extends Component {
     ) {
         const headerContent =
             typeof name !== "string" ? name.props.children : undefined;
-        const { activeTextColor, inactiveTextColor } = this.props;
+        const {activeTextColor, inactiveTextColor} = this.props;
         const textColor = isTabActive ? activeTextColor : inactiveTextColor;
         const fontWeight = isTabActive ? "bold" : "normal";
         // const fontSize = tabFontSize;
@@ -165,7 +165,7 @@ class ScrollableTabBar extends Component {
                         <Text
                             style={[
                                 isTabActive ? activeTextStyle : textStyle,
-                                { fontSize: tabFontSize }
+                                {fontSize: tabFontSize}
                             ]}
                         >
                             {name}
@@ -189,9 +189,9 @@ class ScrollableTabBar extends Component {
     }
 
     measureTab(page, event) {
-        const { x, width, height } = event.nativeEvent.layout;
-        this._tabsMeasurements[page] = { left: x, right: x + width, width, height };
-        this.updateView({ value: this.props.scrollValue._value });
+        const {x, width, height} = event.nativeEvent.layout;
+        this._tabsMeasurements[page] = {left: x, right: x + width, width, height};
+        this.updateView({value: this.props.scrollValue._value});
     }
 
     render() {
@@ -214,7 +214,7 @@ class ScrollableTabBar extends Component {
             <View
                 style={[
                     styles.container,
-                    { backgroundColor: this.props.backgroundColor },
+                    {backgroundColor: this.props.backgroundColor},
                     this.props.style
                 ]}
                 onLayout={this.onContainerLayout}
@@ -235,7 +235,7 @@ class ScrollableTabBar extends Component {
                     <View
                         style={[
                             styles.tabs,
-                            { width: this.state._containerWidth },
+                            {width: this.state._containerWidth},
                             this.props.tabsContainerStyle
                         ]}
                         ref={"tabContainer"}
@@ -277,7 +277,7 @@ class ScrollableTabBar extends Component {
             !_.isEqual(this.props.tabs, nextProps.tabs) &&
             this.state._containerWidth
         ) {
-            this.setState({ _containerWidth: null });
+            this.setState({_containerWidth: null});
         }
     }
 
@@ -287,13 +287,13 @@ class ScrollableTabBar extends Component {
         if (width < WINDOW_WIDTH) {
             width = WINDOW_WIDTH;
         }
-        this.setState({ _containerWidth: width });
-        this.updateView({ value: this.props.scrollValue._value });
+        this.setState({_containerWidth: width});
+        this.updateView({value: this.props.scrollValue._value});
     }
 
     onContainerLayout(e) {
         this._containerMeasurements = e.nativeEvent.layout;
-        this.updateView({ value: this.props.scrollValue._value });
+        this.updateView({value: this.props.scrollValue._value});
     }
 }
 
@@ -323,7 +323,7 @@ const StyledTab = connectStyle(
     {},
     mapPropsToStyleNames
 )(ScrollableTabBar);
-export { StyledTab as ScrollableTab };
+export {StyledTab as ScrollableTab};
 const styles = StyleSheet.create({
     tab: {
         height: 49,

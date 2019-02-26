@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import computeProps from "../utils/computeProps";
 // import Button from './../Button';
 import {
@@ -10,11 +10,11 @@ import {
   TouchableNativeFeedback,
   View,
   StyleSheet
-} from "react-primitives";
+} from "react-native";
 import { Icon } from "./Icon";
 import { IconNB } from "./IconNB";
 import { Button } from "./Button";
-import variables from "./../theme/variables/platform";
+import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { connectStyle } from "@app/native-base-shoutem-theme";
@@ -27,7 +27,7 @@ class Fab extends Component {
   // props: Animated.props & {
   //   position: ?string
   // };
-  //
+
   // state: {
   //   buttons: void | React$Element<Button>,
   //   active: boolean
@@ -45,7 +45,7 @@ class Fab extends Component {
 
   fabTopValue(
     pos
-  // ): ?{ top: ?number, bottom: ?number, left: ?number, right: ?number } {
+    // ): ?{ top: ?number, bottom: ?number, left: ?number, right: ?number } {
   ) {
     if (pos === "topLeft") {
       return {
@@ -425,25 +425,25 @@ class Fab extends Component {
       <Animated.View style={this.getContainerStyle()}>
         {this.renderButtons()}
         {Platform.OS === "ios" ||
-        variables.androidRipple === false ||
-        Platform["Version"] <= 21 ? (
-          <TouchableOpacity
-            onPress={() => this.fabOnPress()}
-            {...this.prepareFabProps()}
-            activeOpacity={1}
-          >
-            {this.renderFab()}
-          </TouchableOpacity>
-        ) : (
-          <TouchableNativeFeedback
-            onPress={() => this.fabOnPress()}
-            {...this.prepareFabProps()}
-          >
-            <View style={[this.getInitialStyle().fab, this.props.style]}>
+          variables.androidRipple === false ||
+          Platform["Version"] <= 21 ? (
+            <TouchableOpacity
+              onPress={() => this.fabOnPress()}
+              {...this.prepareFabProps()}
+              activeOpacity={1}
+            >
               {this.renderFab()}
-            </View>
-          </TouchableNativeFeedback>
-        )}
+            </TouchableOpacity>
+          ) : (
+            <TouchableNativeFeedback
+              onPress={() => this.fabOnPress()}
+              {...this.prepareFabProps()}
+            >
+              <View style={[this.getInitialStyle().fab, this.props.style]}>
+                {this.renderFab()}
+              </View>
+            </TouchableNativeFeedback>
+          )}
       </Animated.View>
     );
   }

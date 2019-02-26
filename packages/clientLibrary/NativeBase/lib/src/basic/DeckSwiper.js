@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
-import { View, Animated, PanResponder, ViewPropTypes } from "react-primitives";
+import PropTypes from "prop-types";
+import { View, Animated, PanResponder, ViewPropTypes } from "react-native";
 import clamp from "clamp";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";

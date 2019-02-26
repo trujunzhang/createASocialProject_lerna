@@ -1,4 +1,4 @@
-// @flow
+
 
 import { Platform } from "react-native";
 

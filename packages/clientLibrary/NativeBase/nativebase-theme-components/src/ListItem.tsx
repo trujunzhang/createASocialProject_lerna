@@ -12,10 +12,10 @@ import {
   getFullItem
 } from './listItems'
 
+import { PixelRatio } from 'react-native'
 import { themeVariables } from '@app/native-base-variables'
 export const listItemTheme = (variables: themeVariables) => {
   const platform = variables.platform
-  const themePlatformFunc = variables.themePlatformFunc
   const selectedStyle = {
     'NativeBase.Text': {
       color: variables.listItemSelected
@@ -88,7 +88,7 @@ export const listItemTheme = (variables: themeVariables) => {
     paddingRight: variables.listItemPadding + 6,
     paddingVertical: variables.listItemPadding + 3,
     marginLeft: variables.listItemPadding + 6,
-    borderBottomWidth: 1 / themePlatformFunc.getPixelSizeForLayoutSize(1),
+    borderBottomWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
     backgroundColor: variables.listBg,
     borderColor: variables.listBorderColor
   }

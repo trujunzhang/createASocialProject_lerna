@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import {
   View,
   Modal,
@@ -9,7 +9,7 @@ import {
   ViewPropTypes,
   FlatList,
   Dimensions
-} from "react-primitives";
+} from "react-native";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { Text } from "./Text";
 import { Button } from "./Button";
@@ -33,7 +33,7 @@ class ActionSheetContainer extends Component {
   static show(config, callback) {
     this.actionsheetInstance._root.showActionSheet(config, callback);
   }
-  static hide() {
+  static hide(){
     this.actionsheetInstance._root.hideActionSheet();
   }
   showActionSheet(config, callback) {
@@ -61,7 +61,7 @@ class ActionSheetContainer extends Component {
     }
   }
 
-  hideActionSheet() {
+  hideActionSheet(){
     this.setState({ modalVisible: false });
   }
 
@@ -126,34 +126,34 @@ class ActionSheetContainer extends Component {
                     <Text>{item}</Text>
                   </ListItem>
                 ) : (
-                    <ListItem
-                      onPress={() => {
-                        this.state.callback(parseInt(index));
-                        this.setState({ modalVisible: false });
-                      }}
-                      style={{
-                        borderColor: "transparent",
-                        marginLeft: 14,
-                        height: 50
-                      }}
-                      icon
+                  <ListItem
+                    onPress={() => {
+                      this.state.callback(parseInt(index));
+                      this.setState({ modalVisible: false });
+                    }}
+                    style={{
+                      borderColor: "transparent",
+                      marginLeft: 14,
+                      height: 50
+                    }}
+                    icon
+                  >
+                    <Left>
+                      <Icon
+                        name={item.icon}
+                        style={{
+                          color: item.iconColor ? item.iconColor : undefined
+                        }}
+                      />
+                    </Left>
+                    <Body
+                      style={{ borderColor: "transparent", paddingLeft: 7 }}
                     >
-                      <Left>
-                        <Icon
-                          name={item.icon}
-                          style={{
-                            color: item.iconColor ? item.iconColor : undefined
-                          }}
-                        />
-                      </Left>
-                      <Body
-                        style={{ borderColor: "transparent", paddingLeft: 7 }}
-                      >
-                        <Text>{item.text}</Text>
-                      </Body>
-                      <Right />
-                    </ListItem>
-                  );
+                      <Text>{item.text}</Text>
+                    </Body>
+                    <Right />
+                  </ListItem>
+                );
               }}
             />
           </TouchableOpacity>

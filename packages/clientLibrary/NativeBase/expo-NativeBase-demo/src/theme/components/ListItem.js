@@ -1,4 +1,4 @@
-// @flow
+
 
 import { Platform, PixelRatio } from "react-native";
 

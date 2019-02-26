@@ -5,9 +5,9 @@ import {
   Platform,
   DatePickerIOS,
   DatePickerAndroid
-} from "react-primitives";
+} from "react-native";
 import { Text } from "./Text";
-import variable from "../theme/variables/platform";
+import { platformVariables as variable } from '@app/native-base-variables';
 
 export class DatePicker extends React.Component {
   constructor(props) {
@@ -85,7 +85,7 @@ export class DatePicker extends React.Component {
       <View>
         <View>
           <Text
-            onPress={ !this.state.disabled ? this.showDatePicker.bind(this) : undefined }
+            onPress={!this.state.disabled ? this.showDatePicker.bind(this) : undefined}
             style={[
               { padding: 10, color: variables.datePickerTextColor },
               this.state.chosenDate ? this.props.textStyle : this.props.placeHolderTextStyle

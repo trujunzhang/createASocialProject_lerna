@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import {
   TouchableHighlight,
   Platform,
   TouchableNativeFeedback,
   View
-} from "react-primitives";
+} from "react-native";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
-import variable from "../theme/variables/platform";
+import { platformVariables as variable } from '@app/native-base-variables'
 
 class ListItem extends Component {
   static contextTypes = {

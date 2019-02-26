@@ -14,11 +14,11 @@ import {
   getButtonBase
 } from '../headerItems'
 
+import { PixelRatio } from 'react-native'
 import { themeVariables } from '@app/native-base-variables'
 export const scrollHeaderTheme = (variables: themeVariables) => {
   const platformStyle = variables.platformStyle
   const platform = variables.platform
-  const themePlatformFunc = variables.themePlatformFunc
   const scrollHeaderTheme = {
     '.span': getSpanItem(variables, platform, platformStyle),
     '.hasSubtitle': getHasSubtitleItem(variables, platform, platformStyle),
@@ -44,7 +44,7 @@ export const scrollHeaderTheme = (variables: themeVariables) => {
     paddingRight: 10,
     justifyContent: 'center',
     paddingTop: variables.toolbarPaddingTop,
-    borderBottomWidth: platform === 'ios' ? 1 / themePlatformFunc.getPixelSizeForLayoutSize(1) : 0,
+    borderBottomWidth: platform === 'ios' ? 1 / PixelRatio.getPixelSizeForLayoutSize(1) : 0,
     borderBottomColor: variables.toolbarDefaultBorder,
     height: variables.toolbarHeight,
     elevation: 3,

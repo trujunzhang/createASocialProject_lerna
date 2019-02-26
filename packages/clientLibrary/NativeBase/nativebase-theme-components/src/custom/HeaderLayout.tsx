@@ -14,6 +14,7 @@ import {
   getButtonBase
 } from '../headerItems'
 
+import { PixelRatio } from 'react-native'
 import { themeVariables } from '@app/native-base-variables'
 export const headerLayoutTheme = (headerVariables: themeVariables) => {
   const variables = Object.assign(headerVariables, {
@@ -21,7 +22,6 @@ export const headerLayoutTheme = (headerVariables: themeVariables) => {
   })
   const platformStyle = variables.platformStyle
   const platform = variables.platform
-  const themePlatformFunc = variables.themePlatformFunc
   const headerLayoutTheme = {
     '.span': getSpanItem(variables, platform, platformStyle),
     '.hasSubtitle': getHasSubtitleItem(variables, platform, platformStyle),
@@ -47,7 +47,7 @@ export const headerLayoutTheme = (headerVariables: themeVariables) => {
     paddingRight: 10,
     justifyContent: 'center',
     paddingTop: variables.toolbarPaddingTop,
-    borderBottomWidth: platform === 'ios' ? 1 / themePlatformFunc.getPixelSizeForLayoutSize(1) : 0,
+    borderBottomWidth: platform === 'ios' ? 1 / PixelRatio.getPixelSizeForLayoutSize(1) : 0,
     borderBottomColor: variables.toolbarDefaultBorder,
     height: variables.toolbarHeight,
     elevation: 3,

@@ -1,4 +1,4 @@
-// @flow
+
 
 import { StyleSheet } from "react-native";
 import { platformVariables as variables } from "./../variables/platform";

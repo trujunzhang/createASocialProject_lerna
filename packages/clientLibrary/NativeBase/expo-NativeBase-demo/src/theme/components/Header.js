@@ -1,4 +1,4 @@
-// @flow
+
 
 import { PixelRatio, StatusBar } from "react-native";
 

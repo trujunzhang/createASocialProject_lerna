@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View, StatusBar, ViewPropTypes, StyleSheet } from 'react-primitives'
+import { View, StatusBar, ViewPropTypes, StyleSheet } from 'react-native'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
-import variable from '../theme/variables/platform'
+import { platformVariables as variable } from '@app/native-base-variables'
 
 import { LodashUtils as _ } from '@app/tools'
 
@@ -35,8 +35,8 @@ class HeaderStatusBar extends Component {
           this.props.iosBarStyle
             ? this.props.iosBarStyle
             : platformStyle === 'material'
-            ? 'light-content'
-            : variables.iosStatusbar
+              ? 'light-content'
+              : variables.iosStatusbar
         }
         translucent={this.props.transparent ? true : this.props.translucent}
       />

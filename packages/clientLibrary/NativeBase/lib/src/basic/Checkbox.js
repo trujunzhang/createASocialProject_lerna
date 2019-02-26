@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
-import { TouchableOpacity, Platform } from "react-primitives";
+import PropTypes from "prop-types";
+import { TouchableOpacity, Platform } from "react-native";
 // import IconNB from "react-native-vector-icons/Ionicons";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
-import variable from "../theme/variables/platform";
+import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 import computeProps from "../utils/computeProps";
 

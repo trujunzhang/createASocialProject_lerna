@@ -5,10 +5,10 @@ import {
   FlatList,
   StyleSheet,
   View
-} from "react-primitives";
+} from "react-native";
 import { Text } from "./Text";
 import { Icon } from "./Icon";
-import variable from "../theme/variables/platform";
+import { platformVariables as variable } from '@app/native-base-variables'
 
 class DefaultHeader extends React.Component {
   render() {

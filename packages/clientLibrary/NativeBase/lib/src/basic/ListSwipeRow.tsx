@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { ListView, View } from 'react-native'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
 import { SwipeRow } from './SwipeRow'
@@ -21,7 +22,7 @@ interface IListSwipeRowProps extends SwipeRowProperty {
   onRowDidClose: any
 }
 
-interface IListSwipeRowState { }
+interface IListSwipeRowState {}
 
 class ListSwipeRow extends React.Component<IListSwipeRowProps, IListSwipeRowState> {
   constructor(props) {

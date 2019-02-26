@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import * as PropTypes from "prop-types";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 // import {KeyboardAwareScrollView} from "../react-native-keyboard-aware-scroll-view";
-import {connectStyle} from "@app/native-base-shoutem-theme";
-import variable from "../theme/variables/platform";
+import { connectStyle } from "@app/native-base-shoutem-theme";
+import { platformVariables as variable } from '@app/native-base-variables';
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class Content extends Component {
@@ -19,9 +19,9 @@ class Content extends Component {
 
     layoutChange(val) {
         let maxComp = Math.max(variable.deviceWidth, variable.deviceHeight);
-        if (val.width >= maxComp) this.setState({orientation: "landscape"});
+        if (val.width >= maxComp) this.setState({ orientation: "landscape" });
         else {
-            this.setState({orientation: "portrait"});
+            this.setState({ orientation: "portrait" });
         }
     }
 
@@ -176,4 +176,4 @@ const StyledContent = connectStyle(
     mapPropsToStyleNames
 )(Content);
 
-export {StyledContent as Content};
+export { StyledContent as Content };

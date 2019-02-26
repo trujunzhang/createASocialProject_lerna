@@ -1,9 +1,9 @@
 import { pickerTheme } from '../../Picker'
 
+import { PixelRatio } from 'react-native'
 import { themeVariables } from '@app/native-base-variables'
 
 export function getIconItem(selectedStyle, variables: themeVariables, platform) {
-  const themePlatformFunc = variables.themePlatformFunc
   return {
     '.last': {
       'NativeBase.Body': {
@@ -56,7 +56,7 @@ export function getIconItem(selectedStyle, variables: themeVariables, platform) 
       flex: 1,
       height: 44,
       justifyContent: 'center',
-      borderBottomWidth: 1 / themePlatformFunc.getPixelSizeForLayoutSize(1),
+      borderBottomWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
       borderColor: variables.listBorderColor
     },
     'NativeBase.Right': {
@@ -92,7 +92,7 @@ export function getIconItem(selectedStyle, variables: themeVariables, platform) 
       alignSelf: 'stretch',
       height: 44,
       justifyContent: 'flex-end',
-      borderBottomWidth: 1 / themePlatformFunc.getPixelSizeForLayoutSize(1),
+      borderBottomWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
       borderColor: variables.listBorderColor,
       paddingRight: variables.listItemPadding + 5
     },

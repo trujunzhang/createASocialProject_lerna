@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
-import { View, ViewPropTypes } from "react-primitives";
+import PropTypes from "prop-types";
+import { View, ViewPropTypes } from "react-native";
 import { LodashUtils as _ } from '@app/tools'
 import { connectStyle } from "@app/native-base-shoutem-theme";
-import variable from "../theme/variables/platform";
+import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class Footer extends Component {

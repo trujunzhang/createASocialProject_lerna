@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
-import { View, Modal, Platform, Animated, ViewPropTypes } from "react-primitives";
+import PropTypes from "prop-types";
+import { View, Modal, Platform, Animated, ViewPropTypes } from "react-native";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { Text } from "./Text";
 import { Button } from "./Button";

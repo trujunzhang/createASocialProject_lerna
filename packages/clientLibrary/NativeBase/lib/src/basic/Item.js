@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import {
   TouchableOpacity,
   Animated,
   Platform,
   View,
   StyleSheet
-} from "react-primitives";
+} from "react-native";
 import { Input } from "./Input";
 import { Label } from "./Label";
 import { Icon } from "./Icon";
 import { Thumbnail } from "./Thumbnail";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
-import variables from "../theme/variables/platform";
+import { platformVariables as variable } from '@app/native-base-variables'
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { LodashUtils as _ } from '@app/tools'

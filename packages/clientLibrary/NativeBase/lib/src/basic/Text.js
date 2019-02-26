@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
-import { Text as RNText } from "react-primitives";
+import PropTypes from "prop-types";
+import { Text as RNText } from "react-native";
 import { LodashUtils as _ } from '@app/tools'
 
 import { connectStyle } from "@app/native-base-shoutem-theme";

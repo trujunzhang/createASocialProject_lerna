@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-import { Platform } from "react-primitives";
+import { Platform } from "react-native";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 
 import { IconNB } from "../IconNB";
-import ic from "./NBIcons";
-import variable from "./../../theme/variables/platform";
+import ic from "./NBIcons.json";
+import { platformVariables as variable } from '@app/native-base-variables';
 import { LodashUtils as _ } from '@app/tools'
 
 import mapPropsToStyleNames from "../../utils/mapPropsToStyleNames";

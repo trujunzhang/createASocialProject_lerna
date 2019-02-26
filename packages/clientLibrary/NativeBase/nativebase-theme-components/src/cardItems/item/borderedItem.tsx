@@ -1,10 +1,10 @@
 import { themeVariables } from '@app/native-base-variables'
+import { StyleSheet } from 'react-native'
 
 export function getBorderedItem(variables: themeVariables, platform) {
-  const themePlatformFunc = variables.themePlatformFunc
   return {
     // borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: themePlatformFunc.getStyleHairlineWidth(),
+    borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: variables.cardBorderColor
   }
 }

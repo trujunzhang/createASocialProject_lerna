@@ -1,7 +1,5 @@
 import { StyleProvider, connectStyle } from '@app/native-base-shoutem-theme'
 import { LodashUtils as _ } from '@app/tools'
-import setDefaultThemeStyle from './init'
-import variables from './theme/variables/platform'
 import Drawer from './basic/Drawer'
 import { SwipeRow } from './basic/SwipeRow'
 import { Text } from './basic/Text'
@@ -69,6 +67,8 @@ import { HeaderLayout } from './basic/custom/HeaderLayout'
 
 export * from './utils'
 
+import { platformVariables as variables } from '@app/native-base-variables'
+import { setDefaultThemeStyle } from './init'
 setDefaultThemeStyle()
 
 // Theme

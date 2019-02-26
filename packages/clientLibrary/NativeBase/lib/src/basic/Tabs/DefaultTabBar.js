@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
-import { connectStyle, StyleProvider } from "@app/native-base-shoutem-theme";
+import {connectStyle, StyleProvider} from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../../utils/mapPropsToStyleNames";
-import variable from "./../../theme/variables/platform";
-import { TabHeading, Text, TabContainer } from "./../../index";
+import { platformVariables as variable } from '@app/native-base-variables';
+import {TabHeading, Text, TabContainer} from "./../../index";
+import {ViewPropTypes} from "../../utils";
 
-import { ViewPropTypes } from "react-primitives";
 const ReactNative = require("react-native");
 
-const { StyleSheet, View, Animated, Platform } = ReactNative;
+const {StyleSheet, View, Animated, Platform} = ReactNative;
 const Button = require("./Button");
 
 class DefaultTabBar extends Component {
@@ -40,14 +40,14 @@ class DefaultTabBar extends Component {
     ) {
         const headerContent =
             typeof name !== "string" ? name.props.children : undefined;
-        const { activeTextColor, inactiveTextColor } = this.props;
+        const {activeTextColor, inactiveTextColor} = this.props;
         const textColor = isTabActive ? activeTextColor : inactiveTextColor;
         const fontWeight = isTabActive ? "bold" : "normal";
         // const fontSize = tabFontSize;
         if (typeof name === "string") {
             return (
                 <Button
-                    style={{ flex: 1 }}
+                    style={{flex: 1}}
                     key={name}
                     onPress={() => onPressHandler(page)}
                 >
@@ -57,7 +57,7 @@ class DefaultTabBar extends Component {
                     >
                         <Text
                             style={[
-                                { fontSize: tabFontSize },
+                                {fontSize: tabFontSize},
                                 isTabActive ? activeTextStyle : textStyle
                             ]}
                         >
@@ -69,7 +69,7 @@ class DefaultTabBar extends Component {
         } else {
             return (
                 <Button
-                    style={{ flex: 1 }}
+                    style={{flex: 1}}
                     key={_.random(1.2, 5.2)}
                     onPress={() => onPressHandler(page)}
                 >
@@ -103,7 +103,7 @@ class DefaultTabBar extends Component {
         return (
             <TabContainer
                 style={[
-                    { backgroundColor: variables.tabDefaultBg },
+                    {backgroundColor: variables.tabDefaultBg},
                     this.props.tabContainerStyle ? this.props.tabContainerStyle : {}
                 ]}
             >
@@ -124,7 +124,7 @@ class DefaultTabBar extends Component {
                     );
                 })}
                 <Animated.View
-                    style={[tabUnderlineStyle, { left }, this.props.underlineStyle]}
+                    style={[tabUnderlineStyle, {left}, this.props.underlineStyle]}
                 />
             </TabContainer>
         );
@@ -155,4 +155,4 @@ const StyledTab = connectStyle(
     {},
     mapPropsToStyleNames
 )(DefaultTabBar);
-export { StyledTab as DefaultTabBar };
+export {StyledTab as DefaultTabBar};

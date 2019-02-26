@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet } from 'react-primitives'
+import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet } from 'react-native'
 import { connectStyle } from '@app/native-base-shoutem-theme'
-import variable from './../theme/variables/platform'
+import {
+  platformVariables as variables
+}
+  from '@app/native-base-variables'
 import { Text } from './Text'
 import computeProps from '../utils/computeProps'
 

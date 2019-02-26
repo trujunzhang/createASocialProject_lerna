@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View, ViewPropTypes } from 'react-primitives'
+import { View, ViewPropTypes } from 'react-native'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
-import variable from '../../theme/variables/platform'
+import { platformVariables as variable } from '@app/native-base-variables'
 
 class HeaderLayout extends Component {
   static contextTypes = {
