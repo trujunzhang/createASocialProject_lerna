@@ -3,6 +3,8 @@ import { PixelRatio } from 'react-native'
 import { IOtherVariables } from '../../../../types'
 import { platform, deviceWidth, deviceHeight, isIphoneX } from '../../utils'
 
+console.log(' isIphoneX :', isIphoneX)
+
 export const otherVariables: IOtherVariables = {
   // Other
   borderRadiusBase: platform === 'ios' ? 5 : 2,

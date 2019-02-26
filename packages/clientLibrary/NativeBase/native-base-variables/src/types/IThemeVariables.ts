@@ -310,7 +310,7 @@ export interface IIPhoneXSafeAreaVariables {
 
 //  theme base variables.
 // ====================
-export interface themeBaseVariables
+export interface themeVariables
   extends IBaseVariables,
     IAccordionVariables,
     IAndroidVariables,
@@ -350,4 +350,4 @@ export interface themeBaseVariables
 
 //  theme variables.
 // ====================
-export interface themeVariables extends themeBaseVariables, IIconVectorVariables {}
+export interface themeVariablesWithIconVector extends themeVariables, IIconVectorVariables {}

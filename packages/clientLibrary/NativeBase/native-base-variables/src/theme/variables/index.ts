@@ -1,7 +1,7 @@
-import { themeBaseVariables } from '../../types'
+import { themeVariables } from '../../types'
 
 import { appThemeVariables } from './app'
 
 export * from './app'
 
-export const platformVariables: themeBaseVariables = appThemeVariables
+export const platformVariables: themeVariables = appThemeVariables

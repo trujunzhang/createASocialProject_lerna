@@ -30,7 +30,7 @@ export default class App extends React.Component<{}, IAppState> {
       Font.loadAsync({
         proxima: require('./static/fonts/proxima/proxima-nova-600.ttf'),
         FontAwesome: require('@expo/vector-icons/fonts/FontAwesome.ttf'),
-        MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf'),
+        MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf')
       })
     ])
   }

@@ -1,4 +1,4 @@
-import { themeBaseVariables } from '../../../types'
+import { themeVariables } from '../../../types'
 
 import {
   baseVariables,
@@ -39,7 +39,7 @@ import {
   titleVariables
 } from './theme'
 
-export const appThemeVariables: themeBaseVariables = {
+export const appThemeVariables: themeVariables = {
   ...baseVariables,
   ...accordionVariables,
   ...androidVariables,
