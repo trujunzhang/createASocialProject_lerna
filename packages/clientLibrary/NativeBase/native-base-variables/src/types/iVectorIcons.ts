@@ -5,7 +5,12 @@ export interface IVectorIcons {
     EvilIcons: string
     Feather: string
     FontAwesome: string
-    FontAwesome5: string
+    //  issue: (2019-02-27)
+    //  'FontAwesome5 is not supported by @expo/vector-icons:
+    //    "name": "@expo/vector-icons",
+    //    "version": "9.0.0
+    // 
+    // FontAwesome5: string
     Foundation: string
     Ionicons: string
     MaterialCommunityIcons: string

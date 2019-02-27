@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import * as React from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {
   Alert,
@@ -138,7 +138,7 @@ const renderStyling = ({ item }) => (
   </View>
 );
 
-export default class IconSetsList extends PureComponent {
+export default class IconSetsList extends React.PureComponent<any, any> {
   state = {
     sections: [
       { title: 'ICON SETS', data: ICON_SETS },
@@ -172,7 +172,7 @@ export default class IconSetsList extends PureComponent {
 
   render() {
     return (
-      <Container style={styles.container}>
+      <Container>
         <Header>
           <Left>
             <Button

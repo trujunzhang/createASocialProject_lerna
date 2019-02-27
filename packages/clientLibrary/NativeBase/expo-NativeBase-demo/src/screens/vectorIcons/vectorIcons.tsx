@@ -8,7 +8,7 @@ import * as EntypoGlyphs from '@expo/vector-icons/vendor/react-native-vector-ico
 import * as EvilIconsGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/EvilIcons.json'
 import * as FeatherGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Feather.json'
 import * as FontAwesomeGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/FontAwesome.json'
-import * as FontAwesome5Glyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/FontAwesome5Free.json';
+// import * as FontAwesome5Glyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/FontAwesome5Free.json';
 import * as FoundationGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Foundation.json'
 import * as IoniconsGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Ionicons.json'
 import * as MaterialIconsGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/MaterialIcons.json'
@@ -22,7 +22,7 @@ export {
   EvilIconsGlyphs,
   FeatherGlyphs,
   FontAwesomeGlyphs,
-  FontAwesome5Glyphs,
+  // FontAwesome5Glyphs,
   FoundationGlyphs,
   IoniconsGlyphs,
   MaterialIconsGlyphs,
