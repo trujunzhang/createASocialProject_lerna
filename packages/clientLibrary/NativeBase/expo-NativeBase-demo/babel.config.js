@@ -2,7 +2,7 @@ module.exports = function (api) {
   api.cache(true);
   return {
     presets: [
-      'babel-preset-expo',
+      "babel-preset-expo",
       "@babel/preset-typescript"
     ],
     plugins: [
@@ -16,6 +16,12 @@ module.exports = function (api) {
         }
       ],
       [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
         "module-resolver",
         {
           "cwd": "babelrc",
@@ -24,7 +30,7 @@ module.exports = function (api) {
           ],
           "extensions": [".ios.js", ".android.js", ".js", ".jsx", ".json"],
           "alias": {
-            "@assets": "./static"
+            "^react-primitives$": "react-native"
           }
         }
       ]
