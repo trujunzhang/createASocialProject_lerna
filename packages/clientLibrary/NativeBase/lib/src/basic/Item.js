@@ -6,7 +6,7 @@ import {
   Platform,
   View,
   StyleSheet
-} from "react-native";
+} from "react-primitives";
 import { Input } from "./Input";
 import { Label } from "./Label";
 import { Icon } from "./Icon";

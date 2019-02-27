@@ -5,7 +5,7 @@ import {
   Platform,
   DatePickerIOS,
   DatePickerAndroid
-} from "react-native";
+} from "react-primitives";
 import { Text } from "./Text";
 import { platformVariables as variable } from '@app/native-base-variables';
 

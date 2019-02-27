@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet } from 'react-native'
+import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { platformVariables as variable } from '@app/native-base-variables'
 import { Text } from './Text'

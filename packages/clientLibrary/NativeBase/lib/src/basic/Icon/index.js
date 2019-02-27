@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { Platform } from "react-native";
+import { Platform } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 
 import { IconNB } from "../IconNB";

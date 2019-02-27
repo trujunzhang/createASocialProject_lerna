@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { TouchableOpacity, View } from "react-native";
+import { TouchableOpacity, View } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";

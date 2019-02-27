@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Image } from "react-native";
+import { Image } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { LodashUtils as _ } from '@app/tools'
 import md5 from "blueimp-md5";

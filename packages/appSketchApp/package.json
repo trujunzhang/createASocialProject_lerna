@@ -30,7 +30,6 @@
     "@types/react-native": "0.57.27",
     "@types/react": "16.4.8",
     "react-native": "0.42.3",
-    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
     "react-primitives": "0.7.0",
     "react-native-web": "0.10.0",
     "@skpm/builder": "0.4.0",

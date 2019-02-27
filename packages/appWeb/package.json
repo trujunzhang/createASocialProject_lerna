@@ -22,7 +22,6 @@
     "react-art": "16.5.2",
     "react-dom": "16.7.0",
     "react-native-web": "0.10.0",
-    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
     "react-primitives": "0.7.0",
     "@zeit/next-typescript": "1.1.1"
   },

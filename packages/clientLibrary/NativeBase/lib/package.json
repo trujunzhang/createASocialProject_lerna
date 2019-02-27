@@ -44,9 +44,17 @@
     "blueimp-md5": "2.10.0",
     "clamp": "1.0.1",
     "react-tween-state": "0.1.5",
-    "tween-functions": "1.2.0"
+    "tween-functions": "1.2.0",
+    "react-primitives": "0.7.0",
+    "react-dom": "^16.8.2",
+    "react-art": "16.5.2",
+    "react-native-web": "0.10.0"
   },
   "devDependencies": {
+    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
+    "@types/react-sketchapp": "0.12.1",
+    "react-sketchapp": "2.0.0",
+    "babel-plugin-module-resolver": "3.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",
@@ -73,8 +81,11 @@
   "homepage": "https://github.com/GeekyAnts/NativeBase#readme",
   "optionalDependencies": {},
   "peerDependencies": {
+    "prop-types": "*",
     "react": "*",
-    "react-native": "*"
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-web": "*"
   },
   "readmeFilename": "README.md",
   "repository": {

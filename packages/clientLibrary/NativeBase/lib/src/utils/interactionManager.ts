@@ -1,6 +1,8 @@
-import { InteractionManager } from 'react-native'
+// TODO: DJZHANG
+// import { InteractionManager } from 'react-primitives'
+
 export default {
-  ...InteractionManager,
+  // ...InteractionManager,
   runAfterInteractions: (f) => {
     // ensure f get called, timeout at 10ms
     // @gre workaround https://github.com/facebook/react-native/issues/8624
@@ -9,10 +11,10 @@ export default {
       called = true
       f()
     }, 10)
-    InteractionManager.runAfterInteractions(() => {
-      if (called) return
-      clearTimeout(timeout)
-      f()
-    })
+    // InteractionManager.runAfterInteractions(() => {
+    //   if (called) return
+    //   clearTimeout(timeout)
+    //   f()
+    // })
   }
 }

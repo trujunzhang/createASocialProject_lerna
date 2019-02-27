@@ -40,15 +40,14 @@
     "react-native-web": "0.10.0"
   },
   "peerDependencies": {
-    "prop-types": ">=15",
-    "react": ">=15",
-    "react-dom": ">=15",
-    "react-native": ">=0.42",
-    "react-native-web": ">=0.0.129"
+    "prop-types": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-web": "*"
   },
   "devDependencies": {
     "@app/mocks": "0.6.0",
-    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
     "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",
     "babel-plugin-module-resolver": "3.2.0",

@@ -10,7 +10,7 @@ import {
   TouchableNativeFeedback,
   View,
   StyleSheet
-} from "react-native";
+} from "react-primitives";
 import { Icon } from "./Icon";
 import { IconNB } from "./IconNB";
 import { Button } from "./Button";

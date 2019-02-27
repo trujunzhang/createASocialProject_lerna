@@ -4,15 +4,14 @@ import { LodashUtils as _ } from '@app/tools'
 import { InteractionManager, ViewPropTypes } from "../../utils";
 const React = require("react");
 const { Component } = React;
-const ReactNative = require("react-native");
-const {
+import {
   Dimensions,
   View,
   Animated,
   ScrollView,
   StyleSheet,
   Platform
-} = ReactNative;
+} from "react-primitives";
 // const TimerMixin = require("react-timer-mixin");
 
 const SceneComponent = require("./SceneComponent");
@@ -20,7 +19,7 @@ const { DefaultTabBar } = require("./DefaultTabBar");
 const { ScrollableTabBar } = require("./ScrollableTabBar");
 
 class ScrollableTabView extends Component {
-  render(){
+  render() {
     return null
   }
 }
