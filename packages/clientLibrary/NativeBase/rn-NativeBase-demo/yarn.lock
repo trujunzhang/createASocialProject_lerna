@@ -2575,9 +2575,9 @@ fbjs-css-vars@^1.0.0:
   integrity sha1-IWVRE2rgL+JVkyw+yHdfGOLAeLg=
 
 fbjs-scripts@^1.0.0:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/fbjs-scripts/download/fbjs-scripts-1.0.1.tgz#7d8d09d76e83308bf3b1fc7b4c9c6fd081c5ef64"
-  integrity sha1-fY0J126DMIvzsfx7TJxv0IHF72Q=
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/fbjs-scripts/download/fbjs-scripts-1.1.0.tgz#d9e855aed19b572be9dfe39da70d8aece724eed9"
+  integrity sha1-2ehVrtGbVyvp3+Odpw2K7Ock7tk=
   dependencies:
     "@babel/core" "^7.0.0"
     ansi-colors "^1.0.1"
@@ -3940,9 +3940,9 @@ js-tokens@^3.0.2:
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
 js-yaml@^3.12.0, js-yaml@^3.7.0, js-yaml@^3.9.0:
-  version "3.12.1"
-  resolved "http://registry.npm.taobao.org/js-yaml/download/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
-  integrity sha1-KVyGMqGKI+BUz1ydPOyv5ngWdgA=
+  version "3.12.2"
+  resolved "http://registry.npm.taobao.org/js-yaml/download/js-yaml-3.12.2.tgz#ef1d067c5a9d9cb65bd72f285b5d8105c77f14fc"
+  integrity sha1-7x0GfFqdnLZb1y8oW12BBcd/FPw=
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"

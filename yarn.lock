@@ -646,9 +646,9 @@
     url-template "^2.0.8"
 
 "@octokit/plugin-enterprise-rest@^2.1.0":
-  version "2.1.1"
-  resolved "http://registry.npm.taobao.org/@octokit/plugin-enterprise-rest/download/@octokit/plugin-enterprise-rest-2.1.1.tgz#ee7b245aada06d3ffdd409205ad1b891107fee0b"
-  integrity sha1-7nskWq2gbT/91AkgWtG4kRB/7gs=
+  version "2.1.2"
+  resolved "http://registry.npm.taobao.org/@octokit/plugin-enterprise-rest/download/@octokit/plugin-enterprise-rest-2.1.2.tgz#259bd5ac00825a8a482ff6584ae9aed60acd0b41"
+  integrity sha1-JZvVrACCWopIL/ZYSumu1grNC0E=
 
 "@octokit/request@2.3.0":
   version "2.3.0"
@@ -661,9 +661,9 @@
     universal-user-agent "^2.0.1"
 
 "@octokit/rest@^16.15.0":
-  version "16.16.0"
-  resolved "http://registry.npm.taobao.org/@octokit/rest/download/@octokit/rest-16.16.0.tgz#b686407d34c756c3463f8a7b1e42aa035a504306"
-  integrity sha1-toZAfTTHVsNGP4p7HkKqA1pQQwY=
+  version "16.16.1"
+  resolved "http://registry.npm.taobao.org/@octokit/rest/download/@octokit/rest-16.16.1.tgz#65bc0a655c100fbe221da8dfc7fcd1e0f659f71e"
+  integrity sha1-ZbwKZVwQD74iHajfx/zR4PZZ9x4=
   dependencies:
     "@octokit/request" "2.3.0"
     before-after-hook "^1.2.0"
@@ -703,9 +703,9 @@ agentkeepalive@^3.4.1:
     humanize-ms "^1.2.1"
 
 ajv@^6.5.5:
-  version "6.9.1"
-  resolved "http://registry.npm.taobao.org/ajv/download/ajv-6.9.1.tgz#a4d3683d74abc5670e75f0b16520f70a20ea8dc1"
-  integrity sha1-pNNoPXSrxWcOdfCxZSD3CiDqjcE=
+  version "6.9.2"
+  resolved "http://registry.npm.taobao.org/ajv/download/ajv-6.9.2.tgz#4927adb83e7f48e5a32b45729744c71ec39c9c7b"
+  integrity sha1-SSetuD5/SOWjK0Vyl0THHsOcnHs=
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
@@ -2734,9 +2734,9 @@ isstream@~0.1.2:
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
 js-yaml@^3.9.0:
-  version "3.12.1"
-  resolved "http://registry.npm.taobao.org/js-yaml/download/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
-  integrity sha1-KVyGMqGKI+BUz1ydPOyv5ngWdgA=
+  version "3.12.2"
+  resolved "http://registry.npm.taobao.org/js-yaml/download/js-yaml-3.12.2.tgz#ef1d067c5a9d9cb65bd72f285b5d8105c77f14fc"
+  integrity sha1-7x0GfFqdnLZb1y8oW12BBcd/FPw=
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
