@@ -3,6 +3,7 @@ const {
   Animated,
   StyleSheet,
   View,
+  ListView,
   Text,
   Image,
   Platform,
@@ -26,6 +27,7 @@ const resolve = style => {
 
 ReactPrimitives.inject({
   View,
+  ListView,
   Text,
   Image,
   Easing,

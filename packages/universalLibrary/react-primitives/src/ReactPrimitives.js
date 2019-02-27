@@ -23,6 +23,9 @@ const ReactPrimitives = {
     if (api.View) {
       ReactPrimitives.View = api.View;
     }
+    if (api.ListView) {
+      ReactPrimitives.ListView = api.ListView;
+    }
     if (api.Text) {
       ReactPrimitives.Text = api.Text;
     }
