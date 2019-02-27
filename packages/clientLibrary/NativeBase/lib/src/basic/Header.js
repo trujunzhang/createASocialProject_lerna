@@ -96,7 +96,6 @@ class Header extends Component {
     const variables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
-    debugger
     return (
       <View
         ref={(c) => (this._root = c)}
