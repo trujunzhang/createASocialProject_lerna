@@ -1,14 +1,12 @@
 import { PlatformOSType } from 'react-native'
 
+import { IIconVectorVariables } from './iVectorIcons'
+
 // IAppVariables
 
 export interface IBaseVariables {
   platformStyle: 'material' | 'base' | undefined
   platform: PlatformOSType
-}
-
-export interface IIconVectorVariables {
-  iconRenderComponents: () => any
 }
 
 export interface IAccordionVariables {

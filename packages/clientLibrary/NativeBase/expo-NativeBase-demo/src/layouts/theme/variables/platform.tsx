@@ -1,8 +1,8 @@
 import { vectorIcons } from './vectorIcons'
 
-import { themeVariables, appThemeVariables } from '@app/native-base-variables'
+import { themeVariablesWithIconVector, appThemeVariables } from '@app/native-base-variables'
 
-export const platformVariables: themeVariables = {
+export const platformVariables: themeVariablesWithIconVector = {
   ...appThemeVariables,
   iconRenderComponents: () => {
     return vectorIcons
