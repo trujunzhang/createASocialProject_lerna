@@ -8,9 +8,9 @@ interface SwatchProps {
   textColor: string
 }
 
-// name={`Swatch ${name}`}
 export const Swatch = ({ name, hex, textColor }: SwatchProps) => (
   <View
+    name={`Swatch ${name}`}
     style={{
       height: 96,
       width: 96,
@@ -18,7 +18,11 @@ export const Swatch = ({ name, hex, textColor }: SwatchProps) => (
       backgroundColor: hex,
       padding: 8
     }}>
-    <Text style={{ color: textColor, fontWeight: 'bold' }}>{name}</Text>
-    <Text style={{ color: textColor }}>{hex}</Text>
+    <Text
+      name="Swatch Name"
+      style={{ color: textColor, fontWeight: 'bold' }}>{name}</Text>
+    <Text
+      name="Swatch Hex"
+      style={{ color: textColor }}>{hex}</Text>
   </View>
 )

@@ -947,10 +947,9 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
-"@types/react-primitives@0.6.2":
+"@types/react-primitives@https://github.com/trujunzhang/ts-rprimitives":
   version "0.6.2"
-  resolved "http://registry.npm.taobao.org/@types/react-primitives/download/@types/react-primitives-0.6.2.tgz#c1490667968a42029ed6eb4555808e1542e9ccd8"
-  integrity sha1-wUkGZ5aKQgKe1utFVYCOFULpzNg=
+  resolved "https://github.com/trujunzhang/ts-rprimitives#1321c7d8c45e3e7c1dee7ef30c79a95aa8503b0e"
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
