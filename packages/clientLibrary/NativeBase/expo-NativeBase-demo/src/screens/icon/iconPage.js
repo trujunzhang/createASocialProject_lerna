@@ -35,11 +35,11 @@ const datas = [
 ]
 
 class NHIcon extends Component {
-  renderContent() {
+  renderContentxxx() {
     return null
   }
 
-  renderContentxxx() {
+  renderContent() {
     return (
       <List
         dataArray={datas}
