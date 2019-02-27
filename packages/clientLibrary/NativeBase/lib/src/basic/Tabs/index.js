@@ -1,22 +1,15 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
-import { InteractionManager, ViewPropTypes } from "../../utils";
-const React = require("react");
-const { Component } = React;
-import {
-  Dimensions,
-  View,
-  Animated,
-  ScrollView,
-  StyleSheet,
-  Platform
-} from "react-primitives";
+// import { InteractionManager, ViewPropTypes } from "../../utils";
+const React = require('react')
+const { Component } = React
+import { Dimensions, View, Animated, ScrollView, StyleSheet, Platform } from 'react-primitives'
 // const TimerMixin = require("react-timer-mixin");
 
-const SceneComponent = require("./SceneComponent");
-const { DefaultTabBar } = require("./DefaultTabBar");
-const { ScrollableTabBar } = require("./ScrollableTabBar");
+const SceneComponent = require('./SceneComponent')
+const { DefaultTabBar } = require('./DefaultTabBar')
+const { ScrollableTabBar } = require('./ScrollableTabBar')
 
 class ScrollableTabView extends Component {
   render() {
@@ -340,7 +333,7 @@ class ScrollableTabView extends Component {
 //   }
 // });
 
-export default ScrollableTabView;
+export default ScrollableTabView
 
 const styles = StyleSheet.create({
   container: {
@@ -349,4 +342,4 @@ const styles = StyleSheet.create({
   scrollableContentAndroid: {
     flex: 1
   }
-});
+})

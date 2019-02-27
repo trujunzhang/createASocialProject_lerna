@@ -13,6 +13,7 @@ import {
     Easing,
     Image,
     PixelRatio,
+    TouchableHighlight,
     PlatformOSType as RNPlatformOSType,
     StyleSheet,
     Text as RNText,
@@ -49,6 +50,7 @@ export {
     Image,
     PixelRatio,
     StyleSheet,
+    TouchableHighlight,
     // Text,
     // View
 };
