@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { Text as RNText, TextProps } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 

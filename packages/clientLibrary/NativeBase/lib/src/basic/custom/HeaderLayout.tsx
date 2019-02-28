@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { View, ViewProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
@@ -43,12 +44,12 @@ class HeaderLayout extends React.Component<IHeaderLayoutProps, any> {
   }
 }
 
-HeaderLayout.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-  searchBar: PropTypes.bool,
-  rounded: PropTypes.bool
-}
+// HeaderLayout.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+//   searchBar: PropTypes.bool,
+//   rounded: PropTypes.bool
+// }
 
 const StyledHeaderLayout = connectStyle('NativeBase.HeaderLayout', {}, mapPropsToStyleNames)(
   HeaderLayout

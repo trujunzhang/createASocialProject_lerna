@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { View, ViewProps } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -100,8 +101,8 @@ class Footer extends React.Component<IFooterProps, any> {
         ]}
       />
     ) : (
-      <View ref={(c) => (this._root = c)} {...this.props} />
-    )
+        <View ref={(c) => (this._root = c)} {...this.props} />
+      )
   }
 }
 

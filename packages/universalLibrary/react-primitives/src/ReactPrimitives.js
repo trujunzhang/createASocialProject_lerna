@@ -17,6 +17,9 @@ const ReactPrimitives = {
   PixelRatio: require('./modules/PixelRatio'),
   Platform: require('./modules/Platform'),
   inject: (api) => {
+    if (api.StatusBar) {
+      ReactPrimitives.StatusBar = api.StatusBar;
+    }
     if (api.StyleSheet) {
       ReactPrimitives.StyleSheet = api.StyleSheet;
     }

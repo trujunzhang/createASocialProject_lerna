@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { TouchableOpacity, TouchableOpacityProps } from 'react-primitives'
 // import IconNB from "react-native-vector-icons/Ionicons";
 import { connectStyle } from '@app/native-base-shoutem-theme'

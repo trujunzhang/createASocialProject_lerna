@@ -10,6 +10,7 @@ import * as React from 'react'
 import {
   TextInput,
   // Common
+  StatusBar,
   Animated,
   Dimensions,
   Easing,
@@ -54,6 +55,7 @@ export const ListView: any
 export const ScrollView: any
 
 export {
+  StatusBar,
   Animated,
   Dimensions,
   Easing,

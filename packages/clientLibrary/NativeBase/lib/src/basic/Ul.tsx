@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { View, TextProps } from 'react-primitives'
 
 import { Text } from 'react-primitives'
@@ -18,7 +19,7 @@ class Ul extends React.Component<IUlProps, any> {
   }
 }
 
-const childrenType = function(props, propName, component) {
+const childrenType = function (props, propName, component) {
   let error
   const prop = props[propName]
   React.Children.forEach(prop, (child) => {

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { ActivityIndicator, ActivityIndicatorProps } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -28,8 +29,8 @@ class Spinner extends React.Component<ISpinnerProps, any> {
           this.props.color
             ? this.props.color
             : this.props.inverse
-            ? variables.inverseSpinnerColor
-            : variables.defaultSpinnerColor
+              ? variables.inverseSpinnerColor
+              : variables.defaultSpinnerColor
         }
         size={this.props.size ? this.props.size : 'large'}
       />

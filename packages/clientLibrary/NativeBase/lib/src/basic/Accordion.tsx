@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import {
   Animated,
   TouchableWithoutFeedback,
@@ -38,8 +39,8 @@ class DefaultHeader extends React.Component<any, any> {
                 ? this.props.expandedIconStyle
                 : { color: variables.expandedIconStyle }
               : this.props.icon && this.props.iconStyle
-              ? this.props.iconStyle
-              : { color: variables.iconStyle }
+                ? this.props.iconStyle
+                : { color: variables.iconStyle }
           ]}
           name={
             this.props.expanded
@@ -47,8 +48,8 @@ class DefaultHeader extends React.Component<any, any> {
                 ? this.props.expandedIcon
                 : 'ios-arrow-up'
               : this.props.icon
-              ? this.props.icon
-              : 'ios-arrow-down'
+                ? this.props.icon
+                : 'ios-arrow-down'
           }
         />
       </View>
@@ -104,16 +105,16 @@ class AccordionItem extends React.Component<any, any> {
             {this.props.renderHeader ? (
               this.props.renderHeader(this.props.item, this.props.expanded)
             ) : (
-              <DefaultHeader
-                title={this.props.item.title}
-                expanded={this.props.expanded}
-                headerStyle={this.props.headerStyle}
-                icon={this.props.icon}
-                iconStyle={this.props.iconStyle}
-                expandedIcon={this.props.expandedIcon}
-                expandedIconStyle={this.props.expandedIconStyle}
-              />
-            )}
+                <DefaultHeader
+                  title={this.props.item.title}
+                  expanded={this.props.expanded}
+                  headerStyle={this.props.headerStyle}
+                  icon={this.props.icon}
+                  iconStyle={this.props.iconStyle}
+                  expandedIcon={this.props.expandedIcon}
+                  expandedIconStyle={this.props.expandedIconStyle}
+                />
+              )}
           </View>
         </TouchableWithoutFeedback>
         {this.props.expanded ? (
@@ -121,11 +122,11 @@ class AccordionItem extends React.Component<any, any> {
             {this.props.renderContent ? (
               this.props.renderContent(this.props.item)
             ) : (
-              <DefaultContent
-                content={this.props.item.content}
-                contentStyle={this.props.contentStyle}
-              />
-            )}
+                <DefaultContent
+                  content={this.props.item.content}
+                  contentStyle={this.props.contentStyle}
+                />
+              )}
           </AccordionSubItem>
         ) : null}
       </View>

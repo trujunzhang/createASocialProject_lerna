@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import {
   Animated,
   PanResponder,
@@ -251,11 +252,11 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
               {this.renderBody()}
             </ListItem>
           ) : (
-            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-              {' '}
-              {this.renderBody()}
-            </View>
-          )}
+              <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
+                {' '}
+                {this.renderBody()}
+              </View>
+            )}
         </Animated.View>
       )
     } else {
@@ -272,11 +273,11 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
               {this.renderBody()}
             </ListItem>
           ) : (
-            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-              {' '}
-              {this.renderBody()}
-            </View>
-          )}
+              <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
+                {' '}
+                {this.renderBody()}
+              </View>
+            )}
         </Animated.View>
       )
     }

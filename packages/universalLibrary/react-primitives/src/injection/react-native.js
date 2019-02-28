@@ -1,5 +1,6 @@
 const ReactPrimitives = require('../ReactPrimitives');
 const {
+  StatusBar,
   Animated,
   View,
   Text,
@@ -16,6 +17,7 @@ const {
 } = require('react-native');
 
 ReactPrimitives.inject({
+  StatusBar,
   StyleSheet,
   View,
   Text,

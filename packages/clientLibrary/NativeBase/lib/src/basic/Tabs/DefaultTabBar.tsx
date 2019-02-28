@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
 import { connectStyle, StyleProvider } from '@app/native-base-shoutem-theme'
@@ -21,7 +22,7 @@ class DefaultTabBar extends React.Component<IProps, any> {
     }
   }
 
-  renderTabOption(name, page) {}
+  renderTabOption(name, page) { }
 
   renderTab(
     name,

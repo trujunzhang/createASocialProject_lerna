@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { View, StatusBar, ViewProps, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
@@ -21,7 +22,7 @@ interface IScrollHeaderProps {
    * Default: regular
    */
   rounded?: boolean
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
   /**
    * It is advisable to use hasTabs prop with Header while using Tab
    */
@@ -110,8 +111,8 @@ class ScrollHeader extends React.Component<IScrollHeaderProps, any> {
         style={[
           this.props.style,
           {
-            height: this.calculateHeight(this.state.orientation, variables.Inset),
-            paddingTop: this.calculatePadder(this.state.orientation, variables.Inset)
+            height: this.calculateHeight(this.state.orientation, variable.Inset),
+            paddingTop: this.calculatePadder(this.state.orientation, variable.Inset)
           }
         ]}
       />
@@ -134,8 +135,8 @@ class ScrollHeader extends React.Component<IScrollHeaderProps, any> {
           this.props.iosBarStyle
             ? this.props.iosBarStyle
             : platformStyle === 'material'
-            ? 'light-content'
-            : variables.iosStatusbar
+              ? 'light-content'
+              : variables.iosStatusbar
         }
         translucent={this.props.transparent ? true : this.props.translucent}
       />
@@ -151,12 +152,12 @@ class ScrollHeader extends React.Component<IScrollHeaderProps, any> {
   }
 }
 
-ScrollHeader.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-  searchBar: PropTypes.bool,
-  rounded: PropTypes.bool
-}
+// ScrollHeader.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+//   searchBar: PropTypes.bool,
+//   rounded: PropTypes.bool
+// }
 
 const StyledScrollHeader = connectStyle('NativeBase.ScrollHeader', {}, mapPropsToStyleNames)(
   ScrollHeader

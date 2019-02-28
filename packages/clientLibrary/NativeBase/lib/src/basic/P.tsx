@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { Text, TextProps } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -15,7 +16,7 @@ class P extends React.Component<IPProps, any> {
   }
 }
 
-const childrenType = function(props, propName, component) {
+const childrenType = function (props, propName, component) {
   let error
   const prop = props[propName]
   React.Children.forEach(prop, (child) => {

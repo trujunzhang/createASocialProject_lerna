@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import {
   TouchableOpacity,
   TouchableOpacityProps,
@@ -206,8 +207,8 @@ class Item extends React.Component<IItemProps, any> {
               onBlur={() => {
                 inputProps.value
                   ? this.setState({
-                      isFocused: true
-                    })
+                    isFocused: true
+                  })
                   : !this.state.text.length && this.setState({ isFocused: false })
                 inputProps.onBlur && inputProps.onBlur()
               }}
@@ -264,8 +265,8 @@ class Item extends React.Component<IItemProps, any> {
               onBlur={() => {
                 inputProps.value
                   ? this.setState({
-                      isFocused: true
-                    })
+                    isFocused: true
+                  })
                   : !this.state.text.length && this.setState({ isFocused: false })
                 inputProps.onBlur && inputProps.onBlur()
               }}
@@ -310,8 +311,8 @@ class Item extends React.Component<IItemProps, any> {
           onBlur={() => {
             inputProps.value
               ? this.setState({
-                  isFocused: true
-                })
+                isFocused: true
+              })
               : !this.state.text.length && this.setState({ isFocused: false })
             inputProps.onBlur && inputProps.onBlur()
           }}
@@ -370,7 +371,7 @@ class Item extends React.Component<IItemProps, any> {
   }
 }
 
-const childrenType = function(props, propName, component) {
+const childrenType = function (props, propName, component) {
   let error
   const prop = props[propName]
   if (!props.children.length) {

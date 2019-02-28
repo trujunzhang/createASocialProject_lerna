@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { View, ViewProps } from 'react-primitives'
 
 import { platformVariables as variables } from '@app/native-base-variables'

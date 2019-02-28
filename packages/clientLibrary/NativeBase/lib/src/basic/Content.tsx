@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import { KeyboardAwareScrollView } from '@app/react-native-keyboard-aware-scroll-view'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
@@ -7,7 +8,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 export interface IContentProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
   padder: boolean
   disableKBDismissScroll: boolean
   enableResetScrollToCoords: boolean
@@ -125,24 +126,24 @@ class Content extends React.Component<IContentProps, any> {
         {this.props.children}
       </KeyboardAwareScrollView>
     ) : (
-      <KeyboardAwareScrollView
-        automaticallyAdjustContentInsets={false}
-        resetScrollToCoords={this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }}
-        keyboardShouldPersistTaps={
-          this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
-        }
-        ref={(c) => {
-          this._scrollview = c
-          this._root = c
-        }}
-        {...this.props}
-        contentContainerStyle={[
-          { padding: this.props.padder ? variables.contentPadding : undefined },
-          this.props.contentContainerStyle
-        ]}>
-        {this.props.children}
-      </KeyboardAwareScrollView>
-    )
+        <KeyboardAwareScrollView
+          automaticallyAdjustContentInsets={false}
+          resetScrollToCoords={this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }}
+          keyboardShouldPersistTaps={
+            this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
+          }
+          ref={(c) => {
+            this._scrollview = c
+            this._root = c
+          }}
+          {...this.props}
+          contentContainerStyle={[
+            { padding: this.props.padder ? variables.contentPadding : undefined },
+            this.props.contentContainerStyle
+          ]}>
+          {this.props.children}
+        </KeyboardAwareScrollView>
+      )
   }
 }
 

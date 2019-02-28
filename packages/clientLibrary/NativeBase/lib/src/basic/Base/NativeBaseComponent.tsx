@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-
+import * as PropTypes from 'prop-types'
 export interface INativeBaseComponentProps {
   theme?: any
 }

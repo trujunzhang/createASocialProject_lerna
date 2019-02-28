@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
+import * as PropTypes from 'prop-types'
 import {
   View,
   Modal,
@@ -125,31 +126,31 @@ class ActionSheetContainer extends React.Component<IActionSheetContainerProps, a
                     <Text>{item}</Text>
                   </ListItem>
                 ) : (
-                  <ListItem
-                    onPress={() => {
-                      this.state.callback(parseInt(index))
-                      this.setState({ modalVisible: false })
-                    }}
-                    style={{
-                      borderColor: 'transparent',
-                      marginLeft: 14,
-                      height: 50
-                    }}
-                    icon>
-                    <Left>
-                      <Icon
-                        name={item.icon}
-                        style={{
-                          color: item.iconColor ? item.iconColor : undefined
-                        }}
-                      />
-                    </Left>
-                    <Body style={{ borderColor: 'transparent', paddingLeft: 7 }}>
-                      <Text>{item.text}</Text>
-                    </Body>
-                    <Right />
-                  </ListItem>
-                )
+                    <ListItem
+                      onPress={() => {
+                        this.state.callback(parseInt(index))
+                        this.setState({ modalVisible: false })
+                      }}
+                      style={{
+                        borderColor: 'transparent',
+                        marginLeft: 14,
+                        height: 50
+                      }}
+                      icon>
+                      <Left>
+                        <Icon
+                          name={item.icon}
+                          style={{
+                            color: item.iconColor ? item.iconColor : undefined
+                          }}
+                        />
+                      </Left>
+                      <Body style={{ borderColor: 'transparent', paddingLeft: 7 }}>
+                        <Text>{item.text}</Text>
+                      </Body>
+                      <Right />
+                    </ListItem>
+                  )
               }}
             />
           </TouchableOpacity>
