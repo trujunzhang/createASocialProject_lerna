@@ -1,11 +1,14 @@
 import * as React from 'react'
-import PropTypes from "prop-types";
+import * as ReactNative from 'react-native';
 import { View, ViewProps } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { platformVariables as variable } from '@app/native-base-variables';
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Badge extends React.Component {
   private _root: any
   render() {

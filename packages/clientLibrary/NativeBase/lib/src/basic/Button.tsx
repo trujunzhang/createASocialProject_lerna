@@ -8,6 +8,9 @@ import computeProps from '../utils/computeProps'
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Button extends React.Component {
   private _root: any
   static contextTypes = {

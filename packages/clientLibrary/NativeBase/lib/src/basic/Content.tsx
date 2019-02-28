@@ -1,5 +1,5 @@
 import * as React from 'react'
-import PropTypes from "prop-types";
+import * as ReactNative from 'react-native';
 import { KeyboardAwareScrollView } from "@app/react-native-keyboard-aware-scroll-view";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";

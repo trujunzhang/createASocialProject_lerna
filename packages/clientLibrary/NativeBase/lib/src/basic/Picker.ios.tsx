@@ -1,5 +1,5 @@
 import * as React from 'react'
-import PropTypes from "prop-types";
+import * as ReactNative from 'react-native';
 // import createReactClass from "create-react-class";
 import { Picker, Modal, View, ViewPropTypes, FlatList } from "react-primitives";
 import { LodashUtils as _ } from '@app/tools'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import PropTypes from "prop-types";
+import * as ReactNative from 'react-native';
 import {
   View,
   Modal,
@@ -21,6 +21,9 @@ import { Body } from "./Body";
 import { ListItem } from "./ListItem";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class ActionSheetContainer extends React.Component {
   constructor(props) {
     super(props);

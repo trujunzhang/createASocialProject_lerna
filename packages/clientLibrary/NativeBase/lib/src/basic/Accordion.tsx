@@ -10,6 +10,9 @@ import { Text } from "./Text";
 import { Icon } from "./Icon";
 import { platformVariables as variable } from '@app/native-base-variables'
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class DefaultHeader extends React.Component {
   render() {
     const variables = this.context.theme
