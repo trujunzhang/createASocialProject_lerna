@@ -7,9 +7,9 @@ import { Setup } from './src/layouts/boot/setup'
 import { appConfig } from './src/utils/appSetup'
 import { Root } from '@app/native-base'
 
-import { AppNavigator } from './src/root/rootNavigator'
+import { AppContainer } from './src/root/rootNavigator'
 
-const CurrentPage = AppNavigator
+const CurrentPage = AppContainer
 
 appConfig()
 

@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import {
   createDrawerNavigator,
+  createAppContainer
 } from 'react-navigation';
 
 import {
@@ -9,7 +10,9 @@ import {
   appConfig
 } from './appNavigatorHelper'
 
-export const AppNavigator = createDrawerNavigator(
+const AppNavigator = createDrawerNavigator(
   appRouteConfigs,
   appConfig
 )
+
+export const AppContainer = createAppContainer(AppNavigator);
