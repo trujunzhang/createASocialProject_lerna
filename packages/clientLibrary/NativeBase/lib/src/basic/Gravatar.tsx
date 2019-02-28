@@ -1,4 +1,4 @@
-import React from 'react'
+import * as  React from 'react'
 import * as ReactNative from 'react-native'
 import { Image, ImageProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -10,7 +10,7 @@ import computeProps from '../utils/computeProps'
 
 const GRAVATAR_URI = 'https://www.gravatar.com/avatar/'
 
-export interface IGravatarProps extends ImageProps {}
+export interface IGravatarProps extends ImageProps { }
 
 class Gravatar extends NativeBaseComponent {
   private _root: any
