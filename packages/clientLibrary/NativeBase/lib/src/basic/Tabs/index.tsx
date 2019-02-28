@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
-// import { InteractionManager, ViewPropTypes } from "../../utils";
+// import { InteractionManager, ViewProps} from "../../utils";
 const React = require('react')
 const { Component } = React
 import { Dimensions, View, Animated, ScrollView, StyleSheet, Platform } from 'react-primitives'
