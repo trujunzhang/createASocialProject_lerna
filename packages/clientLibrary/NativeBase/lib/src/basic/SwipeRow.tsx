@@ -1,6 +1,13 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-import { Animated, PanResponder, Platform, StyleSheet, TouchableOpacity, View } from 'react-primitives'
+import {
+  Animated,
+  PanResponder,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  View
+} from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { Left } from './Left'
 import { Right } from './Right'
@@ -191,8 +198,8 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
   }
 
   /*
-	 * This method is called by SwipeListView
-	 */
+   * This method is called by SwipeListView
+   */
   closeRow() {
     this.manuallySwipeRow(0)
   }
@@ -244,11 +251,11 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
               {this.renderBody()}
             </ListItem>
           ) : (
-              <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-                {' '}
-                {this.renderBody()}
-              </View>
-            )}
+            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
+              {' '}
+              {this.renderBody()}
+            </View>
+          )}
         </Animated.View>
       )
     } else {
@@ -265,11 +272,11 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
               {this.renderBody()}
             </ListItem>
           ) : (
-              <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-                {' '}
-                {this.renderBody()}
-              </View>
-            )}
+            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
+              {' '}
+              {this.renderBody()}
+            </View>
+          )}
         </Animated.View>
       )
     }

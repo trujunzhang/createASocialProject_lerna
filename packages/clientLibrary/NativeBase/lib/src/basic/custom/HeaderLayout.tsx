@@ -6,12 +6,12 @@ import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
 
 export interface IHeaderLayoutProps extends ViewProps {
-    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-    searchBar: boolean
-    rounded: boolean
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  searchBar: boolean
+  rounded: boolean
 }
-class HeaderLayout extends React.Component <IHeaderLayoutProps ,any>{
-    private _root: any
+class HeaderLayout extends React.Component<IHeaderLayoutProps, any> {
+  private _root: any
 
   static contextTypes = {
     theme: PropTypes.object

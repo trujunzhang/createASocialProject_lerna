@@ -1,6 +1,13 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet, TouchableOpacityProps } from 'react-primitives'
+import {
+  TouchableOpacity,
+  Platform,
+  View,
+  TouchableNativeFeedback,
+  StyleSheet,
+  TouchableOpacityProps
+} from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { platformVariables as variable } from '@app/native-base-variables'
 import { Text } from './Text'
@@ -63,16 +70,14 @@ class Button extends React.Component<IButtonProps, any> {
     const children =
       Platform.OS === 'ios'
         ? this.props.children
-        : React.Children.map(
-          this.props.children,
-          (child: any) =>
+        : React.Children.map(this.props.children, (child: any) =>
             child && child.type === Text
               ? React.cloneElement(child, {
-                uppercase: variables.btnUppercaseAndroidText,
-                ...child.props
-              })
+                  uppercase: variables.btnUppercaseAndroidText,
+                  ...child.props
+                })
               : child
-        )
+          )
     if (
       Platform.OS === 'ios' ||
       Platform.OS === 'web' ||

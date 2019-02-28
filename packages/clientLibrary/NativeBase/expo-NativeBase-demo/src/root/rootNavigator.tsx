@@ -1,18 +1,9 @@
 import * as React from 'react'
 
-import {
-  createDrawerNavigator,
-  createAppContainer
-} from 'react-navigation';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation'
 
-import {
-  appRouteConfigs,
-  appConfig
-} from './appNavigatorHelper'
+import { appRouteConfigs, appConfig } from './appNavigatorHelper'
 
-const AppNavigator = createDrawerNavigator(
-  appRouteConfigs,
-  appConfig
-)
+const AppNavigator = createDrawerNavigator(appRouteConfigs, appConfig)
 
-export const AppContainer = createAppContainer(AppNavigator);
+export const AppContainer = createAppContainer(AppNavigator)

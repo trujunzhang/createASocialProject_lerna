@@ -15,7 +15,7 @@ class Li extends React.Component<ILiProps, any> {
   }
 }
 
-const childrenType = function (props, propName, component) {
+const childrenType = function(props, propName, component) {
   let error
   const prop = props[propName]
   React.Children.forEach(prop, (child) => {

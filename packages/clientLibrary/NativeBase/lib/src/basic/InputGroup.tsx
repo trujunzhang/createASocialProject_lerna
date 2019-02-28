@@ -1,18 +1,18 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
-import { View, ViewProps } from "react-primitives";
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
 
-import { platformVariables as variables } from '@app/native-base-variables';
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import computeProps from "../utils/computeProps";
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import { platformVariables as variables } from '@app/native-base-variables'
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import computeProps from '../utils/computeProps'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IInputGroupProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
   /**
-    * Wraps the textbox with predefined border options.
-    * Default: underline
-    */
+   * Wraps the textbox with predefined border options.
+   * Default: underline
+   */
   borderType?: 'rounded' | 'regular' | 'underline'
   toolbar?: boolean
   atoolbar?: boolean
@@ -43,26 +43,24 @@ class InputGroup extends React.Component<IInputGroupProps, any> {
     return {
       roundedInputGroup: {
         borderWidth: this.props.rounded ? 1 : undefined,
-        borderRadius: this.props.rounded
-          ? variables.inputGroupRoundedBorderRadius
-          : undefined
+        borderRadius: this.props.rounded ? variables.inputGroupRoundedBorderRadius : undefined
       }
-    };
+    }
   }
 
   prepareRootProps() {
     const defaultProps = {
       style: this.getInitialStyle().roundedInputGroup
-    };
+    }
 
-    return computeProps(this.props, defaultProps);
+    return computeProps(this.props, defaultProps)
   }
   render() {
     return (
-      <View ref={c => (this._root = c)} {...this.prepareRootProps()}>
+      <View ref={(c) => (this._root = c)} {...this.prepareRootProps()}>
         {this.props.children}
       </View>
-    );
+    )
   }
 }
 
@@ -76,10 +74,6 @@ class InputGroup extends React.Component<IInputGroupProps, any> {
 //   disabled: PropTypes.bool
 // };
 
-const StyledInputGroup = connectStyle(
-  "NativeBase.InputGroup",
-  {},
-  mapPropsToStyleNames
-)(InputGroup);
+const StyledInputGroup = connectStyle('NativeBase.InputGroup', {}, mapPropsToStyleNames)(InputGroup)
 
-export { StyledInputGroup as InputGroup };
+export { StyledInputGroup as InputGroup }

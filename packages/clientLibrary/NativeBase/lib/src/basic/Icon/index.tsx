@@ -1,103 +1,111 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
+import * as ReactNative from 'react-native'
 
-import { Platform } from "react-primitives";
-import { connectStyle } from "@app/native-base-shoutem-theme";
+import { Platform } from 'react-primitives'
+import { connectStyle } from '@app/native-base-shoutem-theme'
 
-import { IconNB } from "../IconNB";
-import { NBIcons as ic } from "./NBIcons";
-import { platformVariables as variable } from '@app/native-base-variables';
+import { IconNB } from '../IconNB'
+import { NBIcons as ic } from './NBIcons'
+import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 
-import mapPropsToStyleNames from "../../utils/mapPropsToStyleNames";
+import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 
 /**
  * see Widget Icon.js
  */
 export interface IIconProps {
-    name: string
-    iconSize?: number
-    iconColor?: string
-    type?: string
-    // | 'Entypo'
-    // | 'EvilIcons'
-    // | 'Feather'
-    // | 'FontAwesome'
-    // | 'Foundation'
-    // | 'Ionicons'
-    // | 'MaterialCommunityIcons'
-    // | 'MaterialIcons'
-    // | 'Octicons'
-    // | 'SimpleLineIcons'
-    // | 'Zocial'
-    // TODO position attribute of ReactNative.FlexStyle hasn't another position values without "absolute" and "relative"
-    style?: any
-    onPress?: (e?: any) => any
-    active?: boolean
-    ios?: string
-    android?: string
-    color?: string
-    fontSize?: number
+  name: string
+  iconSize?: number
+  iconColor?: string
+  type?: string
+  // | 'Entypo'
+  // | 'EvilIcons'
+  // | 'Feather'
+  // | 'FontAwesome'
+  // | 'Foundation'
+  // | 'Ionicons'
+  // | 'MaterialCommunityIcons'
+  // | 'MaterialIcons'
+  // | 'Octicons'
+  // | 'SimpleLineIcons'
+  // | 'Zocial'
+  // TODO position attribute of ReactNative.FlexStyle hasn't another position values without "absolute" and "relative"
+  style?: any
+  onPress?: (e?: any) => any
+  active?: boolean
+  ios?: string
+  android?: string
+  color?: string
+  fontSize?: number
 }
 
-class Icon extends React.Component <IIconProps , any>{
-    private _root: any
+class Icon extends React.Component<IIconProps, any> {
+  private _root: any
 
-	static contextTypes = {
-		theme: PropTypes.object,
-	};
+  static contextTypes = {
+    theme: PropTypes.object
+  }
 
-	getName() {
-		const variables = this.context.theme ? this.context.theme["@@shoutem.theme/themeStyle"].variables : variable;
-		const platformStyle = variables.platformStyle;
-		const platform = variables.platform;
+  getName() {
+    const variables = this.context.theme
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
+    const platformStyle = variables.platformStyle
+    const platform = variables.platform
 
-		if ((this.props.type || variables.iconFamily) === "Ionicons") {
-			if (typeof ic[this.props.name] !== "object") {
-				return this.props.name;
-			} else if (typeof ic[this.props.name] === "object") {
-				let name;
-				if (platform === "ios" && platformStyle !== "material") {
-					name = this.props.active ? ic[this.props.name].ios.active : ic[this.props.name].ios.default;
-				} else {
-					name = this.props.active ? ic[this.props.name].android.active : ic[this.props.name].android.default;
-				}
-				return name;
-			}
-		} else {
-			return this.props.name;
-		}
-	}
+    if ((this.props.type || variables.iconFamily) === 'Ionicons') {
+      if (typeof ic[this.props.name] !== 'object') {
+        return this.props.name
+      } else if (typeof ic[this.props.name] === 'object') {
+        let name
+        if (platform === 'ios' && platformStyle !== 'material') {
+          name = this.props.active
+            ? ic[this.props.name].ios.active
+            : ic[this.props.name].ios.default
+        } else {
+          name = this.props.active
+            ? ic[this.props.name].android.active
+            : ic[this.props.name].android.default
+        }
+        return name
+      }
+    } else {
+      return this.props.name
+    }
+  }
 
-	getIconName() {
-		if (Platform.OS === "ios") {
-			if (this.props.ios) {
-				return this.props.ios;
-			} else {
-				return this.props.active ? ic[this.props.name].ios.active : ic[this.props.name].ios.default;
-			}
-		} else if (this.props.android) {
-			return this.props.android;
-		} else {
-			return this.props.active ? ic[this.props.name].android.active : ic[this.props.name].android.default;
-		}
-	}
+  getIconName() {
+    if (Platform.OS === 'ios') {
+      if (this.props.ios) {
+        return this.props.ios
+      } else {
+        return this.props.active ? ic[this.props.name].ios.active : ic[this.props.name].ios.default
+      }
+    } else if (this.props.android) {
+      return this.props.android
+    } else {
+      return this.props.active
+        ? ic[this.props.name].android.active
+        : ic[this.props.name].android.default
+    }
+  }
 
-	render() {
-		if (this.props.ios && this.props.android) {
-			return (
-				<IconNB
-					ref={c => (this._root = c)}
-					{...this.props}
-					name={Platform.OS === "ios" ? this.props.ios : this.props.android}
-				/>
-			);
-		} else if (this.props.name && (this.props.android || this.props.ios)) {
-			return <IconNB ref={c => (this._root = c)} {...this.props} name={this.getIconName()} />;
-		} else {
-			return <IconNB ref={c => (this._root = c)} {...this.props} name={this.getName()} />;
-		}
-	}
+  render() {
+    if (this.props.ios && this.props.android) {
+      return (
+        <IconNB
+          ref={(c) => (this._root = c)}
+          {...this.props}
+          name={Platform.OS === 'ios' ? this.props.ios : this.props.android}
+        />
+      )
+    } else if (this.props.name && (this.props.android || this.props.ios)) {
+      return <IconNB ref={(c) => (this._root = c)} {...this.props} name={this.getIconName()} />
+    } else {
+      return <IconNB ref={(c) => (this._root = c)} {...this.props} name={this.getName()} />
+    }
+  }
 }
 
 //Icon.propTypes = {
@@ -110,6 +118,6 @@ class Icon extends React.Component <IIconProps , any>{
 //	type: PropTypes.string,
 // };
 
-const StyledIcon = connectStyle("NativeBase.Icon", {}, mapPropsToStyleNames)(Icon);
+const StyledIcon = connectStyle('NativeBase.Icon', {}, mapPropsToStyleNames)(Icon)
 
-export { StyledIcon as Icon };
+export { StyledIcon as Icon }

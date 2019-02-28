@@ -1,8 +1,8 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
-import { View, ViewProps } from "react-primitives";
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface ISegmentProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -10,7 +10,7 @@ export interface ISegmentProps extends ViewProps {
 class Segment extends React.Component<ISegmentProps, any> {
   private _root: any
   render() {
-    return <View ref={c => (this._root = c)} {...this.props} />;
+    return <View ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 
@@ -23,9 +23,5 @@ class Segment extends React.Component<ISegmentProps, any> {
 //   ])
 // };
 
-const StyledSegment = connectStyle(
-  "NativeBase.Segment",
-  {},
-  mapPropsToStyleNames
-)(Segment);
-export { StyledSegment as Segment };
+const StyledSegment = connectStyle('NativeBase.Segment', {}, mapPropsToStyleNames)(Segment)
+export { StyledSegment as Segment }

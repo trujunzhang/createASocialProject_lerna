@@ -1,23 +1,23 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-import { Image , ImageProps } from 'react-primitives'
+import { Image, ImageProps } from 'react-primitives'
 
-import { connectStyle } from "@app/native-base-shoutem-theme";
+import { connectStyle } from '@app/native-base-shoutem-theme'
 /* import computeProps from "../utils/computeProps"; */
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IThumbnailProps extends ImageProps  {
-    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-	  square: boolean
-	  circular: boolean
-	  size: number
+export interface IThumbnailProps extends ImageProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  square: boolean
+  circular: boolean
+  size: number
 }
 
-class Thumbnail extends React.Component <IThumbnailProps , any>{
-    private _root: any
-	render() {
-		return <Image ref={c => (this._root = c)} {...this.props} />;
-	}
+class Thumbnail extends React.Component<IThumbnailProps, any> {
+  private _root: any
+  render() {
+    return <Image ref={(c) => (this._root = c)} {...this.props} />
+  }
 }
 
 //Thumbnail.propTypes = {
@@ -28,6 +28,6 @@ class Thumbnail extends React.Component <IThumbnailProps , any>{
 //	size: PropTypes.number,
 //};
 
-const StyledThumbnail = connectStyle("NativeBase.Thumbnail", {}, mapPropsToStyleNames)(Thumbnail);
+const StyledThumbnail = connectStyle('NativeBase.Thumbnail', {}, mapPropsToStyleNames)(Thumbnail)
 
-export { StyledThumbnail as Thumbnail };
+export { StyledThumbnail as Thumbnail }

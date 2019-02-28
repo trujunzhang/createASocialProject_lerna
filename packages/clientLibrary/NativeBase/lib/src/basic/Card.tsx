@@ -1,9 +1,9 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
-import { View, ListView, ViewProps } from "react-primitives";
+import * as ReactNative from 'react-native'
+import { View, ListView, ViewProps } from 'react-primitives'
 
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface ICardProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -16,8 +16,8 @@ class Card extends React.Component<ICardProps, any> {
     if (this.props.dataArray && this.props.renderRow) {
       const ds = new ListView.DataSource({
         rowHasChanged: (r1, r2) => r1 !== r2
-      });
-      const dataSource = ds.cloneWithRows(this.props.dataArray);
+      })
+      const dataSource = ds.cloneWithRows(this.props.dataArray)
       return (
         <ListView
           {...this.props}
@@ -25,13 +25,13 @@ class Card extends React.Component<ICardProps, any> {
           dataSource={dataSource}
           renderRow={this.props.renderRow}
         />
-      );
+      )
     }
     return (
-      <View ref={c => (this._root = c)} {...this.props}>
+      <View ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
-    );
+    )
   }
 }
 
@@ -46,8 +46,6 @@ class Card extends React.Component<ICardProps, any> {
 //   renderRow: PropTypes.func
 // };
 
-const StyledCard = connectStyle("NativeBase.Card", {}, mapPropsToStyleNames)(
-  Card
-);
+const StyledCard = connectStyle('NativeBase.Card', {}, mapPropsToStyleNames)(Card)
 
-export { StyledCard as Card };
+export { StyledCard as Card }

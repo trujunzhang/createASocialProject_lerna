@@ -7,9 +7,9 @@ import {
   ViewProps,
   StyleSheet,
   View
-} from "react-primitives";
-import { Text } from "./Text";
-import { Icon } from "./Icon";
+} from 'react-primitives'
+import { Text } from './Text'
+import { Icon } from './Icon'
 import { platformVariables as variable } from '@app/native-base-variables'
 
 export interface IDefaultHeaderProps extends ViewProps {
@@ -19,8 +19,8 @@ export interface IDefaultHeaderProps extends ViewProps {
 class DefaultHeader extends React.Component<any, any> {
   render() {
     const variables = this.context.theme
-      ? this.context.theme["@@shoutem.theme/themeStyle"].variables
-      : variable;
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
     return (
       <View
         style={[
@@ -28,8 +28,7 @@ class DefaultHeader extends React.Component<any, any> {
           this.props.headerStyle
             ? this.props.headerStyle
             : { backgroundColor: variables.headerStyle }
-        ]}
-      >
+        ]}>
         <Text> {this.props.title}</Text>
         <Icon
           style={[
@@ -39,29 +38,29 @@ class DefaultHeader extends React.Component<any, any> {
                 ? this.props.expandedIconStyle
                 : { color: variables.expandedIconStyle }
               : this.props.icon && this.props.iconStyle
-                ? this.props.iconStyle
-                : { color: variables.iconStyle }
+              ? this.props.iconStyle
+              : { color: variables.iconStyle }
           ]}
           name={
             this.props.expanded
               ? this.props.expandedIcon
                 ? this.props.expandedIcon
-                : "ios-arrow-up"
+                : 'ios-arrow-up'
               : this.props.icon
-                ? this.props.icon
-                : "ios-arrow-down"
+              ? this.props.icon
+              : 'ios-arrow-down'
           }
         />
       </View>
-    );
+    )
   }
 }
 
 class DefaultContent extends React.Component<any, any> {
   render() {
     const variables = this.context.theme
-      ? this.context.theme["@@shoutem.theme/themeStyle"].variables
-      : variable;
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
     return (
       <Text
         style={[
@@ -69,31 +68,30 @@ class DefaultContent extends React.Component<any, any> {
           this.props.contentStyle
             ? this.props.contentStyle
             : { backgroundColor: variables.contentStyle }
-        ]}
-      >
+        ]}>
         {this.props.content}
       </Text>
-    );
+    )
   }
 }
 
 class AccordionSubItem extends React.Component<any, any> {
   state = {
     fadeAnim: new Animated.Value(0.3)
-  };
+  }
   componentDidMount() {
     Animated.timing(this.state.fadeAnim, {
       toValue: 1,
       duration: 500
-    }).start();
+    }).start()
   }
   render() {
-    let { fadeAnim } = this.state;
+    let { fadeAnim } = this.state
     return (
       <Animated.View style={{ ...this.props.style, opacity: fadeAnim }}>
         {this.props.children}
       </Animated.View>
-    );
+    )
   }
 }
 
@@ -101,23 +99,21 @@ class AccordionItem extends React.Component<any, any> {
   render() {
     return (
       <View>
-        <TouchableWithoutFeedback
-          onPress={() => this.props.setSelected(this.props.index)}
-        >
+        <TouchableWithoutFeedback onPress={() => this.props.setSelected(this.props.index)}>
           <View>
             {this.props.renderHeader ? (
               this.props.renderHeader(this.props.item, this.props.expanded)
             ) : (
-                <DefaultHeader
-                  title={this.props.item.title}
-                  expanded={this.props.expanded}
-                  headerStyle={this.props.headerStyle}
-                  icon={this.props.icon}
-                  iconStyle={this.props.iconStyle}
-                  expandedIcon={this.props.expandedIcon}
-                  expandedIconStyle={this.props.expandedIconStyle}
-                />
-              )}
+              <DefaultHeader
+                title={this.props.item.title}
+                expanded={this.props.expanded}
+                headerStyle={this.props.headerStyle}
+                icon={this.props.icon}
+                iconStyle={this.props.iconStyle}
+                expandedIcon={this.props.expandedIcon}
+                expandedIconStyle={this.props.expandedIconStyle}
+              />
+            )}
           </View>
         </TouchableWithoutFeedback>
         {this.props.expanded ? (
@@ -125,36 +121,36 @@ class AccordionItem extends React.Component<any, any> {
             {this.props.renderContent ? (
               this.props.renderContent(this.props.item)
             ) : (
-                <DefaultContent
-                  content={this.props.item.content}
-                  contentStyle={this.props.contentStyle}
-                />
-              )}
+              <DefaultContent
+                content={this.props.item.content}
+                contentStyle={this.props.contentStyle}
+              />
+            )}
           </AccordionSubItem>
         ) : null}
       </View>
-    );
+    )
   }
 }
 
 export class Accordion extends React.Component<any, any> {
-  state = { selected: undefined };
+  state = { selected: undefined }
   setSelected(index) {
     if (this.state.selected === index) {
-      this.setState({ selected: undefined });
+      this.setState({ selected: undefined })
     } else {
-      this.setState({ selected: index });
+      this.setState({ selected: index })
     }
   }
 
   componentDidMount() {
-    this.setState({ selected: this.props.expanded });
+    this.setState({ selected: this.props.expanded })
   }
 
   render() {
     const variables = this.context.theme
-      ? this.context.theme["@@shoutem.theme/themeStyle"].variables
-      : variable;
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
     return (
       <FlatList
         data={this.props.dataArray}
@@ -186,15 +182,15 @@ export class Accordion extends React.Component<any, any> {
         )}
         {...this.props}
       />
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   defaultHeader: {
-    flexDirection: "row",
+    flexDirection: 'row',
     padding: 10,
-    justifyContent: "space-between",
-    alignItems: "center"
+    justifyContent: 'space-between',
+    alignItems: 'center'
   }
-});
+})

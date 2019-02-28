@@ -1,18 +1,18 @@
 import * as React from 'react'
 
-class StaticContainer extends React.Component <any,any>{
+class StaticContainer extends React.Component<any, any> {
   shouldComponentUpdate(nextProps: any): boolean {
-    return !!nextProps.shouldUpdate;
+    return !!nextProps.shouldUpdate
   }
 
   render() {
-    var child = this.props.children;
+    var child = this.props.children
     if (child === null || child === false) {
-      return null;
+      return null
     }
-    return React.Children.only(child);
+    return React.Children.only(child)
   }
 }
 
-module.exports = StaticContainer;
+module.exports = StaticContainer
 //export default StaticContainer;

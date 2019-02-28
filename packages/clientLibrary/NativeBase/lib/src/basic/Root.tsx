@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { View, ViewProps } from "react-primitives";
-import * as ReactNative from 'react-native';
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
-import { ToastContainer as Toast } from "./ToastContainer";
-import { ActionSheetContainer as ActionSheet } from "./Actionsheet";
-import { Text } from "./Text";
+import { View, ViewProps } from 'react-primitives'
+import * as ReactNative from 'react-native'
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
+import { ToastContainer as Toast } from './ToastContainer'
+import { ActionSheetContainer as ActionSheet } from './Actionsheet'
+import { Text } from './Text'
 
 export interface IRootProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -14,21 +14,20 @@ class Root extends React.Component<IRootProps, any> {
   private _root: any
   render() {
     return (
-      <View ref={c => (this._root = c)} {...this.props} style={{ flex: 1 }}>
+      <View ref={(c) => (this._root = c)} {...this.props} style={{ flex: 1 }}>
         {this.props.children}
         <Toast
-          ref={c => {
-            if (c) Toast.toastInstance = c;
+          ref={(c) => {
+            if (c) Toast.toastInstance = c
           }}
         />
         <ActionSheet
-          ref={c => {
-            if (c)
-              ActionSheet.actionsheetInstance = c;
+          ref={(c) => {
+            if (c) ActionSheet.actionsheetInstance = c
           }}
         />
       </View>
-    );
+    )
   }
 }
 
@@ -41,8 +40,6 @@ class Root extends React.Component<IRootProps, any> {
 //   ])
 // };
 
-const StyledRoot = connectStyle("NativeBase.Root", {}, mapPropsToStyleNames)(
-  Root
-);
+const StyledRoot = connectStyle('NativeBase.Root', {}, mapPropsToStyleNames)(Root)
 
-export { StyledRoot as Root };
+export { StyledRoot as Root }

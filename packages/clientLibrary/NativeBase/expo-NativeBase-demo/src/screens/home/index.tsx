@@ -1,13 +1,13 @@
-import * as React from "react";
-import { ImageBackground, View, StatusBar } from "react-native";
-import { Container, Button, H3, Text, Content } from "@app/native-base";
+import * as React from 'react'
+import { ImageBackground, View, StatusBar } from 'react-native'
+import { Container, Button, H3, Text, Content } from '@app/native-base'
 
-import styles from "./styles";
+import styles from './styles'
 
-const launchscreenBg = require("../../../assets/launchscreen-bg.png");
-const launchscreenLogo = require("../../../assets/logo-kitchen-sink.png");
+const launchscreenBg = require('../../../assets/launchscreen-bg.png')
+const launchscreenLogo = require('../../../assets/logo-kitchen-sink.png')
 
-class Home extends React.Component<any, any>{
+class Home extends React.Component<any, any> {
   render() {
     return (
       <Container>
@@ -18,11 +18,10 @@ class Home extends React.Component<any, any>{
           </View>
           <View
             style={{
-              alignItems: "center",
+              alignItems: 'center',
               marginBottom: 50,
-              backgroundColor: "transparent"
-            }}
-          >
+              backgroundColor: 'transparent'
+            }}>
             <H3 style={styles.text}>App to showcase</H3>
             <View style={{ marginTop: 8 }} />
             <H3 style={styles.text}>NativeBase components</H3>
@@ -30,16 +29,15 @@ class Home extends React.Component<any, any>{
           </View>
           <View style={{ marginBottom: 80 }}>
             <Button
-              style={{ backgroundColor: "#6FAF98", alignSelf: "center" }}
-              onPress={() => this.props.navigation.openDrawer()}
-            >
+              style={{ backgroundColor: '#6FAF98', alignSelf: 'center' }}
+              onPress={() => this.props.navigation.openDrawer()}>
               <Text>Lets Go!</Text>
             </Button>
           </View>
         </ImageBackground>
       </Container>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home

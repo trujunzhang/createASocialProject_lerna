@@ -1,32 +1,32 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
+import * as ReactNative from 'react-native'
 
 export interface INativeBaseComponentProps {
-	theme?: any
+  theme?: any
 }
-export default class NativeBaseComponent extends React.Component<any, any>{
-	static contextTypes = {
-		theme: PropTypes.object,
-		foregroundColor: PropTypes.string,
-	};
+export default class NativeBaseComponent extends React.Component<any, any> {
+  static contextTypes = {
+    theme: PropTypes.object,
+    foregroundColor: PropTypes.string
+  }
 
-	static propTypes = {
-		theme: PropTypes.object,
-		foregroundColor: PropTypes.string,
-	};
+  static propTypes = {
+    theme: PropTypes.object,
+    foregroundColor: PropTypes.string
+  }
 
-	static childContextTypes = {
-		theme: PropTypes.object,
-		foregroundColor: PropTypes.string,
-	};
+  static childContextTypes = {
+    theme: PropTypes.object,
+    foregroundColor: PropTypes.string
+  }
 
-	getChildContext() {
-		return {
-			theme: this.props.theme ? this.props.theme : this.context.theme,
-		};
-	}
+  getChildContext() {
+    return {
+      theme: this.props.theme ? this.props.theme : this.context.theme
+    }
+  }
 
-	getContextForegroundColor() {
-		return this.context.foregroundColor;
-	}
+  getContextForegroundColor() {
+    return this.context.foregroundColor
+  }
 }

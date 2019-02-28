@@ -21,7 +21,7 @@ class DefaultTabBar extends React.Component<IProps, any> {
     }
   }
 
-  renderTabOption(name, page) { }
+  renderTabOption(name, page) {}
 
   renderTab(
     name,

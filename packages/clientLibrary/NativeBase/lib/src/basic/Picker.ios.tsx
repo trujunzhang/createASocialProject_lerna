@@ -1,24 +1,24 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
+import * as ReactNative from 'react-native'
 // import createReactClass from "create-react-class";
-import { Picker, Modal, View, ViewProps, FlatList } from "react-primitives";
+import { Picker, Modal, View, ViewProps, FlatList } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
-import { Text } from "./Text";
-import { List } from "./List";
-import { IconNB as Icon } from "./IconNB";
-import { Radio } from "./Radio";
-import { Container } from "./Container";
-import { ListItem } from "./ListItem";
-import { Button } from "./Button";
-import { Header } from "./Header";
-import { Title } from "./Title";
-import { Left } from "./Left";
-import { Right } from "./Right";
-import { Body } from "./Body";
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import computeProps from "../utils/computeProps";
+import { Text } from './Text'
+import { List } from './List'
+import { IconNB as Icon } from './IconNB'
+import { Radio } from './Radio'
+import { Container } from './Container'
+import { ListItem } from './ListItem'
+import { Button } from './Button'
+import { Header } from './Header'
+import { Title } from './Title'
+import { Left } from './Left'
+import { Right } from './Right'
+import { Body } from './Body'
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import computeProps from '../utils/computeProps'
 
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -44,29 +44,29 @@ export interface IProps extends ViewProps {
 class PickerNB extends React.Component<IProps, any> {
   private _root: any
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       modalVisible: false,
       currentLabel: this.getLabel(props),
       dataSource: this.getChildren(props.children)
-    };
+    }
   }
 
   componentWillReceiveProps(nextProps) {
-    const currentLabel = this.state.currentLabel;
-    const nextLabel = this.getLabel(nextProps);
-    const currentDS = this.state.dataSource;
-    const nextDS = this.getChildren(nextProps.children);
+    const currentLabel = this.state.currentLabel
+    const nextLabel = this.getLabel(nextProps)
+    const currentDS = this.state.dataSource
+    const nextDS = this.getChildren(nextProps.children)
 
     if (currentLabel !== nextLabel) {
       this.setState({
         currentLabel: nextLabel
-      });
+      })
     }
     if (currentDS !== nextDS) {
       this.setState({
         dataSource: nextDS
-      });
+      })
     }
   }
 
@@ -76,43 +76,37 @@ class PickerNB extends React.Component<IProps, any> {
         // alignItems: 'flex-end'
       },
       pickerItem: {}
-    };
+    }
   }
   _setModalVisible(visible) {
-    this.setState({ modalVisible: visible });
+    this.setState({ modalVisible: visible })
   }
 
   prepareRootProps() {
     const defaultProps = {
       style: this.getInitialStyle().picker,
       itemStyle: this.getInitialStyle().pickerItem
-    };
+    }
 
-    return computeProps(this.props, defaultProps);
+    return computeProps(this.props, defaultProps)
   }
 
   getLabel(props) {
-    let children = this.getChildren(props.children);
-    const item = _.find(
-      children,
-      child => child.props.value === props.selectedValue
-    );
-    return _.get(item, "props.label");
+    let children = this.getChildren(props.children)
+    const item = _.find(children, (child) => child.props.value === props.selectedValue)
+    return _.get(item, 'props.label')
   }
 
   getSelectedItem() {
-    return _.find(
-      this.props.children,
-      child => child.props.value === this.props.selectedValue
-    );
+    return _.find(this.props.children, (child) => child.props.value === this.props.selectedValue)
   }
 
   getChildren(children) {
     if (children && !Array.isArray(children)) {
-      return [].concat(children);
+      return [].concat(children)
     }
     children = [].concat.apply([], children)
-    return children;
+    return children
   }
 
   renderIcon() {
@@ -124,88 +118,76 @@ class PickerNB extends React.Component<IProps, any> {
         },
         { ...this.props.iosIcon.props.style }
       ]
-    });
+    })
   }
 
   renderButton() {
     const onPress = () => {
-      if (this.props.enabled !== undefined && !this.props.enabled) return;
-      this._setModalVisible(true);
-    };
-    const text = this.state.currentLabel
-      ? this.state.currentLabel
-      : this.props.placeholder;
+      if (this.props.enabled !== undefined && !this.props.enabled) return
+      this._setModalVisible(true)
+    }
+    const text = this.state.currentLabel ? this.state.currentLabel : this.props.placeholder
     if (this.props.renderButton) {
       return this.props.renderButton({
         onPress,
         text,
         picker: this,
         selectedItem: this.getSelectedItem()
-      });
+      })
     }
     return (
-      <Button
-        style={this.props.style}
-        dark
-        picker
-        transparent
-        onPress={onPress}
-      >
+      <Button style={this.props.style} dark picker transparent onPress={onPress}>
         {this.state.currentLabel ? (
           <Text style={this.props.textStyle} note={this.props.note}>
             {this.state.currentLabel}
           </Text>
         ) : (
-            <Text
-              style={[this.props.textStyle, this.props.placeholderStyle]}
-              note={this.props.note === false ? false : true}
-            >
-              {this.props.placeholder}
-            </Text>
-          )}
+          <Text
+            style={[this.props.textStyle, this.props.placeholderStyle]}
+            note={this.props.note === false ? false : true}>
+            {this.props.placeholder}
+          </Text>
+        )}
         {this.props.iosIcon === undefined ? null : this.renderIcon()}
       </Button>
-    );
+    )
   }
 
   renderHeader() {
     return this.props.renderHeader ? (
       this.props.renderHeader(() => this._setModalVisible(false))
     ) : (
-        <Header style={this.props.headerStyle}>
-          <Left>
-            <Button
-              style={{
-                shadowOffset: null,
-                shadowColor: null,
-                shadowRadius: null,
-                shadowOpacity: null,
-                marginLeft: 3,
-                ...this.props.headerBackButtonStyle
-              }}
-              transparent
-              onPress={() => {
-                this._setModalVisible(false);
-              }}
-            >
-              <Text style={this.props.headerBackButtonTextStyle}>
-                {this.props.headerBackButtonText || "Back"}
-              </Text>
-            </Button>
-          </Left>
-          <Body>
-            <Title style={this.props.headerTitleStyle}>
-              {this.props.iosHeader || "Select One"}
-            </Title>
-          </Body>
-          <Right />
-        </Header>
-      );
+      <Header style={this.props.headerStyle}>
+        <Left>
+          <Button
+            style={{
+              shadowOffset: null,
+              shadowColor: null,
+              shadowRadius: null,
+              shadowOpacity: null,
+              marginLeft: 3,
+              ...this.props.headerBackButtonStyle
+            }}
+            transparent
+            onPress={() => {
+              this._setModalVisible(false)
+            }}>
+            <Text style={this.props.headerBackButtonTextStyle}>
+              {this.props.headerBackButtonText || 'Back'}
+            </Text>
+          </Button>
+        </Left>
+        <Body>
+          <Title style={this.props.headerTitleStyle}>{this.props.iosHeader || 'Select One'}</Title>
+        </Body>
+        <Right />
+      </Header>
+    )
   }
 
   render() {
     return (
-      <View ref={c => (this._root = c)}>
+      <View ref={(c) => (this._root = c)}>
         {this.renderButton()}
         <Modal
           supportedOrientations={this.props.supportedOrientations || null}
@@ -213,9 +195,8 @@ class PickerNB extends React.Component<IProps, any> {
           transparent={false}
           visible={this.state.modalVisible}
           onRequestClose={() => {
-            this._setModalVisible(false);
-          }}
-        >
+            this._setModalVisible(false)
+          }}>
           <Container style={this.props.modalStyle}>
             {this.renderHeader()}
             <FlatList
@@ -227,22 +208,19 @@ class PickerNB extends React.Component<IProps, any> {
                   button
                   style={this.props.itemStyle}
                   onPress={() => {
-                    this._setModalVisible(false);
-                    this.props.onValueChange(item.props.value);
-                    this.setState({ current: item.props.label });
-                  }}
-                >
+                    this._setModalVisible(false)
+                    this.props.onValueChange(item.props.value)
+                    this.setState({ current: item.props.label })
+                  }}>
                   <Left>
-                    <Text style={this.props.itemTextStyle}>
-                      {item.props.label}
-                    </Text>
+                    <Text style={this.props.itemTextStyle}>{item.props.label}</Text>
                   </Left>
                   <Right>
                     {item.props.value === this.props.selectedValue ? (
                       <Radio selected />
                     ) : (
-                        <Radio selected={false} />
-                      )}
+                      <Radio selected={false} />
+                    )}
                   </Right>
                 </ListItem>
               )}
@@ -250,11 +228,11 @@ class PickerNB extends React.Component<IProps, any> {
           </Container>
         </Modal>
       </View>
-    );
+    )
   }
 }
 
-PickerNB.Item = (props) => (<Picker.Item {...props} />);
+PickerNB.Item = (props) => <Picker.Item {...props} />
 
 // createReactClass({
 // render() {
@@ -267,10 +245,6 @@ PickerNB.Item = (props) => (<Picker.Item {...props} />);
 //   renderButton: PropTypes.func
 // };
 
-const StyledPickerNB = connectStyle(
-  "NativeBase.PickerNB",
-  {},
-  mapPropsToStyleNames
-)(PickerNB);
+const StyledPickerNB = connectStyle('NativeBase.PickerNB', {}, mapPropsToStyleNames)(PickerNB)
 
-export { StyledPickerNB as PickerNB };
+export { StyledPickerNB as PickerNB }

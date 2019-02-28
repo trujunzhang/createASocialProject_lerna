@@ -13,7 +13,6 @@ import { View, Animated, StyleSheet, ScrollView, Platform, Dimensions } from 're
 
 const WINDOW_WIDTH = Dimensions.get('window').width
 
-
 export interface IScrollableTabBarProps extends ViewProps {
   goToPage?: Function
   activeTab?: number
@@ -36,7 +35,6 @@ class ScrollableTabBar extends React.Component<IScrollableTabBarProps, any> {
   private _tabContainerMeasurements: any
   private _containerMeasurements: any
   private _scrollView: any
-
 
   static contextTypes = {
     theme: PropTypes.object
@@ -299,7 +297,6 @@ class ScrollableTabBar extends React.Component<IScrollableTabBarProps, any> {
 //   underlineStyle: ViewPropTypes.style,
 //   onScroll: PropTypes.func
 // }
-
 
 // module.exports = ScrollableTabBar;
 const StyledTab = connectStyle('NativeBase.ScrollableTab', {}, mapPropsToStyleNames)(

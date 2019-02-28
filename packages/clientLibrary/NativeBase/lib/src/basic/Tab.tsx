@@ -1,9 +1,9 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
-import { View, ViewProps } from "react-primitives";
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
 
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface ITabProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -13,10 +13,10 @@ class Tab extends React.Component<ITabProps, any> {
 
   render() {
     return (
-      <View ref={c => (this._root = c)} {...this.props}>
+      <View ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
-    );
+    )
   }
 }
 
@@ -29,6 +29,6 @@ class Tab extends React.Component<ITabProps, any> {
 //   ])
 // };
 
-const StyledTab = connectStyle("NativeBase.Tab", {}, mapPropsToStyleNames)(Tab);
+const StyledTab = connectStyle('NativeBase.Tab', {}, mapPropsToStyleNames)(Tab)
 
-export { StyledTab as Tab };
+export { StyledTab as Tab }

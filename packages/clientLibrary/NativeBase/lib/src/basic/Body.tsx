@@ -1,9 +1,9 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
-import { View, ViewProps } from "react-primitives";
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
 
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IBodyProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -11,7 +11,7 @@ export interface IBodyProps extends ViewProps {
 class Body extends React.Component<IBodyProps, any> {
   private _root: any
   render() {
-    return <View ref={c => (this._root = c)} {...this.props} />;
+    return <View ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 
@@ -24,8 +24,6 @@ class Body extends React.Component<IBodyProps, any> {
 //   ])
 // };
 
-const StyledBody = connectStyle("NativeBase.Body", {}, mapPropsToStyleNames)(
-  Body
-);
+const StyledBody = connectStyle('NativeBase.Body', {}, mapPropsToStyleNames)(Body)
 
-export { StyledBody as Body };
+export { StyledBody as Body }

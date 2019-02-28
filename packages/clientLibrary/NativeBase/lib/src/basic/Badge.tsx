@@ -1,10 +1,10 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
-import { View, ViewProps } from "react-primitives";
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
 
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import { platformVariables as variable } from '@app/native-base-variables';
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import { platformVariables as variable } from '@app/native-base-variables'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IBadgeProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -13,10 +13,10 @@ class Badge extends React.Component<IBadgeProps, any> {
   private _root: any
   render() {
     return (
-      <View ref={c => (this._root = c)} {...this.props}>
+      <View ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
-    );
+    )
   }
 }
 
@@ -29,8 +29,6 @@ class Badge extends React.Component<IBadgeProps, any> {
 //   ])
 // };
 
-const StyledBadge = connectStyle("NativeBase.Badge", {}, mapPropsToStyleNames)(
-  Badge
-);
+const StyledBadge = connectStyle('NativeBase.Badge', {}, mapPropsToStyleNames)(Badge)
 
-export { StyledBadge as Badge };
+export { StyledBadge as Badge }

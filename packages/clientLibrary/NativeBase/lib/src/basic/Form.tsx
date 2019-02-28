@@ -1,9 +1,9 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native';
-import { View, ViewProps } from "react-primitives";
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
 
-import { connectStyle } from "@app/native-base-shoutem-theme";
-import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
+import { connectStyle } from '@app/native-base-shoutem-theme'
+import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IFormProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
@@ -11,7 +11,7 @@ export interface IFormProps extends ViewProps {
 class Form extends React.Component<IFormProps, any> {
   private _root: any
   render() {
-    return <View ref={c => (this._root = c)} {...this.props} />;
+    return <View ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 
@@ -24,8 +24,6 @@ class Form extends React.Component<IFormProps, any> {
 //   ])
 // };
 
-const StyledForm = connectStyle("NativeBase.Form", {}, mapPropsToStyleNames)(
-  Form
-);
+const StyledForm = connectStyle('NativeBase.Form', {}, mapPropsToStyleNames)(Form)
 
-export { StyledForm as Form };
+export { StyledForm as Form }

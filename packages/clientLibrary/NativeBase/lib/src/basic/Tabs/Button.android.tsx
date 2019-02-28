@@ -1,16 +1,15 @@
-const React = require("react");
-import { TouchableNativeFeedback } from "react-primitives";
+const React = require('react')
+import { TouchableNativeFeedback } from 'react-primitives'
 
-const Button = props => {
+const Button = (props) => {
   return (
     <TouchableNativeFeedback
       delayPressIn={0} // eslint-disable-line new-cap
-      {...props}
-    >
+      {...props}>
       {props.children}
     </TouchableNativeFeedback>
-  );
-};
+  )
+}
 
-module.exports = Button;
+module.exports = Button
 //export default Button;

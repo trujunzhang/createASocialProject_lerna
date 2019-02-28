@@ -12,33 +12,32 @@ import { LodashUtils as _ } from '@app/tools'
  * see Widget ScrollHeader.js
  */
 interface IScrollHeaderProps {
-    /**
-    * Prop to be used with <ScrollHeader> component to have Search bar onto the Header section of your screen.
-     */
-    searchBar?: boolean
-    /**
-     * Wraps the search bar with predefined border options.
-     * Default: regular
-     */
-    rounded?: boolean
-    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-    /**
-     * It is advisable to use hasTabs prop with Header while using Tab
-     */
-    hasTabs?: boolean
-    noShadow?: boolean
-    hasSubtitle?: boolean
-    span?: boolean
-    androidStatusBarColor?: string
-    iosBarStyle?: ReactNative.StatusBarStyle
-    hasSegment?: boolean
-    translucent?: boolean
-    transparent?: boolean
+  /**
+   * Prop to be used with <ScrollHeader> component to have Search bar onto the Header section of your screen.
+   */
+  searchBar?: boolean
+  /**
+   * Wraps the search bar with predefined border options.
+   * Default: regular
+   */
+  rounded?: boolean
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  /**
+   * It is advisable to use hasTabs prop with Header while using Tab
+   */
+  hasTabs?: boolean
+  noShadow?: boolean
+  hasSubtitle?: boolean
+  span?: boolean
+  androidStatusBarColor?: string
+  iosBarStyle?: ReactNative.StatusBarStyle
+  hasSegment?: boolean
+  translucent?: boolean
+  transparent?: boolean
 }
 
-
-class ScrollHeader extends React.Component<IScrollHeaderProps , any> {
-    private _root: any
+class ScrollHeader extends React.Component<IScrollHeaderProps, any> {
+  private _root: any
 
   static contextTypes = {
     theme: PropTypes.object
@@ -82,7 +81,7 @@ class ScrollHeader extends React.Component<IScrollHeaderProps , any> {
   }
 
   calculatePadder(mode, inSet) {
-    let inset:any = null
+    let inset: any = null
     if (inSet != undefined) {
       inset = inSet
     } else {
@@ -90,7 +89,7 @@ class ScrollHeader extends React.Component<IScrollHeaderProps , any> {
     }
     const InsetValues = mode === 'portrait' ? inset.portrait : inset.landscape
     let topPadder = null
-    let style : any= StyleSheet.flatten(this.props.style)
+    let style: any = StyleSheet.flatten(this.props.style)
     if (style.padding !== undefined || style.paddingTop !== undefined) {
       topPadder = (style.paddingTop ? style.paddingTop : style.padding) + InsetValues.topInset
     } else {
@@ -135,8 +134,8 @@ class ScrollHeader extends React.Component<IScrollHeaderProps , any> {
           this.props.iosBarStyle
             ? this.props.iosBarStyle
             : platformStyle === 'material'
-              ? 'light-content'
-              : variables.iosStatusbar
+            ? 'light-content'
+            : variables.iosStatusbar
         }
         translucent={this.props.transparent ? true : this.props.translucent}
       />
