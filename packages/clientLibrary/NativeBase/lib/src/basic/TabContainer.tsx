@@ -7,7 +7,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class TabContainer extends React.Component {
+class TabContainer extends React.Component<IProps, any> {
   private _root: any
 
   render() {

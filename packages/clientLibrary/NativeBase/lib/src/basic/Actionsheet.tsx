@@ -24,7 +24,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class ActionSheetContainer extends React.Component {
+class ActionSheetContainer extends React.Component<IProps, any> {
   constructor(props) {
     super(props);
     this.state = {

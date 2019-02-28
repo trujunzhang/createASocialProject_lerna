@@ -10,7 +10,7 @@ import { LodashUtils as _ } from '@app/tools'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class HeaderStatusBar extends React.Component {
+class HeaderStatusBar extends React.Component<IProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

@@ -12,7 +12,7 @@ import { platformVariables as variable } from '@app/native-base-variables';
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-export class DatePicker extends React.Component {
+export class DatePicker extends React.Component<IProps, any> {
   private _root: any
   constructor(props) {
     super(props);

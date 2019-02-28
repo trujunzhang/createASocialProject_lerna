@@ -9,7 +9,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Textarea extends React.Component {
+class Textarea extends React.Component<IProps, any> {
 	getStyle() {
 		return {
 			textarea: {

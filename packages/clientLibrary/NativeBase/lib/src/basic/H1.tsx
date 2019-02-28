@@ -1,14 +1,14 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
-import { Text } from "react-primitives";
+import { Text, TextProps } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface IH1Props extends TextProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class H1 extends React.Component {
+class H1 extends React.Component<IH1Props, any> {
 	private _root: any
 	render() {
 		return <Text ref={c => (this._root = c)} {...this.props} />;

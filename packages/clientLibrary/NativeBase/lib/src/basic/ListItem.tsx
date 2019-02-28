@@ -14,7 +14,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class ListItem extends React.Component {
+class ListItem extends React.Component<IProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

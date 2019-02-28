@@ -11,7 +11,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Button extends React.Component {
+class Button extends React.Component<IProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

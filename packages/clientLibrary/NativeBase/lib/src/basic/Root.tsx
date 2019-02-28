@@ -10,7 +10,7 @@ import { Text } from "./Text";
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Root extends React.Component {
+class Root extends React.Component<IProps, any> {
   private _root: any
   render() {
     return (

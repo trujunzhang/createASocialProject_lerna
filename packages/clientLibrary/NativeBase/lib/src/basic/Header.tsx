@@ -12,7 +12,7 @@ import { LodashUtils as _ } from '@app/tools'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Header extends React.Component {
+class Header extends React.Component<IProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

@@ -10,7 +10,7 @@ export interface IProps extends ViewProps {
 }
 const SWIPE_THRESHOLD = 120;
 
-class DeckSwiper extends React.Component {
+class DeckSwiper extends React.Component<IProps, any> {
   private _root: any
   constructor(props) {
     super(props);

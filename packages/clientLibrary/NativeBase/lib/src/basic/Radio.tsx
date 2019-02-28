@@ -10,7 +10,7 @@ import computeProps from "../utils/computeProps";
 export interface IProps extends ViewProps {
     style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Radio extends React.Component {
+class Radio extends React.Component<IProps, any> {
 
     private _root: any
     static contextTypes = {

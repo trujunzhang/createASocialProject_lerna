@@ -8,7 +8,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class P extends React.Component {
+class P extends React.Component<IProps, any> {
   private _root: any
   render() {
     return <Text ref={(c) => (this._root = c)} {...this.props} />

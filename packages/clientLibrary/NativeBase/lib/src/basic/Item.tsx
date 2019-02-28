@@ -21,7 +21,7 @@ import { LodashUtils as _ } from '@app/tools'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Item extends React.Component {
+class Item extends React.Component<IProps, any> {
   private _root: any
   constructor(props) {
     super(props);

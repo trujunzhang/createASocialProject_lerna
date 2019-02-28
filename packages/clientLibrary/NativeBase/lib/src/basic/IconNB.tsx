@@ -22,7 +22,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class IconNB extends React.Component {
+class IconNB extends React.Component<IProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

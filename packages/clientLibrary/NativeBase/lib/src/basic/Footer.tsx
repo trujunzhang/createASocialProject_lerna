@@ -10,7 +10,7 @@ import { isIphoneX } from '@app/react-native-iphone-x-helper'
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Footer extends React.Component {
+class Footer extends React.Component<IProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

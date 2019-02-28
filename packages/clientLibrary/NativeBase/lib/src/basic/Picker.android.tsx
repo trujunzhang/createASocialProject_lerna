@@ -8,7 +8,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-export default class PickerNB extends React.Component {
+export default class PickerNB extends React.Component<IProps, any> {
   private _root: any
   render() {
     return (

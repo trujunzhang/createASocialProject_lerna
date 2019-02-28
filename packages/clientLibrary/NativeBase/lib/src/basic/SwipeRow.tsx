@@ -14,7 +14,7 @@ const PREVIEW_CLOSE_DELAY = 300
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class SwipeRow extends React.Component {
+class SwipeRow extends React.Component<IProps, any> {
   private _root: any
 
   static defaultProps = {

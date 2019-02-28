@@ -8,7 +8,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Card extends React.Component {
+class Card extends React.Component<IProps, any> {
   private _root: any
   render() {
     if (this.props.dataArray && this.props.renderRow) {

@@ -7,7 +7,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class TabHeadingNB extends React.Component {
+class TabHeadingNB extends React.Component<IProps, any> {
   private _root: any
   render() {
     return <View ref={c => (this._root = c)} {...this.props} />;

@@ -11,7 +11,7 @@ import { ViewProps} from 'react-primitives'
 import { Animated } from 'react-primitives'
 const Button = require('./Button')
 
-class DefaultTabBar extends React.Component {
+class DefaultTabBar extends React.Component<IProps, any> {
   getDefaultProps() {
     return {
       activeTextColor: variable.topTabBarActiveTextColor,

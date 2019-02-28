@@ -8,7 +8,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Switch extends React.Component {
+class Switch extends React.Component<IProps, any> {
 	private _root: any
 
 	render() {

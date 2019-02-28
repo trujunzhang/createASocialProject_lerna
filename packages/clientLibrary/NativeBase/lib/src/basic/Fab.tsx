@@ -26,7 +26,7 @@ const AnimatedFab = Animated.createAnimatedComponent(Button);
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Fab extends React.Component {
+class Fab extends React.Component<IProps, any> {
   private _root: any
   // props: Animated.props & {
   //   position: ?string

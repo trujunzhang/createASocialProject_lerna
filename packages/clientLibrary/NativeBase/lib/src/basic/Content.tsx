@@ -9,7 +9,7 @@ import { isIphoneX } from '@app/react-native-iphone-x-helper'
 export interface IProps extends ViewProps {
     style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Content extends React.Component {
+class Content extends React.Component<IProps, any> {
     private _root: any
     static contextTypes = {
         theme: PropTypes.object

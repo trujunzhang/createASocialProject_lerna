@@ -15,7 +15,7 @@ const WINDOW_WIDTH = Dimensions.get('window').width
 
 
 
-class ScrollableTabBar extends React.Component {
+class ScrollableTabBar extends React.Component<IProps, any> {
   getDefaultProps() {
     return {
       scrollOffset: 52,

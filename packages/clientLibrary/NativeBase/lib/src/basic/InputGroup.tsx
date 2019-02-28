@@ -10,7 +10,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class InputGroup extends React.Component {
+class InputGroup extends React.Component<IProps, any> {
   private _root: any
   getInitialStyle() {
     return {

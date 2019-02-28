@@ -11,7 +11,7 @@ import computeProps from "../utils/computeProps";
 export interface IProps extends ViewProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class CheckBox extends React.Component {
+class CheckBox extends React.Component<IProps, any> {
 	private _root: any
 	static contextTypes = {
 		theme: PropTypes.object,
