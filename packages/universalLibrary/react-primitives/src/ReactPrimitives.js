@@ -51,11 +51,20 @@ const ReactPrimitives = {
       ReactPrimitives.Platform.inject(api.Platform);
     }
     // Dialog
+    if (api.ActivityIndicator) {
+      ReactPrimitives.ActivityIndicator = api.ActivityIndicator;
+    }
     if (api.Modal) {
       ReactPrimitives.Modal = api.Modal;
     }
     if (api.ActionSheetIOS) {
       ReactPrimitives.ActionSheetIOS = api.ActionSheetIOS;
+    }
+    if (api.Switch) {
+      ReactPrimitives.Switch = api.Switch;
+    }
+    if (api.Picker) {
+      ReactPrimitives.Picker = api.Picker;
     }
     if (api.DatePickerIOS) {
       ReactPrimitives.DatePickerIOS = api.DatePickerIOS;

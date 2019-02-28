@@ -19,7 +19,6 @@ class Input extends NativeBaseComponent {
       : variable
     return (
       <TextInput
-        t
         ref={(c) => {
           this._textInput = c
           this._root = c

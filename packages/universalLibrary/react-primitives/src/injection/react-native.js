@@ -12,8 +12,11 @@ const {
   Easing,
   Dimensions,
   // Dialog
+  ActivityIndicator,
   Modal,
   ActionSheetIOS,
+  Switch,
+  Picker,
   DatePickerIOS,
   DatePickerAndroid,
   // Touch
@@ -40,8 +43,11 @@ ReactPrimitives.inject({
   },
   Dimensions,
   // Dialog
+  ActivityIndicator,
   Modal,
   ActionSheetIOS,
+  Switch,
+  Picker,
   DatePickerIOS,
   DatePickerAndroid,
   // Touch

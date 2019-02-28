@@ -22,8 +22,11 @@ import {
   TouchableOpacityProps,
   View as RNView,
   // Dialog
+  ActivityIndicator,
   Modal,
   ActionSheetIOS,
+  Switch,
+  Picker,
   DatePickerIOS,
   DatePickerAndroid,
   // Props
@@ -77,8 +80,11 @@ export {
   PixelRatio,
   StyleSheet,
   // Dialog
+  ActivityIndicator,
   Modal,
   ActionSheetIOS,
+  Switch,
+  Picker,
   DatePickerIOS,
   DatePickerAndroid,
   // Touch

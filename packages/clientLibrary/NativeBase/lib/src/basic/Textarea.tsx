@@ -12,6 +12,8 @@ export interface ITextareaProps extends TextInputProps {
   rowSpan: number
   bordered: boolean
   underline: boolean
+
+  disabled?: any
 }
 class Textarea extends React.Component<ITextareaProps, any> {
   private _root: any
