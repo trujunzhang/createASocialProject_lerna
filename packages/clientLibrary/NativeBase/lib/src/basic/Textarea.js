@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { TextInput } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
@@ -6,7 +6,7 @@ import { platformVariables as variable } from '@app/native-base-variables';
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class Textarea extends Component {
+class Textarea extends React.Component {
 	getStyle() {
 		return {
 			textarea: {

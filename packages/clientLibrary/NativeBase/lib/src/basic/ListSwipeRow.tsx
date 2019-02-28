@@ -22,7 +22,7 @@ interface IListSwipeRowProps extends SwipeRowProperty {
   onRowDidClose: any
 }
 
-interface IListSwipeRowState {}
+interface IListSwipeRowState { }
 
 class ListSwipeRow extends React.Component<IListSwipeRowProps, IListSwipeRowState> {
   constructor(props) {

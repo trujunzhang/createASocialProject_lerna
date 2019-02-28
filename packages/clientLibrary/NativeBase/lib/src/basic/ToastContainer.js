@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { View, Modal, Platform, Animated, ViewPropTypes } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
@@ -8,7 +8,7 @@ import { ViewNB } from "./View";
 import { Toast } from "./Toast";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class ToastContainer extends Component {
+class ToastContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

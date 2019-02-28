@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 
 import { LodashUtils as _ } from '@app/tools'
@@ -19,7 +19,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-class IconNB extends Component {
+class IconNB extends React.Component {
   static contextTypes = {
     theme: PropTypes.object
   }

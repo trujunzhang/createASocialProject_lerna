@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { View, ViewPropTypes } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class Segment extends Component {
+class Segment extends React.Component {
   render() {
     return <View ref={c => (this._root = c)} {...this.props} />;
   }

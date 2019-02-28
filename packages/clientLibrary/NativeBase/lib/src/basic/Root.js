@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import { View, ViewPropTypes } from "react-primitives";
 import PropTypes from "prop-types";
 import { connectStyle } from "@app/native-base-shoutem-theme";
@@ -7,7 +7,7 @@ import { ToastContainer as Toast } from "./ToastContainer";
 import { ActionSheetContainer as ActionSheet } from "./Actionsheet";
 import { Text } from "./Text";
 
-class Root extends Component {
+class Root extends React.Component {
   render() {
     return (
       <View ref={c => (this._root = c)} {...this.props} style={{ flex: 1 }}>

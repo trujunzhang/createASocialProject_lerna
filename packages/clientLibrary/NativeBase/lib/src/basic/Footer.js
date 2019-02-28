@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { View, ViewPropTypes } from "react-primitives";
 import { LodashUtils as _ } from '@app/tools'
@@ -7,7 +7,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
-class Footer extends Component {
+class Footer extends React.Component {
   static contextTypes = {
     theme: PropTypes.object
   };

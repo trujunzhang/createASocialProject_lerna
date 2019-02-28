@@ -39,7 +39,7 @@ interface IListState {
   dataSource: any
 }
 
-interface IListDefaultProps {}
+interface IListDefaultProps { }
 
 type ListPropsWithDefaults = IListProps & IListDefaultProps
 

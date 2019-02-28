@@ -11,7 +11,7 @@ const SceneComponent = require('./SceneComponent')
 const { DefaultTabBar } = require('./DefaultTabBar')
 const { ScrollableTabBar } = require('./ScrollableTabBar')
 
-class ScrollableTabView extends Component {
+class ScrollableTabView extends React.Component {
   render() {
     return null
   }

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { Text } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class Title extends Component {
+class Title extends React.Component {
 	render() {
 		return <Text ref={c => (this._root = c)} numberOfLines={1} {...this.props} />;
 	}

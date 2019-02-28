@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { Animated, PanResponder, Platform, StyleSheet, TouchableOpacity, View } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -11,7 +11,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 const PREVIEW_OPEN_DELAY = 700
 const PREVIEW_CLOSE_DELAY = 300
 
-class SwipeRow extends Component {
+class SwipeRow extends React.Component {
   static defaultProps = {
     leftOpenValue: 0,
     rightOpenValue: 0,

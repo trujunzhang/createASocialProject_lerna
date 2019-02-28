@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { View, ViewPropTypes } from "react-primitives";
 
@@ -7,7 +7,7 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class InputGroup extends Component {
+class InputGroup extends React.Component {
   getInitialStyle() {
     return {
       roundedInputGroup: {

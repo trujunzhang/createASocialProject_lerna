@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { TouchableOpacity, View } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class CardItem extends Component {
+class CardItem extends React.Component {
 	render() {
 		if (this.props.button) {
 			return (

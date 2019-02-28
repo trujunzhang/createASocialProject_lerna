@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 // import createReactClass from "create-react-class";
 import { Picker, Modal, View, ViewPropTypes, FlatList } from "react-primitives";
@@ -20,7 +20,7 @@ import computeProps from "../utils/computeProps";
 
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class PickerNB extends Component {
+class PickerNB extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -134,13 +134,13 @@ class PickerNB extends Component {
             {this.state.currentLabel}
           </Text>
         ) : (
-          <Text
-            style={[this.props.textStyle, this.props.placeholderStyle]}
-            note={this.props.note === false ? false : true}
-          >
-            {this.props.placeholder}
-          </Text>
-        )}
+            <Text
+              style={[this.props.textStyle, this.props.placeholderStyle]}
+              note={this.props.note === false ? false : true}
+            >
+              {this.props.placeholder}
+            </Text>
+          )}
         {this.props.iosIcon === undefined ? null : this.renderIcon()}
       </Button>
     );
@@ -150,35 +150,35 @@ class PickerNB extends Component {
     return this.props.renderHeader ? (
       this.props.renderHeader(() => this._setModalVisible(false))
     ) : (
-      <Header style={this.props.headerStyle}>
-        <Left>
-          <Button
-            style={{
-              shadowOffset: null,
-              shadowColor: null,
-              shadowRadius: null,
-              shadowOpacity: null,
-              marginLeft: 3,
-              ...this.props.headerBackButtonStyle
-            }}
-            transparent
-            onPress={() => {
-              this._setModalVisible(false);
-            }}
-          >
-            <Text style={this.props.headerBackButtonTextStyle}>
-              {this.props.headerBackButtonText || "Back"}
-            </Text>
-          </Button>
-        </Left>
-        <Body>
-          <Title style={this.props.headerTitleStyle}>
-            {this.props.iosHeader || "Select One"}
-          </Title>
-        </Body>
-        <Right />
-      </Header>
-    );
+        <Header style={this.props.headerStyle}>
+          <Left>
+            <Button
+              style={{
+                shadowOffset: null,
+                shadowColor: null,
+                shadowRadius: null,
+                shadowOpacity: null,
+                marginLeft: 3,
+                ...this.props.headerBackButtonStyle
+              }}
+              transparent
+              onPress={() => {
+                this._setModalVisible(false);
+              }}
+            >
+              <Text style={this.props.headerBackButtonTextStyle}>
+                {this.props.headerBackButtonText || "Back"}
+              </Text>
+            </Button>
+          </Left>
+          <Body>
+            <Title style={this.props.headerTitleStyle}>
+              {this.props.iosHeader || "Select One"}
+            </Title>
+          </Body>
+          <Right />
+        </Header>
+      );
   }
 
   render() {
@@ -219,8 +219,8 @@ class PickerNB extends Component {
                     {item.props.value === this.props.selectedValue ? (
                       <Radio selected />
                     ) : (
-                      <Radio selected={false} />
-                    )}
+                        <Radio selected={false} />
+                      )}
                   </Right>
                 </ListItem>
               )}
@@ -232,12 +232,12 @@ class PickerNB extends Component {
   }
 }
 
-PickerNB.Item = ( props ) => (<Picker.Item {...props} />);
+PickerNB.Item = (props) => (<Picker.Item {...props} />);
 
-    // createReactClass({
-  // render() {
-  //   return <Picker.Item {...this.props()} />;
-  // }
+// createReactClass({
+// render() {
+//   return <Picker.Item {...this.props()} />;
+// }
 // });
 
 PickerNB.propTypes = {

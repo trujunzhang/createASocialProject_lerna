@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -8,7 +8,7 @@ import computeProps from '../utils/computeProps'
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-class Button extends Component {
+class Button extends React.Component {
   static contextTypes = {
     theme: PropTypes.object
   }

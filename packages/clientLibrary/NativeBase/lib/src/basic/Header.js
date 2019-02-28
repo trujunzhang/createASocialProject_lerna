@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { View, ViewPropTypes, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -9,7 +9,7 @@ import { isIphoneX } from '@app/react-native-iphone-x-helper'
 import { HeaderStatusBar } from './HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
 
-class Header extends Component {
+class Header extends React.Component {
   static contextTypes = {
     theme: PropTypes.object
   }

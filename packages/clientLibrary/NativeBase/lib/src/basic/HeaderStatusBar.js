@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { View, StatusBar, ViewPropTypes, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -7,7 +7,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 
 import { LodashUtils as _ } from '@app/tools'
 
-class HeaderStatusBar extends Component {
+class HeaderStatusBar extends React.Component {
   static contextTypes = {
     theme: PropTypes.object
   }

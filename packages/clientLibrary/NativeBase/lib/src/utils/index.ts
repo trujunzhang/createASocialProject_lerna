@@ -3,4 +3,6 @@
 
 // export { InteractionManager, ViewPropTypes }
 
+// export { ViewPropTypes }
+
 export * from './listSwipeHelper'

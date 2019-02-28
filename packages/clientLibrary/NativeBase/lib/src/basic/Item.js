@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import {
   TouchableOpacity,
@@ -18,7 +18,7 @@ import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { LodashUtils as _ } from '@app/tools'
 
-class Item extends Component {
+class Item extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

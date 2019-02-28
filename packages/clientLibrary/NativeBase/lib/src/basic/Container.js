@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { View } from "react-primitives";
 import { ViewPropTypes } from "../utils";
@@ -9,7 +9,7 @@ import { ToastContainer as Toast } from "./ToastContainer";
 import { ActionSheetContainer as ActionSheet } from "./Actionsheet";
 import { Text } from "./Text";
 
-class Container extends Component {
+class Container extends React.Component {
 	render() {
 		return (
 			<View ref={c => (this._root = c)} {...this.props}>

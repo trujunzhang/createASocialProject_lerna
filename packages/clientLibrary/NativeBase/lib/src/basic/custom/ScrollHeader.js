@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import { View, StatusBar, ViewPropTypes, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -8,7 +8,7 @@ import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 import { LodashUtils as _ } from '@app/tools'
 
-class ScrollHeader extends Component {
+class ScrollHeader extends React.Component {
   static contextTypes = {
     theme: PropTypes.object
   }

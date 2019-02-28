@@ -7,7 +7,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables'
 import computeProps from "../utils/computeProps";
 
-class Radio extends Component {
+class Radio extends React.Component {
     static contextTypes = {
         theme: PropTypes.object
     };

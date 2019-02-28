@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
@@ -13,7 +13,7 @@ import { View, Animated, StyleSheet, ScrollView, Platform, Dimensions } from 're
 
 const WINDOW_WIDTH = Dimensions.get('window').width
 
-class ScrollableTabBar extends Component {
+class ScrollableTabBar extends React.Component {
   getDefaultProps() {
     return {
       scrollOffset: 52,

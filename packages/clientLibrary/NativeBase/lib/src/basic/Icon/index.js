@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 
 import { Platform } from "react-primitives";
@@ -11,7 +11,7 @@ import { LodashUtils as _ } from '@app/tools'
 
 import mapPropsToStyleNames from "../../utils/mapPropsToStyleNames";
 
-class Icon extends Component {
+class Icon extends React.Component {
 	static contextTypes = {
 		theme: PropTypes.object,
 	};

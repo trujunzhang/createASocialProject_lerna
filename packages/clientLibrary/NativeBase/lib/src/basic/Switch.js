@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { Switch as SwitchNB } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class Switch extends Component {
+class Switch extends React.Component {
 	render() {
 		return <SwitchNB ref={c => (this._root = c)} {...this.props} />;
 	}

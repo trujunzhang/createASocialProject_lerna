@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { Image } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class Thumbnail extends Component {
+class Thumbnail extends React.Component {
 	render() {
 		return <Image ref={c => (this._root = c)} {...this.props} />;
 	}

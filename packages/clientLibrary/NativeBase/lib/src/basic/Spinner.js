@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { ActivityIndicator } from "react-primitives";
 
@@ -6,7 +6,7 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class Spinner extends Component {
+class Spinner extends React.Component {
 	static contextTypes = {
 		theme: PropTypes.object,
 	};

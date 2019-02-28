@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { View, ListView, ViewPropTypes } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class Card extends Component {
+class Card extends React.Component {
   render() {
     if (this.props.dataArray && this.props.renderRow) {
       const ds = new ListView.DataSource({

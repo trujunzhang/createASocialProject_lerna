@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import { TouchableOpacity, Platform } from "react-primitives";
 // import IconNB from "react-native-vector-icons/Ionicons";
@@ -8,7 +8,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 import computeProps from "../utils/computeProps";
 
-class CheckBox extends Component {
+class CheckBox extends React.Component {
 	static contextTypes = {
 		theme: PropTypes.object,
 	};
@@ -32,16 +32,16 @@ class CheckBox extends Component {
 
 		return computeProps(this.props, defaultProps);
 	}
-	renderIcon(){
-        {/*<IconNB*/}
-            {/*style={{*/}
-                {/*color: this.props.checked === true ? variables.checkboxTickColor : "transparent",*/}
-                {/*fontSize: variables.CheckboxFontSize,*/}
-                {/*lineHeight: variables.CheckboxIconSize,*/}
-                {/*marginTop: variables.CheckboxIconMarginTop,*/}
-            {/*}}*/}
-            {/*name={platform === "ios" && platformStyle !== "material" ? "ios-checkmark-outline" : "md-checkmark"}*/}
-        {/*/>	*/}
+	renderIcon() {
+		{/*<IconNB*/ }
+		{/*style={{*/ }
+		{/*color: this.props.checked === true ? variables.checkboxTickColor : "transparent",*/ }
+		{/*fontSize: variables.CheckboxFontSize,*/ }
+		{/*lineHeight: variables.CheckboxIconSize,*/ }
+		{/*marginTop: variables.CheckboxIconMarginTop,*/ }
+		{/*}}*/ }
+		{/*name={platform === "ios" && platformStyle !== "material" ? "ios-checkmark-outline" : "md-checkmark"}*/ }
+		{/*/>	*/ }
 		return null
 	}
 	render() {

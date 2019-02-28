@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
@@ -11,7 +11,7 @@ import { ViewPropTypes } from 'react-primitives'
 import { Animated } from 'react-primitives'
 const Button = require('./Button')
 
-class DefaultTabBar extends Component {
+class DefaultTabBar extends React.Component {
   getDefaultProps() {
     return {
       activeTextColor: variable.topTabBarActiveTextColor,
@@ -21,7 +21,7 @@ class DefaultTabBar extends Component {
     }
   }
 
-  renderTabOption(name, page) {}
+  renderTabOption(name, page) { }
 
   renderTab(
     name,

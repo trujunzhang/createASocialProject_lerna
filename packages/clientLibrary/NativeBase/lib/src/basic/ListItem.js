@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import {
   TouchableHighlight,
@@ -11,7 +11,7 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables'
 
-class ListItem extends Component {
+class ListItem extends React.Component {
   static contextTypes = {
     theme: PropTypes.object
   };

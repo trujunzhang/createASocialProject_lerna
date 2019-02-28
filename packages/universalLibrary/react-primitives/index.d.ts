@@ -5,52 +5,54 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { ComponentType } from 'react';
-import * as React from 'react';
+import { ComponentType } from 'react'
+import * as React from 'react'
 import {
-    Animated,
-    Dimensions,
-    Easing,
-    Image,
-    PixelRatio,
-    TouchableHighlight,
-    PlatformOSType as RNPlatformOSType,
-    StyleSheet,
-    Text as RNText,
-    TouchableOpacityProps,
-    View as RNView,
-    ViewProps,
-    TextProps
-} from 'react-native';
+  Animated,
+  Dimensions,
+  Easing,
+  Image,
+  PixelRatio,
+  TouchableHighlight,
+  PlatformOSType as RNPlatformOSType,
+  StyleSheet,
+  Text as RNText,
+  TouchableOpacityProps,
+  View as RNView,
+  ViewProps,
+  TextProps
+} from 'react-native'
 
 export interface SketchAppProps {
-    name?: string
+  name?: string
 }
 
-export class View extends React.Component<ViewProps & SketchAppProps> { }
-export class Text extends React.Component<TextProps & SketchAppProps> { }
+export class View extends React.Component<ViewProps & SketchAppProps> {}
+export class Text extends React.Component<TextProps & SketchAppProps> {}
 
-export const Touchable: ComponentType<TouchableOpacityProps>;
+export const Touchable: ComponentType<TouchableOpacityProps>
 
 // react-primitives also supports react-sketchapp and react-vr as platforms
-export type PlatformOSType = RNPlatformOSType | 'sketch' | 'vr';
+export type PlatformOSType = RNPlatformOSType | 'sketch' | 'vr'
 export interface PlatformStatic {
-    OS: PlatformOSType;
-    Version: number | string;
-    select<T>(specifics: { [platform in PlatformOSType | 'default']?: T }): T;
+  OS: PlatformOSType
+  Version: number | string
+  select<T>(specifics: { [platform in PlatformOSType | 'default']?: T }): T
 }
-export const Platform: PlatformStatic;
+export const Platform: PlatformStatic
 
 export const ListView: any
 
 export {
-    Animated,
-    Dimensions,
-    Easing,
-    Image,
-    PixelRatio,
-    StyleSheet,
-    TouchableHighlight,
-    // Text,
-    // View
-};
+  Animated,
+  Dimensions,
+  Easing,
+  Image,
+  PixelRatio,
+  StyleSheet,
+  TouchableHighlight,
+  ViewProps,
+  TextProps
+  // Text,
+  // View
+}

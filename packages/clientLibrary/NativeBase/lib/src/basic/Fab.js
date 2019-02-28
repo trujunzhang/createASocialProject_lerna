@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import PropTypes from "prop-types";
 import computeProps from "../utils/computeProps";
 // import Button from './../Button';
@@ -23,7 +23,7 @@ const { height, width } = Dimensions.get("window");
 
 const AnimatedFab = Animated.createAnimatedComponent(Button);
 
-class Fab extends Component {
+class Fab extends React.Component {
   // props: Animated.props & {
   //   position: ?string
   // };
