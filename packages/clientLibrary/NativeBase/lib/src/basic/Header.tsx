@@ -1,6 +1,6 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
-import { View, ViewPropTypes, StyleSheet } from 'react-primitives'
+import * as ReactNative from 'react-native'
+import { View, ViewProps, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
@@ -9,10 +9,13 @@ import { isIphoneX } from '@app/react-native-iphone-x-helper'
 import { HeaderStatusBar } from './HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IHeaderProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  searchBar: boolean
+  noStatusBar: boolean
+  rounded: boolean
 }
-class Header extends React.Component<IProps, any> {
+class Header extends React.Component<IHeaderProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object
@@ -34,7 +37,7 @@ class Header extends React.Component<IProps, any> {
   }
 
   calculateHeight(mode, inSet) {
-    let inset = null
+    let inset: any = null
     if (inSet != undefined) {
       inset = inSet
     } else {
@@ -56,7 +59,7 @@ class Header extends React.Component<IProps, any> {
   }
 
   calculatePadder(mode, inSet) {
-    let inset = null
+    let inset: any = null
     if (inSet != undefined) {
       inset = inSet
     } else {
@@ -64,7 +67,7 @@ class Header extends React.Component<IProps, any> {
     }
     const InsetValues = mode === 'portrait' ? inset.portrait : inset.landscape
     let topPadder = null
-    let style = StyleSheet.flatten(this.props.style)
+    let style: any = StyleSheet.flatten(this.props.style)
     if (style.padding !== undefined || style.paddingTop !== undefined) {
       topPadder = (style.paddingTop ? style.paddingTop : style.padding) + InsetValues.topInset
     } else {

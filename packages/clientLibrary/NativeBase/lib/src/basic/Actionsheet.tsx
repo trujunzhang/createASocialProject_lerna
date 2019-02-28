@@ -6,7 +6,7 @@ import {
   Platform,
   ActionSheetIOS,
   TouchableOpacity,
-  ViewPropTypes,
+  ViewProps,
   FlatList,
   Dimensions
 } from "react-primitives";
@@ -21,10 +21,12 @@ import { Body } from "./Body";
 import { ListItem } from "./ListItem";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface IActionSheetContainerProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  autoHide: boolean
+  duration: number
 }
-class ActionSheetContainer extends React.Component<IProps, any> {
+class ActionSheetContainer extends React.Component<IActionSheetContainerProps, any> {
   constructor(props) {
     super(props);
     this.state = {

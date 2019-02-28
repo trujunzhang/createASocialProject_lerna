@@ -55,7 +55,7 @@ export {
   Image,
   PixelRatio,
   StyleSheet,
-  TouchableHighlight,
+  TouchableOpacityProps,
   ImageProps,
   ViewProps,
   TextProps,

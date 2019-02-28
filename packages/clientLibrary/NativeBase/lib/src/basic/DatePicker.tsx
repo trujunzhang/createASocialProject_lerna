@@ -1,6 +1,8 @@
 import React from "react";
+import * as ReactNative from 'react-native'
 import {
   Modal,
+  ViewProps,
   View,
   Platform,
   DatePickerIOS,
@@ -9,10 +11,23 @@ import {
 import { Text } from "./Text";
 import { platformVariables as variable } from '@app/native-base-variables';
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IDatePickerProps {
+  defaultDate?: Date
+  minimumDate?: Date
+  maximumDate?: Date
+  locale?: string
+  placeHolderText?: string
+  textStyle?: ReactNative.TextStyle
+  placeHolderTextStyle?: ReactNative.TextStyle
+  androidMode?: 'calendar' | 'spinner' | 'default'
+  timeZoneOffsetInMinutes?: number
+  modalTransparent?: boolean
+  animationType?: 'slide' | 'fade' | 'none'
+  disabled?: boolean
+  onDateChange?: (date: any) => void
+  formatChosenDate?: (date: any) => void
 }
-export class DatePicker extends React.Component<IProps, any> {
+export class DatePicker extends React.Component<IDatePickerProps, any> {
   private _root: any
   constructor(props) {
     super(props);
@@ -63,7 +78,7 @@ export class DatePicker extends React.Component<IProps, any> {
       if (action === "dateSetAction") {
         let selectedDate = new Date(year, month, day);
         this.setState({ chosenDate: selectedDate });
-        this.props.onDateChange(selectedDate);
+        !!this.props.onDateChange && this.props.onDateChange(selectedDate);
       }
     } catch ({ code, message }) {
       console.warn("Cannot open date picker", message);

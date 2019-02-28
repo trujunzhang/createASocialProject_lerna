@@ -1,10 +1,10 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
 
-export interface INativeBaseComponentProps{
-theme? :any
+export interface INativeBaseComponentProps {
+	theme?: any
 }
-export default class NativeBaseComponent extends React.Component <INativeBaseComponentProps, any>{
+export default class NativeBaseComponent extends React.Component<any, any>{
 	static contextTypes = {
 		theme: PropTypes.object,
 		foregroundColor: PropTypes.string,

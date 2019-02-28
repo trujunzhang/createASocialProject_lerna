@@ -7,10 +7,10 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IFooterProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
 }
-class Footer extends React.Component<IProps, any> {
+class Footer extends React.Component<IFooterProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object
@@ -31,7 +31,7 @@ class Footer extends React.Component<IProps, any> {
   }
 
   calculateHeight(mode, inSet) {
-    let inset = null;
+    let inset: any = null;
     if (inSet != undefined) {
       inset = inSet;
     } else {
@@ -51,7 +51,7 @@ class Footer extends React.Component<IProps, any> {
   }
 
   calculatePadder(mode, inSet) {
-    let inset = null;
+    let inset: any = null;
     if (inSet != undefined) {
       inset = inSet;
     } else {

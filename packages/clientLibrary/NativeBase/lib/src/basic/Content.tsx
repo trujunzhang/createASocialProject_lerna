@@ -6,11 +6,16 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables';
 import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
-export interface IProps extends ViewProps {
+export interface IContentProps {
     style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+    padder: boolean
+    disableKBDismissScroll: boolean
+    enableResetScrollToCoords: boolean
+    keyboardShouldPersistTaps: string
 }
-class Content extends React.Component<IProps, any> {
+class Content extends React.Component<IContentProps, any> {
     private _root: any
+    private _scrollview: any
     static contextTypes = {
         theme: PropTypes.object
     };
@@ -29,7 +34,7 @@ class Content extends React.Component<IProps, any> {
     }
 
     calculateLeft(mode, inSet) {
-        let inset = null;
+        let inset: any = null;
         if (inSet !== undefined) {
             inset = inSet;
         } else {
@@ -61,7 +66,7 @@ class Content extends React.Component<IProps, any> {
         return leftPadder;
     }
     calculateRight(mode, inSet) {
-        let inset = null;
+        let inset: any = null;
         if (inSet !== undefined) {
             inset = inSet;
         } else {

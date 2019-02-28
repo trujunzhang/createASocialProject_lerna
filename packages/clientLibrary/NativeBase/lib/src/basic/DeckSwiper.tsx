@@ -5,13 +5,33 @@ import clamp from "clamp";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface IDeckSwiperProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  /**
+    * Array<any>
+    */
+  dataSource?: Array<any>
+  /**
+   * Direction of iteration for elements
+   * Default: iterates in backward direction
+   */
+  onSwipeLeft?: Function
+  /**
+   * Direction of iteration for elements
+   * Default: iterates in forward direction
+   */
+  onSwipeRight?: Function
+  /**
+   * Takes a data entry from the data source and should return a renderable component to be rendered as the row.
+   */
+  renderItem?: Function
 }
 const SWIPE_THRESHOLD = 120;
 
-class DeckSwiper extends React.Component<IProps, any> {
+class DeckSwiper extends React.Component<IDeckSwiperProps, any> {
   private _root: any
+  private _panResponder: any
+
   constructor(props) {
     super(props);
     this.state = {

@@ -1,6 +1,6 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
-import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet } from 'react-primitives'
+import * as ReactNative from 'react-native'
+import { TouchableOpacity, Platform, View, TouchableNativeFeedback, StyleSheet, TouchableOpacityProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { platformVariables as variable } from '@app/native-base-variables'
 import { Text } from './Text'
@@ -8,10 +8,31 @@ import computeProps from '../utils/computeProps'
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IProps extends ViewProps {
+export interface IButtonProps extends TouchableOpacityProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  block: boolean
+  primary: boolean
+  transparent: boolean
+  success: boolean
+  danger: boolean
+  warning: boolean
+  info: boolean
+  bordered: boolean
+  disabled: boolean
+  rounded: boolean
+  large: boolean
+  small: boolean
+  active: boolean
+  twitter: boolean
+  facebook: boolean
+  svgLeft: boolean
+  onlyCenter: boolean
+  full: boolean
+  // other
+  activeOpacity?: number | any
+  androidRippleColor: any
 }
-class Button extends React.Component<IProps, any> {
+class Button extends React.Component<IButtonProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object
@@ -44,7 +65,7 @@ class Button extends React.Component<IProps, any> {
         ? this.props.children
         : React.Children.map(
           this.props.children,
-          (child) =>
+          (child: any) =>
             child && child.type === Text
               ? React.cloneElement(child, {
                 uppercase: variables.btnUppercaseAndroidText,

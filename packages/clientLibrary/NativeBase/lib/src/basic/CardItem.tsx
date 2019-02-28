@@ -1,14 +1,18 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
-import { TouchableOpacity, View } from "react-primitives";
+import { TouchableOpacity, View, TouchableOpacityProps } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface ICardItemProps extends TouchableOpacityProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+	header: boolean
+	cardBody: boolean
+	footer: boolean
+	button: boolean
 }
-class CardItem extends React.Component<IProps, any> {
+class CardItem extends React.Component<ICardItemProps, any> {
 	private _root: any
 	render() {
 		if (this.props.button) {

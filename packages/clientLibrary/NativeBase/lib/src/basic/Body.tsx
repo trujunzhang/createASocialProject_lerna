@@ -5,10 +5,10 @@ import { View, ViewProps } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface IBodyProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Body extends React.Component<IProps, any> {
+class Body extends React.Component<IBodyProps, any> {
   private _root: any
   render() {
     return <View ref={c => (this._root = c)} {...this.props} />;

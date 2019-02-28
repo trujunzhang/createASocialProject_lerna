@@ -5,10 +5,12 @@ import { View, ListView, ViewProps } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface ICardProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  dataArray: any[]
+  renderRow: any
 }
-class Card extends React.Component<IProps, any> {
+class Card extends React.Component<ICardProps, any> {
   private _root: any
   render() {
     if (this.props.dataArray && this.props.renderRow) {

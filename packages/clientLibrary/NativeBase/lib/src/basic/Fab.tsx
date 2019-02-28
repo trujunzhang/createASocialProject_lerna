@@ -14,7 +14,7 @@ import {
 import { Icon } from "./Icon";
 import { IconNB } from "./IconNB";
 import { Button } from "./Button";
-import { platformVariables as variable } from '@app/native-base-variables'
+import { platformVariables as variables } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { connectStyle } from "@app/native-base-shoutem-theme";
@@ -23,11 +23,21 @@ const { height, width } = Dimensions.get("window");
 
 const AnimatedFab = Animated.createAnimatedComponent(Button);
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IFabProps {
+  active?: boolean
+  direction?: 'down' | 'up' | 'left' | 'right'
+  containerStyle?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  onPress?: () => void
+  position?: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
+  style?: ReactNative.ViewStyle
 }
-class Fab extends React.Component<IProps, any> {
+class Fab extends React.Component<IFabProps, any> {
   private _root: any
+  private containerHeight: any
+  private containerWidth: any
+  private buttonScale: any
+  private activeTimer: any
+
   // props: Animated.props & {
   //   position: ?string
   // };

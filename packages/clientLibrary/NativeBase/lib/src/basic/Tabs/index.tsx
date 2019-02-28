@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import * as ReactNative from 'react-native'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
 // import { InteractionManager, ViewProps} from "../../utils";

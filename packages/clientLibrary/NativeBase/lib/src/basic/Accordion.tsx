@@ -1,8 +1,10 @@
 import * as React from 'react'
+import * as ReactNative from 'react-native'
 import {
   Animated,
   TouchableWithoutFeedback,
   FlatList,
+  ViewProps,
   StyleSheet,
   View
 } from "react-primitives";
@@ -10,10 +12,11 @@ import { Text } from "./Text";
 import { Icon } from "./Icon";
 import { platformVariables as variable } from '@app/native-base-variables'
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IDefaultHeaderProps extends ViewProps {
+  headerStyle?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  title: string
 }
-class DefaultHeader extends React.Component<IProps, any> {
+class DefaultHeader extends React.Component<any, any> {
   render() {
     const variables = this.context.theme
       ? this.context.theme["@@shoutem.theme/themeStyle"].variables
@@ -54,7 +57,7 @@ class DefaultHeader extends React.Component<IProps, any> {
   }
 }
 
-class DefaultContent extends React.Component<IProps, any> {
+class DefaultContent extends React.Component<any, any> {
   render() {
     const variables = this.context.theme
       ? this.context.theme["@@shoutem.theme/themeStyle"].variables
@@ -74,7 +77,7 @@ class DefaultContent extends React.Component<IProps, any> {
   }
 }
 
-class AccordionSubItem extends React.Component<IProps, any> {
+class AccordionSubItem extends React.Component<any, any> {
   state = {
     fadeAnim: new Animated.Value(0.3)
   };
@@ -94,7 +97,7 @@ class AccordionSubItem extends React.Component<IProps, any> {
   }
 }
 
-class AccordionItem extends React.Component<IProps, any> {
+class AccordionItem extends React.Component<any, any> {
   render() {
     return (
       <View>
@@ -134,7 +137,7 @@ class AccordionItem extends React.Component<IProps, any> {
   }
 }
 
-export class Accordion extends React.Component<IProps, any> {
+export class Accordion extends React.Component<any, any> {
   state = { selected: undefined };
   setSelected(index) {
     if (this.state.selected === index) {

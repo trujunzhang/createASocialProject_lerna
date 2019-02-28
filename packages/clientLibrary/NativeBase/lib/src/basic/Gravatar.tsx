@@ -10,10 +10,10 @@ import computeProps from "../utils/computeProps";
 
 const GRAVATAR_URI = "https://www.gravatar.com/avatar/";
 
-export interface IProps extends ViewProps {
+export interface IGravatarProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Gravatar extends NativeBaseComponent {
+class Gravatar extends NativeBaseComponent<IGravatarProps, any>{
   private _root: any
   getInitialStyle() {
     return {

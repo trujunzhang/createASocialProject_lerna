@@ -1,5 +1,5 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
+import * as ReactNative from 'react-native'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
 import { connectStyle, StyleProvider } from '@app/native-base-shoutem-theme'

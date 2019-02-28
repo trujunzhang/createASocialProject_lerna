@@ -1,7 +1,7 @@
 import { LodashUtils as _ } from '@app/tools'
 import { StyleSheet } from 'react-primitives'
 
-module.exports = function(incomingProps, defaultProps) {
+const computeProps = (incomingProps, defaultProps) => {
   // External props has a higher precedence
   let computedProps: any = {}
 
@@ -41,3 +41,5 @@ module.exports = function(incomingProps, defaultProps) {
   // console.log("computedProps ", computedProps);
   return computedProps
 }
+
+export default computeProps

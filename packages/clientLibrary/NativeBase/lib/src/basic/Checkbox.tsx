@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
-import { TouchableOpacity, Platform } from "react-primitives";
+import { TouchableOpacity, TouchableOpacityProps } from "react-primitives";
 // import IconNB from "react-native-vector-icons/Ionicons";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
@@ -8,10 +8,12 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 import computeProps from "../utils/computeProps";
 
-export interface IProps extends ViewProps {
+export interface ICheckBoxProps extends TouchableOpacityProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+	color?: string
+	checked: boolean
 }
-class CheckBox extends React.Component<IProps, any> {
+class CheckBox extends React.Component<ICheckBoxProps, any> {
 	private _root: any
 	static contextTypes = {
 		theme: PropTypes.object,
