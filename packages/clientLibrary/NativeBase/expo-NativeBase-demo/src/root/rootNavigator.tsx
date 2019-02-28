@@ -87,19 +87,23 @@ import {
 
 import BasicFab from '../screens/fab/basic'
 import MultipleFab from '../screens/fab/multiple'
-import FixedLabel from '../screens/form/fixedLabel'
-import InlineLabel from '../screens/form/inlineLabel'
-import FloatingLabel from '../screens/form/floatingLabel'
-import PlaceholderLabel from '../screens/form/placeholder'
-import StackedLabel from '../screens/form/stacked'
-import RegularInput from '../screens/form/regular'
-import UnderlineInput from '../screens/form/underline'
-import RoundedInput from '../screens/form/rounded'
-import IconInput from '../screens/form/iconInput'
-import SuccessInput from '../screens/form/success'
-import ErrorInput from '../screens/form/error'
-import DisabledInput from '../screens/form/disabledInput'
-import PickerInput from '../screens/form/pickerInput'
+
+import {
+  NHForm,
+  FixedLabel,
+  InlineLabel,
+  FloatingLabel,
+  PlaceholderLabel,
+  StackedLabel,
+  RegularInput,
+  UnderlineInput,
+  RoundedInput,
+  IconInput,
+  SuccessInput,
+  ErrorInput,
+  DisabledInput,
+  PickerInput,
+} from '../screens/form'
 
 import RowNB from '../screens/layout/row'
 import ColumnNB from '../screens/layout/column'
@@ -151,7 +155,6 @@ import NHBadge from '../screens/badge'
 import NHCheckbox from '../screens/checkbox'
 import NHDeckSwiper from '../screens/deckswiper'
 import NHFab from '../screens/fab'
-import NHForm from '../screens/form'
 import TextArea from '../screens/form/textArea'
 import ListSwipe from '../screens/listSwipe'
 import NHLayout from '../screens/layout'
