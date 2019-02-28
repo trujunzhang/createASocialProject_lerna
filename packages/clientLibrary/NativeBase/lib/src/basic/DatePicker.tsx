@@ -9,6 +9,9 @@ import {
 import { Text } from "./Text";
 import { platformVariables as variable } from '@app/native-base-variables';
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 export class DatePicker extends React.Component {
   private _root: any
   constructor(props) {

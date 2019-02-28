@@ -7,6 +7,9 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables'
 import computeProps from "../utils/computeProps";
 
+export interface IProps extends ViewProps {
+    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Radio extends React.Component {
 
     private _root: any

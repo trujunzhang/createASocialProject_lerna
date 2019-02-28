@@ -7,6 +7,9 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Footer extends React.Component {
   private _root: any
   static contextTypes = {

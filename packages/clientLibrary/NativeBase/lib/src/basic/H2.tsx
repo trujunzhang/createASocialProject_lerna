@@ -5,6 +5,9 @@ import { Text } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
+export interface IProps extends ViewProps {
+	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class H2 extends React.Component {
 	private _root: any
 	render() {

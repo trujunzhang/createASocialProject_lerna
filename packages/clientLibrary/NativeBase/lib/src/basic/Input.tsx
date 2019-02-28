@@ -6,6 +6,9 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import NativeBaseComponent from './Base/NativeBaseComponent'
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Input extends NativeBaseComponent {
   private _root: any
   render() {

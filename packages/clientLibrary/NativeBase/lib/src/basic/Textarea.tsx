@@ -6,6 +6,9 @@ import { platformVariables as variable } from '@app/native-base-variables';
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
+export interface IProps extends ViewProps {
+	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Textarea extends React.Component {
 	getStyle() {
 		return {

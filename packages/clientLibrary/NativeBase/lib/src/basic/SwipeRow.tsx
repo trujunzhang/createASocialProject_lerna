@@ -11,6 +11,9 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 const PREVIEW_OPEN_DELAY = 700
 const PREVIEW_CLOSE_DELAY = 300
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class SwipeRow extends React.Component {
   private _root: any
 

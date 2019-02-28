@@ -23,6 +23,9 @@ const { height, width } = Dimensions.get("window");
 
 const AnimatedFab = Animated.createAnimatedComponent(Button);
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Fab extends React.Component {
   private _root: any
   // props: Animated.props & {

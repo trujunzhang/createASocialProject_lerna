@@ -7,6 +7,9 @@ import { ToastContainer as Toast } from "./ToastContainer";
 import { ActionSheetContainer as ActionSheet } from "./Actionsheet";
 import { Text } from "./Text";
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Root extends React.Component {
   private _root: any
   render() {

@@ -7,6 +7,9 @@ import { platformVariables as variable } from '@app/native-base-variables'
 
 import { LodashUtils as _ } from '@app/tools'
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class HeaderStatusBar extends React.Component {
   private _root: any
   static contextTypes = {

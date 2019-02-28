@@ -5,6 +5,9 @@ import clamp from "clamp";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 const SWIPE_THRESHOLD = 120;
 
 class DeckSwiper extends React.Component {

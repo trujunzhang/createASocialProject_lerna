@@ -18,6 +18,9 @@ import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { LodashUtils as _ } from '@app/tools'
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Item extends React.Component {
   private _root: any
   constructor(props) {

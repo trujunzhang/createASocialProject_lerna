@@ -9,6 +9,9 @@ import { isIphoneX } from '@app/react-native-iphone-x-helper'
 import { HeaderStatusBar } from './HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
 
+export interface IProps extends ViewProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
 class Header extends React.Component {
   private _root: any
   static contextTypes = {
