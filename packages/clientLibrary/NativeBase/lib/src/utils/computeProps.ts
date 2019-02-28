@@ -1,7 +1,7 @@
 import { LodashUtils as _ } from '@app/tools'
 import { StyleSheet } from 'react-primitives'
 
-module.exports = function (incomingProps, defaultProps) {
+module.exports = function(incomingProps, defaultProps) {
   // External props has a higher precedence
   let computedProps: any = {}
 

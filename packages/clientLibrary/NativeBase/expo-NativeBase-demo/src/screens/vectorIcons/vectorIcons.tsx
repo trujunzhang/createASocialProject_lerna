@@ -1,9 +1,7 @@
 // @expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/AntDesign.json
 // @expo/vector-icons/vendor/
 
-
-
-import * as AntDGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/AntDesign.json';
+import * as AntDGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/AntDesign.json'
 import * as EntypoGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Entypo.json'
 import * as EvilIconsGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/EvilIcons.json'
 import * as FeatherGlyphs from '@expo/vector-icons/vendor/react-native-vector-icons/glyphmaps/Feather.json'

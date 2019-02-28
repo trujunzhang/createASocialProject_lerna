@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { StackNavigator, DrawerNavigator } from 'react-navigation'
 
-import { SideBar } from './screens/sidebar'
+import { SideBar } from '../screens/sidebar'
 
 import {
   Header,
@@ -18,7 +18,7 @@ import {
   HeaderNoLeft,
   HeaderNoShadow,
   HeaderTransparent
-} from './screens/Header'
+} from '../screens/Header'
 
 import {
   NHFooter as Footer,
@@ -26,9 +26,9 @@ import {
   IconFooter,
   IconText,
   BadgeFooter
-} from './screens/footer'
+} from '../screens/footer'
 
-import { IconList, IconSetsList } from './screens/vectorIcons'
+import { IconList, IconSetsList } from '../screens/vectorIcons'
 
 import {
   NHPickerPage as NHPicker,
@@ -42,13 +42,13 @@ import {
   HeaderPicker,
   HeaderStylePicker,
   CustomHeaderPicker
-} from './screens/picker'
+} from '../screens/picker'
 
 import {
   ActionsheetPage as Actionsheet,
   RegularActionSheet,
   IconActionSheet
-} from './screens/actionsheet'
+} from '../screens/actionsheet'
 
 import {
   NHIconPage as NHIcon,
@@ -57,76 +57,80 @@ import {
   StateIcon,
   PlatformSpecificIcon,
   IconFamily
-} from './screens/icon'
+} from '../screens/icon'
 
-import Default from './screens/button/default'
-import Outline from './screens/button/outline'
-import Rounded from './screens/button/rounded'
-import Block from './screens/button/block'
-import Full from './screens/button/full'
-import Custom from './screens/button/custom'
-import Transparent from './screens/button/transparent'
-import IconBtn from './screens/button/iconBtn'
-import Disabled from './screens/button/disabled'
-import BasicCard from './screens/card/basic'
-import NHCardItemBordered from './screens/card/carditem-bordered'
-import NHCardItemButton from './screens/card/carditem-button'
-import NHCardImage from './screens/card/card-image'
-import NHCardShowcase from './screens/card/card-showcase'
-import NHCardList from './screens/card/card-list'
-import NHCardHeaderAndFooter from './screens/card/card-header-and-footer'
-import NHCardTransparent from './screens/card/card-transparent'
-import NHCardCustomBorderRadius from './screens/card/card-custom-border-radius'
-import BasicFab from './screens/fab/basic'
-import MultipleFab from './screens/fab/multiple'
-import FixedLabel from './screens/form/fixedLabel'
-import InlineLabel from './screens/form/inlineLabel'
-import FloatingLabel from './screens/form/floatingLabel'
-import PlaceholderLabel from './screens/form/placeholder'
-import StackedLabel from './screens/form/stacked'
-import RegularInput from './screens/form/regular'
-import UnderlineInput from './screens/form/underline'
-import RoundedInput from './screens/form/rounded'
-import IconInput from './screens/form/iconInput'
-import SuccessInput from './screens/form/success'
-import ErrorInput from './screens/form/error'
-import DisabledInput from './screens/form/disabledInput'
-import PickerInput from './screens/form/pickerInput'
+import {
+  NHButton,
+  Default,
+  Outline,
+  Rounded,
+  Block,
+  Full,
+  Custom,
+  Transparent,
+  IconBtn,
+  Disabled
+} from '../screens/button'
 
-import RowNB from './screens/layout/row'
-import ColumnNB from './screens/layout/column'
-import NestedGrid from './screens/layout/nested'
-import CustomRow from './screens/layout/customRow'
-import CustomCol from './screens/layout/customCol'
-import BasicListSwipe from './screens/listSwipe/basic-list-swipe'
-import SwipeRowCustomStyle from './screens/listSwipe/swipe-row-style'
-import MultiListSwipe from './screens/listSwipe/multi-list-swipe'
-import NHBasicList from './screens/list/basic-list'
-import NHListItemSelected from './screens/list/listitem-selected'
-import NHListDivider from './screens/list/list-divider'
-import NHListSeparator from './screens/list/list-separator'
-import NHListHeader from './screens/list/list-headers'
-import NHListIcon from './screens/list/list-icon'
-import NHListAvatar from './screens/list/list-avatar'
-import NHListThumbnail from './screens/list/list-thumbnail'
-import NHListItemNoIndent from './screens/list/listitem-noIndent'
+import BasicCard from '../screens/card/basic'
+import NHCardItemBordered from '../screens/card/carditem-bordered'
+import NHCardItemButton from '../screens/card/carditem-button'
+import NHCardImage from '../screens/card/card-image'
+import NHCardShowcase from '../screens/card/card-showcase'
+import NHCardList from '../screens/card/card-list'
+import NHCardHeaderAndFooter from '../screens/card/card-header-and-footer'
+import NHCardTransparent from '../screens/card/card-transparent'
+import NHCardCustomBorderRadius from '../screens/card/card-custom-border-radius'
+import BasicFab from '../screens/fab/basic'
+import MultipleFab from '../screens/fab/multiple'
+import FixedLabel from '../screens/form/fixedLabel'
+import InlineLabel from '../screens/form/inlineLabel'
+import FloatingLabel from '../screens/form/floatingLabel'
+import PlaceholderLabel from '../screens/form/placeholder'
+import StackedLabel from '../screens/form/stacked'
+import RegularInput from '../screens/form/regular'
+import UnderlineInput from '../screens/form/underline'
+import RoundedInput from '../screens/form/rounded'
+import IconInput from '../screens/form/iconInput'
+import SuccessInput from '../screens/form/success'
+import ErrorInput from '../screens/form/error'
+import DisabledInput from '../screens/form/disabledInput'
+import PickerInput from '../screens/form/pickerInput'
 
-import BasicTab from './screens/tab/basicTab'
-import ConfigTab from './screens/tab/configTab'
-import ScrollableTab from './screens/tab/scrollableTab'
-import BasicSegment from './screens/segment/SegmentHeader'
-import SegmentHeaderIcon from './screens/segment/SegmentHeaderIcon'
-import BasicToast from './screens/toast/basic-toast'
-import ToastDuration from './screens/toast/toast-duration'
-import ToastPosition from './screens/toast/toast-position'
-import ToastType from './screens/toast/toast-type'
-import ToastText from './screens/toast/toast-text'
-import ToastButton from './screens/toast/toast-button'
-import AdvSegment from './screens/segment/segmentTab'
-import SimpleDeck from './screens/deckswiper/simple'
-import AdvancedDeck from './screens/deckswiper/advanced'
-import NHCustomRadio from './screens/radio/custom'
-import NHDefaultRadio from './screens/radio/default'
+import RowNB from '../screens/layout/row'
+import ColumnNB from '../screens/layout/column'
+import NestedGrid from '../screens/layout/nested'
+import CustomRow from '../screens/layout/customRow'
+import CustomCol from '../screens/layout/customCol'
+import BasicListSwipe from '../screens/listSwipe/basic-list-swipe'
+import SwipeRowCustomStyle from '../screens/listSwipe/swipe-row-style'
+import MultiListSwipe from '../screens/listSwipe/multi-list-swipe'
+import NHBasicList from '../screens/list/basic-list'
+import NHListItemSelected from '../screens/list/listitem-selected'
+import NHListDivider from '../screens/list/list-divider'
+import NHListSeparator from '../screens/list/list-separator'
+import NHListHeader from '../screens/list/list-headers'
+import NHListIcon from '../screens/list/list-icon'
+import NHListAvatar from '../screens/list/list-avatar'
+import NHListThumbnail from '../screens/list/list-thumbnail'
+import NHListItemNoIndent from '../screens/list/listitem-noIndent'
+
+import BasicTab from '../screens/tab/basicTab'
+import ConfigTab from '../screens/tab/configTab'
+import ScrollableTab from '../screens/tab/scrollableTab'
+import BasicSegment from '../screens/segment/SegmentHeader'
+import SegmentHeaderIcon from '../screens/segment/SegmentHeaderIcon'
+import BasicToast from '../screens/toast/basic-toast'
+import ToastDuration from '../screens/toast/toast-duration'
+import ToastPosition from '../screens/toast/toast-position'
+import ToastType from '../screens/toast/toast-type'
+import ToastText from '../screens/toast/toast-text'
+import ToastButton from '../screens/toast/toast-button'
+import AdvSegment from '../screens/segment/segmentTab'
+import SimpleDeck from '../screens/deckswiper/simple'
+import AdvancedDeck from '../screens/deckswiper/advanced'
+import NHCustomRadio from '../screens/radio/custom'
+import NHDefaultRadio from '../screens/radio/default'
 
 import {
   NHAccordion,
@@ -135,30 +139,29 @@ import {
   AccordionIconStyle,
   AccordionHeaderContentStyle,
   AccordionCustomHeaderContent
-} from './screens/accordion'
+} from '../screens/accordion'
 
-import Home from './screens/home'
-import Anatomy from './screens/anatomy'
-import NHBadge from './screens/badge'
-import NHButton from './screens/button'
-import NHCard from './screens/card'
-import NHCheckbox from './screens/checkbox'
-import NHDeckSwiper from './screens/deckswiper'
-import NHFab from './screens/fab'
-import NHForm from './screens/form'
-import TextArea from './screens/form/textArea'
-import ListSwipe from './screens/listSwipe'
-import NHLayout from './screens/layout'
-import NHList from './screens/list'
-import NHRadio from './screens/radio'
-import NHSearchbar from './screens/searchbar'
-import NHSpinner from './screens/spinner'
-import NHTab from './screens/tab'
-import NHThumbnail from './screens/thumbnail'
-import NHTypography from './screens/typography'
-import Segment from './screens/segment'
-import NHToast from './screens/toast'
-import NHDatePicker from './screens/datepicker'
+import Home from '../screens/home'
+import Anatomy from '../screens/anatomy'
+import NHBadge from '../screens/badge'
+import NHCard from '../screens/card'
+import NHCheckbox from '../screens/checkbox'
+import NHDeckSwiper from '../screens/deckswiper'
+import NHFab from '../screens/fab'
+import NHForm from '../screens/form'
+import TextArea from '../screens/form/textArea'
+import ListSwipe from '../screens/listSwipe'
+import NHLayout from '../screens/layout'
+import NHList from '../screens/list'
+import NHRadio from '../screens/radio'
+import NHSearchbar from '../screens/searchbar'
+import NHSpinner from '../screens/spinner'
+import NHTab from '../screens/tab'
+import NHThumbnail from '../screens/thumbnail'
+import NHTypography from '../screens/typography'
+import Segment from '../screens/segment'
+import NHToast from '../screens/toast'
+import NHDatePicker from '../screens/datepicker'
 
 const Drawer = DrawerNavigator(
   {
