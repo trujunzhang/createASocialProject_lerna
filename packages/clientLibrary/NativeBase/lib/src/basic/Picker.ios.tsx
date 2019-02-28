@@ -233,7 +233,7 @@ class PickerNB extends React.Component<IProps, any> {
   }
 }
 
-PickerNB.Item = (props) => <Picker.Item {...props} />
+(PickerNB as any).Item = (props) => <Picker.Item {...props} />
 
 // createReactClass({
 // render() {

@@ -37,6 +37,8 @@ export interface IItemProps extends TouchableOpacityProps {
   secureTextEntry?: boolean
   success?: boolean
   last?: boolean
+
+  children?: any
 }
 class Item extends React.Component<IItemProps, any> {
   private _root: any
@@ -62,7 +64,7 @@ class Item extends React.Component<IItemProps, any> {
   componentWillReceiveProps(nextProps) {
     const childrenArray = React.Children.toArray(nextProps.children)
     let inputProps = {}
-    _.remove(childrenArray, (item) => {
+    _.remove(childrenArray, (item: any) => {
       if (item.type.displayName === 'Styled(Input)') {
         inputProps = item.props
         this.inputProps = item.props
@@ -101,8 +103,8 @@ class Item extends React.Component<IItemProps, any> {
   }
 
   renderLabel(label, labelProps) {
-    const newLabel = []
-    let labelStyle = StyleSheet.flatten({ fontSize: 15, lineHeight: 30 }, labelProps.style)
+    const newLabel: any = []
+    // let labelStyle = StyleSheet.flatten({ fontSize: 15, lineHeight: 30 }, labelProps.style)
     if (this.props.floatingLabel) {
       if (this.state.isFocused) {
         newLabel.push(
@@ -130,21 +132,21 @@ class Item extends React.Component<IItemProps, any> {
   }
 
   renderChildren() {
-    const newChildren = []
+    const newChildren: any = []
     const childrenArray = React.Children.toArray(this.props.children)
 
     let label: any = []
     let labelProps = {}
-    label = _.remove(childrenArray, (item) => {
+    label = _.remove(childrenArray, (item: any) => {
       if (item.type === Label) {
         labelProps = item.props
         return item
       }
     })
 
-    let input = []
-    let inputProps = {}
-    input = _.remove(childrenArray, (item) => {
+    let input: any = []
+    let inputProps: any = {}
+    input = _.remove(childrenArray, (item: any) => {
       if (item.type === Input) {
         inputProps = item.props
         this.inputProps = item.props
@@ -152,9 +154,9 @@ class Item extends React.Component<IItemProps, any> {
       }
     })
 
-    let icon = []
+    let icon: any = []
     let iconProps = {}
-    icon = _.remove(childrenArray, (item) => {
+    icon = _.remove(childrenArray, (item: any) => {
       if (item.type === Icon) {
         iconProps = item.props
         return item
@@ -163,7 +165,7 @@ class Item extends React.Component<IItemProps, any> {
 
     let image: any = []
     let imageProps = {}
-    image = _.remove(childrenArray, (item) => {
+    image = _.remove(childrenArray, (item: any) => {
       if (item.type === Thumbnail) {
         imageProps = item.props
         return item

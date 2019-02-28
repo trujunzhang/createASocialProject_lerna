@@ -9,8 +9,32 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 
 export interface IHeaderStatusBarProps extends ViewProps {
+  parallax?: boolean
+  noStatusBar?: boolean
+  /**
+   * Prop to be used with <Header> component to have Search bar onto the Header section of your screen.
+   */
+  searchBar?: boolean
+  /**
+   * Wraps the search bar with predefined border options.
+   * Default: regular
+   */
+  rounded?: boolean
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  /**
+   * It is advisable to use hasTabs prop with Header while using Tab
+   */
+  hasTabs?: boolean
+  noShadow?: boolean
+  hasSubtitle?: boolean
+  span?: boolean
+  androidStatusBarColor?: string
+  iosBarStyle?: ReactNative.StatusBarStyle
+  hasSegment?: boolean
+  translucent?: boolean
+  transparent?: boolean
 }
+
 class HeaderStatusBar extends React.Component<IHeaderStatusBarProps, any> {
   private _root: any
   static contextTypes = {

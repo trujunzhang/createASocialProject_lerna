@@ -6,7 +6,7 @@ import { Picker } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IProps extends Picker {
+interface IPickerNBProps extends Picker {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
   mode?: 'dialog' | 'dropdown'
   iosHeader?: string
@@ -26,7 +26,7 @@ export interface IProps extends Picker {
   modalStyle?: ReactNative.ViewStyle
   renderHeader?: (backAction: any) => React.ReactElement<any>
 }
-export default class PickerNB extends React.Component<IProps, any> {
+export default class PickerNB extends React.Component<IPickerNBProps, any> {
   private _root: any
   render() {
     return (
@@ -37,7 +37,7 @@ export default class PickerNB extends React.Component<IProps, any> {
   }
 }
 
-PickerNB.Item = (props) => <Picker.Item {...props} />
+(PickerNB as any).Item = (props) => <Picker.Item {...props} />
 
 // createReactClass({
 // render() {
