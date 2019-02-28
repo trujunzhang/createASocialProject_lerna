@@ -14,8 +14,34 @@ import { View, Animated, StyleSheet, ScrollView, Platform, Dimensions } from 're
 const WINDOW_WIDTH = Dimensions.get('window').width
 
 
+export interface IScrollableTabBarProps extends ViewProps {
+  goToPage?: Function
+  activeTab?: number
+  tabs?: Array<any>
+  backgroundColor?: string
+  activeTextColor?: string
+  inactiveTextColor?: string
+  scrollOffset?: number
+  style?: ReactNative.ViewStyle
+  tabStyle?: ReactNative.ViewStyle
+  tabsContainerStyle?: ReactNative.ViewStyle
+  renderTab?: Function
+  underlineStyle?: ReactNative.ViewStyle
+  onScroll?: Function
+}
 
-class ScrollableTabBar extends React.Component<IProps, any> {
+class ScrollableTabBar extends React.Component<IScrollableTabBarProps, any> {
+  private _root: any
+  private _tabsMeasurements: any
+  private _tabContainerMeasurements: any
+  private _containerMeasurements: any
+  private _scrollView: any
+
+
+  static contextTypes = {
+    theme: PropTypes.object
+  }
+
   getDefaultProps() {
     return {
       scrollOffset: 52,
@@ -258,24 +284,22 @@ class ScrollableTabBar extends React.Component<IProps, any> {
   }
 }
 
-ScrollableTabBar.propTypes = {
-  goToPage: PropTypes.func,
-  activeTab: PropTypes.number,
-  tabs: PropTypes.array,
-  backgroundColor: PropTypes.string,
-  activeTextColor: PropTypes.string,
-  inactiveTextColor: PropTypes.string,
-  scrollOffset: PropTypes.number,
-  style: ViewPropTypes.style,
-  tabStyle: ViewPropTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  renderTab: PropTypes.func,
-  underlineStyle: ViewPropTypes.style,
-  onScroll: PropTypes.func
-}
-ScrollableTabBar.contextTypes = {
-  theme: PropTypes.object
-}
+// ScrollableTabBar.propTypes = {
+//   goToPage: PropTypes.func,
+//   activeTab: PropTypes.number,
+//   tabs: PropTypes.array,
+//   backgroundColor: PropTypes.string,
+//   activeTextColor: PropTypes.string,
+//   inactiveTextColor: PropTypes.string,
+//   scrollOffset: PropTypes.number,
+//   style: ViewPropTypes.style,
+//   tabStyle: ViewPropTypes.style,
+//   tabsContainerStyle: ViewPropTypes.style,
+//   renderTab: PropTypes.func,
+//   underlineStyle: ViewPropTypes.style,
+//   onScroll: PropTypes.func
+// }
+
 
 // module.exports = ScrollableTabBar;
 const StyledTab = connectStyle('NativeBase.ScrollableTab', {}, mapPropsToStyleNames)(
