@@ -132,12 +132,17 @@ import ConfigTab from '../screens/tab/configTab'
 import ScrollableTab from '../screens/tab/scrollableTab'
 import BasicSegment from '../screens/segment/SegmentHeader'
 import SegmentHeaderIcon from '../screens/segment/SegmentHeaderIcon'
-import BasicToast from '../screens/toast/basic-toast'
-import ToastDuration from '../screens/toast/toast-duration'
-import ToastPosition from '../screens/toast/toast-position'
-import ToastType from '../screens/toast/toast-type'
-import ToastText from '../screens/toast/toast-text'
-import ToastButton from '../screens/toast/toast-button'
+
+import {
+  NHToast,
+  BasicToast,
+  ToastDuration,
+  ToastPosition,
+  ToastType,
+  ToastText,
+  ToastButton
+} from '../screens/toast'
+
 import AdvSegment from '../screens/segment/segmentTab'
 import SimpleDeck from '../screens/deckswiper/simple'
 import AdvancedDeck from '../screens/deckswiper/advanced'
@@ -169,7 +174,6 @@ import NHTab from '../screens/tab'
 import NHThumbnail from '../screens/thumbnail'
 import NHTypography from '../screens/typography'
 import Segment from '../screens/segment'
-import NHToast from '../screens/toast'
 import NHDatePicker from '../screens/datepicker'
 
 const Drawer = DrawerNavigator(
