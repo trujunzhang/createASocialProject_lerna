@@ -20,16 +20,16 @@ const PREVIEW_OPEN_DELAY = 700
 const PREVIEW_CLOSE_DELAY = 300
 
 export interface ISwipeRowProps {
-  leftOpenValue?: number
-  rightOpenValue?: number
+  leftOpenValue?: number | any
+  rightOpenValue?: number | any
   closeOnRowPress?: boolean
   disableLeftSwipe?: boolean
   disableRightSwipe?: boolean
   recalculateHiddenLayout?: boolean
   preview?: boolean
   previewDuration?: number
-  directionalDistanceChangeThreshold?: number
-  swipeToOpenPercent?: number
+  directionalDistanceChangeThreshold?: number | any
+  swipeToOpenPercent?: number | any
   stopLeftSwipe?: number
   stopRightSwipe?: number
   onRowOpen?: Function
@@ -39,6 +39,16 @@ export interface ISwipeRowProps {
   body?: any
   right?: React.ReactElement<any>
   style?: ReactNative.ViewStyle
+
+  // custom
+  swipeGestureBegan?: any
+  setScrollEnabled?: any
+  previewOpenValue?: any
+  friction?: any
+  tension?: any
+  onRowDidOpen?: any
+  onRowDidClose?: any
+  list?: any
 }
 class SwipeRow extends React.Component<ISwipeRowProps, any> {
   private _root: any
@@ -174,7 +184,7 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
     }
 
     // finish up the animation
-    let toValue = 0
+    let toValue: any = 0
     if (this._translateX._value >= 0) {
       // trying to open right
       if (
@@ -295,7 +305,7 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
               flexDirection: 'row',
               justifyContent: 'space-between'
             }
-          ]}>
+          ] as any}>
           <Left style={{ width: this.props.leftOpenValue, zIndex: 1 }}>{this.props.left}</Left>
           <Body style={{ flex: 0 }} />
           <Right style={{ width: -this.props.rightOpenValue, zIndex: 1 }}>{this.props.right}</Right>

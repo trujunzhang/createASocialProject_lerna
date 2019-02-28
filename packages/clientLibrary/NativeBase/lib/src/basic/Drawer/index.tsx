@@ -57,7 +57,7 @@ export default class Drawer extends React.Component<IDrawerProps, any> {
   }
 }
 
-Drawer.defaultProps = {
+(Drawer as any).defaultProps = {
   type: 'overlay',
   tapToClose: true,
   openDrawerOffset: 0.2,

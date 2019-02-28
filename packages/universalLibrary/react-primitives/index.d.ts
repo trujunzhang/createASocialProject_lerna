@@ -27,6 +27,7 @@ import {
   DatePickerIOS,
   DatePickerAndroid,
   // Props
+  TouchableHighlightProps,
   PickerProps,
   PickerItemProps,
   TextInputProps,
@@ -87,6 +88,7 @@ export {
   TouchableWithoutFeedback,
   TouchableNativeFeedback,
   // Props
+  TouchableHighlightProps,
   PickerProps,
   PickerItemProps,
   TextInputProps,

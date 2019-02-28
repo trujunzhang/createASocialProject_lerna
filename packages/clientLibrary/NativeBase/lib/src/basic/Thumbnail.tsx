@@ -8,7 +8,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IThumbnailProps extends ImageProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
   square: boolean
   circular: boolean
   size: number

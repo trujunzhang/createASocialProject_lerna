@@ -1,15 +1,55 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
-import { TouchableHighlight, Platform, TouchableNativeFeedback, View } from 'react-primitives'
+import {
+  TouchableHighlight,
+  TouchableHighlightProps,
+  Platform, TouchableNativeFeedback, View
+} from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
 
-export interface IListItemProps extends TouchableHighlight {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IListItemProps extends TouchableHighlightProps {
+  full?: boolean
+  header?: boolean
+  noBorder?: boolean
+  noIndent?: boolean
+  /**
+   * Aligns icon to the right of ListItem.
+   * Default: false
+   */
+  iconRight?: boolean
+  /**
+   * Aligns icon to the left of ListItem.
+   * Default: true
+   */
+  iconLeft?: boolean
+  icon?: boolean
+  avatar?: boolean
+  thumbnail?: boolean
+  button?: boolean
+  /**
+   * Helps to organize and group the list items.
+   */
+  itemDivider?: boolean
+  /**
+   * Sub caption for List Item.
+   */
+
+  note?: string
+  itemHeader?: boolean
+  first?: boolean
+  last?: boolean
+  selected?: boolean
+  /**
+   * [android] colored ripple effect
+   */
+  androidRippleColor?: string
+  touchableHighlightStyle?: ReactNative.ViewStyle
 }
+
 class ListItem extends React.Component<IListItemProps, any> {
   private _root: any
   static contextTypes = {
