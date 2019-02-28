@@ -21,7 +21,7 @@ import computeProps from '../utils/computeProps'
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IProps extends ViewProps {
+interface IPickerNBProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
   mode?: 'dialog' | 'dropdown'
   iosHeader?: string
@@ -54,7 +54,7 @@ export interface IProps extends ViewProps {
   children?: any
 }
 
-class PickerNB extends React.Component<IProps, any> {
+class PickerNB extends React.Component<IPickerNBProps, any> {
   private _root: any
   constructor(props) {
     super(props)

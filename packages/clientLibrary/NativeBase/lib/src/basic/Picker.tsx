@@ -6,10 +6,9 @@ import { Picker, PickerProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IProps extends PickerProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+interface IPickerNBProps extends PickerProps {
 }
-export default class PickerNB extends React.Component<IProps, any> {
+export default class PickerNB extends React.Component<IPickerNBProps, any> {
   private _root: any
   render() {
     return (
