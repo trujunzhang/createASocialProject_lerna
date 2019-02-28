@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View, ViewPropTypes } from "react-primitives";
+import { View, ViewProps } from "react-primitives";
 import PropTypes from "prop-types";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
@@ -8,6 +8,7 @@ import { ActionSheetContainer as ActionSheet } from "./Actionsheet";
 import { Text } from "./Text";
 
 class Root extends React.Component {
+  private _root: any
   render() {
     return (
       <View ref={c => (this._root = c)} {...this.props} style={{ flex: 1 }}>
@@ -28,14 +29,14 @@ class Root extends React.Component {
   }
 }
 
-Root.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ])
-};
+// Root.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ])
+// };
 
 const StyledRoot = connectStyle("NativeBase.Root", {}, mapPropsToStyleNames)(
   Root

@@ -6,6 +6,7 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 export default class PickerNB extends React.Component {
+  private _root: any
   render() {
     return (
       <Picker ref={c => (this._root = c)} {...this.props}>
@@ -23,9 +24,9 @@ PickerNB.Item = (props) => (<Picker.Item {...props} />);
 // }
 // });
 
-PickerNB.propTypes = {
-  ...Picker.propTypes
-};
+// PickerNB.propTypes = {
+//   ...Picker.propTypes
+// };
 
 const StyledPickerNB = connectStyle(
   "NativeBase.PickerNB",

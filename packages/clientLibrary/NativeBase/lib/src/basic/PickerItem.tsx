@@ -6,14 +6,15 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class Item extends React.Component {
+	private _root: any
 	render() {
 		return <Picker.Item ref={c => (this._root = c)} {...this.props} />;
 	}
 }
 
-Item.propTypes = {
-	...Picker.Item.propTypes,
-};
+// Item.propTypes = {
+// 	...Picker.Item.propTypes,
+// };
 
 const StyledItem = connectStyle("NativeBase.Item", {}, mapPropsToStyleNames)(Item);
 

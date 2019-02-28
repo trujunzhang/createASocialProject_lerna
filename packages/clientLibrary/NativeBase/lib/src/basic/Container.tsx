@@ -10,6 +10,7 @@ import { ActionSheetContainer as ActionSheet } from "./Actionsheet";
 import { Text } from "./Text";
 
 class Container extends React.Component {
+	private _root: any
 	render() {
 		return (
 			<View ref={c => (this._root = c)} {...this.props}>
@@ -19,10 +20,10 @@ class Container extends React.Component {
 	}
 }
 
-Container.propTypes = {
-	...ViewPropTypes,
-	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-};
+// Container.propTypes = {
+// 	...ViewPropTypes,
+// 	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+// };
 
 const StyledContainer = connectStyle("NativeBase.Container", {}, mapPropsToStyleNames)(Container);
 

@@ -19,6 +19,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { LodashUtils as _ } from '@app/tools'
 
 class Item extends React.Component {
+  private _root: any
   constructor(props) {
     super(props);
     this.state = {
@@ -409,20 +410,20 @@ const childrenType = function (props, propName, component) {
   return error;
 };
 
-Item.propTypes = {
-  ...TouchableOpacity.propTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ]),
-  inlineLabel: PropTypes.bool,
-  floatingLabel: PropTypes.bool,
-  stackedLabel: PropTypes.bool,
-  fixedLabel: PropTypes.bool,
-  success: PropTypes.bool,
-  error: PropTypes.bool
-};
+// Item.propTypes = {
+//   ...TouchableOpacity.propTypes,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ]),
+//   inlineLabel: PropTypes.bool,
+//   floatingLabel: PropTypes.bool,
+//   stackedLabel: PropTypes.bool,
+//   fixedLabel: PropTypes.bool,
+//   success: PropTypes.bool,
+//   error: PropTypes.bool
+// };
 
 const StyledItem = connectStyle("NativeBase.Item", {}, mapPropsToStyleNames)(
   Item

@@ -21,6 +21,7 @@ import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class PickerNB extends React.Component {
+  private _root: any
   constructor(props) {
     super(props);
     this.state = {
@@ -240,10 +241,10 @@ PickerNB.Item = (props) => (<Picker.Item {...props} />);
 // }
 // });
 
-PickerNB.propTypes = {
-  ...ViewPropTypes,
-  renderButton: PropTypes.func
-};
+// PickerNB.propTypes = {
+//   ...ViewPropTypes,
+//   renderButton: PropTypes.func
+// };
 
 const StyledPickerNB = connectStyle(
   "NativeBase.PickerNB",

@@ -10,6 +10,7 @@ import { HeaderStatusBar } from './HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
 
 class Header extends React.Component {
+  private _root: any
   static contextTypes = {
     theme: PropTypes.object
   }
@@ -121,13 +122,13 @@ class Header extends React.Component {
   }
 }
 
-Header.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-  searchBar: PropTypes.bool,
-  noStatusBar: PropTypes.bool,
-  rounded: PropTypes.bool
-}
+// Header.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+//   searchBar: PropTypes.bool,
+//   noStatusBar: PropTypes.bool,
+//   rounded: PropTypes.bool
+// }
 
 const StyledHeader = connectStyle('NativeBase.Header', {}, mapPropsToStyleNames)(Header)
 export { StyledHeader as Header }

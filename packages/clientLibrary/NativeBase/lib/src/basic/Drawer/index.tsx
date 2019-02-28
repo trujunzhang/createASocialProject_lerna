@@ -1,8 +1,54 @@
 import * as React from 'react'
-// import RNDrawer from "react-native-drawer";
-import PropTypes from "prop-types";
 
-export default class Drawer extends React.Component {
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
+
+// import RNDrawer from "react-native-drawer";
+
+  /**
+   * vendor react-native-drawer
+   */
+export  interface IDrawerStyles {
+    drawer?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+    main?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+    drawerOverlay?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+    mainOverlay?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  }
+
+export  interface IDrawerProps {
+    acceptDoubleTap?: boolean
+    acceptPan?: boolean
+    acceptTap?: boolean
+    captureGestures?: boolean
+    children?: any
+    open?: boolean
+    closedDrawerOffset?: number
+    content?: any
+    deviceScreen?: ReactNative.ScaledSize
+    disabled?: boolean
+    initializeOpen?: boolean
+    negotiatePan?: boolean
+    onClose?: Function
+    onCloseStart?: Function
+    onOpen?: Function
+    onOpenStart?: Function
+    openDrawerOffset?: number
+    openDrawerThreshold?: number
+    panCloseMask?: number
+    panOpenMask?: number
+    panStartCompensation?: boolean
+    relativeDrag?: boolean
+    side?: 'left' | 'right'
+    styles?: IDrawerStyles
+    tapToClose?: boolean
+    tweenDuration?: number
+    tweenEasing?: string
+    tweenHandler?: Function
+    type?: 'overlay' | 'static' | 'displace'
+  }
+
+export default class Drawer extends React.Component <IDrawerProps,any>{
+
 	constructor(props) {
 		super(props);
 	}

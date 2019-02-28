@@ -6,6 +6,7 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class Card extends React.Component {
+  private _root: any
   render() {
     if (this.props.dataArray && this.props.renderRow) {
       const ds = new ListView.DataSource({
@@ -29,16 +30,16 @@ class Card extends React.Component {
   }
 }
 
-Card.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ]),
-  dataArray: PropTypes.array,
-  renderRow: PropTypes.func
-};
+// Card.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ]),
+//   dataArray: PropTypes.array,
+//   renderRow: PropTypes.func
+// };
 
 const StyledCard = connectStyle("NativeBase.Card", {}, mapPropsToStyleNames)(
   Card

@@ -8,6 +8,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 const SWIPE_THRESHOLD = 120;
 
 class DeckSwiper extends React.Component {
+  private _root: any
   constructor(props) {
     super(props);
     this.state = {
@@ -324,15 +325,15 @@ class DeckSwiper extends React.Component {
   }
 }
 
-DeckSwiper.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ]),
-  dataSource: PropTypes.array
-};
+// DeckSwiper.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ]),
+//   dataSource: PropTypes.array
+// };
 
 const StyledDeckSwiper = connectStyle(
   "NativeBase.DeckSwiper",

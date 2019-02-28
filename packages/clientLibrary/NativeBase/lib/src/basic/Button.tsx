@@ -9,6 +9,7 @@ import computeProps from '../utils/computeProps'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 class Button extends React.Component {
+  private _root: any
   static contextTypes = {
     theme: PropTypes.object
   }
@@ -113,27 +114,27 @@ class Button extends React.Component {
   }
 }
 
-Button.propTypes = {
-  ...TouchableOpacity.propTypes,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-  block: PropTypes.bool,
-  primary: PropTypes.bool,
-  transparent: PropTypes.bool,
-  success: PropTypes.bool,
-  danger: PropTypes.bool,
-  warning: PropTypes.bool,
-  info: PropTypes.bool,
-  bordered: PropTypes.bool,
-  disabled: PropTypes.bool,
-  rounded: PropTypes.bool,
-  large: PropTypes.bool,
-  small: PropTypes.bool,
-  active: PropTypes.bool,
-  twitter: PropTypes.bool,
-  facebook: PropTypes.bool,
-  svgLeft: PropTypes.bool,
-  onlyCenter: PropTypes.bool
-}
+// Button.propTypes = {
+//   ...TouchableOpacity.propTypes,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+//   block: PropTypes.bool,
+//   primary: PropTypes.bool,
+//   transparent: PropTypes.bool,
+//   success: PropTypes.bool,
+//   danger: PropTypes.bool,
+//   warning: PropTypes.bool,
+//   info: PropTypes.bool,
+//   bordered: PropTypes.bool,
+//   disabled: PropTypes.bool,
+//   rounded: PropTypes.bool,
+//   large: PropTypes.bool,
+//   small: PropTypes.bool,
+//   active: PropTypes.bool,
+//   twitter: PropTypes.bool,
+//   facebook: PropTypes.bool,
+//   svgLeft: PropTypes.bool,
+//   onlyCenter: PropTypes.bool
+// }
 
 const styles = StyleSheet.create({
   childContainer: {

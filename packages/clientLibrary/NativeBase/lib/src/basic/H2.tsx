@@ -6,6 +6,7 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class H2 extends React.Component {
+	private _root: any
 	render() {
 		return <Text ref={c => (this._root = c)} {...this.props} />;
 	}
@@ -21,11 +22,11 @@ const childrenType = function (props, propName, component) {
 	return error;
 };
 
-H2.propTypes = {
-	...Text.propTypes,
-	children: childrenType,
-	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-};
+// H2.propTypes = {
+// 	...Text.propTypes,
+// 	children: childrenType,
+// 	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+// };
 
 const StyledH2 = connectStyle("NativeBase.H2", {}, mapPropsToStyleNames)(H2);
 

@@ -24,6 +24,7 @@ const { height, width } = Dimensions.get("window");
 const AnimatedFab = Animated.createAnimatedComponent(Button);
 
 class Fab extends React.Component {
+  private _root: any
   // props: Animated.props & {
   //   position: ?string
   // };

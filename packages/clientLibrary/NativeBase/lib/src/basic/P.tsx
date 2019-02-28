@@ -6,6 +6,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 class P extends React.Component {
+  private _root: any
   render() {
     return <Text ref={(c) => (this._root = c)} {...this.props} />
   }
@@ -22,11 +23,11 @@ const childrenType = function (props, propName, component) {
   return error
 }
 
-P.propTypes = {
-  ...Text.propTypes,
-  children: childrenType,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array])
-}
+// P.propTypes = {
+//   ...Text.propTypes,
+//   children: childrenType,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array])
+// }
 
 const StyledP = connectStyle('NativeBase.P', {}, mapPropsToStyleNames)(P)
 

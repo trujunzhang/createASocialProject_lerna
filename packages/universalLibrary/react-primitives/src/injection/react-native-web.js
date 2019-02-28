@@ -7,7 +7,10 @@ const {
   Text,
   Image,
   Platform,
+  TouchableOpacity,
+  TouchableHighlight,
   TouchableWithoutFeedback,
+  TouchableNativeFeedback,
   Dimensions,
   Easing,
 } = require('react-native-web');
@@ -41,5 +44,8 @@ ReactPrimitives.inject({
     Version: Platform.Version,
   },
   Dimensions,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableNativeFeedback,
   Touchable: TouchableWithoutFeedback,
 });

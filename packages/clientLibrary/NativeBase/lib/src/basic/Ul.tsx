@@ -1,11 +1,19 @@
+
 import * as React from 'react'
-import PropTypes from 'prop-types'
+import * as ReactNative from 'react-native'
+import { View, TextProps } from 'react-primitives'
+
 import { Text } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-class Ul extends React.Component {
+export interface IUlProps extends TextProps {
+    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
+
+class Ul extends React.Component <IUlProps , any>{
+    private _root: any
   render() {
     return <Text ref={(c) => (this._root = c)} {...this.props} />
   }
@@ -22,11 +30,11 @@ const childrenType = function (props, propName, component) {
   return error
 }
 
-Ul.propTypes = {
-  ...Text.propTypes,
-  children: childrenType,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array])
-}
+//Ul.propTypes = {
+//  ...Text.propTypes,
+//  children: childrenType,
+//  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array])
+//}
 
 const StyledUl = connectStyle('NativeBase.Ul', {}, mapPropsToStyleNames)(Ul)
 

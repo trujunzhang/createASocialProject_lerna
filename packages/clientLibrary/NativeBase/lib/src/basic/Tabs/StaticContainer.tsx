@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-class StaticContainer extends React.Component {
+class StaticContainer extends React.Component <any,any>{
   shouldComponentUpdate(nextProps: any): boolean {
     return !!nextProps.shouldUpdate;
   }

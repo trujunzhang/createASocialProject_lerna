@@ -7,6 +7,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class Spinner extends React.Component {
+	private _root: any
 	static contextTypes = {
 		theme: PropTypes.object,
 	};
@@ -27,11 +28,11 @@ class Spinner extends React.Component {
 	}
 }
 
-Spinner.propTypes = {
-	...ActivityIndicator.propTypes,
-	color: PropTypes.string,
-	inverse: PropTypes.bool,
-};
+// Spinner.propTypes = {
+// 	...ActivityIndicator.propTypes,
+// 	color: PropTypes.string,
+// 	inverse: PropTypes.bool,
+// };
 
 const StyledSpinner = connectStyle("NativeBase.Spinner", {}, mapPropsToStyleNames)(Spinner);
 

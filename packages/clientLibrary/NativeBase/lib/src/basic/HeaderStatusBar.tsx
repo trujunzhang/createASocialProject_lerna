@@ -8,6 +8,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 
 class HeaderStatusBar extends React.Component {
+  private _root: any
   static contextTypes = {
     theme: PropTypes.object
   }
@@ -45,9 +46,9 @@ class HeaderStatusBar extends React.Component {
 
 }
 
-HeaderStatusBar.propTypes = {
-  ...ViewPropTypes
-}
+// HeaderStatusBar.propTypes = {
+//   ...ViewPropTypes
+// }
 
 const StyledHeaderStatusBar = connectStyle('NativeBase.HeaderStatusBar', {}, mapPropsToStyleNames)(HeaderStatusBar)
 export { StyledHeaderStatusBar as HeaderStatusBar }

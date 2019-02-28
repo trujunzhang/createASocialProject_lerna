@@ -12,6 +12,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables'
 
 class ListItem extends React.Component {
+  private _root: any
   static contextTypes = {
     theme: PropTypes.object
   };
@@ -54,20 +55,20 @@ class ListItem extends React.Component {
   }
 }
 
-ListItem.propTypes = {
-  ...TouchableHighlight.propTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ]),
-  touchableHighlightStyle: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]),
-  itemDivider: PropTypes.bool,
-  button: PropTypes.bool
-};
+// ListItem.propTypes = {
+//   ...TouchableHighlight.propTypes,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ]),
+//   touchableHighlightStyle: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.array
+//   ]),
+//   itemDivider: PropTypes.bool,
+//   button: PropTypes.bool
+// };
 
 const StyledListItem = connectStyle(
   "NativeBase.ListItem",

@@ -20,6 +20,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 class IconNB extends React.Component {
+  private _root: any
   static contextTypes = {
     theme: PropTypes.object
   }
@@ -81,24 +82,24 @@ class IconNB extends React.Component {
   }
 }
 
-IconNB.propTypes = {
-  iconSize: PropTypes.number,
-  iconColor: PropTypes.string,
-  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-  type: PropTypes.oneOf([
-    'Entypo',
-    'EvilIcons',
-    'Feather',
-    'FontAwesome',
-    'Foundation',
-    'Ionicons',
-    'MaterialCommunityIcons',
-    'MaterialIcons',
-    'Octicons',
-    'SimpleLineIcons',
-    'Zocial'
-  ])
-}
+// IconNB.propTypes = {
+//   iconSize: PropTypes.number,
+//   iconColor: PropTypes.string,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+//   type: PropTypes.oneOf([
+//     'Entypo',
+//     'EvilIcons',
+//     'Feather',
+//     'FontAwesome',
+//     'Foundation',
+//     'Ionicons',
+//     'MaterialCommunityIcons',
+//     'MaterialIcons',
+//     'Octicons',
+//     'SimpleLineIcons',
+//     'Zocial'
+//   ])
+// }
 
 const StyledIconNB = connectStyle('NativeBase.IconNB', {}, mapPropsToStyleNames)(IconNB)
 

@@ -9,6 +9,7 @@ import { LodashUtils as _ } from '@app/tools'
 import computeProps from "../utils/computeProps";
 
 class CheckBox extends React.Component {
+	private _root: any
 	static contextTypes = {
 		theme: PropTypes.object,
 	};
@@ -57,12 +58,12 @@ class CheckBox extends React.Component {
 	}
 }
 
-CheckBox.propTypes = {
-	...TouchableOpacity.propTypes,
-	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-	checked: PropTypes.bool,
-	onPress: PropTypes.func,
-};
+// CheckBox.propTypes = {
+// 	...TouchableOpacity.propTypes,
+// 	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+// 	checked: PropTypes.bool,
+// 	onPress: PropTypes.func,
+// };
 
 const StyledCheckBox = connectStyle("NativeBase.CheckBox", {}, mapPropsToStyleNames)(CheckBox);
 

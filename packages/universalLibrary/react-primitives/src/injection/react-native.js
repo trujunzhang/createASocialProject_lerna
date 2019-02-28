@@ -9,8 +9,10 @@ const {
   ListView,
   Easing,
   Dimensions,
+  TouchableOpacity,
   TouchableHighlight,
   TouchableWithoutFeedback,
+  TouchableNativeFeedback,
 } = require('react-native');
 
 ReactPrimitives.inject({
@@ -26,6 +28,8 @@ ReactPrimitives.inject({
     Version: Platform.Version,
   },
   Dimensions,
+  TouchableOpacity,
   TouchableHighlight,
+  TouchableNativeFeedback,
   Touchable: TouchableWithoutFeedback,
 });

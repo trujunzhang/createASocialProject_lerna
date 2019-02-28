@@ -7,6 +7,7 @@ import { platformVariables as variable } from '@app/native-base-variables';
 import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 class Content extends React.Component {
+    private _root: any
     static contextTypes = {
         theme: PropTypes.object
     };
@@ -146,17 +147,17 @@ class Content extends React.Component {
     }
 }
 
-Content.propTypes = {
-    style: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.number,
-        PropTypes.array
-    ]),
-    padder: PropTypes.bool,
-    disableKBDismissScroll: PropTypes.bool,
-    enableResetScrollToCoords: PropTypes.bool,
-    keyboardShouldPersistTaps: PropTypes.string
-};
+// Content.propTypes = {
+//     style: PropTypes.oneOfType([
+//         PropTypes.object,
+//         PropTypes.number,
+//         PropTypes.array
+//     ]),
+//     padder: PropTypes.bool,
+//     disableKBDismissScroll: PropTypes.bool,
+//     enableResetScrollToCoords: PropTypes.bool,
+//     keyboardShouldPersistTaps: PropTypes.string
+// };
 
 const StyledContent = connectStyle(
     "NativeBase.Content",

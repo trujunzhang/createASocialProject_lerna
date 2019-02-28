@@ -1,6 +1,8 @@
+
 import * as React from 'react'
-import PropTypes from "prop-types";
-import { View, Modal, Platform, Animated, ViewPropTypes } from "react-primitives";
+import * as ReactNative from 'react-native'
+
+import { View, Modal, Platform, Animated, ViewProps } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { Text } from "./Text";
 import { Button } from "./Button";
@@ -8,7 +10,13 @@ import { ViewNB } from "./View";
 import { Toast } from "./Toast";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-class ToastContainer extends React.Component {
+export interface IToastContainerProps extends ViewProps {
+    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}
+
+class ToastContainer extends React.Component<IToastContainerProps ,any> {
+    private closeTimeout: any = null
+    private _root: any
   constructor(props) {
     super(props);
     this.state = {
@@ -127,14 +135,14 @@ class ToastContainer extends React.Component {
   }
 }
 
-ToastContainer.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ])
-};
+//ToastContainer.propTypes = {
+//  ...ViewPropTypes,
+//  style: PropTypes.oneOfType([
+//    PropTypes.object,
+ //   PropTypes.number,
+  //  PropTypes.array
+ // ])
+//};
 
 const StyledToastContainer = connectStyle(
   "NativeBase.ToastContainer",

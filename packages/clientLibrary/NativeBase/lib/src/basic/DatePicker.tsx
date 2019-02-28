@@ -10,6 +10,7 @@ import { Text } from "./Text";
 import { platformVariables as variable } from '@app/native-base-variables';
 
 export class DatePicker extends React.Component {
+  private _root: any
   constructor(props) {
     super(props);
     this.state = {

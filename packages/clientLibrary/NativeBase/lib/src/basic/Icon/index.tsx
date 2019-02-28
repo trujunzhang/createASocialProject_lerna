@@ -11,7 +11,38 @@ import { LodashUtils as _ } from '@app/tools'
 
 import mapPropsToStyleNames from "../../utils/mapPropsToStyleNames";
 
-class Icon extends React.Component {
+/**
+ * see Widget Icon.js
+ */
+export interface IIconProps {
+    name: string
+    iconSize?: number
+    iconColor?: string
+    type?: string
+    // | 'Entypo'
+    // | 'EvilIcons'
+    // | 'Feather'
+    // | 'FontAwesome'
+    // | 'Foundation'
+    // | 'Ionicons'
+    // | 'MaterialCommunityIcons'
+    // | 'MaterialIcons'
+    // | 'Octicons'
+    // | 'SimpleLineIcons'
+    // | 'Zocial'
+    // TODO position attribute of ReactNative.FlexStyle hasn't another position values without "absolute" and "relative"
+    style?: any
+    onPress?: (e?: any) => any
+    active?: boolean
+    ios?: string
+    android?: string
+    color?: string
+    fontSize?: number
+}
+
+class Icon extends React.Component <IIconProps , any>{
+    private _root: any
+
 	static contextTypes = {
 		theme: PropTypes.object,
 	};
@@ -69,15 +100,15 @@ class Icon extends React.Component {
 	}
 }
 
-Icon.propTypes = {
-	...IconNB.propTypes,
-	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-	name: PropTypes.string,
-	ios: PropTypes.string,
-	android: PropTypes.string,
-	active: PropTypes.bool,
-	type: PropTypes.string,
-};
+//Icon.propTypes = {
+//	...IconNB.propTypes,
+//	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+//	name: PropTypes.string,
+//	ios: PropTypes.string,
+//	android: PropTypes.string,
+//	active: PropTypes.bool,
+//	type: PropTypes.string,
+// };
 
 const StyledIcon = connectStyle("NativeBase.Icon", {}, mapPropsToStyleNames)(Icon);
 

@@ -1,7 +1,10 @@
 import * as React from 'react'
 import PropTypes from "prop-types";
 
-export default class NativeBaseComponent extends React.Component {
+export interface INativeBaseComponentProps{
+theme? :any
+}
+export default class NativeBaseComponent extends React.Component <INativeBaseComponentProps, any>{
 	static contextTypes = {
 		theme: PropTypes.object,
 		foregroundColor: PropTypes.string,

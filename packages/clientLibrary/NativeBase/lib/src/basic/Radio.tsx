@@ -1,13 +1,15 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-import {TouchableOpacity, Platform} from "react-primitives";
-import {connectStyle} from "@app/native-base-shoutem-theme";
+import { TouchableOpacity, Platform } from "react-primitives";
+import { connectStyle } from "@app/native-base-shoutem-theme";
 // import Icon from "react-native-vector-icons/Ionicons";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables'
 import computeProps from "../utils/computeProps";
 
 class Radio extends React.Component {
+
+    private _root: any
     static contextTypes = {
         theme: PropTypes.object
     };
@@ -124,21 +126,21 @@ class Radio extends React.Component {
                     this.props.selected &&
                     this.renderIcon()
                 ) : (
-                    this.renderIcon()
-                )}
+                        this.renderIcon()
+                    )}
             </TouchableOpacity>
         );
     }
 }
 
-Radio.propTypes = {
-    ...TouchableOpacity.propTypes,
-    selected: PropTypes.bool,
-    standardStyle: PropTypes.bool
-};
+// Radio.propTypes = {
+//     ...TouchableOpacity.propTypes,
+//     selected: PropTypes.bool,
+//     standardStyle: PropTypes.bool
+// };
 
 const StyledRadio = connectStyle("NativeBase.Radio", {}, mapPropsToStyleNames)(
     Radio
 );
 
-export {StyledRadio as Radio};
+export { StyledRadio as Radio };

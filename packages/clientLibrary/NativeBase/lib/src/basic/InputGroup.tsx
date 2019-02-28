@@ -8,6 +8,7 @@ import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class InputGroup extends React.Component {
+  private _root: any
   getInitialStyle() {
     return {
       roundedInputGroup: {
@@ -35,15 +36,15 @@ class InputGroup extends React.Component {
   }
 }
 
-InputGroup.propTypes = {
-  ...ViewPropTypes,
-  regular: PropTypes.bool,
-  underline: PropTypes.bool,
-  rounded: PropTypes.bool,
-  success: PropTypes.bool,
-  error: PropTypes.bool,
-  disabled: PropTypes.bool
-};
+// InputGroup.propTypes = {
+//   ...ViewPropTypes,
+//   regular: PropTypes.bool,
+//   underline: PropTypes.bool,
+//   rounded: PropTypes.bool,
+//   success: PropTypes.bool,
+//   error: PropTypes.bool,
+//   disabled: PropTypes.bool
+// };
 
 const StyledInputGroup = connectStyle(
   "NativeBase.InputGroup",

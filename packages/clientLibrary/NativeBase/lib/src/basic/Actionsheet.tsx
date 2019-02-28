@@ -163,14 +163,14 @@ class ActionSheetContainer extends React.Component {
   }
 }
 
-ActionSheetContainer.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ])
-};
+// ActionSheetContainer.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ])
+// };
 
 const StyledActionSheetContainer = connectStyle(
   "NativeBase.ActionSheetContainer",

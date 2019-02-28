@@ -8,6 +8,7 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 class Footer extends React.Component {
+  private _root: any
   static contextTypes = {
     theme: PropTypes.object
   };
@@ -107,14 +108,14 @@ class Footer extends React.Component {
   }
 }
 
-Footer.propTypes = {
-  ...ViewPropTypes,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ])
-};
+// Footer.propTypes = {
+//   ...ViewPropTypes,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ])
+// };
 
 const StyledFooter = connectStyle(
   "NativeBase.Footer",

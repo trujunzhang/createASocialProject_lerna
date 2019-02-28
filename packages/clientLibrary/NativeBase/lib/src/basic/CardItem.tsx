@@ -6,6 +6,7 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class CardItem extends React.Component {
+	private _root: any
 	render() {
 		if (this.props.button) {
 			return (
@@ -27,14 +28,14 @@ class CardItem extends React.Component {
 	}
 }
 
-CardItem.propTypes = {
-	...TouchableOpacity.propTypes,
-	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-	header: PropTypes.bool,
-	cardBody: PropTypes.bool,
-	footer: PropTypes.bool,
-	button: PropTypes.bool,
-};
+// CardItem.propTypes = {
+// 	...TouchableOpacity.propTypes,
+// 	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+// 	header: PropTypes.bool,
+// 	cardBody: PropTypes.bool,
+// 	footer: PropTypes.bool,
+// 	button: PropTypes.bool,
+// };
 
 const StyledCardItem = connectStyle("NativeBase.CardItem", {}, mapPropsToStyleNames)(CardItem);
 

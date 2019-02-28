@@ -13,22 +13,26 @@ import {
   Easing,
   Image,
   PixelRatio,
-  TouchableHighlight,
   PlatformOSType as RNPlatformOSType,
   StyleSheet,
   Text as RNText,
   TouchableOpacityProps,
   View as RNView,
+  ImageProps,
   ViewProps,
-  TextProps
+  TextProps,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  TouchableNativeFeedback,
 } from 'react-native'
 
 export interface SketchAppProps {
   name?: string
 }
 
-export class View extends React.Component<ViewProps & SketchAppProps> {}
-export class Text extends React.Component<TextProps & SketchAppProps> {}
+export class View extends React.Component<ViewProps & SketchAppProps> { }
+export class Text extends React.Component<TextProps & SketchAppProps> { }
 
 export const Touchable: ComponentType<TouchableOpacityProps>
 
@@ -42,6 +46,7 @@ export interface PlatformStatic {
 export const Platform: PlatformStatic
 
 export const ListView: any
+export const ScrollView: any
 
 export {
   Animated,
@@ -51,8 +56,13 @@ export {
   PixelRatio,
   StyleSheet,
   TouchableHighlight,
+  ImageProps,
   ViewProps,
-  TextProps
+  TextProps,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  TouchableNativeFeedback
   // Text,
   // View
 }

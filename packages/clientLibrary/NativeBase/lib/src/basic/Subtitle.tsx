@@ -5,15 +5,17 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 class Subtitle extends React.Component {
+	private _root: any
+
 	render() {
 		return <Text ref={c => (this._root = c)} {...this.props} />;
 	}
 }
 
-Subtitle.propTypes = {
-	...Text.propTypes,
-	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-};
+// Subtitle.propTypes = {
+// 	...Text.propTypes,
+// 	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+// };
 
 const StyledSubtitle = connectStyle("NativeBase.Subtitle", {}, mapPropsToStyleNames)(Subtitle);
 export { StyledSubtitle as Subtitle };

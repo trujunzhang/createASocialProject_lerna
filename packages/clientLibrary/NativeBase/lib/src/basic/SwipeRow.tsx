@@ -12,6 +12,8 @@ const PREVIEW_OPEN_DELAY = 700
 const PREVIEW_CLOSE_DELAY = 300
 
 class SwipeRow extends React.Component {
+  private _root: any
+
   static defaultProps = {
     leftOpenValue: 0,
     rightOpenValue: 0,

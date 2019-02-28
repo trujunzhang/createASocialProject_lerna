@@ -11,6 +11,7 @@ import computeProps from "../utils/computeProps";
 const GRAVATAR_URI = "https://www.gravatar.com/avatar/";
 
 class Gravatar extends NativeBaseComponent {
+  private _root: any
   getInitialStyle() {
     return {
       gravatar: {
@@ -50,18 +51,18 @@ class Gravatar extends NativeBaseComponent {
   }
 }
 
-Gravatar.propTypes = {
-  ...Image.propTypes,
-  email: PropTypes.string.isRequired,
-  style: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.number,
-    PropTypes.array
-  ]),
-  size: PropTypes.number,
-  circular: PropTypes.bool,
-  square: PropTypes.bool
-};
+// Gravatar.propTypes = {
+//   ...Image.propTypes,
+//   email: PropTypes.string.isRequired,
+//   style: PropTypes.oneOfType([
+//     PropTypes.object,
+//     PropTypes.number,
+//     PropTypes.array
+//   ]),
+//   size: PropTypes.number,
+//   circular: PropTypes.bool,
+//   square: PropTypes.bool
+// };
 
 const StyledGravatar = connectStyle(
   "NativeBase.Gravatar",

@@ -1,11 +1,18 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
-import { View, ViewPropTypes } from 'react-primitives'
+import * as ReactNative from 'react-native'
+import { View, ViewProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
 
-class HeaderLayout extends React.Component {
+export interface IHeaderLayoutProps extends ViewProps {
+    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+    searchBar: boolean
+    rounded: boolean
+}
+class HeaderLayout extends React.Component <IHeaderLayoutProps ,any>{
+    private _root: any
+
   static contextTypes = {
     theme: PropTypes.object
   }
