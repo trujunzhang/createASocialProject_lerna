@@ -35,18 +35,6 @@ const ReactPrimitives = {
     if (api.Image) {
       ReactPrimitives.Image = api.Image;
     }
-    if (api.TouchableOpacity) {
-      ReactPrimitives.TouchableOpacity = api.TouchableOpacity;
-    }
-    if (api.TouchableHighlight) {
-      ReactPrimitives.TouchableHighlight = api.TouchableHighlight;
-    }
-    if (api.TouchableNativeFeedback) {
-      ReactPrimitives.TouchableNativeFeedback = api.TouchableNativeFeedback;
-    }
-    if (api.Touchable) {
-      ReactPrimitives.Touchable = api.Touchable;
-    }
     if (api.Easing) {
       ReactPrimitives.Easing = api.Easing;
     }
@@ -58,6 +46,32 @@ const ReactPrimitives = {
     }
     if (api.Platform) {
       ReactPrimitives.Platform.inject(api.Platform);
+    }
+    // Dialog
+    if (api.Modal) {
+      ReactPrimitives.Modal = api.Modal;
+    }
+    if (api.DatePickerIOS) {
+      ReactPrimitives.DatePickerIOS = api.DatePickerIOS;
+    }
+    if (api.DatePickerAndroid) {
+      ReactPrimitives.DatePickerAndroid = api.DatePickerAndroid;
+    }
+    // Touch
+    if (api.PanResponder) {
+      ReactPrimitives.PanResponder = api.PanResponder;
+    }
+    if (api.TouchableOpacity) {
+      ReactPrimitives.TouchableOpacity = api.TouchableOpacity;
+    }
+    if (api.TouchableHighlight) {
+      ReactPrimitives.TouchableHighlight = api.TouchableHighlight;
+    }
+    if (api.TouchableNativeFeedback) {
+      ReactPrimitives.TouchableNativeFeedback = api.TouchableNativeFeedback;
+    }
+    if (api.Touchable) {
+      ReactPrimitives.Touchable = api.Touchable;
     }
   },
 };

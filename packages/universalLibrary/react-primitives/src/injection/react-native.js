@@ -10,6 +10,12 @@ const {
   ListView,
   Easing,
   Dimensions,
+  // Dialog
+  Modal,
+  DatePickerIOS,
+  DatePickerAndroid,
+  // Touch
+  PanResponder,
   TouchableOpacity,
   TouchableHighlight,
   TouchableWithoutFeedback,
@@ -30,6 +36,12 @@ ReactPrimitives.inject({
     Version: Platform.Version,
   },
   Dimensions,
+  // Dialog
+  Modal,
+  DatePickerIOS,
+  DatePickerAndroid,
+  // Touch
+  PanResponder,
   TouchableOpacity,
   TouchableHighlight,
   TouchableNativeFeedback,

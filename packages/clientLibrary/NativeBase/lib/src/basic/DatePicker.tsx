@@ -66,7 +66,7 @@ export class DatePicker extends React.Component<IDatePickerProps, any> {
 
   async openAndroidDatePicker() {
     try {
-      const newDate = await DatePickerAndroid.open({
+      const newDate: any = await DatePickerAndroid.open({
         date: this.state.chosenDate ? this.state.chosenDate : this.state.defaultDate,
         minDate: this.props.minimumDate,
         maxDate: this.props.maximumDate,
@@ -106,15 +106,15 @@ export class DatePicker extends React.Component<IDatePickerProps, any> {
             {this.state.chosenDate
               ? this.formatChosenDate(this.state.chosenDate)
               : this.props.placeHolderText
-              ? this.props.placeHolderText
-              : 'Select Date'}
+                ? this.props.placeHolderText
+                : 'Select Date'}
           </Text>
           <View>
             <Modal
               animationType={this.props.animationType}
               transparent={this.props.modalTransparent} //from api
               visible={this.state.modalVisible}
-              onRequestClose={() => {}}>
+              onRequestClose={() => { }}>
               <Text
                 onPress={() => this.setState({ modalVisible: false })}
                 style={{ backgroundColor: variables.datePickerBg, flex: 1 }}

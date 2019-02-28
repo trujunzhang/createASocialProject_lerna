@@ -11,21 +11,27 @@ export interface IDeckSwiperProps extends ViewProps {
   /**
    * Array<any>
    */
-  dataSource?: Array<any>
+  dataSource?: Array<any> | any
   /**
    * Direction of iteration for elements
    * Default: iterates in backward direction
    */
-  onSwipeLeft?: Function
+  onSwipeLeft?: any
   /**
    * Direction of iteration for elements
    * Default: iterates in forward direction
    */
-  onSwipeRight?: Function
+  onSwipeRight?: any
   /**
    * Takes a data entry from the data source and should return a renderable component to be rendered as the row.
    */
-  renderItem?: Function
+  renderItem?: any
+  renderEmpty?: any
+  renderTop?: any
+  renderBottom?: any
+
+  looping?: any
+  onSwiping?: any
 }
 const SWIPE_THRESHOLD = 120
 
@@ -224,7 +230,7 @@ class DeckSwiper extends React.Component<IDeckSwiperProps, any> {
           }).start()
         }
       }
-    })
+    } as any)
   }
 
   _resetState() {

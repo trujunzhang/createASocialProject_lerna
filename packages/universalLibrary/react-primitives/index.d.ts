@@ -21,12 +21,19 @@ import {
   Text as RNText,
   TouchableOpacityProps,
   View as RNView,
+  // Dialog
+  Modal,
+  DatePickerIOS,
+  DatePickerAndroid,
+  // Props
   TextInputProps,
   SwitchProps,
   ActivityIndicatorProps,
   ImageProps,
   ViewProps,
   TextProps,
+  // Touch
+  PanResponder,
   TouchableOpacity,
   TouchableHighlight,
   TouchableWithoutFeedback,
@@ -62,7 +69,12 @@ export {
   Image,
   PixelRatio,
   StyleSheet,
+  // Dialog
+  Modal,
+  DatePickerIOS,
+  DatePickerAndroid,
   // Touch
+  PanResponder,
   TouchableOpacity,
   TouchableHighlight,
   TouchableWithoutFeedback,

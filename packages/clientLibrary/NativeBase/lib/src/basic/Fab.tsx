@@ -91,9 +91,15 @@ class Fab extends React.Component<IFabProps, any> {
         right: 20
       }
     }
+    return {
+      top: undefined,
+      bottom: undefined,
+      left: undefined,
+      right: undefined
+    }
   }
 
-  fabOtherBtns(direction, i) {
+  fabOtherBtns(direction, i): any {
     if (direction === 'up') {
       return {
         top: undefined,
@@ -125,7 +131,7 @@ class Fab extends React.Component<IFabProps, any> {
     }
   }
 
-  getInitialStyle(iconStyle) {
+  getInitialStyle(iconStyle?: any): any {
     return {
       fab: {
         height: 56,
@@ -186,7 +192,7 @@ class Fab extends React.Component<IFabProps, any> {
     var defaultProps = {
       style: this.getInitialStyle().fab
     }
-    var incomingProps = _.clone(this.props)
+    var incomingProps: any = _.clone(this.props)
     delete incomingProps.onPress
 
     return computeProps(incomingProps, defaultProps)
@@ -208,7 +214,7 @@ class Fab extends React.Component<IFabProps, any> {
 
     return _.merge(this.getInitialStyle().buttonStyle, StyleSheet.flatten(child.props.style), type)
   }
-  prepareButtonProps(child) {
+  prepareButtonProps(child: any, index: number): any {
     var inp = _.clone(child.props)
     delete inp.style
 
@@ -219,7 +225,7 @@ class Fab extends React.Component<IFabProps, any> {
 
   componentDidMount() {
     let childrenArray = React.Children.toArray(this.props.children)
-    let icon = _.remove(childrenArray, (item) => {
+    let icon = _.remove(childrenArray, (item: any) => {
       if (item.type.displayName === 'Styled(Button)') {
         return true
       }
@@ -241,8 +247,8 @@ class Fab extends React.Component<IFabProps, any> {
   }
 
   renderFab() {
-    let childrenArray = React.Children.toArray(this.props.children)
-    let icon = _.remove(childrenArray, (item) => {
+    let childrenArray: any = React.Children.toArray(this.props.children)
+    let icon = _.remove(childrenArray, (item: any) => {
       if (item.type.displayName === 'Styled(Button)') {
         return true
       }
@@ -263,10 +269,10 @@ class Fab extends React.Component<IFabProps, any> {
     // 	}
     // });
 
-    let newChildren = []
+    let newChildren: any = []
 
     {
-      childrenArray.slice(1).map((child, i) => {
+      childrenArray.slice(1).map((child: any, i) => {
         newChildren.push(
           <AnimatedFab
             style={this.getOtherButtonStyle(child, i)}

@@ -9,10 +9,20 @@ import { isIphoneX } from '@app/react-native-iphone-x-helper'
 
 export interface IContentProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
-  padder: boolean
-  disableKBDismissScroll: boolean
-  enableResetScrollToCoords: boolean
-  keyboardShouldPersistTaps: string
+  /**
+     * The theme prop can be applied to any component of NativeBase.
+     */
+  refreshing?: boolean
+  refreshControl?: object
+  theme?: Object
+  padder?: boolean
+  disableKBDismissScroll?: boolean | any
+  enableResetScrollToCoords?: boolean
+  contentOffset?: Object
+  scrollEnabled?: boolean
+  contentContainerStyle?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  keyboardShouldPersistTaps?: string
+  keyboardDismissMode?: string
 }
 class Content extends React.Component<IContentProps, any> {
   private _root: any
