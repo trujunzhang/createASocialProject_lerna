@@ -1,15 +1,21 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
-import { TextInput } from "react-primitives";
+import { TextInput, TextInputProps } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
-import { platformVariables as variable } from '@app/native-base-variables';
+import { platformVariables as variables } from '@app/native-base-variables';
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface ITextareaProps extends TextInputProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+	rowSpan: number
+	bordered: boolean
+	underline: boolean
 }
-class Textarea extends React.Component<IProps, any> {
+class Textarea extends React.Component<ITextareaProps, any> {
+	private _root: any
+	private _textInput: any
+
 	getStyle() {
 		return {
 			textarea: {
@@ -43,13 +49,13 @@ class Textarea extends React.Component<IProps, any> {
 	}
 }
 
-Textarea.propTypes = {
-	...TextInput.propTypes,
-	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-	rowSpan: PropTypes.number,
-	bordered: PropTypes.bool,
-	underline: PropTypes.bool,
-};
+// Textarea.propTypes = {
+// 	...TextInput.propTypes,
+// 	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+// 	rowSpan: PropTypes.number,
+// 	bordered: PropTypes.bool,
+// 	underline: PropTypes.bool,
+// };
 
 const StyledTextarea = connectStyle("NativeBase.Textarea", {}, mapPropsToStyleNames)(Textarea);
 

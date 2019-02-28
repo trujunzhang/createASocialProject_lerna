@@ -11,10 +11,10 @@ import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables'
 
-export interface IProps extends ViewProps {
+export interface IListItemProps extends TouchableHighlight {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class ListItem extends React.Component<IProps, any> {
+class ListItem extends React.Component<IListItemProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

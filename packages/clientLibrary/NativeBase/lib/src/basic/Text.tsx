@@ -1,17 +1,18 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-import { Text as RNText,TextProps } from "react-primitives";
+import { Text as RNText, TextProps } from "react-primitives";
 import { LodashUtils as _ } from '@app/tools'
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 export interface ITextProps extends TextProps {
-    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-    uppercase: boolean
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  uppercase: boolean
 }
-class Text extends React.Component <ITextProps ,any>{
-    private _root: any
+class Text extends React.Component<ITextProps, any>{
+  private _root: any
+
   render() {
     const {
       uppercase,
@@ -40,9 +41,9 @@ class Text extends React.Component <ITextProps ,any>{
 }
 
 //Text.propTypes = {
- // ...RNText.propTypes,
- // uppercase: PropTypes.bool,
- // style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+// ...RNText.propTypes,
+// uppercase: PropTypes.bool,
+// style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
 //};
 
 Text.defaultProps = {

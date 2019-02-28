@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
 
+import { platformVariables as variable } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -19,11 +20,16 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IIconNBProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  iconSize: number
+  iconColor: string
+  type: string
+  name: string
 }
-class IconNB extends React.Component<IProps, any> {
+class IconNB extends React.Component<IIconNBProps, any> {
   private _root: any
+  private Icon: any
   static contextTypes = {
     theme: PropTypes.object
   }

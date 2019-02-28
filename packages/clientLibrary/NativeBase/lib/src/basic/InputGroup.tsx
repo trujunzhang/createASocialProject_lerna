@@ -2,15 +2,42 @@ import * as React from 'react'
 import * as ReactNative from 'react-native';
 import { View, ViewProps } from "react-primitives";
 
-import { platformVariables as variable } from '@app/native-base-variables';
+import { platformVariables as variables } from '@app/native-base-variables';
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface IInputGroupProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  /**
+    * Wraps the textbox with predefined border options.
+    * Default: underline
+    */
+  borderType?: 'rounded' | 'regular' | 'underline'
+  toolbar?: boolean
+  atoolbar?: boolean
+  /**
+   * If true, the icon in the input text box appears to the right.
+   * Default: true
+   */
+  iconRight?: boolean
+  /**
+   * The border color of textbox for valid input.
+   */
+  success?: boolean
+  /**
+   * The border color of textbox for invalid input.
+   */
+  error?: boolean
+  /**
+   * Disables inputting data.
+   */
+  disabled?: boolean
+  regular?: boolean
+  underline?: boolean
+  rounded?: boolean
 }
-class InputGroup extends React.Component<IProps, any> {
+class InputGroup extends React.Component<IInputGroupProps, any> {
   private _root: any
   getInitialStyle() {
     return {

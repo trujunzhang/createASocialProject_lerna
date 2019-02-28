@@ -5,8 +5,25 @@ import { Picker } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface IProps extends Picker {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  mode?: 'dialog' | 'dropdown'
+  iosHeader?: string
+  inlineLabel?: boolean
+  headerBackButtonText?: string
+  placeholder?: string
+  placeholderStyle?: ReactNative.TextStyle
+  textStyle?: ReactNative.TextStyle
+  // iosIcon?: React.ReactElement<NativeBase.Icon>
+  iosIcon?: any
+  note?: boolean
+  placeholderIconColor?: string
+  itemTextStyle?: ReactNative.TextStyle
+  headerStyle?: ReactNative.ViewStyle
+  headerTitleStyle?: ReactNative.TextStyle
+  headerBackButtonTextStyle?: ReactNative.TextStyle
+  modalStyle?: ReactNative.ViewStyle
+  renderHeader?: (backAction: any) => React.ReactElement<any>
 }
 export default class PickerNB extends React.Component<IProps, any> {
   private _root: any

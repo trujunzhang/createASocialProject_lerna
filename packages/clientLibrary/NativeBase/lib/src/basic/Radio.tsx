@@ -1,16 +1,19 @@
-import React, { Component } from "react";
+import * as React from "react";
 import * as ReactNative from 'react-native';
-import { TouchableOpacity, Platform } from "react-primitives";
+import { TouchableOpacity, Platform, TouchableOpacityProps } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 // import Icon from "react-native-vector-icons/Ionicons";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { platformVariables as variable } from '@app/native-base-variables'
 import computeProps from "../utils/computeProps";
 
-export interface IProps extends ViewProps {
+export interface IRadioProps extends TouchableOpacityProps {
     style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+    selected: boolean
+    standardStyle: boolean
 }
-class Radio extends React.Component<IProps, any> {
+
+class Radio extends React.Component<IRadioProps, any> {
 
     private _root: any
     static contextTypes = {

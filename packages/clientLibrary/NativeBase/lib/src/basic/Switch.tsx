@@ -1,14 +1,13 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
-import { Switch as SwitchNB } from "react-primitives";
+import { Switch as SwitchNB, SwitchProps } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
-	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface ISwitchProps extends SwitchProps {
 }
-class Switch extends React.Component<IProps, any> {
+class Switch extends React.Component<ISwitchProps, any> {
 	private _root: any
 
 	render() {

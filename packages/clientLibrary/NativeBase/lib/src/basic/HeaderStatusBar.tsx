@@ -1,16 +1,16 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-import { View, StatusBar, ViewPropTypes, StyleSheet } from 'react-primitives'
+import { View, StatusBar, ViewProps, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
 
 import { LodashUtils as _ } from '@app/tools'
 
-export interface IProps extends ViewProps {
+export interface IHeaderStatusBarProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class HeaderStatusBar extends React.Component<IProps, any> {
+class HeaderStatusBar extends React.Component<IHeaderStatusBarProps, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

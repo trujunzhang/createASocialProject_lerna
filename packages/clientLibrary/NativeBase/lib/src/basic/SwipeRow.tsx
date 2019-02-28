@@ -11,11 +11,35 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 const PREVIEW_OPEN_DELAY = 700
 const PREVIEW_CLOSE_DELAY = 300
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface ISwipeRowProps {
+  leftOpenValue?: number
+  rightOpenValue?: number
+  closeOnRowPress?: boolean
+  disableLeftSwipe?: boolean
+  disableRightSwipe?: boolean
+  recalculateHiddenLayout?: boolean
+  preview?: boolean
+  previewDuration?: number
+  directionalDistanceChangeThreshold?: number
+  swipeToOpenPercent?: number
+  stopLeftSwipe?: number
+  stopRightSwipe?: number
+  onRowOpen?: Function
+  onRowClose?: Function
+  left?: React.ReactElement<any>
+  // body?: React.ReactElement<any>
+  body?: any
+  right?: React.ReactElement<any>
+  style?: ReactNative.ViewStyle
 }
-class SwipeRow extends React.Component<IProps, any> {
+class SwipeRow extends React.Component<ISwipeRowProps, any> {
   private _root: any
+  private horizontalSwipeGestureBegan: any
+  private swipeInitialX: any
+  private parentScrollEnabled: any
+  private ranPreview: any
+  private _translateX: any
+  private _panResponder: any
 
   static defaultProps = {
     leftOpenValue: 0,

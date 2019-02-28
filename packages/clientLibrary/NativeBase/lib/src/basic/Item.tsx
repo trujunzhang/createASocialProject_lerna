@@ -2,10 +2,11 @@ import * as React from 'react'
 import * as ReactNative from 'react-native';
 import {
   TouchableOpacity,
+  TouchableOpacityProps,
   Animated,
   Platform,
   View,
-  StyleSheet
+  StyleSheet,
 } from "react-primitives";
 import { Input } from "./Input";
 import { Label } from "./Label";
@@ -13,16 +14,33 @@ import { Icon } from "./Icon";
 import { Thumbnail } from "./Thumbnail";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
-import { platformVariables as variable } from '@app/native-base-variables'
+import { platformVariables as variables } from '@app/native-base-variables'
 import computeProps from "../utils/computeProps";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 import { LodashUtils as _ } from '@app/tools'
 
-export interface IProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+export interface IItemProps extends TouchableOpacityProps {
+  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  fixedLabel?: boolean
+  floatingLabel?: boolean
+  inlineLabel?: boolean
+  stackedLabel?: boolean
+  placeholderLabel?: boolean
+  bordered?: boolean
+  regular?: boolean
+  underline?: boolean
+  rounded?: boolean
+  disabled?: boolean
+  error?: boolean
+  placeholder?: string
+  secureTextEntry?: boolean
+  success?: boolean
+  last?: boolean
 }
-class Item extends React.Component<IProps, any> {
+class Item extends React.Component<IItemProps, any> {
   private _root: any
+  private inputProps: any
+  private _inputRef: any
   constructor(props) {
     super(props);
     this.state = {
@@ -119,7 +137,7 @@ class Item extends React.Component<IProps, any> {
     const newChildren = [];
     const childrenArray = React.Children.toArray(this.props.children);
 
-    let label = [];
+    let label: any = [];
     let labelProps = {};
     label = _.remove(childrenArray, item => {
       if (item.type === Label) {
@@ -147,7 +165,7 @@ class Item extends React.Component<IProps, any> {
       }
     });
 
-    let image = [];
+    let image: any = [];
     let imageProps = {};
     image = _.remove(childrenArray, item => {
       if (item.type === Thumbnail) {

@@ -1,15 +1,17 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
-import { ActivityIndicator } from "react-primitives";
+import { ActivityIndicator, ActivityIndicatorProps } from "react-primitives";
 
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface ISpinnerProps extends ActivityIndicatorProps {
 	style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+	color: string
+	inverse: boolean
 }
-class Spinner extends React.Component<IProps, any> {
+class Spinner extends React.Component<ISpinnerProps, any> {
 	private _root: any
 	static contextTypes = {
 		theme: PropTypes.object,

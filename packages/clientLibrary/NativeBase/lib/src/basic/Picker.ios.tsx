@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native';
 // import createReactClass from "create-react-class";
-import { Picker, Modal, View, ViewPropTypes, FlatList } from "react-primitives";
+import { Picker, Modal, View, ViewProps, FlatList } from "react-primitives";
 import { LodashUtils as _ } from '@app/tools'
 import { Text } from "./Text";
 import { List } from "./List";
@@ -22,7 +22,25 @@ import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
 export interface IProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  mode?: 'dialog' | 'dropdown'
+  iosHeader?: string
+  inlineLabel?: boolean
+  headerBackButtonText?: string
+  placeholder?: string
+  placeholderStyle?: ReactNative.TextStyle
+  textStyle?: ReactNative.TextStyle
+  // iosIcon?: React.ReactElement<NativeBase.Icon>
+  iosIcon?: any
+  note?: boolean
+  placeholderIconColor?: string
+  itemTextStyle?: ReactNative.TextStyle
+  headerStyle?: ReactNative.ViewStyle
+  headerTitleStyle?: ReactNative.TextStyle
+  headerBackButtonTextStyle?: ReactNative.TextStyle
+  modalStyle?: ReactNative.ViewStyle
+  renderHeader?: (backAction: any) => React.ReactElement<any>
 }
+
 class PickerNB extends React.Component<IProps, any> {
   private _root: any
   constructor(props) {

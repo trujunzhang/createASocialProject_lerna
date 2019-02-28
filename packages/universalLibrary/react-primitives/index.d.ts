@@ -8,6 +8,8 @@
 import { ComponentType } from 'react'
 import * as React from 'react'
 import {
+  TextInput,
+  // Common
   Animated,
   Dimensions,
   Easing,
@@ -18,6 +20,9 @@ import {
   Text as RNText,
   TouchableOpacityProps,
   View as RNView,
+  TextInputProps,
+  SwitchProps,
+  ActivityIndicatorProps,
   ImageProps,
   ViewProps,
   TextProps,
@@ -55,14 +60,17 @@ export {
   Image,
   PixelRatio,
   StyleSheet,
-  TouchableOpacityProps,
-  ImageProps,
-  ViewProps,
-  TextProps,
+  // Touch
   TouchableOpacity,
   TouchableHighlight,
   TouchableWithoutFeedback,
-  TouchableNativeFeedback
-  // Text,
-  // View
+  TouchableNativeFeedback,
+  // Props
+  TextInputProps,
+  SwitchProps,
+  ActivityIndicatorProps,
+  TouchableOpacityProps,
+  ImageProps,
+  ViewProps,
+  TextProps
 }

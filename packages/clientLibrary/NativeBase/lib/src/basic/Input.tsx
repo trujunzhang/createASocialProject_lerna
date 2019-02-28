@@ -1,16 +1,17 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-import { TextInput } from 'react-primitives'
+import { TextInput, TextProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import NativeBaseComponent from './Base/NativeBaseComponent'
 
-export interface IProps extends ViewProps {
+export interface IInputProps extends TextProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
 class Input extends NativeBaseComponent {
   private _root: any
+  private _textInput: any
   render() {
     const variables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables

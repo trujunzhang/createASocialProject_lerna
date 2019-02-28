@@ -5,10 +5,10 @@ import { View, ViewProps } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 import mapPropsToStyleNames from "../utils/mapPropsToStyleNames";
 
-export interface IProps extends ViewProps {
+export interface ITabProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
-class Tab extends React.Component<IProps, any> {
+class Tab extends React.Component<ITabProps, any> {
   private _root: any
 
   render() {
