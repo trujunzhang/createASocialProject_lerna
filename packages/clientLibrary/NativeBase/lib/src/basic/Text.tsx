@@ -44,7 +44,7 @@ class Text extends React.Component<ITextProps, any> {
 // style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
 //};
 
-(Text as any).defaultProps = {
+;(Text as any).defaultProps = {
   uppercase: false
 }
 

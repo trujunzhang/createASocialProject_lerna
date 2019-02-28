@@ -16,7 +16,7 @@ class H3 extends React.Component<IH3Props, any> {
   }
 }
 
-const childrenType = function (props, propName, component) {
+const childrenType = function(props, propName, component) {
   let error
   const prop = props[propName]
   React.Children.forEach(prop, (child) => {

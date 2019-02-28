@@ -262,11 +262,11 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
               {this.renderBody()}
             </ListItem>
           ) : (
-              <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-                {' '}
-                {this.renderBody()}
-              </View>
-            )}
+            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
+              {' '}
+              {this.renderBody()}
+            </View>
+          )}
         </Animated.View>
       )
     } else {
@@ -283,11 +283,11 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
               {this.renderBody()}
             </ListItem>
           ) : (
-              <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-                {' '}
-                {this.renderBody()}
-              </View>
-            )}
+            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
+              {' '}
+              {this.renderBody()}
+            </View>
+          )}
         </Animated.View>
       )
     }
@@ -297,15 +297,17 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
     return (
       <View style={this.props.style ? this.props.style : undefined}>
         <View
-          style={[
-            styles.hidden,
-            {
-              height: this.state.hiddenHeight,
-              flex: 1,
-              flexDirection: 'row',
-              justifyContent: 'space-between'
-            }
-          ] as any}>
+          style={
+            [
+              styles.hidden,
+              {
+                height: this.state.hiddenHeight,
+                flex: 1,
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+              }
+            ] as any
+          }>
           <Left style={{ width: this.props.leftOpenValue, zIndex: 1 }}>{this.props.left}</Left>
           <Body style={{ flex: 0 }} />
           <Right style={{ width: -this.props.rightOpenValue, zIndex: 1 }}>{this.props.right}</Right>

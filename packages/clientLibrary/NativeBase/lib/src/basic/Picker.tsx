@@ -6,8 +6,7 @@ import { Picker, PickerProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-interface IPickerNBProps extends PickerProps {
-}
+interface IPickerNBProps extends PickerProps {}
 export default class PickerNB extends React.Component<IPickerNBProps, any> {
   private _root: any
   render() {
@@ -19,7 +18,7 @@ export default class PickerNB extends React.Component<IPickerNBProps, any> {
   }
 }
 
-(PickerNB as any).Item = (props) => <Picker.Item {...props} />
+;(PickerNB as any).Item = (props) => <Picker.Item {...props} />
 
 // createReactClass({
 // render() {

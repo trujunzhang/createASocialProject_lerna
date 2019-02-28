@@ -4,7 +4,9 @@ import * as PropTypes from 'prop-types'
 import {
   TouchableHighlight,
   TouchableHighlightProps,
-  Platform, TouchableNativeFeedback, View
+  Platform,
+  TouchableNativeFeedback,
+  View
 } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'

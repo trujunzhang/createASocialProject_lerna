@@ -6,7 +6,7 @@ import { Switch as SwitchNB, SwitchProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface ISwitchProps extends SwitchProps { }
+export interface ISwitchProps extends SwitchProps {}
 class Switch extends React.Component<ISwitchProps, any> {
   private _root: any
 

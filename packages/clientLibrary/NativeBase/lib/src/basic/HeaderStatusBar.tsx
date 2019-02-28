@@ -64,8 +64,8 @@ class HeaderStatusBar extends React.Component<IHeaderStatusBarProps, any> {
           this.props.iosBarStyle
             ? this.props.iosBarStyle
             : platformStyle === 'material'
-              ? 'light-content'
-              : variables.iosStatusbar
+            ? 'light-content'
+            : variables.iosStatusbar
         }
         translucent={this.props.transparent ? true : this.props.translucent}
       />

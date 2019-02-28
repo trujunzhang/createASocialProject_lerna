@@ -285,31 +285,6 @@ class DeckSwiper extends React.Component<IDeckSwiperProps, any> {
           {this.state.selectedItem === undefined ? (
             <View />
           ) : (
-              <View>
-                <Animated.View
-                  style={[
-                    this.getCardStyles()[1],
-                    this.getInitialStyle().topCard,
-                    { opacity: this.state.fadeAnim }
-                  ]}
-                  {...this._panResponder.panHandlers}>
-                  {this.props.renderEmpty && this.props.renderEmpty()}
-                </Animated.View>
-                <Animated.View
-                  style={[this.getCardStyles()[0], this.getInitialStyle().topCard]}
-                  {...this._panResponder.panHandlers}>
-                  {this.props.renderItem(this.state.selectedItem)}
-                </Animated.View>
-              </View>
-            )}
-        </View>
-      )
-    }
-    return (
-      <View style={{ position: 'relative', flexDirection: 'column' }}>
-        {this.state.selectedItem === undefined ? (
-          <View />
-        ) : (
             <View>
               <Animated.View
                 style={[
@@ -318,19 +293,44 @@ class DeckSwiper extends React.Component<IDeckSwiperProps, any> {
                   { opacity: this.state.fadeAnim }
                 ]}
                 {...this._panResponder.panHandlers}>
-                {this.props.renderBottom
-                  ? this.props.renderBottom(this.state.selectedItem2)
-                  : this.props.renderItem(this.state.selectedItem2)}
+                {this.props.renderEmpty && this.props.renderEmpty()}
               </Animated.View>
               <Animated.View
                 style={[this.getCardStyles()[0], this.getInitialStyle().topCard]}
                 {...this._panResponder.panHandlers}>
-                {this.props.renderTop
-                  ? this.props.renderTop(this.state.selectedItem)
-                  : this.props.renderItem(this.state.selectedItem)}
+                {this.props.renderItem(this.state.selectedItem)}
               </Animated.View>
             </View>
           )}
+        </View>
+      )
+    }
+    return (
+      <View style={{ position: 'relative', flexDirection: 'column' }}>
+        {this.state.selectedItem === undefined ? (
+          <View />
+        ) : (
+          <View>
+            <Animated.View
+              style={[
+                this.getCardStyles()[1],
+                this.getInitialStyle().topCard,
+                { opacity: this.state.fadeAnim }
+              ]}
+              {...this._panResponder.panHandlers}>
+              {this.props.renderBottom
+                ? this.props.renderBottom(this.state.selectedItem2)
+                : this.props.renderItem(this.state.selectedItem2)}
+            </Animated.View>
+            <Animated.View
+              style={[this.getCardStyles()[0], this.getInitialStyle().topCard]}
+              {...this._panResponder.panHandlers}>
+              {this.props.renderTop
+                ? this.props.renderTop(this.state.selectedItem)
+                : this.props.renderItem(this.state.selectedItem)}
+            </Animated.View>
+          </View>
+        )}
       </View>
     )
   }

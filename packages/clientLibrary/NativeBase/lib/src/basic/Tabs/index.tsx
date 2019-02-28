@@ -4,7 +4,15 @@ import { LodashUtils as _ } from '@app/tools'
 // import { InteractionManager, ViewProps} from "../../utils";
 const React = require('react')
 const { Component } = React
-import { Dimensions, View, Animated, ScrollView, StyleSheet, Platform, ViewProps } from 'react-primitives'
+import {
+  Dimensions,
+  View,
+  Animated,
+  ScrollView,
+  StyleSheet,
+  Platform,
+  ViewProps
+} from 'react-primitives'
 // const TimerMixin = require("react-timer-mixin");
 
 const SceneComponent = require('./SceneComponent')
