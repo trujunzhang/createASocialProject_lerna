@@ -13,16 +13,16 @@ export interface IContentProps {
      * The theme prop can be applied to any component of NativeBase.
      */
   refreshing?: boolean
-  refreshControl?: object
+  refreshControl?: object | any
   theme?: Object
   padder?: boolean
   disableKBDismissScroll?: boolean | any
   enableResetScrollToCoords?: boolean
-  contentOffset?: Object
+  contentOffset?: Object | any
   scrollEnabled?: boolean
   contentContainerStyle?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-  keyboardShouldPersistTaps?: string
-  keyboardDismissMode?: string
+  keyboardShouldPersistTaps?: string | any
+  keyboardDismissMode?: string | any
 }
 class Content extends React.Component<IContentProps, any> {
   private _root: any
@@ -113,7 +113,7 @@ class Content extends React.Component<IContentProps, any> {
     return isIphoneX() ? (
       <KeyboardAwareScrollView
         automaticallyAdjustContentInsets={false}
-        resetScrollToCoords={this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }}
+        resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
         keyboardShouldPersistTaps={
           this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
         }
@@ -138,7 +138,7 @@ class Content extends React.Component<IContentProps, any> {
     ) : (
         <KeyboardAwareScrollView
           automaticallyAdjustContentInsets={false}
-          resetScrollToCoords={this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }}
+          resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
           keyboardShouldPersistTaps={
             this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
           }
