@@ -72,15 +72,19 @@ import {
   Disabled
 } from '../screens/button'
 
-import BasicCard from '../screens/card/basic'
-import NHCardItemBordered from '../screens/card/carditem-bordered'
-import NHCardItemButton from '../screens/card/carditem-button'
-import NHCardImage from '../screens/card/card-image'
-import NHCardShowcase from '../screens/card/card-showcase'
-import NHCardList from '../screens/card/card-list'
-import NHCardHeaderAndFooter from '../screens/card/card-header-and-footer'
-import NHCardTransparent from '../screens/card/card-transparent'
-import NHCardCustomBorderRadius from '../screens/card/card-custom-border-radius'
+import {
+  NHCard,
+  BasicCard,
+  NHCardItemBordered,
+  NHCardItemButton,
+  NHCardImage,
+  NHCardShowcase,
+  NHCardList,
+  NHCardHeaderAndFooter,
+  NHCardTransparent,
+  NHCardCustomBorderRadius
+} from '../screens/card'
+
 import BasicFab from '../screens/fab/basic'
 import MultipleFab from '../screens/fab/multiple'
 import FixedLabel from '../screens/form/fixedLabel'
@@ -144,7 +148,6 @@ import {
 import Home from '../screens/home'
 import Anatomy from '../screens/anatomy'
 import NHBadge from '../screens/badge'
-import NHCard from '../screens/card'
 import NHCheckbox from '../screens/checkbox'
 import NHDeckSwiper from '../screens/deckswiper'
 import NHFab from '../screens/fab'
