@@ -2,11 +2,11 @@ import * as React from 'react'
 import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
-import { Picker } from 'react-primitives'
+import { Picker, PickerProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IProps extends ViewProps {
+export interface IProps extends PickerProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
 export default class PickerNB extends React.Component<IProps, any> {
@@ -20,7 +20,7 @@ export default class PickerNB extends React.Component<IProps, any> {
   }
 }
 
-PickerNB.Item = (props) => <Picker.Item {...props} />
+(PickerNB as any).Item = (props) => <Picker.Item {...props} />
 
 // createReactClass({
 // render() {

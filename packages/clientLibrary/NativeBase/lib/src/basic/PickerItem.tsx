@@ -1,12 +1,12 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
-import { Picker } from 'react-primitives'
+import { Picker, PickerItemProps } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-export interface IProps extends ViewProps {
+export interface IProps extends PickerItemProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
 }
 class Item extends React.Component<IProps, any> {

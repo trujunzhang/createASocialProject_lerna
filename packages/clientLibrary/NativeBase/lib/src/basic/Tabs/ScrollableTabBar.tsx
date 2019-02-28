@@ -14,20 +14,26 @@ import { View, Animated, StyleSheet, ScrollView, Platform, Dimensions } from 're
 
 const WINDOW_WIDTH = Dimensions.get('window').width
 
-export interface IScrollableTabBarProps extends ViewProps {
+export interface IScrollableTabBarProps {
   goToPage?: Function
   activeTab?: number
-  tabs?: Array<any>
+  tabs?: Array<any> | any
   backgroundColor?: string
   activeTextColor?: string
   inactiveTextColor?: string
   scrollOffset?: number
   style?: ReactNative.ViewStyle
-  tabStyle?: ReactNative.ViewStyle
-  tabsContainerStyle?: ReactNative.ViewStyle
+  tabStyle?: ReactNative.ViewStyle | any
+  tabsContainerStyle?: ReactNative.ViewStyle | any
   renderTab?: Function
   underlineStyle?: ReactNative.ViewStyle
   onScroll?: Function
+
+  scrollValue?: any
+  activeTabStyle?: any
+  textStyle?: any
+  activeTextStyle?: any
+  tabHeaderStyle?: any
 }
 
 class ScrollableTabBar extends React.Component<IScrollableTabBarProps, any> {

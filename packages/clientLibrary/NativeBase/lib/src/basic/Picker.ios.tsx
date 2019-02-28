@@ -40,6 +40,18 @@ export interface IProps extends ViewProps {
   headerBackButtonTextStyle?: ReactNative.TextStyle
   modalStyle?: ReactNative.ViewStyle
   renderHeader?: (backAction: any) => React.ReactElement<any>
+
+  // Picker
+  enabled?: any
+  supportedOrientations?: any
+  itemStyle?: any
+  onValueChange?: any
+
+
+  selectedValue?: any
+  renderButton?: any
+  headerBackButtonStyle?: any
+  children?: any
 }
 
 class PickerNB extends React.Component<IProps, any> {
@@ -94,12 +106,12 @@ class PickerNB extends React.Component<IProps, any> {
 
   getLabel(props) {
     let children = this.getChildren(props.children)
-    const item = _.find(children, (child) => child.props.value === props.selectedValue)
+    const item = (_ as any).find(children, (child) => child.props.value === props.selectedValue)
     return _.get(item, 'props.label')
   }
 
   getSelectedItem() {
-    return _.find(this.props.children, (child) => child.props.value === this.props.selectedValue)
+    return (_ as any).find(this.props.children, (child) => child.props.value === this.props.selectedValue)
   }
 
   getChildren(children) {
@@ -210,7 +222,6 @@ class PickerNB extends React.Component<IProps, any> {
                   style={this.props.itemStyle}
                   onPress={() => {
                     this._setModalVisible(false)
-                    this.props.onValueChange(item.props.value)
                     this.setState({ current: item.props.label })
                   }}>
                   <Left>

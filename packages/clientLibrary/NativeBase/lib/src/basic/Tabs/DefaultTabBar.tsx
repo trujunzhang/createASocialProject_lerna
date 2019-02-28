@@ -12,7 +12,34 @@ import { ViewProps } from 'react-primitives'
 import { Animated } from 'react-primitives'
 const Button = require('./Button')
 
-class DefaultTabBar extends React.Component<IProps, any> {
+export interface IDefaultTabBarProps extends ViewProps {
+  goToPage?: Function
+  activeTab?: number
+  tabs?: Array<any> | any
+  backgroundColor?: string
+  activeTextColor?: string
+  inactiveTextColor?: string
+  scrollOffset?: number
+  style?: ReactNative.ViewStyle
+  tabStyle?: ReactNative.ViewStyle | any
+  tabsContainerStyle?: ReactNative.ViewStyle | any
+  renderTab?: Function
+  underlineStyle?: ReactNative.ViewStyle
+  onScroll?: Function
+
+  tabContainerStyle?: any
+  containerWidth?: any
+  scrollValue?: any
+  activeTabStyle?: any
+  textStyle?: any
+  activeTextStyle?: any
+  tabHeaderStyle?: any
+}
+
+class DefaultTabBar extends React.Component<IDefaultTabBarProps, any> {
+  static contextTypes = {
+    theme: PropTypes.object
+  }
   getDefaultProps() {
     return {
       activeTextColor: variable.topTabBarActiveTextColor,
@@ -109,22 +136,22 @@ class DefaultTabBar extends React.Component<IProps, any> {
   }
 }
 
-DefaultTabBar.propTypes = {
-  goToPage: PropTypes.func,
-  activeTab: PropTypes.number,
-  tabs: PropTypes.array,
-  backgroundColor: PropTypes.string,
-  activeTextColor: PropTypes.string,
-  inactiveTextColor: PropTypes.string,
-  tabStyle: ViewPropTypes.style,
-  renderTab: PropTypes.func,
-  underlineStyle: ViewPropTypes.style,
-  tabContainerStyle: ViewPropTypes.style
-}
+// DefaultTabBar.propTypes = {
+//   goToPage: PropTypes.func,
+//   activeTab: PropTypes.number,
+//   tabs: PropTypes.array,
+//   backgroundColor: PropTypes.string,
+//   activeTextColor: PropTypes.string,
+//   inactiveTextColor: PropTypes.string,
+//   tabStyle: ViewPropTypes.style,
+//   renderTab: PropTypes.func,
+//   underlineStyle: ViewPropTypes.style,
+//   tabContainerStyle: ViewPropTypes.style
+// }
 
-DefaultTabBar.contextTypes = {
-  theme: PropTypes.object
-}
+// DefaultTabBar.contextTypes = {
+// theme: PropTypes.object
+// }
 
 // module.exports = DefaultTabBar;
 const StyledTab = connectStyle('NativeBase.DefaultTabBar', {}, mapPropsToStyleNames)(DefaultTabBar)

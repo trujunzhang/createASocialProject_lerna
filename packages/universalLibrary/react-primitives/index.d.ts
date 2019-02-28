@@ -8,7 +8,6 @@
 import { ComponentType } from 'react'
 import * as React from 'react'
 import {
-  TextInput,
   // Common
   StatusBar,
   Animated,
@@ -18,14 +17,18 @@ import {
   PixelRatio,
   PlatformOSType as RNPlatformOSType,
   StyleSheet,
+  TextInput as RNTextInput,
   Text as RNText,
   TouchableOpacityProps,
   View as RNView,
   // Dialog
   Modal,
+  ActionSheetIOS,
   DatePickerIOS,
   DatePickerAndroid,
   // Props
+  PickerProps,
+  PickerItemProps,
   TextInputProps,
   SwitchProps,
   ActivityIndicatorProps,
@@ -46,6 +49,7 @@ export interface SketchAppProps {
 
 export class View extends React.Component<ViewProps & SketchAppProps> { }
 export class Text extends React.Component<TextProps & SketchAppProps> { }
+export class TextInput extends React.Component<TextInputProps & SketchAppProps> { }
 
 export const Touchable: ComponentType<TouchableOpacityProps>
 
@@ -60,6 +64,8 @@ export const Platform: PlatformStatic
 
 export const ListView: any
 export const ScrollView: any
+export const FlatList: any
+export const Picker: any
 
 export {
   StatusBar,
@@ -71,6 +77,7 @@ export {
   StyleSheet,
   // Dialog
   Modal,
+  ActionSheetIOS,
   DatePickerIOS,
   DatePickerAndroid,
   // Touch
@@ -80,6 +87,8 @@ export {
   TouchableWithoutFeedback,
   TouchableNativeFeedback,
   // Props
+  PickerProps,
+  PickerItemProps,
   TextInputProps,
   SwitchProps,
   ActivityIndicatorProps,

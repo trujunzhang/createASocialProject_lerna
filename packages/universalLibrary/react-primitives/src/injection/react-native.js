@@ -3,6 +3,7 @@ const {
   StatusBar,
   Animated,
   View,
+  TextInput,
   Text,
   Image,
   StyleSheet,
@@ -12,6 +13,7 @@ const {
   Dimensions,
   // Dialog
   Modal,
+  ActionSheetIOS,
   DatePickerIOS,
   DatePickerAndroid,
   // Touch
@@ -26,6 +28,7 @@ ReactPrimitives.inject({
   StatusBar,
   StyleSheet,
   View,
+  TextInput,
   Text,
   ListView,
   Image,
@@ -38,6 +41,7 @@ ReactPrimitives.inject({
   Dimensions,
   // Dialog
   Modal,
+  ActionSheetIOS,
   DatePickerIOS,
   DatePickerAndroid,
   // Touch

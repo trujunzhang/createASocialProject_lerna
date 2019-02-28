@@ -29,6 +29,9 @@ const ReactPrimitives = {
     if (api.ListView) {
       ReactPrimitives.ListView = api.ListView;
     }
+    if (api.TextInput) {
+      ReactPrimitives.TextInput = api.TextInput;
+    }
     if (api.Text) {
       ReactPrimitives.Text = api.Text;
     }
@@ -50,6 +53,9 @@ const ReactPrimitives = {
     // Dialog
     if (api.Modal) {
       ReactPrimitives.Modal = api.Modal;
+    }
+    if (api.ActionSheetIOS) {
+      ReactPrimitives.ActionSheetIOS = api.ActionSheetIOS;
     }
     if (api.DatePickerIOS) {
       ReactPrimitives.DatePickerIOS = api.DatePickerIOS;
