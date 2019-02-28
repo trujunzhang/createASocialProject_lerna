@@ -1,79 +1,101 @@
 {
-	"name": "@app/native-base",
-	"version": "0.6.0",
-	"main.js": "src/index.ts",
-	"main": "build/lib/index.js",
-	"typings": "./index.d.ts",
-	"description": "Essential cross-platform UI components for React Native",
-	"keywords": [
-		"android",
-		"ios",
-		"react",
-		"native",
-		"react-native",
-		"native-modules",
-		"react-component",
-		"navbar",
-		"packager",
-		"rnpm"
-	],
-	"license": "Apache-2.0",
-	"private": false,
-	"dependencies": {
-		"@types/prop-types": "15.5.8",
-		"blueimp-md5": "2.10.0",
-		"clamp": "1.0.1",
-		"prop-types": "15.6.2",
-		"react-art": "16.5.2",
-		"react-dom": "^16.8.2",
-		"react-native-web": "0.10.0",
-		"react-tween-state": "0.1.5",
-		"tween-functions": "1.2.0"
-	},
-	"devDependencies": {
-		"@babel/cli": "7.2.3",
-		"@babel/core": "7.3.3",
-		"@babel/plugin-proposal-class-properties": "7.3.3",
-		"@babel/plugin-proposal-object-rest-spread": "7.3.2",
-		"@babel/plugin-transform-runtime": "7.2.0",
-		"@babel/preset-env": "7.3.1",
-		"@babel/preset-react": "7.0.0",
-		"@babel/preset-typescript": "7.3.3",
-		"@babel/runtime": "7.3.1",
-		"@babel/runtime-corejs2": "7.3.1",
-		"@types/jest": "24.0.6",
-		"@types/node": "10.12.18",
-		"@types/react": "16.7.7",
-		"@types/react-native": "0.57.17",
-		"@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
-		"@types/react-sketchapp": "0.12.1",
-		"@types/react-test-renderer": "16.0.3",
-		"babel-core": "^7.0.0-bridge.0",
-		"babel-jest": "24.1.0",
-		"babel-plugin-module-resolver": "3.2.0",
-		"jest": "24.1.0",
-		"react": "16.5.0",
-		"react-sketchapp": "2.0.0",
-		"react-test-renderer": "16.7.0",
-		"typescript": "3.3.3"
-	},
-	"gitHead": "5bbeacc403ba97622703699132c55d8359344004",
-	"homepage": "https://github.com/GeekyAnts/NativeBase#readme",
-	"peerDependencies": {
-		"prop-types": "*",
-		"react": "*",
-		"react-dom": "*",
-		"react-native": "*",
-		"react-native-web": "*"
-	},
-	"readmeFilename": "README.md",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/GeekyAnts/NativeBase.git"
-	},
-	"rnpm": {
-		"assets": [
-			"Fonts"
-		]
-	}
+  "name": "@app/native-base",
+  "version": "0.6.0",
+  "main.js": "src/index.ts",
+  "main": "build/lib/index.js",
+  "typings": "./index.d.ts",
+  "description": "Essential cross-platform UI components for React Native",
+  "keywords": [
+    "android",
+    "ios",
+    "react",
+    "native",
+    "react-native",
+    "native-modules",
+    "react-component",
+    "navbar",
+    "packager",
+    "rnpm"
+  ],
+  "scripts": {
+    "depenence.update": "ncu -u",
+    "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+    "ts-lint:lib": "tslint -c tslint.json '**/*.{ts,tsx}' -e 'node_modules/**'",
+    "test.lib": "jest --env=node --colors --coverage test",
+    "test.current.pending": "yarn test.lib",
+    "build.reset": "rm -rf build",
+    "build.clean": "echo 'build empty clean'",
+    "build:js": "tsc -p tsconfig.lib.json",
+    "build-lib": "yarn build.clean && yarn build:js",
+    "build.current.pending": "yarn build-lib",
+    "postinstall": "yarn build-lib"
+  },
+  "license": "Apache-2.0",
+  "private": false,
+  "dependencies": {
+    "@app/native-base-shoutem-theme": "0.2.2",
+    "@app/nativebase-theme-components": "0.6.0",
+    "@app/native-base-variables": "0.6.0",
+    "@app/react-native-iphone-x-helper": "1.2.0",
+    "@app/color": "0.6.0",
+    "@app/tools": "0.6.0",
+    "@app/react-native-keyboard-aware-scroll-view": "0.8.0",
+    "@types/prop-types": "15.5.8",
+    "prop-types": "15.6.2",
+    "blueimp-md5": "2.10.0",
+    "clamp": "1.0.1",
+    "react-tween-state": "0.1.5",
+    "tween-functions": "1.2.0",
+    "react-primitives": "0.7.0",
+    "react-dom": "^16.8.2",
+    "react-art": "16.5.2",
+    "react-native-web": "0.10.0"
+  },
+  "devDependencies": {
+    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
+    "@types/react-sketchapp": "0.12.1",
+    "react-sketchapp": "2.0.0",
+    "babel-plugin-module-resolver": "3.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "@types/jest": "24.0.6",
+    "jest": "24.1.0",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/runtime": "7.3.1",
+    "@babel/runtime-corejs2": "7.3.1",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
+    "@types/react-test-renderer": "16.0.3",
+    "react-test-renderer": "16.7.0",
+    "typescript": "3.3.3",
+    "@types/node": "10.12.18",
+    "@types/react": "16.7.7",
+    "@types/react-native": "0.57.17",
+    "react": "16.5.0"
+  },
+  "gitHead": "5bbeacc403ba97622703699132c55d8359344004",
+  "homepage": "https://github.com/GeekyAnts/NativeBase#readme",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-web": "*"
+  },
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekyAnts/NativeBase.git"
+  },
+  "rnpm": {
+    "assets": [
+      "Fonts"
+    ]
+  }
 }
