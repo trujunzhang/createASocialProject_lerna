@@ -1,11 +1,11 @@
-var React = require("react");
+import * as React from 'react'
 
 class StaticContainer extends React.Component {
-  shouldComponentUpdate(nextProps: Object): boolean {
+  shouldComponentUpdate(nextProps: any): boolean {
     return !!nextProps.shouldUpdate;
   }
 
-  render(): ?ReactElement {
+  render() {
     var child = this.props.children;
     if (child === null || child === false) {
       return null;

@@ -5,7 +5,7 @@ import { Platform } from "react-primitives";
 import { connectStyle } from "@app/native-base-shoutem-theme";
 
 import { IconNB } from "../IconNB";
-import ic from "./NBIcons.json";
+import { NBIcons as ic } from "./NBIcons";
 import { platformVariables as variable } from '@app/native-base-variables';
 import { LodashUtils as _ } from '@app/tools'
 

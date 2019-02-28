@@ -1,4 +1,4 @@
-{
+export const NBIcons = {
   "add": {
     "android": {
       "default": "md-add",
