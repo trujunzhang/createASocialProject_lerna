@@ -39,12 +39,14 @@ export default class App extends React.Component<{}, IAppState> {
     return (
       <Setup>
         <Root>
-          <View style={[{
-            flex: 1,
-            backgroundColor: 'red'
-          }]}>
-
-          </View>
+          <View
+            style={[
+              {
+                flex: 1,
+                backgroundColor: 'red'
+              }
+            ]}
+          />
         </Root>
       </Setup>
     )
@@ -61,11 +63,14 @@ export default class App extends React.Component<{}, IAppState> {
       )
     }
     return (
-      <View style={[{
-        flex: 1,
-        paddingTop: 200,
-        backgroundColor: 'red'
-      }]}>
+      <View
+        style={[
+          {
+            flex: 1,
+            paddingTop: 200,
+            backgroundColor: 'red'
+          }
+        ]}>
         <Setup>
           <Root>
             <CurrentPage />

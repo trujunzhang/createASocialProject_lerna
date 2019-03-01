@@ -2,9 +2,14 @@ import * as React from 'react'
 import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
 
-import { platformVariables as variable } from '@app/native-base-variables'
+import {
+  platformVariables as variable,
+  themeVariablesWithIconVector,
+  VectorIconsWithNull
+} from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 
+import { Text } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
 // import Ionicons from "react-native-vector-icons/Ionicons";
@@ -30,23 +35,25 @@ export interface IIconNBProps {
 }
 class IconNB extends React.Component<IIconNBProps, any> {
   private _root: any
-  private Icon: any
+  private Icon: React.Component<any> | null = null
+
   static contextTypes = {
     theme: PropTypes.object
   }
 
-  setIcon(iconType) {
-    const variables = this.context.theme
+  setIcon(iconType: string) {
+    const variables: themeVariablesWithIconVector = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     if (iconType == undefined && this.context.theme) {
       iconType = variables.iconFamily
     }
-    const icons = variables.iconRenderComponents()
+    const icons: VectorIconsWithNull = variables.iconRenderComponents()
 
     // console.log('iconType: ', iconType)
-
-    this.Icon = icons[iconType]
+    if (!!icons) {
+      this.Icon = icons[iconType]
+    }
   }
 
   componentWillMount() {
@@ -75,20 +82,23 @@ class IconNB extends React.Component<IIconNBProps, any> {
   }
 
   render() {
-    const VectorIcon = this.Icon
+    const VectorIcon: any | null = this.Icon
     const { oneStyle, fontSize, color, name } = this.getIconStyle()
     if (name === 'search') {
       // debugger
     }
-    return (
-      <VectorIcon
-        ref={(c) => (this._root = c)}
-        name={name}
-        size={fontSize}
-        color={color}
-        style={oneStyle}
-      />
-    )
+    if (!!VectorIcon) {
+      return (
+        <VectorIcon
+          ref={(c) => (this._root = c)}
+          name={name}
+          size={fontSize}
+          color={color}
+          style={oneStyle}
+        />
+      )
+    }
+    return <Text>{name}</Text>
   }
 }
 

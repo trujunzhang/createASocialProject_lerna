@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,58 +12,54 @@ import {
   Text,
   List,
   ListItem
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 const datas = [
   {
-    route: "Default",
-    text: "Default Button"
+    route: 'Default',
+    text: 'Default Button'
   },
   {
-    route: "Outline",
-    text: "Outline Button"
+    route: 'Outline',
+    text: 'Outline Button'
   },
   {
-    route: "Rounded",
-    text: "Rounded Button"
+    route: 'Rounded',
+    text: 'Rounded Button'
   },
   {
-    route: "Block",
-    text: "Block Button"
+    route: 'Block',
+    text: 'Block Button'
   },
   {
-    route: "Full",
-    text: "Full Button"
+    route: 'Full',
+    text: 'Full Button'
   },
   {
-    route: "Custom",
-    text: "Custom Size Button"
+    route: 'Custom',
+    text: 'Custom Size Button'
   },
   {
-    route: "Transparent",
-    text: "Transparent Button"
+    route: 'Transparent',
+    text: 'Transparent Button'
   },
   {
-    route: "IconBtn",
-    text: "Icon Button"
+    route: 'IconBtn',
+    text: 'Icon Button'
   },
   {
-    route: "Disabled",
-    text: "Disabled Button"
+    route: 'Disabled',
+    text: 'Disabled Button'
   }
-];
+]
 
-class NHButton extends React.Component<any, any>{
-
+class NHButton extends React.Component<any, any> {
   renderHeader() {
     return (
       <Header>
         <Left>
-          <Button
-            transparent
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}
-          >
+          <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
             <Icon name="menu" />
           </Button>
         </Left>
@@ -79,20 +75,16 @@ class NHButton extends React.Component<any, any>{
     return (
       <List
         dataArray={datas}
-        renderRow={data =>
-          <ListItem
-            button
-            onPress={() => this.props.navigation.navigate(data.route)}
-          >
+        renderRow={(data) => (
+          <ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
             <Left>
-              <Text>
-                {data.text}
-              </Text>
+              <Text>{data.text}</Text>
             </Left>
             <Right>
-              <Icon name="arrow-forward" style={{ color: "#999" }} />
+              <Icon name="arrow-forward" style={{ color: '#999' }} />
             </Right>
-          </ListItem>}
+          </ListItem>
+        )}
       />
     )
   }
@@ -102,12 +94,10 @@ class NHButton extends React.Component<any, any>{
       <Container style={styles.container}>
         {this.renderHeader()}
 
-        <Content>
-          {this.renderList()}
-        </Content>
+        <Content>{this.renderList()}</Content>
       </Container>
-    );
+    )
   }
 }
 
-export default NHButton;
+export default NHButton
