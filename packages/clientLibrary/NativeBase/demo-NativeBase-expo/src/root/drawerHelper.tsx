@@ -12,7 +12,7 @@ import { ActionsheetPage as Actionsheet } from '../screens/actionsheet'
 
 import { NHIconPage as NHIcon } from '../screens/icon'
 
-import { NHButton } from '../screens/button'
+import { NHButton } from '@app/nb-demo-shared-components'
 
 import { NHCard } from '../screens/card'
 

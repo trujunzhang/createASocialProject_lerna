@@ -49,7 +49,7 @@ import {
   Transparent,
   IconBtn,
   Disabled
-} from '../screens/button'
+} from '@app/nb-demo-shared-components'
 
 import {
   BasicCard,

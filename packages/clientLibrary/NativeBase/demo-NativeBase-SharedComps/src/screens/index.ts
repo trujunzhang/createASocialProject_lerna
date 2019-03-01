@@ -1,1 +1,2 @@
-export const xxx = 'xxx'
+
+export * from './button'
