@@ -5,7 +5,7 @@
   "main": "index.js",
   "typings": "./index.d.ts",
   "scripts": {
-    "build.current": "yarn run build",
+    "build.current.pending": "yarn run build",
     "prepublish": "npm run build",
     "build": "rm -rf lib && babel -d lib src",
     "build:webpack": "webpack",

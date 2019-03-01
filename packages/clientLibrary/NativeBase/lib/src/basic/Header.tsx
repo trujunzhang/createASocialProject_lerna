@@ -120,6 +120,10 @@ class Header extends React.Component<IHeaderProps, any> {
   }
 
   render() {
+    return null
+  }
+
+  renderxxx() {
     return (
       <View onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
         {this.renderStatusBar()}

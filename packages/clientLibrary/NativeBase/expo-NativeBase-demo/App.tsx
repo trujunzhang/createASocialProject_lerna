@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import { View } from 'react-native'
 import { AppLoading, Asset, Permissions } from 'expo'
 import * as Font from 'expo-font'
 
@@ -35,6 +35,21 @@ export default class App extends React.Component<{}, IAppState> {
     ])
   }
 
+  renderxxx() {
+    return (
+      <Setup>
+        <Root>
+          <View style={[{
+            flex: 1,
+            backgroundColor: 'red'
+          }]}>
+
+          </View>
+        </Root>
+      </Setup>
+    )
+  }
+
   render() {
     if (!this.state.isReady) {
       return (
@@ -46,11 +61,17 @@ export default class App extends React.Component<{}, IAppState> {
       )
     }
     return (
-      <Setup>
-        <Root>
-          <CurrentPage />
-        </Root>
-      </Setup>
+      <View style={[{
+        flex: 1,
+        paddingTop: 200,
+        backgroundColor: 'red'
+      }]}>
+        <Setup>
+          <Root>
+            <CurrentPage />
+          </Root>
+        </Setup>
+      </View>
     )
   }
 }

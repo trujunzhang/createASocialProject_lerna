@@ -77,8 +77,11 @@ export const stackRouteConfigs = {
   IconSetsList: { screen: IconSetsList }
 }
 
+/* const initialRouteName = 'Home' */
+const initialRouteName = 'NHButton'
+
 export const stackConfig = {
-  initialRouteName: 'Home',
+  initialRouteName,
   //   initialRouteName: 'NHToast',
   // initialRouteName: 'NHIcon',
   // initialRouteName: 'IconSetsList',
