@@ -28,8 +28,22 @@ import { Svg } from 'expo'
  *     (Office document):
  *     https://ionicframework.com/docs/ionicons/
  */
+import {
+  AntDesign,
+  Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome,
+  // FontAwesome5,
+  Foundation,
+  Ionicons,
+  MaterialIcons,
+  MaterialCommunityIcons,
+  Octicons,
+  SimpleLineIcons,
+  Zocial
+} from '@expo/vector-icons'
 
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import {
   Alert,
   Keyboard,

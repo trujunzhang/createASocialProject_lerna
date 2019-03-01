@@ -12,6 +12,7 @@ import {
   MaterialIcons,
   MaterialCommunityIcons,
   Octicons,
+  SimpleLineIcons,
   Zocial
 } from '@expo/vector-icons'
 
