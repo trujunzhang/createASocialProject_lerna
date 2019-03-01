@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react';
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class Full extends Component {
+class Rounded extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -24,31 +24,31 @@ class Full extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Full</Title>
+            <Title>Rounded</Title>
           </Body>
           <Right />
         </Header>
 
-        <Content style={{ backgroundColor: "#fff" }}>
-          <Button full light style={styles.mt15}>
+        <Content padder style={{ backgroundColor: "#FFF" }}>
+          <Button rounded light style={styles.mb15}>
             <Text>Light</Text>
           </Button>
-          <Button full info style={styles.mt15}>
+          <Button rounded info style={styles.mb15}>
             <Text>Info</Text>
           </Button>
-          <Button full primary style={styles.mt15}>
+          <Button rounded primary style={styles.mb15}>
             <Text>Primary</Text>
           </Button>
-          <Button full success style={styles.mt15}>
+          <Button rounded success style={styles.mb15}>
             <Text>Success</Text>
           </Button>
-          <Button full warning style={styles.mt15}>
+          <Button rounded warning style={styles.mb15}>
             <Text>Warning</Text>
           </Button>
-          <Button full danger style={styles.mt15}>
+          <Button rounded danger style={styles.mb15}>
             <Text>Danger</Text>
           </Button>
-          <Button full dark style={styles.mt15}>
+          <Button rounded dark style={styles.mb15}>
             <Text>Dark</Text>
           </Button>
         </Content>
@@ -57,4 +57,4 @@ class Full extends Component {
   }
 }
 
-export default Full;
+export default Rounded;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react';
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class Rounded extends Component {
+class Transparent extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -24,31 +24,31 @@ class Rounded extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Rounded</Title>
+            <Title>Transparent</Title>
           </Body>
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#FFF" }}>
-          <Button rounded light style={styles.mb15}>
+        <Content padder style={{ backgroundColor: "#fff" }}>
+          <Button transparent light style={styles.mb15}>
             <Text>Light</Text>
           </Button>
-          <Button rounded info style={styles.mb15}>
+          <Button transparent info style={styles.mb15}>
             <Text>Info</Text>
           </Button>
-          <Button rounded primary style={styles.mb15}>
+          <Button transparent style={styles.mb15}>
             <Text>Primary</Text>
           </Button>
-          <Button rounded success style={styles.mb15}>
+          <Button transparent success style={styles.mb15}>
             <Text>Success</Text>
           </Button>
-          <Button rounded warning style={styles.mb15}>
+          <Button transparent warning style={styles.mb15}>
             <Text>Warning</Text>
           </Button>
-          <Button rounded danger style={styles.mb15}>
+          <Button transparent danger style={styles.mb15}>
             <Text>Danger</Text>
           </Button>
-          <Button rounded dark style={styles.mb15}>
+          <Button transparent dark style={styles.mb15}>
             <Text>Dark</Text>
           </Button>
         </Content>
@@ -57,4 +57,4 @@ class Rounded extends Component {
   }
 }
 
-export default Rounded;
+export default Transparent;

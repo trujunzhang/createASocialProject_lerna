@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react';
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class Transparent extends Component {
+class Full extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -24,31 +24,31 @@ class Transparent extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Transparent</Title>
+            <Title>Full</Title>
           </Body>
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#fff" }}>
-          <Button transparent light style={styles.mb15}>
+        <Content style={{ backgroundColor: "#fff" }}>
+          <Button full light style={styles.mt15}>
             <Text>Light</Text>
           </Button>
-          <Button transparent info style={styles.mb15}>
+          <Button full info style={styles.mt15}>
             <Text>Info</Text>
           </Button>
-          <Button transparent style={styles.mb15}>
+          <Button full primary style={styles.mt15}>
             <Text>Primary</Text>
           </Button>
-          <Button transparent success style={styles.mb15}>
+          <Button full success style={styles.mt15}>
             <Text>Success</Text>
           </Button>
-          <Button transparent warning style={styles.mb15}>
+          <Button full warning style={styles.mt15}>
             <Text>Warning</Text>
           </Button>
-          <Button transparent danger style={styles.mb15}>
+          <Button full danger style={styles.mt15}>
             <Text>Danger</Text>
           </Button>
-          <Button transparent dark style={styles.mb15}>
+          <Button full dark style={styles.mt15}>
             <Text>Dark</Text>
           </Button>
         </Content>
@@ -57,4 +57,4 @@ class Transparent extends Component {
   }
 }
 
-export default Transparent;
+export default Full;
