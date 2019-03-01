@@ -34,6 +34,7 @@
             "build.current": "lerna run build.current --stream",
             "build.current.pending": "lerna run build.current.pending --stream",
             "  *****  The following is demo nativebase ****": "",
-            "demo.nativebase.expo:ios": "lerna run expo:ios --scope=expo-nativebase-demo --stream"
+            "demo.nativebase.expo:ios": "lerna run expo:ios --scope=expo-nativebase-demo --stream",
+            "demo.nativebase.sketch": "lerna run render --scope=sketch-nativebase-demo --stream"
       }
 }
