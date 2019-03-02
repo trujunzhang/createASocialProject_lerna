@@ -781,9 +781,9 @@
   integrity sha1-zrAEilRttFP2JI8tHZXpN6bwChQ=
 
 "@types/prop-types@*":
-  version "15.5.9"
-  resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.9.tgz#f2d14df87b0739041bc53a7d75e3d77d726a3ec0"
-  integrity sha1-8tFN+HsHOQQbxTp9dePXfXJqPsA=
+  version "15.7.0"
+  resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.0.tgz#4c48fed958d6dcf9487195a0ef6456d5f6e0163a"
+  integrity sha1-TEj+2VjW3PlIcZWg72RW1fbgFjo=
 
 "@types/react@16.7.18":
   version "16.7.18"

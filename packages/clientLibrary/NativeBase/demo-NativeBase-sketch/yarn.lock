@@ -893,9 +893,9 @@
     "@types/jest-diff" "*"
 
 "@types/node@*":
-  version "11.10.0"
-  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.10.0.tgz#08eeb736ae678ccf9ca0922063f3a08795894ede"
-  integrity sha1-CO63Nq5njM+coJIgY/Ogh5WJTt4=
+  version "11.10.4"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
+  integrity sha1-P1/E8PMigF8AngCrNaL/PWt3jkI=
 
 "@types/prop-types@*":
   version "15.7.0"
