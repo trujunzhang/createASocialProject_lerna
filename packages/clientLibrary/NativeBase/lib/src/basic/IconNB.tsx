@@ -9,7 +9,7 @@ import {
 } from '@app/native-base-variables'
 import { LodashUtils as _ } from '@app/tools'
 
-import { Text } from 'react-primitives'
+import { Text, TextProps ,ViewStyle} from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'

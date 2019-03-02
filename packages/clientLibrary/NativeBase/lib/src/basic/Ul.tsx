@@ -1,9 +1,8 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { View, TextProps } from 'react-primitives'
 
-import { Text } from 'react-primitives'
+import { Text, TextProps ,ViewStyle} from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'

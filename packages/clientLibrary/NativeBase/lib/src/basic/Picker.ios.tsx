@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
-import { Picker, Modal, View, ViewProps, FlatList } from 'react-primitives'
+import { Picker, Modal, View, ViewProps, FlatList,ViewStyle,TextStyle } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 import { Text } from './Text'
 import { List } from './List'
@@ -28,17 +28,17 @@ interface IPickerNBProps extends ViewProps {
   inlineLabel?: boolean
   headerBackButtonText?: string
   placeholder?: string
-  placeholderStyle?: ReactNative.TextStyle
-  textStyle?: ReactNative.TextStyle
+  placeholderStyle?: TextStyle
+  textStyle?: TextStyle
   // iosIcon?: React.ReactElement<NativeBase.Icon>
   iosIcon?: any
   note?: boolean
   placeholderIconColor?: string
-  itemTextStyle?: ReactNative.TextStyle
-  headerStyle?: ReactNative.ViewStyle
-  headerTitleStyle?: ReactNative.TextStyle
-  headerBackButtonTextStyle?: ReactNative.TextStyle
-  modalStyle?: ReactNative.ViewStyle
+  itemTextStyle?: TextStyle
+  headerStyle?: ViewStyle
+  headerTitleStyle?: TextStyle
+  headerBackButtonTextStyle?: TextStyle
+  modalStyle?: ViewStyle
   renderHeader?: (backAction: any) => React.ReactElement<any>
 
   // Picker

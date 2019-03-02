@@ -20,11 +20,11 @@ export interface IDefaultTabBarProps extends ViewProps {
   activeTextColor?: string
   inactiveTextColor?: string
   scrollOffset?: number
-  style?: ReactNative.ViewStyle
-  tabStyle?: ReactNative.ViewStyle | any
-  tabsContainerStyle?: ReactNative.ViewStyle | any
+  style?: ViewStyle
+  tabStyle?: ViewStyle | any
+  tabsContainerStyle?: ViewStyle | any
   renderTab?: Function
-  underlineStyle?: ReactNative.ViewStyle
+  underlineStyle?: ViewStyle
   onScroll?: Function
 
   tabContainerStyle?: any

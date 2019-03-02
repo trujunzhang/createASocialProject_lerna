@@ -1,6 +1,8 @@
 import * as React from 'react'
 
-
+import {
+  ViewStyle,
+} from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
 import { SwipeRow } from './SwipeRow'
@@ -27,7 +29,7 @@ export interface ISwipeRow {
   // body?: React.ReactElement<any>
   body?: any
   right?: React.ReactElement<any>
-  style?: ReactNative.ViewStyle
+  style?: ViewStyle
 }
 
 interface IListSwipeRowProps extends ISwipeRow {

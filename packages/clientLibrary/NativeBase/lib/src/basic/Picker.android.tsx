@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
-import { Picker, PickerProps } from 'react-primitives'
+import { Picker, PickerProps,TextStyle,ViewStyle  } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
@@ -13,17 +13,17 @@ interface IPickerNBProps extends PickerProps {
   inlineLabel?: boolean
   headerBackButtonText?: string
   placeholder?: string
-  placeholderStyle?: ReactNative.TextStyle
-  textStyle?: ReactNative.TextStyle
+  placeholderStyle?: TextStyle
+  textStyle?: TextStyle
   // iosIcon?: React.ReactElement<NativeBase.Icon>
   iosIcon?: any
   note?: boolean
   placeholderIconColor?: string
-  itemTextStyle?: ReactNative.TextStyle
-  headerStyle?: ReactNative.ViewStyle
-  headerTitleStyle?: ReactNative.TextStyle
-  headerBackButtonTextStyle?: ReactNative.TextStyle
-  modalStyle?: ReactNative.ViewStyle
+  itemTextStyle?: TextStyle
+  headerStyle?: ViewStyle
+  headerTitleStyle?: TextStyle
+  headerBackButtonTextStyle?: TextStyle
+  modalStyle?: ViewStyle
   renderHeader?: (backAction: any) => React.ReactElement<any>
 }
 export default class PickerNB extends React.Component<IPickerNBProps, any> {

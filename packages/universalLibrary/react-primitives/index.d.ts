@@ -43,6 +43,7 @@ import {
   TextProps,
   // styles
   ViewStyle,
+  TextStyle,
   ScaledSize,
   // Touch
   PanResponder,
@@ -100,6 +101,7 @@ export {
   TouchableNativeFeedback,
   // styles
   ViewStyle,
+  TextStyle,
   ScaledSize,
   // Props
   TouchableHighlightProps,

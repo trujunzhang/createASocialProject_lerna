@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types'
 import {
   Animated,
   PanResponder,
-  Platform,
+  ViewStyle,
   StyleSheet,
   TouchableOpacity,
   View
@@ -38,7 +38,7 @@ export interface ISwipeRowProps {
   // body?: React.ReactElement<any>
   body?: any
   right?: React.ReactElement<any>
-  style?: ReactNative.ViewStyle
+  style?: ViewStyle
 
   // custom
   swipeGestureBegan?: any

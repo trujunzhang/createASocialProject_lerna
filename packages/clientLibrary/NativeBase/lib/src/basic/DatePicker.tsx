@@ -17,8 +17,8 @@ export interface IDatePickerProps {
   maximumDate?: Date
   locale?: string
   placeHolderText?: string
-  textStyle?: ReactNative.TextStyle
-  placeHolderTextStyle?: ReactNative.TextStyle
+  textStyle?: TextStyle
+  placeHolderTextStyle?: TextStyle
   androidMode?: 'calendar' | 'spinner' | 'default'
   timeZoneOffsetInMinutes?: number
   modalTransparent?: boolean

@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   View,
+  ViewStyle,
   StyleSheet
 } from 'react-primitives'
 import { Icon } from './Icon'
@@ -30,7 +31,7 @@ export interface IFabProps {
   containerStyle?: ViewStyle | Array<ViewStyle>
   onPress?: () => void
   position?: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
-  style?: ReactNative.ViewStyle
+  style?: ViewStyle
 }
 class Fab extends React.Component<IFabProps, any> {
   private _root: any
