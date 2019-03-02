@@ -12,23 +12,23 @@ import { Root } from '@app/native-base'
 const CurrentPage = ColorListView
 
 const App = () => {
-  // return null
-  return (
-    <View
-      style={[
-        {
-          flex: 1,
-          paddingTop: 200,
-          backgroundColor: 'red'
-        }
-      ] as any}>
-      <Setup>
-        <Root>
-          <CurrentPage />
-        </Root>
-      </Setup>
-    </View>
-  )
+  return null
+  // return (
+  //   <View
+  //     style={[
+  //       {
+  //         flex: 1,
+  //         paddingTop: 200,
+  //         backgroundColor: 'red'
+  //       }
+  //     ] as any}>
+  //     <Setup>
+  //       <Root>
+  //         <CurrentPage />
+  //       </Root>
+  //     </Setup>
+  //   </View>
+  // )
 }
 
 const Document = () => (
