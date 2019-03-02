@@ -1,7 +1,7 @@
 import _ from "lodash";
 import StyleNormalizer from "./StyleNormalizer";
 
-import { StyleSheet } from "react-native";
+// import { StyleSheet } from "react-native";
 
 const styleNormalizer = new StyleNormalizer();
 

@@ -1,4 +1,4 @@
-import { PixelRatio } from 'react-native'
+import { PixelRatio } from 'react-primitives'
 
 import { IOtherVariables } from '../../../../types'
 import { platform, deviceWidth, deviceHeight } from '../../utils'

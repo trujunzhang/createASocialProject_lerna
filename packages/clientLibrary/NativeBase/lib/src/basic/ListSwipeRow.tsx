@@ -1,14 +1,36 @@
 import * as React from 'react'
-// import { ListView, View } from 'react-primitives'
+import * as ReactNative from 'react-native'
+
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
 import { SwipeRow } from './SwipeRow'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
-import { SwipeRowProperty } from '../../index.d'
 import { ListSwipeHelper } from '../utils'
 
-interface IListSwipeRowProps extends SwipeRowProperty {
+export interface ISwipeRow {
+  leftOpenValue?: number
+  rightOpenValue?: number
+  closeOnRowPress?: boolean
+  disableLeftSwipe?: boolean
+  disableRightSwipe?: boolean
+  recalculateHiddenLayout?: boolean
+  preview?: boolean
+  previewDuration?: number
+  directionalDistanceChangeThreshold?: number
+  swipeToOpenPercent?: number
+  stopLeftSwipe?: number
+  stopRightSwipe?: number
+  onRowOpen?: Function
+  onRowClose?: Function
+  left?: React.ReactElement<any>
+  // body?: React.ReactElement<any>
+  body?: any
+  right?: React.ReactElement<any>
+  style?: ReactNative.ViewStyle
+}
+
+interface IListSwipeRowProps extends ISwipeRow {
   listSwipeHelper: ListSwipeHelper
   closeOnRowBeginSwipe: boolean
   list: boolean
@@ -22,7 +44,7 @@ interface IListSwipeRowProps extends SwipeRowProperty {
   onRowDidClose: any
 }
 
-interface IListSwipeRowState {}
+interface IListSwipeRowState { }
 
 class ListSwipeRow extends React.Component<IListSwipeRowProps, IListSwipeRowState> {
   constructor(props) {

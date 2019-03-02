@@ -65,7 +65,7 @@ import { FixLeft } from './basic/custom/FixLeft'
 import { FixRight } from './basic/custom/FixRight'
 import { HeaderLayout } from './basic/custom/HeaderLayout'
 
-export * from './utils'
+import { ListSwipeHelper } from './utils/listSwipeHelper'
 
 import { platformVariables as variables } from '@app/native-base-variables'
 import { setDefaultThemeStyle } from './init'
@@ -73,6 +73,7 @@ setDefaultThemeStyle()
 
 // Theme
 export {
+  ListSwipeHelper,
   // Custom
   HeaderLayout,
   ScrollHeader,

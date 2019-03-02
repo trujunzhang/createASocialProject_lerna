@@ -1,4 +1,11 @@
-import { IListSwipeHelperOnScrollEnableChanged, IListSwipeHelperParams } from '../../index.d'
+
+// Swipe Helper.
+// =================
+export type IListSwipeHelperOnScrollEnableChanged = (enable: any) => any
+
+export interface IListSwipeHelperParams {
+  onScrollEnableChanged?: IListSwipeHelperOnScrollEnableChanged
+}
 
 export interface IEventDict<T> {
   [Key: string]: T

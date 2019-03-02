@@ -1,4 +1,4 @@
-import { Dimensions, Platform } from 'react-native'
+import { Dimensions, Platform } from 'react-primitives'
 
 export const deviceHeight = Dimensions.get('window').height
 export const deviceWidth = Dimensions.get('window').width

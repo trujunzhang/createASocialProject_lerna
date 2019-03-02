@@ -1,4 +1,4 @@
-import { Platform, StatusBar } from 'react-native'
+import { Platform, StatusBar } from 'react-primitives'
 const platform = Platform.OS
 export const fixedHeaderLeftWidth = 64
 

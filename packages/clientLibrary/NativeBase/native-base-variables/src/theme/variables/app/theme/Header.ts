@@ -4,7 +4,7 @@ import { IHeaderVariables, IHeaderFuncVariables } from '../../../../types'
 
 import { platform } from '../../utils'
 
-import { StatusBar } from 'react-native'
+import { StatusBar } from 'react-primitives'
 const toolbarDefaultBg = '#fff'
 const tabBgColor = '#F8F8F8'
 
