@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import  {TextStyle} from  'react-primitives'
 import {
   Modal,
   ViewProps,

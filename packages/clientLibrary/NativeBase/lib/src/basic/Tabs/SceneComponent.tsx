@@ -1,5 +1,4 @@
-const React = require('react')
-const { Component } = React
+import * as React from 'react'
 import { View } from 'react-primitives'
 
 const StaticContainer = require('./StaticContainer')

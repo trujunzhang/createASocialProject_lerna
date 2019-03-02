@@ -42,6 +42,7 @@ import {
   ViewProps,
   TextProps,
   // styles
+  StatusBarStyle,
   ViewStyle,
   TextStyle,
   ScaledSize,
@@ -100,6 +101,7 @@ export {
   TouchableWithoutFeedback,
   TouchableNativeFeedback,
   // styles
+  StatusBarStyle,
   ViewStyle,
   TextStyle,
   ScaledSize,

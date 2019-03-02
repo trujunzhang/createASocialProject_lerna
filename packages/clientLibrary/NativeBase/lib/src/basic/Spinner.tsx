@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
+import  {ViewStyle} from  'react-primitives'
 import { ActivityIndicator, ActivityIndicatorProps } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'

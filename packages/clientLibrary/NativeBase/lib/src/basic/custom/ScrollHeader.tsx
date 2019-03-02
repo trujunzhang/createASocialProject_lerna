@@ -1,7 +1,8 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { View, StatusBar, ViewProps, StyleSheet } from 'react-primitives'
+import { ViewStyle } from 'react-primitives'
+import { View, StatusBar, StatusBarStyle, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
@@ -31,7 +32,7 @@ interface IScrollHeaderProps {
   hasSubtitle?: boolean
   span?: boolean
   androidStatusBarColor?: string
-  iosBarStyle?: ReactNative.StatusBarStyle
+  iosBarStyle?: StatusBarStyle
   hasSegment?: boolean
   translucent?: boolean
   transparent?: boolean
