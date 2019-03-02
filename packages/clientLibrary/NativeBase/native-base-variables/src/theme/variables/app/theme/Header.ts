@@ -1,4 +1,4 @@
-import { ColorUtils as Color } from '@app/tools''
+import { ColorUtils as Color } from '@app/tools'
 
 import { IHeaderVariables, IHeaderFuncVariables } from '../../../../types'
 
