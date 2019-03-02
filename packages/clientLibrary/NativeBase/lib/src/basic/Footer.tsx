@@ -6,7 +6,7 @@ import { LodashUtils as _ } from '@app/tools'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
-import { isIphoneX } from '@app/react-native-iphone-x-helper'
+import { isIphoneX } from 'react-native-iphone-x-helper'
 
 export interface IFooterProps extends ViewProps {
   style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
@@ -101,8 +101,8 @@ class Footer extends React.Component<IFooterProps, any> {
         ]}
       />
     ) : (
-      <View ref={(c) => (this._root = c)} {...this.props} />
-    )
+        <View ref={(c) => (this._root = c)} {...this.props} />
+      )
   }
 }
 

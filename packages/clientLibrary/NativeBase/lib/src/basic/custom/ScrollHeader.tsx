@@ -5,7 +5,7 @@ import { View, StatusBar, ViewProps, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
-import { isIphoneX } from '@app/react-native-iphone-x-helper'
+import { isIphoneX } from 'react-native-iphone-x-helper'
 
 import { LodashUtils as _ } from '@app/tools'
 
@@ -135,8 +135,8 @@ class ScrollHeader extends React.Component<IScrollHeaderProps, any> {
           this.props.iosBarStyle
             ? this.props.iosBarStyle
             : platformStyle === 'material'
-            ? 'light-content'
-            : variables.iosStatusbar
+              ? 'light-content'
+              : variables.iosStatusbar
         }
         translucent={this.props.transparent ? true : this.props.translucent}
       />

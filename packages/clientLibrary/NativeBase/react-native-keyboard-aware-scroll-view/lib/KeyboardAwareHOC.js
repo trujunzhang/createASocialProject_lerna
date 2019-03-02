@@ -10,7 +10,7 @@ import ReactNative, {
   findNodeHandle,
   Animated
 } from 'react-native'
-import { isIphoneX } from '@app/react-native-iphone-x-helper'
+import { isIphoneX } from 'react-native-iphone-x-helper'
 import type { KeyboardAwareInterface } from './KeyboardAwareInterface'
 
 const _KAM_DEFAULT_TAB_BAR_HEIGHT: number = isIphoneX() ? 83 : 49

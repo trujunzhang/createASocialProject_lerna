@@ -21,11 +21,13 @@
     "typescript:once.error": "yarn build:js",
     "typescript:clean": "rm -rf ./.ts-compiled"
   },
-  "dependencies": {
+  "dependencies.last": {
     "@app/native-base": "0.6.0",
     "@app/native-base-variables": "0.6.0",
     "@app/nativebase-theme-components": "0.6.0",
-    "@app/nb-demo-shared-components": "0.6.0",
+    "@app/nb-demo-shared-components": "0.6.0"
+  },
+  "dependencies": {
     "@app/shared-components": "0.6.0",
     "@types/react-dom": "16.0.11",
     "react-dom": "16.7.0",

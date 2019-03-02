@@ -1,5 +1,5 @@
 {
-  "name": "@app/react-native-iphone-x-helper",
+  "name": "react-native-iphone-x-helper",
   "version": "1.2.0",
   "description": "A library to help you design your react-native app for the iPhone X",
   "main": "index.js",
@@ -26,6 +26,12 @@
   "homepage": "https://github.com/ptelad/react-native-iphone-x-helper#readme",
   "peerDependencies": {
     "react-native": ">=0.42.0"
+  },
+  "dependencies": {
+    "react-primitives": "0.7.0",
+    "react-dom": "^16.8.2",
+    "react-art": "16.5.2",
+    "react-native-web": "0.10.0"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",

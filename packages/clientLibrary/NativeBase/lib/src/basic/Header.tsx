@@ -5,7 +5,7 @@ import { View, ViewProps, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
-import { isIphoneX } from '@app/react-native-iphone-x-helper'
+import { isIphoneX } from 'react-native-iphone-x-helper'
 
 import { HeaderStatusBar } from './HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
