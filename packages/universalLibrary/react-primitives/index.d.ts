@@ -76,7 +76,7 @@ export const Platform: PlatformStatic
 export const ListView: any
 export const ScrollView: any
 export const FlatList: any
-// export const Picker: any
+export const KeyboardAwareScrollView: any
 
 export {
   StatusBar,

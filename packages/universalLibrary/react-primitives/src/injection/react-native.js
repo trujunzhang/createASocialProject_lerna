@@ -27,6 +27,8 @@ const {
   TouchableNativeFeedback,
 } = require('react-native');
 
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 ReactPrimitives.inject({
   StatusBar,
   StyleSheet,
