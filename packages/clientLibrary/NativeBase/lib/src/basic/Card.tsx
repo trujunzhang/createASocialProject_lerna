@@ -1,13 +1,12 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
-import { View, ListView, ViewProps } from 'react-primitives'
+import { View, ListView, ViewProps,ViewStyle } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface ICardProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   dataArray: any[]
   renderRow: any
 }

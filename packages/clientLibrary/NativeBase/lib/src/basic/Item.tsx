@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import {
   TouchableOpacity,
@@ -21,7 +21,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { LodashUtils as _ } from '@app/tools'
 
 export interface IItemProps extends TouchableOpacityProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  style?: ViewStyle | Array<ViewStyle> | any
   fixedLabel?: boolean
   floatingLabel?: boolean
   inlineLabel?: boolean

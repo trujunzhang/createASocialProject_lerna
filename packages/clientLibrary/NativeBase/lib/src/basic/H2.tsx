@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { Text, TextProps } from 'react-primitives'
 
@@ -7,7 +7,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IH2Props extends TextProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
 }
 class H2 extends React.Component<IH2Props, any> {
   private _root: any

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
 import {
   TouchableHighlight,
@@ -12,6 +11,7 @@ import {
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
+import {ViewStyle} from 'react-primitives'
 
 export interface IListItemProps extends TouchableHighlightProps {
   full?: boolean
@@ -49,7 +49,7 @@ export interface IListItemProps extends TouchableHighlightProps {
    * [android] colored ripple effect
    */
   androidRippleColor?: string
-  touchableHighlightStyle?: ReactNative.ViewStyle
+  touchableHighlightStyle?: ViewStyle
 }
 
 class ListItem extends React.Component<IListItemProps, any> {

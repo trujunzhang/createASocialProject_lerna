@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
 import {
   TouchableOpacity,
@@ -7,6 +6,7 @@ import {
   View,
   TouchableNativeFeedback,
   StyleSheet,
+  ViewStyle,
   TouchableOpacityProps
 } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -17,7 +17,7 @@ import computeProps from '../utils/computeProps'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IButtonProps extends TouchableOpacityProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   block: boolean
   primary: boolean
   transparent: boolean

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
 import {
   View,
@@ -8,6 +7,7 @@ import {
   ActionSheetIOS,
   TouchableOpacity,
   ViewProps,
+  ViewStyle,
   FlatList,
   Dimensions
 } from 'react-primitives'
@@ -23,7 +23,7 @@ import { ListItem } from './ListItem'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IActionSheetContainerProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   autoHide: boolean
   duration: number
 }

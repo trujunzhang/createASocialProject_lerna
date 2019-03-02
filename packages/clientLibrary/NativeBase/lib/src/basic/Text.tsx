@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { Text as RNText, TextProps } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
@@ -8,7 +8,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface ITextProps extends TextProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   uppercase: boolean
 }
 class Text extends React.Component<ITextProps, any> {

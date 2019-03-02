@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import computeProps from '../utils/computeProps'
 // import Button from './../Button';
@@ -27,7 +27,7 @@ const AnimatedFab = Animated.createAnimatedComponent(Button)
 export interface IFabProps {
   active?: boolean
   direction?: 'down' | 'up' | 'left' | 'right'
-  containerStyle?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  containerStyle?: ViewStyle | Array<ViewStyle>
   onPress?: () => void
   position?: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
   style?: ReactNative.ViewStyle

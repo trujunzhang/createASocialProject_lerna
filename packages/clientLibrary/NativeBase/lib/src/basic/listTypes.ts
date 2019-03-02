@@ -1,13 +1,14 @@
 
-import * as ReactNative from 'react-native'
-import {ScrollViewProperties} from 'react-primitives'
+
+import * as React from "react";
+import {ScrollViewProperties, ListViewProperties} from 'react-primitives'
 
 /**
  * Override React ListViewProperties
  */
 interface IReactListViewProperties
     extends ScrollViewProperties,
-    React.Props<ReactNative.ListView> {
+      ListViewProperties {
     /**
      * Flag indicating whether empty section headers should be rendered.
      * In the future release empty section headers will be rendered by
@@ -89,12 +90,12 @@ interface IReactListViewProperties
      * is exactly what was put into the data source, but it's also possible to
      * provide custom extractors.
      */
-    renderRow?: (
-        rowData: any,
-        sectionID: string | number,
-        rowID: string | number,
-        highlightRow?: boolean
-    ) => React.ReactElement<any>
+    // renderRow?: (
+    //     rowData: any,
+    //     sectionID: string | number,
+    //     rowID: string | number,
+    //     highlightRow?: boolean
+    // ) => React.ReactElement<any>
 
     /**
      * A function that returns the scrollable component in which the list rows are rendered.
@@ -143,7 +144,8 @@ interface IReactListViewProperties
      */
     stickyHeaderIndices?: number[]
 
-    ref?: React.Ref<ReactNative.ListView & ReactNative.ScrollView & ReactNative.View>
+    // ref?: React.Ref<ReactNative.ListView & ReactNative.ScrollView & ReactNative.View>
+  ref?: any
 }
 
 /**
@@ -160,13 +162,13 @@ export interface IListBaseProperty extends IReactListViewProperties {
      * Array of data chunks to render iteratively.
      */
     dataArray?: Array<any>
-    renderRow?: (
-        rowData: any,
-        sectionID: string | number,
-        rowID: string | number,
-        highlightRow?: boolean
-    ) => React.ReactElement<any>
-    dataSource?: ReactNative.ListViewDataSource
+    // renderRow?: (
+    //     rowData: any,
+    //     sectionID: string | number,
+    //     rowID: string | number,
+    //     highlightRow?: boolean
+    // ) => React.ReactElement<any>
+    // dataSource?: ReactNative.ListViewDataSource
     disableLeftSwipe?: boolean
     disableRightSwipe?: boolean
     rightOpenValue?: number
@@ -191,44 +193,4 @@ export interface IListBaseProperty extends IReactListViewProperties {
     swipeToOpenPercent?: number
     closeOnRowBeginSwipe?: boolean
 }
-/**
- * see Widget ListItem.js
- */
-interface ListItem extends ReactNative.TouchableOpacityProperties {
-    full?: boolean
-    header?: boolean
-    noBorder?: boolean
-    noIndent?: boolean
-    /**
-     * Aligns icon to the right of ListItem.
-     * Default: false
-     */
-    iconRight?: boolean
-    /**
-     * Aligns icon to the left of ListItem.
-     * Default: true
-     */
-    iconLeft?: boolean
-    icon?: boolean
-    avatar?: boolean
-    thumbnail?: boolean
-    button?: boolean
-    /**
-     * Helps to organize and group the list items.
-     */
-    itemDivider?: boolean
-    /**
-     * Sub caption for List Item.
-     */
 
-    note?: string
-    itemHeader?: boolean
-    first?: boolean
-    last?: boolean
-    selected?: boolean
-    /**
-     * [android] colored ripple effect
-     */
-    androidRippleColor?: string
-    touchableHighlightStyle?: ReactNative.ViewStyle
-}

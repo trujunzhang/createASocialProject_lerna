@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { View, ViewProps } from 'react-primitives'
-import * as ReactNative from 'react-native'
+import { View, ViewProps,ViewStyle } from 'react-primitives'
+
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { ToastContainer as Toast } from './ToastContainer'
@@ -8,7 +8,7 @@ import { ActionSheetContainer as ActionSheet } from './Actionsheet'
 import { Text } from './Text'
 
 export interface IRootProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
 }
 class Root extends React.Component<IRootProps, any> {
   private _root: any

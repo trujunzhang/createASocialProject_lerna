@@ -1,13 +1,13 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
-import { View, ViewProps } from 'react-primitives'
+import { View, ViewProps,ViewStyle } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IFormProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
 }
 class Form extends React.Component<IFormProps, any> {
   private _root: any

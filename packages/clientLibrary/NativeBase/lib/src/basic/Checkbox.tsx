@@ -1,8 +1,6 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
 import * as PropTypes from 'prop-types'
-import { TouchableOpacity, TouchableOpacityProps } from 'react-primitives'
-// import IconNB from "react-native-vector-icons/Ionicons";
+import { TouchableOpacity, TouchableOpacityProps,ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
@@ -10,7 +8,7 @@ import { LodashUtils as _ } from '@app/tools'
 import computeProps from '../utils/computeProps'
 
 export interface ICheckBoxProps extends TouchableOpacityProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   color?: string
   checked: boolean
 }

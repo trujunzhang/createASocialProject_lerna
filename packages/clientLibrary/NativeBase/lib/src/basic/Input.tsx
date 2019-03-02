@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { TextInput, TextProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -8,7 +8,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import NativeBaseComponent from './Base/NativeBaseComponent'
 
 export interface IInputProps extends TextProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
 }
 class Input extends NativeBaseComponent {
   private _root: any

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { View, StatusBar, ViewProps, StyleSheet } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -22,7 +22,7 @@ interface IScrollHeaderProps {
    * Default: regular
    */
   rounded?: boolean
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  style?: ViewStyle | Array<ViewStyle> | any
   /**
    * It is advisable to use hasTabs prop with Header while using Tab
    */

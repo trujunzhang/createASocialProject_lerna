@@ -1,7 +1,7 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
-import { View, ViewProps } from 'react-primitives'
+import { View, ViewProps,ViewStyle } from 'react-primitives'
 
 import { platformVariables as variables } from '@app/native-base-variables'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -9,7 +9,7 @@ import computeProps from '../utils/computeProps'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IInputGroupProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   /**
    * Wraps the textbox with predefined border options.
    * Default: underline

@@ -1,18 +1,16 @@
 import * as React from 'react'
 
-import * as ReactNative from 'react-native'
-import { View, ViewProps } from 'react-primitives'
-
+import { View, ScaledSize, ViewStyle } from 'react-primitives'
 // import RNDrawer from "react-native-drawer";
 
 /**
  * vendor react-native-drawer
  */
 export interface IDrawerStyles {
-  drawer?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-  main?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-  drawerOverlay?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
-  mainOverlay?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  drawer?: ViewStyle | Array<ViewStyle>
+  main?: ViewStyle | Array<ViewStyle>
+  drawerOverlay?: ViewStyle | Array<ViewStyle>
+  mainOverlay?: ViewStyle | Array<ViewStyle>
 }
 
 export interface IDrawerProps {
@@ -24,7 +22,7 @@ export interface IDrawerProps {
   open?: boolean
   closedDrawerOffset?: number
   content?: any
-  deviceScreen?: ReactNative.ScaledSize
+  deviceScreen?: ScaledSize
   disabled?: boolean
   initializeOpen?: boolean
   negotiatePan?: boolean
@@ -57,7 +55,7 @@ export default class Drawer extends React.Component<IDrawerProps, any> {
   }
 }
 
-;(Drawer as any).defaultProps = {
+; (Drawer as any).defaultProps = {
   type: 'overlay',
   tapToClose: true,
   openDrawerOffset: 0.2,

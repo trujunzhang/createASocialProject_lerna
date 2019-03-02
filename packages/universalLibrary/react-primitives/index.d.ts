@@ -37,9 +37,13 @@ import {
   SwitchProps,
   ActivityIndicatorProps,
   ScrollViewProperties,
+  ListViewProperties,
   ImageProps,
   ViewProps,
   TextProps,
+  // styles
+  ViewStyle,
+  ScaledSize,
   // Touch
   PanResponder,
   TouchableOpacity,
@@ -94,6 +98,9 @@ export {
   TouchableHighlight,
   TouchableWithoutFeedback,
   TouchableNativeFeedback,
+  // styles
+  ViewStyle,
+  ScaledSize,
   // Props
   TouchableHighlightProps,
   PickerProps,
@@ -103,6 +110,7 @@ export {
   ActivityIndicatorProps,
   TouchableOpacityProps,
   ScrollViewProperties,
+  ListViewProperties,
   ImageProps,
   ViewProps,
   TextProps

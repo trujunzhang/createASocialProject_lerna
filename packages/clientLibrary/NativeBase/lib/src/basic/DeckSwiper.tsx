@@ -1,13 +1,13 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
-import { View, Animated, PanResponder, ViewProps } from 'react-primitives'
+import { View, Animated, PanResponder, ViewProps,ViewStyle } from 'react-primitives'
 import clamp from 'clamp'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IDeckSwiperProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   /**
    * Array<any>
    */

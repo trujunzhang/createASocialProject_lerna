@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { Picker, PickerProps } from 'react-primitives'
@@ -7,7 +7,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 interface IPickerNBProps extends PickerProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   mode?: 'dialog' | 'dropdown'
   iosHeader?: string
   inlineLabel?: boolean

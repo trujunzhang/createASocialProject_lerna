@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { TextInput, TextInputProps } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -8,7 +8,7 @@ import computeProps from '../utils/computeProps'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface ITextareaProps extends TextInputProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   rowSpan: number
   bordered: boolean
   underline: boolean

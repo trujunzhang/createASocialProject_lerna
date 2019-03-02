@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
@@ -7,7 +7,7 @@ import { connectStyle, StyleProvider } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
 import { TabHeading, Text, TabContainer } from './../../index'
-import { ViewProps } from 'react-primitives'
+import { ViewProps,ViewStyle } from 'react-primitives'
 
 import { Animated } from 'react-primitives'
 const Button = require('./Button')

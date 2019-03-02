@@ -1,8 +1,8 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 
-import { View, Modal, Platform, Animated, ViewProps } from 'react-primitives'
+import { View, Modal, Platform, Animated, ViewProps,ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { Text } from './Text'
 import { Button } from './Button'
@@ -11,7 +11,7 @@ import { Toast } from './Toast'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IToastContainerProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
 }
 
 class ToastContainer extends React.Component<IToastContainerProps, any> {

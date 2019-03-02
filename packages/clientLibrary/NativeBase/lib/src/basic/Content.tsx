@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { KeyboardAwareScrollView } from '@app/react-native-keyboard-aware-scroll-view'
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -8,7 +8,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import { isIphoneX } from 'react-native-iphone-x-helper'
 
 export interface IContentProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  style?: ViewStyle | Array<ViewStyle> | any
   /**
    * The theme prop can be applied to any component of NativeBase.
    */
@@ -20,7 +20,7 @@ export interface IContentProps {
   enableResetScrollToCoords?: boolean
   contentOffset?: Object | any
   scrollEnabled?: boolean
-  contentContainerStyle?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  contentContainerStyle?: ViewStyle | Array<ViewStyle>
   keyboardShouldPersistTaps?: string | any
   keyboardDismissMode?: string | any
 }

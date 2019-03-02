@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
 import { Picker, Modal, View, ViewProps, FlatList } from 'react-primitives'
@@ -22,7 +22,7 @@ import computeProps from '../utils/computeProps'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 interface IPickerNBProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   mode?: 'dialog' | 'dropdown'
   iosHeader?: string
   inlineLabel?: boolean

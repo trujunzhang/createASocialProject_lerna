@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { Image, ImageProps } from 'react-primitives'
 
@@ -8,7 +8,7 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface IThumbnailProps extends ImageProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  style?: ViewStyle | Array<ViewStyle> | any
   square: boolean
   circular: boolean
   size: number

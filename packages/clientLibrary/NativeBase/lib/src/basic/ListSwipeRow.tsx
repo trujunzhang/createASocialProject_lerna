@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 

@@ -1,4 +1,4 @@
-import * as ReactNative from 'react-native'
+
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
 // import { InteractionManager, ViewProps} from "../../utils";
@@ -20,7 +20,7 @@ const { DefaultTabBar } = require('./DefaultTabBar')
 const { ScrollableTabBar } = require('./ScrollableTabBar')
 
 export interface IScrollableTabViewProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
 }
 class ScrollableTabView extends React.Component<IScrollableTabViewProps, any> {
   render() {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
 import { ActivityIndicator, ActivityIndicatorProps } from 'react-primitives'
 
@@ -8,7 +8,7 @@ import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 
 export interface ISpinnerProps extends ActivityIndicatorProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+  style?: ViewStyle | Array<ViewStyle>
   color: string
   inverse: boolean
 }

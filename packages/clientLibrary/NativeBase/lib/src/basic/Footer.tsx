@@ -1,7 +1,7 @@
 import * as React from 'react'
-import * as ReactNative from 'react-native'
+
 import * as PropTypes from 'prop-types'
-import { View, ViewProps } from 'react-primitives'
+import { View, ViewProps,ViewStyle } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { platformVariables as variable } from '@app/native-base-variables'
@@ -9,7 +9,7 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { isIphoneX } from 'react-native-iphone-x-helper'
 
 export interface IFooterProps extends ViewProps {
-  style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle> | any
+  style?: ViewStyle | Array<ViewStyle> | any
 }
 class Footer extends React.Component<IFooterProps, any> {
   private _root: any
