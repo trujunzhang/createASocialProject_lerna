@@ -19,7 +19,7 @@
     "typescript": "echo 'typescript watch'",
     "typescript:once": "tsc",
     "build:js": "yarn typescript:once",
-    "build.current.pending": "yarn build:all",
+    "build.current": "yarn build:all",
     "typescript:once.error": "yarn build:js",
     "typescript:clean": "rm -rf ./.ts-compiled"
   },

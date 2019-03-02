@@ -3,13 +3,19 @@
   "version": "0.2.2",
   "main.last": "index.js",
   "main.dist": "dist/index.js",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "description": "Style your components in one place.",
   "scripts": {
     "depenence.update": "ncu -u",
-    "compile": "rm -rf dist/* && babel . --out-dir dist --ignore node_modules,babel.config.js,_tests_,test-utils,examples,dist --source-maps",
-    "transpile": "yarn compile",
-    "prepublish": "yarn transpile"
+    "compile.pending": "rm -rf dist/* && babel . --out-dir dist --ignore node_modules,babel.config.js,_tests_,test-utils,examples,dist --source-maps",
+    "transpile.pending": "yarn compile",
+    "prepublish.pending": "yarn transpile",
+    "build.reset": "rm -rf build",
+    "build.clean": "yarn build.reset",
+    "build:js": "tsc -p tsconfig.lib.json",
+    "build-lib": "yarn build.clean && yarn build:js",
+    "build.current": "yarn run build-lib",
+    "postinstall": "yarn build-lib"
   },
   "dependencies": {
     "@app/tools": "0.6.0",
@@ -20,9 +26,8 @@
     "@types/react-native": "0.57.17",
     "react": "16.5.0",
     "react-primitives": "0.7.0",
-    "react-dom": "^16.8.2",
-    "react-art": "16.5.2",
-    "react-native-web": "0.10.0"
+    "react-dom": "16.8.2",
+    "react-art": "16.5.2"
   },
   "peerDependencies": {
     "react": "*",

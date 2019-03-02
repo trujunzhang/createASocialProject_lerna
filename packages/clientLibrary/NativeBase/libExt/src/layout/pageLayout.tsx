@@ -48,31 +48,31 @@ class PageLayout extends React.Component<IPageLayoutProps, IPageLayoutState> {
     }
   }
 
-  renderPageContent() {
-    const { noScroll } = this.props as PageLayoutWithDefaults
+  // renderPageContent() {
+  //   const { noScroll } = this.props as PageLayoutWithDefaults
 
-    const { children } = this.props
-    if (noScroll === true) {
-      return children
-    }
+  //   const { children } = this.props
+  //   if (noScroll === true) {
+  //     return children
+  //   }
 
-    const { listSwipeHelper } = this.state
-    const childrenWithProps = React.Children.map(children, (child: any) => {
-      return React.cloneElement(child, { listSwipeHelper })
-    })
+  //   const { listSwipeHelper } = this.state
+  //   const childrenWithProps = React.Children.map(children, (child: any) => {
+  //     return React.cloneElement(child, { listSwipeHelper })
+  //   })
 
-    return (
-      <ScrollView
-        scrollEventThrottle={16}
-        onScroll={() => {
-          listSwipeHelper.onRowCloseOrPressOrScroll(true)
-        }}
-        scrollEnabled={this.state.scrollEnabled}
-        style={[this.props.style]}>
-        {childrenWithProps}
-      </ScrollView>
-    )
-  }
+  //   return (
+  //     <ScrollView
+  //       scrollEventThrottle={16}
+  //       onScroll={() => {
+  //         listSwipeHelper.onRowCloseOrPressOrScroll(true)
+  //       }}
+  //       scrollEnabled={this.state.scrollEnabled}
+  //       style={[this.props.style]}>
+  //       {childrenWithProps}
+  //     </ScrollView>
+  //   )
+  // }
 
   renderPageHeader() {
     const { toolbarParams, renderHeader } = this.props
@@ -96,11 +96,11 @@ class PageLayout extends React.Component<IPageLayoutProps, IPageLayoutState> {
   }
 
   render() {
+    // <Content scrollEnabled={this.state.scrollEnabled}>{this.renderPageContent()}</Content>
     return (
       <Container>
         {this.renderPageHeader()}
 
-        <Content scrollEnabled={this.state.scrollEnabled}>{this.renderPageContent()}</Content>
       </Container>
     )
   }
