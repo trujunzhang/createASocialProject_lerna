@@ -23,15 +23,17 @@ const App = () => {
           backgroundColor: 'red'
         }
       }>
+      <Setup>
       <Text
         name="Swatch Name"
         style={{ color: '#ccc', fontWeight: 'bold' }}
       >
-        {name}
+        {'wh'}
       </Text>
       <Text name="Swatch Hex" style={{ color: '#ccc' }}>
         {'djzhang'}
       </Text>
+      </Setup>
     </View>
   )
 }
