@@ -137,24 +137,24 @@ class Content extends React.Component<IContentProps, any> {
         {this.props.children}
       </KeyboardAwareScrollView>
     ) : (
-        <KeyboardAwareScrollView
-          automaticallyAdjustContentInsets={false}
-          resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
-          keyboardShouldPersistTaps={
-            this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
-          }
-          ref={(c) => {
-            this._scrollview = c
-            this._root = c
-          }}
-          {...this.props}
-          contentContainerStyle={[
-            { padding: this.props.padder ? variables.contentPadding : undefined },
-            this.props.contentContainerStyle
-          ]}>
-          {this.props.children}
-        </KeyboardAwareScrollView>
-      )
+      <KeyboardAwareScrollView
+        automaticallyAdjustContentInsets={false}
+        resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
+        keyboardShouldPersistTaps={
+          this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
+        }
+        ref={(c) => {
+          this._scrollview = c
+          this._root = c
+        }}
+        {...this.props}
+        contentContainerStyle={[
+          { padding: this.props.padder ? variables.contentPadding : undefined },
+          this.props.contentContainerStyle
+        ]}>
+        {this.props.children}
+      </KeyboardAwareScrollView>
+    )
   }
 }
 

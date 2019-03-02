@@ -52,205 +52,73 @@ import { pickerTheme } from './Picker'
 import { pageLayoutTheme } from './PageLayout'
 
 import { themeVariables } from '@app/native-base-variables'
+
 export const getThemeStyle = (variables: themeVariables) => {
+  const PickerNB = Object.assign(pickerTheme(variables), {
+    'NativeBase.Button': {
+      'NativeBase.Text': {}
+    }
+  })
+
   const theme = {
     variables,
     NativeBase: {
-      ScrollHeader: scrollHeaderTheme(variables)
-    },
-    // 'NativeBase.ScrollHeader': {
-    //   ...scrollHeaderTheme(variables)
-    // },
+      ScrollHeader: scrollHeaderTheme(variables),
+      HeaderLayout: headerLayoutTheme(variables),
 
-    'NativeBase.HeaderLayout': {
-      ...headerLayoutTheme(variables)
-    },
-
-    'NativeBase.PageLayout': {
-      ...pageLayoutTheme(variables)
-    },
-
-    'NativeBase.FixLeft': {
-      ...fixLeftTheme(variables)
-    },
-
-    'NativeBase.FixRight': {
-      ...fixRightTheme(variables)
-    },
-
-    'NativeBase.Left': {
-      ...leftTheme(variables)
-    },
-    'NativeBase.Right': {
-      ...rightTheme(variables)
-    },
-    'NativeBase.Body': {
-      ...bodyTheme(variables)
-    },
-
-    'NativeBase.Header': {
-      ...headerTheme(variables)
-    },
-
-    'NativeBase.Button': {
-      ...buttonTheme(variables)
-    },
-
-    'NativeBase.Title': {
-      ...titleTheme(variables)
-    },
-    'NativeBase.Subtitle': {
-      ...subtitleTheme(variables)
-    },
-
-    'NativeBase.InputGroup': {
-      ...inputGroupTheme(variables)
-    },
-
-    'NativeBase.Input': {
-      ...inputTheme(variables)
-    },
-
-    'NativeBase.Badge': {
-      ...badgeTheme(variables)
-    },
-
-    'NativeBase.CheckBox': {
-      ...checkBoxTheme(variables)
-    },
-
-    'NativeBase.Radio': {
-      ...radioTheme(variables)
-    },
-
-    'NativeBase.Card': {
-      ...cardTheme(variables)
-    },
-
-    'NativeBase.CardItem': {
-      ...cardItemTheme(variables)
-    },
-
-    'NativeBase.Toast': {
-      ...toastTheme(variables)
-    },
-
-    'NativeBase.Ul': {
-      ...ulTheme(variables)
-    },
-    'NativeBase.Li': {
-      ...liTheme(variables)
-    },
-    'NativeBase.P': {
-      ...pTheme(variables)
-    },
-    'NativeBase.H1': {
-      ...h1Theme(variables)
-    },
-    'NativeBase.H2': {
-      ...h2Theme(variables)
-    },
-    'NativeBase.H3': {
-      ...h3Theme(variables)
-    },
-    'NativeBase.Form': {
-      ...formTheme(variables)
-    },
-
-    'NativeBase.Container': {
-      ...containerTheme(variables)
-    },
-    'NativeBase.Content': {
-      ...contentTheme(variables)
-    },
-
-    'NativeBase.Footer': {
-      ...footerTheme(variables)
-    },
-
-    'NativeBase.Tabs': {
-      flex: 1
-    },
-
-    'NativeBase.FooterTab': {
-      ...footerTabTheme(variables)
-    },
-
-    'NativeBase.ListItem': {
-      ...listItemTheme(variables)
-    },
-
-    'NativeBase.ListItem1': {
-      ...listItemTheme(variables)
-    },
-
-    'NativeBase.Icon': {
-      ...iconTheme(variables)
-    },
-    'NativeBase.IconNB': {
-      ...iconTheme(variables)
-    },
-    'NativeBase.Text': {
-      ...textTheme(variables)
-    },
-    'NativeBase.Spinner': {
-      ...spinnerTheme(variables)
-    },
-
-    'NativeBase.Fab': {
-      ...fabTheme(variables)
-    },
-
-    'NativeBase.Item': {
-      ...itemTheme(variables)
-    },
-
-    'NativeBase.Label': {
-      ...labelTheme(variables)
-    },
-
-    'NativeBase.Textarea': {
-      ...textAreaTheme(variables)
-    },
-
-    'NativeBase.PickerNB': {
-      ...pickerTheme(variables),
-      'NativeBase.Button': {
-        'NativeBase.Text': {}
-      }
-    },
-
-    'NativeBase.Tab': {
-      ...tabTheme(variables)
-    },
-
-    'NativeBase.Segment': {
-      ...segmentTheme(variables)
-    },
-
-    'NativeBase.TabBar': {
-      ...tabBarTheme(variables)
-    },
-    'NativeBase.ViewNB': {
-      ...viewTheme(variables)
-    },
-    'NativeBase.TabHeading': {
-      ...tabHeadingTheme(variables)
-    },
-    'NativeBase.TabContainer': {
-      ...tabContainerTheme(variables)
-    },
-    'NativeBase.Switch': {
-      ...switchTheme(variables)
-    },
-    'NativeBase.Separator': {
-      ...separatorTheme(variables)
-    },
-    'NativeBase.SwipeRow': {
-      ...swipeRowTheme(variables)
-    },
-    'NativeBase.Thumbnail': {
-      ...thumbnailTheme(variables)
+      PageLayout: pageLayoutTheme(variables),
+      FixLeft: fixLeftTheme(variables),
+      FixRight: fixRightTheme(variables),
+      Left: leftTheme(variables),
+      Right: rightTheme(variables),
+      Body: bodyTheme(variables),
+      Header: headerTheme(variables),
+      Button: buttonTheme(variables),
+      Title: titleTheme(variables),
+      Subtitle: subtitleTheme(variables),
+      InputGroup: inputGroupTheme(variables),
+      Input: inputTheme(variables),
+      Badge: badgeTheme(variables),
+      CheckBox: checkBoxTheme(variables),
+      Radio: radioTheme(variables),
+      Card: cardTheme(variables),
+      CardItem: cardItemTheme(variables),
+      Toast: toastTheme(variables),
+      Ul: ulTheme(variables),
+      Li: liTheme(variables),
+      P: pTheme(variables),
+      H1: h1Theme(variables),
+      H2: h2Theme(variables),
+      H3: h3Theme(variables),
+      Form: formTheme(variables),
+      Container: containerTheme(variables),
+      Content: contentTheme(variables),
+      Footer: footerTheme(variables),
+      Tabs: {
+        flex: 1
+      },
+      FooterTab: footerTabTheme(variables),
+      ListItem: listItemTheme(variables),
+      ListItem1: listItemTheme(variables),
+      Icon: iconTheme(variables),
+      IconNB: iconTheme(variables),
+      Text: textTheme(variables),
+      Spinner: spinnerTheme(variables),
+      Fab: fabTheme(variables),
+      Item: itemTheme(variables),
+      Label: labelTheme(variables),
+      Textarea: textAreaTheme(variables),
+      PickerNB,
+      Tab: tabTheme(variables),
+      Segment: segmentTheme(variables),
+      TabBar: tabBarTheme(variables),
+      ViewNB: viewTheme(variables),
+      TabHeading: tabHeadingTheme(variables),
+      TabContainer: tabContainerTheme(variables),
+      Switch: switchTheme(variables),
+      Separator: separatorTheme(variables),
+      SwipeRow: swipeRowTheme(variables),
+      Thumbnail: thumbnailTheme(variables)
     }
   }
 
