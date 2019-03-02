@@ -1,16 +1,15 @@
-import { PropTypes } from "prop-types";
-import resolveIncludes from "./resolveIncludes";
-import mergeComponentAndThemeStyles from "./mergeComponentAndThemeStyles";
-import normalizeStyle from "./StyleNormalizer/normalizeStyle";
+import * as PropTypes from 'prop-types'
+import resolveIncludes from './resolveIncludes'
+import mergeComponentAndThemeStyles from './mergeComponentAndThemeStyles'
+import normalizeStyle from './StyleNormalizer/normalizeStyle'
 
 // Privates, ideally those should be symbols
-const THEME_STYLE = "@@shoutem.theme/themeStyle";
-const THEME_STYLE_CACHE = "@@shoutem.theme/themeCachedStyle";
+const THEME_STYLE = '@@shoutem.theme/themeStyle'
+const THEME_STYLE_CACHE = '@@shoutem.theme/themeCachedStyle'
 
-let defaultTheme;
+let defaultTheme
 
-const resolveStyle = (style, baseStyle) =>
-  normalizeStyle(resolveIncludes(style, baseStyle));
+const resolveStyle = (style, baseStyle?) => normalizeStyle(resolveIncludes(style, baseStyle))
 
 /**
  * The theme defines the application style, and provides methods to
@@ -36,17 +35,17 @@ const resolveStyle = (style, baseStyle) =>
  *   }
  * }
  */
-export default class Theme {
+export class Theme {
   constructor(themeStyle) {
-    this[THEME_STYLE] = resolveStyle(themeStyle);
-    this[THEME_STYLE_CACHE] = {};
+    this[THEME_STYLE] = resolveStyle(themeStyle)
+    this[THEME_STYLE_CACHE] = {}
   }
 
   /**
    * Sets the given style as a default theme style.
    */
   static setDefaultThemeStyle(style) {
-    defaultTheme = new Theme(style);
+    defaultTheme = new Theme(style)
   }
 
   /**
@@ -55,10 +54,10 @@ export default class Theme {
    */
   static getDefaultTheme() {
     if (!defaultTheme) {
-      defaultTheme = new Theme({});
+      defaultTheme = new Theme({})
     }
 
-    return defaultTheme;
+    return defaultTheme
   }
 
   /**
@@ -74,13 +73,10 @@ export default class Theme {
    */
   createComponentStyle(componentName, defaultStyle) {
     if (this[THEME_STYLE_CACHE][componentName]) {
-      return this[THEME_STYLE_CACHE][componentName];
+      return this[THEME_STYLE_CACHE][componentName]
     }
 
-    const componentIncludedStyle = resolveStyle(
-      defaultStyle,
-      this[THEME_STYLE]
-    );
+    const componentIncludedStyle = resolveStyle(defaultStyle, this[THEME_STYLE])
 
     /**
      * This is static component style (static per componentName). This style can only
@@ -91,12 +87,12 @@ export default class Theme {
       componentIncludedStyle,
       this[THEME_STYLE][componentName],
       this[THEME_STYLE]
-    );
+    )
 
-    return this[THEME_STYLE_CACHE][componentName];
+    return this[THEME_STYLE_CACHE][componentName]
   }
 }
 
 export const ThemeShape = PropTypes.shape({
   createComponentStyle: PropTypes.func.isRequired
-});
+})

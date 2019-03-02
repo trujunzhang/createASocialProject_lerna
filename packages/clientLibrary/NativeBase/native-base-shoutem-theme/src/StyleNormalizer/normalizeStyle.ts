@@ -1,4 +1,7 @@
-import _ from "lodash";
+// import _ from "lodash";
+import {
+  LodashUtils as _
+} from '@app/tools'
 import StyleNormalizer from "./StyleNormalizer";
 
 // import { StyleSheet } from "react-native";

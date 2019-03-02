@@ -1,4 +1,7 @@
-import _ from "lodash";
+// import _ from "lodash";
+import {
+  LodashUtils as _
+} from '@app/tools'
 import customMerge from "./customMerge";
 
 /**
@@ -88,7 +91,7 @@ export function resolveComponentStyle(
   styleNames = [],
   themeStyle = {},
   parentStyle = {},
-  themeCache
+  themeCache?
 ) {
   // const mergedStyle = _.merge({},
   //   themeStyle,

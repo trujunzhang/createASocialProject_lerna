@@ -1,6 +1,8 @@
-import _ from 'lodash';
-
-const createShorthand = (name, type) => ({ name, type: _.isUndefined(type) ? name : type });
+// import _ from 'lodash';
+import {
+  LodashUtils as _
+} from '@app/tools'
+const createShorthand = (name, type?) => ({ name, type: _.isUndefined(type) ? name : type });
 
 export const SIDES = createShorthand('Sides', '');
 export const CORNERS = createShorthand('Corners', '');
@@ -22,6 +24,7 @@ export const BOTTOM_LEFT = 'BottomLeft';
 // to create shorthand normalizer.
 
 class ShorthandsNormalizerFactory {
+  private createNormalizersMap: any
   constructor() {
     this.createNormalizersMap = {
       [SIDES.name]: this.createAllSidesNormalizer,

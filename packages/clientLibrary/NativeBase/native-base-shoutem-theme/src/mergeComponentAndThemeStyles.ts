@@ -1,5 +1,8 @@
-import * as _ from 'lodash';
+// import * as _ from 'lodash';
 
+import {
+  LodashUtils as _
+} from '@app/tools'
 export default function mergeComponentAndThemeStyles(
   componentStyle, themeComponentStyle, themeStyle) {
   const componentThemedStyle = _.merge({}, componentStyle, themeComponentStyle);

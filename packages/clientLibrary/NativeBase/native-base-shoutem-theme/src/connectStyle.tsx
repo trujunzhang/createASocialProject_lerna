@@ -1,11 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import hoistStatics from 'hoist-non-react-statics';
-import * as _ from 'lodash';
+import {
+  LodashUtils as _
+} from '@app/tools'
+// import * as _ from 'lodash';
 import normalizeStyle from './StyleNormalizer/normalizeStyle';
-// import { StyleSheet } from "react-native";
 
-import Theme, { ThemeShape } from "./Theme";
+import  {Theme, ThemeShape } from "./Theme";
 import { resolveComponentStyle } from "./resolveComponentStyle";
 
 const themeCache = {};
@@ -85,11 +87,12 @@ function getConcreteStyle(style) {
  * @returns {StyledComponent} The new component that will handle
  * the styling of the wrapped component.
  */
-export default (
+export const connectStyle  =
+(
   componentStyleName,
   componentStyle = {},
   mapPropsToStyleNames,
-  options = {}
+  options: any = {}
 ) => {
   function getComponentDisplayName(WrappedComponent) {
     return WrappedComponent.displayName || WrappedComponent.name || "Component";
@@ -112,7 +115,9 @@ export default (
       );
     }
 
-    class StyledComponent extends React.Component {
+    class StyledComponent extends React.Component<any, any>{
+      private wrappedInstance: any
+      private _root: any
       static contextTypes = {
         theme: ThemeShape,
         // The style inherited from the parent
@@ -309,7 +314,7 @@ export default (
       }
 
       resolveAddedProps() {
-        const addedProps = {};
+        const addedProps: any = {};
         if (options.withRef) {
           addedProps.ref = "wrappedInstance";
         }
@@ -331,7 +336,7 @@ export default (
       }
 
       resolveStyle(context, props, styleNames) {
-        let parentStyle = {};
+        let parentStyle: any = {};
 
         const theme = getTheme(context);
         const themeStyle = theme.createComponentStyle(

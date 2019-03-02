@@ -1,12 +1,12 @@
-import React, { Children } from 'react';
-import PropTypes from 'prop-types';
-import Theme, { ThemeShape } from './Theme';
+import * as React from 'react';
+import  * as PropTypes from 'prop-types';
+import  { Theme,ThemeShape } from './Theme';
 import normalizeStyle from './StyleNormalizer/normalizeStyle';
 
 /**
  *  Provides a theme to child components trough context.
  */
-export default class StyleProvider extends React.Component {
+export class StyleProvider extends React.Component<any, any>{
   static propTypes = {
     children: PropTypes.element.isRequired,
     style: PropTypes.object,
@@ -48,6 +48,6 @@ export default class StyleProvider extends React.Component {
   render() {
     const { children } = this.props;
 
-    return Children.only(children);
+    return React.Children.only(children);
   }
 }

@@ -2,7 +2,8 @@
   "name": "@app/native-base-shoutem-theme",
   "version": "0.2.2",
   "main.last": "index.js",
-  "main": "dist/index.js",
+  "main.dist": "dist/index.js",
+  "main": "index.ts",
   "description": "Style your components in one place.",
   "scripts": {
     "depenence.update": "ncu -u",
@@ -11,8 +12,10 @@
     "prepublish": "yarn transpile"
   },
   "dependencies": {
+    "@app/tools": "0.6.0",
     "hoist-non-react-statics": "3.2.1",
     "lodash": "4.17.11",
+    "@types/prop-types": "15.5.8",
     "prop-types": "15.6.2",
     "@types/react": "16.7.7",
     "@types/react-native": "0.57.17",

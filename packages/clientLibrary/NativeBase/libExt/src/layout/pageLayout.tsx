@@ -48,7 +48,7 @@ class PageLayout extends React.Component<IPageLayoutProps, IPageLayoutState> {
     }
   }
 
-  renderContent() {
+  renderPageContent() {
     const { noScroll } = this.props as PageLayoutWithDefaults
 
     const { children } = this.props
@@ -100,7 +100,7 @@ class PageLayout extends React.Component<IPageLayoutProps, IPageLayoutState> {
       <Container>
         {this.renderPageHeader()}
 
-        <Content scrollEnabled={this.state.scrollEnabled}>{this.renderContent()}</Content>
+          <Content scrollEnabled={this.state.scrollEnabled}>{this.renderPageContent()}</Content>
       </Container>
     )
   }

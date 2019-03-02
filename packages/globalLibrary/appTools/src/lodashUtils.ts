@@ -1,7 +1,9 @@
 import * as _ from 'lodash'
 import { List, ListIteratee, ListIteratorTypeGuard, ObjectIterator } from 'lodash'
 
-export class LodashUtils {
+export const LodashUtils = _
+
+export class LodashUtilsxxx {
   static merge(object: any, ...otherArgs: any[]): any {
     return _.merge(object, otherArgs)
   }

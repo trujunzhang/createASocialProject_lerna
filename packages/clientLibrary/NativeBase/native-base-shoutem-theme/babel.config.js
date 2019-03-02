@@ -3,7 +3,6 @@ module.exports = function (api) {
   return {
     presets: [
       "@babel/env",
-      "@babel/preset-react",
       "@babel/typescript"
     ],
     plugins: [
