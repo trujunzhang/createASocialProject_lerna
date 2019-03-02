@@ -15,13 +15,13 @@ const App = () => {
   // return null
   return (
     <View
-      style={[
+      style={
         {
           flex: 1,
           paddingTop: 200,
           backgroundColor: 'red'
         }
-      ] as any}>
+      }>
       <Setup>
         <Root>
           <CurrentPage />
