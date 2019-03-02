@@ -3048,9 +3048,9 @@ node-pre-gyp@^0.10.0:
     tar "^4"
 
 node-releases@^1.1.8:
-  version "1.1.8"
-  resolved "http://registry.npm.taobao.org/node-releases/download/node-releases-1.1.8.tgz#32a63fff63c5e51b7e0f540ac95947d220fc6862"
-  integrity sha1-MqY//2PF5Rt+D1QKyVlH0iD8aGI=
+  version "1.1.9"
+  resolved "http://registry.npm.taobao.org/node-releases/download/node-releases-1.1.9.tgz#70d0985ec4bf7de9f08fc481f5dae111889ca482"
+  integrity sha1-cNCYXsS/fenwj8SB9drhEYicpII=
   dependencies:
     semver "^5.3.0"
 
@@ -3263,9 +3263,9 @@ p-limit@^1.1.0:
     p-try "^1.0.0"
 
 p-limit@^2.0.0:
-  version "2.1.0"
-  resolved "http://registry.npm.taobao.org/p-limit/download/p-limit-2.1.0.tgz#1d5a0d20fb12707c758a655f6bbc4386b5930d68"
-  integrity sha1-HVoNIPsScHx1imVfa7xDhrWTDWg=
+  version "2.2.0"
+  resolved "http://registry.npm.taobao.org/p-limit/download/p-limit-2.2.0.tgz#417c9941e6027a9abcba5092dd2904e255b5fbc2"
+  integrity sha1-QXyZQeYCepq8ulCS3SkE4lW1+8I=
   dependencies:
     p-try "^2.0.0"
 
