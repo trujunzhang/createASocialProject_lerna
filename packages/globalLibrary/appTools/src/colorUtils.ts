@@ -1,4 +1,5 @@
-import { Color } from 'color'
+// import { Color } from 'color'
+const Color = require('color');
 
 class ColorHelper {
   private obj: any
@@ -18,11 +19,11 @@ class ColorHelper {
   }
 
   hex(val?: any) {
-    this.instance.hex(val)
-    return this
+    return this.instance.hex(val)
   }
 }
 
 export const ColorUtils = (obj: any, model?: any) => {
-  return new ColorHelper(obj, model)
+  return Color(obj, model)
+  // return new ColorHelper(obj, model)
 }

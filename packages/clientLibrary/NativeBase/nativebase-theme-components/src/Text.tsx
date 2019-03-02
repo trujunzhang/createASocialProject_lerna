@@ -1,4 +1,4 @@
-import { Color } from '@app/color'
+import { ColorUtils as Color } from '@app/tools''
 
 import { themeVariables } from '@app/native-base-variables'
 export const textTheme = (variables: themeVariables) => {

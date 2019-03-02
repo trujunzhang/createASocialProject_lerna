@@ -11,6 +11,8 @@ module.exports = {
         "@babel/runtime",
         "@types/jest",
         "jest",
-        "typescript"
+        "typescript",
+        // Only for appTools
+        "color"
     ]
 }

@@ -30,7 +30,6 @@
   "private": false,
   "dependencies": {
     "prop-types": "15.6.2",
-    "@app/color": "0.6.0",
     "@app/tools": "0.6.0",
     "react-primitives": "0.7.0",
     "react-dom": "^16.8.2",

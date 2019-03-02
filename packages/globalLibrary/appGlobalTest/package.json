@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@app/tools": "0.6.0",
-    "@app/color": "0.6.0",
     "@app/types": "0.6.0",
     "@app/avatar": "0.6.0",
     "@app/mocks": "0.6.0",

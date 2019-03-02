@@ -1,6 +1,7 @@
 {
   "name": "@app/color",
   "version": "0.6.0",
+  "version.back": "1.0.3",
   "private": false,
   "license": "Apache-2.0",
   "main": "src/color.js",
