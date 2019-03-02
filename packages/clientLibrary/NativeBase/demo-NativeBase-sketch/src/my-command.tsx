@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render, Artboard, View } from 'react-sketchapp';
+import { render, Artboard, View, Text } from 'react-sketchapp';
 
 import {
   ColorListView
@@ -18,15 +18,20 @@ const App = () => {
       style={
         {
           flex: 1,
-          paddingTop: 200,
+          height: 96,
+          width: 96,
           backgroundColor: 'red'
         }
       }>
-      <Setup>
-        <Root>
-          <CurrentPage />
-        </Root>
-      </Setup>
+      <Text
+        name="Swatch Name"
+        style={{ color: '#ccc', fontWeight: 'bold' }}
+      >
+        {name}
+      </Text>
+      <Text name="Swatch Hex" style={{ color: '#ccc' }}>
+        {'djzhang'}
+      </Text>
     </View>
   )
 }
@@ -38,6 +43,7 @@ const Document = () => (
       flexDirection: 'row',
       flexWrap: 'wrap',
       width: (96 + 8) * 4,
+      backgroundColor: 'blue'
     }}
   >
     <App />
