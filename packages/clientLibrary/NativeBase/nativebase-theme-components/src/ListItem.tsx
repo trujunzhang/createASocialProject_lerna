@@ -12,7 +12,7 @@ import {
   getFullItem
 } from './listItems'
 
-import { PixelRatio } from 'react-native'
+import { PixelRatio } from 'react-primitives'
 import { themeVariables } from '@app/native-base-variables'
 export const listItemTheme = (variables: themeVariables) => {
   const platform = variables.platform

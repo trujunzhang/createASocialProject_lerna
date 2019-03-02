@@ -1,5 +1,5 @@
 import { themeVariables } from '@app/native-base-variables'
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-primitives'
 
 export function getBorderedItem(variables: themeVariables, platform) {
   return {

@@ -14,7 +14,7 @@ import {
   getButtonBase
 } from '../headerItems'
 
-import { PixelRatio } from 'react-native'
+import { PixelRatio } from 'react-primitives'
 import { themeVariables } from '@app/native-base-variables'
 export const headerLayoutTheme = (headerVariables: themeVariables) => {
   const variables = headerVariables

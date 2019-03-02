@@ -1,6 +1,6 @@
 import { pickerTheme } from '../../Picker'
 
-import { PixelRatio } from 'react-native'
+import { PixelRatio } from 'react-primitives'
 import { themeVariables } from '@app/native-base-variables'
 
 export function getIconItem(selectedStyle, variables: themeVariables, platform) {

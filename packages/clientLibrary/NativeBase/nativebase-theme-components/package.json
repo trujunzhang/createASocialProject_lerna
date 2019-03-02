@@ -1,7 +1,7 @@
 {
   "name": "@app/nativebase-theme-components",
   "version": "0.6.0",
-  "main": "src/index.tsx",
+  "main": "src/index.ts",
   "main.last": "build/lib/index.js",
   "description": "Essential cross-platform UI components for React Native",
   "keywords": [
@@ -38,8 +38,7 @@
     "react": "16.5.0",
     "react-primitives": "0.7.0",
     "react-dom": "^16.8.2",
-    "react-art": "16.5.2",
-    "react-native-web": "0.10.0"
+    "react-art": "16.5.2"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",

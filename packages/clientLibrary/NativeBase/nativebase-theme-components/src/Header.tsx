@@ -17,7 +17,7 @@ import {
   getButtonBase
 } from './headerItems'
 
-import { PixelRatio } from 'react-native'
+import { PixelRatio } from 'react-primitives'
 
 function shouldShowShadow(platformStyle) {
   // return platformStyle === 'material'

@@ -1,6 +1,6 @@
 import { themeVariables } from '@app/native-base-variables'
 
-import { Dimensions } from 'react-native'
+import { Dimensions } from 'react-primitives'
 
 export const containerTheme = (variables: themeVariables) => {
   const platform = variables.platform
