@@ -34,7 +34,6 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
-    "react-native-iphone-x-helper": "1.2.0",
     "@app/native-base-shoutem-theme": "0.2.2",
     "@app/nativebase-theme-components": "0.6.0",
     "@app/native-base-variables": "0.6.0",

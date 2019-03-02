@@ -1,11 +1,10 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { ViewStyle, KeyboardAwareScrollView } from 'react-primitives'
+import { ViewStyle, KeyboardAwareScrollView, isIphoneX } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
-import { isIphoneX } from 'react-native-iphone-x-helper'
 
 export interface IContentProps {
   style?: ViewStyle | Array<ViewStyle> | any
@@ -136,24 +135,24 @@ class Content extends React.Component<IContentProps, any> {
         {this.props.children}
       </KeyboardAwareScrollView>
     ) : (
-      <KeyboardAwareScrollView
-        automaticallyAdjustContentInsets={false}
-        resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
-        keyboardShouldPersistTaps={
-          this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
-        }
-        ref={(c) => {
-          this._scrollview = c
-          this._root = c
-        }}
-        {...this.props}
-        contentContainerStyle={[
-          { padding: this.props.padder ? variables.contentPadding : undefined },
-          this.props.contentContainerStyle
-        ]}>
-        {this.props.children}
-      </KeyboardAwareScrollView>
-    )
+        <KeyboardAwareScrollView
+          automaticallyAdjustContentInsets={false}
+          resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
+          keyboardShouldPersistTaps={
+            this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
+          }
+          ref={(c) => {
+            this._scrollview = c
+            this._root = c
+          }}
+          {...this.props}
+          contentContainerStyle={[
+            { padding: this.props.padder ? variables.contentPadding : undefined },
+            this.props.contentContainerStyle
+          ]}>
+          {this.props.children}
+        </KeyboardAwareScrollView>
+      )
   }
 }
 
