@@ -14,7 +14,7 @@
     "render": "skpm-build --watch --run & yarn typescript",
     "render:once": "yarn typescript:once && skpm-build --run",
     "build:all": "yarn build && skpm-link",
-    "postinstall.pending": "yarn build:all",
+    "postinstall": "yarn build:all",
     "typescript.last": "tsc --watch",
     "typescript": "echo 'typescript watch'",
     "typescript:once": "tsc",
@@ -23,16 +23,11 @@
     "typescript:once.error": "yarn build:js",
     "typescript:clean": "rm -rf ./.ts-compiled"
   },
-  "dependencies.last": {
-    "@app/native-base": "0.6.0",
-    "@app/native-base-variables": "0.6.0",
-    "@app/nativebase-theme-components": "0.6.0",
-    "@app/nb-demo-shared-components": "0.6.0"
-  },
   "dependencies": {
     "@app/native-base": "0.6.0",
     "@app/native-base-variables": "0.6.0",
     "@app/nativebase-theme-components": "0.6.0",
+    "@app/nb-demo-shared-components": "0.6.0",
     "@app/shared-components": "0.6.0",
     "@types/react-dom": "16.0.11",
     "react-dom": "16.7.0",

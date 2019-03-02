@@ -3,7 +3,7 @@
 	"bundleVersion": 1,
 	"commands": [
 		{
-			"name": "react-sketchapp: Basic Setup with Typescript",
+			"name": "nativebase-demo: Sketch app for native base demo",
 			"identifier": "main",
 			"script": "./.ts-compiled/my-command.js"
 		}
