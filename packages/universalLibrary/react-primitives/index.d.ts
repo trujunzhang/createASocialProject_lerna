@@ -78,7 +78,7 @@ export const ScrollView: any
 export const FlatList: any
 export const KeyboardAwareScrollView: any
 
-export type isIphoneX = () => boolean
+export function isIphoneX(): boolean;
 
 export {
   StatusBar,

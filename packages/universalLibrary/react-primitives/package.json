@@ -75,6 +75,7 @@
     "webpack-cli": "^3.0.3"
   },
   "dependencies": {
+    "react-native-iphone-x-helper": "1.2.0",
     "react-native-keyboard-aware-scroll-view": "0.8.0",
     "@types/react": "*",
     "@types/react-native": "*",
