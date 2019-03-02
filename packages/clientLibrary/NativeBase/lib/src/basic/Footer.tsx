@@ -1,12 +1,11 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { View, ViewProps,ViewStyle } from 'react-primitives'
+import { View, ViewProps, ViewStyle, isIphoneX } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { platformVariables as variable } from '@app/native-base-variables'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
-import { isIphoneX } from 'react-native-iphone-x-helper'
 
 export interface IFooterProps extends ViewProps {
   style?: ViewStyle | Array<ViewStyle> | any

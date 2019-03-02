@@ -7,6 +7,7 @@ export * from './lodashUtils'
 export * from './axiosUtils'
 export * from './routeParserUtils'
 export * from './numeralUtils'
+export * from './colorUtils'
 
 // Vendor
 export * from './vendor'

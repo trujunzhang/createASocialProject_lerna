@@ -1,4 +1,4 @@
-import { Dimensions, Platform, StatusBar } from 'react-primitives';
+import { Dimensions, Platform, StatusBar } from 'react-native';
 
 export function isIphoneX() {
     const dimen = Dimensions.get('window');

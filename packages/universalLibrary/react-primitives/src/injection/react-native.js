@@ -27,6 +27,7 @@ const {
   TouchableNativeFeedback,
 } = require('react-native');
 
+import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 ReactPrimitives.inject({
@@ -39,6 +40,7 @@ ReactPrimitives.inject({
   Image,
   Easing,
   Animated,
+  isIphoneX: isIphoneX,
   Platform: {
     OS: Platform.OS,
     Version: Platform.Version,

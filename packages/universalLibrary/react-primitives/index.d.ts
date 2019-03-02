@@ -78,6 +78,8 @@ export const ScrollView: any
 export const FlatList: any
 export const KeyboardAwareScrollView: any
 
+export const isIphoneX = () => boolean
+
 export {
   StatusBar,
   Animated,
