@@ -6,10 +6,10 @@
   "typings": "./index.d.ts",
   "scripts": {
     "build.current.pending": "yarn run build",
-    "prepublish": "npm run build",
+    "prepublish": "yarn build",
     "build": "rm -rf lib && babel -d lib src",
     "build:webpack": "webpack",
-    "build:watch": "npm run build -- --watch",
+    "build:watch": "yarn build -- --watch",
     "run:packager": "./node_modules/react-native/scripts/packager.sh",
     "run:ios": "react-native run-ios --project-path ./example/native/ios",
     "run:android": "react-native run-android --root ./example/android",
@@ -17,7 +17,7 @@
     "test": "jest",
     "lint": "eslint .",
     "happo": "sh ./scripts/happo-ci.sh",
-    "travis": "npm run --silent test && npm run --silent lint",
+    "travis": "yarn --silent test && yarn --silent lint",
     "test:watch": "jest --watch",
     "postinstall": "yarn build"
   },

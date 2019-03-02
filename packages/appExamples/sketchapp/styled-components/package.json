@@ -11,7 +11,7 @@
     "watch": "skpm-build --watch",
     "render": "skpm-build --watch --run",
     "render:once": "skpm-build --run",
-    "build.sketch.plugin": "npm run build && skpm-link"
+    "build.sketch.plugin": "yarn build && skpm-link"
   },
   "author": "Mathieu Dutour <mathieu@dutour.me>",
   "license": "MIT",

@@ -7,11 +7,11 @@
     "manifest": "./manifest.json"
   },
   "scripts": {
-    "build": "npm run typescript:once && skpm-build",
-    "watch": "skpm-build --watch & npm run typescript",
-    "render": "skpm-build --watch --run & npm run typescript",
-    "render:once": "npm run typescript:once && skpm-build --run",
-    "build.sketch.plugin": "npm run build && skpm-link",
+    "build": "yarn typescript:once && skpm-build",
+    "watch": "skpm-build --watch & yarn typescript",
+    "render": "skpm-build --watch --run & yarn typescript",
+    "render:once": "yarn typescript:once && skpm-build --run",
+    "build.sketch.plugin": "yarn build && skpm-link",
     "typescript": "tsc --watch",
     "typescript:once": "tsc",
     "typescript:clean": "rm -rf ./.ts-compiled"

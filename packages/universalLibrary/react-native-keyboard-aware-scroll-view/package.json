@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "scripts": {
     "lint": "eslint lib",
-    "test": "npm run lint",
+    "test": "yarn lint",
     "flow": "flow check"
   },
   "repository": {

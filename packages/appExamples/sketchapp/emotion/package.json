@@ -10,7 +10,7 @@
 		"watch": "skpm-build --watch",
 		"render": "skpm-build --watch --run",
 		"render:once": "skpm-build --run",
-		"postinstall.pending": "npm run build && skpm-link"
+		"postinstall.pending": "yarn build && skpm-link"
 	},
 	"author": "Nitin Tulswani <tulswani19@gmail.com>",
 	"license": "MIT",
