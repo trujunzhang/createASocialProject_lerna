@@ -1,11 +1,12 @@
 
 import * as ReactNative from 'react-native'
+import {ScrollViewProperties} from 'react-primitives'
 
 /**
  * Override React ListViewProperties
  */
 interface IReactListViewProperties
-    extends ReactNative.ScrollViewProperties,
+    extends ScrollViewProperties,
     React.Props<ReactNative.ListView> {
     /**
      * Flag indicating whether empty section headers should be rendered.
@@ -100,8 +101,8 @@ interface IReactListViewProperties
      * Defaults to returning a ScrollView with the given props.
      */
     renderScrollComponent?: (
-        props: ReactNative.ScrollViewProperties
-    ) => React.ReactElement<ReactNative.ScrollViewProperties>
+        props: ScrollViewProperties
+    ) => React.ReactElement<ScrollViewProperties>
 
     /**
      * (sectionData, sectionID) => renderable

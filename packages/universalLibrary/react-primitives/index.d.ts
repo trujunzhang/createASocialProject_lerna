@@ -36,6 +36,7 @@ import {
   TextInputProps,
   SwitchProps,
   ActivityIndicatorProps,
+  ScrollViewProperties,
   ImageProps,
   ViewProps,
   TextProps,
@@ -69,7 +70,7 @@ export const Platform: PlatformStatic
 export const ListView: any
 export const ScrollView: any
 export const FlatList: any
-export const Picker: any
+// export const Picker: any
 
 export {
   StatusBar,
@@ -101,6 +102,7 @@ export {
   SwitchProps,
   ActivityIndicatorProps,
   TouchableOpacityProps,
+  ScrollViewProperties,
   ImageProps,
   ViewProps,
   TextProps
