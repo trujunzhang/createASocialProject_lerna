@@ -31,7 +31,7 @@ ReactPrimitives.inject({
   Text,
   Image,
   Easing,
-  isIphoneX: () => { return false },
+  isIphoneX: () => { return false;},
   Animated: Object.assign(
     Animated,
     {
