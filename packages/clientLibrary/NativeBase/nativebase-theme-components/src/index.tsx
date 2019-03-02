@@ -55,9 +55,12 @@ import { themeVariables } from '@app/native-base-variables'
 export const getThemeStyle = (variables: themeVariables) => {
   const theme = {
     variables,
-    'NativeBase.ScrollHeader': {
-      ...scrollHeaderTheme(variables)
+    NativeBase: {
+      ScrollHeader: scrollHeaderTheme(variables)
     },
+    // 'NativeBase.ScrollHeader': {
+    //   ...scrollHeaderTheme(variables)
+    // },
 
     'NativeBase.HeaderLayout': {
       ...headerLayoutTheme(variables)
