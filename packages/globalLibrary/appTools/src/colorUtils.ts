@@ -1,5 +1,5 @@
 // import { Color } from 'color'
-const Color = require('color');
+const Color = require('color')
 
 class ColorHelper {
   private obj: any
