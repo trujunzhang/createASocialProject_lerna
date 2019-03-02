@@ -1,4 +1,4 @@
-const React = require('react')
+import * as React from 'react'
 import { TouchableNativeFeedback } from 'react-primitives'
 
 const Button = (props) => {
