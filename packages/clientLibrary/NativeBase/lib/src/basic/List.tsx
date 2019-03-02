@@ -2,13 +2,12 @@ import * as React from 'react'
 import { ListView, View } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
-// import { SwipeRow } from "./SwipeRow";
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { ListSwipeRow } from './ListSwipeRow'
 import { ListSwipeHelper } from '../utils/listSwipeHelper'
-import { ListProperty } from '../../index.d'
+import { IListBaseProperty } from './listTypes'
 
-interface IListProps extends ListProperty {
+interface IListProps extends IListBaseProperty {
   closeOnRowBeginSwipe: boolean
   onRowOpen: (secId, rowId, rowMap) => any
   onScroll: any
@@ -39,7 +38,7 @@ interface IListState {
   dataSource: any
 }
 
-interface IListDefaultProps {}
+interface IListDefaultProps { }
 
 type ListPropsWithDefaults = IListProps & IListDefaultProps
 

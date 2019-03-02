@@ -1,9 +1,10 @@
 {
   "name": "@app/native-base",
   "version": "0.6.0",
-  "main": "src/index.ts",
-  "main.js": "build/lib/index.js",
-  "typings": "./index.d.ts",
+  "main.ts": "src/index.ts",
+  "main": "build/lib/index.js",
+  "typings": "build/lib/index.d.ts",
+  "typings.js": "./index.d.ts",
   "description": "Essential cross-platform UI components for React Native",
   "keywords": [
     "android",
