@@ -1,40 +1,59 @@
 {
   "name": "@app/native-base-shoutem-theme",
   "version": "0.2.2",
-  "main.last": "index.js",
-  "main.dist": "dist/index.js",
-  "main": "src/index.ts",
-  "description": "Style your components in one place.",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "repository": "/@app/shared-components",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
   "scripts": {
     "depenence.update": "ncu -u",
-    "compile.pending": "rm -rf dist/* && babel . --out-dir dist --ignore node_modules,babel.config.js,_tests_,test-utils,examples,dist --source-maps",
-    "transpile.pending": "yarn compile",
-    "prepublish.pending": "yarn transpile",
+    "rm.assets": "rm -rf @types",
+    "ready.assets": "run-s  ready:*",
+    "ready:definitive": "cpx \"../../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
+    "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+    "fix.current": "yarn run fix",
+    "test.lib.pending": "jest --env=node --colors --coverage test",
+    "test.current.pending": "yarn test.lib",
     "build.reset": "rm -rf build",
     "build.clean": "yarn build.reset",
     "build:js": "tsc -p tsconfig.lib.json",
     "build-lib": "yarn build.clean && yarn build:js",
-    "build.current": "yarn run build-lib",
+    "build.current.pending": "yarn run build-lib",
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
+    "@app/types": "0.6.0",
     "@app/tools": "0.6.0",
+    "@types/hoist-non-react-statics": "3.0.1",
     "hoist-non-react-statics": "3.2.1",
-    "@types/prop-types": "15.5.8",
-    "prop-types": "15.6.2",
-    "@types/react": "16.7.7",
-    "@types/react-native": "0.57.17",
+    "@types/react-native": "0.57.27",
+    "@types/react": "16.4.8",
+    "@types/react-dom": "16.0.11",
     "react": "16.5.0",
     "react-primitives": "0.7.0",
-    "react-dom": "16.8.2",
-    "react-art": "16.5.2"
+    "react-dom": "^16.8.2",
+    "react-art": "16.5.2",
+    "react-native-web": "0.10.0"
   },
   "peerDependencies": {
+    "prop-types": "*",
     "react": "*",
-    "react-native": "*"
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-web": "*"
   },
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge.0",
+    "@app/mocks": "0.6.0",
+    "@types/react-sketchapp": "0.12.1",
+    "react-sketchapp": "2.0.0",
+    "babel-plugin-module-resolver": "3.2.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",
     "jest": "24.1.0",
@@ -51,16 +70,5 @@
     "@types/react-test-renderer": "16.0.3",
     "react-test-renderer": "16.7.0",
     "typescript": "3.3.3"
-  },
-  "license": "BSD-3-Clause",
-  "maintainers": [
-    {
-      "email": "himanshu@geekyants.com",
-      "name": "Himanshu"
-    },
-    {
-      "email": "sanket@geekyants.com",
-      "name": "Sanket"
-    }
-  ]
+  }
 }

@@ -10,8 +10,6 @@
     "build",
     "node_modules",
     "lib",
-    "babel.config.js",
-    "jest.config.js",
     "**/*.test.tsx",
     "**/*.test.ts"
   ]
