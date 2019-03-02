@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -10,8 +10,8 @@ import {
   Right,
   Body,
   Text
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 class Custom extends React.Component<any, any> {
   render() {
@@ -41,8 +41,8 @@ class Custom extends React.Component<any, any> {
           </Button>
         </Content>
       </Container>
-    );
+    )
   }
 }
 
-export default Custom;
+export default Custom

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -10,8 +10,8 @@ import {
   Right,
   Body,
   Text
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 class Full extends React.Component<any, any> {
   render() {
@@ -29,7 +29,7 @@ class Full extends React.Component<any, any> {
           <Right />
         </Header>
 
-        <Content style={{ backgroundColor: "#fff" }}>
+        <Content style={{ backgroundColor: '#fff' }}>
           <Button full light style={styles.mt15}>
             <Text>Light</Text>
           </Button>
@@ -53,8 +53,8 @@ class Full extends React.Component<any, any> {
           </Button>
         </Content>
       </Container>
-    );
+    )
   }
 }
 
-export default Full;
+export default Full

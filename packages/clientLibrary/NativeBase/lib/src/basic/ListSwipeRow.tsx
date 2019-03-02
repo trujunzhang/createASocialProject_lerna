@@ -1,8 +1,6 @@
 import * as React from 'react'
 
-import {
-  ViewStyle,
-} from 'react-primitives'
+import { ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 
 import { SwipeRow } from './SwipeRow'
@@ -46,7 +44,7 @@ interface IListSwipeRowProps extends ISwipeRow {
   onRowDidClose: any
 }
 
-interface IListSwipeRowState { }
+interface IListSwipeRowState {}
 
 class ListSwipeRow extends React.Component<IListSwipeRowProps, IListSwipeRowState> {
   constructor(props) {

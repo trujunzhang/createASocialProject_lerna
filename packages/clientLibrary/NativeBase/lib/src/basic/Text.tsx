@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import  {ViewStyle} from  'react-primitives'
+import { ViewStyle } from 'react-primitives'
 import { Text as RNText, TextProps } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 

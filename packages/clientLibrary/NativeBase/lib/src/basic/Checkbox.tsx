@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import { TouchableOpacity, TouchableOpacityProps,ViewStyle } from 'react-primitives'
+import { TouchableOpacity, TouchableOpacityProps, ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'

@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { View, ViewProps,ViewStyle } from 'react-primitives'
+import { View, ViewProps, ViewStyle } from 'react-primitives'
 
 import { platformVariables as variables } from '@app/native-base-variables'
 import { connectStyle } from '@app/native-base-shoutem-theme'

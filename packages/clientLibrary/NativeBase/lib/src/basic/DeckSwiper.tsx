@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { View, Animated, PanResponder, ViewProps,ViewStyle } from 'react-primitives'
+import { View, Animated, PanResponder, ViewProps, ViewStyle } from 'react-primitives'
 import clamp from 'clamp'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'

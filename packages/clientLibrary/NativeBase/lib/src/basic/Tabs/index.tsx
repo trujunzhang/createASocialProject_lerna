@@ -1,9 +1,8 @@
-
 // import createReactClass from "create-react-class";
 import { LodashUtils as _ } from '@app/tools'
 // import { InteractionManager, ViewProps} from "../../utils";
 import * as React from 'react'
-import  {ViewStyle} from  'react-primitives'
+import { ViewStyle } from 'react-primitives'
 import {
   Dimensions,
   View,

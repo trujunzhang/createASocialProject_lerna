@@ -11,7 +11,7 @@ import {
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
-import {ViewStyle} from 'react-primitives'
+import { ViewStyle } from 'react-primitives'
 
 export interface IListItemProps extends TouchableHighlightProps {
   full?: boolean

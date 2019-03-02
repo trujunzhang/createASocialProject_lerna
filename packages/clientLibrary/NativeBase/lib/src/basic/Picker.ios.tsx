@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
-import { Picker, Modal, View, ViewProps, FlatList,ViewStyle,TextStyle } from 'react-primitives'
+import { Picker, Modal, View, ViewProps, FlatList, ViewStyle, TextStyle } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 import { Text } from './Text'
 import { List } from './List'

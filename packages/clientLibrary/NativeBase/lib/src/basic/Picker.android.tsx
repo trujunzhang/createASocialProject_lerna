@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
 // import createReactClass from "create-react-class";
-import { Picker, PickerProps,TextStyle,ViewStyle  } from 'react-primitives'
+import { Picker, PickerProps, TextStyle, ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 

@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
 
-import { View, Modal, Platform, Animated, ViewProps,ViewStyle } from 'react-primitives'
+import { View, Modal, Platform, Animated, ViewProps, ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import { Text } from './Text'
 import { Button } from './Button'

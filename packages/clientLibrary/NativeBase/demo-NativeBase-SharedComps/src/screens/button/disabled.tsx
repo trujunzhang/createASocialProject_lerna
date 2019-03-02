@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { View } from "react-native";
+import * as React from 'react'
+import { View } from 'react-native'
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Right,
   Body,
   Text
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 class Disabled extends React.Component<any, any> {
   render() {
@@ -57,8 +57,8 @@ class Disabled extends React.Component<any, any> {
           </Button>
         </Content>
       </Container>
-    );
+    )
   }
 }
 
-export default Disabled;
+export default Disabled

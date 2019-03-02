@@ -1,4 +1,3 @@
-
 // Swipe Helper.
 // =================
 export type IListSwipeHelperOnScrollEnableChanged = (enable: any) => any
