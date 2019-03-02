@@ -9,7 +9,7 @@ import ReactNative, {
   TextInput,
   findNodeHandle,
   Animated
-} from 'react-native'
+} from 'react-primitives'
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import type { KeyboardAwareInterface } from './KeyboardAwareInterface'
 
