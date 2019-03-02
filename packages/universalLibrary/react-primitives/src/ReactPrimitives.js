@@ -18,6 +18,7 @@ const ReactPrimitives = {
   Platform: require('./modules/Platform'),
   inject: (api) => {
     if (api.isIphoneX) {
+      debugger
       ReactPrimitives.isIphoneX = api.isIphoneX;
     }
     if (api.StatusBar) {

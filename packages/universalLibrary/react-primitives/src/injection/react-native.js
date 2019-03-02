@@ -40,7 +40,7 @@ ReactPrimitives.inject({
   Image,
   Easing,
   Animated,
-  isIphoneX: isIphoneX,
+  isIphoneX,
   Platform: {
     OS: Platform.OS,
     Version: Platform.Version,

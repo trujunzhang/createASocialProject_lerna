@@ -35,7 +35,7 @@ ReactPrimitives.inject({
   Image,
   Easing,
   Animated,
-  isIphoneX: false,
+  isIphoneX: () => { return false },
   StyleSheet: Object.assign(
     StyleSheet,
     { resolve }

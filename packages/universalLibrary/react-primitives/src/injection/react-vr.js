@@ -16,6 +16,7 @@ ReactPrimitives.inject({
   Image,
   Easing,
   Animated,
+  isIphoneX: () => { return false },
   Platform: {
     OS: 'vr',
     Version: 1,
