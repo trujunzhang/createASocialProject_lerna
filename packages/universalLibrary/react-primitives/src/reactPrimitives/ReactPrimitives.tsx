@@ -4,7 +4,7 @@
 // TODO(lmr):
 // Use getter functions + warn / throw if a non-primitive API is retrieved off of ReactPrimitives
 // that looks like a react-native API
-import { PixelRatio } from './modules/PixelRatio'
+import { PixelRatio } from '../modules/PixelRatio'
 
 import {
   AllInjectionModel,
@@ -14,7 +14,7 @@ import {
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './injection/IInjection'
+} from '../injection/IInjection'
 
 import { IReactPrimitivesModel } from './IReactPrimitives'
 

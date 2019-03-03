@@ -6,7 +6,7 @@ import {
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './injection/IInjection'
+} from '../injection/IInjection'
 
 export interface IReactPrimitivesModel extends AllInjectionModel {
   PixelRatio: any

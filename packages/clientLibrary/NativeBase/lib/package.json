@@ -28,7 +28,7 @@
     "build.clean": "echo 'build empty clean'",
     "build:js": "tsc -p tsconfig.lib.json",
     "build-lib": "yarn build.clean && yarn build:js",
-    "build.current.pending": "yarn build-lib",
+    "build.current": "yarn build-lib",
     "postinstall": "yarn build-lib"
   },
   "license": "Apache-2.0",
@@ -52,7 +52,6 @@
     "react-native-web": "0.10.0"
   },
   "devDependencies": {
-    "@types/react-primitives": "https://github.com/trujunzhang/ts-rprimitives",
     "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",
     "babel-plugin-module-resolver": "3.2.0",
