@@ -22,7 +22,7 @@ import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'
 
 const TouchableMixin = {
-  componentWillUnmount() {},
+  componentWillUnmount() { },
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -35,10 +35,10 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() {},
-  touchableHandleResponderRelease() {},
-  touchableHandleResponderTerminate() {},
-  touchableHandleResponderMove() {}
+  touchableHandleResponderGrant() { },
+  touchableHandleResponderRelease() { },
+  touchableHandleResponderTerminate() { },
+  touchableHandleResponderMove() { }
 }
 
 Animated.inject.FlattenStyle(StyleSheet.flatten)
@@ -68,7 +68,9 @@ const injectionBaseModel: IInjectionBaseModel = {
 
 const injectionCustomModel: IInjectionCustomModel = {
   // Custom
-  StatusBar,
+  StatusBar: {
+    currentHeight: 44
+  },
   Dimensions
 }
 

@@ -22,7 +22,7 @@ module.exports = function (api) {
           "root": [
             "."
           ],
-          "extensions": [".ios.js", ".android.js", ".js", ".jsx", ".json"],
+          "extensions": [".sketch.js", ".sketch.jsx", ".js", ".jsx", ".json"],
           "alias": {
             "^react-native$": "react-primitives"
           }

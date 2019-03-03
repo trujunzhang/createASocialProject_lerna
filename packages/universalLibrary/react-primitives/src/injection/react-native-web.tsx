@@ -58,7 +58,9 @@ const injectionBaseModel: IInjectionBaseModel = {
 
 const injectionCustomModel: IInjectionCustomModel = {
   // Custom
-  StatusBar,
+  StatusBar: {
+    currentHeight: 44
+  },
   Dimensions
 }
 

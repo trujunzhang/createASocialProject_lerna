@@ -22,9 +22,8 @@ module.exports = function (api) {
         "module-resolver",
         {
           "alias": {
-            "^react-native$": "react-native-web"
           },
-          "extensions": ["web.js", ".js"]
+          "extensions": ["web.js", "ios.js", "android.js", "sketch.js", ".js"]
         }
       ]
     ]

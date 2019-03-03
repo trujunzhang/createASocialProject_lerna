@@ -1,6 +1,6 @@
 import { Dimensions, Platform } from 'react-primitives'
 
-export const deviceHeight = Dimensions.get('window').height
-export const deviceWidth = Dimensions.get('window').width
+export const deviceHeight = (!!Dimensions) ? Dimensions.get('window').height : 400
+export const deviceWidth = (!!Dimensions) ? Dimensions.get('window').width : 400
 
 export const platform = Platform.OS

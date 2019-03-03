@@ -42,14 +42,6 @@ export const fontSizeBase = 15
 //   fontFamily: 'proxima',
 //   btnFontFamily: 'proxima',
 //   // Page.
-//   pageScrollBackground: '#f9f9f9',
-//   // Toolbar.
-//   toolbarBtnColor: 'rgba(0, 0, 0, 0.44)',
-//   toolbarDefaultBg: '#fff',
-//   toolbarHeight: platform === 'ios' ? 64 : 56 + (StatusBar.currentHeight || 0),
-//   toolbarPaddingTop: platform === 'ios' ? 18 : 0 + (StatusBar.currentHeight || 0),
-//   toolbarParallaxHeight: platform === 'ios' ? 64 : 56 + (StatusBar.currentHeight || 0),
-//   toolbarParallaxPaddingTop: platform === 'ios' ? 18 : 0 + (StatusBar.currentHeight || 0),
 //   // title/subtitle
 //   titleFontSize: 17,
 //   titleFontColor: '#000',
