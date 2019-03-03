@@ -1,14 +1,16 @@
-const dimensions: any = {}
-const listeners = {}
 
 // Used by Dimensions below
-export interface IScaledSize {
+interface IScaledSize {
   width: number
   height: number
   scale: number
   fontScale: number
 }
-export class Dimensions {
+
+class DimensionsHelper {
+  private dimensions: any = {}
+  private listeners: any = {}
+
   /**
        * Initial dimensions are set before runApplication is called so they
        * should be available before any other require's are run, but may be
@@ -24,8 +26,8 @@ export class Dimensions {
        @returns Value for the dimension.
        */
   // get(dim: "window" | "screen"): ScaledSize{
-  static get(dim: 'window' | 'screen'): IScaledSize {
-    if (Object.keys(dimensions).indexOf(dim) === -1) {
+  get(dim: 'window' | 'screen'): IScaledSize {
+    if (Object.keys(this.dimensions).indexOf(dim) === -1) {
       return {
         fontScale: 1,
         width: 414,
@@ -33,13 +35,15 @@ export class Dimensions {
         scale: 2
       }
     }
-    return dimensions[dim]
+    return this.dimensions[dim]
   }
 
-  static set(dims: { [key: string]: any }) {
+  set(dims: { [key: string]: any }) {
     if (dims) {
-      dimensions.screen = dims.screen
-      dimensions.window = dims.window
+      this.dimensions.screen = dims.screen
+      this.dimensions.window = dims.window
     }
   }
 }
+
+export const Dimensions = new DimensionsHelper()
