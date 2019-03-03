@@ -1,6 +1,6 @@
-import ReactPrimitives from '../ReactPrimitives'
+import { ReactPrimitives } from '../ReactPrimitives'
 
-const PixelRatio = {
+export const PixelRatio = {
   /**
    * Returns the device pixel density.
    */
@@ -40,5 +40,3 @@ const PixelRatio = {
     return Math.round(layoutSize * ratio) / ratio
   }
 }
-
-module.exports = PixelRatio

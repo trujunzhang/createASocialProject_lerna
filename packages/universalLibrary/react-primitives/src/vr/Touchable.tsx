@@ -49,6 +49,7 @@ function throttle(fn, throttleMs) {
  * },
  * ```
  */
+
 const Touchable = (Animated, StyleSheet, Platform, TouchableMixin) => {
   // eslint-disable-next-line react/prefer-es6-class
   return createReactClass({

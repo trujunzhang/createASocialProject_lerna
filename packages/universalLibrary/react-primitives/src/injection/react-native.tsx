@@ -1,4 +1,4 @@
-import ReactPrimitives from '../ReactPrimitives'
+import { ReactPrimitives } from '../ReactPrimitives'
 import {
   StatusBar,
   Animated,

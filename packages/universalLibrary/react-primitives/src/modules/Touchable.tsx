@@ -3,7 +3,7 @@ import createReactClass from 'create-react-class'
 import * as PropTypes from 'prop-types'
 import TimerMixin from 'react-timer-mixin'
 
-const ensurePositiveDelayProps = (/* props */) => {
+const ensurePositiveDelayProps = (props: any /* props */) => {
   // invariant(
   //   !(props.delayPressIn < 0 || props.delayPressOut < 0 || props.delayLongPress < 0),
   //   'Touchable components cannot have negative delay properties'
@@ -23,10 +23,10 @@ const InsetPropType = PropTypes.shape({
 const THROTTLE_MS = 500
 
 function throttle(fn, throttleMs) {
-  let lastCall = null
+  let lastCall: any = null
 
   return function(...args) {
-    const now = new Date()
+    const now: any = new Date()
     if (lastCall === null || now - lastCall > throttleMs) {
       fn.apply(this, args)
       lastCall = new Date()
@@ -55,7 +55,7 @@ function throttle(fn, throttleMs) {
  * },
  * ```
  */
-const Touchable = (Animated, StyleSheet, Platform, TouchableMixin) => {
+export const Touchable = (Animated, StyleSheet, Platform, TouchableMixin) => {
   const styles = StyleSheet.create({
     touchable: Platform.select({
       web: {
@@ -252,5 +252,3 @@ const Touchable = (Animated, StyleSheet, Platform, TouchableMixin) => {
     }
   })
 }
-
-module.exports = Touchable

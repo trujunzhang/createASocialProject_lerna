@@ -1,3 +1,5 @@
-require('./injection/react-vr')
+// require('./injection/react-vr')
 
-module.exports = require('./ReactPrimitives')
+// module.exports = require('./ReactPrimitives')
+
+export const vr = 'TODO(Primitives): vr!'
