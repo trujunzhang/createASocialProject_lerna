@@ -3,13 +3,3 @@ export interface IInjectionAnimateModel {
     Easing: any
     Animated: any
 }
-
-import {
-    Easing,
-    Animated
-} from 'react-native'
-
-export {
-    Easing,
-    Animated
-}

@@ -3,7 +3,3 @@ export interface IInjectionTextModel {
   TextInput: any
   Text: any
 }
-
-import { TextInput, Text } from 'react-native'
-
-export { TextInput, Text }

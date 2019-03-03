@@ -5,9 +5,3 @@ export interface IInjectionListModel {
   ListView: any
   FlatList: any
 }
-
-import { ScrollView, ListView, FlatList } from 'react-native'
-
-export { ScrollView, ListView, FlatList }
-
-export declare const KeyboardAwareScrollView: any
