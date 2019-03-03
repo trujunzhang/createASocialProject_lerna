@@ -37,9 +37,7 @@
     "@types/react-dom": "16.0.11",
     "react": "16.5.0",
     "react-primitives": "*",
-    "react-dom": "^16.8.2",
-    "react-art": "16.5.2",
-    "react-native-web": "0.10.0"
+    "react-dom": "^16.8.2"
   },
   "peerDependencies": {
     "prop-types": "*",

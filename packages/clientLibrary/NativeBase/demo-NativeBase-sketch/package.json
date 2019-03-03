@@ -15,7 +15,7 @@
     "render:once": "yarn typescript:once && skpm-build --run",
     "render:all": "yarn render:once && yarn render",
     "build:all": "yarn build && skpm-link",
-    "postinstall": "yarn build:all",
+    "postinstall.pending": "yarn build:all",
     "typescript.last": "tsc --watch",
     "typescript": "echo 'typescript watch'",
     "typescript:once": "tsc",
