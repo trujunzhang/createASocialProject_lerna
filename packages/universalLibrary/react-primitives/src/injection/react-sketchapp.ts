@@ -1,6 +1,6 @@
 // import Animated from 'animated'
 // import Animated from 'animated/lib/targets/react-dom';
-import Easing from 'animated/lib/Easing'
+// import Easing from 'animated/lib/Easing'
 import {
   View,
   Text,

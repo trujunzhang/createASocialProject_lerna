@@ -27,7 +27,7 @@ export class ReactPrimitives {
     this.reactPrimitivesModel.View = model.View
     this.reactPrimitivesModel.Image = model.Image
     this.reactPrimitivesModel.isIphoneX = model.isIphoneX
-    this.reactPrimitivesModel.StyleSheet = model.StyleSheet
+    // this.reactPrimitivesModel.StyleSheet = model.StyleSheet
   }
   private injectionAnimateModel(model: IInjectionAnimateModel) {
     this.reactPrimitivesModel.Easing = model.Easing
