@@ -40,6 +40,7 @@ export class ReactPrimitives {
     this.reactPrimitivesModel.Text = model.Text
   }
   private injectionListModel(model: IInjectionListModel) {
+    this.reactPrimitivesModel.KeyboardAwareScrollView = model.KeyboardAwareScrollView
     this.reactPrimitivesModel.ScrollView = model.ScrollView
     this.reactPrimitivesModel.ListView = model.ListView
     this.reactPrimitivesModel.FlatList = model.FlatList

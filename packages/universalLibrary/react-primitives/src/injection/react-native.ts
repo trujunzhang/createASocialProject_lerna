@@ -69,6 +69,7 @@ const injectionTextModel: IInjectionTextModel = {
 
 const injectionListModel: IInjectionListModel = {
   // List
+  KeyboardAwareScrollView,
   ScrollView,
   ListView,
   FlatList
