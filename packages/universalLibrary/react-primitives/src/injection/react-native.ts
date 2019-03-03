@@ -71,7 +71,7 @@ const injectionTextModel: IInjectionTextModel = {
 
 const injectionListModel: IInjectionListModel = {
   // List
-  KeyboardAwareScrollView,
+  KeyboardAwareScrollView: null,
   ScrollView,
   ListView,
   FlatList

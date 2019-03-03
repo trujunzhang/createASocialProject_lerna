@@ -1,7 +1,7 @@
 import * as React from 'react'
-import createReactClass from 'create-react-class'
+// import createReactClass from 'create-react-class'
 import * as PropTypes from 'prop-types'
-import TimerMixin from 'react-timer-mixin'
+// import TimerMixin from 'react-timer-mixin'
 
 const ensurePositiveDelayProps = (props: any /* props */) => {
   // invariant(
@@ -25,7 +25,7 @@ const THROTTLE_MS = 500
 function throttle(fn, throttleMs) {
   let lastCall: any = null
 
-  return function(...args) {
+  return function (...args) {
     const now: any = new Date()
     if (lastCall === null || now - lastCall > throttleMs) {
       fn.apply(this, args)
@@ -68,187 +68,192 @@ export const Touchable = (Animated, StyleSheet, Platform, TouchableMixin) => {
     })
   })
 
+  return null
+
   // eslint-disable-next-line react/prefer-es6-class
-  return createReactClass({
-    displayName: 'Touchable',
-    propTypes: {
-      accessible: PropTypes.bool,
 
-      // TODO:
-      // accessibilityComponentType: PropTypes.oneOf(View.AccessibilityComponentType),
-      // accessibilityTraits: PropTypes.oneOfType([
-      //   PropTypes.oneOf(View.AccessibilityTraits),
-      //   PropTypes.arrayOf(PropTypes.oneOf(View.AccessibilityTraits)),
-      // ]),
-      /**
-       * If true, disable all interactions for this component.
-       */
-      disabled: PropTypes.bool,
-      /**
-       * Called when the touch is released, but not if cancelled (e.g. by a scroll
-       * that steals the responder lock).
-       */
-      onPress: PropTypes.func,
-      onPressIn: PropTypes.func,
-      onPressOut: PropTypes.func,
-      /**
-       * Invoked on mount and layout changes with
-       *
-       *   `{nativeEvent: {layout: {x, y, width, height}}}`
-       */
-      onLayout: PropTypes.func,
+  // return createReactClass({
+  //   displayName: 'Touchable',
+  //   propTypes: {
+  //     accessible: PropTypes.bool,
 
-      onLongPress: PropTypes.func,
+  //     // TODO:
+  //     // accessibilityComponentType: PropTypes.oneOf(View.AccessibilityComponentType),
+  //     // accessibilityTraits: PropTypes.oneOfType([
+  //     //   PropTypes.oneOf(View.AccessibilityTraits),
+  //     //   PropTypes.arrayOf(PropTypes.oneOf(View.AccessibilityTraits)),
+  //     // ]),
+  //     /**
+  //      * If true, disable all interactions for this component.
+  //      */
+  //     disabled: PropTypes.bool,
+  //     /**
+  //      * Called when the touch is released, but not if cancelled (e.g. by a scroll
+  //      * that steals the responder lock).
+  //      */
+  //     onPress: PropTypes.func,
+  //     onPressIn: PropTypes.func,
+  //     onPressOut: PropTypes.func,
+  //     /**
+  //      * Invoked on mount and layout changes with
+  //      *
+  //      *   `{nativeEvent: {layout: {x, y, width, height}}}`
+  //      */
+  //     onLayout: PropTypes.func,
 
-      /**
-       * Delay in ms, from the start of the touch, before onPressIn is called.
-       */
-      delayPressIn: PropTypes.number,
-      /**
-       * Delay in ms, from the release of the touch, before onPressOut is called.
-       */
-      delayPressOut: PropTypes.number,
-      /**
-       * Delay in ms, from onPressIn, before onLongPress is called.
-       */
-      delayLongPress: PropTypes.number,
-      /**
-       * When the scroll view is disabled, this defines how far your touch may
-       * move off of the button, before deactivating the button. Once deactivated,
-       * try moving it back and you'll see that the button is once again
-       * reactivated! Move it back and forth several times while the scroll view
-       * is disabled. Ensure you pass in a constant to reduce memory allocations.
-       */
-      pressRetentionOffset: InsetPropType,
-      /**
-       * This defines how far your touch can start away from the button. This is
-       * added to `pressRetentionOffset` when moving off of the button.
-       * ** NOTE **
-       * The touch area never extends past the parent view bounds and the Z-index
-       * of sibling views always takes precedence if a touch hits two overlapping
-       * views.
-       */
-      hitSlop: InsetPropType,
-      activeValue: PropTypes.number,
-      press: PropTypes.instanceOf(Animated.Value),
+  //     onLongPress: PropTypes.func,
 
-      pressDuration: PropTypes.number,
-      children: PropTypes.node
-    },
+  //     /**
+  //      * Delay in ms, from the start of the touch, before onPressIn is called.
+  //      */
+  //     delayPressIn: PropTypes.number,
+  //     /**
+  //      * Delay in ms, from the release of the touch, before onPressOut is called.
+  //      */
+  //     delayPressOut: PropTypes.number,
+  //     /**
+  //      * Delay in ms, from onPressIn, before onLongPress is called.
+  //      */
+  //     delayLongPress: PropTypes.number,
+  //     /**
+  //      * When the scroll view is disabled, this defines how far your touch may
+  //      * move off of the button, before deactivating the button. Once deactivated,
+  //      * try moving it back and you'll see that the button is once again
+  //      * reactivated! Move it back and forth several times while the scroll view
+  //      * is disabled. Ensure you pass in a constant to reduce memory allocations.
+  //      */
+  //     pressRetentionOffset: InsetPropType,
+  //     /**
+  //      * This defines how far your touch can start away from the button. This is
+  //      * added to `pressRetentionOffset` when moving off of the button.
+  //      * ** NOTE **
+  //      * The touch area never extends past the parent view bounds and the Z-index
+  //      * of sibling views always takes precedence if a touch hits two overlapping
+  //      * views.
+  //      */
+  //     hitSlop: InsetPropType,
+  //     activeValue: PropTypes.number,
+  //     press: PropTypes.instanceOf(Animated.Value),
 
-    mixins: [TimerMixin, TouchableMixin],
+  //     pressDuration: PropTypes.number,
+  //     children: PropTypes.node
+  //   },
 
-    statics: {
-      Mixin: TouchableMixin
-    },
+  //   mixins: [TimerMixin, TouchableMixin],
 
-    getDefaultProps() {
-      return {
-        activeValue: 1,
-        delayPressIn: 0,
-        delayPressOut: 100,
-        delayLongPress: 500,
-        pressDuration: 150,
-        pressRetentionOffset: {
-          top: 20,
-          left: 20,
-          right: 20,
-          bottom: 30
-        },
-        press: new Animated.Value(0)
-      }
-    },
+  //   statics: {
+  //     Mixin: TouchableMixin
+  //   },
 
-    getInitialState() {
-      return this.touchableGetInitialState()
-    },
+  //   getDefaultProps() {
+  //     return {
+  //       activeValue: 1,
+  //       delayPressIn: 0,
+  //       delayPressOut: 100,
+  //       delayLongPress: 500,
+  //       pressDuration: 150,
+  //       pressRetentionOffset: {
+  //         top: 20,
+  //         left: 20,
+  //         right: 20,
+  //         bottom: 30
+  //       },
+  //       press: new Animated.Value(0)
+  //     }
+  //   },
 
-    componentDidMount() {
-      ensurePositiveDelayProps(this.props)
-    },
+  //   getInitialState() {
+  //     return this.touchableGetInitialState()
+  //   },
 
-    componentWillReceiveProps(nextProps) {
-      ensurePositiveDelayProps(nextProps)
-    },
+  //   componentDidMount() {
+  //     ensurePositiveDelayProps(this.props)
+  //   },
 
-    setPressValue(toValue) {
-      Animated.timing(this.props.press, {
-        toValue,
-        duration: this.props.pressDuration
-        // easing: Easing.inOut(Easing.quad),
-      }).start()
-    },
+  //   componentWillReceiveProps(nextProps) {
+  //     ensurePositiveDelayProps(nextProps)
+  //   },
 
-    /**
-     * `Touchable.Mixin` self callbacks. The mixin will invoke these if they are
-     * defined on your component.
-     */
-    touchableHandleActivePressIn: throttle(function(e) {
-      if (e.dispatchConfig.registrationName === 'onResponderGrant') {
-        this._setActive(0)
-      } else {
-        this._setActive(150)
-      }
-      // eslint-disable-next-line no-unused-expressions
-      this.props.onPressIn && this.props.onPressIn(e)
-    }, THROTTLE_MS),
+  //   setPressValue(toValue) {
+  //     Animated.timing(this.props.press, {
+  //       toValue,
+  //       duration: this.props.pressDuration
+  //       // easing: Easing.inOut(Easing.quad),
+  //     }).start()
+  //   },
 
-    touchableHandleActivePressOut: throttle(function(e) {
-      this._setInactive(250)
-      // eslint-disable-next-line no-unused-expressions
-      this.props.onPressOut && this.props.onPressOut(e)
-    }, THROTTLE_MS),
+  //   /**
+  //    * `Touchable.Mixin` self callbacks. The mixin will invoke these if they are
+  //    * defined on your component.
+  //    */
+  //   touchableHandleActivePressIn: throttle(function(e) {
+  //     if (e.dispatchConfig.registrationName === 'onResponderGrant') {
+  //       this._setActive(0)
+  //     } else {
+  //       this._setActive(150)
+  //     }
+  //     // eslint-disable-next-line no-unused-expressions
+  //     this.props.onPressIn && this.props.onPressIn(e)
+  //   }, THROTTLE_MS),
 
-    touchableHandlePress: throttle(function(e) {
-      // eslint-disable-next-line no-unused-expressions
-      this.props.onPress && this.props.onPress(e)
-    }, THROTTLE_MS),
+  //   touchableHandleActivePressOut: throttle(function(e) {
+  //     this._setInactive(250)
+  //     // eslint-disable-next-line no-unused-expressions
+  //     this.props.onPressOut && this.props.onPressOut(e)
+  //   }, THROTTLE_MS),
 
-    touchableHandleLongPress: throttle(function(e) {
-      // eslint-disable-next-line no-unused-expressions
-      this.props.onLongPress && this.props.onLongPress(e)
-    }, THROTTLE_MS),
+  //   touchableHandlePress: throttle(function(e) {
+  //     // eslint-disable-next-line no-unused-expressions
+  //     this.props.onPress && this.props.onPress(e)
+  //   }, THROTTLE_MS),
 
-    touchableGetPressRectOffset() {
-      return this.props.pressRetentionOffset
-    },
+  //   touchableHandleLongPress: throttle(function(e) {
+  //     // eslint-disable-next-line no-unused-expressions
+  //     this.props.onLongPress && this.props.onLongPress(e)
+  //   }, THROTTLE_MS),
 
-    touchableGetHitSlop() {
-      return this.props.hitSlop
-    },
+  //   touchableGetPressRectOffset() {
+  //     return this.props.pressRetentionOffset
+  //   },
 
-    touchableGetHighlightDelayMS() {
-      return this.props.delayPressIn
-    },
+  //   touchableGetHitSlop() {
+  //     return this.props.hitSlop
+  //   },
 
-    touchableGetLongPressDelayMS() {
-      return this.props.delayLongPress
-    },
+  //   touchableGetHighlightDelayMS() {
+  //     return this.props.delayPressIn
+  //   },
 
-    touchableGetPressOutDelayMS() {
-      return this.props.delayPressOut
-    },
+  //   touchableGetLongPressDelayMS() {
+  //     return this.props.delayLongPress
+  //   },
 
-    _setActive(duration) {
-      this.setPressValue(1, duration)
-    },
+  //   touchableGetPressOutDelayMS() {
+  //     return this.props.delayPressOut
+  //   },
 
-    _setInactive(duration) {
-      this.setPressValue(0, duration)
-    },
+  //   _setActive(duration) {
+  //     this.setPressValue(1, duration)
+  //   },
 
-    render() {
-      const child = this.props.children
-      const childStyle = child && child.props && child.props.style
-      return React.cloneElement(child, {
-        onStartShouldSetResponder: this.touchableHandleStartShouldSetResponder,
-        onResponderTerminationRequest: this.touchableHandleResponderTerminationRequest,
-        onResponderGrant: this.touchableHandleResponderGrant,
-        onResponderMove: this.touchableHandleResponderMove,
-        onResponderRelease: this.touchableHandleResponderRelease,
-        onResponderTerminate: this.touchableHandleResponderTerminate,
-        style: [styles.touchable, childStyle]
-      })
-    }
-  })
+  //   _setInactive(duration) {
+  //     this.setPressValue(0, duration)
+  //   },
+
+  //   render() {
+  //     const child = this.props.children
+  //     const childStyle = child && child.props && child.props.style
+  //     return React.cloneElement(child, {
+  //       onStartShouldSetResponder: this.touchableHandleStartShouldSetResponder,
+  //       onResponderTerminationRequest: this.touchableHandleResponderTerminationRequest,
+  //       onResponderGrant: this.touchableHandleResponderGrant,
+  //       onResponderMove: this.touchableHandleResponderMove,
+  //       onResponderRelease: this.touchableHandleResponderRelease,
+  //       onResponderTerminate: this.touchableHandleResponderTerminate,
+  //       style: [styles.touchable, childStyle]
+  //     })
+  //   }
+  // }
+
+  // )
 }
