@@ -5,14 +5,20 @@ const PixelRatio = {
    * Returns the device pixel density.
    */
   get() {
-    return ReactPrimitives.Dimensions.get('window').scale;
+    if (!!ReactPrimitives.Dimensions) {
+      return ReactPrimitives.Dimensions.get('window').scale;
+    }
+    return 2
   },
 
   /**
    * No equivalent for Web
    */
   getFontScale() {
-    return ReactPrimitives.Dimensions.get('window').fontScale || PixelRatio.get();
+    if (!!ReactPrimitives.Dimensions) {
+      return ReactPrimitives.Dimensions.get('window').fontScale || PixelRatio.get();
+    }
+    return 1
   },
 
   /**
