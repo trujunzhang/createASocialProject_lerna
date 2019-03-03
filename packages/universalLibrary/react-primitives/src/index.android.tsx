@@ -1,5 +1,5 @@
-require('./injection/react-native')
 
-import xx from './injection/react-native'
+import { ReactPrimitives } from './ReactPrimitives'
 
-module.exports = require('./ReactPrimitives')
+import { allInjectionModel } from './injection/react-native'
+

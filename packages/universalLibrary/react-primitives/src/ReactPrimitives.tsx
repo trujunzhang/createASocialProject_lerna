@@ -5,7 +5,21 @@
 // Use getter functions + warn / throw if a non-primitive API is retrieved off of ReactPrimitives
 // that looks like a react-native API
 
-export const ReactPrimitives: any = {
+
+export class ReactPrimitives {
+  private StyleSheet: any = null,
+  private View: any = null,
+  private Text: any = null,
+  private Image: any = null,
+  private Touchable: any = null,
+  private Easing: any = null,
+  private Animated: any = null,
+  private Dimensions: any = null,
+
+
+}
+
+export const RxxeactPrimitives: any = {
   StyleSheet: null,
   View: null,
   Text: null,

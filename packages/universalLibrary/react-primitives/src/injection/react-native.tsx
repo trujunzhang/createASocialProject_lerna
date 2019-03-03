@@ -1,4 +1,3 @@
-import { ReactPrimitives } from '../ReactPrimitives'
 import {
   StatusBar,
   Animated,
