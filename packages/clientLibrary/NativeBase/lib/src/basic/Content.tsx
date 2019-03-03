@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types'
 import { ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
-import { isIphoneX, KeyboardAwareScrollView } from '../utils/base'
+// import { isIphoneX, KeyboardAwareScrollView } from '../utils/base'
 import { platformVariables as variable } from '@app/native-base-variables'
 
 export interface IContentProps {
@@ -107,55 +107,67 @@ class Content extends React.Component<IContentProps, any> {
     }
     return rightPadder
   }
+
   render() {
-    const variables = this.context.theme
-      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
-      : variable
-    return isIphoneX() ? (
-      <KeyboardAwareScrollView
-        automaticallyAdjustContentInsets={false}
-        resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
-        keyboardShouldPersistTaps={
-          this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
-        }
-        ref={(c) => {
-          this._scrollview = c
-          this._root = c
-        }}
-        {...this.props}
-        onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}
-        style={[
-          this.props.style,
-          {
-            paddingLeft: this.calculateLeft(this.state.orientation, variables.Inset)
-          }
-        ]}
-        contentContainerStyle={[
-          { padding: this.props.padder ? variables.contentPadding : undefined },
-          this.props.contentContainerStyle
-        ]}>
-        {this.props.children}
-      </KeyboardAwareScrollView>
-    ) : (
-      <KeyboardAwareScrollView
-        automaticallyAdjustContentInsets={false}
-        resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
-        keyboardShouldPersistTaps={
-          this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
-        }
-        ref={(c) => {
-          this._scrollview = c
-          this._root = c
-        }}
-        {...this.props}
-        contentContainerStyle={[
-          { padding: this.props.padder ? variables.contentPadding : undefined },
-          this.props.contentContainerStyle
-        ]}>
-        {this.props.children}
-      </KeyboardAwareScrollView>
-    )
+    // const variables = this.context.theme
+    //     ? this.context.theme["@@shoutem.theme/themeStyle"].variables
+    //     : variable;
+    return (<React.Fragment>
+      {this.props.children}
+    </React.Fragment>)
   }
+
+  // render() {
+  //   const variables = this.context.theme
+  //     ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+  //     : variable
+  //   return isIphoneX() ? (
+  //     <KeyboardAwareScrollView
+  //       automaticallyAdjustContentInsets={false}
+  //       resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
+  //       keyboardShouldPersistTaps={
+  //         this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
+  //       }
+  //       ref={(c) => {
+  //         this._scrollview = c
+  //         this._root = c
+  //       }}
+  //       {...this.props}
+  //       onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}
+  //       style={[
+  //         this.props.style,
+  //         {
+  //           paddingLeft: this.calculateLeft(this.state.orientation, variables.Inset)
+  //         }
+  //       ]}
+  //       contentContainerStyle={[
+  //         { padding: this.props.padder ? variables.contentPadding : undefined },
+  //         this.props.contentContainerStyle
+  //       ]}>
+  //       {this.props.children}
+  //     </KeyboardAwareScrollView>
+  //   ) : (
+  //       <KeyboardAwareScrollView
+  //         automaticallyAdjustContentInsets={false}
+  //         resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
+  //         keyboardShouldPersistTaps={
+  //           this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
+  //         }
+  //         ref={(c) => {
+  //           this._scrollview = c
+  //           this._root = c
+  //         }}
+  //         {...this.props}
+  //         contentContainerStyle={[
+  //           { padding: this.props.padder ? variables.contentPadding : undefined },
+  //           this.props.contentContainerStyle
+  //         ]}>
+  //         {this.props.children}
+  //       </KeyboardAwareScrollView>
+  //     )
+  // }
+
+
 }
 
 // Content.propTypes = {

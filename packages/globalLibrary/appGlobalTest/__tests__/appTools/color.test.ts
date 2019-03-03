@@ -1,6 +1,5 @@
 import * as React from 'react'
 
-// import { Color } from '@app/color'
 import { ColorUtils as Color } from '@app/tools'
 
 describe('methods correctly in the textColor', () => {

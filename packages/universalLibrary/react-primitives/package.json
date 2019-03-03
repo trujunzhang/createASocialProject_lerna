@@ -27,8 +27,6 @@
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
-    "react-native-iphone-x-helper": "*",
-    "react-native-keyboard-aware-scroll-view": "*",
     "animated": "0.2.2",
     "react-timer-mixin": "0.13.4",
     "@types/prop-types": "15.5.8",
