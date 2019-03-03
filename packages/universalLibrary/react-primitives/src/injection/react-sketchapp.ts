@@ -1,5 +1,5 @@
 // import Animated from 'animated'
-import Animated from 'animated/lib/targets/react-dom';
+// import Animated from 'animated/lib/targets/react-dom';
 import Easing from 'animated/lib/Easing'
 import {
   View,
@@ -50,7 +50,6 @@ const Platform = {
   Version: 1
 }
 
-const Touchable = require('../modules/Touchable')(Animated, StyleSheet, Platform, TouchableMixin)
 
 const injectionBaseModel: IInjectionBaseModel = {
   View,
@@ -61,14 +60,17 @@ const injectionBaseModel: IInjectionBaseModel = {
   StyleSheet
 }
 
+// const animated = Object.assign(Animated, {
+//   View: Animated.createAnimatedComponent(View),
+//   Text: Animated.createAnimatedComponent(Text),
+//   Image: Animated.createAnimatedComponent(Image)
+// })
+
 const injectionAnimateModel: IInjectionAnimateModel = {
-  Easing,
-  Animated: Object.assign(Animated, {
-    View: Animated.createAnimatedComponent(View),
-    Text: Animated.createAnimatedComponent(Text),
-    Image: Animated.createAnimatedComponent(Image)
-  }),
+  Easing: null,
+  Animated: null
 }
+
 const injectionSystemModel: IInjectionSystemModel = {
   // System
   StatusBar: {
@@ -103,6 +105,8 @@ const injectionDialogModel: IInjectionDialogModel = {
   DatePickerAndroid: null
 }
 
+// const Touchable = require('../modules/Touchable')(Animated, StyleSheet, Platform, TouchableMixin)
+const Touchable = null
 const injectionTouchModel: IInjectionTouchModel = {
   // Touch
   PanResponder: null,
