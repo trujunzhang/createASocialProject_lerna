@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/ptelad/react-native-iphone-x-helper#readme",
   "peerDependencies": {
-    "react-native": ">=0.42.0"
+    "react-native": "*"
   },
   "dependencies": {},
   "devDependencies": {

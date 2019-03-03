@@ -1,4 +1,5 @@
-const ReactPrimitives = require('../ReactPrimitives');
+import ReactPrimitives from '../ReactPrimitives'
+
 const {
   Animated,
   StyleSheet,

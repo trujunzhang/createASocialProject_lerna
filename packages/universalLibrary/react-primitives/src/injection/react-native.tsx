@@ -1,5 +1,5 @@
 const ReactPrimitives = require('../ReactPrimitives')
-const {
+import {
   StatusBar,
   Animated,
   View,
@@ -25,7 +25,7 @@ const {
   TouchableHighlight,
   TouchableWithoutFeedback,
   TouchableNativeFeedback
-} = require('react-native')
+} from ('react-native')
 
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'

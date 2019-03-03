@@ -1,18 +1,28 @@
 module.exports = function (api) {
-  api.cache(true);
+  api.cache(true)
   return {
-    presets: ["react-native"],
+    presets: ['@babel/env', '@babel/typescript'],
     plugins: [
-      "transform-object-rest-spread",
+      '@babel/proposal-class-properties',
+      '@babel/proposal-object-rest-spread',
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          corejs: false,
+          helpers: true,
+          regenerator: true,
+          useESModules: false
+        }
+      ],
       [
         "module-resolver",
         {
           "alias": {
-            "react-primitives": "./"
+            "^react-native$": "react-native-web"
           },
-          "cwd": "babelrc"
+          "extensions": ["web.js", ".js"]
         }
       ]
     ]
-  };
-};
+  }
+}

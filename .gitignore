@@ -45,3 +45,6 @@ static/
 # Sketch app.
 node_modules
 .ts-compiled
+
+# others
+**/react-primitives-js/

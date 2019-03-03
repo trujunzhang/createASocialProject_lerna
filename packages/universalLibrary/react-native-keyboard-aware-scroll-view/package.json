@@ -40,7 +40,7 @@
     "react-native-iphone-x-helper": "1.2.0"
   },
   "peerDependencies": {
-    "react-native": ">=0.48.4"
+    "react-native": "*"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
