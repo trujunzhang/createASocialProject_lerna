@@ -1,6 +1,5 @@
-import { ReactPrimitives } from './ReactPrimitives'
+import { ReactPrimitives as Generator } from './ReactPrimitives'
 
 import { allInjectionModel } from './injection/react-native'
 
-
-export const new ReactPrimitives(allInjectionModel).end()
+export const ReactPrimitives = new Generator(allInjectionModel).end()

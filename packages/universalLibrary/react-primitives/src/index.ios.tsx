@@ -1,3 +1,5 @@
-require('./injection/react-native')
+import { ReactPrimitives as Generator } from './ReactPrimitives'
 
-module.exports = require('./ReactPrimitives')
+import { allInjectionModel } from './injection/react-native'
+
+export const ReactPrimitives = new Generator(allInjectionModel).end()
