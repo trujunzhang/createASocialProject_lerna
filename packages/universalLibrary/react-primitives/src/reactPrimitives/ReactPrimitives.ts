@@ -9,6 +9,7 @@ import { PixelRatioHelper } from '../modules/PixelRatio'
 import {
   AllInjectionModel,
   IInjectionBaseModel,
+  IInjectionAnimateModel,
   IInjectionSystemModel,
   IInjectionTextModel,
   IInjectionListModel,
@@ -25,10 +26,12 @@ export class ReactPrimitives {
   private injectionBaseModel(model: IInjectionBaseModel) {
     this.reactPrimitivesModel.View = model.View
     this.reactPrimitivesModel.Image = model.Image
-    this.reactPrimitivesModel.Easing = model.Easing
-    this.reactPrimitivesModel.Animated = model.Animated
     this.reactPrimitivesModel.isIphoneX = model.isIphoneX
     this.reactPrimitivesModel.StyleSheet = model.StyleSheet
+  }
+  private injectionAnimateModel(model: IInjectionAnimateModel) {
+    this.reactPrimitivesModel.Easing = model.Easing
+    this.reactPrimitivesModel.Animated = model.Animated
   }
   private injectionSystemModel(model: IInjectionSystemModel) {
     this.reactPrimitivesModel.StatusBar = model.StatusBar
@@ -65,6 +68,7 @@ export class ReactPrimitives {
 
   constructor(allInjectionModel: AllInjectionModel) {
     this.injectionBaseModel(allInjectionModel)
+    this.injectionAnimateModel(allInjectionModel)
     this.injectionSystemModel(allInjectionModel)
     this.injectionTextModel(allInjectionModel)
     this.injectionListModel(allInjectionModel)

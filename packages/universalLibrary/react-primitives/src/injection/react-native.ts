@@ -33,6 +33,7 @@ import {
   AllInjectionModel,
   IInjectionBaseModel,
   IInjectionSystemModel,
+  IInjectionAnimateModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
@@ -45,14 +46,16 @@ import {
 const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
-  Easing,
-  Animated,
   isIphoneX: () => {
     return false
   },
   StyleSheet
 }
 
+const injectionAnimateModel: IInjectionAnimateModel = {
+  Easing,
+  Animated,
+}
 const injectionSystemModel: IInjectionSystemModel = {
   // System
   StatusBar,
@@ -100,6 +103,7 @@ const injectionTouchModel: IInjectionTouchModel = {
 export const allInjectionModel: AllInjectionModel = Object.assign(
   injectionBaseModel,
   injectionSystemModel,
+  injectionAnimateModel,
   injectionTextModel,
   injectionListModel,
   injectionDialogModel,

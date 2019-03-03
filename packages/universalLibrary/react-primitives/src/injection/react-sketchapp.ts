@@ -1,4 +1,5 @@
-import Animated from 'animated'
+// import Animated from 'animated'
+import Animated from 'animated/lib/targets/react-dom';
 import Easing from 'animated/lib/Easing'
 import {
   View,
@@ -12,6 +13,7 @@ import {
   AllInjectionModel,
   IInjectionBaseModel,
   IInjectionSystemModel,
+  IInjectionAnimateModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
@@ -41,7 +43,7 @@ const TouchableMixin = {
   touchableHandleResponderMove() { }
 }
 
-Animated.inject.FlattenStyle(StyleSheet.flatten)
+// Animated.inject.FlattenStyle(StyleSheet.flatten)
 
 const Platform = {
   OS: 'sketch',
@@ -53,18 +55,20 @@ const Touchable = require('../modules/Touchable')(Animated, StyleSheet, Platform
 const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
-  Easing,
-  Animated: Object.assign(Animated, {
-    View: Animated.createAnimatedComponent(View),
-    Text: Animated.createAnimatedComponent(Text),
-    Image: Animated.createAnimatedComponent(Image)
-  }),
   isIphoneX: () => {
     return false
   },
   StyleSheet
 }
 
+const injectionAnimateModel: IInjectionAnimateModel = {
+  Easing,
+  Animated: Object.assign(Animated, {
+    View: Animated.createAnimatedComponent(View),
+    Text: Animated.createAnimatedComponent(Text),
+    Image: Animated.createAnimatedComponent(Image)
+  }),
+}
 const injectionSystemModel: IInjectionSystemModel = {
   // System
   StatusBar: {
@@ -111,6 +115,7 @@ const injectionTouchModel: IInjectionTouchModel = {
 export const allInjectionModel: AllInjectionModel = Object.assign(
   injectionBaseModel,
   injectionSystemModel,
+  injectionAnimateModel,
   injectionTextModel,
   injectionListModel,
   injectionDialogModel,

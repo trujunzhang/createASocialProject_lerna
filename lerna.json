@@ -10,7 +10,8 @@
     "packages/globalLibrary/**/*",
     "packages/appLibrary/**/*",
     "packages/clientLibrary/**/*",
-    "packages/appSketchApp"
+    "packages/appSketchApp",
+    "packages/appExamples/sketchapp/form-validation"
   ],
   "useWorkspaces": false,
   "npmClient": "yarn",

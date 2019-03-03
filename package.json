@@ -50,6 +50,8 @@
             "all:current": "run-s  *.current",
             "build.current": "lerna run build.current --stream",
             "build.current.pending": "lerna run build.current.pending --stream",
+            "  *****  The following is demo sketch****": "",
+            "demo.sketch.render": "lerna run render --scope=form-validation --stream",
             "  *****  The following is demo nativebase ****": "",
             "demo.nativebase.expo:ios": "lerna run expo:ios --scope=expo-nativebase-demo --stream",
             "demo.nativebase.sketch": "lerna run render:all --scope=sketch-nativebase-demo --stream"
