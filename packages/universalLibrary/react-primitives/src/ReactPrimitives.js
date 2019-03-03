@@ -20,6 +20,9 @@ const ReactPrimitives = {
     if (api.isIphoneX) {
       ReactPrimitives.isIphoneX = api.isIphoneX
     }
+    if (api.Dimensions) {
+      ReactPrimitives.Dimensions = api.Dimensions
+    }
     if (api.StatusBar) {
       ReactPrimitives.StatusBar = api.StatusBar
     }
@@ -46,9 +49,6 @@ const ReactPrimitives = {
     }
     if (api.Animated) {
       ReactPrimitives.Animated = api.Animated
-    }
-    if (api.Dimensions) {
-      ReactPrimitives.Dimensions = api.Dimensions
     }
     if (api.Platform) {
       ReactPrimitives.Platform.inject(api.Platform)

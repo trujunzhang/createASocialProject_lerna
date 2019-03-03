@@ -10,6 +10,7 @@ const {
 } = require('react-sketchapp');
 
 const Dimensions = require('./sketchapp/dimensions')
+const StatusBar = require('./sketchapp/statusBar')
 
 const TouchableMixin = {
   componentWillUnmount() { },
@@ -28,8 +29,11 @@ const TouchableMixin = {
 Animated.inject.FlattenStyle(StyleSheet.flatten);
 
 ReactPrimitives.inject({
-  StyleSheet,
+  // Custom
   Dimensions,
+  StatusBar,
+  // common
+  StyleSheet,
   View,
   Text,
   Image,
