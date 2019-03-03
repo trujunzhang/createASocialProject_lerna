@@ -1,4 +1,5 @@
 import {
+  PixelRatio,
   Animated,
   StyleSheet,
   View,
@@ -19,8 +20,9 @@ import {
 import { StatusBar } from './sketchapp/statusBar'
 
 import {
-  AllInjectionModel,
+  IReactPrimitivesModel,
   IInjectionBaseModel,
+  IInjectionPixelRatioModel,
   IInjectionSystemModel,
   IInjectionAnimateModel,
   IInjectionTextModel,
@@ -58,6 +60,9 @@ const injectionAnimateModel: IInjectionAnimateModel = {
   Animated,
 }
 
+const injectionPixelRatioModel: IInjectionPixelRatioModel = {
+  PixelRatio
+}
 const injectionSystemModel: IInjectionSystemModel = {
   // System
   StatusBar: {
@@ -104,8 +109,9 @@ const injectionTouchModel: IInjectionTouchModel = {
   Touchable: TouchableWithoutFeedback
 }
 
-export const allInjectionModel: AllInjectionModel = Object.assign(
+export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
+  injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel,

@@ -805,13 +805,6 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
-"@types/react-sketchapp@0.12.1":
-  version "0.12.1"
-  resolved "http://registry.npm.taobao.org/@types/react-sketchapp/download/@types/react-sketchapp-0.12.1.tgz#32c2596bdb5417144d41ba92972b2a240c054d40"
-  integrity sha1-MsJZa9tUFxRNQbqSlysqJAwFTUA=
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-test-renderer@16.0.3":
   version "16.0.3"
   resolved "http://registry.npm.taobao.org/@types/react-test-renderer/download/@types/react-test-renderer-16.0.3.tgz#cce5c983d66cc5c3582e7c2f44b274ab635a8acc"

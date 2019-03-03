@@ -7,3 +7,5 @@ export * from './text'
 export * from './touch'
 export * from './all'
 
+export * from './IReactPrimitives'
+

@@ -9,12 +9,12 @@ export class PixelRatioHelper {
    * Returns the device pixel density.
    */
   get() {
-    if (!!this.Dimensions) {
-      try {
-        return this.Dimensions.get('window').scale
-      } catch (error) {
-      }
-    }
+    // if (!!this.Dimensions) {
+    //   try {
+    //     return this.Dimensions.get('window').scale
+    //   } catch (error) {
+    //   }
+    // }
     return 2
   }
 
@@ -23,7 +23,7 @@ export class PixelRatioHelper {
    */
   getFontScale() {
     if (!!this.Dimensions) {
-      return this.Dimensions.get('window').fontScale || this.get()
+      // return this.Dimensions.get('window').fontScale || this.get()
     }
     return 1
   }

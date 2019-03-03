@@ -10,8 +10,9 @@ import {
 } from 'react-sketchapp'
 
 import {
-  AllInjectionModel,
+  IReactPrimitivesModel,
   IInjectionBaseModel,
+  IInjectionPixelRatioModel,
   IInjectionSystemModel,
   IInjectionAnimateModel,
   IInjectionTextModel,
@@ -20,6 +21,7 @@ import {
   IInjectionTouchModel
 } from '../models'
 
+import { PixelRatioHelper } from '../modules/PixelRatio'
 import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'
 
@@ -71,6 +73,10 @@ const injectionAnimateModel: IInjectionAnimateModel = {
   Animated: null
 }
 
+const injectionPixelRatioModel: IInjectionPixelRatioModel = {
+  PixelRatio: new PixelRatioHelper(Dimensions)
+}
+
 const injectionSystemModel: IInjectionSystemModel = {
   // System
   StatusBar: {
@@ -116,8 +122,9 @@ const injectionTouchModel: IInjectionTouchModel = {
   Touchable
 }
 
-export const allInjectionModel: AllInjectionModel = Object.assign(
+export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
+  injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel,

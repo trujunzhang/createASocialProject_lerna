@@ -4,12 +4,13 @@
 // TODO(lmr):
 // Use getter functions + warn / throw if a non-primitive API is retrieved off of ReactPrimitives
 // that looks like a react-native API
-import { PixelRatioHelper } from '../modules/PixelRatio'
 
 import {
+  IReactPrimitivesModel,
   AllInjectionModel,
   IInjectionBaseModel,
   IInjectionAnimateModel,
+  IInjectionPixelRatioModel,
   IInjectionSystemModel,
   IInjectionTextModel,
   IInjectionListModel,
@@ -17,7 +18,6 @@ import {
   IInjectionTouchModel
 } from '../models'
 
-import { IReactPrimitivesModel } from './IReactPrimitives'
 
 export class ReactPrimitives {
   private PixelRatio: any = null
@@ -32,6 +32,9 @@ export class ReactPrimitives {
   private injectionAnimateModel(model: IInjectionAnimateModel) {
     this.reactPrimitivesModel.Easing = model.Easing
     this.reactPrimitivesModel.Animated = model.Animated
+  }
+  private injectionPixelRatioModel(model: IInjectionPixelRatioModel) {
+    this.reactPrimitivesModel.PixelRatio = model.PixelRatio
   }
   private injectionSystemModel(model: IInjectionSystemModel) {
     this.reactPrimitivesModel.StatusBar = model.StatusBar
@@ -66,21 +69,18 @@ export class ReactPrimitives {
     this.reactPrimitivesModel.Touchable = model.Touchable
   }
 
-  constructor(allInjectionModel: AllInjectionModel) {
+  constructor(allInjectionModel: IReactPrimitivesModel) {
     this.injectionBaseModel(allInjectionModel)
     this.injectionAnimateModel(allInjectionModel)
+    this.injectionPixelRatioModel(allInjectionModel)
     this.injectionSystemModel(allInjectionModel)
     this.injectionTextModel(allInjectionModel)
     this.injectionListModel(allInjectionModel)
     this.injectionDialogModel(allInjectionModel)
     this.injectionTouchModel(allInjectionModel)
-
-    this.PixelRatio = new PixelRatioHelper(allInjectionModel.Dimensions)
   }
 
   end(): IReactPrimitivesModel {
-    return Object.assign(this.reactPrimitivesModel, {
-      PixelRatio: this.PixelRatio
-    })
+    return this.reactPrimitivesModel
   }
 }
