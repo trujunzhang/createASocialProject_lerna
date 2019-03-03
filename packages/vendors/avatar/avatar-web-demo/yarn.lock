@@ -1240,9 +1240,9 @@ ajv@^6.1.0, ajv@^6.5.5:
     uri-js "^4.2.2"
 
 ansi-colors@^3.0.0:
-  version "3.2.3"
-  resolved "http://registry.npm.taobao.org/ansi-colors/download/ansi-colors-3.2.3.tgz#57d35b8686e851e2cc04c403f1c00203976a1813"
-  integrity sha1-V9NbhoboUeLMBMQD8cACA5dqGBM=
+  version "3.2.4"
+  resolved "http://registry.npm.taobao.org/ansi-colors/download/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
+  integrity sha1-46PaS/uubIapwoViXeEkojQCb78=
 
 ansi-escapes@^3.0.0, ansi-escapes@^3.1.0:
   version "3.2.0"

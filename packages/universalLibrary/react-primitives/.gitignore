@@ -31,5 +31,5 @@ yarn-error.log*
 /.idea
 
 # Compiled typescript.
-**/*.js
-**/*.jsx
+# **/*.js
+# **/*.jsx
