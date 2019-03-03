@@ -6,7 +6,7 @@ export const containerTheme = (variables: themeVariables) => {
   const platform = variables.platform
   const deviceHeight = Dimensions.get('window').height
 
-  console.log('Dimensions(screen): ', JSON.stringify(Dimensions.get('screen')))
+  // console.log('Dimensions(screen): ', JSON.stringify(Dimensions.get('screen')))
 
   const theme = {
     flex: 1,

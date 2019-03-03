@@ -36,7 +36,6 @@ ReactPrimitives.inject({
   View,
   TextInput,
   Text,
-  ListView,
   Image,
   Easing,
   Animated,
@@ -46,6 +45,11 @@ ReactPrimitives.inject({
     Version: Platform.Version,
   },
   Dimensions,
+  // List
+  ListView,
+});
+
+ReactPrimitives.inject({
   // Dialog
   ActivityIndicator,
   Modal,
@@ -54,6 +58,9 @@ ReactPrimitives.inject({
   Picker,
   DatePickerIOS,
   DatePickerAndroid,
+});
+
+ReactPrimitives.inject({
   // Touch
   PanResponder,
   TouchableOpacity,

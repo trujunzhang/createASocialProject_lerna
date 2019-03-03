@@ -52,11 +52,18 @@ ReactPrimitives.inject({
   },
 });
 
+const Touchable = require('../modules/Touchable')(
+  Animated,
+  StyleSheet,
+  ReactPrimitives.Platform,
+  TouchableMixin,
+)
+
 ReactPrimitives.inject({
-  Touchable: require('../modules/Touchable')(
-    Animated,
-    StyleSheet,
-    ReactPrimitives.Platform,
-    TouchableMixin,
-  ),
+  // Touch
+  PanResponder,
+  TouchableOpacity: Touchable,
+  TouchableHighlight: Touchable,
+  TouchableNativeFeedback: Touchable,
+  Touchable,
 });

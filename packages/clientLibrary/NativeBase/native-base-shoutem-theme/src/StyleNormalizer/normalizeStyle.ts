@@ -4,8 +4,6 @@ import {
 } from '@app/tools'
 import StyleNormalizer from "./StyleNormalizer";
 
-// import { StyleSheet } from "react-native";
-
 const styleNormalizer = new StyleNormalizer();
 
 /**
