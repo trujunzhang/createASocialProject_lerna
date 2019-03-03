@@ -1,10 +1,8 @@
 // import _ from "lodash";
-import {
-  LodashUtils as _
-} from '@app/tools'
-import StyleNormalizer from "./StyleNormalizer";
+import { LodashUtils as _ } from '@app/tools'
+import StyleNormalizer from './StyleNormalizer'
 
-const styleNormalizer = new StyleNormalizer();
+const styleNormalizer = new StyleNormalizer()
 
 /**
  * Normalize style properties shorthands.
@@ -18,19 +16,19 @@ export default function normalizeStyle(style) {
     (normalizedStyle, val, prop) => {
       /* eslint-disable no-param-reassign */
       if (_.isPlainObject(val)) {
-        normalizedStyle[prop] = normalizeStyle(val);
+        normalizedStyle[prop] = normalizeStyle(val)
       } else if (styleNormalizer.canNormalize(prop)) {
         normalizedStyle = {
           ...normalizedStyle,
           ...styleNormalizer.normalize(prop, val)
-        };
+        }
       } else {
-        normalizedStyle[prop] = val;
+        normalizedStyle[prop] = val
       }
       /* eslint-enable no-param-reassign */
 
-      return normalizedStyle;
+      return normalizedStyle
     },
     {}
-  );
+  )
 }

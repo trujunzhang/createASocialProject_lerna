@@ -97,12 +97,7 @@ class PageLayout extends React.Component<IPageLayoutProps, IPageLayoutState> {
 
   render() {
     // <Content scrollEnabled={this.state.scrollEnabled}>{this.renderPageContent()}</Content>
-    return (
-      <Container>
-        {this.renderPageHeader()}
-
-      </Container>
-    )
+    return <Container>{this.renderPageHeader()}</Container>
   }
 }
 

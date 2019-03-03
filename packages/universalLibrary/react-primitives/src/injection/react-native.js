@@ -1,4 +1,4 @@
-const ReactPrimitives = require('../ReactPrimitives');
+const ReactPrimitives = require('../ReactPrimitives')
 const {
   StatusBar,
   Animated,
@@ -24,14 +24,13 @@ const {
   TouchableOpacity,
   TouchableHighlight,
   TouchableWithoutFeedback,
-  TouchableNativeFeedback,
-} = require('react-native');
+  TouchableNativeFeedback
+} = require('react-native')
 
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 ReactPrimitives.inject({
-  StatusBar,
   StyleSheet,
   View,
   TextInput,
@@ -42,12 +41,20 @@ ReactPrimitives.inject({
   isIphoneX,
   Platform: {
     OS: Platform.OS,
-    Version: Platform.Version,
-  },
-  Dimensions,
+    Version: Platform.Version
+  }
+})
+
+ReactPrimitives.inject({
+  // Custom
+  StatusBar,
+  Dimensions
+})
+
+ReactPrimitives.inject({
   // List
-  ListView,
-});
+  ListView
+})
 
 ReactPrimitives.inject({
   // Dialog
@@ -57,8 +64,8 @@ ReactPrimitives.inject({
   Switch,
   Picker,
   DatePickerIOS,
-  DatePickerAndroid,
-});
+  DatePickerAndroid
+})
 
 ReactPrimitives.inject({
   // Touch
@@ -66,5 +73,5 @@ ReactPrimitives.inject({
   TouchableOpacity,
   TouchableHighlight,
   TouchableNativeFeedback,
-  Touchable: TouchableWithoutFeedback,
-});
+  Touchable: TouchableWithoutFeedback
+})

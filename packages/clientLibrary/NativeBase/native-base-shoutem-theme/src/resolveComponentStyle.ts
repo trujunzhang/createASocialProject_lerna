@@ -1,8 +1,6 @@
 // import _ from "lodash";
-import {
-  LodashUtils as _
-} from '@app/tools'
-import customMerge from "./customMerge";
+import { LodashUtils as _ } from '@app/tools'
+import customMerge from './customMerge'
 
 /**
  * Matches any style properties that represent component style variants.
@@ -14,7 +12,7 @@ import customMerge from "./customMerge";
  * @returns {boolean} True if the style property represents a component variant, false otherwise.
  */
 function isStyleVariant(propertyName) {
-  return /^\./.test(propertyName);
+  return /^\./.test(propertyName)
 }
 
 /**
@@ -30,7 +28,7 @@ function isStyleVariant(propertyName) {
  * @returns {boolean} True if the style property represents a child style, false otherwise.
  */
 function isChildStyle(propertyName) {
-  return /(^[^\.].*\.)|^\*$/.test(propertyName);
+  return /(^[^\.].*\.)|^\*$/.test(propertyName)
 }
 
 /**
@@ -46,21 +44,21 @@ function splitStyle(style) {
   return _.reduce(
     style,
     (result, value, key) => {
-      let styleSection = result.componentStyle;
+      let styleSection = result.componentStyle
       if (isStyleVariant(key)) {
-        styleSection = result.styleVariants;
+        styleSection = result.styleVariants
       } else if (isChildStyle(key)) {
-        styleSection = result.childrenStyle;
+        styleSection = result.childrenStyle
       }
-      styleSection[key] = value;
-      return result;
+      styleSection[key] = value
+      return result
     },
     {
       componentStyle: {},
       styleVariants: {},
       childrenStyle: {}
     }
-  );
+  )
 }
 
 /**
@@ -102,17 +100,14 @@ export function resolveComponentStyle(
   //   ..._.map(styleNames, (sn) => parentStyle[`${componentName}.${sn}`])
   // );
 
-  let mergedStyle = customMerge(themeStyle, parentStyle[componentName]);
+  let mergedStyle = customMerge(themeStyle, parentStyle[componentName])
   styleNames.forEach((sn, index) => {
-    mergedStyle = customMerge(mergedStyle, themeStyle[`${sn}`]);
-  });
+    mergedStyle = customMerge(mergedStyle, themeStyle[`${sn}`])
+  })
 
   styleNames.forEach((sn, index) => {
-    mergedStyle = customMerge(
-      mergedStyle,
-      parentStyle[`${componentName}${sn}`]
-    );
-  });
+    mergedStyle = customMerge(mergedStyle, parentStyle[`${componentName}${sn}`])
+  })
 
   // Phase 2: merge the component styles, this step is performed by using the
   // style from phase 1, so that we are sure that the final style variants are
@@ -126,18 +121,15 @@ export function resolveComponentStyle(
   //   ..._.map(styleNames, (sn) => parentStyle[`${componentName}.${sn}`])
   // );
 
-  let resolvedStyle = customMerge(mergedStyle, parentStyle[componentName]);
+  let resolvedStyle = customMerge(mergedStyle, parentStyle[componentName])
 
   styleNames.forEach((sn, index) => {
-    resolvedStyle = customMerge(resolvedStyle, mergedStyle[`${sn}`]);
-  });
+    resolvedStyle = customMerge(resolvedStyle, mergedStyle[`${sn}`])
+  })
 
   styleNames.forEach((sn, index) => {
-    resolvedStyle = customMerge(
-      resolvedStyle,
-      parentStyle[`${componentName}${sn}`]
-    );
-  });
+    resolvedStyle = customMerge(resolvedStyle, parentStyle[`${componentName}${sn}`])
+  })
 
-  return resolvedStyle;
+  return resolvedStyle
 }

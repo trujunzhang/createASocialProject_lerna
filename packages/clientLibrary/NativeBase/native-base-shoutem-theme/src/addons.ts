@@ -1,10 +1,8 @@
 // import _ from 'lodash';
-import {
-  LodashUtils as _
-} from '@app/tools'
+import { LodashUtils as _ } from '@app/tools'
 
 function capitalizeFirstLetter(value) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
+  return value.charAt(0).toUpperCase() + value.slice(1)
 }
 
 /**
@@ -39,17 +37,21 @@ function capitalizeFirstLetter(value) {
  * @returns {object} An object with the generated style variants.
  */
 export function createVariations(baseName, nameSuffixes, key, value) {
-  return _.reduce(nameSuffixes, (result, variant) => {
-    const variantName = variant ? `${baseName}-${variant}` : baseName;
-    const keyName = variant ? `${key}${capitalizeFirstLetter(variant)}` : key;
+  return _.reduce(
+    nameSuffixes,
+    (result, variant) => {
+      const variantName = variant ? `${baseName}-${variant}` : baseName
+      const keyName = variant ? `${key}${capitalizeFirstLetter(variant)}` : key
 
-    // eslint-disable-next-line no-param-reassign
-    result[variantName] = {
-      [keyName]: value,
-    };
+      // eslint-disable-next-line no-param-reassign
+      result[variantName] = {
+        [keyName]: value
+      }
 
-    return result;
-  }, {});
+      return result
+    },
+    {}
+  )
 }
 
 /**
@@ -84,13 +86,17 @@ export function createVariations(baseName, nameSuffixes, key, value) {
  * @returns {object} An object with the generated styles.
  */
 export function createSharedStyle(componentNames, sharedStyle = {}, customStyles = {}) {
-  return _.reduce(componentNames, (result, componentName) => {
-    // eslint-disable-next-line no-param-reassign
-    result[componentName] = {
-      ...sharedStyle,
-      ...customStyles[componentName],
-    };
+  return _.reduce(
+    componentNames,
+    (result, componentName) => {
+      // eslint-disable-next-line no-param-reassign
+      result[componentName] = {
+        ...sharedStyle,
+        ...customStyles[componentName]
+      }
 
-    return result;
-  }, {});
+      return result
+    },
+    {}
+  )
 }

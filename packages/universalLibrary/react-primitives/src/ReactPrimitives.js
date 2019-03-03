@@ -32,9 +32,6 @@ const ReactPrimitives = {
     if (api.View) {
       ReactPrimitives.View = api.View
     }
-    if (api.ListView) {
-      ReactPrimitives.ListView = api.ListView
-    }
     if (api.TextInput) {
       ReactPrimitives.TextInput = api.TextInput
     }
@@ -52,6 +49,10 @@ const ReactPrimitives = {
     }
     if (api.Platform) {
       ReactPrimitives.Platform.inject(api.Platform)
+    }
+    // List
+    if (api.ListView) {
+      ReactPrimitives.ListView = api.ListView
     }
     // Dialog
     if (api.ActivityIndicator) {
