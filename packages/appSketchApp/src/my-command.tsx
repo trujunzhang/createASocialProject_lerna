@@ -1,4 +1,9 @@
 import * as React from 'react';
+import {
+  Dimensions
+} from 'react-primitives'
+const { height, width } = Dimensions.get('window')
+
 import { render, Artboard } from 'react-sketchapp';
 
 import {
@@ -13,7 +18,9 @@ const Document = () => (
     style={{
       flexDirection: 'row',
       flexWrap: 'wrap',
+      backgroundColor: 'red',
       width: (96 + 8) * 4,
+      height
     }}
   >
     <CurrentPage />
