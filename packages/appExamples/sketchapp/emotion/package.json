@@ -20,7 +20,7 @@
 	"dependencies": {
 		"emotion-primitives": "1.0.0-beta.6",
 		"react": "16.4.1",
-		"react-primitives": "0.7.0",
+		"react-primitives": "*",
 		"react-sketchapp": "2.0.0"
 	}
 }

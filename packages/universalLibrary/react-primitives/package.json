@@ -42,7 +42,7 @@
     "react-sketchapp": "2.0.0",
     "@types/react-dom": "16.0.11",
     "react-dom": "16.8.2",
-    "react-primitives": "0.7.0",
+    "react-primitives": "*",
     "react-art": "16.5.2",
     "react-native-web": "0.10.0"
   },

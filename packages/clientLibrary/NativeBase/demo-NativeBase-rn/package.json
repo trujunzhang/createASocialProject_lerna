@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
-    "@app/native-base": "0.6.0",
+    "@app/native-base": "*",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test.debug.pending": "jest --config jest.config.debug.js",
     "postinstall": "rndebugger-open --expo"
   },
   "dependencies": {
-    "@app/native-base": "0.6.0",
+    "@app/native-base": "*",
     "@app/nativebase-theme-components": "0.6.0",
     "@app/mocks": "0.6.0",
     "@app/tools": "0.6.0",

@@ -46,7 +46,7 @@
     "clamp": "1.0.1",
     "react-tween-state": "0.1.5",
     "tween-functions": "1.2.0",
-    "react-primitives": "0.7.0",
+    "react-primitives": "*",
     "react-dom": "^16.8.2",
     "react-art": "16.5.2",
     "react-native-web": "0.10.0"
