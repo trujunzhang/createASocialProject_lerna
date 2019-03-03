@@ -1,7 +1,7 @@
-const React = require('react');
-const createReactClass = require('create-react-class');
-const PropTypes = require('prop-types');
-const TimerMixin = require('react-timer-mixin');
+import * as  React from 'react';
+import createReactClass from ('create-react-class');
+import * as PropTypes from ('prop-types');
+import TimerMixin from ('react-timer-mixin');
 
 const ensurePositiveDelayProps = (/* props */) => {
   // invariant(

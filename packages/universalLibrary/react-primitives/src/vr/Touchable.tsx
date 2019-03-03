@@ -1,6 +1,6 @@
-const React = require('react');
-const createReactClass = require('create-react-class');
-const PropTypes = require('prop-types');
+import * as React from 'react'
+import createReactClass from ('create-react-class');
+import * as PropTypes from ('prop-types');
 // TODO: DJZHANG
 // const { VrButton } = require('react-vr');
 
@@ -17,10 +17,10 @@ const InsetPropType = PropTypes.shape({
 const THROTTLE_MS = 500;
 
 function throttle(fn, throttleMs) {
-  let lastCall = null;
+  let lastCall: any = null;
 
   return function (...args) {
-    const now = new Date();
+    const now: any = new Date();
     if (lastCall === null || (now - lastCall > throttleMs)) {
       fn.apply(this, args);
       lastCall = new Date();
@@ -209,4 +209,3 @@ const Touchable = (
   });
 };
 
-module.exports = Touchable;

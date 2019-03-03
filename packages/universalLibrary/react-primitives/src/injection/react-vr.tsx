@@ -1,5 +1,6 @@
-const ReactPrimitives = require('../ReactPrimitives');
-const {
+import ReactPrimitives from '../ReactPrimitives'
+
+import {
   Animated,
   View,
   Text,
@@ -7,7 +8,7 @@ const {
   StyleSheet,
   Easing,
   // TODO: Dimensions. Does that even make sense tho?
-} = require('react-vr');
+} from ('react-vr');
 
 ReactPrimitives.inject({
   StyleSheet,

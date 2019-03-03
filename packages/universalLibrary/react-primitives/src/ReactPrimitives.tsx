@@ -5,7 +5,7 @@
 // Use getter functions + warn / throw if a non-primitive API is retrieved off of ReactPrimitives
 // that looks like a react-native API
 
-const ReactPrimitives = {
+export const ReactPrimitives: any = {
   StyleSheet: null,
   View: null,
   Text: null,
@@ -95,4 +95,3 @@ const ReactPrimitives = {
   }
 }
 
-module.exports = ReactPrimitives

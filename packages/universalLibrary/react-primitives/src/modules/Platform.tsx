@@ -1,6 +1,6 @@
 const { hasOwnProperty } = Object.prototype;
 
-const Platform = {
+export const Platform = {
   OS: 'unknown',
   Version: 0,
   select: obj => {
@@ -17,4 +17,3 @@ const Platform = {
   },
 };
 
-module.exports = Platform;

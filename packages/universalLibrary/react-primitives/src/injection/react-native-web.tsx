@@ -1,6 +1,6 @@
 import ReactPrimitives from '../ReactPrimitives'
 
-const {
+import {
   Animated,
   StyleSheet,
   View,
@@ -14,7 +14,7 @@ const {
   TouchableNativeFeedback,
   Dimensions,
   Easing,
-} = require('react-native-web');
+} from ('react-native-web')
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
 // API alltogether.

@@ -1,16 +1,17 @@
-const ReactPrimitives = require('../ReactPrimitives')
+import ReactPrimitives from '../ReactPrimitives'
+
 const Animated = require('animated')
 const Easing = require('animated/lib/Easing')
-const {
+import {
   View,
   Text,
   Image,
   StyleSheet
   // TODO(lmr): Dimensions
-} = require('react-sketchapp')
+} from ('react-sketchapp')
 
-const Dimensions = require('./sketchapp/dimensions')
-const StatusBar = require('./sketchapp/statusBar')
+import Dimensions from './sketchapp/dimensions'
+import StatusBar from './sketchapp/statusBar'
 
 const TouchableMixin = {
   componentWillUnmount() { },
