@@ -27,14 +27,14 @@
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
-    "@app/intl": "0.6.0",
-    "@app/tools": "0.6.0",
+    "@app/intl": "*",
+    "@app/tools": "*",
     "@types/numeral": "0.0.25",
     "@types/node": "11.9.4",
     "@types/react": "16.7.18"
   },
   "devDependencies": {
-    "@app/mocks": "0.6.0",
+    "@app/mocks": "*",
     "@types/sinon": "5.0.2",
     "sinon": "6.1.5",
     "babel-core": "7.0.0-bridge.0",

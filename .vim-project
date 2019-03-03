@@ -16,7 +16,7 @@ pageLayout.tsx
   testMatch: ['**/*.test.ts?(x)'],
 
 
-    "@app/mocks": "0.6.0",
+    "@app/mocks": "*",
 
 Theme,
     "@types/react": "16.7.7",

@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@app/avatar": "0.6.0",
+    "@app/avatar": "*",
     "@types/next": "8.0.1",
     "@types/react": "16.7.18",
     "@types/react-dom": "16.0.11",

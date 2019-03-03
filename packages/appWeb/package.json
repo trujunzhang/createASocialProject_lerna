@@ -11,7 +11,7 @@
   },
   "back": {},
   "dependencies": {
-    "@app/shared-components": "0.6.0",
+    "@app/shared-components": "*",
     "@types/next": "^2.4.8",
     "@types/react-native": "0.57.27",
     "@types/react": "16.4.8",

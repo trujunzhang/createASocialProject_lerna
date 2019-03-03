@@ -27,8 +27,8 @@
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
-    "@app/types": "0.6.0",
-    "@app/tools": "0.6.0",
+    "@app/types": "*",
+    "@app/tools": "*",
     "react-native-iphone-x-helper": "1.2.0",
     "react-native-keyboard-aware-scroll-view": "0.8.0",
     "animated": "0.2.2",
@@ -53,7 +53,7 @@
     "react-native-web": "*"
   },
   "devDependencies": {
-    "@app/mocks": "0.6.0",
+    "@app/mocks": "*",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",

@@ -28,7 +28,7 @@
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
-    "@app/types": "0.6.0",
+    "@app/types": "*",
     "@types/i18next": "12.1.0",
     "@types/i18next-browser-languagedetector": "2.0.1",
     "@types/i18next-express-middleware": "0.0.33",
@@ -51,7 +51,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "@app/mocks": "0.6.0",
+    "@app/mocks": "*",
     "identity-obj-proxy": "3.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
