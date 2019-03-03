@@ -16,7 +16,9 @@ export interface ITextareaProps extends TextInputProps {
 
   disabled?: any
 }
-class Textarea extends React.Component<ITextareaProps, any> {
+
+// TODO: DJZHANG
+class Textarea extends React.Component<ITextareaProps | any, any> {
   private _root: any
   private _textInput: any
 

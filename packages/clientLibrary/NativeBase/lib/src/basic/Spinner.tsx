@@ -13,7 +13,9 @@ export interface ISpinnerProps extends ActivityIndicatorProps {
   color: string
   inverse: boolean
 }
-class Spinner extends React.Component<ISpinnerProps, any> {
+
+// TODO: DJZHANG
+class Spinner extends React.Component<ISpinnerProps | any, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object
@@ -30,8 +32,8 @@ class Spinner extends React.Component<ISpinnerProps, any> {
           this.props.color
             ? this.props.color
             : this.props.inverse
-            ? variables.inverseSpinnerColor
-            : variables.defaultSpinnerColor
+              ? variables.inverseSpinnerColor
+              : variables.defaultSpinnerColor
         }
         size={this.props.size ? this.props.size : 'large'}
       />

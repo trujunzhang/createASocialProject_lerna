@@ -5,13 +5,13 @@ import {
   TouchableHighlightProps,
   Platform,
   TouchableNativeFeedback,
+  ViewStyle,
   View
 } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable } from '@app/native-base-variables'
-import { ViewStyle } from 'react-primitives'
 
 export interface IListItemProps extends TouchableHighlightProps {
   full?: boolean
@@ -52,7 +52,8 @@ export interface IListItemProps extends TouchableHighlightProps {
   touchableHighlightStyle?: ViewStyle
 }
 
-class ListItem extends React.Component<IListItemProps, any> {
+// TODO: DJZHANG
+class ListItem extends React.Component<IListItemProps | any, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object

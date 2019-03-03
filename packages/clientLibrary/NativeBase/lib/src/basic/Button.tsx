@@ -40,7 +40,9 @@ export interface IButtonProps extends TouchableOpacityProps {
   activeOpacity?: number | any
   androidRippleColor: any
 }
-class Button extends React.Component<IButtonProps, any> {
+
+// TODO: DJZHANG
+class Button extends React.Component<IButtonProps | any, any> {
   private _root: any
   static contextTypes = {
     theme: PropTypes.object
@@ -72,13 +74,13 @@ class Button extends React.Component<IButtonProps, any> {
       Platform.OS === 'ios'
         ? this.props.children
         : React.Children.map(this.props.children, (child: any) =>
-            child && child.type === Text
-              ? React.cloneElement(child, {
-                  uppercase: variables.btnUppercaseAndroidText,
-                  ...child.props
-                })
-              : child
-          )
+          child && child.type === Text
+            ? React.cloneElement(child, {
+              uppercase: variables.btnUppercaseAndroidText,
+              ...child.props
+            })
+            : child
+        )
     if (
       Platform.OS === 'ios' ||
       Platform.OS === 'web' ||
