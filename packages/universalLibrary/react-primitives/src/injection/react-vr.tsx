@@ -6,9 +6,9 @@ import {
   Text,
   Image,
   StyleSheet,
-  Easing,
+  Easing
   // TODO: Dimensions. Does that even make sense tho?
-} from ('react-vr');
+} from 'react-vr'
 
 ReactPrimitives.inject({
   StyleSheet,
@@ -17,14 +17,12 @@ ReactPrimitives.inject({
   Image,
   Easing,
   Animated,
-  isIphoneX: () => { return false },
+  isIphoneX: () => {
+    return false
+  },
   Platform: {
     OS: 'vr',
-    Version: 1,
+    Version: 1
   },
-  Touchable: require('../vr/Touchable')(
-    Animated,
-    StyleSheet,
-    ReactPrimitives.Platform,
-  ),
-});
+  Touchable: require('../vr/Touchable')(Animated, StyleSheet, ReactPrimitives.Platform)
+})

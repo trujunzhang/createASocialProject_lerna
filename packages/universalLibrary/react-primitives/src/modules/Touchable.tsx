@@ -1,38 +1,37 @@
-import * as  React from 'react';
-import createReactClass from ('create-react-class');
-import * as PropTypes from ('prop-types');
-import TimerMixin from ('react-timer-mixin');
+import * as React from 'react'
+import createReactClass from 'create-react-class'
+import * as PropTypes from 'prop-types'
+import TimerMixin from 'react-timer-mixin'
 
 const ensurePositiveDelayProps = (/* props */) => {
   // invariant(
   //   !(props.delayPressIn < 0 || props.delayPressOut < 0 || props.delayLongPress < 0),
   //   'Touchable components cannot have negative delay properties'
   // );
-};
+}
 
 const InsetPropType = PropTypes.shape({
   top: PropTypes.number,
   left: PropTypes.number,
   bottom: PropTypes.number,
-  right: PropTypes.number,
-});
-
+  right: PropTypes.number
+})
 
 // NOTE(lmr): this is a huge hack right now, and prevents anything from being clickable more than
 // twice per second, but the alternative is so bad right now. Need to figure out how to fix the
 // responder plugin later and fix this.
-const THROTTLE_MS = 500;
+const THROTTLE_MS = 500
 
 function throttle(fn, throttleMs) {
-  let lastCall = null;
+  let lastCall = null
 
-  return function (...args) {
-    const now = new Date();
-    if (lastCall === null || (now - lastCall > throttleMs)) {
-      fn.apply(this, args);
-      lastCall = new Date();
+  return function(...args) {
+    const now = new Date()
+    if (lastCall === null || now - lastCall > throttleMs) {
+      fn.apply(this, args)
+      lastCall = new Date()
     }
-  };
+  }
 }
 
 /**
@@ -56,23 +55,18 @@ function throttle(fn, throttleMs) {
  * },
  * ```
  */
-const Touchable = (
-  Animated,
-  StyleSheet,
-  Platform,
-  TouchableMixin,
-) => {
+const Touchable = (Animated, StyleSheet, Platform, TouchableMixin) => {
   const styles = StyleSheet.create({
     touchable: Platform.select({
       web: {
-        cursor: 'pointer',
+        cursor: 'pointer'
       },
       ios: {},
       android: {},
       sketch: {},
-      vr: {},
-    }),
-  });
+      vr: {}
+    })
+  })
 
   // eslint-disable-next-line react/prefer-es6-class
   return createReactClass({
@@ -139,13 +133,13 @@ const Touchable = (
       press: PropTypes.instanceOf(Animated.Value),
 
       pressDuration: PropTypes.number,
-      children: PropTypes.node,
+      children: PropTypes.node
     },
 
     mixins: [TimerMixin, TouchableMixin],
 
     statics: {
-      Mixin: TouchableMixin,
+      Mixin: TouchableMixin
     },
 
     getDefaultProps() {
@@ -159,96 +153,93 @@ const Touchable = (
           top: 20,
           left: 20,
           right: 20,
-          bottom: 30,
+          bottom: 30
         },
-        press: new Animated.Value(0),
-      };
+        press: new Animated.Value(0)
+      }
     },
 
     getInitialState() {
-      return this.touchableGetInitialState();
+      return this.touchableGetInitialState()
     },
 
     componentDidMount() {
-      ensurePositiveDelayProps(this.props);
+      ensurePositiveDelayProps(this.props)
     },
 
     componentWillReceiveProps(nextProps) {
-      ensurePositiveDelayProps(nextProps);
+      ensurePositiveDelayProps(nextProps)
     },
 
     setPressValue(toValue) {
-      Animated.timing(
-        this.props.press,
-        {
-          toValue,
-          duration: this.props.pressDuration,
-          // easing: Easing.inOut(Easing.quad),
-        },
-      ).start();
+      Animated.timing(this.props.press, {
+        toValue,
+        duration: this.props.pressDuration
+        // easing: Easing.inOut(Easing.quad),
+      }).start()
     },
 
     /**
      * `Touchable.Mixin` self callbacks. The mixin will invoke these if they are
      * defined on your component.
      */
-    touchableHandleActivePressIn: throttle(function (e) {
+    touchableHandleActivePressIn: throttle(function(e) {
       if (e.dispatchConfig.registrationName === 'onResponderGrant') {
-        this._setActive(0);
+        this._setActive(0)
       } else {
-        this._setActive(150);
+        this._setActive(150)
       }
       // eslint-disable-next-line no-unused-expressions
-      this.props.onPressIn && this.props.onPressIn(e);
+      this.props.onPressIn && this.props.onPressIn(e)
     }, THROTTLE_MS),
 
-    touchableHandleActivePressOut: throttle(function (e) {
-      this._setInactive(250);
+    touchableHandleActivePressOut: throttle(function(e) {
+      this._setInactive(250)
       // eslint-disable-next-line no-unused-expressions
-      this.props.onPressOut && this.props.onPressOut(e);
+      this.props.onPressOut && this.props.onPressOut(e)
     }, THROTTLE_MS),
 
-    touchableHandlePress: throttle(function (e) {
+    touchableHandlePress: throttle(function(e) {
       // eslint-disable-next-line no-unused-expressions
-      this.props.onPress && this.props.onPress(e);
+      this.props.onPress && this.props.onPress(e)
     }, THROTTLE_MS),
 
-    touchableHandleLongPress: throttle(function (e) {
+    touchableHandleLongPress: throttle(function(e) {
       // eslint-disable-next-line no-unused-expressions
-      this.props.onLongPress && this.props.onLongPress(e);
+      this.props.onLongPress && this.props.onLongPress(e)
     }, THROTTLE_MS),
 
     touchableGetPressRectOffset() {
-      return this.props.pressRetentionOffset;
+      return this.props.pressRetentionOffset
     },
 
     touchableGetHitSlop() {
-      return this.props.hitSlop;
+      return this.props.hitSlop
     },
 
     touchableGetHighlightDelayMS() {
-      return this.props.delayPressIn;
+      return this.props.delayPressIn
     },
 
     touchableGetLongPressDelayMS() {
-      return this.props.delayLongPress;
+      return this.props.delayLongPress
     },
 
     touchableGetPressOutDelayMS() {
-      return this.props.delayPressOut;
+      return this.props.delayPressOut
     },
 
     _setActive(duration) {
-      this.setPressValue(1, duration);
+      this.setPressValue(1, duration)
     },
 
     _setInactive(duration) {
-      this.setPressValue(0, duration);
+      this.setPressValue(0, duration)
     },
 
     render() {
-      const child = this.props.children;
-      const childStyle = child && child.props && child.props.style;
+      const child = this.props.children
+      const childStyle = child && child.props && child.props.style
       return React.cloneElement(child, {
         onStartShouldSetResponder: this.touchableHandleStartShouldSetResponder,
         onResponderTerminationRequest: this.touchableHandleResponderTerminationRequest,
@@ -256,13 +247,10 @@ const Touchable = (
         onResponderMove: this.touchableHandleResponderMove,
         onResponderRelease: this.touchableHandleResponderRelease,
         onResponderTerminate: this.touchableHandleResponderTerminate,
-        style: [
-          styles.touchable,
-          childStyle,
-        ],
-      });
-    },
-  });
-};
+        style: [styles.touchable, childStyle]
+      })
+    }
+  })
+}
 
-module.exports = Touchable;
+module.exports = Touchable

@@ -1,19 +1,18 @@
-const { hasOwnProperty } = Object.prototype;
+const { hasOwnProperty } = Object.prototype
 
 export const Platform = {
   OS: 'unknown',
   Version: 0,
-  select: obj => {
+  select: (obj) => {
     if (hasOwnProperty.call(obj, Platform.OS)) {
-      return obj[Platform.OS];
+      return obj[Platform.OS]
     }
-    return obj.default;
+    return obj.default
   },
-  inject: platform => {
+  inject: (platform) => {
     // Use bracket accessor notation as workaround for
     // https://github.com/facebook/metro-bundler/issues/27
-    Platform['OS'] = platform.OS; // eslint-disable-line dot-notation
-    Platform['Version'] = platform.Version; // eslint-disable-line dot-notation
-  },
-};
-
+    Platform['OS'] = platform.OS // eslint-disable-line dot-notation
+    Platform['Version'] = platform.Version // eslint-disable-line dot-notation
+  }
+}

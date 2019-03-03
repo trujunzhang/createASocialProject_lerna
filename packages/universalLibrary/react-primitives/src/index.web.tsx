@@ -1,3 +1,3 @@
-require('./injection/react-native-web');
+require('./injection/react-native-web')
 
-module.exports = require('./ReactPrimitives');
+module.exports = require('./ReactPrimitives')

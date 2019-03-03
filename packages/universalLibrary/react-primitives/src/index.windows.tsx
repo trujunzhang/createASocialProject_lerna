@@ -1,3 +1,3 @@
-require('./injection/react-native');
+require('./injection/react-native')
 
-module.exports = require('./ReactPrimitives');
+module.exports = require('./ReactPrimitives')

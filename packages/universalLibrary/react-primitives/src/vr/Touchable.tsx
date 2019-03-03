@@ -1,6 +1,6 @@
 import * as React from 'react'
-import createReactClass from ('create-react-class');
-import * as PropTypes from ('prop-types');
+import createReactClass from 'create-react-class'
+import * as PropTypes from 'prop-types'
 // TODO: DJZHANG
 // const { VrButton } = require('react-vr');
 
@@ -8,24 +8,24 @@ const InsetPropType = PropTypes.shape({
   top: PropTypes.number,
   left: PropTypes.number,
   bottom: PropTypes.number,
-  right: PropTypes.number,
-});
+  right: PropTypes.number
+})
 
 // NOTE(lmr): this is a huge hack right now, and prevents anything from being clickable more than
 // twice per second, but the alternative is so bad right now. Need to figure out how to fix the
 // responder plugin later and fix this.
-const THROTTLE_MS = 500;
+const THROTTLE_MS = 500
 
 function throttle(fn, throttleMs) {
-  let lastCall: any = null;
+  let lastCall: any = null
 
-  return function (...args) {
-    const now: any = new Date();
-    if (lastCall === null || (now - lastCall > throttleMs)) {
-      fn.apply(this, args);
-      lastCall = new Date();
+  return function(...args) {
+    const now: any = new Date()
+    if (lastCall === null || now - lastCall > throttleMs) {
+      fn.apply(this, args)
+      lastCall = new Date()
     }
-  };
+  }
 }
 
 /**
@@ -49,12 +49,7 @@ function throttle(fn, throttleMs) {
  * },
  * ```
  */
-const Touchable = (
-  Animated,
-  StyleSheet,
-  Platform,
-  TouchableMixin,
-) => {
+const Touchable = (Animated, StyleSheet, Platform, TouchableMixin) => {
   // eslint-disable-next-line react/prefer-es6-class
   return createReactClass({
     displayName: 'Touchable',
@@ -120,13 +115,13 @@ const Touchable = (
       press: PropTypes.instanceOf(Animated.Value),
 
       pressDuration: PropTypes.number,
-      children: PropTypes.node,
+      children: PropTypes.node
     },
 
     mixins: [],
 
     statics: {
-      Mixin: TouchableMixin,
+      Mixin: TouchableMixin
     },
 
     getDefaultProps() {
@@ -140,56 +135,52 @@ const Touchable = (
           top: 20,
           left: 20,
           right: 20,
-          bottom: 30,
+          bottom: 30
         },
-        press: new Animated.Value(0),
-      };
+        press: new Animated.Value(0)
+      }
     },
 
     setPressValue(toValue) {
-      Animated.timing(
-        this.props.press,
-        {
-          toValue,
-          duration: this.props.pressDuration,
-          // easing: Easing.inOut(Easing.quad),
-        },
-      ).start();
+      Animated.timing(this.props.press, {
+        toValue,
+        duration: this.props.pressDuration
+        // easing: Easing.inOut(Easing.quad),
+      }).start()
     },
 
-
-    touchableHandleActivePressIn: throttle(function (e) {
-      this._setActive(150);
+    touchableHandleActivePressIn: throttle(function(e) {
+      this._setActive(150)
       // eslint-disable-next-line no-unused-expressions
-      this.props.onPressIn && this.props.onPressIn(e);
+      this.props.onPressIn && this.props.onPressIn(e)
     }, THROTTLE_MS),
 
-    touchableHandleActivePressOut: throttle(function (e) {
-      this._setInactive(250);
+    touchableHandleActivePressOut: throttle(function(e) {
+      this._setInactive(250)
       // eslint-disable-next-line no-unused-expressions
-      this.props.onPressOut && this.props.onPressOut(e);
+      this.props.onPressOut && this.props.onPressOut(e)
     }, THROTTLE_MS),
 
-    touchableHandlePress: throttle(function (e) {
+    touchableHandlePress: throttle(function(e) {
       // eslint-disable-next-line no-unused-expressions
-      this.props.onPress && this.props.onPress(e);
+      this.props.onPress && this.props.onPress(e)
     }, THROTTLE_MS),
 
-    touchableHandleLongPress: throttle(function (e) {
+    touchableHandleLongPress: throttle(function(e) {
       // eslint-disable-next-line no-unused-expressions
-      this.props.onLongPress && this.props.onLongPress(e);
+      this.props.onLongPress && this.props.onLongPress(e)
     }, THROTTLE_MS),
 
     _setActive(duration) {
-      this.setPressValue(1, duration);
+      this.setPressValue(1, duration)
     },
 
     _setInactive(duration) {
-      this.setPressValue(0, duration);
+      this.setPressValue(0, duration)
     },
 
     render() {
-      const child = this.props.children;
+      const child = this.props.children
       // TODO: DJZHANG
       return null
       // return (
@@ -205,7 +196,6 @@ const Touchable = (
       //     {child}
       //   </VrButton>
       // );
-    },
-  });
-};
-
+    }
+  })
+}

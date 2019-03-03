@@ -1,4 +1,4 @@
-import ReactPrimitives from ('../ReactPrimitives');
+import ReactPrimitives from '../ReactPrimitives'
 
 const PixelRatio = {
   /**
@@ -6,7 +6,7 @@ const PixelRatio = {
    */
   get() {
     if (!!ReactPrimitives.Dimensions) {
-      return ReactPrimitives.Dimensions.get('window').scale;
+      return ReactPrimitives.Dimensions.get('window').scale
     }
     return 2
   },
@@ -16,7 +16,7 @@ const PixelRatio = {
    */
   getFontScale() {
     if (!!ReactPrimitives.Dimensions) {
-      return ReactPrimitives.Dimensions.get('window').fontScale || PixelRatio.get();
+      return ReactPrimitives.Dimensions.get('window').fontScale || PixelRatio.get()
     }
     return 1
   },
@@ -26,7 +26,7 @@ const PixelRatio = {
    * Guaranteed to return an integer number.
    */
   getPixelSizeForLayoutSize(layoutSize) {
-    return Math.round(layoutSize * PixelRatio.get());
+    return Math.round(layoutSize * PixelRatio.get())
   },
 
   /**
@@ -36,9 +36,9 @@ const PixelRatio = {
    * exactly (8.33 * 3) = 25 pixels.
    */
   roundToNearestPixel(layoutSize) {
-    const ratio = PixelRatio.get();
-    return Math.round(layoutSize * ratio) / ratio;
-  },
-};
+    const ratio = PixelRatio.get()
+    return Math.round(layoutSize * ratio) / ratio
+  }
+}
 
-module.exports = PixelRatio;
+module.exports = PixelRatio

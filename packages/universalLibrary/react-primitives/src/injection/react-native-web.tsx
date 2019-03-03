@@ -13,21 +13,23 @@ import {
   TouchableWithoutFeedback,
   TouchableNativeFeedback,
   Dimensions,
-  Easing,
-} from ('react-native-web')
+  Easing
+} from 'react-native-web'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
 // API alltogether.
 function getDefault(m) {
-  return m.__esModule === true ? m.default : m;
+  return m.__esModule === true ? m.default : m
 }
-const StyleRegistry = getDefault(require('react-native-web/dist/cjs/exports/StyleSheet/ReactNativeStyleResolver'));
+const StyleRegistry = getDefault(
+  require('react-native-web/dist/cjs/exports/StyleSheet/ReactNativeStyleResolver')
+)
 
-const emptyObject = {};
+const emptyObject = {}
 
-const resolve = style => {
-  return StyleRegistry.resolve(style) || emptyObject;
-};
+const resolve = (style) => {
+  return StyleRegistry.resolve(style) || emptyObject
+}
 
 ReactPrimitives.inject({
   View,
@@ -36,18 +38,17 @@ ReactPrimitives.inject({
   Image,
   Easing,
   Animated,
-  isIphoneX: () => { return false },
-  StyleSheet: Object.assign(
-    StyleSheet,
-    { resolve }
-  ),
+  isIphoneX: () => {
+    return false
+  },
+  StyleSheet: Object.assign(StyleSheet, { resolve }),
   Platform: {
     OS: Platform.OS,
-    Version: Platform.Version,
+    Version: Platform.Version
   },
   Dimensions,
   TouchableOpacity,
   TouchableHighlight,
   TouchableNativeFeedback,
-  Touchable: TouchableWithoutFeedback,
-});
+  Touchable: TouchableWithoutFeedback
+})

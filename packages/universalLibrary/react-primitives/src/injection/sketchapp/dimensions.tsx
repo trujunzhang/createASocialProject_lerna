@@ -1,15 +1,15 @@
-const dimensions: any = {};
-const listeners = {};
+const dimensions: any = {}
+const listeners = {}
 
 // Used by Dimensions below
 export interface IScaledSize {
-    width: number;
-    height: number;
-    scale: number;
-    fontScale: number;
+  width: number
+  height: number
+  scale: number
+  fontScale: number
 }
 export class Dimensions {
-    /**
+  /**
        * Initial dimensions are set before runApplication is called so they
        * should be available before any other require's are run, but may be
        * updated later.
@@ -23,20 +23,23 @@ export class Dimensions {
        @param dim Name of dimension as defined when calling set.
        @returns Value for the dimension.
        */
-    // get(dim: "window" | "screen"): ScaledSize{
-    static get(dim: "window" | "screen"): IScaledSize {
-        if (Object.keys(dimensions).indexOf(dim) === -1) {
-            return {
-                "fontScale": 1, "width": 414, "height": 896, "scale": 2
-            }
-        }
-        return dimensions[dim];
+  // get(dim: "window" | "screen"): ScaledSize{
+  static get(dim: 'window' | 'screen'): IScaledSize {
+    if (Object.keys(dimensions).indexOf(dim) === -1) {
+      return {
+        fontScale: 1,
+        width: 414,
+        height: 896,
+        scale: 2
+      }
     }
+    return dimensions[dim]
+  }
 
-    static set(dims: { [key: string]: any }) {
-        if (dims) {
-            dimensions.screen = dims.screen;
-            dimensions.window = dims.window;
-        }
+  static set(dims: { [key: string]: any }) {
+    if (dims) {
+      dimensions.screen = dims.screen
+      dimensions.window = dims.window
     }
+  }
 }

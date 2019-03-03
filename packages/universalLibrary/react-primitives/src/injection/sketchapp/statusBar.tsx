@@ -1,5 +1,3 @@
-
-
 export class StatusBar {
-    static currentHeight: number = 44
+  static currentHeight: number = 44
 }

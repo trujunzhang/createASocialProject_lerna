@@ -1,5 +1,4 @@
 import ReactPrimitives from '../ReactPrimitives'
-)
 import {
   StatusBar,
   Animated,
@@ -26,7 +25,7 @@ import {
   TouchableHighlight,
   TouchableWithoutFeedback,
   TouchableNativeFeedback
-} from ('react-native')
+} from 'react-native'
 
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
