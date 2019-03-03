@@ -38,7 +38,7 @@
             "test.lib": "yarn ready:test && lerna run test.lib  --stream",
             "test.current": "yarn ready:test && lerna run test.current --stream",
             " *****  The following is for sketch app****": "",
-            "app:sketch": "lerna run render --scope=app-sketch --stream",
+            "app:sketch": "lerna run render:all --scope=app-sketch --stream",
             "app:sketch.build": "lerna run build:js --scope=app-sketch --stream",
             "  *****  The following is ready for client ****": "",
             "expo:ios": "lerna run expo:ios --scope=app-client --stream",
