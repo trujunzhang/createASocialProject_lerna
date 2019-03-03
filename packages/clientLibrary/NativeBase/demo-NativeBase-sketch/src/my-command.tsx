@@ -1,4 +1,7 @@
 import * as React from 'react';
+import {
+  Dimensions
+} from 'react-primitives'
 import { render, Artboard, View, Text } from 'react-sketchapp';
 
 import {
@@ -10,6 +13,8 @@ import { Setup } from './layouts/boot/setup'
 import { Root } from '@app/native-base'
 
 const CurrentPage = ColorListView
+
+console.log('Dimensions(screen): ', JSON.stringify(Dimensions.get('window')))
 
 const App = () => {
   // return null
@@ -24,15 +29,15 @@ const App = () => {
         }
       }>
       <Setup>
-      <Text
-        name="Swatch Name"
-        style={{ color: '#ccc', fontWeight: 'bold' }}
-      >
-        {'wh'}
-      </Text>
-      <Text name="Swatch Hex" style={{ color: '#ccc' }}>
-        {'djzhang'}
-      </Text>
+        <Text
+          name="Swatch Name"
+          style={{ color: '#ccc', fontWeight: 'bold' }}
+        >
+          {'wh(screen): ' + JSON.stringify(Dimensions.get('window'))}
+        </Text>
+        <Text name="Swatch Hex" style={{ color: '#ccc' }}>
+          {'djzhang'}
+        </Text>
       </Setup>
     </View>
   )

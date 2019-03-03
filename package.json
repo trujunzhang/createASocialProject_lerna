@@ -32,6 +32,7 @@
             "test": "yarn tests && yarn lint",
             "tests": "run-s  test.*",
             "test.global": "yarn ready:test && lerna run test.global --stream",
+            "test.primitives": "yarn ready:test && lerna run test.primitives --stream",
             "test.web": "yarn ready:test && lerna run test.web --stream",
             "testx.client": "yarn ready:test && lerna run test.client --stream",
             "test.lib": "yarn ready:test && lerna run test.lib  --stream",
@@ -51,6 +52,6 @@
             "build.current.pending": "lerna run build.current.pending --stream",
             "  *****  The following is demo nativebase ****": "",
             "demo.nativebase.expo:ios": "lerna run expo:ios --scope=expo-nativebase-demo --stream",
-            "demo.nativebase.sketch": "lerna run render --scope=sketch-nativebase-demo --stream"
+            "demo.nativebase.sketch": "lerna run render:all --scope=sketch-nativebase-demo --stream"
       }
 }

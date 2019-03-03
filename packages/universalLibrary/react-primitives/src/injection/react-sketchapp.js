@@ -9,6 +9,8 @@ const {
   // TODO(lmr): Dimensions
 } = require('react-sketchapp');
 
+const Dimensions = require('./sketchapp/dimensions')
+
 const TouchableMixin = {
   componentWillUnmount() { },
   touchableGetInitialState() {
@@ -27,11 +29,12 @@ Animated.inject.FlattenStyle(StyleSheet.flatten);
 
 ReactPrimitives.inject({
   StyleSheet,
+  Dimensions,
   View,
   Text,
   Image,
   Easing,
-  isIphoneX: () => { return false;},
+  isIphoneX: () => { return false; },
   Animated: Object.assign(
     Animated,
     {
