@@ -3,9 +3,9 @@ import {
   Dimensions
 } from 'react-primitives'
 
-// const { height, width } = Dimensions.get('window')
+const { height, width } = Dimensions.get('window')
 
-const height = 400
+// const height = 400
 
 import { render, Artboard } from 'react-sketchapp';
 

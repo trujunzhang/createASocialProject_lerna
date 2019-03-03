@@ -79,9 +79,7 @@ const injectionPixelRatioModel: IInjectionPixelRatioModel = {
 
 const injectionSystemModel: IInjectionSystemModel = {
   // System
-  StatusBar: {
-    currentHeight: 44
-  },
+  StatusBar,
   Dimensions,
   Platform
 }
