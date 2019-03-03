@@ -27,10 +27,20 @@ import {
   TouchableNativeFeedback
 } from 'react-native'
 
+import {
+  AllInjectionModel,
+  IInjectionBaseModel,
+  IInjectionCustomModel,
+  IInjectionListModel,
+  IInjectionDialogModel,
+  IInjectionTouchModel
+} from './IInjection'
+
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
-ReactPrimitives.inject({
+const injectionBaseModel: IInjectionBaseModel =
+{
   StyleSheet,
   View,
   TextInput,
@@ -43,20 +53,23 @@ ReactPrimitives.inject({
     OS: Platform.OS,
     Version: Platform.Version
   }
-})
+}
 
-ReactPrimitives.inject({
+const injectionCustomModel: IInjectionCustomModel =
+{
   // Custom
   StatusBar,
   Dimensions
-})
+}
 
-ReactPrimitives.inject({
+const injectionListModel: IInjectionListModel =
+{
   // List
   ListView
-})
+}
 
-ReactPrimitives.inject({
+const injectionDialogModel: IInjectionDialogModel =
+{
   // Dialog
   ActivityIndicator,
   Modal,
@@ -65,13 +78,22 @@ ReactPrimitives.inject({
   Picker,
   DatePickerIOS,
   DatePickerAndroid
-})
+}
 
-ReactPrimitives.inject({
+const injectionTouchModel: IInjectionTouchModel =
+{
   // Touch
   PanResponder,
   TouchableOpacity,
   TouchableHighlight,
   TouchableNativeFeedback,
   Touchable: TouchableWithoutFeedback
-})
+}
+
+export const allInjectionModel: AllInjectionModel = Object.assign(
+  injectionBaseModel,
+  injectionCustomModel,
+  injectionListModel,
+  injectionDialogModel,
+  injectionTouchModel
+)
