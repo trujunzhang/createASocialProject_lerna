@@ -1,12 +1,19 @@
-export class PixelRatio {
-  static Dimensions: any
+export class PixelRatioHelper {
+  private Dimensions: any = null
+
+  constructor(Dimensions: any) {
+    this.Dimensions = Dimensions
+  }
 
   /**
    * Returns the device pixel density.
    */
-  static get() {
-    if (!!PixelRatio.Dimensions) {
-      return PixelRatio.Dimensions.get('window').scale
+  get() {
+    if (!!this.Dimensions) {
+      try {
+        return this.Dimensions.get('window').scale
+      } catch (error) {
+      }
     }
     return 2
   }
@@ -14,9 +21,9 @@ export class PixelRatio {
   /**
    * No equivalent for Web
    */
-  static getFontScale() {
-    if (!!PixelRatio.Dimensions) {
-      return PixelRatio.Dimensions.get('window').fontScale || PixelRatio.get()
+  getFontScale() {
+    if (!!this.Dimensions) {
+      return this.Dimensions.get('window').fontScale || this.get()
     }
     return 1
   }
@@ -25,8 +32,8 @@ export class PixelRatio {
    * Converts a layout size (dp) to pixel size (px).
    * Guaranteed to return an integer number.
    */
-  static getPixelSizeForLayoutSize(layoutSize) {
-    return Math.round(layoutSize * PixelRatio.get())
+  getPixelSizeForLayoutSize(layoutSize) {
+    return Math.round(layoutSize * this.get())
   }
 
   /**
@@ -35,8 +42,8 @@ export class PixelRatio {
    * of 3, `PixelRatio.roundToNearestPixel(8.4) = 8.33`, which corresponds to
    * exactly (8.33 * 3) = 25 pixels.
    */
-  static roundToNearestPixel(layoutSize) {
-    const ratio = PixelRatio.get()
+  roundToNearestPixel(layoutSize) {
+    const ratio = this.get()
     return Math.round(layoutSize * ratio) / ratio
   }
 }

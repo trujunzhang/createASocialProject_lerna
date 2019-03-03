@@ -2,8 +2,8 @@
 
 // import { allInjectionModel } from '../react-sketchapp'
 
-describe('Functions of the utils', () => {
-    test('should return string correctly,  invoked random', () => {
+describe('Functions of the ReactPrimitives', () => {
+    test('should return string correctly,  invoked sketch', () => {
         // const Dimensions = allInjectionModel.Dimensions
         // const deviceHeight = Dimensions.get('window').height
         // const deviceWidth = Dimensions.get('window').width
