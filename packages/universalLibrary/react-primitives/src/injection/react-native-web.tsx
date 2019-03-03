@@ -43,8 +43,7 @@ const resolve = (style) => {
   return StyleRegistry.resolve(style) || emptyObject
 }
 
-const injectionBaseModel: IInjectionBaseModel =
-{
+const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
   Easing,
@@ -56,11 +55,10 @@ const injectionBaseModel: IInjectionBaseModel =
   Platform: {
     OS: Platform.OS,
     Version: Platform.Version
-  },
+  }
 }
 
-const injectionCustomModel: IInjectionCustomModel =
-{
+const injectionCustomModel: IInjectionCustomModel = {
   // Custom
   StatusBar,
   Dimensions
@@ -69,16 +67,14 @@ const injectionCustomModel: IInjectionCustomModel =
 const injectionTextModel: IInjectionTextModel = {
   // Text
   TextInput: null,
-  Text,
+  Text
 }
-const injectionListModel: IInjectionListModel =
-{
+const injectionListModel: IInjectionListModel = {
   // List
   ListView
 }
 
-const injectionDialogModel: IInjectionDialogModel =
-{
+const injectionDialogModel: IInjectionDialogModel = {
   // Dialog
   ActivityIndicator: null,
   Modal: null,
@@ -89,8 +85,7 @@ const injectionDialogModel: IInjectionDialogModel =
   DatePickerAndroid: null
 }
 
-const injectionTouchModel: IInjectionTouchModel =
-{
+const injectionTouchModel: IInjectionTouchModel = {
   // Touch
   PanResponder: null,
   TouchableOpacity,

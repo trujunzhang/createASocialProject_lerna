@@ -39,8 +39,7 @@ import {
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
-const injectionBaseModel: IInjectionBaseModel =
-{
+const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
   Easing,
@@ -53,8 +52,7 @@ const injectionBaseModel: IInjectionBaseModel =
   }
 }
 
-const injectionCustomModel: IInjectionCustomModel =
-{
+const injectionCustomModel: IInjectionCustomModel = {
   // Custom
   StatusBar,
   Dimensions
@@ -63,17 +61,15 @@ const injectionCustomModel: IInjectionCustomModel =
 const injectionTextModel: IInjectionTextModel = {
   // Text
   TextInput,
-  Text,
+  Text
 }
 
-const injectionListModel: IInjectionListModel =
-{
+const injectionListModel: IInjectionListModel = {
   // List
   ListView
 }
 
-const injectionDialogModel: IInjectionDialogModel =
-{
+const injectionDialogModel: IInjectionDialogModel = {
   // Dialog
   ActivityIndicator,
   Modal,
@@ -84,8 +80,7 @@ const injectionDialogModel: IInjectionDialogModel =
   DatePickerAndroid
 }
 
-const injectionTouchModel: IInjectionTouchModel =
-{
+const injectionTouchModel: IInjectionTouchModel = {
   // Touch
   PanResponder,
   TouchableOpacity,

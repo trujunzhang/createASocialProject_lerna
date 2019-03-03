@@ -24,7 +24,7 @@ import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'
 
 const TouchableMixin = {
-  componentWillUnmount() { },
+  componentWillUnmount() {},
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -37,10 +37,10 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() { },
-  touchableHandleResponderRelease() { },
-  touchableHandleResponderTerminate() { },
-  touchableHandleResponderMove() { }
+  touchableHandleResponderGrant() {},
+  touchableHandleResponderRelease() {},
+  touchableHandleResponderTerminate() {},
+  touchableHandleResponderMove() {}
 }
 
 Animated.inject.FlattenStyle(StyleSheet.flatten)
@@ -52,8 +52,7 @@ const Touchable = require('../modules/Touchable')(
   TouchableMixin
 )
 
-const injectionBaseModel: IInjectionBaseModel =
-{
+const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
   Easing,
@@ -72,8 +71,7 @@ const injectionBaseModel: IInjectionBaseModel =
   }
 }
 
-const injectionCustomModel: IInjectionCustomModel =
-{
+const injectionCustomModel: IInjectionCustomModel = {
   // Custom
   StatusBar,
   Dimensions
@@ -82,16 +80,14 @@ const injectionCustomModel: IInjectionCustomModel =
 const injectionTextModel: IInjectionTextModel = {
   // Text
   TextInput: null,
-  Text,
+  Text
 }
-const injectionListModel: IInjectionListModel =
-{
+const injectionListModel: IInjectionListModel = {
   // List
   ListView: null
 }
 
-const injectionDialogModel: IInjectionDialogModel =
-{
+const injectionDialogModel: IInjectionDialogModel = {
   // Dialog
   ActivityIndicator: null,
   Modal: null,
@@ -102,8 +98,7 @@ const injectionDialogModel: IInjectionDialogModel =
   DatePickerAndroid: null
 }
 
-const injectionTouchModel: IInjectionTouchModel =
-{
+const injectionTouchModel: IInjectionTouchModel = {
   // Touch
   PanResponder: null,
   TouchableOpacity: Touchable,

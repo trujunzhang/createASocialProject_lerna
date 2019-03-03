@@ -44,10 +44,9 @@ export interface IInjectionTouchModel {
   Touchable: any
 }
 
-export type AllInjectionModel =
-  & IInjectionBaseModel
-  & IInjectionCustomModel
-  & IInjectionTextModel
-  & IInjectionListModel
-  & IInjectionDialogModel
-  & IInjectionTouchModel
+export type AllInjectionModel = IInjectionBaseModel &
+  IInjectionCustomModel &
+  IInjectionTextModel &
+  IInjectionListModel &
+  IInjectionDialogModel &
+  IInjectionTouchModel
