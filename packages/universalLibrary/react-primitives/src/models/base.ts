@@ -5,7 +5,6 @@ export interface IInjectionBaseModel {
     Animated: any
     isIphoneX: any
     StyleSheet: any
-    Platform: any
 }
 
 import {

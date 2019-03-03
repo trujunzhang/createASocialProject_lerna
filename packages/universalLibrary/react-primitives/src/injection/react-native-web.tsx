@@ -50,10 +50,6 @@ const injectionBaseModel: IInjectionBaseModel = {
     return false
   },
   StyleSheet: Object.assign(StyleSheet, { resolve }),
-  Platform: {
-    OS: Platform.OS,
-    Version: Platform.Version
-  }
 }
 
 const injectionSystemModel: IInjectionSystemModel = {
@@ -61,7 +57,11 @@ const injectionSystemModel: IInjectionSystemModel = {
   StatusBar: {
     currentHeight: 44
   },
-  Dimensions
+  Dimensions,
+  Platform: {
+    OS: Platform.OS,
+    Version: Platform.Version
+  }
 }
 
 const injectionTextModel: IInjectionTextModel = {

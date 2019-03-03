@@ -1,6 +1,7 @@
 
 export interface IInjectionSystemModel {
     // System
+    Platform: any
     StatusBar: any
     Dimensions: any
 }
@@ -10,6 +11,7 @@ export interface IInjectionPixelRatioModel {
 }
 
 import {
+    Platform,
     PlatformOSType as RNPlatformOSType,
     StatusBar,
     Dimensions,
@@ -23,9 +25,14 @@ export interface PlatformStatic {
     Version: number | string
     select<T>(specifics: { [platform in PlatformOSType | 'default']?: T }): T
 }
-export type Platform = PlatformStatic
+
+// export type Platform = PlatformStatic
+// export interface Platform extends PlatformStatic {
+
+// }
 
 export {
+    Platform,
     StatusBar,
     Dimensions,
     PixelRatio

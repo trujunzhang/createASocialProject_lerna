@@ -46,16 +46,17 @@ const injectionBaseModel: IInjectionBaseModel = {
   Animated,
   isIphoneX,
   StyleSheet,
-  Platform: {
-    OS: Platform.OS,
-    Version: Platform.Version
-  }
+
 }
 
 const injectionSystemModel: IInjectionSystemModel = {
   // System
   StatusBar,
-  Dimensions
+  Dimensions,
+  Platform: {
+    OS: Platform.OS,
+    Version: Platform.Version
+  }
 }
 
 const injectionTextModel: IInjectionTextModel = {

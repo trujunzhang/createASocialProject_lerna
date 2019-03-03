@@ -29,11 +29,11 @@ export class ReactPrimitives {
     this.reactPrimitivesModel.Animated = model.Animated
     this.reactPrimitivesModel.isIphoneX = model.isIphoneX
     this.reactPrimitivesModel.StyleSheet = model.StyleSheet
-    this.reactPrimitivesModel.Platform = model.Platform
   }
   private injectionSystemModel(model: IInjectionSystemModel) {
     this.reactPrimitivesModel.StatusBar = model.StatusBar
     this.reactPrimitivesModel.Dimensions = model.Dimensions
+    this.reactPrimitivesModel.Platform = model.Platform
   }
   private injectionTextModel(model: IInjectionTextModel) {
     this.reactPrimitivesModel.TextInput = model.TextInput

@@ -1,4 +1,6 @@
 import { Platform } from 'react-primitives'
+
+// TODO:DJZHANG
 const platform = Platform.OS
 export const fixedHeaderLeftWidth = 64
 

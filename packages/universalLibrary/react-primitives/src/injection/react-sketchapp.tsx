@@ -63,7 +63,6 @@ const injectionBaseModel: IInjectionBaseModel = {
     return false
   },
   StyleSheet,
-  Platform
 }
 
 const injectionSystemModel: IInjectionSystemModel = {
@@ -71,7 +70,8 @@ const injectionSystemModel: IInjectionSystemModel = {
   StatusBar: {
     currentHeight: 44
   },
-  Dimensions
+  Dimensions,
+  Platform
 }
 
 const injectionTextModel: IInjectionTextModel = {
