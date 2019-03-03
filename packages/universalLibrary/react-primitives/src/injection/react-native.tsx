@@ -31,6 +31,7 @@ import {
   AllInjectionModel,
   IInjectionBaseModel,
   IInjectionCustomModel,
+  IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
@@ -41,14 +42,12 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 const injectionBaseModel: IInjectionBaseModel =
 {
-  StyleSheet,
   View,
-  TextInput,
-  Text,
   Image,
   Easing,
   Animated,
   isIphoneX,
+  StyleSheet,
   Platform: {
     OS: Platform.OS,
     Version: Platform.Version
@@ -60,6 +59,12 @@ const injectionCustomModel: IInjectionCustomModel =
   // Custom
   StatusBar,
   Dimensions
+}
+
+const injectionTextModel: IInjectionTextModel = {
+  // Text
+  TextInput,
+  Text,
 }
 
 const injectionListModel: IInjectionListModel =
@@ -93,6 +98,7 @@ const injectionTouchModel: IInjectionTouchModel =
 export const allInjectionModel: AllInjectionModel = Object.assign(
   injectionBaseModel,
   injectionCustomModel,
+  injectionTextModel,
   injectionListModel,
   injectionDialogModel,
   injectionTouchModel

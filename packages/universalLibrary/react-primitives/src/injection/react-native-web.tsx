@@ -17,10 +17,12 @@ import {
 } from 'react-native-web'
 
 import { StatusBar } from './sketchapp/statusBar'
+
 import {
   AllInjectionModel,
   IInjectionBaseModel,
   IInjectionCustomModel,
+  IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
@@ -44,8 +46,6 @@ const resolve = (style) => {
 const injectionBaseModel: IInjectionBaseModel =
 {
   View,
-  TextInput: null,
-  Text,
   Image,
   Easing,
   Animated,
@@ -66,6 +66,11 @@ const injectionCustomModel: IInjectionCustomModel =
   Dimensions
 }
 
+const injectionTextModel: IInjectionTextModel = {
+  // Text
+  TextInput: null,
+  Text,
+}
 const injectionListModel: IInjectionListModel =
 {
   // List
@@ -97,6 +102,7 @@ const injectionTouchModel: IInjectionTouchModel =
 export const allInjectionModel: AllInjectionModel = Object.assign(
   injectionBaseModel,
   injectionCustomModel,
+  injectionTextModel,
   injectionListModel,
   injectionDialogModel,
   injectionTouchModel

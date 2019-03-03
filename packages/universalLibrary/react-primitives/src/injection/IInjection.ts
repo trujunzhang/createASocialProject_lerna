@@ -1,12 +1,10 @@
 export interface IInjectionBaseModel {
-  StyleSheet: any
   View: any
-  TextInput: any
-  Text: any
   Image: any
   Easing: any
   Animated: any
   isIphoneX: any
+  StyleSheet: any
   Platform: any
 }
 
@@ -14,6 +12,12 @@ export interface IInjectionCustomModel {
   // Custom
   StatusBar: any
   Dimensions: any
+}
+
+export interface IInjectionTextModel {
+  // Text
+  TextInput: any
+  Text: any
 }
 
 export interface IInjectionListModel {
@@ -43,6 +47,7 @@ export interface IInjectionTouchModel {
 export type AllInjectionModel =
   & IInjectionBaseModel
   & IInjectionCustomModel
+  & IInjectionTextModel
   & IInjectionListModel
   & IInjectionDialogModel
   & IInjectionTouchModel

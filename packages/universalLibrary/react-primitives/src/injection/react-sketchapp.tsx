@@ -10,11 +10,21 @@ import {
   // TODO(lmr): Dimensions
 } from 'react-sketchapp'
 
+import {
+  AllInjectionModel,
+  IInjectionBaseModel,
+  IInjectionCustomModel,
+  IInjectionTextModel,
+  IInjectionListModel,
+  IInjectionDialogModel,
+  IInjectionTouchModel
+} from './IInjection'
+
 import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'
 
 const TouchableMixin = {
-  componentWillUnmount() {},
+  componentWillUnmount() { },
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -27,45 +37,13 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() {},
-  touchableHandleResponderRelease() {},
-  touchableHandleResponderTerminate() {},
-  touchableHandleResponderMove() {}
+  touchableHandleResponderGrant() { },
+  touchableHandleResponderRelease() { },
+  touchableHandleResponderTerminate() { },
+  touchableHandleResponderMove() { }
 }
 
 Animated.inject.FlattenStyle(StyleSheet.flatten)
-
-ReactPrimitives.inject({
-  // common
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  Easing,
-  isIphoneX: () => {
-    return false
-  },
-  Animated: Object.assign(Animated, {
-    View: Animated.createAnimatedComponent(View),
-    Text: Animated.createAnimatedComponent(Text),
-    Image: Animated.createAnimatedComponent(Image)
-  }),
-  Platform: {
-    OS: 'sketch',
-    Version: 1
-  }
-})
-
-ReactPrimitives.inject({
-  // Custom
-  StatusBar,
-  Dimensions
-})
-
-ReactPrimitives.inject({
-  // List
-  ListView: null
-})
 
 const Touchable = require('../modules/Touchable')(
   Animated,
@@ -74,7 +52,46 @@ const Touchable = require('../modules/Touchable')(
   TouchableMixin
 )
 
-ReactPrimitives.inject({
+const injectionBaseModel: IInjectionBaseModel =
+{
+  View,
+  Image,
+  Easing,
+  Animated: Object.assign(Animated, {
+    View: Animated.createAnimatedComponent(View),
+    Text: Animated.createAnimatedComponent(Text),
+    Image: Animated.createAnimatedComponent(Image)
+  }),
+  isIphoneX: () => {
+    return false
+  },
+  StyleSheet,
+  Platform: {
+    OS: 'sketch',
+    Version: 1
+  }
+}
+
+const injectionCustomModel: IInjectionCustomModel =
+{
+  // Custom
+  StatusBar,
+  Dimensions
+}
+
+const injectionTextModel: IInjectionTextModel = {
+  // Text
+  TextInput: null,
+  Text,
+}
+const injectionListModel: IInjectionListModel =
+{
+  // List
+  ListView: null
+}
+
+const injectionDialogModel: IInjectionDialogModel =
+{
   // Dialog
   ActivityIndicator: null,
   Modal: null,
@@ -83,13 +100,23 @@ ReactPrimitives.inject({
   Picker: null,
   DatePickerIOS: null,
   DatePickerAndroid: null
-})
+}
 
-ReactPrimitives.inject({
+const injectionTouchModel: IInjectionTouchModel =
+{
   // Touch
   PanResponder: null,
   TouchableOpacity: Touchable,
   TouchableHighlight: Touchable,
   TouchableNativeFeedback: Touchable,
   Touchable
-})
+}
+
+export const allInjectionModel: AllInjectionModel = Object.assign(
+  injectionBaseModel,
+  injectionCustomModel,
+  injectionTextModel,
+  injectionListModel,
+  injectionDialogModel,
+  injectionTouchModel
+)
