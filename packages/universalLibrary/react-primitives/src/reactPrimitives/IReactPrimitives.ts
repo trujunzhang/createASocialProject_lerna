@@ -1,13 +1,13 @@
 import {
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionCustomModel,
+  IInjectionSystemModel,
+  IInjectionPixelRatioModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from '../injection/models'
+} from '../models'
 
-export interface IReactPrimitivesModel extends AllInjectionModel {
-  PixelRatio: any
+export interface IReactPrimitivesModel extends AllInjectionModel, IInjectionPixelRatioModel {
 }

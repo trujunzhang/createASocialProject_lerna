@@ -9,12 +9,12 @@ import { PixelRatioHelper } from '../modules/PixelRatio'
 import {
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionCustomModel,
+  IInjectionSystemModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from '../injection/models'
+} from '../models'
 
 import { IReactPrimitivesModel } from './IReactPrimitives'
 
@@ -31,7 +31,7 @@ export class ReactPrimitives {
     this.reactPrimitivesModel.StyleSheet = model.StyleSheet
     this.reactPrimitivesModel.Platform = model.Platform
   }
-  private injectionCustomModel(model: IInjectionCustomModel) {
+  private injectionSystemModel(model: IInjectionSystemModel) {
     this.reactPrimitivesModel.StatusBar = model.StatusBar
     this.reactPrimitivesModel.Dimensions = model.Dimensions
   }
@@ -62,7 +62,7 @@ export class ReactPrimitives {
 
   constructor(allInjectionModel: AllInjectionModel) {
     this.injectionBaseModel(allInjectionModel)
-    this.injectionCustomModel(allInjectionModel)
+    this.injectionSystemModel(allInjectionModel)
     this.injectionTextModel(allInjectionModel)
     this.injectionListModel(allInjectionModel)
     this.injectionDialogModel(allInjectionModel)

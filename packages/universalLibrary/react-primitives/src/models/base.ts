@@ -7,3 +7,14 @@ export interface IInjectionBaseModel {
     StyleSheet: any
     Platform: any
 }
+
+
+import {
+    StyleSheet,
+    Platform
+} from 'react-native'
+
+export {
+    StyleSheet,
+    Platform
+}

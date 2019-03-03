@@ -1,4 +1,5 @@
 export * from './reactPrimitives'
+export * from './models'
 
 // Type definitions for react-primitives 0.6
 // Project: https://github.com/lelandrichardson/react-primitives
@@ -9,6 +10,7 @@ export * from './reactPrimitives'
 
 import { ComponentType } from 'react'
 import * as React from 'react'
+
 import {
   TextInput as RNTextInput,
   Text as RNText,
@@ -37,9 +39,9 @@ export interface SketchAppProps {
   name?: string
 }
 
-export class View extends React.Component<ViewProps & SketchAppProps> {}
-export class Text extends React.Component<TextProps & SketchAppProps> {}
-export class TextInput extends React.Component<TextInputProps & SketchAppProps> {}
+export class View extends React.Component<ViewProps & SketchAppProps> { }
+export class Text extends React.Component<TextProps & SketchAppProps> { }
+export class TextInput extends React.Component<TextInputProps & SketchAppProps> { }
 
 export {
   // styles

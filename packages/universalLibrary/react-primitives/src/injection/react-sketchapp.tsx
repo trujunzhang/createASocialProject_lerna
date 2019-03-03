@@ -11,12 +11,12 @@ import {
 import {
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionCustomModel,
+  IInjectionSystemModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './models'
+} from '../models'
 
 import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'
@@ -66,8 +66,8 @@ const injectionBaseModel: IInjectionBaseModel = {
   Platform
 }
 
-const injectionCustomModel: IInjectionCustomModel = {
-  // Custom
+const injectionSystemModel: IInjectionSystemModel = {
+  // System
   StatusBar: {
     currentHeight: 44
   },
@@ -106,7 +106,7 @@ const injectionTouchModel: IInjectionTouchModel = {
 
 export const allInjectionModel: AllInjectionModel = Object.assign(
   injectionBaseModel,
-  injectionCustomModel,
+  injectionSystemModel,
   injectionTextModel,
   injectionListModel,
   injectionDialogModel,

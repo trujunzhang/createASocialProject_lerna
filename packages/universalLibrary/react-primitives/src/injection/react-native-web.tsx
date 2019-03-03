@@ -19,12 +19,12 @@ import { StatusBar } from './sketchapp/statusBar'
 import {
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionCustomModel,
+  IInjectionSystemModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './models'
+} from '../models'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
 // API alltogether.
@@ -56,8 +56,8 @@ const injectionBaseModel: IInjectionBaseModel = {
   }
 }
 
-const injectionCustomModel: IInjectionCustomModel = {
-  // Custom
+const injectionSystemModel: IInjectionSystemModel = {
+  // System
   StatusBar: {
     currentHeight: 44
   },
@@ -96,7 +96,7 @@ const injectionTouchModel: IInjectionTouchModel = {
 
 export const allInjectionModel: AllInjectionModel = Object.assign(
   injectionBaseModel,
-  injectionCustomModel,
+  injectionSystemModel,
   injectionTextModel,
   injectionListModel,
   injectionDialogModel,

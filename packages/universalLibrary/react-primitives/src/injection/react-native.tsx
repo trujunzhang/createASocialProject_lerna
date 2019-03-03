@@ -29,12 +29,12 @@ import {
 import {
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionCustomModel,
+  IInjectionSystemModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './models'
+} from '../models'
 
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -52,8 +52,8 @@ const injectionBaseModel: IInjectionBaseModel = {
   }
 }
 
-const injectionCustomModel: IInjectionCustomModel = {
-  // Custom
+const injectionSystemModel: IInjectionSystemModel = {
+  // System
   StatusBar,
   Dimensions
 }
@@ -91,7 +91,7 @@ const injectionTouchModel: IInjectionTouchModel = {
 
 export const allInjectionModel: AllInjectionModel = Object.assign(
   injectionBaseModel,
-  injectionCustomModel,
+  injectionSystemModel,
   injectionTextModel,
   injectionListModel,
   injectionDialogModel,
