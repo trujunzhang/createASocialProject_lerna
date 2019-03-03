@@ -34,7 +34,7 @@ import {
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './IInjection'
+} from './models'
 
 import { isIphoneX } from 'react-native-iphone-x-helper'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'

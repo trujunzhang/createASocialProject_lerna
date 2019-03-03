@@ -16,7 +16,7 @@ import {
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './IInjection'
+} from './models'
 
 import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'

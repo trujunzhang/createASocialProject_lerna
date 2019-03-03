@@ -28,7 +28,7 @@
     "build.clean": "yarn build:reset",
     "build:js": "tsc -p tsconfig.lib.json",
     "build-lib": "yarn build.clean && yarn build:js",
-    "build.current": "yarn build-lib",
+    "build.current.pending": "yarn build-lib",
     "postinstall": "yarn build-lib"
   },
   "license": "Apache-2.0",

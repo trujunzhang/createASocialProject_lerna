@@ -24,7 +24,7 @@ import {
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from './IInjection'
+} from './models'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
 // API alltogether.

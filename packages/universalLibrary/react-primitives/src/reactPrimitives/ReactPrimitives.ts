@@ -14,7 +14,7 @@ import {
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from '../injection/IInjection'
+} from '../injection/models'
 
 import { IReactPrimitivesModel } from './IReactPrimitives'
 
