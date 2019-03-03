@@ -16,6 +16,16 @@ import {
   Easing
 } from 'react-native-web'
 
+import { StatusBar } from './sketchapp/statusBar'
+import {
+  AllInjectionModel,
+  IInjectionBaseModel,
+  IInjectionCustomModel,
+  IInjectionListModel,
+  IInjectionDialogModel,
+  IInjectionTouchModel
+} from './IInjection'
+
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
 // API alltogether.
 function getDefault(m) {
@@ -31,9 +41,10 @@ const resolve = (style) => {
   return StyleRegistry.resolve(style) || emptyObject
 }
 
-ReactPrimitives.inject({
+const injectionBaseModel: IInjectionBaseModel =
+{
   View,
-  ListView,
+  TextInput: null,
   Text,
   Image,
   Easing,
@@ -46,9 +57,47 @@ ReactPrimitives.inject({
     OS: Platform.OS,
     Version: Platform.Version
   },
-  Dimensions,
+}
+
+const injectionCustomModel: IInjectionCustomModel =
+{
+  // Custom
+  StatusBar,
+  Dimensions
+}
+
+const injectionListModel: IInjectionListModel =
+{
+  // List
+  ListView
+}
+
+const injectionDialogModel: IInjectionDialogModel =
+{
+  // Dialog
+  ActivityIndicator: null,
+  Modal: null,
+  ActionSheetIOS: null,
+  Switch: null,
+  Picker: null,
+  DatePickerIOS: null,
+  DatePickerAndroid: null
+}
+
+const injectionTouchModel: IInjectionTouchModel =
+{
+  // Touch
+  PanResponder: null,
   TouchableOpacity,
   TouchableHighlight,
   TouchableNativeFeedback,
   Touchable: TouchableWithoutFeedback
-})
+}
+
+export const allInjectionModel: AllInjectionModel = Object.assign(
+  injectionBaseModel,
+  injectionCustomModel,
+  injectionListModel,
+  injectionDialogModel,
+  injectionTouchModel
+)
