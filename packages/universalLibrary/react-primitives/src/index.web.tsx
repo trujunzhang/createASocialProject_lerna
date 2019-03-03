@@ -1,4 +1,3 @@
-
 import { ReactPrimitives as Generator } from './ReactPrimitives'
 
 import { allInjectionModel } from './injection/react-native-web'

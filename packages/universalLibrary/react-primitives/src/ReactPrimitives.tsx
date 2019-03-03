@@ -4,9 +4,7 @@
 // TODO(lmr):
 // Use getter functions + warn / throw if a non-primitive API is retrieved off of ReactPrimitives
 // that looks like a react-native API
-import {
-  PixelRatio
-} from './modules/PixelRatio'
+import { PixelRatio } from './modules/PixelRatio'
 
 import {
   AllInjectionModel,
@@ -42,7 +40,6 @@ export class ReactPrimitives {
     this.reactPrimitivesModel.Text = model.Text
   }
   private injectionListModel(model: IInjectionListModel) {
-
     this.reactPrimitivesModel.ListView = model.ListView
   }
   private injectionDialogModel(model: IInjectionDialogModel) {
@@ -76,11 +73,8 @@ export class ReactPrimitives {
   }
 
   end(): IReactPrimitivesModel {
-    return Object.assign(
-      this.reactPrimitivesModel,
-      {
-        PixelRatio: this.PixelRatio
-      }
-    )
+    return Object.assign(this.reactPrimitivesModel, {
+      PixelRatio: this.PixelRatio
+    })
   }
 }

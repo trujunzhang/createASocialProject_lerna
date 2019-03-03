@@ -1,6 +1,4 @@
-
 export class PixelRatio {
-
   static Dimensions: any
 
   /**
@@ -42,4 +40,3 @@ export class PixelRatio {
     return Math.round(layoutSize * ratio) / ratio
   }
 }
-
