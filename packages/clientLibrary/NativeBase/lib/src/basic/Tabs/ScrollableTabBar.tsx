@@ -36,7 +36,7 @@ export interface IScrollableTabBarProps {
   tabHeaderStyle?: any
 }
 
-class ScrollableTabBar extends React.Component<IScrollableTabBarProps, any> {
+class ScrollableTabBar extends React.Component<IScrollableTabBarProps | any, any> {
   private _root: any
   private _tabsMeasurements: any
   private _tabContainerMeasurements: any

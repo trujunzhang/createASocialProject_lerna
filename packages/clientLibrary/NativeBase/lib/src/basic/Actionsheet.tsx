@@ -27,7 +27,7 @@ export interface IActionSheetContainerProps extends ViewProps {
   autoHide: boolean
   duration: number
 }
-class ActionSheetContainer extends React.Component<IActionSheetContainerProps, any> {
+class ActionSheetContainer extends React.Component<IActionSheetContainerProps | any, any> {
   constructor(props) {
     super(props)
     this.state = {
@@ -115,7 +115,8 @@ class ActionSheetContainer extends React.Component<IActionSheetContainerProps, a
               }}
               data={this.state.items}
               keyExtractor={(item, index) => String(index)}
-              renderItem={({ index, item }) => {
+              renderItem={(props: any) => {
+                const { index, item } = props
                 return typeof this.state.items[0] === 'string' ? (
                   <ListItem
                     onPress={() => {
@@ -126,31 +127,31 @@ class ActionSheetContainer extends React.Component<IActionSheetContainerProps, a
                     <Text>{item}</Text>
                   </ListItem>
                 ) : (
-                  <ListItem
-                    onPress={() => {
-                      this.state.callback(parseInt(index))
-                      this.setState({ modalVisible: false })
-                    }}
-                    style={{
-                      borderColor: 'transparent',
-                      marginLeft: 14,
-                      height: 50
-                    }}
-                    icon>
-                    <Left>
-                      <Icon
-                        name={item.icon}
-                        style={{
-                          color: item.iconColor ? item.iconColor : undefined
-                        }}
-                      />
-                    </Left>
-                    <Body style={{ borderColor: 'transparent', paddingLeft: 7 }}>
-                      <Text>{item.text}</Text>
-                    </Body>
-                    <Right />
-                  </ListItem>
-                )
+                    <ListItem
+                      onPress={() => {
+                        this.state.callback(parseInt(index))
+                        this.setState({ modalVisible: false })
+                      }}
+                      style={{
+                        borderColor: 'transparent',
+                        marginLeft: 14,
+                        height: 50
+                      }}
+                      icon>
+                      <Left>
+                        <Icon
+                          name={item.icon}
+                          style={{
+                            color: item.iconColor ? item.iconColor : undefined
+                          }}
+                        />
+                      </Left>
+                      <Body style={{ borderColor: 'transparent', paddingLeft: 7 }}>
+                        <Text>{item.text}</Text>
+                      </Body>
+                      <Right />
+                    </ListItem>
+                  )
               }}
             />
           </TouchableOpacity>

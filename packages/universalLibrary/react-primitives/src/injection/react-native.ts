@@ -7,9 +7,12 @@ import {
   Image,
   StyleSheet,
   Platform,
-  ListView,
   Easing,
   Dimensions,
+  // List
+  ScrollView,
+  ListView,
+  FlatList,
   // Dialog
   ActivityIndicator,
   Modal,
@@ -45,8 +48,7 @@ const injectionBaseModel: IInjectionBaseModel = {
   Easing,
   Animated,
   isIphoneX,
-  StyleSheet,
-
+  StyleSheet
 }
 
 const injectionSystemModel: IInjectionSystemModel = {
@@ -67,7 +69,9 @@ const injectionTextModel: IInjectionTextModel = {
 
 const injectionListModel: IInjectionListModel = {
   // List
-  ListView
+  ScrollView,
+  ListView,
+  FlatList
 }
 
 const injectionDialogModel: IInjectionDialogModel = {

@@ -27,10 +27,8 @@
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
-    "@app/types": "*",
-    "@app/tools": "*",
-    "react-native-iphone-x-helper": "1.2.0",
-    "react-native-keyboard-aware-scroll-view": "0.8.0",
+    "react-native-iphone-x-helper": "*",
+    "react-native-keyboard-aware-scroll-view": "*",
     "animated": "0.2.2",
     "react-timer-mixin": "0.13.4",
     "@types/prop-types": "15.5.8",
@@ -41,16 +39,11 @@
     "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",
     "@types/react-dom": "16.0.11",
-    "react-dom": "16.8.2",
-    "react-art": "16.5.2",
-    "react-native-web": "0.10.0"
+    "react-dom": "16.8.2"
   },
   "peerDependencies": {
     "react": "*",
-    "react-art": "*",
-    "react-dom": "*",
-    "react-native": "*",
-    "react-native-web": "*"
+    "react-dom": "*"
   },
   "devDependencies": {
     "@app/mocks": "*",

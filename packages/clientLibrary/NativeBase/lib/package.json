@@ -34,9 +34,9 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
-    "react-native-iphone-x-helper": "1.2.0",
-    "react-native-keyboard-aware-scroll-view": "0.8.0",
-    "@app/native-base-shoutem-theme": "0.2.2",
+    "react-native-iphone-x-helper": "*",
+    "react-native-keyboard-aware-scroll-view": "*",
+    "@app/native-base-shoutem-theme": "*",
     "@app/nativebase-theme-components": "*",
     "@app/native-base-variables": "*",
     "@app/tools": "*",

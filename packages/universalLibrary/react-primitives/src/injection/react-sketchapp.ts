@@ -22,7 +22,7 @@ import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'
 
 const TouchableMixin = {
-  componentWillUnmount() { },
+  componentWillUnmount() {},
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -35,10 +35,10 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() { },
-  touchableHandleResponderRelease() { },
-  touchableHandleResponderTerminate() { },
-  touchableHandleResponderMove() { }
+  touchableHandleResponderGrant() {},
+  touchableHandleResponderRelease() {},
+  touchableHandleResponderTerminate() {},
+  touchableHandleResponderMove() {}
 }
 
 Animated.inject.FlattenStyle(StyleSheet.flatten)
@@ -62,7 +62,7 @@ const injectionBaseModel: IInjectionBaseModel = {
   isIphoneX: () => {
     return false
   },
-  StyleSheet,
+  StyleSheet
 }
 
 const injectionSystemModel: IInjectionSystemModel = {
@@ -79,9 +79,12 @@ const injectionTextModel: IInjectionTextModel = {
   TextInput: null,
   Text
 }
+
 const injectionListModel: IInjectionListModel = {
   // List
-  ListView: null
+  ScrollView: null,
+  ListView: null,
+  FlatList: null
 }
 
 const injectionDialogModel: IInjectionDialogModel = {

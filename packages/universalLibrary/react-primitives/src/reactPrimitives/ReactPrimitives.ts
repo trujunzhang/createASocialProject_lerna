@@ -40,7 +40,9 @@ export class ReactPrimitives {
     this.reactPrimitivesModel.Text = model.Text
   }
   private injectionListModel(model: IInjectionListModel) {
+    this.reactPrimitivesModel.ScrollView = model.ScrollView
     this.reactPrimitivesModel.ListView = model.ListView
+    this.reactPrimitivesModel.FlatList = model.FlatList
   }
   private injectionDialogModel(model: IInjectionDialogModel) {
     this.reactPrimitivesModel.ActivityIndicator = model.ActivityIndicator

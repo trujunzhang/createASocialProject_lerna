@@ -1,16 +1,14 @@
 export interface IInjectionBaseModel {
-    View: any
-    Image: any
-    Easing: any
-    Animated: any
-    isIphoneX: any
-    StyleSheet: any
+  View: any
+  Image: any
+  Easing: any
+  Animated: any
+  isIphoneX: any
+  StyleSheet: any
 }
 
-import {
-    StyleSheet,
-} from 'react-native'
+import { Image, Animated, StyleSheet } from 'react-native'
 
-export {
-    StyleSheet
-}
+export { Image, Animated, StyleSheet }
+
+export declare const isIphoneX: () => boolean

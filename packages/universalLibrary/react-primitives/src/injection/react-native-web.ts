@@ -2,7 +2,9 @@ import {
   Animated,
   StyleSheet,
   View,
+  // List
   ListView,
+  ScrollView,
   Text,
   Image,
   Platform,
@@ -49,7 +51,7 @@ const injectionBaseModel: IInjectionBaseModel = {
   isIphoneX: () => {
     return false
   },
-  StyleSheet: Object.assign(StyleSheet, { resolve }),
+  StyleSheet: Object.assign(StyleSheet, { resolve })
 }
 
 const injectionSystemModel: IInjectionSystemModel = {
@@ -69,9 +71,12 @@ const injectionTextModel: IInjectionTextModel = {
   TextInput: null,
   Text
 }
+
 const injectionListModel: IInjectionListModel = {
   // List
-  ListView
+  ScrollView,
+  ListView,
+  FlatList: ListView
 }
 
 const injectionDialogModel: IInjectionDialogModel = {
