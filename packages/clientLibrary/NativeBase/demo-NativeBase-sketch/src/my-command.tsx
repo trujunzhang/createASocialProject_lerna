@@ -29,15 +29,17 @@ const App = () => {
         }
       }>
       <Setup>
-        <Text
-          name="Swatch Name"
-          style={{ color: '#ccc', fontWeight: 'bold' }}
-        >
-          {'wh(screen): ' + JSON.stringify(Dimensions.get('window'))}
-        </Text>
-        <Text name="Swatch Hex" style={{ color: '#ccc' }}>
-          {'djzhang'}
-        </Text>
+        <Root>
+          <Text
+            name="Swatch Name"
+            style={{ color: '#ccc', fontWeight: 'bold' }}
+          >
+            {'wh(screen): ' + JSON.stringify(Dimensions.get('window'))}
+          </Text>
+          <Text name="Swatch Hex" style={{ color: '#ccc' }}>
+            {'djzhang'}
+          </Text>
+        </Root>
       </Setup>
     </View>
   )
