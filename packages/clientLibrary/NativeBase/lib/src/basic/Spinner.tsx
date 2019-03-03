@@ -32,8 +32,8 @@ class Spinner extends React.Component<ISpinnerProps | any, any> {
           this.props.color
             ? this.props.color
             : this.props.inverse
-              ? variables.inverseSpinnerColor
-              : variables.defaultSpinnerColor
+            ? variables.inverseSpinnerColor
+            : variables.defaultSpinnerColor
         }
         size={this.props.size ? this.props.size : 'large'}
       />

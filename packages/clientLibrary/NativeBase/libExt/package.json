@@ -40,6 +40,8 @@
   },
   "devDependencies": {
     "@app/mocks": "0.6.0",
+    "@types/react-sketchapp": "0.12.1",
+    "react-sketchapp": "2.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",

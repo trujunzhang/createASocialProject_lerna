@@ -57,7 +57,9 @@
     "@babel/plugin-proposal-object-rest-spread": "7.3.2",
     "@types/react-test-renderer": "16.0.3",
     "react-test-renderer": "16.7.0",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3",
+    "@types/react-sketchapp": "0.12.1",
+    "react-sketchapp": "2.0.0"
   },
   "gitHead": "5bbeacc403ba97622703699132c55d8359344004",
   "homepage": "https://github.com/GeekyAnts/NativeBase#readme",
