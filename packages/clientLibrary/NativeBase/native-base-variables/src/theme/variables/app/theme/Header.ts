@@ -9,7 +9,7 @@ import { platform } from '../../utils'
 const toolbarDefaultBg = '#fff'
 const tabBgColor = '#F8F8F8'
 
-const currentStatusBarHeight = ((!!StatusBar) ? StatusBar.currentHeight : 0 || 0)
+const currentStatusBarHeight: number = (StatusBar.currentHeight || 0)
 
 export const headerVariables: IHeaderVariables = {
   // Header
