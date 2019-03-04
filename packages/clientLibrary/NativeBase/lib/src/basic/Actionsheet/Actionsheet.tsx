@@ -12,15 +12,15 @@ import {
   Dimensions
 } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
-import { Text } from './Text'
-import { Button } from './Button'
-import { ViewNB } from './View'
-import { Icon } from './Icon'
-import { Left } from './Left'
-import { Right } from './Right'
-import { Body } from './Body'
-import { ListItem } from './ListItem'
-import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
+import { Text } from '../Text'
+import { Button } from '../Button'
+import { ViewNB } from '../View'
+import { Icon } from '../Icon'
+import { Left } from '../Left'
+import { Right } from '../Right'
+import { Body } from '../Body'
+import { ListItem } from '../ListItem'
+import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 
 export interface IActionSheetContainerProps extends ViewProps {
   style?: ViewStyle | Array<ViewStyle>
