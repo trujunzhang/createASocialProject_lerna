@@ -37,7 +37,6 @@ import {
   IInjectionSystemModel,
   IInjectionAnimateModel,
   IInjectionTextModel,
-  IInjectionListModel,
 } from '../models'
 
 const injectionBaseModel: IInjectionBaseModel = {
@@ -74,20 +73,10 @@ const injectionTextModel: IInjectionTextModel = {
   Text
 }
 
-const injectionListModel: IInjectionListModel = {
-  // List
-  KeyboardAwareScrollView: null,
-  ScrollView,
-  ListView,
-  FlatList
-}
-
-
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
   injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel,
-  injectionListModel,
 )

@@ -26,7 +26,6 @@ import {
   IInjectionSystemModel,
   IInjectionAnimateModel,
   IInjectionTextModel,
-  IInjectionListModel,
 } from '../models'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
@@ -79,19 +78,10 @@ const injectionTextModel: IInjectionTextModel = {
   Text
 }
 
-const injectionListModel: IInjectionListModel = {
-  // List
-  KeyboardAwareScrollView: null,
-  ScrollView,
-  ListView,
-  FlatList: ListView
-}
-
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
   injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel,
-  injectionListModel,
 )

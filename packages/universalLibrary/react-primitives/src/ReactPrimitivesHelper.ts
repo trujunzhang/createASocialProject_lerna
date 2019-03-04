@@ -47,12 +47,6 @@ export class ReactPrimitivesHelper {
     this.reactPrimitivesModel.Text = model.Text
   }
 
-  private injectionListModel(model: IInjectionListModel) {
-    this.reactPrimitivesModel.KeyboardAwareScrollView = model.KeyboardAwareScrollView
-    this.reactPrimitivesModel.ScrollView = model.ScrollView
-    this.reactPrimitivesModel.ListView = model.ListView
-    this.reactPrimitivesModel.FlatList = model.FlatList
-  }
 
   constructor(allInjectionModel: IReactPrimitivesModel) {
     this.injectionBaseModel(allInjectionModel)
@@ -60,7 +54,6 @@ export class ReactPrimitivesHelper {
     this.injectionPixelRatioModel(allInjectionModel)
     this.injectionSystemModel(allInjectionModel)
     this.injectionTextModel(allInjectionModel)
-    this.injectionListModel(allInjectionModel)
   }
 
   end(): IReactPrimitivesModel {

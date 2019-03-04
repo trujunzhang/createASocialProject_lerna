@@ -68,9 +68,6 @@ import {
     IInjectionPixelRatioModel,
     IInjectionSystemModel,
     IInjectionTextModel,
-    IInjectionListModel,
-    IInjectionDialogModel,
-    IInjectionTouchModel
 } from './models'
 
 const {

@@ -16,7 +16,6 @@ import {
   IInjectionSystemModel,
   IInjectionAnimateModel,
   IInjectionTextModel,
-  IInjectionListModel,
 } from '../models'
 
 
