@@ -775,10 +775,10 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/node@10.12.18":
-  version "10.12.18"
-  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
-  integrity sha1-HTynZHGJFVhPzZ9jRGIbdnJmXGc=
+"@types/node@11.10.4":
+  version "11.10.4"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
+  integrity sha1-P1/E8PMigF8AngCrNaL/PWt3jkI=
 
 "@types/prop-types@*":
   version "15.7.0"

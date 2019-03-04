@@ -775,10 +775,10 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/node@11.9.4":
-  version "11.9.4"
-  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.9.4.tgz#ceb0048a546db453f6248f2d1d95e937a6f00a14"
-  integrity sha1-zrAEilRttFP2JI8tHZXpN6bwChQ=
+"@types/node@11.10.4":
+  version "11.10.4"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
+  integrity sha1-P1/E8PMigF8AngCrNaL/PWt3jkI=
 
 "@types/prop-types@*":
   version "15.7.0"
@@ -2946,6 +2946,11 @@ nice-try@^1.0.4:
   resolved "http://registry.npm.taobao.org/nice-try/download/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha1-ozeKdpbOfSI+iPybdkvX7xCJ42Y=
 
+node-bin-setup@^1.0.0:
+  version "1.0.6"
+  resolved "http://registry.npm.taobao.org/node-bin-setup/download/node-bin-setup-1.0.6.tgz#4b5c9bb937ece702d7069b36ca78af4684677528"
+  integrity sha1-S1ybuTfs5wLXBps2ynivRoRndSg=
+
 node-int64@^0.4.0:
   version "0.4.0"
   resolved "http://registry.npm.taobao.org/node-int64/download/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
@@ -2989,6 +2994,13 @@ node-releases@^1.1.8:
   integrity sha1-cNCYXsS/fenwj8SB9drhEYicpII=
   dependencies:
     semver "^5.3.0"
+
+node@10.15.2:
+  version "10.15.2"
+  resolved "http://registry.npm.taobao.org/node/download/node-10.15.2.tgz#f98423f14dade75964581dbed6c3a4f0b31167ad"
+  integrity sha1-+YQj8U2t51lkWB2+1sOk8LMRZ60=
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 nopt@^4.0.1:
   version "4.0.1"
