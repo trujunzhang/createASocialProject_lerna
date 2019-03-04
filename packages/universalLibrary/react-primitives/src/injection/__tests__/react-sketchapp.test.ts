@@ -1,8 +1,8 @@
-// import { ReactPrimitives  } from '../../ReactPrimitives'
+// import { ReactPrimitivesHelper  } from '../../ReactPrimitivesHelper'
 
 // import { allInjectionModel } from '../react-sketchapp'
 
-describe('Functions of the ReactPrimitives', () => {
+describe('Functions of the ReactPrimitivesHelper', () => {
     test('should return string correctly,  invoked sketch', () => {
         // const Dimensions = allInjectionModel.Dimensions
         // const deviceHeight = Dimensions.get('window').height

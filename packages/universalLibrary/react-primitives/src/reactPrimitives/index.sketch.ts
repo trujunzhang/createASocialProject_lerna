@@ -1,8 +1,8 @@
-import { ReactPrimitives as Generator } from './ReactPrimitives'
+import { ReactPrimitivesHelper as Generator } from '../ReactPrimitivesHelper'
 
 import { allInjectionModel } from '../injection/react-sketchapp'
 
-export const ReactPrimitives = new Generator(allInjectionModel).end()
+export const ReactPrimitivesHelper = new Generator(allInjectionModel).end()
 
 
 import {
@@ -27,4 +27,16 @@ export { animated as Animated }
 
 export {
     StyleSheet
+}
+
+
+// List
+import { ScrollView } from '../views/list/ScrollView'
+import { ListView } from '../views/list/ListView'
+import { FlatList } from '../views/list/FlatList'
+
+export {
+    ScrollView,
+    ListView,
+    FlatList
 }

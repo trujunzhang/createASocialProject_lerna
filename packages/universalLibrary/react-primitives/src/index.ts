@@ -1,10 +1,23 @@
-import { ReactPrimitives, StyleSheet, Animated } from './reactPrimitives'
+import { ReactPrimitivesHelper, StyleSheet, Animated } from './reactPrimitives'
 
 // So important here, directly export.
 export {
     StyleSheet,
     Animated
 }
+
+import {
+    ScrollView,
+    ListView,
+    FlatList
+} from './reactPrimitives'
+
+export {
+    ScrollView,
+    ListView,
+    FlatList
+}
+
 
 import {
     IInjectionBaseModel,
@@ -21,7 +34,7 @@ const {
     View,
     Image,
     isIphoneX,
-} = ReactPrimitives as IInjectionBaseModel
+} = ReactPrimitivesHelper as IInjectionBaseModel
 
 export {
     View,
@@ -32,7 +45,7 @@ export {
 const {
     Easing,
     Animated
-} = ReactPrimitives as IInjectionAnimateModel
+} = ReactPrimitivesHelper as IInjectionAnimateModel
 
 export {
     Easing
@@ -41,7 +54,7 @@ export {
 
 const {
     PixelRatio
-} = ReactPrimitives as IInjectionPixelRatioModel
+} = ReactPrimitivesHelper as IInjectionPixelRatioModel
 
 export {
     PixelRatio
@@ -51,7 +64,7 @@ const {
     Platform,
     StatusBar,
     Dimensions
-} = ReactPrimitives as IInjectionSystemModel
+} = ReactPrimitivesHelper as IInjectionSystemModel
 
 export {
     Platform,
@@ -63,7 +76,7 @@ export {
 const {
     TextInput,
     Text
-} = ReactPrimitives as IInjectionTextModel
+} = ReactPrimitivesHelper as IInjectionTextModel
 
 export {
     TextInput,
@@ -77,15 +90,11 @@ const {
     ScrollView,
     ListView,
     FlatList
-} = ReactPrimitives as IInjectionListModel
+} = ReactPrimitivesHelper as IInjectionListModel
 
 export {
     KeyboardAwareScrollView,
-    ScrollView,
-    ListView,
-    FlatList
 }
-
 
 
 const {
@@ -96,7 +105,7 @@ const {
     Picker,
     DatePickerIOS,
     DatePickerAndroid
-} = ReactPrimitives as IInjectionDialogModel
+} = ReactPrimitivesHelper as IInjectionDialogModel
 
 export {
     ActivityIndicator,
@@ -115,7 +124,7 @@ const {
     TouchableHighlight,
     TouchableNativeFeedback,
     Touchable
-} = ReactPrimitives as IInjectionTouchModel
+} = ReactPrimitivesHelper as IInjectionTouchModel
 
 export {
     PanResponder,

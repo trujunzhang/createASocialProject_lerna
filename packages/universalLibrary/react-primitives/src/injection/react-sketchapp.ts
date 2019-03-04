@@ -21,6 +21,8 @@ import {
   IInjectionTouchModel
 } from '../models'
 
+
+// other
 import { PixelRatioHelper } from '../modules/PixelRatio'
 import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'

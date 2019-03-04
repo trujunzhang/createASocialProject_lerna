@@ -2,7 +2,7 @@
 // Use getter functions on primitives to warn if injection didn't happen for an API
 
 // TODO(lmr):
-// Use getter functions + warn / throw if a non-primitive API is retrieved off of ReactPrimitives
+// Use getter functions + warn / throw if a non-primitive API is retrieved off of ReactPrimitivesHelper
 // that looks like a react-native API
 
 import {
@@ -16,10 +16,10 @@ import {
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
-} from '../models'
+} from './models'
 
 
-export class ReactPrimitives {
+export class ReactPrimitivesHelper {
   private PixelRatio: any = null
   private reactPrimitivesModel: IReactPrimitivesModel | any = {}
 
