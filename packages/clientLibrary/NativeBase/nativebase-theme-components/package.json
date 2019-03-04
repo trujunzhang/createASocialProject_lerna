@@ -30,13 +30,13 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
+    "react-primitives": "*",
     "@app/native-base-variables": "*",
     "@app/tools": "*",
     "@types/node": "10.12.18",
     "@types/react": "16.7.7",
     "@types/react-native": "0.57.17",
     "react": "16.5.0",
-    "react-primitives": "*",
     "react-dom": "^16.8.2"
   },
   "devDependencies": {

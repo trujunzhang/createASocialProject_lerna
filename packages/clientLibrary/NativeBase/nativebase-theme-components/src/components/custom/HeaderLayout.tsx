@@ -12,7 +12,7 @@ import {
   getBodyBase,
   getRightBase,
   getButtonBase
-} from '../headerItems'
+} from '../base/headerItems'
 
 import { PixelRatio } from 'react-primitives'
 import { themeVariables } from '@app/native-base-variables'
