@@ -1,12 +1,10 @@
 {
   "name": "@app/native-base-shoutem-theme",
   "version": "0.2.2",
-  "description": "",
-  "author": "",
   "license": "MIT",
   "repository": "/@app/shared-components",
   "main": "build/lib/index.js",
-  "types": "build/lib/index.d.ts",
+  "types.pending": "build/lib/index.d.ts",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -20,10 +18,12 @@
     "fix.current": "yarn run fix",
     "test.lib.pending": "jest --env=node --colors --coverage test",
     "test.current.pending": "yarn test.lib",
-    "build.reset": "rm -rf build",
-    "build.clean": "yarn build.reset",
-    "build:js": "tsc -p tsconfig.lib.json",
-    "build-lib": "yarn build.clean && yarn build:js",
+    "build:reset": "rm -rf build",
+    "build.clean": "yarn build:reset",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir build/lib --extensions \".ts,.tsx\" --source-maps inline",
+    "build:all": "npm run build:types && npm run build:js",
+    "build-lib": "yarn build.clean && yarn build:all",
     "build.current.pending": "yarn run build-lib",
     "postinstall": "yarn build-lib"
   },

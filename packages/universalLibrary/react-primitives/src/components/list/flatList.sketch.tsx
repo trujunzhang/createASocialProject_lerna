@@ -5,12 +5,9 @@ import {
 
 import * as React from 'react'
 
-interface ISketchFlatlistProps<ItemT> extends FlatListProps<ItemT> {
-}
-
 interface ISketchFlatlistState { }
 
-export class FlatList<ItemT> extends React.Component<ISketchFlatlistProps<ItemT>, ISketchFlatlistState> {
+export class FlatList<ItemT> extends React.Component<FlatListProps<ItemT>, ISketchFlatlistState> {
 
     render() {
         return null

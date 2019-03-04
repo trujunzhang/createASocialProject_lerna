@@ -44,7 +44,6 @@ export {
 
 const {
     Easing,
-    Animated
 } = ReactPrimitivesHelper as IInjectionAnimateModel
 
 export {
@@ -87,9 +86,6 @@ export {
 
 const {
     KeyboardAwareScrollView,
-    ScrollView,
-    ListView,
-    FlatList
 } = ReactPrimitivesHelper as IInjectionListModel
 
 export {

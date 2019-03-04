@@ -4,8 +4,7 @@
   "description": "",
   "author": "",
   "license": "MIT",
-  "main.js": "build/lib/index.js",
-  "main": "index.ts",
+  "main": "build/lib/index.js",
   "typings": "./index.d.ts",
   "engines": {
     "node": ">=8",
@@ -22,9 +21,11 @@
     "test.current.pending": "yarn test.lib",
     "build:reset": "rm -rf build",
     "build.clean": "yarn build:reset",
-    "build:js": "tsc -p tsconfig.lib.json",
-    "build-lib": "yarn build.clean && yarn build:js",
-    "build.current": "yarn run build-lib",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir build/lib --extensions \".ts,.tsx\" --source-maps inline",
+    "build:all": "npm run build:types && npm run build:js",
+    "build-lib": "yarn build.clean && yarn build:all",
+    "build.current.pending": "yarn run build-lib",
     "postinstall": "yarn build-lib"
   },
   "dependencies": {

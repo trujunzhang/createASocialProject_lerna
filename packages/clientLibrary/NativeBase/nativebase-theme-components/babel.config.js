@@ -19,7 +19,7 @@ module.exports = function (api) {
           corejs: false,
           helpers: true,
           regenerator: true,
-          useESModules: false
+          useESModules: true
         }
       ]
     ]

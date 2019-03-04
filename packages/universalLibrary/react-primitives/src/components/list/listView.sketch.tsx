@@ -5,12 +5,10 @@ import {
 
 import * as React from 'react'
 
-interface ISketchListViewProps extends ListViewProps {
-}
 
 interface ISketchListViewState { }
 
-export class ListView extends React.Component<ISketchListViewProps, ISketchListViewState> {
+export class ListView extends React.Component<ListViewProps, ISketchListViewState> {
 
     render() {
         return null
