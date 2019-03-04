@@ -1,7 +1,7 @@
 
 import {
     SwitchProps
-} from '../../models/iTouchProps'
+} from '../../models/iDialogProps'
 
 import * as React from 'react'
 

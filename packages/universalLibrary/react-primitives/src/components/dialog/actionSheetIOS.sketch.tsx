@@ -3,7 +3,7 @@ import {
     ActionSheetIOSStatic,
     ActionSheetIOSOptions,
     ShareActionSheetIOSOptions
-} from '../../models/iTouchProps'
+} from '../../models/iDialogProps'
 
 import * as React from 'react'
 
