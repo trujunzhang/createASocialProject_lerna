@@ -1,5 +1,15 @@
 
 
-import { ActionSheetIOSStatic, ActionSheetIOSOptions, ShareActionSheetIOSOptions, } from 'react-native'
+import {
+    // ActionSheet
+    ActionSheetIOSStatic, ActionSheetIOSOptions, ShareActionSheetIOSOptions,
+    // ActivityIndicator
+    ActivityIndicatorProps,
+} from 'react-native'
 
-export { ActionSheetIOSStatic, ActionSheetIOSOptions, ShareActionSheetIOSOptions, }
+export {
+    // ActionSheet
+    ActionSheetIOSStatic, ActionSheetIOSOptions, ShareActionSheetIOSOptions,
+    // ActivityIndicator
+    ActivityIndicatorProps,
+}

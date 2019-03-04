@@ -1,13 +1,13 @@
 
 import {
-    FlatListProps
-} from '../../models/iListProps'
+    ActivityIndicatorProps
+} from '../../models/iTouchProps'
 
 import * as React from 'react'
 
-interface ISketchFlatlistState { }
+interface ISketchActivityIndicatorState { }
 
-export class FlatList<ItemT> extends React.Component<FlatListProps<ItemT>, ISketchFlatlistState> {
+export class ActivityIndicator extends React.Component<ActivityIndicatorProps, ISketchActivityIndicatorState> {
 
     render() {
         return null
