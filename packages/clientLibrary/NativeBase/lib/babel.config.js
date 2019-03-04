@@ -31,9 +31,31 @@ module.exports = function (api) {
       [
         "module-resolver",
         {
+          "cwd": "babelrc",
           "alias": {
           },
-          "extensions": ["web.js", "ios.js", "android.js", "sketch.js", ".js"]
+          extensions: [
+            '.js',
+            '.jsx',
+            '.ts',
+            '.tsx',
+            '.android.js',
+            '.android.jsx',
+            '.android.ts',
+            '.android.tsx',
+            '.web.js',
+            '.web.jsx',
+            '.web.ts',
+            '.web.tsx',
+            '.sketch.jsx',
+            '.sketch.js',
+            '.sketch.ts',
+            '.sketch.tsx',
+            '.ios.jsx',
+            '.ios.js',
+            '.ios.ts',
+            '.ios.tsx'
+          ],
         }
       ]
     ]

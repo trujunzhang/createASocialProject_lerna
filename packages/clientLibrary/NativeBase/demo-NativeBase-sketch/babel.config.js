@@ -34,7 +34,28 @@ module.exports = function (api) {
           "root": [
             "."
           ],
-          "extensions": [".sketch.js", ".js", ".jsx", ".json"],
+          extensions: [
+            '.js',
+            '.jsx',
+            '.ts',
+            '.tsx',
+            '.android.js',
+            '.android.jsx',
+            '.android.ts',
+            '.android.tsx',
+            '.web.js',
+            '.web.jsx',
+            '.web.ts',
+            '.web.tsx',
+            '.sketch.jsx',
+            '.sketch.js',
+            '.sketch.ts',
+            '.sketch.tsx',
+            '.ios.jsx',
+            '.ios.js',
+            '.ios.ts',
+            '.ios.tsx'
+          ],
           "alias": {
           }
         }
