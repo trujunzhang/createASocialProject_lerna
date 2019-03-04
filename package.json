@@ -13,7 +13,7 @@
             "  ***** clean ****": "",
             "rm.node_module": "lerna clean --yes",
             "rm.defines": "lerna run rm.assets --stream",
-            "rm.build": "lerna run  build.reset --stream",
+            "rm.build": "lerna run  build:reset --stream",
             "rm.defines.pending": "find . -name '@types' -type d | xargs rm -rf",
             "rm.yarn.lock": "find . -name 'yarn.lock' -type f -delete",
             "*****  The following is for lerna ****": "",

@@ -18,7 +18,7 @@
     "ready:copy_static": "cpx \"../../appWeb/static/**/*.*\" ./static",
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "fix.current": "yarn fix",
-    "build.reset": "rm -rf build",
+    "build:reset": "rm -rf build",
     "build.clean": "echo 'build empty clean'",
     "build:js": "tsc -p tsconfig.json",
     "copy.assets.to.build": "cpx \"./static/**/*.*\" ./build/static",

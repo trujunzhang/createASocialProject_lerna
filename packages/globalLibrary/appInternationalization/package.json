@@ -20,7 +20,7 @@
     "fix.current.pending": "yarn run fix",
     "test.lib": "jest --env=node --colors --coverage test",
     "test.current.pending": "yarn test.lib",
-    "build.reset": "rm -rf build",
+    "build:reset": "rm -rf build",
     "build.clean": "echo 'build empty clean'",
     "build:js": "tsc -p tsconfig.lib.json",
     "build-lib": "yarn build.clean && yarn build:js",
