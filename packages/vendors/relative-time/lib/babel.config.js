@@ -3,8 +3,13 @@ module.exports = function (api) {
   return {
     presets: [
       "@babel/env",
-      "@babel/preset-react",
-      "@babel/typescript"
+      [
+        "@babel/preset-react",
+        {
+          development: process.env.BABEL_ENV === "development",
+        },
+      ],
+      "@babel/preset-typescript"
     ],
     plugins: [
       ["@babel/plugin-proposal-class-properties", { "loose": true }],
