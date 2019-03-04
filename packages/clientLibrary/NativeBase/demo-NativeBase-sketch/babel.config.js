@@ -2,6 +2,18 @@ module.exports = function (api) {
   api.cache(true);
   return {
     presets: [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry"
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          development: process.env.BABEL_ENV === "development",
+        },
+      ],
       "@babel/preset-typescript"
     ],
     plugins: [
@@ -22,7 +34,7 @@ module.exports = function (api) {
           "root": [
             "."
           ],
-          "extensions": [".ios.js", ".android.js", ".js", ".jsx", ".json"],
+          "extensions": [".sketch.js", ".js", ".jsx", ".json"],
           "alias": {
           }
         }
