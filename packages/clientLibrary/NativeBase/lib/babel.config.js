@@ -7,7 +7,7 @@ module.exports = function (api) {
       "@babel/typescript"
     ],
     plugins: [
-      "@babel/proposal-class-properties",
+      ["@babel/plugin-proposal-class-properties", { "loose": true }],
       ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
       [
         "@babel/plugin-transform-runtime",

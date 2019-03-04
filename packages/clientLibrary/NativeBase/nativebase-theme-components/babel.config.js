@@ -3,10 +3,10 @@ module.exports = function (api) {
   return {
     presets: ['@babel/env', '@babel/typescript'],
     plugins: [
-      '@babel/proposal-class-properties',
+      ["@babel/plugin-proposal-class-properties", { "loose": true }],
       ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
       [
-        '@babel/plugin-transform-runtime',
+        "@babel/plugin-transform-runtime",
         {
           corejs: false,
           helpers: true,
