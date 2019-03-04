@@ -1,12 +1,20 @@
 module.exports = function (api) {
   api.cache(true)
   return {
-    presets: ['@babel/env', '@babel/typescript'],
-    plugins: [
-      '@babel/proposal-class-properties',
-      '@babel/proposal-object-rest-spread',
+    presets: [
       [
-        '@babel/plugin-transform-runtime',
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry"
+        }
+      ],
+      "@babel/preset-typescript"
+    ],
+    plugins: [
+      ["@babel/plugin-proposal-class-properties", { "loose": true }],
+      ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
+      [
+        "@babel/plugin-transform-runtime",
         {
           corejs: false,
           helpers: true,
