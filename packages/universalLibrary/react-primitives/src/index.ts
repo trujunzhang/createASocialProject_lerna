@@ -1,5 +1,9 @@
-import { ReactPrimitives } from './reactPrimitives'
+import { ReactPrimitives, StyleSheet } from './reactPrimitives'
 
+// So important here, directly export.
+export {
+    StyleSheet
+}
 
 import {
     IInjectionBaseModel,
@@ -16,14 +20,12 @@ const {
     View,
     Image,
     isIphoneX,
-    StyleSheet
 } = ReactPrimitives as IInjectionBaseModel
 
 export {
     View,
     Image,
     isIphoneX,
-    StyleSheet
 }
 
 const {

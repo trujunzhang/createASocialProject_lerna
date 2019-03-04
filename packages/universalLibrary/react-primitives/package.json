@@ -28,23 +28,23 @@
   },
   "dependencies": {
     "animated": "0.2.2",
-    "react-timer-mixin": "0.13.4",
-    "@types/prop-types": "15.5.8",
+    "asap": "2.0.5",
+    "create-react-class": "15.6.2",
+    "flexibility": "2.0.1",
+    "inline-style-prefixer": "4.0.2",
+    "invariant": "2.2.1",
+    "normalize-css-color": "1.0.1",
     "prop-types": "15.6.2",
-    "@types/react-native": "0.57.27",
-    "@types/react": "16.4.8",
-    "react": "16.5.0",
-    "react-sketchapp": "2.0.0",
-    "@types/react-dom": "16.0.11",
-    "react-dom": "16.8.2",
-    "react-native-web": "0.10.0"
+    "react-timer-mixin": "0.13.3",
+    "string-hash": "1.1.3"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
+    "react": ">=16.5.1",
+    "react-art": ">=16.5.1",
+    "react-dom": ">=16.5.1",
+    "react-native-web": ">=0.9.0"
   },
   "devDependencies": {
-    "@app/mocks": "*",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
@@ -63,6 +63,15 @@
     "@types/react-test-renderer": "16.0.3",
     "react-test-renderer": "16.7.0",
     "typescript": "3.3.3",
-    "@types/react-sketchapp": "0.12.1"
+    "react-art": "16.5.2",
+    "@types/react-sketchapp": "0.12.1",
+    "react-sketchapp": "2.0.0",
+    "@types/react-native": "0.57.27",
+    "@types/react": "16.4.8",
+    "react": "16.5.0",
+    "@types/react-dom": "16.0.11",
+    "react-dom": "16.8.2",
+    "react-native-web": "0.10.0",
+    "@types/prop-types": "15.5.8"
   }
 }
