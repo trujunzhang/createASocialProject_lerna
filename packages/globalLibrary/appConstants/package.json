@@ -28,7 +28,6 @@
   "dependencies": {
     "@app/avatar": "*",
     "@app/tools": "*",
-    "@types/node": "10.12.18",
     "@types/react": "16.7.18",
     "@types/underscore": "1.8.9",
     "underscore": "1.9.1",
@@ -36,6 +35,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
+    "@types/node": "11.10.4",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",
