@@ -2,10 +2,10 @@ module.exports = function (api) {
   api.cache(true);
   return {
     presets: [
-
       "@babel/preset-typescript"
     ],
     plugins: [
+      ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
       [
         "@babel/plugin-transform-runtime",
         {

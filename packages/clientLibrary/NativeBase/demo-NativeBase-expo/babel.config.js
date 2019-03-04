@@ -6,6 +6,7 @@ module.exports = function (api) {
       "@babel/preset-typescript"
     ],
     plugins: [
+      ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
       [
         "@babel/plugin-transform-runtime",
         {

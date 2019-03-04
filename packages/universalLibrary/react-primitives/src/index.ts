@@ -1,8 +1,9 @@
-import { ReactPrimitives, StyleSheet } from './reactPrimitives'
+import { ReactPrimitives, StyleSheet, Animated } from './reactPrimitives'
 
 // So important here, directly export.
 export {
-    StyleSheet
+    StyleSheet,
+    Animated
 }
 
 import {
@@ -34,8 +35,7 @@ const {
 } = ReactPrimitives as IInjectionAnimateModel
 
 export {
-    Easing,
-    Animated
+    Easing
 }
 
 

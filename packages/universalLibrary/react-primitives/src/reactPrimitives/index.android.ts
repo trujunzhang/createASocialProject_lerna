@@ -5,9 +5,11 @@ import { allInjectionModel } from '../injection/react-native'
 export const ReactPrimitives = new Generator(allInjectionModel).end()
 
 import {
-    StyleSheet
+    StyleSheet,
+    Animated
 } from 'react-native'
 
 export {
-    StyleSheet
+    StyleSheet,
+    Animated
 }
