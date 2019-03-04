@@ -17,8 +17,6 @@ import {
   IInjectionAnimateModel,
   IInjectionTextModel,
   IInjectionListModel,
-  IInjectionDialogModel,
-  IInjectionTouchModel
 } from '../models'
 
 
@@ -86,23 +84,10 @@ const injectionTextModel: IInjectionTextModel = {
   Text
 }
 
-
-// const Touchable = require('../modules/Touchable')(Animated, StyleSheet, Platform, TouchableMixin)
-const Touchable = null
-const injectionTouchModel: IInjectionTouchModel = {
-  // Touch
-  PanResponder: null,
-  TouchableOpacity: Touchable,
-  TouchableHighlight: Touchable,
-  TouchableNativeFeedback: Touchable,
-  Touchable
-}
-
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
   injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel,
-  injectionTouchModel
 )

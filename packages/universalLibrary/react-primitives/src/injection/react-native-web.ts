@@ -27,8 +27,6 @@ import {
   IInjectionAnimateModel,
   IInjectionTextModel,
   IInjectionListModel,
-  IInjectionDialogModel,
-  IInjectionTouchModel
 } from '../models'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
@@ -89,16 +87,6 @@ const injectionListModel: IInjectionListModel = {
   FlatList: ListView
 }
 
-
-const injectionTouchModel: IInjectionTouchModel = {
-  // Touch
-  PanResponder: null,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  Touchable: TouchableWithoutFeedback
-}
-
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
   injectionPixelRatioModel,
@@ -106,5 +94,4 @@ export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionAnimateModel,
   injectionTextModel,
   injectionListModel,
-  injectionTouchModel
 )

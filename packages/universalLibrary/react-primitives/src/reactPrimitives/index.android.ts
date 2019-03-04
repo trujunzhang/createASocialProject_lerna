@@ -15,11 +15,14 @@ export {
 }
 
 // List
+import { KeyboardAwareScrollView } from '../components/list/keyboardAwareScrollView'
 import { ScrollView } from '../components/list/scrollView'
 import { ListView } from '../components/list/listView'
 import { FlatList } from '../components/list/flatList'
 
 export {
+    // List
+    KeyboardAwareScrollView,
     ScrollView,
     ListView,
     FlatList
@@ -44,4 +47,19 @@ export {
     Picker,
     DatePickerIOS,
     DatePickerAndroid
+}
+
+
+// Touch
+import { PanResponder } from '../components/touch/panResponder'
+import { TouchableOpacity } from '../components/touch/touchableOpacity'
+import { TouchableHighlight } from '../components/touch/touchableHighlight'
+import { TouchableNativeFeedback } from '../components/touch/touchableNativeFeedback'
+
+export {
+    // Touch
+    PanResponder,
+    TouchableOpacity,
+    TouchableHighlight,
+    TouchableNativeFeedback,
 }

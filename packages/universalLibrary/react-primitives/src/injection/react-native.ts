@@ -38,8 +38,6 @@ import {
   IInjectionAnimateModel,
   IInjectionTextModel,
   IInjectionListModel,
-  IInjectionDialogModel,
-  IInjectionTouchModel
 } from '../models'
 
 const injectionBaseModel: IInjectionBaseModel = {
@@ -85,15 +83,6 @@ const injectionListModel: IInjectionListModel = {
 }
 
 
-const injectionTouchModel: IInjectionTouchModel = {
-  // Touch
-  PanResponder,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  Touchable: TouchableWithoutFeedback
-}
-
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
   injectionPixelRatioModel,
@@ -101,5 +90,4 @@ export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionAnimateModel,
   injectionTextModel,
   injectionListModel,
-  injectionTouchModel
 )

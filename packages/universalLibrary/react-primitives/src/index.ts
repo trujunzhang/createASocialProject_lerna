@@ -7,12 +7,16 @@ export {
 }
 
 import {
+    // List
+    KeyboardAwareScrollView,
     ScrollView,
     ListView,
     FlatList
 } from './reactPrimitives'
 
 export {
+    // List
+    KeyboardAwareScrollView,
     ScrollView,
     ListView,
     FlatList
@@ -39,6 +43,23 @@ export {
     Picker,
     DatePickerIOS,
     DatePickerAndroid
+}
+
+
+import {
+    // Touch
+    PanResponder,
+    TouchableOpacity,
+    TouchableHighlight,
+    TouchableNativeFeedback,
+} from './reactPrimitives'
+
+export {
+    // Touch
+    PanResponder,
+    TouchableOpacity,
+    TouchableHighlight,
+    TouchableNativeFeedback,
 }
 
 import {
@@ -105,28 +126,3 @@ export {
 }
 
 
-
-const {
-    KeyboardAwareScrollView,
-} = ReactPrimitivesHelper as IInjectionListModel
-
-export {
-    KeyboardAwareScrollView,
-}
-
-
-const {
-    PanResponder,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    Touchable
-} = ReactPrimitivesHelper as IInjectionTouchModel
-
-export {
-    PanResponder,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    Touchable
-}
