@@ -5,6 +5,8 @@ import {
     ActionSheetIOSStatic, ActionSheetIOSOptions, ShareActionSheetIOSOptions,
     // ActivityIndicator
     ActivityIndicatorProps,
+    // Modal
+    ModalProps,
 } from 'react-native'
 
 export {
@@ -12,4 +14,6 @@ export {
     ActionSheetIOSStatic, ActionSheetIOSOptions, ShareActionSheetIOSOptions,
     // ActivityIndicator
     ActivityIndicatorProps,
+    // Modal
+    ModalProps,
 }

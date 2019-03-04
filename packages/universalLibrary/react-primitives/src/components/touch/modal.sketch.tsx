@@ -1,13 +1,13 @@
 
 import {
-    FlatListProps
+    ModalProps
 } from '../../models/iTouchProps'
 
 import * as React from 'react'
 
-interface ISketchFlatlistState { }
+interface ISketchModalState { }
 
-export class FlatList<ItemT> extends React.Component<FlatListProps<ItemT>, ISketchFlatlistState> {
+export class Modal extends React.Component<ModalProps, ISketchModalState> {
 
     render() {
         return null
