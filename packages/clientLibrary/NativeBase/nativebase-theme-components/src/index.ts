@@ -1,52 +1,54 @@
-import * as _ from 'lodash'
+import {
+  LodashUtils as _
+} from '@app/tools'
 
 // Custom
-import { scrollHeaderTheme, fixLeftTheme, fixRightTheme } from './custom'
-
-// Common
-import { bodyTheme } from './Body'
-import { leftTheme } from './Left'
-import { rightTheme } from './Right'
-import { headerTheme } from './Header'
-import { switchTheme } from './Switch'
-import { thumbnailTheme } from './Thumbnail'
-import { containerTheme } from './Container'
-import { contentTheme } from './Content'
-import { buttonTheme } from './Button'
-import { titleTheme } from './Title'
-import { subtitleTheme } from './Subtitle'
-import { inputGroupTheme } from './InputGroup'
-import { badgeTheme } from './Badge'
-import { checkBoxTheme } from './CheckBox'
-import { cardTheme } from './Card'
-import { radioTheme } from './Radio'
-import { h3Theme } from './H3'
-import { h2Theme } from './H2'
-import { h1Theme } from './H1'
-import { footerTheme } from './Footer'
-import { footerTabTheme } from './FooterTab'
-import { fabTheme } from './Fab'
-import { itemTheme } from './Item'
-import { labelTheme } from './Label'
-import { textAreaTheme } from './Textarea'
-import { textTheme } from './Text'
-import { toastTheme } from './Toast'
-import { tabTheme } from './Tab'
-import { tabBarTheme } from './TabBar'
-import { tabContainerTheme } from './TabContainer'
-import { viewTheme } from './View'
-import { tabHeadingTheme } from './TabHeading'
-import { iconTheme } from './Icon'
-import { inputTheme } from './Input'
-import { swipeRowTheme } from './SwipeRow'
-import { segmentTheme } from './Segment'
-import { spinnerTheme } from './Spinner'
-import { cardItemTheme } from './CardItem'
-import { listItemTheme } from './ListItem'
-import { formTheme } from './Form'
-import { separatorTheme } from './Separator'
-import { pickerTheme } from './Picker'
-import { pageLayoutTheme } from './PageLayout'
+import { scrollHeaderTheme, fixLeftTheme, fixRightTheme } from './components'
+import {
+  bodyTheme,
+  leftTheme,
+  rightTheme,
+  headerTheme,
+  switchTheme,
+  thumbnailTheme,
+  containerTheme,
+  contentTheme,
+  buttonTheme,
+  titleTheme,
+  subtitleTheme,
+  inputGroupTheme,
+  badgeTheme,
+  checkBoxTheme,
+  cardTheme,
+  radioTheme,
+  h3Theme,
+  h2Theme,
+  h1Theme,
+  footerTheme,
+  footerTabTheme,
+  fabTheme,
+  itemTheme,
+  labelTheme,
+  textAreaTheme,
+  textTheme,
+  toastTheme,
+  tabTheme,
+  tabBarTheme,
+  tabContainerTheme,
+  viewTheme,
+  tabHeadingTheme,
+  iconTheme,
+  inputTheme,
+  swipeRowTheme,
+  segmentTheme,
+  spinnerTheme,
+  cardItemTheme,
+  listItemTheme,
+  formTheme,
+  separatorTheme,
+  pickerTheme,
+  pageLayoutTheme,
+} from './components'
 
 import { themeVariables } from '@app/native-base-variables'
 export const getThemeStyle = (variables: themeVariables) => {
