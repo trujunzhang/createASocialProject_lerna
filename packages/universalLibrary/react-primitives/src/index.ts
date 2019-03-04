@@ -18,7 +18,6 @@ export {
     FlatList
 }
 
-
 import {
     IInjectionBaseModel,
     IInjectionAnimateModel,
