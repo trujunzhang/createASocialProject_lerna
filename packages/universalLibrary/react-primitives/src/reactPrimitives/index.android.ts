@@ -24,3 +24,24 @@ export {
     ListView,
     FlatList
 }
+
+
+// Dialog
+import { ActivityIndicator } from '../components/touch/activityIndicator'
+import { Modal } from '../components/touch/modal'
+import { ActionSheetIOS } from '../components/touch/actionSheetIOS'
+import { Switch } from '../components/touch/switch'
+import { Picker } from '../components/touch/picker'
+import { DatePickerIOS } from '../components/touch/datePickerIOS'
+import { DatePickerAndroid } from '../components/touch/datePickerAndroid'
+
+export {
+    // Dialog
+    ActivityIndicator,
+    Modal,
+    ActionSheetIOS,
+    Switch,
+    Picker,
+    DatePickerIOS,
+    DatePickerAndroid
+}

@@ -18,6 +18,29 @@ export {
     FlatList
 }
 
+
+import {
+    // Dialog
+    ActivityIndicator,
+    Modal,
+    ActionSheetIOS,
+    Switch,
+    Picker,
+    DatePickerIOS,
+    DatePickerAndroid
+} from './reactPrimitives'
+
+export {
+    // Dialog
+    ActivityIndicator,
+    Modal,
+    ActionSheetIOS,
+    Switch,
+    Picker,
+    DatePickerIOS,
+    DatePickerAndroid
+}
+
 import {
     IInjectionBaseModel,
     IInjectionAnimateModel,
@@ -91,26 +114,6 @@ export {
     KeyboardAwareScrollView,
 }
 
-
-const {
-    ActivityIndicator,
-    Modal,
-    ActionSheetIOS,
-    Switch,
-    Picker,
-    DatePickerIOS,
-    DatePickerAndroid
-} = ReactPrimitivesHelper as IInjectionDialogModel
-
-export {
-    ActivityIndicator,
-    Modal,
-    ActionSheetIOS,
-    Switch,
-    Picker,
-    DatePickerIOS,
-    DatePickerAndroid
-}
 
 
 const {
