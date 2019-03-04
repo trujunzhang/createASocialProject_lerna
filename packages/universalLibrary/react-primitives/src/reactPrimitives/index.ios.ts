@@ -16,9 +16,9 @@ export {
 
 
 // List
-import { ScrollView } from '../views/list/ScrollView'
-import { ListView } from '../views/list/ListView'
-import { FlatList } from '../views/list/FlatList'
+import { ScrollView } from '../components/list/scrollView'
+import { ListView } from '../components/list/listView'
+import { FlatList } from '../components/list/flatList'
 
 export {
     ScrollView,
