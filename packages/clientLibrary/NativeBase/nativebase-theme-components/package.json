@@ -21,7 +21,7 @@
     "test.lib": "jest --env=node --colors --coverage test",
     "test.current": "yarn test.lib",
     "build.reset": "rm -rf build",
-    "build.clean": "echo 'build empty clean'",
+    "build.clean": "yarn build.reset",
     "build:js": "tsc -p tsconfig.lib.json",
     "build-lib": "yarn build.clean && yarn build:js",
     "build.current.pending": "yarn build-lib",
