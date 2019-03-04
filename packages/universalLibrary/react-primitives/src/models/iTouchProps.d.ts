@@ -7,6 +7,14 @@ import {
     ActivityIndicatorProps,
     // Modal
     ModalProps,
+    // Switch
+    SwitchProps,
+    // Picker
+    PickerProps,
+    // DatePickerIOS
+    DatePickerIOSProps,
+    // DatePickerAndroid
+    DatePickerAndroidProps,
 } from 'react-native'
 
 export {
@@ -16,4 +24,12 @@ export {
     ActivityIndicatorProps,
     // Modal
     ModalProps,
+    // Switch
+    SwitchProps,
+    // Picker
+    PickerProps,
+    // DatePickerIOS
+    DatePickerIOSProps,
+    // DatePickerAndroid
+    DatePickerAndroidProps,
 }
