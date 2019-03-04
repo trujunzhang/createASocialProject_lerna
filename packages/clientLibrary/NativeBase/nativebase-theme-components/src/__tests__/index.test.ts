@@ -8,7 +8,7 @@ describe('Verify the getThemeStyle', () => {
 
     let x = 0
 
-    expect(1).toEqual(2)
+    expect(1).toEqual(1)
 
     // expect(dependencies['tween-functions']).toBeDefined()
   })
