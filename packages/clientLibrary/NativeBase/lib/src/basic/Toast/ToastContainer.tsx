@@ -4,11 +4,11 @@ import * as PropTypes from 'prop-types'
 
 import { View, Modal, Platform, Animated, ViewProps, ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
-import { Text } from './Text'
-import { Button } from './Button'
-import { ViewNB } from './View'
+import { Text } from '../Text'
+import { Button } from '../Button'
+import { ViewNB } from '../View'
 import { Toast } from './Toast'
-import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
+import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 
 export interface IToastContainerProps extends ViewProps {
   style?: ViewStyle | Array<ViewStyle>

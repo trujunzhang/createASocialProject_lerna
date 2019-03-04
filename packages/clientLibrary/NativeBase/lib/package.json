@@ -1,10 +1,8 @@
 {
   "name": "@app/native-base",
   "version": "0.6.0",
-  "main.ts": "src/index.ts",
   "main": "build/lib/index.js",
   "typings": "build/lib/index.d.ts",
-  "typings.js": "./index.d.ts",
   "description": "Essential cross-platform UI components for React Native",
   "keywords": [
     "android",
@@ -28,7 +26,7 @@
     "build.clean": "yarn build:reset",
     "build:js": "tsc -p tsconfig.lib.json",
     "build-lib": "yarn build.clean && yarn build:js",
-    "build.current.pending": "yarn build-lib",
+    "build.current": "yarn build-lib",
     "postinstall": "yarn build-lib"
   },
   "license": "Apache-2.0",

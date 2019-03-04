@@ -1,8 +1,7 @@
 {
   "name": "@app/nativebase-theme-components",
   "version": "0.6.0",
-  "main": "src/index.ts",
-  "main.js": "build/lib/index.js",
+  "main": "build/lib/index.js",
   "description": "Essential cross-platform UI components for React Native",
   "keywords": [
     "android",

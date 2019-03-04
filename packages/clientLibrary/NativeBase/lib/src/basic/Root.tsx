@@ -3,7 +3,7 @@ import { View, ViewProps, ViewStyle } from 'react-primitives'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
-import { ToastContainer as Toast } from './ToastContainer'
+import { ToastContainer as Toast } from './Toast/ToastContainer'
 import { ActionSheetContainer as ActionSheet } from './Actionsheet'
 import { Text } from './Text'
 

@@ -39,7 +39,6 @@ import { Content } from './basic/Content'
 import { Footer } from './basic/Footer'
 import { FooterTab } from './basic/FooterTab'
 import { Form } from './basic/Form'
-import { ToastContainer } from './basic/ToastContainer'
 import { ActionSheetContainer } from './basic/Actionsheet'
 import { PickerNB } from './basic/Picker'
 import { List } from './basic/List'
@@ -57,6 +56,9 @@ import { DefaultTabBar } from './basic/Tabs/DefaultTabBar'
 import { ScrollableTab } from './basic/Tabs/ScrollableTabBar'
 import { Subtitle } from './basic/Subtitle'
 import { Accordion } from './basic/Accordion'
+
+
+import { ToastContainer } from './basic/Toast/ToastContainer'
 
 import { ScrollHeader } from './basic/custom/ScrollHeader'
 
