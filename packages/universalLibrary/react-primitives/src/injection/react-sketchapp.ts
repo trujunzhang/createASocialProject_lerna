@@ -64,12 +64,6 @@ const injectionBaseModel: IInjectionBaseModel = {
   StyleSheet
 }
 
-// const animated = Object.assign(Animated, {
-//   View: Animated.createAnimatedComponent(View),
-//   Text: Animated.createAnimatedComponent(Text),
-//   Image: Animated.createAnimatedComponent(Image)
-// })
-
 const injectionAnimateModel: IInjectionAnimateModel = {
   Easing: null,
   Animated: null
@@ -92,24 +86,6 @@ const injectionTextModel: IInjectionTextModel = {
   Text
 }
 
-const injectionListModel: IInjectionListModel = {
-  // List
-  KeyboardAwareScrollView: null,
-  ScrollView: null,
-  ListView: null,
-  FlatList: null
-}
-
-const injectionDialogModel: IInjectionDialogModel = {
-  // Dialog
-  ActivityIndicator: null,
-  Modal: null,
-  ActionSheetIOS: null,
-  Switch: null,
-  Picker: null,
-  DatePickerIOS: null,
-  DatePickerAndroid: null
-}
 
 // const Touchable = require('../modules/Touchable')(Animated, StyleSheet, Platform, TouchableMixin)
 const Touchable = null
@@ -128,7 +104,5 @@ export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel,
-  injectionListModel,
-  injectionDialogModel,
   injectionTouchModel
 )

@@ -89,16 +89,6 @@ const injectionListModel: IInjectionListModel = {
   FlatList: ListView
 }
 
-const injectionDialogModel: IInjectionDialogModel = {
-  // Dialog
-  ActivityIndicator: null,
-  Modal: null,
-  ActionSheetIOS: null,
-  Switch: null,
-  Picker: null,
-  DatePickerIOS: null,
-  DatePickerAndroid: null
-}
 
 const injectionTouchModel: IInjectionTouchModel = {
   // Touch
@@ -116,6 +106,5 @@ export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionAnimateModel,
   injectionTextModel,
   injectionListModel,
-  injectionDialogModel,
   injectionTouchModel
 )

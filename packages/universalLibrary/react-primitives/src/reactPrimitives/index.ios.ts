@@ -28,13 +28,13 @@ export {
 
 
 // Dialog
-import { ActivityIndicator } from '../components/touch/activityIndicator'
-import { Modal } from '../components/touch/modal'
-import { ActionSheetIOS } from '../components/touch/actionSheetIOS'
-import { Switch } from '../components/touch/switch'
-import { Picker } from '../components/touch/picker'
-import { DatePickerIOS } from '../components/touch/datePickerIOS'
-import { DatePickerAndroid } from '../components/touch/datePickerAndroid'
+import { ActivityIndicator } from '../components/dialog/activityIndicator'
+import { Modal } from '../components/dialog/modal'
+import { ActionSheetIOS } from '../components/dialog/actionSheetIOS'
+import { Switch } from '../components/dialog/switch'
+import { Picker } from '../components/dialog/picker'
+import { DatePickerIOS } from '../components/dialog/datePickerIOS'
+import { DatePickerAndroid } from '../components/dialog/datePickerAndroid'
 
 export {
     // Dialog
