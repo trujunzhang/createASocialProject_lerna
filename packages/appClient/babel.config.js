@@ -1,5 +1,5 @@
 module.exports = function (api) {
-    if (!!api) {
+  if (!!api) {
     api.cache(false)
   };
   return {
@@ -11,16 +11,16 @@ module.exports = function (api) {
       [
         "@babel/plugin-transform-runtime",
         {
-          "corejs": false,
-          "helpers": true,
-          "regenerator": true,
-          "useESModules": false
+          corejs: false,
+          helpers: true,
+          regenerator: true,
+          useESModules: false
         }
       ],
       [
         "@babel/plugin-proposal-decorators",
         {
-          "legacy": true
+          legacy: true
         }
       ],
       [

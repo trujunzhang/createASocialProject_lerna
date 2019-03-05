@@ -1,5 +1,5 @@
 module.exports = function (api) {
-    if (!!api) {
+  if (!!api) {
     api.cache(false)
   }
   return {
@@ -21,7 +21,7 @@ module.exports = function (api) {
           corejs: false,
           helpers: true,
           regenerator: true,
-          useESModules: true
+          useESModules: false
         }
       ]
     ]

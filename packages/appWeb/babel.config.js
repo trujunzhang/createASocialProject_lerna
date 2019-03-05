@@ -1,5 +1,5 @@
 module.exports = function (api) {
-    if (!!api) {
+  if (!!api) {
     api.cache(false)
   };
   return {
@@ -8,14 +8,18 @@ module.exports = function (api) {
       "@zeit/next-typescript/babel"
     ],
     plugins: [
-      ["@babel/plugin-proposal-decorators", { "legacy": true }],
+      [
+        "@babel/plugin-proposal-decorators", {
+          legacy: true
+        }
+      ],
       [
         "@babel/plugin-transform-runtime",
         {
-          "corejs": false,
-          "helpers": true,
-          "regenerator": true,
-          "useESModules": false
+          corejs: false,
+          helpers: true,
+          regenerator: true,
+          useESModules: false
         }
       ],
       [
