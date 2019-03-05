@@ -735,6 +735,13 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@types/babel__traverse@^7.0.6":
+  version "7.0.6"
+  resolved "http://registry.npm.taobao.org/@types/babel__traverse/download/@types/babel__traverse-7.0.6.tgz#328dd1a8fc4cfe3c8458be9477b219ea158fd7b2"
+  integrity sha1-Mo3RqPxM/jyEWL6Ud7IZ6hWP17I=
+  dependencies:
+    "@babel/types" "^7.3.0"
+
 "@types/chroma-js@1.3.3":
   version "1.3.3"
   resolved "http://registry.npm.taobao.org/@types/chroma-js/download/@types/chroma-js-1.3.3.tgz#2f8ddbaed996166c23305f8c6ff0784bea5c2a87"
@@ -1004,9 +1011,11 @@ babel-plugin-istanbul@^5.1.0:
     test-exclude "^5.0.0"
 
 babel-plugin-jest-hoist@^24.1.0:
-  version "24.1.0"
-  resolved "http://registry.npm.taobao.org/babel-plugin-jest-hoist/download/babel-plugin-jest-hoist-24.1.0.tgz#dfecc491fb15e2668abbd690a697a8fd1411a7f8"
-  integrity sha1-3+zEkfsV4maKu9aQppeo/RQRp/g=
+  version "24.2.0"
+  resolved "http://registry.npm.taobao.org/babel-plugin-jest-hoist/download/babel-plugin-jest-hoist-24.2.0.tgz#2e71559c7fb4e7eac58d521adf0cb50acea3f35d"
+  integrity sha1-LnFVnH+05+rFjVIa3wy1Cs6j810=
+  dependencies:
+    "@types/babel__traverse" "^7.0.6"
 
 babel-plugin-module-resolver@3.2.0:
   version "3.2.0"
@@ -1135,9 +1144,9 @@ callsites@^3.0.0:
   integrity sha1-+361abcq16RYEvk/2UMKPkELPdM=
 
 camelcase@^5.0.0:
-  version "5.1.0"
-  resolved "http://registry.npm.taobao.org/camelcase/download/camelcase-5.1.0.tgz#29e83b9cfaf7ad478f401a187ae089cf83c257ea"
-  integrity sha1-Keg7nPr3rUePQBoYeuCJz4PCV+o=
+  version "5.2.0"
+  resolved "http://registry.npm.taobao.org/camelcase/download/camelcase-5.2.0.tgz#e7522abda5ed94cc0489e1b8466610e88404cf45"
+  integrity sha1-51IqvaXtlMwEieG4RmYQ6IQEz0U=
 
 caniuse-lite@^1.0.30000939:
   version "1.0.30000941"
@@ -1331,9 +1340,9 @@ cssstyle@^1.0.0:
     cssom "0.3.x"
 
 csstype@^2.2.0:
-  version "2.6.2"
-  resolved "http://registry.npm.taobao.org/csstype/download/csstype-2.6.2.tgz#3043d5e065454579afc7478a18de41909c8a2f01"
-  integrity sha1-MEPV4GVFRXmvx0eKGN5BkJyKLwE=
+  version "2.6.3"
+  resolved "http://registry.npm.taobao.org/csstype/download/csstype-2.6.3.tgz#b701e5968245bf9b08d54ac83d00b624e622a9fa"
+  integrity sha1-twHlloJFv5sI1UrIPQC2JOYiqfo=
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -1442,9 +1451,9 @@ detect-newline@^2.1.0:
   integrity sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
 
 diff-sequences@^24.0.0:
-  version "24.0.0"
-  resolved "http://registry.npm.taobao.org/diff-sequences/download/diff-sequences-24.0.0.tgz#cdf8e27ed20d8b8d3caccb4e0c0d8fe31a173013"
-  integrity sha1-zfjiftINi408rMtODA2P4xoXMBM=
+  version "24.2.0"
+  resolved "http://registry.npm.taobao.org/diff-sequences/download/diff-sequences-24.2.0.tgz#605025e678673636d82c49eda94a9cebcbf4b648"
+  integrity sha1-YFAl5nhnNjbYLEntqUqc68v0tkg=
 
 domexception@^1.0.1:
   version "1.0.1"
@@ -2340,9 +2349,9 @@ jest-diff@^24.0.0:
     pretty-format "^24.0.0"
 
 jest-docblock@^24.0.0:
-  version "24.0.0"
-  resolved "http://registry.npm.taobao.org/jest-docblock/download/jest-docblock-24.0.0.tgz#54d77a188743e37f62181a91a01eb9222289f94e"
-  integrity sha1-VNd6GIdD439iGBqRoB65IiKJ+U4=
+  version "24.2.0"
+  resolved "http://registry.npm.taobao.org/jest-docblock/download/jest-docblock-24.2.0.tgz#7fe1d22f7636db4f4f66d07052a3d08f63748a72"
+  integrity sha1-f+HSL3Y2209PZtBwUqPQj2N0inI=
   dependencies:
     detect-newline "^2.1.0"
 
@@ -2374,9 +2383,9 @@ jest-environment-node@^24.0.0:
     jest-util "^24.0.0"
 
 jest-get-type@^24.0.0:
-  version "24.0.0"
-  resolved "http://registry.npm.taobao.org/jest-get-type/download/jest-get-type-24.0.0.tgz#36e72930b78e33da59a4f63d44d332188278940b"
-  integrity sha1-NucpMLeOM9pZpPY9RNMyGIJ4lAs=
+  version "24.2.0"
+  resolved "http://registry.npm.taobao.org/jest-get-type/download/jest-get-type-24.2.0.tgz#00fc17a3ad08b68b6ab14ca47d4f949a82425e76"
+  integrity sha1-APwXo60ItotqsUykfU+UmoJCXnY=
 
 jest-haste-map@^24.0.0:
   version "24.0.0"
@@ -2444,9 +2453,9 @@ jest-mock@^24.0.0:
   integrity sha1-mktT4B1moOeA99hXRi0GPgJMYX0=
 
 jest-regex-util@^24.0.0:
-  version "24.0.0"
-  resolved "http://registry.npm.taobao.org/jest-regex-util/download/jest-regex-util-24.0.0.tgz#4feee8ec4a358f5bee0a654e94eb26163cb9089a"
-  integrity sha1-T+7o7Eo1j1vuCmVOlOsmFjy5CJo=
+  version "24.2.0"
+  resolved "http://registry.npm.taobao.org/jest-regex-util/download/jest-regex-util-24.2.0.tgz#1b910edbf0eb0d94cfc6c7603f496832c897de87"
+  integrity sha1-G5EO2/DrDZTPxsdgP0loMsiX3oc=
 
 jest-resolve-dependencies@^24.1.0:
   version "24.1.0"
@@ -3500,10 +3509,10 @@ realpath-native@^1.0.0, realpath-native@^1.0.2:
   dependencies:
     util.promisify "^1.0.0"
 
-regenerate-unicode-properties@^7.0.0:
-  version "7.0.0"
-  resolved "http://registry.npm.taobao.org/regenerate-unicode-properties/download/regenerate-unicode-properties-7.0.0.tgz#107405afcc4a190ec5ed450ecaa00ed0cafa7a4c"
-  integrity sha1-EHQFr8xKGQ7F7UUOyqAO0Mr6ekw=
+regenerate-unicode-properties@^8.0.0:
+  version "8.0.0"
+  resolved "http://registry.npm.taobao.org/regenerate-unicode-properties/download/regenerate-unicode-properties-8.0.0.tgz#01fc6d6c286fcc932c30f7025ca4a9928bbbb68c"
+  integrity sha1-AfxtbChvzJMsMPcCXKSpkou7tow=
   dependencies:
     regenerate "^1.4.0"
 
@@ -3538,16 +3547,16 @@ regexp-tree@^0.1.0:
   integrity sha1-fNcfyhcZjQS0F279eXE/KZgAk5c=
 
 regexpu-core@^4.1.3, regexpu-core@^4.2.0:
-  version "4.4.0"
-  resolved "http://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.4.0.tgz#8d43e0d1266883969720345e70c275ee0aec0d32"
-  integrity sha1-jUPg0SZog5aXIDRecMJ17grsDTI=
+  version "4.5.1"
+  resolved "http://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.5.1.tgz#4d0d902156995d19c5cd832f840632799122f872"
+  integrity sha1-TQ2QIVaZXRnFzYMvhAYyeZEi+HI=
   dependencies:
     regenerate "^1.4.0"
-    regenerate-unicode-properties "^7.0.0"
+    regenerate-unicode-properties "^8.0.0"
     regjsgen "^0.5.0"
     regjsparser "^0.6.0"
     unicode-match-property-ecmascript "^1.0.4"
-    unicode-match-property-value-ecmascript "^1.0.2"
+    unicode-match-property-value-ecmascript "^1.1.0"
 
 regjsgen@^0.5.0:
   version "0.5.0"
@@ -4146,15 +4155,15 @@ unicode-match-property-ecmascript@^1.0.4:
     unicode-canonical-property-names-ecmascript "^1.0.4"
     unicode-property-aliases-ecmascript "^1.0.4"
 
-unicode-match-property-value-ecmascript@^1.0.2:
-  version "1.0.2"
-  resolved "http://registry.npm.taobao.org/unicode-match-property-value-ecmascript/download/unicode-match-property-value-ecmascript-1.0.2.tgz#9f1dc76926d6ccf452310564fd834ace059663d4"
-  integrity sha1-nx3HaSbWzPRSMQVk/YNKzgWWY9Q=
+unicode-match-property-value-ecmascript@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/unicode-match-property-value-ecmascript/download/unicode-match-property-value-ecmascript-1.1.0.tgz#5b4b426e08d13a80365e0d657ac7a6c1ec46a277"
+  integrity sha1-W0tCbgjROoA2Xg1lesemwexGonc=
 
 unicode-property-aliases-ecmascript@^1.0.4:
-  version "1.0.4"
-  resolved "http://registry.npm.taobao.org/unicode-property-aliases-ecmascript/download/unicode-property-aliases-ecmascript-1.0.4.tgz#5a533f31b4317ea76f17d807fa0d116546111dd0"
-  integrity sha1-WlM/MbQxfqdvF9gH+g0RZUYRHdA=
+  version "1.0.5"
+  resolved "http://registry.npm.taobao.org/unicode-property-aliases-ecmascript/download/unicode-property-aliases-ecmascript-1.0.5.tgz#a9cc6cc7ce63a0a3023fc99e341b94431d405a57"
+  integrity sha1-qcxsx85joKMCP8meNBuUQx1AWlc=
 
 union-value@^1.0.0:
   version "1.0.0"
