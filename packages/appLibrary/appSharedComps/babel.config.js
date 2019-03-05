@@ -29,7 +29,6 @@ module.exports = function (api) {
         {
           "cwd": "babelrc",
           "alias": {
-            "^react-native$": "react-native-web"
           },
           extensions: [
             '.js',
