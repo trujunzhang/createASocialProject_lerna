@@ -14,9 +14,6 @@
     "fix:prettier": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "postinstall": "rndebugger-open --expo"
   },
-  "engines": {
-    "node": ">=8.0.0"
-  },
   "dependencies": {
     "@app/shared-components": "*",
     "@types/react": "16.4.8",

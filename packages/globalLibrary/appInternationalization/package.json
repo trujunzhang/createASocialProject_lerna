@@ -7,10 +7,6 @@
   "repository": "/@app/intl",
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "scripts": {
     "depenence.update": "ncu -u",
     "rm.assets": "rm -rf @types",

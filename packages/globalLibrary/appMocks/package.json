@@ -4,12 +4,6 @@
   "private": false,
   "license": "Apache-2.0",
   "main": "build/lib/index.js",
-  "author": {
-    "name": "Stokedbits"
-  },
-  "engines": {
-    "node": ">=8.0.0"
-  },
   "scripts": {
     "depenence.update": "ncu -u",
     "rm.assets": "rm -rf @types",
