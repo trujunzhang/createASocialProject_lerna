@@ -31,11 +31,12 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@types/node": "11.10.4",
     "@types/lodash": "4.14.120",
     "@types/route-parser": "0.1.1",
     "@types/underscore": "1.8.9",
     "@types/query-string": "6.2.0",
+    "@types/node": "11.10.4",
+    "babel-plugin-module-resolver": "3.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
     "@types/jest": "24.0.6",

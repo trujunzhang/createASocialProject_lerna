@@ -955,7 +955,7 @@
   resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.122.tgz#3e31394c38cf1e5949fb54c1192cbc406f152c6c"
   integrity sha1-PjE5TDjPHllJ+1TBGSy8QG8VLGw=
 
-"@types/node@*":
+"@types/node@*", "@types/node@11.10.4":
   version "11.10.4"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
   integrity sha1-P1/E8PMigF8AngCrNaL/PWt3jkI=
