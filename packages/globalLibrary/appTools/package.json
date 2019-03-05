@@ -4,6 +4,7 @@
   "private": false,
   "license": "Apache-2.0",
   "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
   "scripts": {
     "depenence.update": "ncu -u",
     "rm.assets": "rm -rf @types",

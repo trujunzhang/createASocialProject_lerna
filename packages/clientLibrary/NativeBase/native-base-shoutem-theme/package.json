@@ -11,7 +11,7 @@
     "ready.assets": "run-s  ready:*",
     "ready:definitive": "cpx \"../../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
-    "fix.current": "yarn run fix",
+    "fix.current": "yarn fix",
     "test.lib.pending": "jest --env=node --colors --coverage test",
     "test.current.pending": "yarn test.lib",
     "build:reset": "rm -rf build",
@@ -20,7 +20,7 @@
     "build:js": "babel src --out-dir build/lib --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
     "build:all": "npm run build:types && npm run build:js",
     "build-lib": "yarn build.clean && yarn build:all",
-    "build.current.pending": "yarn run build-lib",
+    "build.current.pending": "yarn build-lib",
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
