@@ -32,11 +32,7 @@ module.exports = function (api) {
           ],
           "extensions": [".ios.js", ".android.js", ".js", ".jsx", ".json"],
           "alias": {
-            "^react-primitives$": "react-native",
-            "@src": "./src",
-            "@config": "./config",
-            "@assets": "./static",
-            "@client": "./apps/client"
+            "^react-primitives$": "react-native"
           }
         }
       ]
