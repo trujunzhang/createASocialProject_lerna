@@ -64,7 +64,7 @@ import {
 
 export {
   // System
-  StatusBar,
+  StatusBar
 }
 
 // ReactPrimitivesHelper

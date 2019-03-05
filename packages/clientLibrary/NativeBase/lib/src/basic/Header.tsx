@@ -106,7 +106,8 @@ class Header extends React.Component<IHeaderProps, any> {
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     return (
-      <View name="iphonx-header"
+      <View
+        name="iphonx-header"
         ref={(c) => (this._root = c)}
         {...this.props}
         style={[
@@ -129,7 +130,7 @@ class Header extends React.Component<IHeaderProps, any> {
 
   render() {
     return (
-      <View name='header' onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
+      <View name="header" onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
         {this.renderStatusBar()}
         {this.renderContent()}
       </View>
