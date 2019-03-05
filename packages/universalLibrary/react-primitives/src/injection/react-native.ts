@@ -59,7 +59,6 @@ const injectionPixelRatioModel: IInjectionPixelRatioModel = {
 
 const injectionSystemModel: IInjectionSystemModel = {
   // System
-  StatusBar,
   Dimensions,
   Platform: {
     OS: Platform.OS,

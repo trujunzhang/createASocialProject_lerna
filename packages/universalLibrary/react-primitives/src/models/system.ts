@@ -1,7 +1,6 @@
 export interface IInjectionSystemModel {
   // System
   Platform: any
-  StatusBar: any
   Dimensions: any
 }
 

@@ -17,8 +17,6 @@ import {
   Easing
 } from 'react-native-web'
 
-import { StatusBar } from './sketchapp/statusBar'
-
 import {
   IReactPrimitivesModel,
   IInjectionBaseModel,
@@ -62,9 +60,6 @@ const injectionPixelRatioModel: IInjectionPixelRatioModel = {
 }
 const injectionSystemModel: IInjectionSystemModel = {
   // System
-  StatusBar: {
-    currentHeight: 44
-  },
   Dimensions,
   Platform: {
     OS: Platform.OS,

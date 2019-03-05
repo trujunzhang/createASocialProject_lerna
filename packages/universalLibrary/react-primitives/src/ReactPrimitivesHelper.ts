@@ -36,7 +36,6 @@ export class ReactPrimitivesHelper {
     this.reactPrimitivesModel.PixelRatio = model.PixelRatio
   }
   private injectionSystemModel(model: IInjectionSystemModel) {
-    this.reactPrimitivesModel.StatusBar = model.StatusBar
     this.reactPrimitivesModel.Dimensions = model.Dimensions
     this.reactPrimitivesModel.Platform = model.Platform
   }
