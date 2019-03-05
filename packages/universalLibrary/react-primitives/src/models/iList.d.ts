@@ -1,4 +1,3 @@
-
 import { ScrollView, ListView, FlatList } from 'react-native'
 
 export { ScrollView, ListView, FlatList }

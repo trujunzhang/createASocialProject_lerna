@@ -1,5 +1,3 @@
-import {
-    ActivityIndicator
-} from 'react-native-web'
+import { ActivityIndicator } from 'react-native-web'
 
 export { ActivityIndicator }

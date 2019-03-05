@@ -1,5 +1,3 @@
-import {
-    ActionSheetIOS
-} from 'react-native'
+import { ActionSheetIOS } from 'react-native'
 
 export { ActionSheetIOS }

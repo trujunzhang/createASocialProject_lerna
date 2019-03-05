@@ -1,5 +1,3 @@
-import {
-    ActivityIndicator
-} from 'react-native'
+import { ActivityIndicator } from 'react-native'
 
 export { ActivityIndicator }

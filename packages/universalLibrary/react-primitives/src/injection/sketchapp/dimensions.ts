@@ -1,4 +1,3 @@
-
 // Used by Dimensions below
 interface IScaledSize {
   width: number

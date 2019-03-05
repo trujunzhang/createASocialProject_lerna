@@ -36,7 +36,7 @@ import {
   IInjectionPixelRatioModel,
   IInjectionSystemModel,
   IInjectionAnimateModel,
-  IInjectionTextModel,
+  IInjectionTextModel
 } from '../models'
 
 const injectionBaseModel: IInjectionBaseModel = {
@@ -50,7 +50,7 @@ const injectionBaseModel: IInjectionBaseModel = {
 
 const injectionAnimateModel: IInjectionAnimateModel = {
   Easing,
-  Animated,
+  Animated
 }
 
 const injectionPixelRatioModel: IInjectionPixelRatioModel = {
@@ -78,5 +78,5 @@ export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
-  injectionTextModel,
+  injectionTextModel
 )

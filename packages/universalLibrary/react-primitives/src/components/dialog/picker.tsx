@@ -1,5 +1,3 @@
-import {
-    Picker
-} from 'react-native-web'
+import { Picker } from 'react-native-web'
 
 export { Picker }

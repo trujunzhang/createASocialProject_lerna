@@ -1,6 +1,14 @@
 import { ColorListView } from '../artboard'
-
-import { NHButton } from '@app/nb-demo-shared-components'
-
 // export const CurrentPage = ColorListView
-export const CurrentPage = NHButton
+
+// Buttons
+import { NHButton, Full, SketchButton } from '@app/nb-demo-shared-components'
+// export const CurrentPage = NHButton
+// export const CurrentPage = Full
+// export const CurrentPage = SketchButton
+
+// Local debug nativebase
+import {
+    NBDebugButton
+} from '../nbConponents'
+export const CurrentPage = NBDebugButton

@@ -1,5 +1,3 @@
-import {
-    PanResponder
-} from 'react-native-web'
+import { PanResponder } from 'react-native-web'
 
 export { PanResponder }

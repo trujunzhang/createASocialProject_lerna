@@ -1,5 +1,3 @@
-import {
-    ListView
-} from 'react-native'
+import { ListView } from 'react-native'
 
 export { ListView }

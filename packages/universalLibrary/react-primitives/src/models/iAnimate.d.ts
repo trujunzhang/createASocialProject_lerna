@@ -1,10 +1,3 @@
+import { Easing, Animated } from 'react-native'
 
-import {
-    Easing,
-    Animated
-} from 'react-native'
-
-export {
-    Easing,
-    Animated
-}
+export { Easing, Animated }

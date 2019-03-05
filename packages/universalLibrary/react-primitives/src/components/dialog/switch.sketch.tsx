@@ -1,15 +1,11 @@
-
-import {
-    SwitchProps
-} from '../../models/iDialogProps'
+import { SwitchProps } from '../../models/iDialogProps'
 
 import * as React from 'react'
 
-interface ISketchSwitchState { }
+interface ISketchSwitchState {}
 
 export class Switch extends React.Component<SwitchProps, ISketchSwitchState> {
-
-    render() {
-        return null
-    }
+  render() {
+    return null
+  }
 }

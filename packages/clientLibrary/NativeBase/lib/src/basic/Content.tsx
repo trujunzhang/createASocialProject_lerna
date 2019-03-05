@@ -112,9 +112,7 @@ class Content extends React.Component<IContentProps, any> {
     // const variables = this.context.theme
     //     ? this.context.theme["@@shoutem.theme/themeStyle"].variables
     //     : variable;
-    return (<React.Fragment>
-      {this.props.children}
-    </React.Fragment>)
+    return <React.Fragment>{this.props.children}</React.Fragment>
   }
 
   // render() {
@@ -166,8 +164,6 @@ class Content extends React.Component<IContentProps, any> {
   //       </KeyboardAwareScrollView>
   //     )
   // }
-
-
 }
 
 // Content.propTypes = {

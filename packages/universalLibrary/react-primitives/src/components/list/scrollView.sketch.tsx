@@ -1,15 +1,11 @@
-
-import {
-    ScrollViewProps
-} from '../../models/iListProps'
+import { ScrollViewProps } from '../../models/iListProps'
 
 import * as React from 'react'
 
-interface ISketchScrollViewState { }
+interface ISketchScrollViewState {}
 
 export class ScrollView extends React.Component<ScrollViewProps, ISketchScrollViewState> {
-
-    render() {
-        return null
-    }
+  render() {
+    return null
+  }
 }

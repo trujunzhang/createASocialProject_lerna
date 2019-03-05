@@ -25,7 +25,7 @@ const THROTTLE_MS = 500
 function throttle(fn, throttleMs) {
   let lastCall: any = null
 
-  return function (...args) {
+  return function(...args) {
     const now: any = new Date()
     if (lastCall === null || now - lastCall > throttleMs) {
       fn.apply(this, args)

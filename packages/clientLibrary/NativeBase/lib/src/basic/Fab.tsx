@@ -207,10 +207,10 @@ class Fab extends React.Component<IFabProps, any> {
       bottom: this.props.direction
         ? this.fabOtherBtns(this.props.direction, i).bottom
         : this.props.active === false
-          ? Platform.OS === 'ios'
-            ? 8
-            : 8
-          : i * 50 + 50
+        ? Platform.OS === 'ios'
+          ? 8
+          : 8
+        : i * 50 + 50
     }
 
     return _.merge(this.getInitialStyle().buttonStyle, StyleSheet.flatten(child.props.style), type)

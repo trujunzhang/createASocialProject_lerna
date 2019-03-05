@@ -1,5 +1,3 @@
-import {
-    ScrollView
-} from 'react-native-web'
+import { ScrollView } from 'react-native-web'
 
 export { ScrollView }

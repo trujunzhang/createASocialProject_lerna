@@ -7,9 +7,9 @@ import { IInjectionTextModel } from './text'
 import { IInjectionTouchModel } from './touch'
 
 export type AllInjectionModel = IInjectionBaseModel &
-    IInjectionSystemModel &
-    IInjectionAnimateModel &
-    IInjectionTextModel &
-    IInjectionListModel &
-    IInjectionDialogModel &
-    IInjectionTouchModel
+  IInjectionSystemModel &
+  IInjectionAnimateModel &
+  IInjectionTextModel &
+  IInjectionListModel &
+  IInjectionDialogModel &
+  IInjectionTouchModel

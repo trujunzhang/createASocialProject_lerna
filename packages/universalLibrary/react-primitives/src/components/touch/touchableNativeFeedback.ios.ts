@@ -1,5 +1,3 @@
-import {
-    TouchableNativeFeedback
-} from 'react-native'
+import { TouchableNativeFeedback } from 'react-native'
 
 export { TouchableNativeFeedback }

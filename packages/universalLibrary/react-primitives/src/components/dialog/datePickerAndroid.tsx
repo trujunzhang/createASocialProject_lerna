@@ -1,5 +1,3 @@
-import {
-    DatePickerAndroid
-} from 'react-native-web'
+import { DatePickerAndroid } from 'react-native-web'
 
 export { DatePickerAndroid }

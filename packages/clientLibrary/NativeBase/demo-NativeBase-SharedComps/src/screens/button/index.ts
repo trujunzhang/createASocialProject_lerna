@@ -8,6 +8,21 @@ import Transparent from './transparent'
 import IconBtn from './iconBtn'
 import Disabled from './disabled'
 
+import SketchButton from './sketchButton'
+
 import NHButton from './NHButton'
 
-export { NHButton, Default, Outline, Rounded, Block, Full, Custom, Transparent, IconBtn, Disabled }
+export {
+  NHButton,
+  Default,
+  Outline,
+  Rounded,
+  Block,
+  Full,
+  Custom,
+  Transparent,
+  IconBtn,
+  Disabled,
+  // For sketch debug
+  SketchButton
+}

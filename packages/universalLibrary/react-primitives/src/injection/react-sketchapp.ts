@@ -15,9 +15,8 @@ import {
   IInjectionPixelRatioModel,
   IInjectionSystemModel,
   IInjectionAnimateModel,
-  IInjectionTextModel,
+  IInjectionTextModel
 } from '../models'
-
 
 // other
 import { PixelRatioHelper } from '../modules/PixelRatio'
@@ -25,7 +24,7 @@ import { Dimensions } from './sketchapp/dimensions'
 import { StatusBar } from './sketchapp/statusBar'
 
 const TouchableMixin = {
-  componentWillUnmount() { },
+  componentWillUnmount() {},
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -38,10 +37,10 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() { },
-  touchableHandleResponderRelease() { },
-  touchableHandleResponderTerminate() { },
-  touchableHandleResponderMove() { }
+  touchableHandleResponderGrant() {},
+  touchableHandleResponderRelease() {},
+  touchableHandleResponderTerminate() {},
+  touchableHandleResponderMove() {}
 }
 
 // Animated.inject.FlattenStyle(StyleSheet.flatten)
@@ -50,7 +49,6 @@ const Platform = {
   OS: 'sketch',
   Version: 1
 }
-
 
 const injectionBaseModel: IInjectionBaseModel = {
   View,
@@ -88,5 +86,5 @@ export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
-  injectionTextModel,
+  injectionTextModel
 )

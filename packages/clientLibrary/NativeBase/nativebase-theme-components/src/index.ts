@@ -1,6 +1,4 @@
-import {
-  LodashUtils as _
-} from '@app/tools'
+import { LodashUtils as _ } from '@app/tools'
 
 // Custom
 import { scrollHeaderTheme, fixLeftTheme, fixRightTheme } from './components'
@@ -47,7 +45,7 @@ import {
   formTheme,
   separatorTheme,
   pickerTheme,
-  pageLayoutTheme,
+  pageLayoutTheme
 } from './components'
 
 import { themeVariables } from '@app/native-base-variables'
@@ -260,9 +258,12 @@ export const getThemeStyle = (variables: themeVariables) => {
     })
   }
 
-  const theme = Object.assign({
-    variables
-  }, nbTheme)
+  const theme = Object.assign(
+    {
+      variables
+    },
+    nbTheme
+  )
 
   cssifyTheme(null, theme, null)
 

@@ -1,5 +1,3 @@
-import {
-    FlatList
-} from 'react-native-web'
+import { FlatList } from 'react-native-web'
 
 export { FlatList }

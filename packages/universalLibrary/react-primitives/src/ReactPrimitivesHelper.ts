@@ -18,7 +18,6 @@ import {
   IInjectionTouchModel
 } from './models'
 
-
 export class ReactPrimitivesHelper {
   private PixelRatio: any = null
   private reactPrimitivesModel: IReactPrimitivesModel | any = {}
@@ -46,7 +45,6 @@ export class ReactPrimitivesHelper {
     this.reactPrimitivesModel.TextInput = model.TextInput
     this.reactPrimitivesModel.Text = model.Text
   }
-
 
   constructor(allInjectionModel: IReactPrimitivesModel) {
     this.injectionBaseModel(allInjectionModel)

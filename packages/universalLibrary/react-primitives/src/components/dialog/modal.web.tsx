@@ -1,5 +1,3 @@
-import {
-    Modal
-} from 'react-native-web'
+import { Modal } from 'react-native-web'
 
 export { Modal }

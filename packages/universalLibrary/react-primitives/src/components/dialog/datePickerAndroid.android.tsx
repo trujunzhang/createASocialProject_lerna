@@ -1,5 +1,3 @@
-import {
-    DatePickerAndroid
-} from 'react-native'
+import { DatePickerAndroid } from 'react-native'
 
 export { DatePickerAndroid }

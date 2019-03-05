@@ -1,5 +1,5 @@
 export interface IInjectionAnimateModel {
-    // Animate
-    Easing: any
-    Animated: any
+  // Animate
+  Easing: any
+  Animated: any
 }

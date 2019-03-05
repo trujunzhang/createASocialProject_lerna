@@ -1,15 +1,14 @@
-
-import {
-    DatePickerAndroidProps
-} from '../../models/iDialogProps'
+import { DatePickerAndroidProps } from '../../models/iDialogProps'
 
 import * as React from 'react'
 
-interface ISketchDatePickerAndroidState { }
+interface ISketchDatePickerAndroidState {}
 
-export class DatePickerAndroid extends React.Component<DatePickerAndroidProps, ISketchDatePickerAndroidState> {
-
-    render() {
-        return null
-    }
+export class DatePickerAndroid extends React.Component<
+  DatePickerAndroidProps,
+  ISketchDatePickerAndroidState
+> {
+  render() {
+    return null
+  }
 }

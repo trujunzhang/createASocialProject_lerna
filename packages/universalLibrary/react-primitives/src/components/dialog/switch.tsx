@@ -1,5 +1,3 @@
-import {
-    Switch
-} from 'react-native-web'
+import { Switch } from 'react-native-web'
 
 export { Switch }

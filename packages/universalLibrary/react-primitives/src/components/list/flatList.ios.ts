@@ -1,5 +1,3 @@
-import {
-    FlatList
-} from 'react-native'
+import { FlatList } from 'react-native'
 
 export { FlatList }

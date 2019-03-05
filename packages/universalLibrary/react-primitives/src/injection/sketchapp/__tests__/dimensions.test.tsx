@@ -1,4 +1,3 @@
-
 import { Dimensions } from '../dimensions'
 
 describe('Functions of the Dimensions', () => {

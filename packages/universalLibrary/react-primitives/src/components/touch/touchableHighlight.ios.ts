@@ -1,5 +1,3 @@
-import {
-    TouchableHighlight
-} from 'react-native'
+import { TouchableHighlight } from 'react-native'
 
 export { TouchableHighlight }

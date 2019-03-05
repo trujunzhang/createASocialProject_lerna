@@ -1,15 +1,14 @@
-
-import {
-    TouchableOpacityProps
-} from '../../models/iTouchProps'
+import { TouchableOpacityProps } from '../../models/iTouchProps'
 
 import * as React from 'react'
 
-interface ISketchTouchableOpacityState { }
+interface ISketchTouchableOpacityState {}
 
-export class TouchableOpacity extends React.Component<TouchableOpacityProps, ISketchTouchableOpacityState> {
-
-    render() {
-        return null
-    }
+export class TouchableOpacity extends React.Component<
+  TouchableOpacityProps,
+  ISketchTouchableOpacityState
+> {
+  render() {
+    return null
+  }
 }

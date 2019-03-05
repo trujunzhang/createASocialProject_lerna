@@ -25,7 +25,7 @@ import {
   IInjectionPixelRatioModel,
   IInjectionSystemModel,
   IInjectionAnimateModel,
-  IInjectionTextModel,
+  IInjectionTextModel
 } from '../models'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
@@ -54,7 +54,7 @@ const injectionBaseModel: IInjectionBaseModel = {
 
 const injectionAnimateModel: IInjectionAnimateModel = {
   Easing,
-  Animated,
+  Animated
 }
 
 const injectionPixelRatioModel: IInjectionPixelRatioModel = {
@@ -83,5 +83,5 @@ export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionPixelRatioModel,
   injectionSystemModel,
   injectionAnimateModel,
-  injectionTextModel,
+  injectionTextModel
 )
