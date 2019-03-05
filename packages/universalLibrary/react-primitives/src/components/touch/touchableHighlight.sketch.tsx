@@ -2,6 +2,8 @@ import { TouchableHighlightProps } from '../../models/iTouchProps'
 
 import * as React from 'react'
 
+import { View } from 'react-sketchapp'
+
 interface ISketchTouchableHighlightState {}
 
 export class TouchableHighlight extends React.Component<
@@ -9,6 +11,6 @@ export class TouchableHighlight extends React.Component<
   ISketchTouchableHighlightState
 > {
   render() {
-    return null
+    return <View name="touchableHighlight">{this.props.children}</View>
   }
 }

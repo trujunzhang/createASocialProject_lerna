@@ -2,6 +2,8 @@ import { TouchableNativeFeedbackProps } from '../../models/iTouchProps'
 
 import * as React from 'react'
 
+import { View } from 'react-sketchapp'
+
 interface ISketchTouchableNativeFeedbackState {}
 
 export class TouchableNativeFeedback extends React.Component<
@@ -9,6 +11,6 @@ export class TouchableNativeFeedback extends React.Component<
   ISketchTouchableNativeFeedbackState
 > {
   render() {
-    return null
+    return <View name="touchableNativeFeedback">{this.props.children}</View>
   }
 }

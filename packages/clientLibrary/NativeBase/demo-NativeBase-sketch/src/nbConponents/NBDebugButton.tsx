@@ -75,11 +75,19 @@ export class NBDebugButton extends React.Component<any, any> {
                 </Button>
             </Left>
             <Body >
-                <Title>Custom Size </Title>
+                <Title>Custom Size , button</Title>
             </Body>
             <Right />
 
                 </Header>
+
+                <Content padder style={{ backgroundColor: '#fff' }}>
+                    <Button light style={{
+
+                    }}>
+                        <Text>Light</Text>
+                    </Button>
+                </Content>
 
 
             </Container>
