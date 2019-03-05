@@ -14,6 +14,11 @@ import {
     Text,
 } from '@app/native-base'
 
+const mb15 = {
+    marginTop: 15,
+    marginBottom: 20
+}
+
 export class NBDebugButton extends React.Component<any, any> {
 
     renderInfo() {
@@ -64,28 +69,29 @@ export class NBDebugButton extends React.Component<any, any> {
         return (
             <Container style={[containerStyle]} >
 
-                <Header style={{
-                    backgroundColor: 'orange'
-                }
-                }>
+                <Header style={{}}>
 
-            <Left>
-                <Button transparent onPress={() => this.props.navigation.goBack()}>
-                    <Icon name="arrow-back" />
-                </Button>
-            </Left>
-            <Body >
-                <Title>Custom Size , button</Title>
-            </Body>
-            <Right />
+                    <Left>
+                        <Button transparent onPress={() => this.props.navigation.goBack()}>
+                            <Icon name="arrow-back" />
+                        </Button>
+                    </Left>
+                    <Body >
+                        <Title>Custom Size , button</Title>
+                    </Body>
+                    <Right />
 
                 </Header>
 
-                <Content padder style={{ backgroundColor: '#fff' }}>
-                    <Button light style={{
+                <Content padder>
 
-                    }}>
-                        <Text>Light</Text>
+                    <Button light iconRight style={mb15}>
+                        <Text>Next</Text>
+                        <Icon active name="arrow-forward" />
+                    </Button>
+
+                    <Button success style={{}}>
+                        <Icon name="arrow-back" />
                     </Button>
                 </Content>
 

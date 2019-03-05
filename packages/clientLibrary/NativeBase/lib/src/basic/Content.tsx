@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { ViewStyle } from 'react-primitives'
+import { View, ViewStyle } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 // import { isIphoneX, KeyboardAwareScrollView } from '../utils/base'
@@ -112,7 +112,7 @@ class Content extends React.Component<IContentProps, any> {
     // const variables = this.context.theme
     //     ? this.context.theme["@@shoutem.theme/themeStyle"].variables
     //     : variable;
-    return <React.Fragment>{this.props.children}</React.Fragment>
+    return <View name="content">{this.props.children}</View>
   }
 
   // render() {
