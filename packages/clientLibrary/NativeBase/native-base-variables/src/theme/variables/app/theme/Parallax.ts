@@ -1,5 +1,5 @@
 import { IParallaxVariables } from '../../../../types'
-import { fixedHeaderLeftWidth } from './appVariables'
+import { fixedHeaderLeftWidth } from '../appVariables'
 
 export const parallaxVariables: IParallaxVariables = {
   // Parallax

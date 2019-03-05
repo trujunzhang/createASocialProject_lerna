@@ -26,6 +26,5 @@ export * from './Tab'
 export * from './Tabs'
 export * from './Text'
 export * from './Title'
-export * from './appVariables'
 
 export * from './Base'
