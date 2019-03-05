@@ -32,6 +32,7 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
+    "@app/nativebase-theme-components": "*",
     "react-primitives": "*",
     "@app/native-base-variables": "*",
     "@app/tools": "*",

@@ -15,10 +15,11 @@
     "postinstall": "rndebugger-open --expo"
   },
   "dependencies": {
+    "react-primitives": "*",
     "@app/tools": "*",
-    "@app/native-base": "*",
     "@app/native-base-variables": "*",
     "@app/nativebase-theme-components": "*",
+    "@app/native-base": "*",
     "@app/nb-demo-shared-components": "*",
     "@types/react": "16.7.18",
     "@expo/vector-icons": "9.0.0",
