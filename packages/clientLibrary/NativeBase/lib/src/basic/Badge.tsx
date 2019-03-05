@@ -13,7 +13,7 @@ class Badge extends React.Component<IBadgeProps, any> {
   private _root: any
   render() {
     return (
-      <View ref={(c) => (this._root = c)} {...this.props}>
+      <View name="badge" ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
     )

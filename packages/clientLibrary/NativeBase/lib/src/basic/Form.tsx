@@ -12,7 +12,7 @@ export interface IFormProps extends ViewProps {
 class Form extends React.Component<IFormProps, any> {
   private _root: any
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name='form" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

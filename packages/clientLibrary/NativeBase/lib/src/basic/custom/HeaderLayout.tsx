@@ -34,7 +34,7 @@ class HeaderLayout extends React.Component<IHeaderLayoutProps, any> {
   }
 
   renderCommon() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="headerLayout" ref={(c) => (this._root = c)} {...this.props} />
   }
 
   render() {

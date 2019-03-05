@@ -100,7 +100,7 @@ class ScrollHeader extends React.Component<IScrollHeaderProps, any> {
   }
 
   renderCommon() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="scrollHeader" ref={(c) => (this._root = c)} {...this.props} />
   }
 
   renderForIphoneX() {

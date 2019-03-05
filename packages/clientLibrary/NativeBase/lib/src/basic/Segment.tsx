@@ -11,7 +11,7 @@ export interface ISegmentProps extends ViewProps {
 class Segment extends React.Component<ISegmentProps, any> {
   private _root: any
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="segment" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

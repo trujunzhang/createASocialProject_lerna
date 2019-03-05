@@ -13,7 +13,7 @@ class Separator extends React.Component<ISeparatorProps, any> {
   private _root: any
 
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="separator" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

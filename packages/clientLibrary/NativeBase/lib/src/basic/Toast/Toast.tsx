@@ -12,7 +12,7 @@ export interface IToastProps extends ViewProps {
 class Toast extends React.Component<IToastProps, any> {
   private _root: any
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="toast" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

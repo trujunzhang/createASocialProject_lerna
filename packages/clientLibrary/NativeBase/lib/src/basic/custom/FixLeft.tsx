@@ -15,7 +15,7 @@ class FixLeft extends React.Component<IFixLeftProps, any> {
 
   render() {
     // debugger
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="fixLeft" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

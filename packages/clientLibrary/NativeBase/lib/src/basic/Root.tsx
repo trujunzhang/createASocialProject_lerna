@@ -14,7 +14,7 @@ class Root extends React.Component<IRootProps, any> {
   private _root: any
   render() {
     return (
-      <View ref={(c) => (this._root = c)} {...this.props} style={{ flex: 1 }}>
+      <View name="root" ref={(c) => (this._root = c)} {...this.props} style={{ flex: 1 }}>
         {this.props.children}
         <Toast
           ref={(c) => {

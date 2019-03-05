@@ -14,7 +14,7 @@ class Tab extends React.Component<ITabProps, any> {
 
   render() {
     return (
-      <View ref={(c) => (this._root = c)} {...this.props}>
+      <View name="tab" ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
     )

@@ -202,7 +202,7 @@ class PickerNB extends React.Component<IPickerNBProps, any> {
 
   render() {
     return (
-      <View ref={(c) => (this._root = c)}>
+      <View name="picker" ref={(c) => (this._root = c)}>
         {this.renderButton()}
         <Modal
           supportedOrientations={this.props.supportedOrientations || null}

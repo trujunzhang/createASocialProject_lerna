@@ -58,7 +58,7 @@ class InputGroup extends React.Component<IInputGroupProps, any> {
   }
   render() {
     return (
-      <View ref={(c) => (this._root = c)} {...this.prepareRootProps()}>
+      <View name="inputGroup" ref={(c) => (this._root = c)} {...this.prepareRootProps()}>
         {this.props.children}
       </View>
     )

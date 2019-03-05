@@ -14,7 +14,7 @@ class Right extends React.Component<IRightProps, any> {
   private _root: any
 
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="right" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

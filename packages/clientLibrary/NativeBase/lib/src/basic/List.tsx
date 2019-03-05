@@ -291,7 +291,7 @@ class List extends React.Component<IListProps, IListState> {
       )
     }
     return (
-      <View ref={(c) => (this._root = c)} {...this.props}>
+      <View name="list" ref={(c) => (this._root = c)} {...this.props}>
         {this.renderChildren()}
       </View>
     )

@@ -13,7 +13,7 @@ class FooterTab extends React.Component<IFooterTabProps, any> {
   private _root: any
   render() {
     return (
-      <View ref={(c) => (this._root = c)} {...this.props}>
+      <View name="footerTab" ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
     )

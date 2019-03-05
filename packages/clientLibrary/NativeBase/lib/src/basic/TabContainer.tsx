@@ -12,7 +12,7 @@ class TabContainer extends React.Component<ITabContainerProps, any> {
   private _root: any
 
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="tabContainer" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

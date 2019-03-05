@@ -101,7 +101,7 @@ class Footer extends React.Component<IFooterProps, any> {
         ]}
       />
     ) : (
-      <View ref={(c) => (this._root = c)} {...this.props} />
+      <View name="footer" ref={(c) => (this._root = c)} {...this.props} />
     )
   }
 }

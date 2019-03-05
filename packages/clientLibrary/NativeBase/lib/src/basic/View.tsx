@@ -14,7 +14,7 @@ class ViewNB extends React.Component<IViewNBProps, any> {
   private _root: any
 
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="view" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

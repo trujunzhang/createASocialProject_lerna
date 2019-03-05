@@ -28,7 +28,7 @@ class Card extends React.Component<ICardProps, any> {
       )
     }
     return (
-      <View ref={(c) => (this._root = c)} {...this.props}>
+      <View name="card" ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
     )
