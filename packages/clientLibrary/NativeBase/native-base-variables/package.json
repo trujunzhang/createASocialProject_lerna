@@ -17,7 +17,7 @@
     "depenence.update": "ncu -u",
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "ts-lint:lib": "tslint -c tslint.json '**/*.{ts,tsx}' -e 'node_modules/**'",
-    "test.lib.pending": "jest --env=node --colors --coverage test",
+    "test.lib": "jest --env=node --colors --coverage test",
     "test.current.pending": "yarn test.lib",
     "build:reset": "rm -rf build",
     "build.clean": "yarn build:reset",
@@ -33,7 +33,6 @@
   "dependencies": {
     "@app/tools": "*",
     "react-primitives": "*",
-    "prop-types": "15.6.2",
     "react-dom": "^16.8.2"
   },
   "devDependencies": {
