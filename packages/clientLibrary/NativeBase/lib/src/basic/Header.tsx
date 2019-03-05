@@ -98,7 +98,7 @@ class Header extends React.Component<IHeaderProps, any> {
   }
 
   renderCommon() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="header" ref={(c) => (this._root = c)} {...this.props} />
   }
 
   renderForIphoneX() {
@@ -120,15 +120,22 @@ class Header extends React.Component<IHeaderProps, any> {
     )
   }
 
-  render() {
+  renderyyy() {
     return null
   }
 
-  renderxxx() {
+  renderContent() {
+    if (isIphoneX()) {
+      return this.renderForIphoneX()
+    }
+    return this.renderCommon()
+  }
+
+  render() {
     return (
       <View onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
         {this.renderStatusBar()}
-        {isIphoneX() ? this.renderForIphoneX() : this.renderCommon()}
+        {this.renderContent()}
       </View>
     )
   }

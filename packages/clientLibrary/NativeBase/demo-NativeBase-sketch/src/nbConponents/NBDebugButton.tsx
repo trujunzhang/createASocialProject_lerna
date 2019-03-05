@@ -63,7 +63,13 @@ export class NBDebugButton extends React.Component<any, any> {
         }
         return (
             <Container style={[containerStyle]} >
-                {this.renderIcon()}
+
+                <Header style={{
+                    width: 800,
+                    height: 44,
+                    backgroundColor: 'yellow'
+                }
+                }/>
 
 
             </Container>
