@@ -13,7 +13,7 @@ class Left extends React.Component<ILeftProps, any> {
   private _root: any
 
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="left" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 

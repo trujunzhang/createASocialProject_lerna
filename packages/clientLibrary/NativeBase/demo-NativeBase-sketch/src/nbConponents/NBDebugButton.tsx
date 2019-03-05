@@ -47,10 +47,10 @@ export class NBDebugButton extends React.Component<any, any> {
                         <Icon name="arrow-back" />
                     </Button>
                 </Left>
-                < Body >
+                <Body >
                     <Title>Custom Size </Title>
                 </Body>
-                < Right />
+                <Right />
             </Header>
 
         )
@@ -65,11 +65,21 @@ export class NBDebugButton extends React.Component<any, any> {
             <Container style={[containerStyle]} >
 
                 <Header style={{
-                    width: 800,
-                    height: 44,
-                    backgroundColor: 'yellow'
+                    backgroundColor: 'orange'
                 }
-                }/>
+                }>
+
+            <Left>
+                <Button transparent onPress={() => this.props.navigation.goBack()}>
+                    <Icon name="arrow-back" />
+                </Button>
+            </Left>
+            <Body >
+                <Title>Custom Size </Title>
+            </Body>
+            <Right />
+
+                </Header>
 
 
             </Container>

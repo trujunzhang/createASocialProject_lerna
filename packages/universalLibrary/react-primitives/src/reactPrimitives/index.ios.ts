@@ -55,3 +55,12 @@ export {
   TouchableHighlight,
   TouchableNativeFeedback
 }
+
+
+// System
+import { StatusBar } from '../components/System/statusBar'
+
+export {
+  // System
+  StatusBar,
+}

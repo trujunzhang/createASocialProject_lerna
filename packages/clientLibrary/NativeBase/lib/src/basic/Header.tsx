@@ -98,7 +98,7 @@ class Header extends React.Component<IHeaderProps, any> {
   }
 
   renderCommon() {
-    return <View name="header" ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="common-header" ref={(c) => (this._root = c)} {...this.props} />
   }
 
   renderForIphoneX() {
@@ -106,7 +106,7 @@ class Header extends React.Component<IHeaderProps, any> {
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     return (
-      <View
+      <View name="iphonx-header"
         ref={(c) => (this._root = c)}
         {...this.props}
         style={[
@@ -120,10 +120,6 @@ class Header extends React.Component<IHeaderProps, any> {
     )
   }
 
-  renderyyy() {
-    return null
-  }
-
   renderContent() {
     if (isIphoneX()) {
       return this.renderForIphoneX()
@@ -133,7 +129,7 @@ class Header extends React.Component<IHeaderProps, any> {
 
   render() {
     return (
-      <View onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
+      <View name='header' onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
         {this.renderStatusBar()}
         {this.renderContent()}
       </View>

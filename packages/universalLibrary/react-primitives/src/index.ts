@@ -58,6 +58,18 @@ export {
 }
 
 import {
+  // System
+  StatusBar
+} from './reactPrimitives'
+
+export {
+  // System
+  StatusBar,
+}
+
+// ReactPrimitivesHelper
+// ===================================
+import {
   IInjectionBaseModel,
   IInjectionAnimateModel,
   IInjectionPixelRatioModel,

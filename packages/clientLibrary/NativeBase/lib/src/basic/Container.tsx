@@ -16,7 +16,7 @@ class Container extends React.Component<IContainerProps, any> {
   private _root: any
   render() {
     return (
-      <View ref={(c) => (this._root = c)} {...this.props}>
+      <View name="container" ref={(c) => (this._root = c)} {...this.props}>
         {this.props.children}
       </View>
     )

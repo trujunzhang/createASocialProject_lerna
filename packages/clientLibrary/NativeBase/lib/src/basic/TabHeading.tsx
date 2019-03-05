@@ -11,7 +11,7 @@ export interface ITabHeadingNBProps extends ViewProps {
 class TabHeadingNB extends React.Component<ITabHeadingNBProps, any> {
   private _root: any
   render() {
-    return <View ref={(c) => (this._root = c)} {...this.props} />
+    return <View name="tabHeading" ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 
