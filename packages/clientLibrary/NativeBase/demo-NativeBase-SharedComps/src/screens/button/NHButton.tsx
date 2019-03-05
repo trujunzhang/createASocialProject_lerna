@@ -71,7 +71,13 @@ class NHButton extends React.Component<any, any> {
     )
   }
 
-  renderList() {
+    renderList(){
+        return (
+            <Text>{'List Demo for buttons'}</Text>
+        )
+    }
+
+  renderListxxx() {
     return (
       <List
         dataArray={datas}
