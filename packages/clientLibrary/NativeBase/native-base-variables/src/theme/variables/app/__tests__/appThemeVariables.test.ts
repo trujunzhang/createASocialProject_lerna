@@ -3,7 +3,6 @@ import { themeDefaultVariables } from '../appVariables'
 
 import { IThemeDefaultVariables } from '../../../../types'
 
-
 describe('methods correctly in the appThemeVariables', () => {
     test('should return string correctly, checking themeDefaultVariables', () => {
         const keys = Object.keys(themeDefaultVariables)
