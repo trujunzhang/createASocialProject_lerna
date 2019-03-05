@@ -4,16 +4,14 @@ import {
 } from 'react-primitives'
 import { render, Artboard, View, Text } from 'react-sketchapp';
 
-import {
-  ColorListView
-} from './artboard'
 
 import { Setup } from './layouts/boot/setup'
 
 import { Root } from '@app/native-base'
 
-const CurrentPage = ColorListView
-// const CurrentPage = ColorListView
+import {
+    CurrentPage 
+} from './pages'
 
 console.log('Dimensions(screen): ', JSON.stringify(Dimensions.get('window')))
 
