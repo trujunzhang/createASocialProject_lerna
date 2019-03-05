@@ -1,5 +1,7 @@
 module.exports = function (api) {
-  api.cache(true)
+  if (!!api) {
+    api.cache(false)
+  };
   return {
     presets: [
       [
@@ -7,6 +9,12 @@ module.exports = function (api) {
         {
           "useBuiltIns": "entry"
         }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          development: process.env.BABEL_ENV === "development",
+        },
       ],
       "@babel/preset-typescript"
     ],
@@ -25,6 +33,7 @@ module.exports = function (api) {
       [
         "module-resolver",
         {
+          "cwd": "babelrc",
           "alias": {
           },
           extensions: [
@@ -53,4 +62,4 @@ module.exports = function (api) {
       ]
     ]
   }
-}
+};
