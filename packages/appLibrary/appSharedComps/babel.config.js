@@ -1,5 +1,7 @@
 module.exports = function (api) {
-  api.cache(true)
+  if (!!api) {
+    api.cache(false)
+  };
   return {
     presets: [
       [
@@ -25,10 +27,32 @@ module.exports = function (api) {
       [
         "module-resolver",
         {
+          "cwd": "babelrc",
           "alias": {
             "^react-native$": "react-native-web"
           },
-          "extensions": ["web.js", ".js"]
+          extensions: [
+            '.js',
+            '.jsx',
+            '.ts',
+            '.tsx',
+            '.android.js',
+            '.android.jsx',
+            '.android.ts',
+            '.android.tsx',
+            '.web.js',
+            '.web.jsx',
+            '.web.ts',
+            '.web.tsx',
+            '.sketch.jsx',
+            '.sketch.js',
+            '.sketch.ts',
+            '.sketch.tsx',
+            '.ios.jsx',
+            '.ios.js',
+            '.ios.ts',
+            '.ios.tsx'
+          ],
         }
       ]
     ]
