@@ -17,7 +17,7 @@
     "@app/avatar": "*",
     "@app/mocks": "*",
     "@app/shared-components": "*",
-    "@types/react": "16.7.18",
+    "@types/react": "16.4.8",
     "@types/chroma-js": "1.3.3",
     "chroma-js": "1.2.2"
   },

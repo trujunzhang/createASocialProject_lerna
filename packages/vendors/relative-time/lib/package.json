@@ -27,7 +27,7 @@
     "@app/intl": "*",
     "@app/tools": "*",
     "@types/numeral": "0.0.25",
-    "@types/react": "16.7.18"
+    "@types/react": "16.4.8"
   },
   "devDependencies": {
     "@app/mocks": "*",
