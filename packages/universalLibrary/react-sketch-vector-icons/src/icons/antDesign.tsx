@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchAntDesignProps { }
-interface ISketchAntDesignState { }
+interface IAntDesignProps { }
+interface IAntDesignState { }
 
-export class AntDesign extends React.Component<ISketchAntDesignProps, ISketchAntDesignState> {
+export class AntDesign extends React.Component<IAntDesignProps, IAntDesignState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchMaterialCommunityIconsProps { }
-interface ISketchMaterialCommunityIconsState { }
+interface IMaterialCommunityIconsProps { }
+interface IMaterialCommunityIconsState { }
 
-export class MaterialCommunityIcons extends React.Component<ISketchMaterialCommunityIconsProps, ISketchMaterialCommunityIconsState> {
+export class MaterialCommunityIcons extends React.Component<IMaterialCommunityIconsProps, IMaterialCommunityIconsState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

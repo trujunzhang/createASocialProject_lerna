@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchFeatherProps { }
-interface ISketchFeatherState { }
+interface IFeatherProps { }
+interface IFeatherState { }
 
-export class Feather extends React.Component<ISketchFeatherProps, ISketchFeatherState> {
+export class Feather extends React.Component<IFeatherProps, IFeatherState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

@@ -34,6 +34,7 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
+    "react-primitives": "*",
     "@app/native-base-shoutem-theme": "*",
     "@app/nativebase-theme-components": "*",
     "@app/native-base-variables": "*",
@@ -44,7 +45,6 @@
     "clamp": "1.0.1",
     "react-tween-state": "0.1.5",
     "tween-functions": "1.2.0",
-    "react-primitives": "*",
     "react-dom": "^16.8.2"
   },
   "devDependencies": {

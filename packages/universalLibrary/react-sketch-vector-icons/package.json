@@ -23,15 +23,24 @@
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
-    "prop-types": "15.6.2"
+    "react-primitives": "*",
+    "@types/react-sketchapp": "0.12.1",
+    "react-sketchapp": "2.0.0",
+    "@types/react": "16.4.8",
+    "react": "16.5.0",
+    "@types/react-dom": "16.0.11",
+    "react-dom": "16.8.2",
+    "@types/prop-types": "15.5.8",
+    "prop-types": "15.6.2",
+    "react-art": "16.5.2"
   },
   "peerDependencies": {
     "react": "*",
     "react-art": "*",
-    "react-dom": "*",
-    "react-native-web": "*"
+    "react-dom": "*"
   },
   "devDependencies": {
+    "@types/node": "11.10.4",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
@@ -49,14 +58,6 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
     "@types/react-test-renderer": "16.0.3",
     "react-test-renderer": "16.7.0",
-    "typescript": "3.3.3",
-    "react-art": "16.5.2",
-    "@types/react-sketchapp": "0.12.1",
-    "react-sketchapp": "2.0.0",
-    "@types/react": "16.4.8",
-    "react": "16.5.0",
-    "@types/react-dom": "16.0.11",
-    "react-dom": "16.8.2",
-    "@types/prop-types": "15.5.8"
+    "typescript": "3.3.3"
   }
 }

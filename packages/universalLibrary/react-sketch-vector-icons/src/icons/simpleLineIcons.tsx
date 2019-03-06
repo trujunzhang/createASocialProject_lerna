@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchSimpleLineIconsProps { }
-interface ISketchSimpleLineIconsState { }
+interface ISimpleLineIconsProps { }
+interface ISimpleLineIconsState { }
 
-export class SimpleLineIcons extends React.Component<ISketchSimpleLineIconsProps, ISketchSimpleLineIconsState> {
+export class SimpleLineIcons extends React.Component<ISimpleLineIconsProps, ISimpleLineIconsState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

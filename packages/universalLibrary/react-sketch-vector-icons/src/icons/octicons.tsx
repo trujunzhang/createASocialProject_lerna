@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchOcticonsProps { }
-interface ISketchOcticonsState { }
+interface IOcticonsProps { }
+interface IOcticonsState { }
 
-export class Octicons extends React.Component<ISketchOcticonsProps, ISketchOcticonsState> {
+export class Octicons extends React.Component<IOcticonsProps, IOcticonsState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

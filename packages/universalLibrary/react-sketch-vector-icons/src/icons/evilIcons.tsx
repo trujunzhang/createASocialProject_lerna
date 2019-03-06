@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchEvilIconsProps { }
-interface ISketchEvilIconsState { }
+interface IEvilIconsProps { }
+interface IEvilIconsState { }
 
-export class EvilIcons extends React.Component<ISketchEvilIconsProps, ISketchEvilIconsState> {
+export class EvilIcons extends React.Component<IEvilIconsProps, IEvilIconsState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

@@ -1,12 +1,11 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-import { Text } from 'react-sketchapp'
+interface IMaterialIconsProps { }
+interface IMaterialIconsState { }
 
-interface ISketchMaterialIconsProps { }
-interface ISketchMaterialIconsState { }
-
-export class MaterialIcons extends React.Component<ISketchMaterialIconsProps, ISketchMaterialIconsState> {
+export class MaterialIcons extends React.Component<IMaterialIconsProps, IMaterialIconsState> {
     render() {
         return <Text>{name + 'wh'}</Text>
     }

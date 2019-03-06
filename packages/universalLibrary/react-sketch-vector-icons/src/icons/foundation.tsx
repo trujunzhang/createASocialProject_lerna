@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchFoundationProps { }
-interface ISketchFoundationState { }
+interface IFoundationProps { }
+interface IFoundationState { }
 
-export class Foundation extends React.Component<ISketchFoundationProps, ISketchFoundationState> {
+export class Foundation extends React.Component<IFoundationProps, IFoundationState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

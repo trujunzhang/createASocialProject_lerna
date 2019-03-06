@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchIoniconsProps { }
-interface ISketchIoniconsState { }
+interface IIoniconsProps { }
+interface IIoniconsState { }
 
-export class Ionicons extends React.Component<ISketchIoniconsProps, ISketchIoniconsState> {
+export class Ionicons extends React.Component<IIoniconsProps, IIoniconsState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

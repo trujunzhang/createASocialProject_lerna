@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchZocialProps { }
-interface ISketchZocialState { }
+interface IZocialProps { }
+interface IZocialState { }
 
-export class Zocial extends React.Component<ISketchZocialProps, ISketchZocialState> {
+export class Zocial extends React.Component<IZocialProps, IZocialState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }

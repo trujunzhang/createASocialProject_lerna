@@ -1,11 +1,12 @@
 
 import * as React from 'react'
+import { View, ViewProps, ViewStyle ,Text,TextProps} from 'react-primitives'
 
-interface ISketchEntypoProps { }
-interface ISketchEntypoState { }
+interface IEntypoProps { }
+interface IEntypoState { }
 
-export class Entypo extends React.Component<ISketchEntypoProps, ISketchEntypoState> {
+export class Entypo extends React.Component<IEntypoProps, IEntypoState> {
     render() {
-        return null
+        return <Text>{name + 'wh'}</Text>
     }
 }
