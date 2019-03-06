@@ -2,30 +2,31 @@ import * as React from 'react'
 import { StyleProvider } from '@app/native-base'
 
 import { getThemeStyle } from '@app/nativebase-theme-components'
+import { vectorIcons } from './vectorIcons'
 
 import {
-    IIconVectorVariables,IThemeDefaultVariables,
+  IIconVectorVariables, IThemeDefaultVariables,
   themeVariablesWithIconVector,
-    generatorForAppThemeVariables,
-    fontProxima 
+  generatorForAppThemeVariables,
+  fontProxima
 } from '@app/native-base-variables'
 
 
-const iconVectorVariable: IIconVectorVariables =  {
-    iconRenderComponents: () => {
-        return null
-    }
+const iconVectorVariable: IIconVectorVariables = {
+  iconRenderComponents: () => {
+    return vectorIcons
+  }
 }
 const themeDefaultVariables: IThemeDefaultVariables = {
-    btnFontFamily: 'MaterialIcons',
-    iconFamily: 'MaterialIcons',
-    fontFamily: fontProxima ,
-    titleFontfamily: fontProxima 
+  btnFontFamily: 'MaterialIcons',
+  iconFamily: 'MaterialIcons',
+  fontFamily: fontProxima,
+  titleFontfamily: fontProxima
 }
 
 export const platformVariables: themeVariablesWithIconVector = generatorForAppThemeVariables(
-    iconVectorVariable,
-    themeDefaultVariables
+  iconVectorVariable,
+  themeDefaultVariables
 )
 
 const appStyles = getThemeStyle(platformVariables)

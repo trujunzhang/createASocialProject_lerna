@@ -1,2 +1,1 @@
-export const xxx = 0
-
+export * from './icons'

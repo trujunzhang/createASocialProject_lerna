@@ -5,7 +5,7 @@
     "packages/appClient"
   ],
   "packages": [
-    "packages/universalLibrary/react-primitives",
+    "packages/universalLibrary/**",
     "packages/vendors/**/lib",
     "packages/globalLibrary/**/*",
     "packages/appLibrary/**/*",

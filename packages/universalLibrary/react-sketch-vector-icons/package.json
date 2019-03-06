@@ -1,11 +1,9 @@
 {
   "name": "@app/react-sketch-vector-icons",
   "version": "0.6.0",
-  "description": "",
-  "author": "",
   "license": "MIT",
   "main": "build/lib/index.js",
-  "typings": "./index.d.ts",
+  "types": "build/lib/index.d.ts",
   "scripts": {
     "depenence.update": "ncu -u",
     "rm.assets": "rm -rf @types",
