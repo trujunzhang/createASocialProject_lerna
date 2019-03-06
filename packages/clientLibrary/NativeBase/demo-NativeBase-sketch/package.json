@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "react-primitives": "*",
+    "@app/react-sketch-vector-icons": "*",
     "@app/native-base": "*",
     "@app/native-base-variables": "*",
     "@app/nativebase-theme-components": "*",
