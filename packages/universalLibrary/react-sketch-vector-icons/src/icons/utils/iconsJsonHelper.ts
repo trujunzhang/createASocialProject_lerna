@@ -10,7 +10,7 @@ const getSvgPathData = (currentGlyphs: any[], iconName: string): string | null =
     return cacheSvgDatas[iconName]
   }
 
-  const svgObject = currentGlyphs.find((o) => o['_unicode'] === iconName)
+  const svgObject = currentGlyphs.find((o) => o['_unicode'] === iconName.replace('-', '_'))
 
   // console.log('resultObject :  ', JSON.stringify(resultObject))
 

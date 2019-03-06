@@ -4,7 +4,7 @@ import { getSvgDataByIconName } from '../iconsJsonHelper'
 
 describe('methods correctly in the iconsJsonHelper', () => {
   test('should return string correctly, checking getSvgDataByIconName  ', () => {
-    const pathData: string | null = getSvgDataByIconName(svgJsonObject, 'MaterialIcons', 'warning')
+    const pathData: string | null = getSvgDataByIconName(svgJsonObject, 'MaterialIcons', 'arrow-back')
 
     expect(pathData).toBeDefined()
   })
