@@ -19,12 +19,12 @@
     "build:js": "babel src --out-dir build/lib --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
     "build:all": "npm run build:types && npm run build:js",
     "build-lib": "yarn build.clean && yarn build:all",
-    "build.current.pending": "yarn build-lib",
+    "build.current": "yarn build-lib",
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
+    "material-icons": "0.3.0",
     "@types/react-native-vector-icons": "4.6.4",
-    "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",
     "@types/react": "16.4.8",
     "react": "16.5.0",
