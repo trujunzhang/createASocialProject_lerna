@@ -23,7 +23,6 @@
     "postinstall": "yarn build-lib"
   },
   "dependencies": {
-    "react-primitives": "*",
     "@types/react-native-vector-icons": "4.6.4",
     "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",

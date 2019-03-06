@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View, ViewProps, ViewStyle, Text, TextProps } from 'react-primitives'
+import { View, Text } from 'react-sketchapp'
 import { IconProps } from 'react-native-vector-icons/Icon'
 
 interface IMaterialIconsProps { }
