@@ -20,6 +20,7 @@
     "build:all": "npm run build:types && npm run build:js",
     "build-lib": "yarn build.clean && yarn build:all",
     "build.current": "yarn build-lib",
+    "optimize": "node optimize.js",
     "postinstall": "yarn build-lib"
   },
   "dependencies": {

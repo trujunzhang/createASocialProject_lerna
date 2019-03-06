@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "node",
+            "request": "launch",
+            "name": "Launch optimize via NPM",
+            "runtimeExecutable": "npm",
+            "program": "${workspaceFolder}/optimize.js",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "node",
             "name": "vscode-ts-tests",
             "request": "launch",
             "args": [
