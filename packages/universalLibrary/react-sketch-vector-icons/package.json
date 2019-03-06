@@ -40,6 +40,8 @@
     "react-dom": "*"
   },
   "devDependencies": {
+    "@svgr/core": "3.1.0",
+    "glob": "7.1.2",
     "@types/node": "11.10.4",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-core": "^7.0.0-bridge.0",
