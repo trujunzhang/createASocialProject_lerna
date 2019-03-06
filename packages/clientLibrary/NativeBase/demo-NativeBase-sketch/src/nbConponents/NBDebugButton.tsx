@@ -65,14 +65,14 @@ export class NBDebugButton extends React.Component<any, any> {
         return (
             <Content padder>
 
-                <Button light iconRight style={mb15}>
-                    <Text>Next</Text>
-                    <Icon active name="arrow-forward" />
-                </Button>
-
                 <Button success style={{}}>
                     <Icon name="arrow-back" />
                 </Button>
+
+                <Button success style={{}}>
+                    <Icon name="arrow-back"  size={8} />
+                </Button>
+
             </Content>
         )
     }
@@ -80,7 +80,7 @@ export class NBDebugButton extends React.Component<any, any> {
     render() {
         /* const containerStyle = styles.container */
         const containerStyle = {
-            backgroundColor: 'blue'
+            /* backgroundColor: 'blue' */
         }
         return (
             <Container style={[containerStyle]} >
@@ -100,6 +100,7 @@ export class NBDebugButton extends React.Component<any, any> {
                 </Header>
 
 
+                {this.renderContent()}
 
 
             </Container>
