@@ -5,7 +5,7 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 interface IFoundationProps {}
 interface IFoundationState {}
 
-export class Foundation extends React.Component<IconProps, IFoundationState> {
+export class Foundation extends React.Component<IconProps, any> {
   render() {
     return <Text>{name + 'wh'}</Text>
   }

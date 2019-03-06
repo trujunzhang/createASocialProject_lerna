@@ -5,7 +5,7 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 interface IIoniconsProps {}
 interface IIoniconsState {}
 
-export class Ionicons extends React.Component<IconProps, IIoniconsState> {
+export class Ionicons extends React.Component<IconProps, any> {
   render() {
     return <Text>{name + 'wh'}</Text>
   }

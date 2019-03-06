@@ -5,7 +5,7 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 interface IZocialProps {}
 interface IZocialState {}
 
-export class Zocial extends React.Component<IconProps, IZocialState> {
+export class Zocial extends React.Component<IconProps, any> {
   render() {
     return <Text>{name + 'wh'}</Text>
   }

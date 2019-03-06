@@ -5,8 +5,8 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 interface IMaterialIconsProps {}
 interface IMaterialIconsState {}
 
-export class MaterialIcons extends React.Component<IconProps, IMaterialIconsState> {
+export class MaterialIcons extends React.Component<IconProps, any> {
   render() {
-    return <Text>{name + 'wh'}</Text>
+    return <Text>{name + 'wh-MaterialIcons'}</Text>
   }
 }

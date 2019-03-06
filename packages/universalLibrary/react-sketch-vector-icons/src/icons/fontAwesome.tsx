@@ -5,7 +5,7 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 interface IFontAwesomeProps {}
 interface IFontAwesomeState {}
 
-export class FontAwesome extends React.Component<IconProps, IFontAwesomeState> {
+export class FontAwesome extends React.Component<IconProps, any> {
   render() {
     return <Text>{name + 'wh'}</Text>
   }
