@@ -23,7 +23,7 @@ import { PixelRatioHelper } from '../modules/PixelRatio'
 import { Dimensions } from './sketchapp/dimensions'
 
 const TouchableMixin = {
-  componentWillUnmount() { },
+  componentWillUnmount() {},
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -36,10 +36,10 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() { },
-  touchableHandleResponderRelease() { },
-  touchableHandleResponderTerminate() { },
-  touchableHandleResponderMove() { }
+  touchableHandleResponderGrant() {},
+  touchableHandleResponderRelease() {},
+  touchableHandleResponderTerminate() {},
+  touchableHandleResponderMove() {}
 }
 
 // Animated.inject.FlattenStyle(StyleSheet.flatten)

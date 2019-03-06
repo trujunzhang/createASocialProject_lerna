@@ -1,6 +1,5 @@
 import { Icon } from 'react-native-vector-icons/Icon'
 
-
 export interface IVectorIcons {
   AntDesign: Icon | any
   Entypo: Icon | any

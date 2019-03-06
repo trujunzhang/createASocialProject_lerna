@@ -23,7 +23,11 @@ const getSvgPathData = (currentGlyphs: any[], iconName: string): string | null =
   return null
 }
 
-export const getSvgDataByIconName = (svgJsonRoot: any, iconType: string, iconName: string): string | null => {
+export const getSvgDataByIconName = (
+  svgJsonRoot: any,
+  iconType: string,
+  iconName: string
+): string | null => {
   if (Object.keys(cacheGlyphs).indexOf(iconType) === -1) {
     const glyphs = svgJsonRoot['svg']['defs']['font']['glyph']
     cacheGlyphs[iconType] = glyphs
