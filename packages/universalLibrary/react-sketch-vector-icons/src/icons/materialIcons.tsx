@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { View, Text, Svg } from 'react-sketchapp'
 import { IconProps } from 'react-native-vector-icons/Icon'
-// import { } from "material-icons"
+// import MaterialIconsSVG from "material-icons/iconfont/MaterialIcons-Regular.svg"
 
 interface IMaterialIconsProps { }
 interface IMaterialIconsState { }
@@ -10,11 +10,12 @@ export class MaterialIcons extends React.Component<IconProps, IMaterialIconsStat
   constructor(props: IconProps) {
     super(props)
 
+    // console.log('MaterialIconsSVG:  ', JSON.stringify(MaterialIconsSVG))
   }
 
   render() {
     const { name, size, color } = this.props
-    // console.log('MaterialIcons:  ', JSON.stringify(this.props))
+    console.log('MaterialIcons:  ', JSON.stringify(this.props))
     // return <Text>{name + 'wh-MaterialIcons'}</Text>
     return (
       <Svg
