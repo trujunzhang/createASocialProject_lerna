@@ -61,6 +61,22 @@ export class NBDebugButton extends React.Component<any, any> {
         )
     }
 
+    renderContent() {
+        return (
+            <Content padder>
+
+                <Button light iconRight style={mb15}>
+                    <Text>Next</Text>
+                    <Icon active name="arrow-forward" />
+                </Button>
+
+                <Button success style={{}}>
+                    <Icon name="arrow-back" />
+                </Button>
+            </Content>
+        )
+    }
+
     render() {
         /* const containerStyle = styles.container */
         const containerStyle = {
@@ -83,17 +99,7 @@ export class NBDebugButton extends React.Component<any, any> {
 
                 </Header>
 
-                <Content padder>
 
-                    <Button light iconRight style={mb15}>
-                        <Text>Next</Text>
-                        <Icon active name="arrow-forward" />
-                    </Button>
-
-                    <Button success style={{}}>
-                        <Icon name="arrow-back" />
-                    </Button>
-                </Content>
 
 
             </Container>

@@ -1,5 +1,10 @@
 import { IButtonVariables, IButtonColorVariables, IButtonFuncVariables } from '../../../../types'
-import { themeDefaultVariables, inverseTextColor, iconFontSize, fontSizeBase } from '../appVariables'
+import {
+  themeDefaultVariables,
+  inverseTextColor,
+  iconFontSize,
+  fontSizeBase
+} from '../appVariables'
 import { platform } from '../../utils'
 
 // Color

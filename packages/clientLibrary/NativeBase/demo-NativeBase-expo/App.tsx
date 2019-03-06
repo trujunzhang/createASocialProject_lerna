@@ -9,6 +9,8 @@ import { Root } from '@app/native-base'
 
 import { AppContainer } from './src/root/rootNavigator'
 
+import { fontProxima } from '@app/native-base-variables'
+
 const CurrentPage = AppContainer
 
 appConfig()
@@ -25,14 +27,17 @@ export default class App extends React.Component<{}, IAppState> {
     }
   }
 
+  get fontObject() {
+    const fontSource = {
+      FontAwesome: require('@expo/vector-icons/fonts/FontAwesome.ttf'),
+      MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf')
+    }
+    fontSource[fontProxima] = require('./static/fonts/proxima/proxima-nova-600.ttf')
+    return fontSource
+  }
+
   loadResourcesAsync = async (): Promise<any> => {
-    return Promise.all([
-      Font.loadAsync({
-        proxima: require('./static/fonts/proxima/proxima-nova-600.ttf'),
-        FontAwesome: require('@expo/vector-icons/fonts/FontAwesome.ttf'),
-        MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf')
-      })
-    ])
+    return Promise.all([Font.loadAsync(this.fontObject)])
   }
 
   renderxxx() {
