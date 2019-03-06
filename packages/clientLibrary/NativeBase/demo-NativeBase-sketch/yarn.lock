@@ -3908,7 +3908,7 @@ fbjs-scripts@^0.8.1:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@0.8.17, fbjs@^0.8.16, fbjs@^0.8.4, fbjs@^0.8.9:
+fbjs@0.8.17, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.17"
   resolved "http://registry.npm.taobao.org/fbjs/download/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -7868,10 +7868,10 @@ react-dom@16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
-react-is@^16.6.1, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3:
-  version "16.8.3"
-  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
-  integrity sha1-StiwKcKnGPwM/HRsjU4bciHlOH0=
+react-is@^16.6.1, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
+  version "16.8.4"
+  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
+  integrity sha1-kPM2pow6KaCWo9ZIq4DofsYUgqI=
 
 react-native-debugger-open@0.3.17:
   version "0.3.17"
@@ -7990,14 +7990,14 @@ react-test-renderer@16.7.0:
     scheduler "^0.12.0"
 
 react-test-renderer@^16.0.0-0, react-test-renderer@^16.5.0:
-  version "16.8.3"
-  resolved "http://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-16.8.3.tgz#230006af264cc46aeef94392e04747c21839e05e"
-  integrity sha1-IwAGryZMxGru+UOS4EdHwhg54F4=
+  version "16.8.4"
+  resolved "http://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-16.8.4.tgz#abee4c2c3bf967a8892a7b37f77370c5570d5329"
+  integrity sha1-q+5MLDv5Z6iJKns393NwxVcNUyk=
   dependencies:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    react-is "^16.8.3"
-    scheduler "^0.13.3"
+    react-is "^16.8.4"
+    scheduler "^0.13.4"
 
 react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.4:
   version "0.13.4"
@@ -8012,15 +8012,15 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@16.3.2:
-  version "16.3.2"
-  resolved "http://registry.npm.taobao.org/react/download/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
-  integrity sha1-/chCA5hTOh5Yhy9ZCRsnLOL5Hqk=
+react@16.5.0:
+  version "16.5.0"
+  resolved "http://registry.npm.taobao.org/react/download/react-16.5.0.tgz#f2c1e754bf9751a549d9c6d9aca41905beb56575"
+  integrity sha1-8sHnVL+XUaVJ2cbZrKQZBb61ZXU=
   dependencies:
-    fbjs "^0.8.16"
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.0"
+    prop-types "^15.6.2"
+    schedule "^0.3.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -8187,9 +8187,9 @@ regexpu-core@^2.0.0:
     regjsparser "^0.1.4"
 
 regexpu-core@^4.1.3, regexpu-core@^4.2.0:
-  version "4.5.1"
-  resolved "http://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.5.1.tgz#4d0d902156995d19c5cd832f840632799122f872"
-  integrity sha1-TQ2QIVaZXRnFzYMvhAYyeZEi+HI=
+  version "4.5.2"
+  resolved "http://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.5.2.tgz#9fcee72782f4fea6f8f428f7f14c8f242ca3dc82"
+  integrity sha1-n87nJ4L0/qb49Cj38UyPJCyj3II=
   dependencies:
     regenerate "^1.4.0"
     regenerate-unicode-properties "^8.0.0"
@@ -8476,6 +8476,13 @@ sax@~1.1.1:
   resolved "http://registry.npm.taobao.org/sax/download/sax-1.1.6.tgz#5d616be8a5e607d54e114afae55b7eaf2fcc3240"
   integrity sha1-XWFr6KXmB9VOEUr65Vt+ry/MMkA=
 
+schedule@^0.3.0:
+  version "0.3.0"
+  resolved "http://registry.npm.taobao.org/schedule/download/schedule-0.3.0.tgz#1be2ab2fc2e768536269ce7326efb478d6c045e8"
+  integrity sha1-G+KrL8LnaFNiac5zJu+0eNbAReg=
+  dependencies:
+    object-assign "^4.1.1"
+
 scheduler@^0.12.0:
   version "0.12.0"
   resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
@@ -8484,10 +8491,10 @@ scheduler@^0.12.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-scheduler@^0.13.3:
-  version "0.13.3"
-  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.13.3.tgz#bed3c5850f62ea9c716a4d781f9daeb9b2a58896"
-  integrity sha1-vtPFhQ9i6pxxak14H52uubKliJY=
+scheduler@^0.13.4:
+  version "0.13.4"
+  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.13.4.tgz#8fef05e7a3580c76c0364d2df5e550e4c9140298"
+  integrity sha1-j+8F56NYDHbANk0t9eVQ5MkUApg=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
