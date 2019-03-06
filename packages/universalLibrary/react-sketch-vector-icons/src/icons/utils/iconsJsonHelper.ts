@@ -5,23 +5,30 @@ const cacheSvgDatas: any = {}
  * "_glyph-name": "uniE000",
  *
  */
-const adjustGlyphName = (iconName: string) => {}
-
-const getSvgData = (currentGlyphs: any[], iconName: string) => {
+const getSvgPathData = (currentGlyphs: any[], iconName: string): string | null => {
   if (Object.keys(cacheSvgDatas).indexOf(iconName) !== -1) {
     return cacheSvgDatas[iconName]
   }
-  const keys = Object.keys(currentGlyphs)
-  const index = keys.indexOf(iconName)
-  const svgData = currentGlyphs[index]
-  const pathData = svgData['_d']
+
+  const svgObject = currentGlyphs.find((o) => o['_unicode'] === iconName)
+
+  // console.log('resultObject :  ', JSON.stringify(resultObject))
+
+  if (!!svgObject) {
+    const pathData = svgObject['_d']
+    cacheSvgDatas[iconName] = pathData
+    return pathData
+  }
+
+  return null
 }
 
-export const getSvgDataByIconName = (iconType: string, iconName: string, svgJsonRoot: any) => {
+export const getSvgDataByIconName = (svgJsonRoot: any, iconType: string, iconName: string): string | null => {
   if (Object.keys(cacheGlyphs).indexOf(iconType) === -1) {
     const glyphs = svgJsonRoot['svg']['defs']['font']['glyph']
     cacheGlyphs[iconType] = glyphs
   }
 
   const currentGlyphs = cacheGlyphs[iconType]
+  return getSvgPathData(currentGlyphs, iconName)
 }
