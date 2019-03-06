@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "react-primitives": "*",
+    "@types/react-native-vector-icons": "4.6.4",
     "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",
     "@types/react": "16.4.8",
