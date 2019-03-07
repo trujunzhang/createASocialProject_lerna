@@ -7,9 +7,9 @@ import {
 
 import * as React from 'react'
 
-interface ISketchListViewState {}
+interface ISketchListViewState { }
 
-class ListViewDataSource {
+export class ListViewDataSource {
   private onAsset: DataSourceAssetCallback
   constructor(onAsset: DataSourceAssetCallback) {
     this.onAsset = onAsset
@@ -24,8 +24,9 @@ class ListViewDataSource {
   }
 }
 
+
 export class ListView extends React.Component<ListViewProps, ISketchListViewState> {
-  static DataSource: ListViewDataSource
+  public static DataSource: ListViewDataSource | any = ListViewDataSource
 
   private enableEmptySections: boolean = true
   private scrollEnabled: boolean = true
@@ -46,9 +47,10 @@ export class ListView extends React.Component<ListViewProps, ISketchListViewStat
     sectionID: string | number,
     rowID: string | number,
     highlightRow?: boolean
-  ) {}
+  ) { }
 
   render() {
     return null
   }
 }
+
