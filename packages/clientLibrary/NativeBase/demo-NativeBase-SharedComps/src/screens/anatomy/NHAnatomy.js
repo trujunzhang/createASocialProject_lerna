@@ -16,7 +16,7 @@ import {
 
 import styles from "./styles";
 
-class Anatomy extends Component {
+class NHAnatomy extends Component {
   render() {
     return (
       <Container style={styles.container}>
@@ -51,4 +51,4 @@ class Anatomy extends Component {
   }
 }
 
-export default Anatomy;
+export default NHAnatomy;

@@ -1,8 +1,6 @@
 {
   "name": "@app/nb-demo-shared-components",
   "version": "0.6.0",
-  "description": "",
-  "author": "",
   "license": "MIT",
   "repository": "/@app/shared-components",
   "main": "build/lib/index.js",
