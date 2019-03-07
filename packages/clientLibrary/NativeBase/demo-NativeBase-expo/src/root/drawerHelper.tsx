@@ -5,15 +5,15 @@ import {
   Header,
   NHFooter as Footer,
   NHPickerPage as NHPicker,
-  NHIconPage as NHIcon,
+  NHIcon,
   MultiListSwipe,
   NHList,
-  ListSwipe,
+  NHListSwipe,
   NHRadio,
   NHSearchbar,
   NHSpinner,
   NHTab,
-  Segment
+  NBSegment
 } from '@app/nb-demo-shared-components'
 
 import { IconSetsList } from '../screens/vectorIcons'
@@ -59,7 +59,7 @@ export const stackRouteConfigs = {
   NHIcon: { screen: NHIcon },
   NHLayout: { screen: NHLayout },
   NHList: { screen: NHList },
-  ListSwipe: { screen: ListSwipe },
+  ListSwipe: { screen: NHListSwipe },
   NHRadio: { screen: NHRadio },
   NHSearchbar: { screen: NHSearchbar },
   NHSpinner: { screen: NHSpinner },
@@ -67,7 +67,7 @@ export const stackRouteConfigs = {
   NHTab: { screen: NHTab },
   NHThumbnail: { screen: NHThumbnail },
   NHTypography: { screen: NHTypography },
-  Segment: { screen: Segment },
+  Segment: { screen: NBSegment },
   NHToast: { screen: NHToast },
   Actionsheet: { screen: Actionsheet },
   NHAccordion: { screen: NHAccordion },

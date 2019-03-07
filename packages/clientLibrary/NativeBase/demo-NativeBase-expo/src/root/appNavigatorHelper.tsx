@@ -107,8 +107,8 @@ import {
 import {
   BasicTab,
   ConfigTab,
-  ScrollableTab,
-  BasicSegment,
+  ScrollableTabExample,
+  SegmentHeader,  // BasicSegment,
   SegmentHeaderIcon
 } from '@app/nb-demo-shared-components'
 
@@ -121,7 +121,7 @@ import {
   ToastButton
 } from '../screens/toast'
 
-import { AdvSegment } from '@app/nb-demo-shared-components'
+import { SegmentNB as AdvSegment } from '@app/nb-demo-shared-components'
 import { SimpleDeck, AdvancedDeck } from '@app/nb-demo-shared-components'
 
 import {
@@ -246,9 +246,9 @@ export const appRouteConfigs = {
 
   BasicTab: { screen: BasicTab },
   ConfigTab: { screen: ConfigTab },
-  ScrollableTab: { screen: ScrollableTab },
+  ScrollableTab: { screen: ScrollableTabExample },
 
-  BasicSegment: { screen: BasicSegment },
+  BasicSegment: { screen: SegmentHeader },
   AdvSegment: { screen: AdvSegment },
   SegmentHeaderIcon: { screen: SegmentHeaderIcon },
 
