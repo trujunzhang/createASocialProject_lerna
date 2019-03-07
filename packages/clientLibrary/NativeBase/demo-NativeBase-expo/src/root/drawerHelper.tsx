@@ -1,16 +1,26 @@
 import { SideBar } from '../screens/sidebar'
 
-import { Header } from '../screens/Header'
 
-import { NHFooter as Footer } from '@app/nb-demo-shared-components'
+import {
+  Header,
+  NHFooter as Footer,
+  NHPickerPage as NHPicker,
+  NHIconPage as NHIcon,
+  MultiListSwipe,
+  NHList,
+  ListSwipe,
+  NHRadio,
+  NHSearchbar,
+  NHSpinner,
+  NHTab,
+  Segment
+} from '@app/nb-demo-shared-components'
 
 import { IconSetsList } from '../screens/vectorIcons'
 
-import { NHPickerPage as NHPicker } from '../screens/picker'
 
 import { ActionsheetPage as Actionsheet } from '@app/nb-demo-shared-components'
 
-import { NHIconPage as NHIcon } from '../screens/icon'
 
 import { NHButton } from '@app/nb-demo-shared-components'
 
@@ -26,22 +36,13 @@ import {
   NHDatePicker
 } from '@app/nb-demo-shared-components'
 
-import MultiListSwipe from '../screens/listSwipe/multi-list-swipe'
-
-import { NHList } from '../screens/list'
 
 import { NHToast } from '../screens/toast'
 
 import Home from '../screens/home'
-import ListSwipe from '../screens/listSwipe'
 import NHLayout from '../screens/layout'
-import NHRadio from '../screens/radio'
-import NHSearchbar from '../screens/searchbar'
-import NHSpinner from '../screens/spinner'
-import NHTab from '../screens/tab'
 import NHThumbnail from '../screens/thumbnail'
 import NHTypography from '../screens/typography'
-import Segment from '../screens/segment'
 
 export const stackRouteConfigs = {
   Home: { screen: Home },

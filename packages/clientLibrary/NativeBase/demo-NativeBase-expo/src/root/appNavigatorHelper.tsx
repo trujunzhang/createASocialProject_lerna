@@ -16,7 +16,7 @@ import {
   HeaderNoLeft,
   HeaderNoShadow,
   HeaderTransparent
-} from '../screens/Header'
+} from '@app/nb-demo-shared-components'
 
 import { BasicFooter, IconFooter, IconText, BadgeFooter } from '@app/nb-demo-shared-components'
 
@@ -33,11 +33,11 @@ import {
   HeaderPicker,
   HeaderStylePicker,
   CustomHeaderPicker
-} from '../screens/picker'
+} from '@app/nb-demo-shared-components'
 
 import { RegularActionSheet, IconActionSheet } from '@app/nb-demo-shared-components'
 
-import { Icons, BasicIcon, StateIcon, PlatformSpecificIcon, IconFamily } from '../screens/icon'
+import { Icons, BasicIcon, StateIcon, PlatformSpecificIcon, IconFamily } from '@app/nb-demo-shared-components'
 
 import {
   DefaultButton,
@@ -86,9 +86,11 @@ import ColumnNB from '../screens/layout/column'
 import NestedGrid from '../screens/layout/nested'
 import CustomRow from '../screens/layout/customRow'
 import CustomCol from '../screens/layout/customCol'
-import BasicListSwipe from '../screens/listSwipe/basic-list-swipe'
-import SwipeRowCustomStyle from '../screens/listSwipe/swipe-row-style'
-import MultiListSwipe from '../screens/listSwipe/multi-list-swipe'
+import {
+  BasicListSwipe,
+  SwipeRowCustomStyle,
+  MultiListSwipe
+} from '@app/nb-demo-shared-components'
 
 import {
   NHBasicList,
@@ -100,13 +102,15 @@ import {
   NHListAvatar,
   NHListThumbnail,
   NHListItemNoIndent
-} from '../screens/list'
+} from '@app/nb-demo-shared-components'
 
-import BasicTab from '../screens/tab/basicTab'
-import ConfigTab from '../screens/tab/configTab'
-import ScrollableTab from '../screens/tab/scrollableTab'
-import BasicSegment from '../screens/segment/SegmentHeader'
-import SegmentHeaderIcon from '../screens/segment/SegmentHeaderIcon'
+import {
+  BasicTab,
+  ConfigTab,
+  ScrollableTab,
+  BasicSegment,
+  SegmentHeaderIcon
+} from '@app/nb-demo-shared-components'
 
 import {
   BasicToast,
@@ -117,11 +121,13 @@ import {
   ToastButton
 } from '../screens/toast'
 
-import AdvSegment from '../screens/segment/segmentTab'
+import { AdvSegment } from '@app/nb-demo-shared-components'
 import { SimpleDeck, AdvancedDeck } from '@app/nb-demo-shared-components'
 
-import NHCustomRadio from '../screens/radio/custom'
-import NHDefaultRadio from '../screens/radio/default'
+import {
+  NHCustomRadio,
+  NHDefaultRadio
+} from '@app/nb-demo-shared-components'
 
 import {
   AccordionDefault,
