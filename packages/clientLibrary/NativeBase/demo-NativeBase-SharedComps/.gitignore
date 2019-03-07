@@ -30,3 +30,5 @@ yarn-error.log*
 # jetbrains
 /.idea
 
+# shared components
+assets/
