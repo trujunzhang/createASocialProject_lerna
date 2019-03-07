@@ -38,7 +38,7 @@ interface IListState {
   dataSource: any
 }
 
-interface IListDefaultProps {}
+interface IListDefaultProps { }
 
 type ListPropsWithDefaults = IListProps & IListDefaultProps
 
@@ -267,6 +267,7 @@ class List extends React.Component<IListProps, IListState> {
     if (this.checkRenderAsListRows()) {
       return (
         <ListView
+          name="listView"
           {...this.props}
           ref={(ref) => {
             this.setRefs(ref)
@@ -282,6 +283,7 @@ class List extends React.Component<IListProps, IListState> {
     } else if (this.state.dataSource) {
       return (
         <ListView
+          name="listView"
           {...this.props}
           ref={(ref) => (this._root = ref)}
           enableEmptySections

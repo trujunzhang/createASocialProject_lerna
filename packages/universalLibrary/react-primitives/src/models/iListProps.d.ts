@@ -3,6 +3,7 @@ import {
   ListViewProps,
   FlatListProps,
   // ListView
+  ListViewDataSource,
   SwipeableListViewDataSource,
   DataSourceAssetCallback
 } from 'react-native'
@@ -12,6 +13,7 @@ export {
   ListViewProps,
   FlatListProps,
   // ListView
+  ListViewDataSource,
   SwipeableListViewDataSource,
   DataSourceAssetCallback
 }

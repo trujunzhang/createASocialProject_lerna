@@ -1,40 +1,31 @@
 import {
   ListViewProps,
   // ListView
+  ListViewDataSource,
   SwipeableListViewDataSource,
   DataSourceAssetCallback
 } from '../../models/iListProps'
+
+import {
+  Text
+} from 'react-sketchapp'
+
+import {
+  SketchListViewDataSource
+} from './listViewDataSource.sketch'
 
 import * as React from 'react'
 
 interface ISketchListViewState { }
 
-export class ListViewDataSource {
-  private onAsset: DataSourceAssetCallback
-  constructor(onAsset: DataSourceAssetCallback) {
-    this.onAsset = onAsset
-  }
-
-  rowHasChanged?(r1: any, r2: any): boolean {
-    return true
-  }
-
-  cloneWithRows(dataBlob: any, rowIdentities?: Array<string | number>): ListViewDataSource {
-    return this
-  }
-}
-
 
 export class ListView extends React.Component<ListViewProps, ISketchListViewState> {
-  public static DataSource: ListViewDataSource | any = ListViewDataSource
+  public static DataSource: ListViewDataSource | any = SketchListViewDataSource
 
   private enableEmptySections: boolean = true
   private scrollEnabled: boolean = true
-  /**
-   * Use `SwipeableListView.getNewDataSource()` to get a data source to use,
-   * then use it just like you would a normal ListView data source
-   */
-  private dataSource: SwipeableListViewDataSource | null = null
+
+  private rowViews: any[] = []
 
   setNativeProps(scrollEnabled: boolean) {
     this.scrollEnabled = scrollEnabled
@@ -42,15 +33,38 @@ export class ListView extends React.Component<ListViewProps, ISketchListViewStat
 
   onScroll?: (event: any) => {}
 
-  renderRow(
-    rowData: any,
-    sectionID: string | number,
-    rowID: string | number,
-    highlightRow?: boolean
-  ) { }
+  // renderRow(
+  //   rowData: any,
+  //   sectionID: string | number,
+  //   rowID: string | number,
+  //   highlightRow?: boolean
+  // ) { }
+
+  generatorRowViews() {
+    const {
+      renderRow
+    } = this.props
+    const ds = this.props.dataSource as ListViewDataSource
+    const rowCount = ds.getRowCount()
+    for (var i; i < rowCount; i++) {
+      const sectionIndex: number = 0
+      const rowIndex: number = i
+      const rowData: any = ds.getRowData(sectionIndex, rowIndex)
+      const rowView = renderRow(rowData, '', '')
+      this.rowViews.push(rowView)
+    }
+  }
 
   render() {
-    return null
+    this.generatorRowViews()
+
+    return (
+      <React.Fragment>
+        <Text>{'sketch ListView'}</Text>
+        {this.rowViews}
+
+      </React.Fragment>
+    )
   }
 }
 

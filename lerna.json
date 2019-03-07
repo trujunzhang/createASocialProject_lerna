@@ -2,6 +2,8 @@
   "packages:all": [
     "packages/**/*",
     "packages/appWeb",
+    "packages/appSketchApp",
+    "packages/appExamples/sketchapp/form-validation",
     "packages/appClient"
   ],
   "packages": [
@@ -9,10 +11,7 @@
     "packages/vendors/**/lib",
     "packages/globalLibrary/**/*",
     "packages/appLibrary/**/*",
-    "packages/clientLibrary/**/*",
-    "packages/appSketchApp",
-    "packages/appExamples/sketchapp/form-validation",
-    "packages/appClient"
+    "packages/clientLibrary/**/*"
   ],
   "useWorkspaces": false,
   "npmClient": "yarn",
