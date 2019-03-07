@@ -1,18 +1,18 @@
 {
   "name": "@app/avatar",
   "version": "0.6.0",
-  "main": "build/lib/index.js",
-  "types": "build/lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "type-check": "tsc --noEmit",
     "type-check:watch": "yarn type-check -- --watch",
     "test.lib.pending": "jest --env=node --colors --coverage test",
     "test.current.pending": "yarn test.lib",
-    "build:reset": "rm -rf build",
+    "build:reset": "rm -rf dist",
     "build.clean": "yarn build:reset",
     "build:types": "tsc --emitDeclarationOnly -p tsconfig.lib.json",
-    "build:js": "babel src --out-dir build/lib --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
     "build:all": "npm run build:types && npm run build:js",
     "build-lib": "yarn build.clean && yarn build:all",
     "postinstall": "yarn build-lib"

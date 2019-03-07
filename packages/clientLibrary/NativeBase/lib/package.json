@@ -1,8 +1,8 @@
 {
   "name": "@app/native-base",
   "version": "0.6.0",
-  "main": "build/lib/index.js",
-  "typings": "build/lib/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "description": "Essential cross-platform UI components for React Native",
   "keywords": [
     "android",
@@ -22,10 +22,10 @@
     "ts-lint:lib": "tslint -c tslint.json '**/*.{ts,tsx}' -e 'node_modules/**'",
     "test.lib": "jest --env=node --colors --coverage test",
     "test.current.pending": "yarn test.lib",
-    "build:reset": "rm -rf build",
+    "build:reset": "rm -rf dist",
     "build.clean": "yarn build:reset",
     "build:types": "tsc --emitDeclarationOnly -p tsconfig.lib.json",
-    "build:js": "babel src --out-dir build/lib --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
     "build:all": "npm run build:types && npm run build:js",
     "build-lib": "yarn build.clean && yarn build:all",
     "build.current.pending": "yarn build-lib",

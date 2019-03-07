@@ -3,7 +3,7 @@
   "version": "0.6.0",
   "private": false,
   "license": "Apache-2.0",
-  "main": "build/lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "depenence.update": "ncu -u",
     "rm.assets": "rm -rf @types",
@@ -12,7 +12,7 @@
     "ready:copy_static": "cpx \"../../appWeb/static/**/*.*\" ./static",
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "fix.current": "yarn fix",
-    "build:reset": "rm -rf build",
+    "build:reset": "rm -rf dist",
     "build.clean": "echo 'build empty clean'",
     "build:js": "tsc -p tsconfig.json",
     "copy.assets.to.build": "cpx \"./static/**/*.*\" ./build/static",
@@ -46,6 +46,6 @@
     "typescript": "3.3.3"
   },
   "files": [
-    "build/lib"
+    "dist"
   ]
 }
