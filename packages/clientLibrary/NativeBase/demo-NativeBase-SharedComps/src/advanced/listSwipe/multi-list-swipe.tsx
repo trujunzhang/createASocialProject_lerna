@@ -27,7 +27,7 @@ const datas = [
   'Phil Coutinho'
 ]
 
-class MultiListSwipe extends Component {
+export class MultiListSwipe extends React.Component<any, any> {
   constructor(props) {
     super(props)
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
@@ -100,4 +100,4 @@ class MultiListSwipe extends Component {
   }
 }
 
-export default MultiListSwipe
+

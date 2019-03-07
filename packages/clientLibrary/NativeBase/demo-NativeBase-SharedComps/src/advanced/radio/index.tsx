@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -26,7 +26,7 @@ const datas = [
   }
 ];
 
-class NHRadio extends Component {
+export class NHRadio extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -69,4 +69,4 @@ class NHRadio extends Component {
   }
 }
 
-export default NHRadio;
+

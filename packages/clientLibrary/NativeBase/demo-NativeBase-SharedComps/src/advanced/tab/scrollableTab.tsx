@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -18,7 +18,7 @@ import TabThree from "./tabThree";
 import TabFour from "./tabFour";
 import TabFive from "./tabFive";
 
-class BasicTab extends Component {
+export class BasicTab extends React.Component<any, any> {
   render() {
     return (
       <Container>
@@ -56,4 +56,4 @@ class BasicTab extends Component {
   }
 }
 
-export default BasicTab;
+

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -30,7 +30,7 @@ const datas = [
   }
 ];
 
-class ListSwipe extends Component {
+export class ListSwipe extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -73,4 +73,4 @@ class ListSwipe extends Component {
   }
 }
 
-export default ListSwipe;
+

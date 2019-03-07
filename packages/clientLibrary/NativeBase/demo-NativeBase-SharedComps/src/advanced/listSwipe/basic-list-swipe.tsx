@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class BasicListSwipe extends Component {
+export class BasicListSwipe extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -57,4 +57,4 @@ class BasicListSwipe extends Component {
   }
 }
 
-export default BasicListSwipe;
+

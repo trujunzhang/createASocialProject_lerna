@@ -34,7 +34,7 @@ const datas = [
   }
 ]
 
-class NHIcon extends Component {
+export class NHIcon extends React.Component<any, any> {
   renderContentxxx() {
     return null
   }
@@ -78,4 +78,4 @@ class NHIcon extends Component {
   }
 }
 
-export default NHIcon
+

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import { View } from "react-native";
 
 import {
@@ -15,7 +15,7 @@ import {
 
 import styles from "./styles";
 
-class BasicIcon extends Component {
+export class BasicIcon extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -425,4 +425,4 @@ class BasicIcon extends Component {
   }
 }
 
-export default BasicIcon;
+

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import { Content, Card, CardItem, Text, Body } from "@app/native-base";
 
-export default class TabTwo extends Component {
+export class TabTwo extends React.Component<any, any> {
   render() {
     return (
       <Content padder style={{ marginTop: 0 }}>
@@ -11,7 +11,7 @@ export default class TabTwo extends Component {
               <Text>
                 NativeBase builds a layer on top of React Native that provides
                 you with basic set of components for mobile application
-                development. This helps you to build world-class application
+                development. This helps you to build world-export class application
                 experiences on native platforms.
               </Text>
             </Body>

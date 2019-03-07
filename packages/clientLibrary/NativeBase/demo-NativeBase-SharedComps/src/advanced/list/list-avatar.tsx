@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -61,7 +61,7 @@ const datas = [
   }
 ];
 
-class NHListAvatar extends Component {
+export class NHListAvatar extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -106,4 +106,4 @@ class NHListAvatar extends Component {
   }
 }
 
-export default NHListAvatar;
+

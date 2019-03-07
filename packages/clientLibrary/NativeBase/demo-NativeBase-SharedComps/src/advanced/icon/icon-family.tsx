@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
   Text
 } from "@app/native-base";
 
-class IconFamily extends Component {
+export class IconFamily extends React.Component<any, any> {
   render() {
     return (
       <Container style={{ backgroundColor: "#FFF" }}>
@@ -87,4 +87,4 @@ class IconFamily extends Component {
   }
 }
 
-export default IconFamily;
+

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -54,7 +54,7 @@ const datas = [
   }
 ];
 
-export class NHPickerIos extends Component {
+export class NHPickerIos extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

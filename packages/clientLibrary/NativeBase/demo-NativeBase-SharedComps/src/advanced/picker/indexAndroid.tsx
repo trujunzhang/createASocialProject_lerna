@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -17,7 +17,7 @@ import styles from "./styles";
 
 const Item = Picker.Item;
 
-export class NHPickerAndroid extends Component {
+export class NHPickerAndroid extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 
 import {
   Container,
@@ -15,7 +15,7 @@ import {
 import { Grid, Row, Col } from "react-native-easy-grid";
 import styles from "./styles";
 
-class PlatformSpecificIcon extends Component {
+export class PlatformSpecificIcon extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -62,4 +62,4 @@ class PlatformSpecificIcon extends Component {
   }
 }
 
-export default PlatformSpecificIcon;
+

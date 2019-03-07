@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 
 import {
   Container,
@@ -15,7 +15,7 @@ import {
 
 import styles from "./styles";
 
-class NHSpinner extends Component {
+export class NHSpinner extends React.Component<any, any> {
   // eslint-disable-line
 
   render() {
@@ -48,4 +48,4 @@ class NHSpinner extends Component {
   }
 }
 
-export default NHSpinner;
+

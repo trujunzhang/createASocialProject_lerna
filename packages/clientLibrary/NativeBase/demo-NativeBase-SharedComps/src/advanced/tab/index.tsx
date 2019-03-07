@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -30,7 +30,7 @@ const datas = [
   }
 ];
 
-class NHTab extends Component {
+export class NHTab extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -102,4 +102,4 @@ class NHTab extends Component {
   }
 }
 
-export default NHTab;
+

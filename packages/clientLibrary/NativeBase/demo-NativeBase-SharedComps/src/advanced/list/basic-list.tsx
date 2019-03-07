@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -26,7 +26,7 @@ const datas = [
   "Phil Coutinho"
 ];
 
-class NHBasicList extends Component {
+export class NHBasicList extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -63,4 +63,4 @@ class NHBasicList extends Component {
   }
 }
 
-export default NHBasicList;
+

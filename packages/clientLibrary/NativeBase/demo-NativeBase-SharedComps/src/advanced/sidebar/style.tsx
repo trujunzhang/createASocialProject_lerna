@@ -4,7 +4,7 @@ const { Platform, Dimensions } = React;
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-export default {
+
   drawerCover: {
     alignSelf: "stretch",
     height: deviceHeight / 3.5,

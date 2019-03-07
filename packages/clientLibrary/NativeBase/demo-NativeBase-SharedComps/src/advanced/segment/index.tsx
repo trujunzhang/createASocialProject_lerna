@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -30,7 +30,7 @@ const datas = [
   }
 ];
 
-class NBSegment extends Component {
+export class NBSegment extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -73,4 +73,4 @@ class NBSegment extends Component {
   }
 }
 
-export default NBSegment;
+

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class NHListSeparator extends Component {
+export class NHListSeparator extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -63,4 +63,4 @@ class NHListSeparator extends Component {
   }
 }
 
-export default NHListSeparator;
+

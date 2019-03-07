@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 
 import {
   Container,
@@ -15,7 +15,7 @@ import {
 import { Grid, Row, Col } from "react-native-easy-grid";
 import styles from "./styles";
 
-class StateIcon extends Component {
+export class StateIcon extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -567,4 +567,4 @@ class StateIcon extends Component {
   }
 }
 
-export default StateIcon;
+

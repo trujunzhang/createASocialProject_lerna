@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import { FlatList } from "react-native";
 import {
   Container,
@@ -26,7 +26,7 @@ const datas = [
   "Phil Coutinho"
 ];
 
-class NHListItemSelected extends Component {
+export class NHListItemSelected extends React.Component<any, any> {
   state = {
     datas,
     selected: "Simon Mignolet"
@@ -75,4 +75,4 @@ class NHListItemSelected extends Component {
   }
 }
 
-export default NHListItemSelected;
+

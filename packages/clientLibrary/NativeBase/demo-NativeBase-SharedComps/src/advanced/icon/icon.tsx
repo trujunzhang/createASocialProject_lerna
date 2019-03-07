@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -13,7 +13,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 import { Grid, Row, Col } from "react-native-easy-grid";
-class Icons extends Component {
+export class Icons extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -565,4 +565,4 @@ class Icons extends Component {
   }
 }
 
-export default Icons;
+

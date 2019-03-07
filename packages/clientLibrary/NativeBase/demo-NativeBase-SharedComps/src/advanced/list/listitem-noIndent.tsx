@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import { FlatList } from "react-native";
 import {
   Container,
@@ -26,7 +26,7 @@ const datas = [
   "Phil Coutinho"
 ];
 
-class NHListItemNoIndent extends Component {
+export class NHListItemNoIndent extends React.Component<any, any> {
   state = {
     datas,
     selected: "Simon Mignolet"
@@ -79,4 +79,4 @@ class NHListItemNoIndent extends Component {
   }
 }
 
-export default NHListItemNoIndent;
+

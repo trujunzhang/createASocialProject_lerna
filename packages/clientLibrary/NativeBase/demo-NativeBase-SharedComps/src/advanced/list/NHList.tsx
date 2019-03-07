@@ -54,7 +54,7 @@ const datas = [
   }
 ]
 
-class NHList extends Component {
+export class NHList extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -96,4 +96,4 @@ class NHList extends Component {
   }
 }
 
-export default NHList
+

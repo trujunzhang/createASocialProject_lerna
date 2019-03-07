@@ -55,7 +55,7 @@ const datas = [
   }
 ]
 
-class NHListThumbnail extends Component {
+export class NHListThumbnail extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -99,4 +99,4 @@ class NHListThumbnail extends Component {
   }
 }
 
-export default NHListThumbnail
+

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class NHDefaultRadio extends Component {
+export class NHDefaultRadio extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -135,4 +135,4 @@ class NHDefaultRadio extends Component {
   }
 }
 
-export default NHDefaultRadio;
+
