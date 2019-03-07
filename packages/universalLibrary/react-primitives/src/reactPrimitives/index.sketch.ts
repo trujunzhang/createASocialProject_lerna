@@ -74,11 +74,13 @@ import { Dimensions } from '../components/System/dimensions'
 import { PixelRatio } from '../components/System/pixelRatio'
 import { Platform } from '../components/System/platform'
 import { StatusBar } from '../components/System/statusBar'
+import { isIphoneX } from '../components/System/isIphoneX'
 
 export {
   // System
   Dimensions,
   PixelRatio,
   Platform,
-  StatusBar
+  StatusBar,
+  isIphoneX
 }

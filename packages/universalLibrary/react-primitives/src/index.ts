@@ -62,7 +62,8 @@ import {
   Dimensions,
   PixelRatio,
   Platform,
-  StatusBar
+  StatusBar,
+  isIphoneX
 } from './reactPrimitives'
 
 export {
@@ -70,7 +71,8 @@ export {
   Dimensions,
   PixelRatio,
   Platform,
-  StatusBar
+  StatusBar,
+  isIphoneX
 }
 
 // ReactPrimitivesHelper
@@ -81,9 +83,9 @@ import {
   IInjectionTextModel
 } from './models'
 
-const { View, Image, isIphoneX } = ReactPrimitivesHelper as IInjectionBaseModel
+const { View, Image } = ReactPrimitivesHelper as IInjectionBaseModel
 
-export { View, Image, isIphoneX }
+export { View, Image }
 
 const { Easing } = ReactPrimitivesHelper as IInjectionAnimateModel
 

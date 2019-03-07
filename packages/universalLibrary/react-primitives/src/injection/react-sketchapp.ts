@@ -42,10 +42,6 @@ const TouchableMixin = {
 const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
-  isIphoneX: () => {
-    return false
-  },
-  StyleSheet
 }
 
 const injectionAnimateModel: IInjectionAnimateModel = {

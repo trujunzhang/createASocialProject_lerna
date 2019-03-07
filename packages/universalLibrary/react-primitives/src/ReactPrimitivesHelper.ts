@@ -23,8 +23,6 @@ export class ReactPrimitivesHelper {
   private injectionBaseModel(model: IInjectionBaseModel) {
     this.reactPrimitivesModel.View = model.View
     this.reactPrimitivesModel.Image = model.Image
-    this.reactPrimitivesModel.isIphoneX = model.isIphoneX
-    // this.reactPrimitivesModel.StyleSheet = model.StyleSheet
   }
   private injectionAnimateModel(model: IInjectionAnimateModel) {
     this.reactPrimitivesModel.Easing = model.Easing

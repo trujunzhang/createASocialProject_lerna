@@ -42,10 +42,7 @@ const resolve = (style) => {
 const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
-  isIphoneX: () => {
-    return false
-  },
-  StyleSheet: Object.assign(StyleSheet, { resolve })
+  // StyleSheet: Object.assign(StyleSheet, { resolve })
 }
 
 const injectionAnimateModel: IInjectionAnimateModel = {
