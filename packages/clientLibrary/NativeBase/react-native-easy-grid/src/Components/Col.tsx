@@ -1,13 +1,18 @@
 import * as React from 'react'
-import { View, TouchableOpacity } from 'react-primitives'
+import { View, TouchableOpacity, TouchableOpacityProps } from 'react-primitives'
 import computeProps from '../Utils/computeProps'
 
-export default class ColumnNB extends React.Component<any, any> {
+export interface IColProps extends TouchableOpacityProps {
+  style?: any
+  size?: number
+}
+
+export class Col extends React.Component<IColProps, any> {
   private _root: any
   prepareRootProps() {
     var type = {
       flexDirection: 'column',
-      flex: this.props.size ? this.props.size : this.props.style && this.props.style.width ? 0 : 1
+      flex: this.props.size ? this.props.size : this.props.style && (this.props.style as any).width ? 0 : 1
     }
 
     var defaultProps = {

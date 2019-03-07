@@ -3,7 +3,7 @@
   "description": "Easy React Native Layout & Grid for the Dumb",
   "version": "0.2.1",
   "main": "build/lib/index.js",
-  "typings": "./index.d.ts",
+  "typings": "build/lib/index.d.ts",
   "scripts": {
     "depenence.update": "ncu -u",
     "rm.assets": "rm -rf @types",

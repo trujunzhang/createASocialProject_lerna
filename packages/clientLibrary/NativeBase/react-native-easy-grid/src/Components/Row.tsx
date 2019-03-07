@@ -1,14 +1,19 @@
 import * as React from 'react'
-import { View, TouchableOpacity } from 'react-primitives'
+import { View, TouchableOpacity, TouchableOpacityProps } from 'react-primitives'
 
 import computeProps from '../Utils/computeProps'
 
-export default class RowNB extends React.Component<any, any> {
+export interface IRowProps extends TouchableOpacityProps {
+  style?: any
+  size?: number
+}
+
+export class Row extends React.Component<IRowProps, any> {
   private _root: any
   prepareRootProps() {
     var type = {
       flexDirection: 'row',
-      flex: this.props.size ? this.props.size : this.props.style && this.props.style.height ? 0 : 1
+      flex: this.props.size ? this.props.size : this.props.style && (this.props.style as any).height ? 0 : 1
     }
 
     var defaultProps = {

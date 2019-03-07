@@ -1,10 +1,13 @@
 import * as React from 'react'
-import { View, TouchableOpacity } from 'react-primitives'
+import { View, TouchableOpacity, TouchableOpacityProps } from 'react-primitives'
 import computeProps from '../Utils/computeProps'
-import Col from './Col'
-import Row from './Row'
+import { Row } from './Row'
 
-export default class GridNB extends React.Component<any, any> {
+export interface IGridProps extends TouchableOpacityProps {
+  style?: any
+}
+
+export class Grid extends React.Component<IGridProps, any> {
   private _root: any
   prepareRootProps() {
     var type = {
