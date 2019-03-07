@@ -13,7 +13,7 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-export class Full extends React.Component<any, any> {
+export class FullButton extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

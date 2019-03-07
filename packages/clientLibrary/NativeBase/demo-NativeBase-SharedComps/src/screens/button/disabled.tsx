@@ -14,7 +14,7 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-export class Disabled extends React.Component<any, any> {
+export class DisabledButton extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

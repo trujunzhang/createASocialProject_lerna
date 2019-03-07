@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-export class Basic extends React.Component<any, any> {
+export class BasicFooter extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {

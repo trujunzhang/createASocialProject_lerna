@@ -1,32 +1,15 @@
-import FixedLabel from './fixedLabel'
-import InlineLabel from './inlineLabel'
-import FloatingLabel from './floatingLabel'
-import PlaceholderLabel from './placeholder'
-import StackedLabel from './stacked'
-import RegularInput from './regular'
-import UnderlineInput from './underline'
-import RoundedInput from './rounded'
-import IconInput from './iconInput'
-import SuccessInput from './success'
-import ErrorInput from './error'
-import DisabledInput from './disabledInput'
-import PickerInput from './pickerInput'
+export * from './fixedLabel'
+export * from './inlineLabel'
+export * from './floatingLabel'
+export * from './placeholder'
+export * from './stacked'
+export * from './regular'
+export * from './underline'
+export * from './rounded'
+export * from './iconInput'
+export * from './success'
+export * from './error'
+export * from './disabledInput'
+export * from './pickerInput'
 
-import NHForm from './NHForm'
-
-export {
-  NHForm,
-  FixedLabel,
-  InlineLabel,
-  FloatingLabel,
-  PlaceholderLabel,
-  StackedLabel,
-  RegularInput,
-  UnderlineInput,
-  RoundedInput,
-  IconInput,
-  SuccessInput,
-  ErrorInput,
-  DisabledInput,
-  PickerInput
-}
+export * from './NHForm'

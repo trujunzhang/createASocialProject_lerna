@@ -1,0 +1,5 @@
+export * from './footerPage'
+export * from './basicFooter'
+export * from './iconFooter'
+export * from './iconText'
+export * from './badgeFooter'
