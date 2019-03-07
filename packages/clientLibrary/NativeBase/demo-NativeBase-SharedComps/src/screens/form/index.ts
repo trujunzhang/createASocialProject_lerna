@@ -11,5 +11,6 @@ export * from './success'
 export * from './error'
 export * from './disabledInput'
 export * from './pickerInput'
+export * from './textArea'
 
 export * from './NHForm'

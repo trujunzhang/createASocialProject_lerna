@@ -63,8 +63,10 @@ import {
   NHCardCustomBorderRadius
 } from '@app/nb-demo-shared-components'
 
-import BasicFab from '@app/nb-demo-shared-components'
-import MultipleFab from '@app/nb-demo-shared-components'
+import {
+  BasicFab,
+  MultipleFab
+} from '@app/nb-demo-shared-components'
 
 import {
   FixedLabel,
@@ -119,8 +121,11 @@ import {
 } from '../screens/toast'
 
 import AdvSegment from '../screens/segment/segmentTab'
-import SimpleDeck from '@app/nb-demo-shared-components'
-import AdvancedDeck from '@app/nb-demo-shared-components'
+import {
+  SimpleDeck,
+  AdvancedDeck
+} from '@app/nb-demo-shared-components'
+
 import NHCustomRadio from '../screens/radio/custom'
 import NHDefaultRadio from '../screens/radio/default'
 
@@ -132,7 +137,7 @@ import {
   AccordionCustomHeaderContent
 } from '@app/nb-demo-shared-components'
 
-import TextArea from '@app/nb-demo-shared-components'
+import { TextAreaForm } from '@app/nb-demo-shared-components'
 
 const DraftsStack = createStackNavigator(stackRouteConfigs, stackConfig)
 export const appRouteConfigs = {
@@ -197,7 +202,7 @@ export const appRouteConfigs = {
   ErrorInput: { screen: ErrorInput },
   DisabledInput: { screen: DisabledInput },
   PickerInput: { screen: PickerInput },
-  TextArea: { screen: TextArea },
+  TextArea: { screen: TextAreaForm },
 
   Icons: { screen: Icons },
   BasicIcon: { screen: BasicIcon },

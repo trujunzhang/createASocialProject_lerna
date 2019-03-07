@@ -15,7 +15,7 @@
     "fix.current": "yarn fix",
     "test.lib.pending": "jest --env=node --colors --coverage test",
     "test.current.pending": "yarn test.lib",
-    "build:reset": "rm -rf build",
+    "build:reset": "rm -rf dist",
     "build.clean": "yarn build:reset",
     "build:types": "tsc --emitDeclarationOnly -p tsconfig.lib.json",
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
