@@ -29,8 +29,8 @@ export default class App extends React.Component<{}, IAppState> {
 
   get fontObject() {
     const fontSource = {
-      FontAwesome: require('react-native-vector-icons/Fonts/FontAwesome.ttf'),
-      MaterialIcons: require('react-native-vector-icons/Fonts/MaterialIcons.ttf')
+      FontAwesome: require('@expo/vector-icons/fonts/FontAwesome.ttf'),
+      MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf')
     }
     fontSource[fontProxima] = require('./static/fonts/proxima/proxima-nova-600.ttf')
     return fontSource

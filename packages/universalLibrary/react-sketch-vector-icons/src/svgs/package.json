@@ -1,5 +1,5 @@
 {
-  "name": "@expo/vector-icons",
+  "name.backup": "@expo/vector-icons",
   "version": "9.0.0",
   "description": "Built-in support for popular icon fonts and the tooling to create your own Icon components from your font and glyph map. This is a wrapper around react-native-vector-icons to make it compatible with Expo.",
   "main": "index.js",
