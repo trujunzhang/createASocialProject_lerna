@@ -5,8 +5,12 @@ import {
   SwipeableListViewDataSource,
   DataSourceAssetCallback
 } from '../../models/iListProps'
+import {
+  IListViewProps
+} from '../../models/iList'
 
 import {
+  View,
   Text
 } from 'react-sketchapp'
 
@@ -19,7 +23,7 @@ import * as React from 'react'
 interface ISketchListViewState { }
 
 
-export class ListView extends React.Component<ListViewProps, ISketchListViewState> {
+export class ListView extends React.Component<IListViewProps, ISketchListViewState> {
   public static DataSource: ListViewDataSource | any = SketchListViewDataSource
 
   private enableEmptySections: boolean = true
@@ -46,24 +50,31 @@ export class ListView extends React.Component<ListViewProps, ISketchListViewStat
     } = this.props
     const ds = this.props.dataSource as ListViewDataSource
     const rowCount = ds.getRowCount()
-    for (var i; i < rowCount; i++) {
+
+
+    for (var i = 0; i < rowCount; i++) {
       const sectionIndex: number = 0
       const rowIndex: number = i
       const rowData: any = ds.getRowData(sectionIndex, rowIndex)
+
+      console.log('listView, rowData: ', JSON.stringify(rowData))
+
       const rowView = renderRow(rowData, '', '')
       this.rowViews.push(rowView)
     }
   }
 
   render() {
+    const {
+      name
+    } = this.props
     this.generatorRowViews()
 
     return (
-      <React.Fragment>
-        <Text>{'sketch ListView'}</Text>
+      <View name={name}>
         {this.rowViews}
 
-      </React.Fragment>
+      </View>
     )
   }
 }

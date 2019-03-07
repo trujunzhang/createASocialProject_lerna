@@ -267,7 +267,7 @@ class List extends React.Component<IListProps, IListState> {
     if (this.checkRenderAsListRows()) {
       return (
         <ListView
-          name="listView"
+          name="listViewAsListRows"
           {...this.props}
           ref={(ref) => {
             this.setRefs(ref)
@@ -293,7 +293,7 @@ class List extends React.Component<IListProps, IListState> {
       )
     }
     return (
-      <View name="list" ref={(c) => (this._root = c)} {...this.props}>
+      <View name="listViewAsView" ref={(c) => (this._root = c)} {...this.props}>
         {this.renderChildren()}
       </View>
     )

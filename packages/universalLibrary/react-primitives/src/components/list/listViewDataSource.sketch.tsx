@@ -9,13 +9,13 @@ type ISketchListViewDataSource = ListViewDataSource | any
 export class SketchListViewDataSource implements ISketchListViewDataSource {
     private onAsset: DataSourceAssetCallback | null = null
     private dataArray: any
-    // constructor(onAsset: DataSourceAssetCallback) {
-    //     this.onAsset = onAsset
-    // }
-
-    new(onAsset: DataSourceAssetCallback): ISketchListViewDataSource {
-        return this
+    constructor(onAsset: DataSourceAssetCallback) {
+        this.onAsset = onAsset
     }
+
+    // new(onAsset: DataSourceAssetCallback): ISketchListViewDataSource {
+    //     return this
+    // }
 
     rowHasChanged?(r1: any, r2: any): boolean {
         return true

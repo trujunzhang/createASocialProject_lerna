@@ -72,8 +72,8 @@ export default class App extends React.Component<{}, IAppState> {
         style={[
           {
             flex: 1,
-            paddingTop: 200,
-            backgroundColor: 'red'
+            // paddingTop: 200,
+            // backgroundColor: 'red'
           }
         ]}>
         <Setup>
