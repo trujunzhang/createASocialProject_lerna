@@ -20,6 +20,7 @@ const { ScrollableTabBar } = require('./ScrollableTabBar')
 
 export interface IScrollableTabViewProps extends ViewProps {
   style?: ViewStyle | Array<ViewStyle>
+  renderTabBar?: any
 }
 class ScrollableTabView extends React.Component<IScrollableTabViewProps, any> {
   render() {

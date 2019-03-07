@@ -18,7 +18,7 @@ import { TabThree } from "./tabThree";
 import { TabFour } from "./tabFour";
 import { TabFive } from "./tabFive";
 
-export class BasicTab extends React.Component<any, any> {
+export class scrollableTab extends React.Component<any, any> {
   render() {
     return (
       <Container>
