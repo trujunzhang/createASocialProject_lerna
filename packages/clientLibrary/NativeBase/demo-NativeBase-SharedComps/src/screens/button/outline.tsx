@@ -56,4 +56,3 @@ export class OutlineButton extends React.Component<any, any> {
     )
   }
 }
-

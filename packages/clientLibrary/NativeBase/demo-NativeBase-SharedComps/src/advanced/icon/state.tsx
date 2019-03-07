@@ -11,9 +11,9 @@ import {
   Left,
   Right,
   Icon
-} from "@app/native-base";
-import { Grid, Row, Col } from "react-native-easy-grid";
-import styles from "./styles";
+} from '@app/native-base'
+import { Grid, Row, Col } from 'react-native-easy-grid'
+import styles from './styles'
 
 export class StateIcon extends React.Component<any, any> {
   render() {
@@ -563,8 +563,6 @@ export class StateIcon extends React.Component<any, any> {
           </Grid>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

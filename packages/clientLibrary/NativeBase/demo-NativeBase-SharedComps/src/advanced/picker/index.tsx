@@ -16,7 +16,4 @@ export * from './headerPicker'
 export * from './headerStylePicker'
 export * from './customHeaderPicker'
 
-export {
-  NHPickerPage,
-
-}
+export { NHPickerPage }

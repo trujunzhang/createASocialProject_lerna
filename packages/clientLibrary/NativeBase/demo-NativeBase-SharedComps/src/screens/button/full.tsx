@@ -56,5 +56,3 @@ export class FullButton extends React.Component<any, any> {
     )
   }
 }
-
-

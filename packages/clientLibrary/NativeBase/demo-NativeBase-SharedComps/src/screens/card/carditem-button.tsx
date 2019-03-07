@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Body,
   Left,
   Right
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class NHCardItemButton extends React.Component<any, any> {
   render() {
@@ -33,29 +33,20 @@ export class NHCardItemButton extends React.Component<any, any> {
 
         <Content padder>
           <Card style={styles.mb}>
-            <CardItem
-              header
-              button
-              onPress={() => alert("This is Card Header")}
-            >
+            <CardItem header button onPress={() => alert('This is Card Header')}>
               <Text>NativeBase</Text>
             </CardItem>
-            <CardItem button onPress={() => alert("This is Card Body")}>
+            <CardItem button onPress={() => alert('This is Card Body')}>
               <Body>
                 <Text>Click on any carditem</Text>
               </Body>
             </CardItem>
-            <CardItem
-              footer
-              button
-              onPress={() => alert("This is Card Footer")}
-            >
+            <CardItem footer button onPress={() => alert('This is Card Footer')}>
               <Text>GeekyAnts</Text>
             </CardItem>
           </Card>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

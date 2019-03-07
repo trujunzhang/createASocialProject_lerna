@@ -44,4 +44,3 @@ export class CustomButton extends React.Component<any, any> {
     )
   }
 }
-

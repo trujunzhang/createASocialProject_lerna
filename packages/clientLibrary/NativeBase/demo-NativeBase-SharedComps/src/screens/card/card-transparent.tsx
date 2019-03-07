@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 import {
   Container,
@@ -13,9 +13,9 @@ import {
   Body,
   Left,
   Right
-} from "@app/native-base";
+} from '@app/native-base'
 
-import styles from "./styles";
+import styles from './styles'
 
 export class NHCardTransparent extends React.Component<any, any> {
   render() {
@@ -37,15 +37,12 @@ export class NHCardTransparent extends React.Component<any, any> {
           <Card style={styles.mb} transparent>
             <CardItem>
               <Body>
-                <Text>
-                  This is just a transparent card with some text to boot.
-                </Text>
+                <Text>This is just a transparent card with some text to boot.</Text>
               </Body>
             </CardItem>
           </Card>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

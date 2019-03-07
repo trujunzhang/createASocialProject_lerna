@@ -1,15 +1,6 @@
 import * as React from 'react'
-import {
-  Container,
-  Header,
-  Button,
-  Icon,
-  Item,
-  Input,
-  Content,
-  Text
-} from "@app/native-base";
-import styles from "./styles";
+import { Container, Header, Button, Icon, Item, Input, Content, Text } from '@app/native-base'
+import styles from './styles'
 
 export class NHSearchbar extends React.Component<any, any> {
   render() {
@@ -27,16 +18,11 @@ export class NHSearchbar extends React.Component<any, any> {
         </Header>
 
         <Content padder>
-          <Button
-            block
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}
-          >
+          <Button block onPress={() => this.props.navigation.navigate('DrawerOpen')}>
             <Text>Back</Text>
           </Button>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

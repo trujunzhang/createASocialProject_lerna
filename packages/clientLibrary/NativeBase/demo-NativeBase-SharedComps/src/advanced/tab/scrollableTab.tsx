@@ -11,12 +11,12 @@ import {
   Left,
   Body,
   ScrollableTab
-} from "@app/native-base";
-import { TabOne } from "./tabOne";
-import { TabTwo } from "./tabTwo";
-import { TabThree } from "./tabThree";
-import { TabFour } from "./tabFour";
-import { TabFive } from "./tabFive";
+} from '@app/native-base'
+import { TabOne } from './tabOne'
+import { TabTwo } from './tabTwo'
+import { TabThree } from './tabThree'
+import { TabFour } from './tabFour'
+import { TabFive } from './tabFive'
 
 export class scrollableTab extends React.Component<any, any> {
   render() {
@@ -52,8 +52,6 @@ export class scrollableTab extends React.Component<any, any> {
           </Tab>
         </Tabs>
       </Container>
-    );
+    )
   }
 }
-
-

@@ -10,14 +10,14 @@ import {
   Right,
   Body,
   Segment
-} from "@app/native-base";
+} from '@app/native-base'
 
 export class SegmentHeaderIcon extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       seg: 2
-    };
+    }
   }
   render() {
     return (
@@ -33,15 +33,13 @@ export class SegmentHeaderIcon extends React.Component<any, any> {
               <Button
                 first
                 active={this.state.seg === 1 ? true : false}
-                onPress={() => this.setState({ seg: 1 })}
-              >
+                onPress={() => this.setState({ seg: 1 })}>
                 <Icon name="arrow-back" />
               </Button>
               <Button
                 last
                 active={this.state.seg === 2 ? true : false}
-                onPress={() => this.setState({ seg: 2 })}
-              >
+                onPress={() => this.setState({ seg: 2 })}>
                 <Icon name="arrow-forward" />
               </Button>
             </Segment>
@@ -58,8 +56,6 @@ export class SegmentHeaderIcon extends React.Component<any, any> {
           {this.state.seg === 2 && <Text>Segment Two</Text>}
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

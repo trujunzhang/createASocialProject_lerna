@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -11,28 +11,25 @@ import {
   Body,
   DatePicker,
   Text
-} from "@app/native-base";
+} from '@app/native-base'
 
 export class NHDatePicker extends React.Component<any, any> {
   constructor(props) {
-    super(props);
-    this.state = { chosenDate: new Date() };
+    super(props)
+    this.state = { chosenDate: new Date() }
 
-    this.setDate = this.setDate.bind(this);
+    this.setDate = this.setDate.bind(this)
   }
 
   setDate(newDate) {
-    this.setState({ chosenDate: newDate });
+    this.setState({ chosenDate: newDate })
   }
   render() {
     return (
       <Container>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="ios-menu" />
             </Button>
           </Left>
@@ -42,27 +39,24 @@ export class NHDatePicker extends React.Component<any, any> {
           <Right />
         </Header>
 
-        <Content padder style={{ backgroundColor: "#fff" }}>
+        <Content padder style={{ backgroundColor: '#fff' }}>
           <DatePicker
             defaultDate={new Date(2018, 4, 4)}
             minimumDate={new Date(2018, 1, 1)}
             maximumDate={new Date(2018, 12, 31)}
-            locale={"en"}
+            locale={'en'}
             timeZoneOffsetInMinutes={undefined}
             modalTransparent={false}
-            animationType={"fade"}
-            androidMode={"default"}
+            animationType={'fade'}
+            androidMode={'default'}
             placeHolderText="Select date"
-            textStyle={{ color: "green" }}
-            placeHolderTextStyle={{ color: "#d3d3d3" }}
+            textStyle={{ color: 'green' }}
+            placeHolderTextStyle={{ color: '#d3d3d3' }}
             onDateChange={this.setDate}
           />
-          <Text>
-            Date: {this.state.chosenDate.toString().substr(4, 12)}
-          </Text>
+          <Text>Date: {this.state.chosenDate.toString().substr(4, 12)}</Text>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

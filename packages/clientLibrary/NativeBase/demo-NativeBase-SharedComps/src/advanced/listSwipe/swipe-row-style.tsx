@@ -12,8 +12,8 @@ import {
   Right,
   Body,
   View
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class SwipeRowCustomStyle extends React.Component<any, any> {
   render() {
@@ -33,31 +33,27 @@ export class SwipeRowCustomStyle extends React.Component<any, any> {
 
         <Content scrollEnabled={false}>
           <SwipeRow
-            style={{ backgroundColor: "#9370DB" }}
+            style={{ backgroundColor: '#9370DB' }}
             leftOpenValue={75}
             rightOpenValue={-75}
             left={
-              <Button success onPress={() => alert("Add")}>
-                <Icon active name="add" style={{ color: "#FFF" }} />
+              <Button success onPress={() => alert('Add')}>
+                <Icon active name="add" style={{ color: '#FFF' }} />
               </Button>
             }
             right={
-              <Button danger onPress={() => alert("Trash")}>
+              <Button danger onPress={() => alert('Trash')}>
                 <Icon active name="trash" />
               </Button>
             }
             body={
               <View style={{ paddingLeft: 20 }}>
-                <Text style={{ color: "#FFF" }}>
-                  Swipe me to left and right
-                </Text>
+                <Text style={{ color: '#FFF' }}>Swipe me to left and right</Text>
               </View>
             }
           />
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

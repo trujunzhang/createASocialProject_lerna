@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,18 +12,18 @@ import {
   Left,
   Right,
   Icon
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class IconText extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       tab1: false,
       tab2: false,
       tab3: true,
       tab4: false
-    };
+    }
   }
   toggleTab1() {
     this.setState({
@@ -31,7 +31,7 @@ export class IconText extends React.Component<any, any> {
       tab2: false,
       tab3: false,
       tab4: false
-    });
+    })
   }
   toggleTab2() {
     this.setState({
@@ -39,7 +39,7 @@ export class IconText extends React.Component<any, any> {
       tab2: true,
       tab3: false,
       tab4: false
-    });
+    })
   }
   toggleTab3() {
     this.setState({
@@ -47,7 +47,7 @@ export class IconText extends React.Component<any, any> {
       tab2: false,
       tab3: true,
       tab4: false
-    });
+    })
   }
   toggleTab4() {
     this.setState({
@@ -55,7 +55,7 @@ export class IconText extends React.Component<any, any> {
       tab2: false,
       tab3: false,
       tab4: true
-    });
+    })
   }
   render() {
     return (
@@ -95,7 +95,6 @@ export class IconText extends React.Component<any, any> {
           </FooterTab>
         </Footer>
       </Container>
-    );
+    )
   }
 }
-

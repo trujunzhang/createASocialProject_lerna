@@ -98,5 +98,3 @@ export class NHListThumbnail extends React.Component<any, any> {
     )
   }
 }
-
-

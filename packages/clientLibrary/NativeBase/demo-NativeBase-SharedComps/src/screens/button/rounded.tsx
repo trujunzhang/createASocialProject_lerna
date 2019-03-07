@@ -56,4 +56,3 @@ export class RoundedButton extends React.Component<any, any> {
     )
   }
 }
-

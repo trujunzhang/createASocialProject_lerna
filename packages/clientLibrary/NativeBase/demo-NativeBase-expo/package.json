@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "react-primitives": "*",
+    "react-native-easy-grid": "*",
     "@app/tools": "*",
     "@app/native-base-variables": "*",
     "@app/nativebase-theme-components": "*",
@@ -29,7 +30,6 @@
     "expo": "32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-native-easy-grid": "0.2.0",
     "@types/react-navigation": "3.0.4",
     "react-navigation": "3.3.2",
     "styled-components": "4.1.2"

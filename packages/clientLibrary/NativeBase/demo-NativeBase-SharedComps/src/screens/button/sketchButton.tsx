@@ -56,4 +56,3 @@ export class SketchButton extends React.Component<any, any> {
     )
   }
 }
-

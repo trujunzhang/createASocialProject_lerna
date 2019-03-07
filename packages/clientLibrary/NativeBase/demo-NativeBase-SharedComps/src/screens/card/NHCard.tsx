@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,47 +12,47 @@ import {
   Right,
   List,
   ListItem
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 const datas = [
   {
-    route: "BasicCard",
-    text: "Basic Card"
+    route: 'BasicCard',
+    text: 'Basic Card'
   },
   {
-    route: "NHCardHeaderAndFooter",
-    text: "Card Header & Footer"
+    route: 'NHCardHeaderAndFooter',
+    text: 'Card Header & Footer'
   },
   {
-    route: "NHCardItemBordered",
-    text: "Bordered CardItem"
+    route: 'NHCardItemBordered',
+    text: 'Bordered CardItem'
   },
   {
-    route: "NHCardTransparent",
-    text: "Transparent Card"
+    route: 'NHCardTransparent',
+    text: 'Transparent Card'
   },
   {
-    route: "NHCardItemButton",
-    text: "Button CardItem"
+    route: 'NHCardItemButton',
+    text: 'Button CardItem'
   },
   {
-    route: "NHCardList",
-    text: "Card List"
+    route: 'NHCardList',
+    text: 'Card List'
   },
   {
-    route: "NHCardImage",
-    text: "Card Image"
+    route: 'NHCardImage',
+    text: 'Card Image'
   },
   {
-    route: "NHCardShowcase",
-    text: "Card Showcase"
+    route: 'NHCardShowcase',
+    text: 'Card Showcase'
   },
   {
-    route: "NHCardCustomBorderRadius",
-    text: "Card Custom BorderRadius"
+    route: 'NHCardCustomBorderRadius',
+    text: 'Card Custom BorderRadius'
   }
-];
+]
 
 export class NHCard extends React.Component<any, any> {
   render() {
@@ -60,10 +60,7 @@ export class NHCard extends React.Component<any, any> {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -76,24 +73,19 @@ export class NHCard extends React.Component<any, any> {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
-              <ListItem
-                button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+            renderRow={(data) => (
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>
-    );
+    )
   }
 }
-

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Platform } from "react-native";
+import { Platform } from 'react-native'
 import {
   Container,
   Header,
@@ -12,24 +12,24 @@ import {
   Left,
   Picker,
   Form
-} from "@app/native-base";
+} from '@app/native-base'
 
-import styles from "./styles";
+import styles from './styles'
 
-const Item = Picker.Item;
+const Item = Picker.Item
 
 export class HeaderPicker extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      selected4: "key4"
-    };
+      selected4: 'key4'
+    }
   }
 
   onValueChange4(value: string) {
     this.setState({
       selected4: value
-    });
+    })
   }
   render() {
     return (
@@ -52,10 +52,9 @@ export class HeaderPicker extends React.Component<any, any> {
               mode="dropdown"
               iosHeader="Your Header"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
-              style={{ width: Platform.OS === "ios" ? undefined : 120 }}
+              style={{ width: Platform.OS === 'ios' ? undefined : 120 }}
               selectedValue={this.state.selected4}
-              onValueChange={this.onValueChange4.bind(this)}
-            >
+              onValueChange={this.onValueChange4.bind(this)}>
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />
@@ -65,8 +64,6 @@ export class HeaderPicker extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

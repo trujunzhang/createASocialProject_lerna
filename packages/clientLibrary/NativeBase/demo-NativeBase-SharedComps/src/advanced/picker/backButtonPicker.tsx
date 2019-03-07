@@ -11,22 +11,22 @@ import {
   Left,
   Picker,
   Form
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
-const Item = Picker.Item;
+const Item = Picker.Item
 
 export class BackButtonPicker extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      selected3: "key3"
-    };
+      selected3: 'key3'
+    }
   }
   onValueChange3(value: string) {
     this.setState({
       selected3: value
-    });
+    })
   }
   render() {
     return (
@@ -51,8 +51,7 @@ export class BackButtonPicker extends React.Component<any, any> {
               headerBackButtonText="Baaack!"
               style={{ width: undefined }}
               selectedValue={this.state.selected3}
-              onValueChange={this.onValueChange3.bind(this)}
-            >
+              onValueChange={this.onValueChange3.bind(this)}>
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />
@@ -62,8 +61,6 @@ export class BackButtonPicker extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

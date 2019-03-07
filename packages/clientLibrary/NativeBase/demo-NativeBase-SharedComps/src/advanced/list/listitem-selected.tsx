@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FlatList } from "react-native";
+import { FlatList } from 'react-native'
 import {
   Container,
   Header,
@@ -12,25 +12,25 @@ import {
   Left,
   Right,
   Body
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 const datas = [
-  "Simon Mignolet",
-  "Nathaniel Clyne",
-  "Dejan Lovren",
-  "Mama Sakho",
-  "Alberto Moreno",
-  "Emre Can",
-  "Joe Allen",
-  "Phil Coutinho"
-];
+  'Simon Mignolet',
+  'Nathaniel Clyne',
+  'Dejan Lovren',
+  'Mama Sakho',
+  'Alberto Moreno',
+  'Emre Can',
+  'Joe Allen',
+  'Phil Coutinho'
+]
 
 export class NHListItemSelected extends React.Component<any, any> {
   state = {
     datas,
-    selected: "Simon Mignolet"
-  };
+    selected: 'Simon Mignolet'
+  }
 
   render() {
     return (
@@ -55,24 +55,19 @@ export class NHListItemSelected extends React.Component<any, any> {
               return (
                 <ListItem
                   selected={this.state.selected === item}
-                  onPress={() => this.setState({ selected: item })}
-                >
+                  onPress={() => this.setState({ selected: item })}>
                   <Left>
-                    <Text>
-                      {item}
-                    </Text>
+                    <Text>{item}</Text>
                   </Left>
                   <Right>
                     <Icon name="arrow-forward" />
                   </Right>
                 </ListItem>
-              );
+              )
             }}
           />
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

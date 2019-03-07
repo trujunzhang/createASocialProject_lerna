@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -14,8 +14,8 @@ import {
   Icon,
   Form,
   Text
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class FixedLabel extends React.Component<any, any> {
   render() {
@@ -49,7 +49,6 @@ export class FixedLabel extends React.Component<any, any> {
           </Button>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

@@ -10,7 +10,7 @@ import {
   PageLayout
 } from '@app/native-base'
 
-interface ISubtitlePageProps { }
+interface ISubtitlePageProps {}
 
 interface ISubtitlePageState {
   toolbarParams: IPageToolbarParams

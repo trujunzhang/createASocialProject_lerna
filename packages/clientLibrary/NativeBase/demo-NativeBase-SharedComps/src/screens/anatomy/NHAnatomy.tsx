@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,9 +12,9 @@ import {
   Left,
   Right,
   Body
-} from "@app/native-base";
+} from '@app/native-base'
 
-import styles from "./styles";
+import styles from './styles'
 
 export class NHAnatomy extends React.Component<any, any> {
   render() {
@@ -22,10 +22,7 @@ export class NHAnatomy extends React.Component<any, any> {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="ios-menu" />
             </Button>
           </Left>
@@ -47,7 +44,6 @@ export class NHAnatomy extends React.Component<any, any> {
           </FooterTab>
         </Footer>
       </Container>
-    );
+    )
   }
 }
-

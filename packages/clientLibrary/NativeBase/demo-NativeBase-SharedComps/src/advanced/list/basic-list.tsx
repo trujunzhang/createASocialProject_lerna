@@ -12,19 +12,19 @@ import {
   Left,
   Right,
   Body
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 const datas = [
-  "Simon Mignolet",
-  "Nathaniel Clyne",
-  "Dejan Lovren",
-  "Mama Sakho",
-  "Alberto Moreno",
-  "Emre Can",
-  "Joe Allen",
-  "Phil Coutinho"
-];
+  'Simon Mignolet',
+  'Nathaniel Clyne',
+  'Dejan Lovren',
+  'Mama Sakho',
+  'Alberto Moreno',
+  'Emre Can',
+  'Joe Allen',
+  'Phil Coutinho'
+]
 
 export class NHBasicList extends React.Component<any, any> {
   render() {
@@ -45,22 +45,19 @@ export class NHBasicList extends React.Component<any, any> {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
+            renderRow={(data) => (
               <ListItem>
                 <Left>
-                  <Text>
-                    {data}
-                  </Text>
+                  <Text>{data}</Text>
                 </Left>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

@@ -26,13 +26,11 @@ import {
   NHDatePicker
 } from '@app/nb-demo-shared-components'
 
-
 import MultiListSwipe from '../screens/listSwipe/multi-list-swipe'
 
 import { NHList } from '../screens/list'
 
 import { NHToast } from '../screens/toast'
-
 
 import Home from '../screens/home'
 import ListSwipe from '../screens/listSwipe'

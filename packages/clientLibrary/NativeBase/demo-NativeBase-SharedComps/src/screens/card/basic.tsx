@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Body,
   Left,
   Right
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class BasicCard extends React.Component<any, any> {
   render() {
@@ -42,7 +42,6 @@ export class BasicCard extends React.Component<any, any> {
           </Card>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

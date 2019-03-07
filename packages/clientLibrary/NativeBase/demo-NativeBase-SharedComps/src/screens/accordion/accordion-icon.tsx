@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -10,25 +10,25 @@ import {
   Body,
   Icon,
   Accordion
-} from "@app/native-base";
+} from '@app/native-base'
 
 const dataArray = [
   {
-    title: "First Element",
+    title: 'First Element',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!'
   },
   {
-    title: "Second Element",
+    title: 'Second Element',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!'
   },
   {
-    title: "Third Element",
+    title: 'Third Element',
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!'
   }
-];
+]
 
 export class AccordionIcon extends React.Component<any, any> {
   render() {
@@ -45,7 +45,7 @@ export class AccordionIcon extends React.Component<any, any> {
           </Body>
           <Right />
         </Header>
-        <Content padder style={{ backgroundColor: "white" }}>
+        <Content padder style={{ backgroundColor: 'white' }}>
           <Accordion
             dataArray={dataArray}
             animation={true}
@@ -55,8 +55,6 @@ export class AccordionIcon extends React.Component<any, any> {
           />
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

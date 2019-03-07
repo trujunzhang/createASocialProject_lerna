@@ -115,4 +115,3 @@ export class IconBtn extends React.Component<any, any> {
     )
   }
 }
-

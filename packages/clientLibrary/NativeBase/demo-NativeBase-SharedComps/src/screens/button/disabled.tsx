@@ -60,5 +60,3 @@ export class DisabledButton extends React.Component<any, any> {
     )
   }
 }
-
-

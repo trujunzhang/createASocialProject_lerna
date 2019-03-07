@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -13,18 +13,18 @@ import {
   Right,
   Icon,
   Badge
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class BadgeFooter extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       tab1: false,
       tab2: false,
       tab3: true,
       tab4: false
-    };
+    }
   }
   toggleTab1() {
     this.setState({
@@ -32,7 +32,7 @@ export class BadgeFooter extends React.Component<any, any> {
       tab2: false,
       tab3: false,
       tab4: false
-    });
+    })
   }
   toggleTab2() {
     this.setState({
@@ -40,7 +40,7 @@ export class BadgeFooter extends React.Component<any, any> {
       tab2: true,
       tab3: false,
       tab4: false
-    });
+    })
   }
   toggleTab3() {
     this.setState({
@@ -48,7 +48,7 @@ export class BadgeFooter extends React.Component<any, any> {
       tab2: false,
       tab3: true,
       tab4: false
-    });
+    })
   }
   toggleTab4() {
     this.setState({
@@ -56,7 +56,7 @@ export class BadgeFooter extends React.Component<any, any> {
       tab2: false,
       tab3: false,
       tab4: true
-    });
+    })
   }
   render() {
     return (
@@ -77,12 +77,7 @@ export class BadgeFooter extends React.Component<any, any> {
 
         <Footer>
           <FooterTab>
-            <Button
-              active={this.state.tab1}
-              onPress={() => this.toggleTab1()}
-              vertical
-              badge
-            >
+            <Button active={this.state.tab1} onPress={() => this.toggleTab1()} vertical badge>
               <Badge>
                 <Text>2</Text>
               </Badge>
@@ -93,13 +88,8 @@ export class BadgeFooter extends React.Component<any, any> {
               <Icon active={this.state.tab2} name="camera" />
               <Text>Camera</Text>
             </Button>
-            <Button
-              active={this.state.tab3}
-              onPress={() => this.toggleTab3()}
-              vertical
-              badge
-            >
-              <Badge style={{ backgroundColor: "green" }}>
+            <Button active={this.state.tab3} onPress={() => this.toggleTab3()} vertical badge>
+              <Badge style={{ backgroundColor: 'green' }}>
                 <Text>51</Text>
               </Badge>
               <Icon active={this.state.tab3} name="compass" />
@@ -112,7 +102,6 @@ export class BadgeFooter extends React.Component<any, any> {
           </FooterTab>
         </Footer>
       </Container>
-    );
+    )
   }
 }
-

@@ -12,36 +12,33 @@ import {
   Left,
   Picker,
   ListItem
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
-const Item = Picker.Item;
+const Item = Picker.Item
 
 export class NHPickerAndroid extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       selectedItem: undefined,
-      selected1: "key1",
+      selected1: 'key1',
       results: {
         items: []
       }
-    };
+    }
   }
   onValueChange(value: string) {
     this.setState({
       selected1: value
-    });
+    })
   }
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -54,7 +51,7 @@ export class NHPickerAndroid extends React.Component<any, any> {
         <Content>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#4CDA64" }}>
+              <Button style={{ backgroundColor: '#4CDA64' }}>
                 <Icon name="arrow-dropdown" />
               </Button>
             </Left>
@@ -67,8 +64,7 @@ export class NHPickerAndroid extends React.Component<any, any> {
                 mode="dropdown"
                 style={{ width: 120 }}
                 selectedValue={this.state.selected1}
-                onValueChange={this.onValueChange.bind(this)}
-              >
+                onValueChange={this.onValueChange.bind(this)}>
                 <Item label="TATA" value="key0" />
                 <Item label="AIRTEL" value="key1" />
               </Picker>
@@ -76,7 +72,6 @@ export class NHPickerAndroid extends React.Component<any, any> {
           </ListItem>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

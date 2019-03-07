@@ -11,21 +11,17 @@ import {
   Left,
   Right,
   Body
-} from "@app/native-base";
+} from '@app/native-base'
 
-import styles from "./styles";
+import styles from './styles'
 
 export class NHSpinner extends React.Component<any, any> {
-
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -33,7 +29,6 @@ export class NHSpinner extends React.Component<any, any> {
             <Title>Spinner</Title>
           </Body>
           <Right />
-
         </Header>
 
         <Content>
@@ -43,8 +38,6 @@ export class NHSpinner extends React.Component<any, any> {
           <Spinner color="blue" />
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

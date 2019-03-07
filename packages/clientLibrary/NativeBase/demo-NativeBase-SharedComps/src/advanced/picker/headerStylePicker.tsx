@@ -11,22 +11,22 @@ import {
   Left,
   Picker,
   Form
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
-const Item = Picker.Item;
+const Item = Picker.Item
 
 export class HeaderStylePicker extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      selected5: "key2"
-    };
+      selected5: 'key2'
+    }
   }
   onValueChange5(value: string) {
     this.setState({
       selected5: value
-    });
+    })
   }
   render() {
     return (
@@ -48,13 +48,12 @@ export class HeaderStylePicker extends React.Component<any, any> {
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
-              headerStyle={{ backgroundColor: "#b95dd3" }}
-              headerBackButtonTextStyle={{ color: "#fff" }}
-              headerTitleStyle={{ color: "#fff" }}
+              headerStyle={{ backgroundColor: '#b95dd3' }}
+              headerBackButtonTextStyle={{ color: '#fff' }}
+              headerTitleStyle={{ color: '#fff' }}
               style={{ width: undefined }}
               selectedValue={this.state.selected5}
-              onValueChange={this.onValueChange5.bind(this)}
-            >
+              onValueChange={this.onValueChange5.bind(this)}>
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />
@@ -64,8 +63,6 @@ export class HeaderStylePicker extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

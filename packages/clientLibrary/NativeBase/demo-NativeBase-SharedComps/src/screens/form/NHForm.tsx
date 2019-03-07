@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,67 +12,67 @@ import {
   Right,
   List,
   ListItem
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 const datas = [
   {
-    route: "FixedLabel",
-    text: "Fixed Label"
+    route: 'FixedLabel',
+    text: 'Fixed Label'
   },
   {
-    route: "InlineLabel",
-    text: "Inline Label"
+    route: 'InlineLabel',
+    text: 'Inline Label'
   },
   {
-    route: "FloatingLabel",
-    text: "Floating Label"
+    route: 'FloatingLabel',
+    text: 'Floating Label'
   },
   {
-    route: "PlaceholderLabel",
-    text: "Placeholder Label"
+    route: 'PlaceholderLabel',
+    text: 'Placeholder Label'
   },
   {
-    route: "StackedLabel",
-    text: "Stacked Label"
+    route: 'StackedLabel',
+    text: 'Stacked Label'
   },
   {
-    route: "RegularInput",
-    text: "Regular Textbox"
+    route: 'RegularInput',
+    text: 'Regular Textbox'
   },
   {
-    route: "UnderlineInput",
-    text: "Underlined Textbox"
+    route: 'UnderlineInput',
+    text: 'Underlined Textbox'
   },
   {
-    route: "RoundedInput",
-    text: "Rounded Textbox"
+    route: 'RoundedInput',
+    text: 'Rounded Textbox'
   },
   {
-    route: "IconInput",
-    text: "Icon Textbox"
+    route: 'IconInput',
+    text: 'Icon Textbox'
   },
   {
-    route: "PickerInput",
-    text: "Textbox with Picker"
+    route: 'PickerInput',
+    text: 'Textbox with Picker'
   },
   {
-    route: "SuccessInput",
-    text: "Success Input Textbox"
+    route: 'SuccessInput',
+    text: 'Success Input Textbox'
   },
   {
-    route: "ErrorInput",
-    text: "Error Input Textbox"
+    route: 'ErrorInput',
+    text: 'Error Input Textbox'
   },
   {
-    route: "DisabledInput",
-    text: "Disabled Textbox"
+    route: 'DisabledInput',
+    text: 'Disabled Textbox'
   },
   {
-    route: "TextArea",
-    text: "TextArea"
+    route: 'TextArea',
+    text: 'TextArea'
   }
-];
+]
 
 export class NHForm extends React.Component<any, any> {
   render() {
@@ -80,10 +80,7 @@ export class NHForm extends React.Component<any, any> {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -96,24 +93,19 @@ export class NHForm extends React.Component<any, any> {
         <Content>
           <List
             dataArray={datas}
-            renderRow={data =>
-              <ListItem
-                button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+            renderRow={(data) => (
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
-                  <Icon name="arrow-forward" style={{ color: "#999" }} />
+                  <Icon name="arrow-forward" style={{ color: '#999' }} />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>
-    );
+    )
   }
 }
-

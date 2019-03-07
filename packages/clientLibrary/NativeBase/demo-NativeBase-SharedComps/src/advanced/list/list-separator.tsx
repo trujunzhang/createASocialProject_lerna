@@ -12,8 +12,8 @@ import {
   Right,
   Body,
   Separator
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class NHListSeparator extends React.Component<any, any> {
   render() {
@@ -59,8 +59,6 @@ export class NHListSeparator extends React.Component<any, any> {
           </ListItem>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

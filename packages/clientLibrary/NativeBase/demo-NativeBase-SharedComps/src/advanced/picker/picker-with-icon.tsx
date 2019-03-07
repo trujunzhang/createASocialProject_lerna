@@ -11,22 +11,22 @@ import {
   Left,
   Picker,
   Form
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
-const Item = Picker.Item;
+const Item = Picker.Item
 
 export class PickerWithIcon extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      selected1: "key1"
-    };
+      selected1: 'key1'
+    }
   }
   onValueChange(value: string) {
     this.setState({
       selected1: value
-    });
+    })
   }
   render() {
     return (
@@ -51,8 +51,7 @@ export class PickerWithIcon extends React.Component<any, any> {
               iosIcon={<Icon name="ios-arrow-down-outline" />}
               style={{ width: undefined }}
               selectedValue={this.state.selected1}
-              onValueChange={this.onValueChange.bind(this)}
-            >
+              onValueChange={this.onValueChange.bind(this)}>
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />
@@ -62,8 +61,6 @@ export class PickerWithIcon extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

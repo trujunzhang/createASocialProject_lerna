@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -13,8 +13,8 @@ import {
   IconNB,
   Item,
   Input
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class DisabledInput extends React.Component<any, any> {
   render() {
@@ -41,7 +41,6 @@ export class DisabledInput extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

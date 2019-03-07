@@ -12,10 +12,10 @@ import {
   Left,
   Body,
   TabHeading
-} from "@app/native-base";
-import { TabOne } from "./tabOne";
-import { TabTwo } from "./tabTwo";
-import { TabThree } from "./tabThree"
+} from '@app/native-base'
+import { TabOne } from './tabOne'
+import { TabTwo } from './tabTwo'
+import { TabThree } from './tabThree'
 
 export class ConfigTab extends React.Component<any, any> {
   render() {
@@ -39,8 +39,7 @@ export class ConfigTab extends React.Component<any, any> {
                 <Icon name="camera" />
                 <Text>Camera</Text>
               </TabHeading>
-            }
-          >
+            }>
             <TabOne />
           </Tab>
           <Tab
@@ -48,8 +47,7 @@ export class ConfigTab extends React.Component<any, any> {
               <TabHeading>
                 <Text>No Icon</Text>
               </TabHeading>
-            }
-          >
+            }>
             <TabTwo />
           </Tab>
           <Tab
@@ -57,14 +55,11 @@ export class ConfigTab extends React.Component<any, any> {
               <TabHeading>
                 <Icon name="apps" />
               </TabHeading>
-            }
-          >
+            }>
             <TabThree />
           </Tab>
         </Tabs>
       </Container>
-    );
+    )
   }
 }
-
-

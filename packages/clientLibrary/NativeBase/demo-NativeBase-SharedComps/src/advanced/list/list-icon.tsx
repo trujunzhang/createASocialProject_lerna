@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Platform } from "react-native";
+import { Platform } from 'react-native'
 import {
   Container,
   Header,
@@ -17,26 +17,26 @@ import {
   Radio,
   Picker,
   Separator
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
-const Item = Picker.Item;
+const Item = Picker.Item
 
 export class NHListIcon extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       selectedItem: undefined,
-      selected1: "key1",
+      selected1: 'key1',
       results: {
         items: []
       }
-    };
+    }
   }
   onValueChange(value: string) {
     this.setState({
       selected1: value
-    });
+    })
   }
   render() {
     return (
@@ -57,7 +57,7 @@ export class NHListIcon extends React.Component<any, any> {
           <Separator bordered noTopBorder />
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#FF9501" }}>
+              <Button style={{ backgroundColor: '#FF9501' }}>
                 <Icon active name="plane" />
               </Button>
             </Left>
@@ -70,7 +70,7 @@ export class NHListIcon extends React.Component<any, any> {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#007AFF" }}>
+              <Button style={{ backgroundColor: '#007AFF' }}>
                 <Icon active name="wifi" />
               </Button>
             </Left>
@@ -79,12 +79,12 @@ export class NHListIcon extends React.Component<any, any> {
             </Body>
             <Right>
               <Text>GeekyAnts</Text>
-              {Platform.OS === "ios" && <Icon active name="arrow-forward" />}
+              {Platform.OS === 'ios' && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#007AFF" }}>
+              <Button style={{ backgroundColor: '#007AFF' }}>
                 <Icon active name="bluetooth" />
               </Button>
             </Left>
@@ -93,12 +93,12 @@ export class NHListIcon extends React.Component<any, any> {
             </Body>
             <Right>
               <Text>On</Text>
-              {Platform.OS === "ios" && <Icon active name="arrow-forward" />}
+              {Platform.OS === 'ios' && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#4CDA64" }}>
+              <Button style={{ backgroundColor: '#4CDA64' }}>
                 <Icon active name="phone-portrait" />
               </Button>
             </Left>
@@ -111,7 +111,7 @@ export class NHListIcon extends React.Component<any, any> {
           </ListItem>
           <ListItem icon last>
             <Left>
-              <Button style={{ backgroundColor: "#4CDA64" }}>
+              <Button style={{ backgroundColor: '#4CDA64' }}>
                 <Icon active name="link" />
               </Button>
             </Left>
@@ -120,7 +120,7 @@ export class NHListIcon extends React.Component<any, any> {
             </Body>
             <Right>
               <Text>Off</Text>
-              {Platform.OS === "ios" && <Icon active name="arrow-forward" />}
+              {Platform.OS === 'ios' && <Icon active name="arrow-forward" />}
             </Right>
           </ListItem>
 
@@ -128,33 +128,29 @@ export class NHListIcon extends React.Component<any, any> {
 
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#FD3C2D" }}>
+              <Button style={{ backgroundColor: '#FD3C2D' }}>
                 <Icon active name="notifications" />
               </Button>
             </Left>
             <Body>
               <Text>Notifications</Text>
             </Body>
-            <Right>
-              {Platform.OS === "ios" && <Icon active name="arrow-forward" />}
-            </Right>
+            <Right>{Platform.OS === 'ios' && <Icon active name="arrow-forward" />}</Right>
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#8F8E93" }}>
+              <Button style={{ backgroundColor: '#8F8E93' }}>
                 <Icon active name="switch" />
               </Button>
             </Left>
             <Body>
               <Text>Control Center</Text>
             </Body>
-            <Right>
-              {Platform.OS === "ios" && <Icon active name="arrow-forward" />}
-            </Right>
+            <Right>{Platform.OS === 'ios' && <Icon active name="arrow-forward" />}</Right>
           </ListItem>
           <ListItem icon last>
             <Left>
-              <Button style={{ backgroundColor: "#5855D6" }}>
+              <Button style={{ backgroundColor: '#5855D6' }}>
                 <Icon active name="moon" />
               </Button>
             </Left>
@@ -168,7 +164,7 @@ export class NHListIcon extends React.Component<any, any> {
           <Separator bordered />
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#4CDA64" }}>
+              <Button style={{ backgroundColor: '#4CDA64' }}>
                 <Icon name="arrow-dropdown" />
               </Button>
             </Left>
@@ -181,8 +177,7 @@ export class NHListIcon extends React.Component<any, any> {
                 mode="dropdown"
                 style={{ width: 120 }}
                 selectedValue={this.state.selected1}
-                onValueChange={this.onValueChange.bind(this)}
-              >
+                onValueChange={this.onValueChange.bind(this)}>
                 <Item label="TATA" value="key0" />
                 <Item label="AIRTEL" value="key1" />
               </Picker>
@@ -190,7 +185,7 @@ export class NHListIcon extends React.Component<any, any> {
           </ListItem>
           <ListItem icon>
             <Left>
-              <Button style={{ backgroundColor: "#8F8E93" }}>
+              <Button style={{ backgroundColor: '#8F8E93' }}>
                 <Icon active name="cog" />
               </Button>
             </Left>
@@ -198,28 +193,24 @@ export class NHListIcon extends React.Component<any, any> {
               <Text>Software Update</Text>
             </Body>
             <Right>
-              <Badge style={{ backgroundColor: "#FD3C2D" }}>
+              <Badge style={{ backgroundColor: '#FD3C2D' }}>
                 <Text>2</Text>
               </Badge>
             </Right>
           </ListItem>
           <ListItem last icon>
             <Left>
-              <Button style={{ backgroundColor: "#007AFF" }}>
+              <Button style={{ backgroundColor: '#007AFF' }}>
                 <Icon active name="hand" />
               </Button>
             </Left>
             <Body>
               <Text>Privacy</Text>
             </Body>
-            <Right>
-              {Platform.OS === "ios" && <Icon active name="arrow-forward" />}
-            </Right>
+            <Right>{Platform.OS === 'ios' && <Icon active name="arrow-forward" />}</Right>
           </ListItem>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

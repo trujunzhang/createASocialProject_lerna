@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -10,8 +10,8 @@ import {
   Left,
   Right,
   Icon
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class TextAreaForm extends React.Component<any, any> {
   render() {
@@ -33,7 +33,6 @@ export class TextAreaForm extends React.Component<any, any> {
           <Textarea rowSpan={5} bordered placeholder="Textarea" />
         </Content>
       </Container>
-    );
+    )
   }
 }
-

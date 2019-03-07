@@ -12,23 +12,23 @@ import {
   Body,
   List,
   ListItem
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 const datas = [
   {
-    route: "BasicListSwipe",
-    text: "Single SwipeRow"
+    route: 'BasicListSwipe',
+    text: 'Single SwipeRow'
   },
   {
-    route: "SwipeRowCustomStyle",
-    text: "Swipe Row Custom Style"
+    route: 'SwipeRowCustomStyle',
+    text: 'Swipe Row Custom Style'
   },
   {
-    route: "MultiListSwipe",
-    text: "Multiple List Swipe"
+    route: 'MultiListSwipe',
+    text: 'Multiple List Swipe'
   }
-];
+]
 
 export class NHListSwipe extends React.Component<any, any> {
   render() {
@@ -36,10 +36,7 @@ export class NHListSwipe extends React.Component<any, any> {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -52,25 +49,19 @@ export class NHListSwipe extends React.Component<any, any> {
         <Content scrollEnabled={false} contentContainerStyle={{ flex: 1 }}>
           <List
             dataArray={datas}
-            renderRow={data =>
-              <ListItem
-                button
-                onPress={() => this.props.navigation.navigate(data.route)}
-              >
+            renderRow={(data) => (
+              <ListItem button onPress={() => this.props.navigation.navigate(data.route)}>
                 <Left>
-                  <Text>
-                    {data.text}
-                  </Text>
+                  <Text>{data.text}</Text>
                 </Left>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>}
+              </ListItem>
+            )}
           />
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

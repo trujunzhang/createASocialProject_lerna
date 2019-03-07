@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Item,
   Input,
   Form
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class RoundedInput extends React.Component<any, any> {
   render() {
@@ -39,7 +39,6 @@ export class RoundedInput extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

@@ -56,4 +56,3 @@ export class BlockButton extends React.Component<any, any> {
     )
   }
 }
-

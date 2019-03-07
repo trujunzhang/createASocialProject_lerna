@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "react-primitives": "*",
+    "react-native-easy-grid": "*",
     "@app/types": "*",
     "@app/tools": "*",
     "@app/native-base": "*",

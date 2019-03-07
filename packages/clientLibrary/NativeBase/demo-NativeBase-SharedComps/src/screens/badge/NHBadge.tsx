@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -11,8 +11,8 @@ import {
   Left,
   Right,
   Body
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class NHBadge extends React.Component<any, any> {
   render() {
@@ -20,10 +20,7 @@ export class NHBadge extends React.Component<any, any> {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -53,21 +50,13 @@ export class NHBadge extends React.Component<any, any> {
             <Text>2</Text>
           </Badge>
           <Badge primary style={styles.mb}>
-            <Icon
-              name="star"
-              style={{ fontSize: 15, color: "#fff", lineHeight: 20 }}
-            />
+            <Icon name="star" style={{ fontSize: 15, color: '#fff', lineHeight: 20 }} />
           </Badge>
-          <Badge
-            style={{ backgroundColor: "black" }}
-            textStyle={{ color: "white" }}
-          >
+          <Badge style={{ backgroundColor: 'black' }} textStyle={{ color: 'white' }}>
             <Text>1866</Text>
           </Badge>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

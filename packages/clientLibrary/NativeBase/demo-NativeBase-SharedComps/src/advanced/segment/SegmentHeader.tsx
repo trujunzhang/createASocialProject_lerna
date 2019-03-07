@@ -10,15 +10,15 @@ import {
   Right,
   Body,
   Segment
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class SegmentHeader extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       seg: 2
-    };
+    }
   }
   render() {
     return (
@@ -34,15 +34,13 @@ export class SegmentHeader extends React.Component<any, any> {
               <Button
                 active={this.state.seg === 1 ? true : false}
                 first
-                onPress={() => this.setState({ seg: 1 })}
-              >
+                onPress={() => this.setState({ seg: 1 })}>
                 <Text>Puppies</Text>
               </Button>
               <Button
                 last
                 active={this.state.seg === 2 ? true : false}
-                onPress={() => this.setState({ seg: 2 })}
-              >
+                onPress={() => this.setState({ seg: 2 })}>
                 <Text>Cubs</Text>
               </Button>
             </Segment>
@@ -59,8 +57,6 @@ export class SegmentHeader extends React.Component<any, any> {
           {this.state.seg === 2 && <Text>Cubs Selected</Text>}
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

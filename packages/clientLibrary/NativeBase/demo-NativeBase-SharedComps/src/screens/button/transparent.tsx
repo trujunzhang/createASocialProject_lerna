@@ -56,5 +56,3 @@ export class TransparentButton extends React.Component<any, any> {
     )
   }
 }
-
-

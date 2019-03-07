@@ -10,10 +10,10 @@ import {
   Right,
   Left,
   Body
-} from "@app/native-base";
-import { TabOne } from "./tabOne";
-import { TabTwo } from "./tabTwo";
-import { TabThree } from "./tabThree"
+} from '@app/native-base'
+import { TabOne } from './tabOne'
+import { TabTwo } from './tabTwo'
+import { TabThree } from './tabThree'
 
 export class BasicTab extends React.Component<any, any> {
   render() {
@@ -43,8 +43,6 @@ export class BasicTab extends React.Component<any, any> {
           </Tab>
         </Tabs>
       </Container>
-    );
+    )
   }
 }
-
-

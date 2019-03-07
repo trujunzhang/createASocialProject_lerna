@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,48 +12,45 @@ import {
   Left,
   Right,
   Body
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class NHCheckbox extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       checkbox1: true,
       checkbox2: true,
       checkbox3: true,
       checkbox4: false
-    };
+    }
   }
   toggleSwitch1() {
     this.setState({
       checkbox1: !this.state.checkbox1
-    });
+    })
   }
   toggleSwitch2() {
     this.setState({
       checkbox2: !this.state.checkbox2
-    });
+    })
   }
   toggleSwitch3() {
     this.setState({
       checkbox3: !this.state.checkbox3
-    });
+    })
   }
   toggleSwitch4() {
     this.setState({
       checkbox4: !this.state.checkbox4
-    });
+    })
   }
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -65,10 +62,7 @@ export class NHCheckbox extends React.Component<any, any> {
 
         <Content>
           <ListItem button onPress={() => this.toggleSwitch1()}>
-            <CheckBox
-              checked={this.state.checkbox1}
-              onPress={() => this.toggleSwitch1()}
-            />
+            <CheckBox checked={this.state.checkbox1} onPress={() => this.toggleSwitch1()} />
             <Body>
               <Text>Lunch Break</Text>
             </Body>
@@ -105,7 +99,6 @@ export class NHCheckbox extends React.Component<any, any> {
           </ListItem>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

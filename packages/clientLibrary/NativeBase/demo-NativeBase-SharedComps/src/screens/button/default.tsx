@@ -56,5 +56,3 @@ export class DefaultButton extends React.Component<any, any> {
     )
   }
 }
-
-

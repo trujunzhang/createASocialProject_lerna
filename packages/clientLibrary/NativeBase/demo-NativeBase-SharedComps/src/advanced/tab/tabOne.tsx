@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Content, Card, CardItem, Text, Body } from "@app/native-base";
+import { Content, Card, CardItem, Text, Body } from '@app/native-base'
 
 export class TabOne extends React.Component<any, any> {
   render() {
@@ -18,28 +18,21 @@ export class TabOne extends React.Component<any, any> {
           </CardItem>
           <CardItem>
             <Body>
-              <Text>
-                Any native third-party libraries can be included along with
-                NativeBase.
-              </Text>
+              <Text>Any native third-party libraries can be included along with NativeBase.</Text>
             </Body>
           </CardItem>
           <CardItem>
             <Body>
-              <Text>
-                Single file to theme your app and NativeBase components.
-              </Text>
+              <Text>Single file to theme your app and NativeBase components.</Text>
             </Body>
           </CardItem>
           <CardItem>
             <Body>
-              <Text>
-                Gives an ease to include different font types in your app.
-              </Text>
+              <Text>Gives an ease to include different font types in your app.</Text>
             </Body>
           </CardItem>
         </Card>
       </Content>
-    );
+    )
   }
 }

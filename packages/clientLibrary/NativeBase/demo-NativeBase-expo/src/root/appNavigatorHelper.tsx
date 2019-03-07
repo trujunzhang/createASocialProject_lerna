@@ -63,10 +63,7 @@ import {
   NHCardCustomBorderRadius
 } from '@app/nb-demo-shared-components'
 
-import {
-  BasicFab,
-  MultipleFab
-} from '@app/nb-demo-shared-components'
+import { BasicFab, MultipleFab } from '@app/nb-demo-shared-components'
 
 import {
   FixedLabel,
@@ -121,10 +118,7 @@ import {
 } from '../screens/toast'
 
 import AdvSegment from '../screens/segment/segmentTab'
-import {
-  SimpleDeck,
-  AdvancedDeck
-} from '@app/nb-demo-shared-components'
+import { SimpleDeck, AdvancedDeck } from '@app/nb-demo-shared-components'
 
 import NHCustomRadio from '../screens/radio/custom'
 import NHDefaultRadio from '../screens/radio/default'

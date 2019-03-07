@@ -11,8 +11,8 @@ import {
   Left,
   Right,
   Body
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class NHListDivider extends React.Component<any, any> {
   render() {
@@ -77,8 +77,6 @@ export class NHListDivider extends React.Component<any, any> {
           </ListItem>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

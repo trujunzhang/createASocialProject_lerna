@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,8 +12,8 @@ import {
   Body,
   Left,
   Right
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class NHCardHeaderAndFooter extends React.Component<any, any> {
   render() {
@@ -39,27 +39,25 @@ export class NHCardHeaderAndFooter extends React.Component<any, any> {
             <CardItem>
               <Body>
                 <Text>
-                  NativeBase is a free and open source framework that enable
-                  developers to build high-quality mobile apps using React
-                  Native iOS and Android apps with a fusion of ES6.
+                  NativeBase is a free and open source framework that enable developers to build
+                  high-quality mobile apps using React Native iOS and Android apps with a fusion of
+                  ES6.
                 </Text>
               </Body>
             </CardItem>
             <CardItem>
               <Body>
                 <Text>
-                  NativeBase builds a layer on top of React Native that provides
-                  you with basic set of components for mobile application
-                  development.
+                  NativeBase builds a layer on top of React Native that provides you with basic set
+                  of components for mobile application development.
                 </Text>
               </Body>
             </CardItem>
             <CardItem>
               <Body>
                 <Text>
-                  Get on the mobile fast track with NativeBase, the
-                  fastest-growing platform and tool set for iOS and Android
-                  development.
+                  Get on the mobile fast track with NativeBase, the fastest-growing platform and
+                  tool set for iOS and Android development.
                 </Text>
               </Body>
             </CardItem>
@@ -69,7 +67,6 @@ export class NHCardHeaderAndFooter extends React.Component<any, any> {
           </Card>
         </Content>
       </Container>
-    );
+    )
   }
 }
-

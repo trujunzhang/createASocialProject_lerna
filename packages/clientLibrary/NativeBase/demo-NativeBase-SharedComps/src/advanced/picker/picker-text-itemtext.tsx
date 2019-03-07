@@ -11,22 +11,22 @@ import {
   Left,
   Picker,
   Form
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
-const Item = Picker.Item;
+const Item = Picker.Item
 
 export class PickerTextItemText extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       selected2: undefined
-    };
+    }
   }
   onValueChange2(value: string) {
     this.setState({
       selected2: value
-    });
+    })
   }
   render() {
     return (
@@ -50,16 +50,15 @@ export class PickerTextItemText extends React.Component<any, any> {
               iosIcon={<Icon name="ios-arrow-down-outline" />}
               style={{ width: undefined }}
               placeholder="Select your SIM"
-              textStyle={{ color: "#5cb85c" }}
+              textStyle={{ color: '#5cb85c' }}
               itemStyle={{
-                backgroundColor: "#d3d3d3",
+                backgroundColor: '#d3d3d3',
                 marginLeft: 0,
                 paddingLeft: 10
               }}
-              itemTextStyle={{ color: "#788ad2" }}
+              itemTextStyle={{ color: '#788ad2' }}
               selectedValue={this.state.selected2}
-              onValueChange={this.onValueChange2.bind(this)}
-            >
+              onValueChange={this.onValueChange2.bind(this)}>
               <Item label="Wallet" value="key0" />
               <Item label="ATM Card" value="key1" />
               <Item label="Debit Card" value="key2" />
@@ -69,8 +68,6 @@ export class PickerTextItemText extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

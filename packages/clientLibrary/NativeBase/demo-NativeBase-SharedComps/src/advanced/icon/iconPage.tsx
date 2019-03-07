@@ -77,5 +77,3 @@ export class NHIcon extends React.Component<any, any> {
     )
   }
 }
-
-

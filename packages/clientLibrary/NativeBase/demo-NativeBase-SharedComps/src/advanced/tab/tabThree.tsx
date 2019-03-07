@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Content, Card, CardItem, Text, Body } from "@app/native-base";
+import { Content, Card, CardItem, Text, Body } from '@app/native-base'
 
 export class TabThree extends React.Component<any, any> {
   render() {
@@ -9,9 +9,9 @@ export class TabThree extends React.Component<any, any> {
           <CardItem>
             <Body>
               <Text>
-                NativeBase is a free and open source framework that enables
-                developers to build high-quality mobile apps using React Native
-                iOS and Android apps with a fusion of ES6.
+                NativeBase is a free and open source framework that enables developers to build
+                high-quality mobile apps using React Native iOS and Android apps with a fusion of
+                ES6.
               </Text>
             </Body>
           </CardItem>
@@ -20,13 +20,13 @@ export class TabThree extends React.Component<any, any> {
           <CardItem>
             <Body>
               <Text>
-                NativeBase gives you the potential of building applications that
-                run on iOS and Android using a single codebase.
+                NativeBase gives you the potential of building applications that run on iOS and
+                Android using a single codebase.
               </Text>
             </Body>
           </CardItem>
         </Card>
       </Content>
-    );
+    )
   }
 }

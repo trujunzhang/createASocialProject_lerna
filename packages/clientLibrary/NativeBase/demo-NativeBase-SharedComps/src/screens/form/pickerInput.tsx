@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -13,20 +13,20 @@ import {
   Label,
   Item,
   Picker
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class PickerInput extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       selected2: undefined
-    };
+    }
   }
   onValueChange2(value: string) {
     this.setState({
       selected2: value
-    });
+    })
   }
   render() {
     return (
@@ -51,11 +51,10 @@ export class PickerInput extends React.Component<any, any> {
                 iosIcon={<Icon name="ios-arrow-down-outline" />}
                 style={{ width: undefined }}
                 placeholder="Select your SIM"
-                placeholderStyle={{ color: "#bfc6ea" }}
+                placeholderStyle={{ color: '#bfc6ea' }}
                 placeholderIconColor="#007aff"
                 selectedValue={this.state.selected2}
-                onValueChange={this.onValueChange2.bind(this)}
-              >
+                onValueChange={this.onValueChange2.bind(this)}>
                 <Item label="Wallet" value="key0" />
                 <Item label="ATM Card" value="key1" />
                 <Item label="Debit Card" value="key2" />
@@ -66,7 +65,6 @@ export class PickerInput extends React.Component<any, any> {
           </Form>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
