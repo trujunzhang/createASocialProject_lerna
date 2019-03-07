@@ -17,7 +17,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-export class Stacked extends React.Component<any, any> {
+export class StackedLabel extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

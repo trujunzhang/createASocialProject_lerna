@@ -18,7 +18,7 @@ import {
   HeaderTransparent
 } from '../screens/Header'
 
-import { BasicFooter, IconFooter, IconText, BadgeFooter } from '../screens/footer'
+import { BasicFooter, IconFooter, IconText, BadgeFooter } from '@app/nb-demo-shared-components'
 
 import { IconList } from '../screens/vectorIcons'
 
@@ -35,20 +35,20 @@ import {
   CustomHeaderPicker
 } from '../screens/picker'
 
-import { RegularActionSheet, IconActionSheet } from '../screens/actionsheet'
+import { RegularActionSheet, IconActionSheet } from '@app/nb-demo-shared-components'
 
 import { Icons, BasicIcon, StateIcon, PlatformSpecificIcon, IconFamily } from '../screens/icon'
 
 import {
-  Default,
-  Outline,
-  Rounded,
-  Block,
-  Full,
-  Custom,
-  Transparent,
+  DefaultButton,
+  OutlineButton,
+  RoundedButton,
+  BlockButton,
+  FullButton,
+  CustomButton,
+  TransparentButton,
   IconBtn,
-  Disabled
+  DisabledButton
 } from '@app/nb-demo-shared-components'
 
 import {
@@ -61,10 +61,10 @@ import {
   NHCardHeaderAndFooter,
   NHCardTransparent,
   NHCardCustomBorderRadius
-} from '../screens/card'
+} from '@app/nb-demo-shared-components'
 
-import BasicFab from '../screens/fab/basic'
-import MultipleFab from '../screens/fab/multiple'
+import BasicFab from '@app/nb-demo-shared-components'
+import MultipleFab from '@app/nb-demo-shared-components'
 
 import {
   FixedLabel,
@@ -80,7 +80,7 @@ import {
   ErrorInput,
   DisabledInput,
   PickerInput
-} from '../screens/form'
+} from '@app/nb-demo-shared-components'
 
 import RowNB from '../screens/layout/row'
 import ColumnNB from '../screens/layout/column'
@@ -119,8 +119,8 @@ import {
 } from '../screens/toast'
 
 import AdvSegment from '../screens/segment/segmentTab'
-import SimpleDeck from '../screens/deckswiper/simple'
-import AdvancedDeck from '../screens/deckswiper/advanced'
+import SimpleDeck from '@app/nb-demo-shared-components'
+import AdvancedDeck from '@app/nb-demo-shared-components'
 import NHCustomRadio from '../screens/radio/custom'
 import NHDefaultRadio from '../screens/radio/default'
 
@@ -130,9 +130,9 @@ import {
   AccordionIconStyle,
   AccordionHeaderContentStyle,
   AccordionCustomHeaderContent
-} from '../screens/accordion'
+} from '@app/nb-demo-shared-components'
 
-import TextArea from '../screens/form/textArea'
+import TextArea from '@app/nb-demo-shared-components'
 
 const DraftsStack = createStackNavigator(stackRouteConfigs, stackConfig)
 export const appRouteConfigs = {
@@ -158,15 +158,15 @@ export const appRouteConfigs = {
 
   IconList: { screen: IconList },
 
-  Default: { screen: Default },
-  Outline: { screen: Outline },
-  Rounded: { screen: Rounded },
-  Block: { screen: Block },
-  Full: { screen: Full },
-  Custom: { screen: Custom },
-  Transparent: { screen: Transparent },
+  Default: { screen: DefaultButton },
+  Outline: { screen: OutlineButton },
+  Rounded: { screen: RoundedButton },
+  Block: { screen: BlockButton },
+  Full: { screen: FullButton },
+  Custom: { screen: CustomButton },
+  Transparent: { screen: TransparentButton },
   IconBtn: { screen: IconBtn },
-  Disabled: { screen: Disabled },
+  Disabled: { screen: DisabledButton },
 
   BasicCard: { screen: BasicCard },
   NHCardItemBordered: { screen: NHCardItemBordered },

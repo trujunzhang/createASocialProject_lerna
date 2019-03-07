@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-export class Basic extends React.Component<any, any> {
+export class BasicCard extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

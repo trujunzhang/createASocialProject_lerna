@@ -16,7 +16,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-export class Success extends React.Component<any, any> {
+export class SuccessInput extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

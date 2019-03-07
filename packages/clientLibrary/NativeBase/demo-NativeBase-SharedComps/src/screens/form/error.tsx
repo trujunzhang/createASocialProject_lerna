@@ -16,7 +16,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-export class Error extends React.Component<any, any> {
+export class ErrorInput extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

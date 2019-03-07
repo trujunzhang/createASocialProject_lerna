@@ -8,15 +8,24 @@ import { IconSetsList } from '../screens/vectorIcons'
 
 import { NHPickerPage as NHPicker } from '../screens/picker'
 
-import { ActionsheetPage as Actionsheet } from '../screens/actionsheet'
+import { ActionsheetPage as Actionsheet } from '@app/nb-demo-shared-components'
 
 import { NHIconPage as NHIcon } from '../screens/icon'
 
 import { NHButton } from '@app/nb-demo-shared-components'
 
-import { NHCard } from '../screens/card'
+import {
+  NHCard,
+  NHForm,
+  NHAccordion,
+  NHAnatomy,
+  NHBadge,
+  NHCheckbox,
+  NHDeckSwiper,
+  NHFab,
+  NHDatePicker
+} from '@app/nb-demo-shared-components'
 
-import { NHForm } from '../screens/form'
 
 import MultiListSwipe from '../screens/listSwipe/multi-list-swipe'
 
@@ -24,14 +33,8 @@ import { NHList } from '../screens/list'
 
 import { NHToast } from '../screens/toast'
 
-import { NHAccordion } from '../screens/accordion'
 
 import Home from '../screens/home'
-import Anatomy from '../screens/anatomy'
-import NHBadge from '../screens/badge'
-import NHCheckbox from '../screens/checkbox'
-import NHDeckSwiper from '../screens/deckswiper'
-import NHFab from '../screens/fab'
 import ListSwipe from '../screens/listSwipe'
 import NHLayout from '../screens/layout'
 import NHRadio from '../screens/radio'
@@ -41,11 +44,10 @@ import NHTab from '../screens/tab'
 import NHThumbnail from '../screens/thumbnail'
 import NHTypography from '../screens/typography'
 import Segment from '../screens/segment'
-import NHDatePicker from '../screens/datepicker'
 
 export const stackRouteConfigs = {
   Home: { screen: Home },
-  Anatomy: { screen: Anatomy },
+  Anatomy: { screen: NHAnatomy },
   Header: { screen: Header },
   Footer: { screen: Footer },
   NHBadge: { screen: NHBadge },
