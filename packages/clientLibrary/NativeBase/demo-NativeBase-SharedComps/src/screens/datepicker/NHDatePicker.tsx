@@ -13,7 +13,7 @@ import {
   Text
 } from "@app/native-base";
 
-class NHDatePicker extends React.Component<any, any> {
+export class NHDatePicker extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = { chosenDate: new Date() };
@@ -66,4 +66,3 @@ class NHDatePicker extends React.Component<any, any> {
   }
 }
 
-export default NHDatePicker;

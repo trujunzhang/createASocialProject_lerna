@@ -16,7 +16,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class BadgeFooter extends React.Component<any, any> {
+export class BadgeFooter extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -116,4 +116,3 @@ class BadgeFooter extends React.Component<any, any> {
   }
 }
 
-export default BadgeFooter;

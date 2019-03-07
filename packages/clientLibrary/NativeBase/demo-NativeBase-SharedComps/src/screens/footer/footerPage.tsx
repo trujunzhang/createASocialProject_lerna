@@ -34,7 +34,7 @@ const datas = [
   }
 ];
 
-class NHFooter extends React.Component<any, any> {
+export class NHFooter extends React.Component<any, any> {
 
   render() {
     return (
@@ -78,4 +78,3 @@ class NHFooter extends React.Component<any, any> {
   }
 }
 
-export default NHFooter;

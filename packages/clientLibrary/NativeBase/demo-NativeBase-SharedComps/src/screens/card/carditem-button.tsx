@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class NHCardItemButton extends React.Component<any, any> {
+export class NHCardItemButton extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -59,4 +59,3 @@ class NHCardItemButton extends React.Component<any, any> {
   }
 }
 
-export default NHCardItemButton;

@@ -1,3 +1,3 @@
 export * from './NHFab'
-export * from './basics'
+export * from './basic'
 export * from './multiple'

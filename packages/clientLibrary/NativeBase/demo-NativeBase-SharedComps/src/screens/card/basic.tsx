@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class Basic extends React.Component<any, any> {
+export class Basic extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -46,4 +46,3 @@ class Basic extends React.Component<any, any> {
   }
 }
 
-export default Basic;

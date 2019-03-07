@@ -74,7 +74,7 @@ const datas = [
   }
 ];
 
-class NHForm extends React.Component<any, any> {
+export class NHForm extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -117,4 +117,3 @@ class NHForm extends React.Component<any, any> {
   }
 }
 
-export default NHForm;

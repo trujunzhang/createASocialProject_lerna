@@ -13,7 +13,7 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-class SketchButton extends React.Component<any, any> {
+export class SketchButton extends React.Component<any, any> {
   renderIcon() {
     return <Icon name="arrow-back" />
   }
@@ -57,4 +57,3 @@ class SketchButton extends React.Component<any, any> {
   }
 }
 
-export default SketchButton

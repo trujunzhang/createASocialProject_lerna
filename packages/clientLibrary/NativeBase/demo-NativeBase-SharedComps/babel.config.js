@@ -1,28 +1,28 @@
-module.exports = function (api) {
+module.exports = function(api) {
   if (!!api) {
     api.cache(false)
-  };
+  }
   return {
     presets: [
       [
-        "@babel/preset-env",
+        '@babel/preset-env',
         {
-          "useBuiltIns": "entry"
+          useBuiltIns: 'entry'
         }
       ],
       [
-        "@babel/preset-react",
+        '@babel/preset-react',
         {
-          development: process.env.BABEL_ENV === "development",
-        },
+          development: process.env.BABEL_ENV === 'development'
+        }
       ],
-      "@babel/preset-typescript"
+      '@babel/preset-typescript'
     ],
     plugins: [
-      ["@babel/plugin-proposal-class-properties", { "loose": true }],
-      ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
+      ['@babel/plugin-proposal-class-properties', { loose: true }],
+      ['@babel/plugin-proposal-object-rest-spread', { loose: true, useBuiltIns: true }],
       [
-        "@babel/plugin-transform-runtime",
+        '@babel/plugin-transform-runtime',
         {
           corejs: false,
           helpers: true,
@@ -31,11 +31,10 @@ module.exports = function (api) {
         }
       ],
       [
-        "module-resolver",
+        'module-resolver',
         {
-          "cwd": "babelrc",
-          "alias": {
-          },
+          cwd: 'babelrc',
+          alias: {},
           extensions: [
             '.js',
             '.jsx',
@@ -57,9 +56,9 @@ module.exports = function (api) {
             '.ios.js',
             '.ios.ts',
             '.ios.tsx'
-          ],
+          ]
         }
       ]
     ]
   }
-};
+}

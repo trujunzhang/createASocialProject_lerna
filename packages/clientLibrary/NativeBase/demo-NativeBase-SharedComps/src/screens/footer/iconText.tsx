@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class IconText extends React.Component<any, any> {
+export class IconText extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -99,4 +99,3 @@ class IconText extends React.Component<any, any> {
   }
 }
 
-export default IconText;

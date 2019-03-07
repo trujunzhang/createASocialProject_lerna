@@ -14,7 +14,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class MultipleFab extends React.Component<any, any> {
+export class MultipleFab extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -122,4 +122,3 @@ class MultipleFab extends React.Component<any, any> {
   }
 }
 
-export default MultipleFab;

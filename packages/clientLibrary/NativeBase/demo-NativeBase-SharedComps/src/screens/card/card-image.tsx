@@ -20,7 +20,7 @@ import styles from "./styles";
 const logo = require("../../../assets/logo.png");
 const cardImage = require("../../../assets/drawer-cover.png");
 
-class NHCardImage extends React.Component<any, any> {
+export class NHCardImage extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -50,12 +50,12 @@ class NHCardImage extends React.Component<any, any> {
 
             <CardItem cardBody>
               <Image
-                style={{
+                style={[{
                   resizeMode: "cover",
                   width: null,
                   height: 200,
                   flex: 1
-                }}
+                }] as any}
                 source={cardImage}
               />
             </CardItem>
@@ -84,4 +84,3 @@ class NHCardImage extends React.Component<any, any> {
   }
 }
 
-export default NHCardImage;

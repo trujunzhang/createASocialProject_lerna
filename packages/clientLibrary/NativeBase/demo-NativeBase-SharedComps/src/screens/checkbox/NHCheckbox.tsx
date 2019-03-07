@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class NHCheckbox extends React.Component<any, any> {
+export class NHCheckbox extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -109,4 +109,3 @@ class NHCheckbox extends React.Component<any, any> {
   }
 }
 
-export default NHCheckbox;

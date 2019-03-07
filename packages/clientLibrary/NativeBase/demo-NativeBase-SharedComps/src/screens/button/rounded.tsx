@@ -13,7 +13,7 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-class Rounded extends React.Component<any, any> {
+export class Rounded extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -57,4 +57,3 @@ class Rounded extends React.Component<any, any> {
   }
 }
 
-export default Rounded

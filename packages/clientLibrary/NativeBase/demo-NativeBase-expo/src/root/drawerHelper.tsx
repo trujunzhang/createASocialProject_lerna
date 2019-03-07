@@ -2,7 +2,7 @@ import { SideBar } from '../screens/sidebar'
 
 import { Header } from '../screens/Header'
 
-import { NHFooter as Footer } from '../screens/footer'
+import { NHFooter as Footer } from '@app/nb-demo-shared-components'
 
 import { IconSetsList } from '../screens/vectorIcons'
 

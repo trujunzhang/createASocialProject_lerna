@@ -16,7 +16,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class PickerInput extends React.Component<any, any> {
+export class PickerInput extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -70,4 +70,3 @@ class PickerInput extends React.Component<any, any> {
   }
 }
 
-export default PickerInput;

@@ -46,7 +46,7 @@ const cards = [
   }
 ];
 
-class SimpleDeck extends React.Component<any, any> {
+export class SimpleDeck extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -85,12 +85,12 @@ class SimpleDeck extends React.Component<any, any> {
                 </CardItem>
                 <CardItem cardBody>
                   <Image
-                    style={{
+                    style={[{
                       resizeMode: "cover",
                       width: null,
                       flex: 1,
                       height: 300
-                    }}
+                    }] as any}
                     source={item.image}
                   />
                 </CardItem>
@@ -108,4 +108,4 @@ class SimpleDeck extends React.Component<any, any> {
   }
 }
 
-export default SimpleDeck;
+

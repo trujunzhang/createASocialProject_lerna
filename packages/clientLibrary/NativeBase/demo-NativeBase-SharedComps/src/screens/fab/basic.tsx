@@ -14,7 +14,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class BasicFab extends React.Component<any, any> {
+export class BasicFab extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,4 +63,3 @@ class BasicFab extends React.Component<any, any> {
   }
 }
 
-export default BasicFab;

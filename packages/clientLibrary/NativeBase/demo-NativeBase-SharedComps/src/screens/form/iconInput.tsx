@@ -15,7 +15,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class IconInput extends React.Component<any, any> {
+export class IconInput extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -48,4 +48,3 @@ class IconInput extends React.Component<any, any> {
   }
 }
 
-export default IconInput;

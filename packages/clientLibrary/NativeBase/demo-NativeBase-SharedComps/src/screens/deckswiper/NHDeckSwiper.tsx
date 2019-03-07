@@ -25,7 +25,7 @@ const datas = [
     text: "Advanced DeckSwiper"
   }
 ];
-class NHDeckSwiper extends React.Component<any, any> {
+export class NHDeckSwiper extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -68,4 +68,4 @@ class NHDeckSwiper extends React.Component<any, any> {
   }
 }
 
-export default NHDeckSwiper;
+

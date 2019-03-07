@@ -14,7 +14,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class IconFooter extends React.Component<any, any> {
+export class IconFooter extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -94,4 +94,3 @@ class IconFooter extends React.Component<any, any> {
   }
 }
 
-export default IconFooter;

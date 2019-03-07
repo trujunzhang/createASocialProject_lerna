@@ -54,7 +54,7 @@ const datas = [
   }
 ]
 
-class NHButton extends React.Component<any, any> {
+export class NHButton extends React.Component<any, any> {
   renderHeader() {
     // <Icon name="arrow-back" />
     return (
@@ -105,4 +105,4 @@ class NHButton extends React.Component<any, any> {
   }
 }
 
-export default NHButton
+

@@ -21,7 +21,7 @@ const deviceWidth = Dimensions.get("window").width;
 const logo = require("../../../assets/logo.png");
 const cardImage = require("../../../assets/drawer-cover.png");
 
-class NHCardShowcase extends React.Component<any, any> {
+export class NHCardShowcase extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -85,4 +85,3 @@ class NHCardShowcase extends React.Component<any, any> {
   }
 }
 
-export default NHCardShowcase;

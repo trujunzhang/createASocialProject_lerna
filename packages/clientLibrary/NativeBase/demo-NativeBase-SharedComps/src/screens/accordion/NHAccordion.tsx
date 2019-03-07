@@ -37,7 +37,7 @@ const datas = [
   }
 ]
 
-class NHAccordion extends React.Component<any, any> {
+export class NHAccordion extends React.Component<any, any> {
   render() {
     return (
       <Container>
@@ -71,19 +71,4 @@ class NHAccordion extends React.Component<any, any> {
       </Container>
     )
   }
-}
-
-import { AccordionDefault } from './accordion-default'
-import { AccordionIcon } from './accordion-icon'
-import { AccordionIconStyle } from './accordion-icon-style'
-import { AccordionHeaderContentStyle } from './accordion-header-content-style'
-import { AccordionCustomHeaderContent } from './accordion-custom-header-content'
-
-export {
-  NHAccordion,
-  AccordionDefault,
-  AccordionIcon,
-  AccordionIconStyle,
-  AccordionHeaderContentStyle,
-  AccordionCustomHeaderContent
 }

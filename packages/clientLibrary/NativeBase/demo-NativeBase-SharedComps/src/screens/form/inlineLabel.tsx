@@ -17,7 +17,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class InlineLabel extends React.Component<any, any> {
+export class InlineLabel extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -54,4 +54,3 @@ class InlineLabel extends React.Component<any, any> {
   }
 }
 
-export default InlineLabel;

@@ -45,7 +45,9 @@ const cards = [
   }
 ];
 
-class AdvancedDeck extends React.Component<any, any> {
+export class AdvancedDeck extends React.Component<any, any> {
+  private _deckSwiper: any
+
   render() {
     return (
       <Container style={styles.container}>
@@ -85,12 +87,12 @@ class AdvancedDeck extends React.Component<any, any> {
                 </CardItem>
                 <CardItem cardBody>
                   <Image
-                    style={{
+                    style={[{
                       resizeMode: "cover",
                       width: null,
                       flex: 1,
                       height: 300
-                    }}
+                    }] as any}
                     source={item.image}
                   />
                 </CardItem>
@@ -129,4 +131,4 @@ class AdvancedDeck extends React.Component<any, any> {
   }
 }
 
-export default AdvancedDeck;
+

@@ -17,7 +17,7 @@ import {
 
 import styles from "./styles";
 
-class NHCardTransparent extends React.Component<any, any> {
+export class NHCardTransparent extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -49,4 +49,3 @@ class NHCardTransparent extends React.Component<any, any> {
   }
 }
 
-export default NHCardTransparent;

@@ -13,7 +13,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class TextArea extends React.Component<any, any> {
+export class TextArea extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -37,4 +37,3 @@ class TextArea extends React.Component<any, any> {
   }
 }
 
-export default TextArea;
