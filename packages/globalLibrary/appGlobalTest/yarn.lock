@@ -1140,9 +1140,9 @@ camelcase@^5.0.0:
   integrity sha1-51IqvaXtlMwEieG4RmYQ6IQEz0U=
 
 caniuse-lite@^1.0.30000939:
-  version "1.0.30000941"
-  resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000941.tgz#f0810802b2ab8d27f4b625d4769a610e24d5a42c"
-  integrity sha1-8IEIArKrjSf0tiXUdpphDiTVpCw=
+  version "1.0.30000942"
+  resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000942.tgz#454139b28274bce70bfe1d50c30970df7430c6e4"
+  integrity sha1-RUE5soJ0vOcL/h1Qwwlw33QwxuQ=
 
 capture-exit@^1.2.0:
   version "1.2.0"

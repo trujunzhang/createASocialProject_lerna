@@ -646,9 +646,9 @@
     url-template "^2.0.8"
 
 "@octokit/plugin-enterprise-rest@^2.1.1":
-  version "2.1.2"
-  resolved "http://registry.npm.taobao.org/@octokit/plugin-enterprise-rest/download/@octokit/plugin-enterprise-rest-2.1.2.tgz#259bd5ac00825a8a482ff6584ae9aed60acd0b41"
-  integrity sha1-JZvVrACCWopIL/ZYSumu1grNC0E=
+  version "2.2.0"
+  resolved "http://registry.npm.taobao.org/@octokit/plugin-enterprise-rest/download/@octokit/plugin-enterprise-rest-2.2.0.tgz#7ee72a187e8a034d6fc21b8174bef40e34c22f02"
+  integrity sha1-fucqGH6KA01vwhuBdL70DjTCLwI=
 
 "@octokit/request@2.4.1":
   version "2.4.1"
@@ -663,9 +663,9 @@
     universal-user-agent "^2.0.1"
 
 "@octokit/rest@^16.16.0":
-  version "16.16.5"
-  resolved "http://registry.npm.taobao.org/@octokit/rest/download/@octokit/rest-16.16.5.tgz#2427fe2d8ef7887731ac6fcf86f90136f1007a7a"
-  integrity sha1-JCf+LY73iHcxrG/PhvkBNvEAeno=
+  version "16.17.0"
+  resolved "http://registry.npm.taobao.org/@octokit/rest/download/@octokit/rest-16.17.0.tgz#3a8c0ff5290e25a48b11f6957aa90791c672c91e"
+  integrity sha1-OowP9SkOJaSLEfaVeqkHkcZyyR4=
   dependencies:
     "@octokit/request" "2.4.1"
     before-after-hook "^1.4.0"
