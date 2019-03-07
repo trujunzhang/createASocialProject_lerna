@@ -89,9 +89,9 @@ const { PixelRatio } = ReactPrimitivesHelper as IInjectionPixelRatioModel
 
 export { PixelRatio }
 
-const { Platform, Dimensions } = ReactPrimitivesHelper as IInjectionSystemModel
+const { Platform } = ReactPrimitivesHelper as IInjectionSystemModel
 
-export { Platform, Dimensions }
+export { Platform }
 
 const { TextInput, Text } = ReactPrimitivesHelper as IInjectionTextModel
 

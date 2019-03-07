@@ -1,4 +1,4 @@
-import { Dimensions } from '../dimensions'
+import { Dimensions } from '../dimensions.sketch'
 
 describe('Functions of the Dimensions', () => {
   test('should return string correctly,  invoked window', () => {
