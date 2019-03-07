@@ -72,8 +72,6 @@ export {
 import {
   IInjectionBaseModel,
   IInjectionAnimateModel,
-  IInjectionPixelRatioModel,
-  IInjectionSystemModel,
   IInjectionTextModel
 } from './models'
 
@@ -84,14 +82,6 @@ export { View, Image, isIphoneX }
 const { Easing } = ReactPrimitivesHelper as IInjectionAnimateModel
 
 export { Easing }
-
-const { PixelRatio } = ReactPrimitivesHelper as IInjectionPixelRatioModel
-
-export { PixelRatio }
-
-const { Platform } = ReactPrimitivesHelper as IInjectionSystemModel
-
-export { Platform }
 
 const { TextInput, Text } = ReactPrimitivesHelper as IInjectionTextModel
 

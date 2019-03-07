@@ -12,14 +12,10 @@ import {
 import {
   IReactPrimitivesModel,
   IInjectionBaseModel,
-  IInjectionPixelRatioModel,
-  IInjectionSystemModel,
   IInjectionAnimateModel,
   IInjectionTextModel
 } from '../models'
 
-// other
-import { PixelRatioHelper } from '../modules/PixelRatio'
 
 const TouchableMixin = {
   componentWillUnmount() { },
@@ -57,16 +53,6 @@ const injectionAnimateModel: IInjectionAnimateModel = {
   Animated: null
 }
 
-const injectionPixelRatioModel: IInjectionPixelRatioModel = {
-  PixelRatio: new PixelRatioHelper(Dimensions)
-}
-
-const injectionSystemModel: IInjectionSystemModel = {
-  // System
-  Dimensions,
-  Platform
-}
-
 const injectionTextModel: IInjectionTextModel = {
   // Text
   TextInput: null,
@@ -75,8 +61,6 @@ const injectionTextModel: IInjectionTextModel = {
 
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
-  injectionPixelRatioModel,
-  injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel
 )

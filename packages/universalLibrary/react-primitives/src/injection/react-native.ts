@@ -33,8 +33,6 @@ import {
 import {
   IReactPrimitivesModel,
   IInjectionBaseModel,
-  IInjectionPixelRatioModel,
-  IInjectionSystemModel,
   IInjectionAnimateModel,
   IInjectionTextModel
 } from '../models'
@@ -53,18 +51,7 @@ const injectionAnimateModel: IInjectionAnimateModel = {
   Animated
 }
 
-const injectionPixelRatioModel: IInjectionPixelRatioModel = {
-  PixelRatio
-}
 
-const injectionSystemModel: IInjectionSystemModel = {
-  // System
-  Dimensions,
-  Platform: {
-    OS: Platform.OS,
-    Version: Platform.Version
-  }
-}
 
 const injectionTextModel: IInjectionTextModel = {
   // Text
@@ -74,8 +61,6 @@ const injectionTextModel: IInjectionTextModel = {
 
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
-  injectionPixelRatioModel,
-  injectionSystemModel,
   injectionAnimateModel,
   injectionTextModel
 )
