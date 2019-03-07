@@ -1,3 +1,17 @@
-import { ScrollViewProps, ListViewProps, FlatListProps } from 'react-native'
+import {
+  ScrollViewProps,
+  ListViewProps,
+  FlatListProps,
+  // ListView
+  SwipeableListViewDataSource,
+  DataSourceAssetCallback
+} from 'react-native'
 
-export { ScrollViewProps, ListViewProps, FlatListProps }
+export {
+  ScrollViewProps,
+  ListViewProps,
+  FlatListProps,
+  // ListView
+  SwipeableListViewDataSource,
+  DataSourceAssetCallback
+}

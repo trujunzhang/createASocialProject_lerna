@@ -1,5 +1,5 @@
 
-pageLayout.tsx
+    "build.current": "yarn build-lib",
 
 
 "@types/react-dom": "16.0.11",

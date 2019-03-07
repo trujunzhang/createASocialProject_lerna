@@ -1,7 +1,7 @@
 export default {
   container: {
-    // backgroundColor: '#FFF'
-    backgroundColor: '#FF0'
+    backgroundColor: '#FFF'
+    // backgroundColor: '#FF0'
   },
   buttonContainer: {
     flexDirection: 'row',

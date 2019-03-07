@@ -89,5 +89,6 @@ export const stackConfig = {
   contentOptions: {
     activeTintColor: '#e91e63'
   },
+  headerMode: 'none',
   contentComponent: (props) => <SideBar {...props} />
 }
