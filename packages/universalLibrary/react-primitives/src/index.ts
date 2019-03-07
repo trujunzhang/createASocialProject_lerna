@@ -59,11 +59,17 @@ export {
 
 import {
   // System
+  Dimensions,
+  PixelRatio,
+  Platform,
   StatusBar
 } from './reactPrimitives'
 
 export {
   // System
+  Dimensions,
+  PixelRatio,
+  Platform,
   StatusBar
 }
 

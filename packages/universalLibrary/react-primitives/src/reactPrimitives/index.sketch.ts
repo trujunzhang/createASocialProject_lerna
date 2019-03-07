@@ -70,9 +70,15 @@ export {
 }
 
 // System
+import { Dimensions } from '../components/System/dimensions'
+import { PixelRatio } from '../components/System/pixelRatio'
+import { Platform } from '../components/System/platform'
 import { StatusBar } from '../components/System/statusBar'
 
 export {
   // System
+  Dimensions,
+  PixelRatio,
+  Platform,
   StatusBar
 }
