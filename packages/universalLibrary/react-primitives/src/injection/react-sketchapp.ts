@@ -43,12 +43,6 @@ const TouchableMixin = {
 
 // Animated.inject.FlattenStyle(StyleSheet.flatten)
 
-const Platform = {
-  // OS: 'sketch',
-  OS: 'ios',
-  Version: 1
-}
-
 const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image,
