@@ -30,7 +30,7 @@ const datas = [
   }
 ];
 
-export class ListSwipe extends React.Component<any, any> {
+export class NHListSwipe extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>

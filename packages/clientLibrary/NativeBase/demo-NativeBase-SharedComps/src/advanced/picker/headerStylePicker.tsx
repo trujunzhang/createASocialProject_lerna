@@ -16,7 +16,7 @@ import styles from "./styles";
 
 const Item = Picker.Item;
 
-export class RegularPicker extends React.Component<any, any> {
+export class HeaderStylePicker extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {

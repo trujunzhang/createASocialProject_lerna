@@ -13,7 +13,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-export class SegmentNB extends React.Component<any, any> {
+export class SegmentHeader extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {

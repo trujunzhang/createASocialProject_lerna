@@ -16,7 +16,6 @@ import {
 import styles from "./styles";
 
 export class NHSpinner extends React.Component<any, any> {
-  // eslint-disable-line
 
   render() {
     return (

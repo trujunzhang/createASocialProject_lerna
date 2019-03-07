@@ -1,8 +1,7 @@
-import NHIconPage from './iconPage'
-import Icons from './icon'
-import BasicIcon from './basic'
-import StateIcon from './state'
-import PlatformSpecificIcon from './platform-specific'
-import IconFamily from './icon-family'
+export * from './iconPage'
+export * from './icon'
+export * from './basic'
+export * from './state'
+export * from './platform-specific'
+export * from './icon-family'
 
-export { NHIconPage, Icons, BasicIcon, StateIcon, PlatformSpecificIcon, IconFamily }

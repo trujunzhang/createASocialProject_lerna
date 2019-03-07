@@ -13,9 +13,9 @@ import {
   Body,
   TabHeading
 } from "@app/native-base";
-import TabOne from "./tabOne";
-import TabTwo from "./tabTwo";
-import TabThree from "./tabThree";
+import { TabOne } from "./tabOne";
+import { TabTwo } from "./tabTwo";
+import { TabThree } from "./tabThree"
 
 export class ConfigTab extends React.Component<any, any> {
   render() {
