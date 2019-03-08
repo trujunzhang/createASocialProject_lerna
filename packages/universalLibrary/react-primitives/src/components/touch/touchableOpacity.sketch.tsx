@@ -2,15 +2,23 @@ import { TouchableOpacityProps } from '../../models/iTouchProps'
 
 import * as React from 'react'
 
-import { View } from 'react-sketchapp'
+import { View, Style } from 'react-sketchapp'
 
-interface ISketchTouchableOpacityState {}
+interface ISketchTouchableOpacityState { }
 
 export class TouchableOpacity extends React.Component<
   TouchableOpacityProps,
   ISketchTouchableOpacityState
-> {
+  > {
   render() {
-    return <View name="touchableOpacity">{this.props.children}</View>
+    const { name, style } = this.props as any
+
+    console.log('TouchableOpacity:', JSON.stringify(style))
+
+    return (
+      <View name={name} style={style}>
+        {this.props.children}
+      </View>
+    )
   }
 }

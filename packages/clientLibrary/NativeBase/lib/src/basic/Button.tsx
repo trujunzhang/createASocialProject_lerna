@@ -89,6 +89,7 @@ class Button extends React.Component<IButtonProps | any, any> {
     ) {
       return (
         <TouchableOpacity
+          name={'buttonWithVersion-' + Platform['Version']}
           {...this.prepareRootProps()}
           ref={(c) => (this._root = c)}
           activeOpacity={this.props.activeOpacity > 0 ? this.props.activeOpacity : 0.5}>
@@ -101,6 +102,7 @@ class Button extends React.Component<IButtonProps | any, any> {
         let buttonFlex = this.props.full || this.props.block ? 1 : buttonStyle.flex
         return (
           <View
+            name={'buttonWithRound'}
             style={[
               { maxHeight: buttonStyle.height },
               buttonStyle,
@@ -132,6 +134,7 @@ class Button extends React.Component<IButtonProps | any, any> {
       } else {
         return (
           <TouchableNativeFeedback
+            name={'normalButton'}
             ref={(c) => (this._root = c)}
             onPress={this.props.onPress}
             background={

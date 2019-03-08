@@ -3,7 +3,7 @@ const { hasOwnProperty } = Object.prototype
 const OS = 'ios'
 export const Platform = {
   OS,
-  Version: 1,
+  Version: 100,
   select: (obj: any) => {
     if (hasOwnProperty.call(obj, Platform.OS)) {
       return obj[Platform.OS]
