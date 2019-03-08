@@ -2,6 +2,6 @@ export * from './layout'
 export * from './toast'
 export * from './typography'
 
-// export * from './thumbnail'  // issue for sketch
+export * from './thumbnail'
 
 
