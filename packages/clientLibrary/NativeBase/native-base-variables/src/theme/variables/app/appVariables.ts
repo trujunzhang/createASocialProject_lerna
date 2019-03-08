@@ -2,7 +2,7 @@ import { Platform } from 'react-primitives'
 
 import { IThemeDefaultVariables } from '../../../types'
 
-import { fontProxima } from '../../appFonts'
+import { ProximaFontFamily } from '../../appFonts'
 
 const platform = Platform.OS
 export const fixedHeaderLeftWidth = 64
@@ -15,7 +15,7 @@ export const fontSizeBase = 15
 
 export const themeDefaultVariables: IThemeDefaultVariables = {
   iconFamily: 'MaterialIcons',
-  btnFontFamily: fontProxima,
-  fontFamily: fontProxima,
-  titleFontfamily: fontProxima
+  fontFamily: ProximaFontFamily.family,
+  btnFontFamily: ProximaFontFamily.medium,
+  titleFontfamily: ProximaFontFamily.medium
 }

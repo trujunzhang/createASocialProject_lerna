@@ -2,7 +2,7 @@ import { themeVariables } from '@app/native-base-variables'
 
 export function getTextBase(variables: themeVariables, platform, platformStyle) {
 
-  console.log('button font family: ', variables.btnFontFamily)
+  // console.log('button font family: ', variables.btnFontFamily)
 
   return {
     fontFamily: variables.btnFontFamily,
