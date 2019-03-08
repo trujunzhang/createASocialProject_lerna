@@ -3,13 +3,14 @@ import { ColorListView } from '../artboard'
 
 // Buttons
 import {
-    // Button
-    NHButton, FullButton,
-    IconBtn,
-    SketchButton
+  // Button
+  NHButton,
+  FullButton,
+  IconBtn,
+  SketchButton
 } from '@app/nb-demo-shared-components'
-// export const CurrentPage = NHButton
-export const CurrentPage = IconBtn
+export const CurrentPage = NHButton
+// export const CurrentPage = IconBtn
 // export const CurrentPage = Full
 // export const CurrentPage = SketchButton
 

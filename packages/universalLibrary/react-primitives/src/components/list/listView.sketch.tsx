@@ -13,7 +13,7 @@ import { SketchListViewDataSource } from './listViewDataSource.sketch'
 
 import * as React from 'react'
 
-interface ISketchListViewState {}
+interface ISketchListViewState { }
 
 export class ListView extends React.Component<IListViewProps, ISketchListViewState> {
   public static DataSource: ListViewDataSource | any = SketchListViewDataSource
@@ -46,7 +46,7 @@ export class ListView extends React.Component<IListViewProps, ISketchListViewSta
       const rowIndex: number = i
       const rowData: any = ds.getRowData(sectionIndex, rowIndex)
 
-      console.log('listView, rowData: ', JSON.stringify(rowData))
+      // console.log('listView, rowData: ', JSON.stringify(rowData))
 
       const rowView = renderRow(rowData, '', '')
       this.rowViews.push(rowView)
