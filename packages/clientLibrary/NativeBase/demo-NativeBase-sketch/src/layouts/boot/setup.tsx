@@ -5,13 +5,13 @@ import { getThemeStyle } from '@app/nativebase-theme-components'
 import { vectorIcons } from './vectorIcons'
 
 import {
-  IIconVectorVariables, IThemeDefaultVariables,
+  IIconVectorVariables,
+  IThemeDefaultVariables,
   themeVariablesWithIconVector,
   generatorForAppThemeVariables,
   ProximaFontFamily,
   RobotoFontFamily
 } from '@app/native-base-variables'
-
 
 const currentFontFamily = ProximaFontFamily
 // const currentFontFamily = RobotoFontFamily
@@ -39,8 +39,6 @@ const appStyles = getThemeStyle(platformVariables)
 export class Setup extends React.Component {
   render() {
     // return null
-    return (
-      <StyleProvider style={appStyles}>{this.props.children}</StyleProvider>
-    )
+    return <StyleProvider style={appStyles}>{this.props.children}</StyleProvider>
   }
 }

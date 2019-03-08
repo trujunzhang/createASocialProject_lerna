@@ -7,6 +7,8 @@
   },
   "scripts": {
     "rm.assets": "rm -rf @types",
+    "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+    "fix.current": "yarn fix",
     "ready.assets.pending": "run-s  ready:*",
     "ready:appSharedComps": "cpx \"../appLibrary/appSharedComps/src/**/*.*\" ./src/shared-components",
     "build": "yarn typescript:once && skpm-build",
