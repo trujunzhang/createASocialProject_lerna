@@ -1,5 +1,9 @@
 import { SideBar } from '../screens/sidebar'
 
+import Home from '../screens/home'
+
+import { IconSetsList } from '../screens/vectorIcons'
+
 import {
   Header,
   NHFooter as Footer,
@@ -23,17 +27,17 @@ import {
   NHCheckbox,
   NHDeckSwiper,
   NHFab,
-  NHDatePicker
+  NHDatePicker,
+    // Toast
+    NHToast,
+    // Layout
+    NHLayout ,
+    // thumbnail
+    NHThumbnail ,
+    // Typography 
+    NHTypography 
 } from '@app/nb-demo-shared-components'
 
-import { IconSetsList } from '../screens/vectorIcons'
-
-import { NHToast } from '../screens/toast'
-
-import Home from '../screens/home'
-import NHLayout from '../screens/layout'
-import NHThumbnail from '../screens/thumbnail'
-import NHTypography from '../screens/typography'
 
 export const stackRouteConfigs = {
   Home: { screen: Home },
