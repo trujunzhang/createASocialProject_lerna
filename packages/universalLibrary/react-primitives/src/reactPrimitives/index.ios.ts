@@ -79,3 +79,11 @@ export {
   // Animations
   Animated, Easing
 }
+
+// TextInput
+import { TextInput } from '../components/text/textInput'
+
+export {
+  // TextInput
+  TextInput
+}

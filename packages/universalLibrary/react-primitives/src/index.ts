@@ -86,6 +86,14 @@ export {
   Animated, Easing
 }
 
+// TextInput
+import { TextInput } from './reactPrimitives'
+
+export {
+  // TextInput
+  TextInput
+}
+
 // ReactPrimitivesHelper
 // ===================================
 import { IInjectionBaseModel, IInjectionTextModel } from './models'
