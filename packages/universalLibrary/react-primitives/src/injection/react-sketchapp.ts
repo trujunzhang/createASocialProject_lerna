@@ -10,28 +10,6 @@ import {
 
 import { IReactPrimitivesModel, IInjectionBaseModel, IInjectionTextModel } from '../models'
 
-const TouchableMixin = {
-  componentWillUnmount() {},
-  touchableGetInitialState() {
-    return { touchable: { touchState: undefined, responderID: null } }
-  },
-  touchableHandleResponderTerminationRequest() {
-    return false
-  },
-  touchableHandleStartShouldSetResponder() {
-    return false
-  },
-  touchableLongPressCancelsPress() {
-    return true
-  },
-  touchableHandleResponderGrant() {},
-  touchableHandleResponderRelease() {},
-  touchableHandleResponderTerminate() {},
-  touchableHandleResponderMove() {}
-}
-
-// Animated.inject.FlattenStyle(StyleSheet.flatten)
-
 const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image
