@@ -16,47 +16,48 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-const sankhadeep = require('../../../assets/contacts/varun.png')
-const supriya = require('../../../assets/contacts/varun.png')
-const himanshu = require('../../../assets/contacts/varun.png')
-const shweta = require('../../../assets/contacts/varun.png')
-const shruti = require('../../../assets/contacts/varun.png')
-const shivraj = require('../../../assets/contacts/varun.png')
-const datas = [
-  {
-    img: sankhadeep,
-    text: 'Sankhadeep',
-    note: 'Its time to build a difference . .'
-  },
-  {
-    img: supriya,
-    text: 'Supriya',
-    note: 'One needs courage to be happy and smiling all time . . '
-  },
-  {
-    img: shivraj,
-    text: 'Shivraj',
-    note: 'Time changes everything . .'
-  },
-  {
-    img: shruti,
-    text: 'Shruti',
-    note: 'The biggest risk is a missed opportunity !!'
-  },
-  {
-    img: himanshu,
-    text: 'Himanshu',
-    note: 'Live a life style that matchs your vision'
-  },
-  {
-    img: shweta,
-    text: 'Shweta',
-    note: 'Failure is temporary, giving up makes it permanent'
-  }
-]
-
 export class NHListThumbnail extends React.Component<any, any> {
   render() {
+    const sankhadeep = require('../../../assets/contacts/varun.png')
+    const supriya = require('../../../assets/contacts/varun.png')
+    const himanshu = require('../../../assets/contacts/varun.png')
+    const shweta = require('../../../assets/contacts/varun.png')
+    const shruti = require('../../../assets/contacts/varun.png')
+    const shivraj = require('../../../assets/contacts/varun.png')
+
+    const datas = [
+      {
+        img: sankhadeep,
+        text: 'Sankhadeep',
+        note: 'Its time to build a difference . .'
+      },
+      {
+        img: supriya,
+        text: 'Supriya',
+        note: 'One needs courage to be happy and smiling all time . . '
+      },
+      {
+        img: shivraj,
+        text: 'Shivraj',
+        note: 'Time changes everything . .'
+      },
+      {
+        img: shruti,
+        text: 'Shruti',
+        note: 'The biggest risk is a missed opportunity !!'
+      },
+      {
+        img: himanshu,
+        text: 'Himanshu',
+        note: 'Live a life style that matchs your vision'
+      },
+      {
+        img: shweta,
+        text: 'Shweta',
+        note: 'Failure is temporary, giving up makes it permanent'
+      }
+    ]
+
     return (
       <Container style={styles.container}>
         <Header>

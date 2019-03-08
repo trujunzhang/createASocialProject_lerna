@@ -17,11 +17,11 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-const logo = require('../../../assets/logo.png')
-const cardImage = require('../../../assets/drawer-cover.png')
-
 export class NHCardImage extends React.Component<any, any> {
   render() {
+    const logo = require('../../../assets/logo.png')
+    const cardImage = require('../../../assets/drawer-cover.png')
+
     return (
       <Container style={styles.container}>
         <Header>

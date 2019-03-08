@@ -1,4 +1,6 @@
+export * from './NHList'
 export * from './basic-list'
+
 export * from './listitem-selected'
 export * from './list-divider'
 export * from './list-separator'
@@ -7,5 +9,3 @@ export * from './list-icon'
 export * from './list-avatar'
 export * from './list-thumbnail'
 export * from './listitem-noIndent'
-
-export * from './NHList'

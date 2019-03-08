@@ -10,5 +10,5 @@ export * from './fab'
 export * from './footer'
 export * from './form'
 
-// export * from './card' // issue for sketch
-// export * from './deckswiper' // issue for sketch
+export * from './card'
+export * from './deckswiper'

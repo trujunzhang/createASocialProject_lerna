@@ -15,7 +15,6 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-
 export class NHThumbnail extends React.Component<any, any> {
   renderContent() {
     // TODO: DJZHANG
@@ -50,9 +49,7 @@ export class NHThumbnail extends React.Component<any, any> {
           <Right />
         </Header>
 
-        <Content padder>
-
-        </Content>
+        <Content padder />
       </Container>
     )
   }

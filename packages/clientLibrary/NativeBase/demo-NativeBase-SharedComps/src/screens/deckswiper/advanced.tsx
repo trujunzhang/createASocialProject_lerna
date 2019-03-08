@@ -18,37 +18,36 @@ import {
 } from '@app/native-base'
 import styles from './styles'
 
-const cardOne = require('../../../assets/drawer-cover.png')
-const cardTwo = require('../../../assets/drawer-cover.png')
-const cardThree = require('../../../assets/drawer-cover.png')
-const cardFour = require('../../../assets/drawer-cover.png')
-const cards = [
-  {
-    text: 'Card One',
-    name: 'One',
-    image: cardOne
-  },
-  {
-    text: 'Card Two',
-    name: 'Two',
-    image: cardTwo
-  },
-  {
-    text: 'Card Three',
-    name: 'Three',
-    image: cardThree
-  },
-  {
-    text: 'Card Four',
-    name: 'Four',
-    image: cardFour
-  }
-]
-
 export class AdvancedDeck extends React.Component<any, any> {
   private _deckSwiper: any
 
   render() {
+    const cardOne = require('../../../assets/drawer-cover.png')
+    const cardTwo = require('../../../assets/drawer-cover.png')
+    const cardThree = require('../../../assets/drawer-cover.png')
+    const cardFour = require('../../../assets/drawer-cover.png')
+    const cards = [
+      {
+        text: 'Card One',
+        name: 'One',
+        image: cardOne
+      },
+      {
+        text: 'Card Two',
+        name: 'Two',
+        image: cardTwo
+      },
+      {
+        text: 'Card Three',
+        name: 'Three',
+        image: cardThree
+      },
+      {
+        text: 'Card Four',
+        name: 'Four',
+        image: cardFour
+      }
+    ]
     return (
       <Container style={styles.container}>
         <Header>

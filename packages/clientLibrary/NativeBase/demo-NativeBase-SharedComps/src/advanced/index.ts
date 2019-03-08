@@ -8,6 +8,4 @@ export * from './picker'
 export * from './radio'
 export * from './listSwipe'
 
-export * from './list' // issue for sketch
-
-
+export * from './list'
