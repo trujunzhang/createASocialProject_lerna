@@ -1,7 +1,10 @@
 
 export interface IFontFamily {
   family: string
+  bold: string
   medium: string
+  regular: string
+  italic: string
 }
 
 export interface IThemeDefaultVariables {

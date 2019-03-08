@@ -3,12 +3,18 @@ import {
 } from '../types/iGenerator'
 
 export const ProximaFontFamily: IFontFamily = {
-    family: 'Proxima Nova',
-    medium: 'Proxima Nova_medium'
+    family: 'Proxima_Nova',
+    bold: 'Proxima_Nova_bold',
+    medium: 'Proxima_Nova_medium',
+    regular: 'Proxima_Nova_regular',
+    italic: 'Proxima_Nova_italic',
 }
 
 export const RobotoFontFamily: IFontFamily = {
     family: 'Roboto',
-    medium: 'Roboto_medium'
+    bold: 'Roboto_bold',
+    medium: 'Roboto_medium',
+    regular: 'Roboto_regular',
+    italic: 'Roboto_italic',
 }
 
