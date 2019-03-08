@@ -13,7 +13,6 @@ const injectionBaseModel: IInjectionBaseModel = {
 
 const injectionTextModel: IInjectionTextModel = {
   // Text
-  TextInput,
   Text
 }
 

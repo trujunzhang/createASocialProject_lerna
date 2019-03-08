@@ -94,6 +94,6 @@ const { View, Image } = ReactPrimitivesHelper as IInjectionBaseModel
 
 export { View, Image }
 
-const { TextInput, Text } = ReactPrimitivesHelper as IInjectionTextModel
+const { Text } = ReactPrimitivesHelper as IInjectionTextModel
 
-export { TextInput, Text }
+export { Text }

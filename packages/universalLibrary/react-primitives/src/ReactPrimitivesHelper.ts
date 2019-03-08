@@ -25,7 +25,6 @@ export class ReactPrimitivesHelper {
   }
 
   private injectionTextModel(model: IInjectionTextModel) {
-    this.reactPrimitivesModel.TextInput = model.TextInput
     this.reactPrimitivesModel.Text = model.Text
   }
 
