@@ -25,8 +25,8 @@ const iconVectorVariable: IIconVectorVariables = {
 const themeDefaultVariables: IThemeDefaultVariables = {
   iconFamily: 'MaterialIcons',
   fontFamily: currentFontFamily.family,
-  btnFontFamily: currentFontFamily.medium,
-  titleFontfamily: currentFontFamily.medium
+  btnFontFamily: currentFontFamily.fontFace.medium,
+  titleFontfamily: currentFontFamily.fontFace.medium
 }
 
 export const platformVariables: themeVariablesWithIconVector = generatorForAppThemeVariables(

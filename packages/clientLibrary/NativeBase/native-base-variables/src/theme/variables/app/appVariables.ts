@@ -16,6 +16,6 @@ export const fontSizeBase = 15
 export const themeDefaultVariables: IThemeDefaultVariables = {
   iconFamily: 'MaterialIcons',
   fontFamily: ProximaFontFamily.family,
-  btnFontFamily: ProximaFontFamily.medium,
-  titleFontfamily: ProximaFontFamily.medium
+  btnFontFamily: ProximaFontFamily.fontFace.medium,
+  titleFontfamily: ProximaFontFamily.fontFace.medium
 }

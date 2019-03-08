@@ -1,10 +1,15 @@
 
-export interface IFontFamily {
-  family: string
+export interface IFontFace {
   bold: string
   medium: string
   regular: string
   italic: string
+  thin: string
+}
+
+export interface IFontFamily {
+  family: string
+  fontFace: IFontFace
 }
 
 export interface IThemeDefaultVariables {

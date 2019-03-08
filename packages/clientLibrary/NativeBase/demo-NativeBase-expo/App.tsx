@@ -32,7 +32,7 @@ export default class App extends React.Component<{}, IAppState> {
       FontAwesome: require('@expo/vector-icons/fonts/FontAwesome.ttf'),
       MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf')
     }
-    fontSource[ProximaFontFamily.medium] = require('./static/fonts/proxima/proxima-nova-600.ttf')
+    fontSource[ProximaFontFamily.fontFace.medium] = require('./static/fonts/proxima/proxima-nova-600.ttf')
     return fontSource
   }
 
