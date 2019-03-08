@@ -129,7 +129,7 @@ export class NBDebugButton extends React.Component<any, any> {
                 </Header>
 
 
-                {this.renderIcon()}
+                {this.renderContent()}
 
 
             </Container>

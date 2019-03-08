@@ -1,4 +1,3 @@
-
 export interface IFontFace {
   bold: string
   medium: string
@@ -17,7 +16,7 @@ export interface IThemeDefaultVariables {
   iconFamily: string
   // For text
   /**
-   * fontFamily: only font family name 
+   * fontFamily: only font family name
    * btnFontFamily/titleFontfamily: one of 'small','medium','large'
    */
   fontFamily: string
