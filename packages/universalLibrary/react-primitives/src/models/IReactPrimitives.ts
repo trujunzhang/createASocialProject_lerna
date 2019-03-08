@@ -7,4 +7,4 @@ import {
   IInjectionTouchModel
 } from '../models'
 
-export interface IReactPrimitivesModel extends AllInjectionModel { }
+export interface IReactPrimitivesModel extends AllInjectionModel {}

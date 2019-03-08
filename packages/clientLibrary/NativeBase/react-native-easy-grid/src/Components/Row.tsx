@@ -13,7 +13,11 @@ export class Row extends React.Component<IRowProps, any> {
   prepareRootProps() {
     var type = {
       flexDirection: 'row',
-      flex: this.props.size ? this.props.size : this.props.style && (this.props.style as any).height ? 0 : 1
+      flex: this.props.size
+        ? this.props.size
+        : this.props.style && (this.props.style as any).height
+        ? 0
+        : 1
     }
 
     var defaultProps = {

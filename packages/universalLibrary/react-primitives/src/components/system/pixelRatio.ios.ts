@@ -1,5 +1,3 @@
-import {
-    PixelRatio
-} from 'react-native'
+import { PixelRatio } from 'react-native'
 
 export { PixelRatio }

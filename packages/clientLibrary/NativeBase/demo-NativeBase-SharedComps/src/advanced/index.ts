@@ -8,4 +8,3 @@ export * from './searchbar'
 export * from './segment'
 export * from './spinner'
 export * from './tab'
-

@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation'
 import { stackRouteConfigs, stackConfig } from './drawerHelper'
 
 import {
+  // Header
   Header1,
   Header2,
   Header3,
@@ -15,14 +16,18 @@ import {
   HeaderSpan,
   HeaderNoLeft,
   HeaderNoShadow,
-  HeaderTransparent
-} from '@app/nb-demo-shared-components'
-
-import { BasicFooter, IconFooter, IconText, BadgeFooter } from '@app/nb-demo-shared-components'
-
-import { IconList } from '../screens/vectorIcons'
-
-import {
+  HeaderTransparent,
+  // Footer
+  BasicFooter,
+  IconFooter,
+  IconText,
+  BadgeFooter,
+  // Segment
+  SegmentNB as AdvSegment,
+  // Deck
+  SimpleDeck,
+  AdvancedDeck,
+  // Picker
   PickerWithIconStyle,
   RegularPicker,
   PickerWithIcon,
@@ -32,14 +37,17 @@ import {
   PickerTextItemText,
   HeaderPicker,
   HeaderStylePicker,
-  CustomHeaderPicker
-} from '@app/nb-demo-shared-components'
-
-import { RegularActionSheet, IconActionSheet } from '@app/nb-demo-shared-components'
-
-import { Icons, BasicIcon, StateIcon, PlatformSpecificIcon, IconFamily } from '@app/nb-demo-shared-components'
-
-import {
+  CustomHeaderPicker,
+  // ActionSheet
+  RegularActionSheet,
+  IconActionSheet,
+  // Icons
+  Icons,
+  BasicIcon,
+  StateIcon,
+  PlatformSpecificIcon,
+  IconFamily,
+  // Button
   DefaultButton,
   OutlineButton,
   RoundedButton,
@@ -48,10 +56,8 @@ import {
   CustomButton,
   TransparentButton,
   IconBtn,
-  DisabledButton
-} from '@app/nb-demo-shared-components'
-
-import {
+  DisabledButton,
+  // Card
   BasicCard,
   NHCardItemBordered,
   NHCardItemButton,
@@ -60,12 +66,11 @@ import {
   NHCardList,
   NHCardHeaderAndFooter,
   NHCardTransparent,
-  NHCardCustomBorderRadius
-} from '@app/nb-demo-shared-components'
-
-import { BasicFab, MultipleFab } from '@app/nb-demo-shared-components'
-
-import {
+  NHCardCustomBorderRadius,
+  // Fab
+  BasicFab,
+  MultipleFab,
+  // Label
   FixedLabel,
   InlineLabel,
   FloatingLabel,
@@ -78,21 +83,12 @@ import {
   SuccessInput,
   ErrorInput,
   DisabledInput,
-  PickerInput
-} from '@app/nb-demo-shared-components'
-
-import RowNB from '../screens/layout/row'
-import ColumnNB from '../screens/layout/column'
-import NestedGrid from '../screens/layout/nested'
-import CustomRow from '../screens/layout/customRow'
-import CustomCol from '../screens/layout/customCol'
-import {
+  PickerInput,
+  // Swipe
   BasicListSwipe,
   SwipeRowCustomStyle,
-  MultiListSwipe
-} from '@app/nb-demo-shared-components'
-
-import {
+  MultiListSwipe,
+  // List
   NHBasicList,
   NHListItemSelected,
   NHListDivider,
@@ -101,17 +97,32 @@ import {
   NHListIcon,
   NHListAvatar,
   NHListThumbnail,
-  NHListItemNoIndent
-} from '@app/nb-demo-shared-components'
-
-import {
+  NHListItemNoIndent,
+  // Tab
   BasicTab,
   ConfigTab,
   ScrollableTabExample,
-  SegmentHeader,  // BasicSegment,
-  SegmentHeaderIcon
+  SegmentHeader, // BasicSegment,
+  SegmentHeaderIcon,
+  // Radio
+  NHCustomRadio,
+  NHDefaultRadio,
+  // According
+  AccordionDefault,
+  AccordionIcon,
+  AccordionIconStyle,
+  AccordionHeaderContentStyle,
+  AccordionCustomHeaderContent,
+  // TextArea
+  TextAreaForm
 } from '@app/nb-demo-shared-components'
 
+import RowNB from '../screens/layout/row'
+import ColumnNB from '../screens/layout/column'
+import NestedGrid from '../screens/layout/nested'
+import CustomRow from '../screens/layout/customRow'
+import CustomCol from '../screens/layout/customCol'
+import { IconList } from '../screens/vectorIcons'
 import {
   BasicToast,
   ToastDuration,
@@ -120,24 +131,6 @@ import {
   ToastText,
   ToastButton
 } from '../screens/toast'
-
-import { SegmentNB as AdvSegment } from '@app/nb-demo-shared-components'
-import { SimpleDeck, AdvancedDeck } from '@app/nb-demo-shared-components'
-
-import {
-  NHCustomRadio,
-  NHDefaultRadio
-} from '@app/nb-demo-shared-components'
-
-import {
-  AccordionDefault,
-  AccordionIcon,
-  AccordionIconStyle,
-  AccordionHeaderContentStyle,
-  AccordionCustomHeaderContent
-} from '@app/nb-demo-shared-components'
-
-import { TextAreaForm } from '@app/nb-demo-shared-components'
 
 const DraftsStack = createStackNavigator(stackRouteConfigs, stackConfig)
 export const appRouteConfigs = {

@@ -1,6 +1,5 @@
 import { SideBar } from '../screens/sidebar'
 
-
 import {
   Header,
   NHFooter as Footer,
@@ -13,18 +12,9 @@ import {
   NHSearchbar,
   NHSpinner,
   NHTab,
-  NBSegment
-} from '@app/nb-demo-shared-components'
-
-import { IconSetsList } from '../screens/vectorIcons'
-
-
-import { ActionsheetPage as Actionsheet } from '@app/nb-demo-shared-components'
-
-
-import { NHButton } from '@app/nb-demo-shared-components'
-
-import {
+  NBSegment,
+  ActionsheetPage as Actionsheet,
+  NHButton,
   NHCard,
   NHForm,
   NHAccordion,
@@ -36,6 +26,7 @@ import {
   NHDatePicker
 } from '@app/nb-demo-shared-components'
 
+import { IconSetsList } from '../screens/vectorIcons'
 
 import { NHToast } from '../screens/toast'
 
@@ -78,8 +69,9 @@ export const stackRouteConfigs = {
   IconSetsList: { screen: IconSetsList }
 }
 
-/* const initialRouteName = 'Home' */
-const initialRouteName = 'NHButton'
+const initialRouteName = 'Home'
+/* const initialRouteName = 'IconBtn' */
+/* const initialRouteName = 'NHButton' */
 
 export const stackConfig = {
   initialRouteName,

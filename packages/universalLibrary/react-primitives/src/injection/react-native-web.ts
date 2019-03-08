@@ -41,7 +41,7 @@ const resolve = (style) => {
 
 const injectionBaseModel: IInjectionBaseModel = {
   View,
-  Image,
+  Image
   // StyleSheet: Object.assign(StyleSheet, { resolve })
 }
 

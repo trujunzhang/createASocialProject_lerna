@@ -12,7 +12,11 @@ export class Col extends React.Component<IColProps, any> {
   prepareRootProps() {
     var type = {
       flexDirection: 'column',
-      flex: this.props.size ? this.props.size : this.props.style && (this.props.style as any).width ? 0 : 1
+      flex: this.props.size
+        ? this.props.size
+        : this.props.style && (this.props.style as any).width
+        ? 0
+        : 1
     }
 
     var defaultProps = {

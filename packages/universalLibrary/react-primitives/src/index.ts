@@ -77,11 +77,7 @@ export {
 
 // ReactPrimitivesHelper
 // ===================================
-import {
-  IInjectionBaseModel,
-  IInjectionAnimateModel,
-  IInjectionTextModel
-} from './models'
+import { IInjectionBaseModel, IInjectionAnimateModel, IInjectionTextModel } from './models'
 
 const { View, Image } = ReactPrimitivesHelper as IInjectionBaseModel
 

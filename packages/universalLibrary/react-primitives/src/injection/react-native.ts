@@ -39,15 +39,13 @@ import {
 
 const injectionBaseModel: IInjectionBaseModel = {
   View,
-  Image,
+  Image
 }
 
 const injectionAnimateModel: IInjectionAnimateModel = {
   Easing,
   Animated
 }
-
-
 
 const injectionTextModel: IInjectionTextModel = {
   // Text

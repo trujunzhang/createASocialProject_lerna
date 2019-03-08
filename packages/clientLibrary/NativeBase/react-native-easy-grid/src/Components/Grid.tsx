@@ -24,7 +24,7 @@ export class Grid extends React.Component<IGridProps, any> {
 
   ifRow() {
     var row = false
-    React.Children.forEach(this.props.children, function (child: any) {
+    React.Children.forEach(this.props.children, function(child: any) {
       if (child && child.type == Row) row = true
     })
     return row

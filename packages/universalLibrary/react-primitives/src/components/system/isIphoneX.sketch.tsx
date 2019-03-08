@@ -1,4 +1,3 @@
-
 export const isIphoneX = () => {
-    return false
+  return false
 }

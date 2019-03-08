@@ -5,6 +5,4 @@ import { IInjectionListModel } from './list'
 import { IInjectionTextModel } from './text'
 import { IInjectionTouchModel } from './touch'
 
-export type AllInjectionModel = IInjectionBaseModel &
-  IInjectionAnimateModel &
-  IInjectionTextModel 
+export type AllInjectionModel = IInjectionBaseModel & IInjectionAnimateModel & IInjectionTextModel

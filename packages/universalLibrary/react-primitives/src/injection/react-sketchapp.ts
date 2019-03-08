@@ -16,9 +16,8 @@ import {
   IInjectionTextModel
 } from '../models'
 
-
 const TouchableMixin = {
-  componentWillUnmount() { },
+  componentWillUnmount() {},
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -31,17 +30,17 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() { },
-  touchableHandleResponderRelease() { },
-  touchableHandleResponderTerminate() { },
-  touchableHandleResponderMove() { }
+  touchableHandleResponderGrant() {},
+  touchableHandleResponderRelease() {},
+  touchableHandleResponderTerminate() {},
+  touchableHandleResponderMove() {}
 }
 
 // Animated.inject.FlattenStyle(StyleSheet.flatten)
 
 const injectionBaseModel: IInjectionBaseModel = {
   View,
-  Image,
+  Image
 }
 
 const injectionAnimateModel: IInjectionAnimateModel = {
