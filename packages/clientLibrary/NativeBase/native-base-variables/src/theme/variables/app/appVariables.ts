@@ -2,7 +2,7 @@ import { Platform } from 'react-primitives'
 
 import { IThemeDefaultVariables } from '../../../types'
 
-import { ProximaFontFamily } from '../../appFonts'
+import { ProximaFontFamily } from '../../../fonts/appFonts'
 
 const platform = Platform.OS
 export const fixedHeaderLeftWidth = 64
