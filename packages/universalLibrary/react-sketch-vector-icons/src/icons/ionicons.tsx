@@ -4,6 +4,7 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 
 export class Ionicons extends React.Component<IconProps, any> {
   render() {
+    const { name, size, color } = this.props
     return <Text>{name + 'wh'}</Text>
   }
 }

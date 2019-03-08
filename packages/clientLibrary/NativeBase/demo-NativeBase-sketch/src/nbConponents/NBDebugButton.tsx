@@ -13,6 +13,7 @@ import {
     Right,
     Body,
     Text,
+    IconVectorTypeIonicons
 } from '@app/native-base'
 
 const mb15 = {
@@ -30,7 +31,19 @@ export class NBDebugButton extends React.Component<any, any> {
 
     renderIcon() {
         return (
-            <Icon name="arrow-back" />
+            <Content padder>
+                <Icon name="arrow-back" />
+                <Icon
+                    iconColor='blue'
+                    name="arrow-back" />
+                <Icon
+                    iconSize={140}
+                    iconColor='red'
+                    name="arrow-back" />
+                <Icon
+                    fontSize={140}
+                    name="arrow-back" />
+            </Content>
         )
     }
 
@@ -68,10 +81,10 @@ export class NBDebugButton extends React.Component<any, any> {
 
                 <View name={'debug-button'} style={[
                     {
-                        marginBottom: 80
+                        flexDirection: 'row', justifyContent: 'space-between'
                     },
                     {
-                        backgroundColor: 'yellow',
+                        backgroundColor: 'orange',
                     },
                 ]}>
                     <Button
@@ -79,10 +92,10 @@ export class NBDebugButton extends React.Component<any, any> {
                             [
                                 {
                                     backgroundColor: 'blue'
-                                },
-                                { alignSelf: 'center' },
+                                }
                             ]
                         }
+                        iconLeft
                         onPress={() => this.props.navigation.openDrawer()}>
                         <Icon name="arrow-back" />
                         <Text>Lets Go!</Text>
@@ -116,7 +129,7 @@ export class NBDebugButton extends React.Component<any, any> {
                 </Header>
 
 
-                {this.renderContent()}
+                {this.renderIcon()}
 
 
             </Container>

@@ -37,8 +37,6 @@ export interface IIconProps {
   active?: boolean
   ios?: string
   android?: string
-  color?: string
-  fontSize?: number
 }
 
 class Icon extends React.Component<IIconProps, any> {
