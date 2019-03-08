@@ -1,5 +1,5 @@
-import { View, Image, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 
-export { View, Image, StyleSheet }
+export { View, StyleSheet }
 
 export declare const isIphoneX: () => boolean

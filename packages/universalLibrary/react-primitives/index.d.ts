@@ -45,9 +45,10 @@ export interface SketchAppProps {
   name?: string
 }
 
-export class View extends React.Component<ViewProps & SketchAppProps> {}
-export class Text extends React.Component<TextProps & SketchAppProps> {}
-export class TextInput extends React.Component<TextInputProps & SketchAppProps> {}
+export class Image extends React.Component<ImageProps & SketchAppProps> { }
+export class View extends React.Component<ViewProps & SketchAppProps> { }
+export class Text extends React.Component<TextProps & SketchAppProps> { }
+export class TextInput extends React.Component<TextInputProps & SketchAppProps> { }
 
 export {
   // styles

@@ -66,12 +66,25 @@ export class NBDebugButton extends React.Component<any, any> {
         return (
             <Content padder>
 
-                <Text>Lets Go!</Text>
-
-                <View style={{ marginBottom: 80 }}>
+                <View name={'debug-button'} style={[
+                    {
+                        marginBottom: 80
+                    },
+                    {
+                        backgroundColor: 'yellow',
+                    },
+                ]}>
                     <Button
-                        style={{ backgroundColor: '#6FAF98', alignSelf: 'center' }}
+                        style={
+                            [
+                                {
+                                    backgroundColor: 'blue'
+                                },
+                                { alignSelf: 'center' },
+                            ]
+                        }
                         onPress={() => this.props.navigation.openDrawer()}>
+                        <Icon name="arrow-back" />
                         <Text>Lets Go!</Text>
                     </Button>
                 </View>

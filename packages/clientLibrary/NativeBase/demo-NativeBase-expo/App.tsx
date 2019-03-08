@@ -33,11 +33,14 @@ export default class App extends React.Component<{}, IAppState> {
       MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf')
     }
     fontSource[ProximaFontFamily.fontFace.medium] = require('./static/fonts/proxima/proxima-nova-600.ttf')
+    fontSource[ProximaFontFamily.family] = require('./static/fonts/proxima/proxima-nova-600.ttf')
     return fontSource
   }
 
   loadResourcesAsync = async (): Promise<any> => {
-    return Promise.all([Font.loadAsync(this.fontObject)])
+    return Promise.all([
+      Asset.fromModule(require('./assets/launchscreen-bg.png')).downloadAsync(),
+      Font.loadAsync(this.fontObject)])
   }
 
   renderxxx() {
