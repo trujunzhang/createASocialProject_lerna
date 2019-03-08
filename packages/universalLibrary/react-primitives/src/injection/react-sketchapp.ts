@@ -8,14 +8,10 @@ import {
   // TODO(lmr): Dimensions
 } from 'react-sketchapp'
 
-import {
-  IReactPrimitivesModel,
-  IInjectionBaseModel,
-  IInjectionTextModel
-} from '../models'
+import { IReactPrimitivesModel, IInjectionBaseModel, IInjectionTextModel } from '../models'
 
 const TouchableMixin = {
-  componentWillUnmount() { },
+  componentWillUnmount() {},
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -28,10 +24,10 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() { },
-  touchableHandleResponderRelease() { },
-  touchableHandleResponderTerminate() { },
-  touchableHandleResponderMove() { }
+  touchableHandleResponderGrant() {},
+  touchableHandleResponderRelease() {},
+  touchableHandleResponderTerminate() {},
+  touchableHandleResponderMove() {}
 }
 
 // Animated.inject.FlattenStyle(StyleSheet.flatten)

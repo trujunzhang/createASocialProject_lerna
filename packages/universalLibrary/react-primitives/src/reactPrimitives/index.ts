@@ -77,7 +77,8 @@ import { Animated, Easing } from '../components/animations/animated'
 
 export {
   // Animations
-  Animated, Easing
+  Animated,
+  Easing
 }
 
 // TextInput

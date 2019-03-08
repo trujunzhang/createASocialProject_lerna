@@ -75,15 +75,16 @@ export {
   isIphoneX
 }
 
-
 import {
   // Animations
-  Animated, Easing
+  Animated,
+  Easing
 } from './reactPrimitives'
 
 export {
   // Animations
-  Animated, Easing
+  Animated,
+  Easing
 }
 
 // TextInput

@@ -1,10 +1,6 @@
 import { Animated, View, TextInput, Text, Image, Easing } from 'react-native'
 
-import {
-  IReactPrimitivesModel,
-  IInjectionBaseModel,
-  IInjectionTextModel
-} from '../models'
+import { IReactPrimitivesModel, IInjectionBaseModel, IInjectionTextModel } from '../models'
 
 const injectionBaseModel: IInjectionBaseModel = {
   View,

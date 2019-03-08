@@ -1,10 +1,6 @@
 import { Animated, Easing, View, Text, Image } from 'react-native-web'
 
-import {
-  IReactPrimitivesModel,
-  IInjectionBaseModel,
-  IInjectionTextModel
-} from '../models'
+import { IReactPrimitivesModel, IInjectionBaseModel, IInjectionTextModel } from '../models'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
 // API alltogether.

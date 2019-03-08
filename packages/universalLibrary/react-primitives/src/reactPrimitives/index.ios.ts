@@ -4,9 +4,9 @@ import { allInjectionModel } from '../injection/react-native'
 
 export const ReactPrimitivesHelper = new Generator(allInjectionModel).end()
 
-import { StyleSheet, } from 'react-native'
+import { StyleSheet } from 'react-native'
 
-export { StyleSheet, }
+export { StyleSheet }
 
 // List
 import { KeyboardAwareScrollView } from '../components/list/keyboardAwareScrollView'
@@ -77,7 +77,8 @@ import { Animated, Easing } from '../components/animations/animated'
 
 export {
   // Animations
-  Animated, Easing
+  Animated,
+  Easing
 }
 
 // TextInput
