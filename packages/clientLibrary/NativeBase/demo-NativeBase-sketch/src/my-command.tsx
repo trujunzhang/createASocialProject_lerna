@@ -10,10 +10,10 @@ import { Setup } from './layouts/boot/setup'
 import { Root } from '@app/native-base'
 
 import {
-    CurrentPage 
+  CurrentPage
 } from './pages'
 
-console.log('Dimensions(screen): ', JSON.stringify(Dimensions.get('window')))
+// console.log('Dimensions(screen): ', JSON.stringify(Dimensions.get('window')))
 
 const App = () => {
   // return null

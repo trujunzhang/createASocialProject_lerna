@@ -8,7 +8,8 @@ import {
   IIconVectorVariables, IThemeDefaultVariables,
   themeVariablesWithIconVector,
   generatorForAppThemeVariables,
-  fontProxima
+  fontProxima,
+  fontRoboto
 } from '@app/native-base-variables'
 
 
@@ -17,11 +18,12 @@ const iconVectorVariable: IIconVectorVariables = {
     return vectorIcons
   }
 }
+
 const themeDefaultVariables: IThemeDefaultVariables = {
   btnFontFamily: 'MaterialIcons',
   iconFamily: 'MaterialIcons',
-  fontFamily: fontProxima,
-  titleFontfamily: fontProxima
+  fontFamily: fontRoboto,
+  titleFontfamily: fontRoboto
 }
 
 export const platformVariables: themeVariablesWithIconVector = generatorForAppThemeVariables(

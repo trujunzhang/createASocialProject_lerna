@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import {
+    View,
     Container,
     Header,
     Title,
@@ -65,13 +66,15 @@ export class NBDebugButton extends React.Component<any, any> {
         return (
             <Content padder>
 
-                <Button success style={{}}>
-                    <Icon name="arrow-back" />
-                </Button>
+                <Text>Lets Go!</Text>
 
-                <Button success style={{}}>
-                    <Icon name="arrow-back"  size={8} />
-                </Button>
+                <View style={{ marginBottom: 80 }}>
+                    <Button
+                        style={{ backgroundColor: '#6FAF98', alignSelf: 'center' }}
+                        onPress={() => this.props.navigation.openDrawer()}>
+                        <Text>Lets Go!</Text>
+                    </Button>
+                </View>
 
             </Content>
         )
