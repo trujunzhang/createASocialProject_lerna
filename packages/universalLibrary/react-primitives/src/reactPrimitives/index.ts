@@ -4,9 +4,9 @@ import { allInjectionModel } from '../injection/react-native-web'
 
 export const ReactPrimitivesHelper = new Generator(allInjectionModel).end()
 
-import { StyleSheet, Animated } from 'react-native-web'
+import { StyleSheet } from 'react-native-web'
 
-export { StyleSheet, Animated }
+export { StyleSheet }
 
 // List
 import { KeyboardAwareScrollView } from '../components/list/keyboardAwareScrollView'
@@ -70,4 +70,12 @@ export {
   Platform,
   StatusBar,
   isIphoneX
+}
+
+// Animations
+import { Animated, Easing } from '../components/animations/animated'
+
+export {
+  // Animations
+  Animated, Easing
 }

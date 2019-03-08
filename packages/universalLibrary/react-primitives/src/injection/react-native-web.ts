@@ -1,26 +1,8 @@
-import {
-  PixelRatio,
-  Animated,
-  StyleSheet,
-  View,
-  // List
-  ListView,
-  ScrollView,
-  Text,
-  Image,
-  Platform,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableWithoutFeedback,
-  TouchableNativeFeedback,
-  Dimensions,
-  Easing
-} from 'react-native-web'
+import { Animated, Easing, View, Text, Image } from 'react-native-web'
 
 import {
   IReactPrimitivesModel,
   IInjectionBaseModel,
-  IInjectionAnimateModel,
   IInjectionTextModel
 } from '../models'
 
@@ -45,11 +27,6 @@ const injectionBaseModel: IInjectionBaseModel = {
   // StyleSheet: Object.assign(StyleSheet, { resolve })
 }
 
-const injectionAnimateModel: IInjectionAnimateModel = {
-  Easing,
-  Animated
-}
-
 const injectionTextModel: IInjectionTextModel = {
   // Text
   TextInput: null,
@@ -58,6 +35,5 @@ const injectionTextModel: IInjectionTextModel = {
 
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
-  injectionAnimateModel,
   injectionTextModel
 )

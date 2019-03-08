@@ -9,7 +9,6 @@ import {
   IReactPrimitivesModel,
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionAnimateModel,
   IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
@@ -24,10 +23,6 @@ export class ReactPrimitivesHelper {
     this.reactPrimitivesModel.View = model.View
     this.reactPrimitivesModel.Image = model.Image
   }
-  private injectionAnimateModel(model: IInjectionAnimateModel) {
-    this.reactPrimitivesModel.Easing = model.Easing
-    this.reactPrimitivesModel.Animated = model.Animated
-  }
 
   private injectionTextModel(model: IInjectionTextModel) {
     this.reactPrimitivesModel.TextInput = model.TextInput
@@ -36,7 +31,6 @@ export class ReactPrimitivesHelper {
 
   constructor(allInjectionModel: IReactPrimitivesModel) {
     this.injectionBaseModel(allInjectionModel)
-    this.injectionAnimateModel(allInjectionModel)
     this.injectionTextModel(allInjectionModel)
   }
 

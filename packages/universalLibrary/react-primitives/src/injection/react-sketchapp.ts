@@ -4,20 +4,18 @@
 import {
   View,
   Text,
-  Image,
-  StyleSheet
+  Image
   // TODO(lmr): Dimensions
 } from 'react-sketchapp'
 
 import {
   IReactPrimitivesModel,
   IInjectionBaseModel,
-  IInjectionAnimateModel,
   IInjectionTextModel
 } from '../models'
 
 const TouchableMixin = {
-  componentWillUnmount() {},
+  componentWillUnmount() { },
   touchableGetInitialState() {
     return { touchable: { touchState: undefined, responderID: null } }
   },
@@ -30,10 +28,10 @@ const TouchableMixin = {
   touchableLongPressCancelsPress() {
     return true
   },
-  touchableHandleResponderGrant() {},
-  touchableHandleResponderRelease() {},
-  touchableHandleResponderTerminate() {},
-  touchableHandleResponderMove() {}
+  touchableHandleResponderGrant() { },
+  touchableHandleResponderRelease() { },
+  touchableHandleResponderTerminate() { },
+  touchableHandleResponderMove() { }
 }
 
 // Animated.inject.FlattenStyle(StyleSheet.flatten)
@@ -41,11 +39,6 @@ const TouchableMixin = {
 const injectionBaseModel: IInjectionBaseModel = {
   View,
   Image
-}
-
-const injectionAnimateModel: IInjectionAnimateModel = {
-  Easing: null,
-  Animated: null
 }
 
 const injectionTextModel: IInjectionTextModel = {
@@ -56,6 +49,5 @@ const injectionTextModel: IInjectionTextModel = {
 
 export const allInjectionModel: IReactPrimitivesModel = Object.assign(
   injectionBaseModel,
-  injectionAnimateModel,
   injectionTextModel
 )

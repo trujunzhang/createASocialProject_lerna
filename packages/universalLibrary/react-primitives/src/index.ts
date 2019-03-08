@@ -1,7 +1,7 @@
-import { ReactPrimitivesHelper, StyleSheet, Animated } from './reactPrimitives'
+import { ReactPrimitivesHelper, StyleSheet } from './reactPrimitives'
 
 // So important here, directly export.
-export { StyleSheet, Animated }
+export { StyleSheet }
 
 import {
   // List
@@ -73,19 +73,26 @@ export {
   Platform,
   StatusBar,
   isIphoneX
+}
+
+
+import {
+  // Animations
+  Animated, Easing
+} from './reactPrimitives'
+
+export {
+  // Animations
+  Animated, Easing
 }
 
 // ReactPrimitivesHelper
 // ===================================
-import { IInjectionBaseModel, IInjectionAnimateModel, IInjectionTextModel } from './models'
+import { IInjectionBaseModel, IInjectionTextModel } from './models'
 
 const { View, Image } = ReactPrimitivesHelper as IInjectionBaseModel
 
 export { View, Image }
-
-const { Easing } = ReactPrimitivesHelper as IInjectionAnimateModel
-
-export { Easing }
 
 const { TextInput, Text } = ReactPrimitivesHelper as IInjectionTextModel
 
