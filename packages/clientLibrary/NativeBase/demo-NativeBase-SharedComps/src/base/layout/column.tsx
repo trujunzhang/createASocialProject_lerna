@@ -1,15 +1,6 @@
-import * as React from "react";
-import {
-  Container,
-  Header,
-  Title,
-  Button,
-  Icon,
-  Left,
-  Right,
-  Body
-} from "@app/native-base";
-import { Grid, Col } from "react-native-easy-grid";
+import * as React from 'react'
+import { Container, Header, Title, Button, Icon, Left, Right, Body } from '@app/native-base'
+import { Grid, Col } from 'react-native-easy-grid'
 
 export class ColumnNB extends React.Component<any, any> {
   render() {
@@ -28,12 +19,10 @@ export class ColumnNB extends React.Component<any, any> {
         </Header>
 
         <Grid>
-          <Col style={{ backgroundColor: "#635DB7" }} />
-          <Col style={{ backgroundColor: "#00CE9F" }} />
+          <Col style={{ backgroundColor: '#635DB7' }} />
+          <Col style={{ backgroundColor: '#00CE9F' }} />
         </Grid>
       </Container>
-    );
+    )
   }
 }
-
-

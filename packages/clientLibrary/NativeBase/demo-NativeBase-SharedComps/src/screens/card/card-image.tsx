@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image } from 'react-native'
+import { Image } from 'react-primitives'
 import {
   Container,
   Header,

@@ -1,15 +1,6 @@
-import * as React from "react";
-import {
-  Container,
-  Header,
-  Title,
-  Button,
-  Icon,
-  Left,
-  Right,
-  Body
-} from "@app/native-base";
-import { Grid, Row } from "react-native-easy-grid";
+import * as React from 'react'
+import { Container, Header, Title, Button, Icon, Left, Right, Body } from '@app/native-base'
+import { Grid, Row } from 'react-native-easy-grid'
 
 export class CustomRow extends React.Component<any, any> {
   render() {
@@ -28,13 +19,11 @@ export class CustomRow extends React.Component<any, any> {
         </Header>
 
         <Grid>
-          <Row size={1} style={{ backgroundColor: "#635DB7" }} />
-          <Row size={2} style={{ backgroundColor: "#00CE9F" }} />
-          <Row size={4} style={{ backgroundColor: "#DD9E2C" }} />
+          <Row size={1} style={{ backgroundColor: '#635DB7' }} />
+          <Row size={2} style={{ backgroundColor: '#00CE9F' }} />
+          <Row size={4} style={{ backgroundColor: '#DD9E2C' }} />
         </Grid>
       </Container>
-    );
+    )
   }
 }
-
-

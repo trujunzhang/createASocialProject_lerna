@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -12,11 +12,11 @@ import {
   Left,
   Right,
   View
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
-const logo = require("../../../assets/drawer-cover.png");
-const cover = require("../../../assets/drawer-cover.png");
+const logo = require('../../../assets/drawer-cover.png')
+const cover = require('../../../assets/drawer-cover.png')
 
 export class NHThumbnail extends React.Component<any, any> {
   render() {
@@ -24,10 +24,7 @@ export class NHThumbnail extends React.Component<any, any> {
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -38,7 +35,7 @@ export class NHThumbnail extends React.Component<any, any> {
         </Header>
 
         <Content padder>
-          <View style={{ flex: 1, alignItems: "center" }}>
+          <View style={{ flex: 1, alignItems: 'center' }}>
             <Text style={styles.mb10}>Square Thumbnail</Text>
             <Thumbnail square small source={logo} style={styles.mb10} />
             <Thumbnail square source={logo} style={styles.mb10} />
@@ -51,8 +48,6 @@ export class NHThumbnail extends React.Component<any, any> {
           </View>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-

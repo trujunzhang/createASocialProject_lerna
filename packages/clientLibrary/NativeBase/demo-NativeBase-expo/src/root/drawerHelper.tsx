@@ -28,16 +28,15 @@ import {
   NHDeckSwiper,
   NHFab,
   NHDatePicker,
-    // Toast
-    NHToast,
-    // Layout
-    NHLayout ,
-    // thumbnail
-    NHThumbnail ,
-    // Typography 
-    NHTypography 
+  // Toast
+  NHToast,
+  // Layout
+  NHLayout,
+  // thumbnail
+  NHThumbnail,
+  // Typography
+  NHTypography
 } from '@app/nb-demo-shared-components'
-
 
 export const stackRouteConfigs = {
   Home: { screen: Home },

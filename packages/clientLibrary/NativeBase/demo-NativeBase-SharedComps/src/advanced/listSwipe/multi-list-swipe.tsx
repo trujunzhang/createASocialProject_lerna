@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ListView } from 'react-native'
+import { ListView } from 'react-primitives'
 import {
   Container,
   Header,

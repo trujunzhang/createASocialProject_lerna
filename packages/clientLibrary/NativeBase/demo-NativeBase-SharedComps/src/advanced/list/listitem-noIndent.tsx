@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FlatList } from 'react-native'
+import { FlatList } from 'react-primitives'
 import {
   Container,
   Header,

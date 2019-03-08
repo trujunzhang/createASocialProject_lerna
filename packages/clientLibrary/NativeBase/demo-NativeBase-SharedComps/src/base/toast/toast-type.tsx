@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   Container,
   Header,
@@ -11,15 +11,15 @@ import {
   Right,
   Body,
   Toast
-} from "@app/native-base";
-import styles from "./styles";
+} from '@app/native-base'
+import styles from './styles'
 
 export class ToastType extends React.Component<any, any> {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       showToast: false
-    };
+    }
   }
   render() {
     return (
@@ -40,10 +40,10 @@ export class ToastType extends React.Component<any, any> {
           <Button
             onPress={() =>
               Toast.show({
-                text: "Wrong password!",
-                buttonText: "Okay"
-              })}
-          >
+                text: 'Wrong password!',
+                buttonText: 'Okay'
+              })
+            }>
             <Text>Default Toast</Text>
           </Button>
           <Button
@@ -51,11 +51,11 @@ export class ToastType extends React.Component<any, any> {
             style={styles.mb15}
             onPress={() =>
               Toast.show({
-                text: "Wrong password!",
-                buttonText: "Okay",
-                type: "success"
-              })}
-          >
+                text: 'Wrong password!',
+                buttonText: 'Okay',
+                type: 'success'
+              })
+            }>
             <Text>Success Toast</Text>
           </Button>
           <Button
@@ -63,11 +63,11 @@ export class ToastType extends React.Component<any, any> {
             style={styles.mb15}
             onPress={() =>
               Toast.show({
-                text: "Wrong password!",
-                buttonText: "Okay",
-                type: "warning"
-              })}
-          >
+                text: 'Wrong password!',
+                buttonText: 'Okay',
+                type: 'warning'
+              })
+            }>
             <Text>Warning Toast</Text>
           </Button>
           <Button
@@ -75,17 +75,15 @@ export class ToastType extends React.Component<any, any> {
             style={styles.mb15}
             onPress={() =>
               Toast.show({
-                text: "Wrong password!",
-                buttonText: "Okay",
-                type: "danger"
-              })}
-          >
+                text: 'Wrong password!',
+                buttonText: 'Okay',
+                type: 'danger'
+              })
+            }>
             <Text>Danger Toast</Text>
           </Button>
         </Content>
       </Container>
-    );
+    )
   }
 }
-
-
