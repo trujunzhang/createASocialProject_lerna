@@ -14,8 +14,8 @@ export const iconFontSize = platform === 'ios' ? 28 : 28
 export const fontSizeBase = 15
 
 export const themeDefaultVariables: IThemeDefaultVariables = {
-  btnFontFamily: 'MaterialIcons',
   iconFamily: 'MaterialIcons',
+  btnFontFamily: fontProxima,
   fontFamily: fontProxima,
   titleFontfamily: fontProxima
 }

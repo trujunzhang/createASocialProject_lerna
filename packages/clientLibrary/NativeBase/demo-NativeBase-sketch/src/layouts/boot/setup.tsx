@@ -20,8 +20,8 @@ const iconVectorVariable: IIconVectorVariables = {
 }
 
 const themeDefaultVariables: IThemeDefaultVariables = {
-  btnFontFamily: 'MaterialIcons',
   iconFamily: 'MaterialIcons',
+  btnFontFamily: fontRoboto,
   fontFamily: fontRoboto,
   titleFontfamily: fontRoboto
 }
