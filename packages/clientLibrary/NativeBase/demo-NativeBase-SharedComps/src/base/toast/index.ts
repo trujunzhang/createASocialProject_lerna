@@ -1,10 +1,8 @@
-import BasicToast from './basic-toast'
-import ToastDuration from './toast-duration'
-import ToastPosition from './toast-position'
-import ToastType from './toast-type'
-import ToastText from './toast-text'
-import ToastButton from './toast-button'
+export * from './basic-toast'
+export * from './toast-duration'
+export * from './toast-position'
+export * from './toast-type'
+export * from './toast-text'
+export * from './toast-button'
 
-import NHToast from './NHToast'
-
-export { NHToast, BasicToast, ToastDuration, ToastPosition, ToastType, ToastText, ToastButton }
+export * from './NHToast'
