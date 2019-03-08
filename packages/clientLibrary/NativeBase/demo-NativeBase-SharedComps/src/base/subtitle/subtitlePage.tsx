@@ -10,13 +10,13 @@ import {
   PageLayout
 } from '@app/native-base'
 
-interface ISubtitlePageProps {}
+interface ISubtitlePageProps { }
 
 interface ISubtitlePageState {
   toolbarParams: IPageToolbarParams
 }
 
-export class SubtitlePage extends React.Component<ISubtitlePageProps, ISubtitlePageState> {
+export export class SubtitlePage extends React.Component<ISubtitlePageProps, ISubtitlePageState> {
   public state: ISubtitlePageState
 
   constructor(props: ISubtitlePageProps, context) {

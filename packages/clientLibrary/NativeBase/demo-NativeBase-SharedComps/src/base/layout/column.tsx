@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import {
   Container,
   Header,
@@ -11,7 +11,7 @@ import {
 } from "@app/native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
-class CustomCol extends Component {
+export class ColumnNB extends React.Component<any, any> {
   render() {
     return (
       <Container>
@@ -22,19 +22,18 @@ class CustomCol extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Custom Col</Title>
+            <Title>Column Grid</Title>
           </Body>
           <Right />
         </Header>
 
         <Grid>
-          <Col size={1} style={{ backgroundColor: "#00CE9F" }} />
-          <Col size={2} style={{ backgroundColor: "#635DB7" }} />
-          <Col size={4} style={{ backgroundColor: "#DD9E2C" }} />
+          <Col style={{ backgroundColor: "#635DB7" }} />
+          <Col style={{ backgroundColor: "#00CE9F" }} />
         </Grid>
       </Container>
     );
   }
 }
 
-export default CustomCol;
+

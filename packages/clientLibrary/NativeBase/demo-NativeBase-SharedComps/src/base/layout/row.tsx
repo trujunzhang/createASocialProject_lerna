@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import {
   Container,
   Header,
@@ -11,7 +11,7 @@ import {
 } from "@app/native-base";
 import { Grid, Row } from "react-native-easy-grid";
 
-class RowNB extends Component {
+export class RowNB extends React.Component<any, any> {
   render() {
     return (
       <Container>
@@ -36,4 +36,4 @@ class RowNB extends Component {
   }
 }
 
-export default RowNB;
+

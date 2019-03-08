@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import {
   Container,
   Header,
@@ -14,7 +14,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class ToastButton extends Component {
+export class ToastButton extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,4 +54,4 @@ class ToastButton extends Component {
   }
 }
 
-export default ToastButton;
+

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import {
   Container,
   Header,
@@ -18,7 +18,7 @@ import styles from "./styles";
 const logo = require("../../../assets/drawer-cover.png");
 const cover = require("../../../assets/drawer-cover.png");
 
-class NHThumbnail extends Component {
+export class NHThumbnail extends React.Component<any, any> {
   render() {
     return (
       <Container style={styles.container}>
@@ -55,4 +55,4 @@ class NHThumbnail extends Component {
   }
 }
 
-export default NHThumbnail;
+

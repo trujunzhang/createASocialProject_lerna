@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import {
   Container,
   Header,
@@ -9,9 +9,9 @@ import {
   Right,
   Body
 } from "@app/native-base";
-import { Grid, Col } from "react-native-easy-grid";
+import { Grid, Row, Col } from "react-native-easy-grid";
 
-class ColumnNB extends Component {
+export class NestedGrid extends React.Component<any, any> {
   render() {
     return (
       <Container>
@@ -22,18 +22,21 @@ class ColumnNB extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Column Grid</Title>
+            <Title>Nested Grid</Title>
           </Body>
           <Right />
         </Header>
 
         <Grid>
-          <Col style={{ backgroundColor: "#635DB7" }} />
-          <Col style={{ backgroundColor: "#00CE9F" }} />
+          <Col style={{ backgroundColor: "#DD9E2C" }} />
+          <Col>
+            <Row style={{ backgroundColor: "#00CE9F" }} />
+            <Row style={{ backgroundColor: "#635DB7" }} />
+          </Col>
         </Grid>
       </Container>
     );
   }
 }
 
-export default ColumnNB;
+

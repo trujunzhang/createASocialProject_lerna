@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import {
   Container,
   Header,
@@ -14,7 +14,7 @@ import {
 } from "@app/native-base";
 import styles from "./styles";
 
-class BasicToast extends Component {
+export class ToastPosition extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,7 +31,7 @@ class BasicToast extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Basic Toast</Title>
+            <Title>Toast Position</Title>
           </Body>
           <Right />
         </Header>
@@ -41,10 +41,22 @@ class BasicToast extends Component {
             onPress={() =>
               Toast.show({
                 text: "Wrong password!",
-                buttonText: "Okay"
+                buttonText: "Okay",
+                position: "top"
               })}
           >
-            <Text>Toast</Text>
+            <Text>Top Toast</Text>
+          </Button>
+          <Button
+            style={styles.mb15}
+            onPress={() =>
+              Toast.show({
+                text: "Wrong password!",
+                buttonText: "Okay",
+                position: "bottom"
+              })}
+          >
+            <Text>Bottom Toast</Text>
           </Button>
         </Content>
       </Container>
@@ -52,4 +64,4 @@ class BasicToast extends Component {
   }
 }
 
-export default BasicToast;
+
