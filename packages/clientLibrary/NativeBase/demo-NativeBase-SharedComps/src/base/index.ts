@@ -1,4 +1,7 @@
 export * from './layout'
-export * from './thumbnail'
 export * from './toast'
 export * from './typography'
+
+// export * from './thumbnail'  // issue for sketch
+
+
