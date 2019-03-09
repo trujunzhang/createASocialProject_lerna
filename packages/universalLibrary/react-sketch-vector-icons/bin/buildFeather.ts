@@ -63,7 +63,7 @@ glob(buildHelper.svgPath, (err, icons) => {
       import * as React from 'react';
       import * as PropTypes from 'prop-types';
 
-      const ${ComponentName} = (props) => {
+      export const ${ComponentName} = (props) => {
         const { color, size, ...otherProps } = props;
         return (
           ${$('svg')
@@ -87,8 +87,6 @@ glob(buildHelper.svgPath, (err, icons) => {
         color: 'currentColor',
         size: '24',
       }
-
-      export default ${ComponentName}
     `
 
     const component = prettier.format(element, {
@@ -100,10 +98,10 @@ glob(buildHelper.svgPath, (err, icons) => {
 
     fs.writeFileSync(location, component, 'utf-8')
 
-    const exportString = `export ${ComponentName} from './icons/${id}';\r\n`
+    const exportString = `export * from './icons/${id}'\r\n`
     fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
 
-    const exportTypeString = `export const ${ComponentName}: Icon;\n`
+    const exportTypeString = `export const ${ComponentName}: Icon\n`
     fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
   })
 })
