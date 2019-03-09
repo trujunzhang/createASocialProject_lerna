@@ -5,7 +5,6 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 import { UpperCaseStringUtils } from '@app/tools'
 
 import * as FeatherIcons from '../generate/feather'
-// import { Camera } from '../generate/feather'
 
 export class Feather extends React.Component<IconProps, any> {
   render() {
@@ -22,7 +21,7 @@ export class Feather extends React.Component<IconProps, any> {
 
     return (
       <View name={'feather-' + name}>
-        <FeatherIcon />
+        <FeatherIcon color={color} size={lastSize} />
       </View>
     )
   }
