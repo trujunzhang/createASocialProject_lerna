@@ -35,8 +35,11 @@ import {
   // thumbnail
   NHThumbnail,
   // Typography
-  NHTypography
+  NHTypography,
+    // Vector icons
+    FeatherIcons 
 } from '@app/nb-demo-shared-components'
+
 
 export const stackRouteConfigs = {
   Home: { screen: Home },
@@ -69,10 +72,17 @@ export const stackRouteConfigs = {
 
   MultiListSwipe: { screen: MultiListSwipe },
 
-  IconSetsList: { screen: IconSetsList }
+  IconSetsList: { screen: IconSetsList },
+
+    // Vector icons
+    FeatherIcons : { screen: FeatherIcons  }
 }
 
-const initialRouteName = 'Home'
+/* const initialRouteName = 'Home' */
+// Vector icons
+const initialRouteName = 'FeatherIcons'
+
+// Buttons
 /* const initialRouteName = 'IconBtn' */
 /* const initialRouteName = 'NHButton' */
 
