@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { generatedIconHome } from '../buildConst'
+import { generatedIconHome } from './buildConst'
 
 export interface IVectorIcconsParams {
     svgPath: string

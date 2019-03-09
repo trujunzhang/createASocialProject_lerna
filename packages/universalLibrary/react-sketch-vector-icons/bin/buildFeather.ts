@@ -8,7 +8,6 @@ import prettier from 'prettier'
 
 const rootDir = path.join(__dirname, '..')
 
-import { generatedIconHome } from './buildConst'
 import {
   BuildHelper
 } from './utils'
