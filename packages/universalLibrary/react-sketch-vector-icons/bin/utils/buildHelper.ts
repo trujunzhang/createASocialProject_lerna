@@ -15,17 +15,24 @@ export class BuildHelper {
             iconType
         } = params
         this.params = params
-        const generatedIconRoot = `${generatedIconHome}/${iconType}`
+        this.generatedIconRoot = `${generatedIconHome}/${iconType}`
 
-        if (!fs.existsSync(generatedIconRoot)) {
-            fs.mkdirSync(generatedIconRoot)
+        this.readyBuild()
+    }
+
+    private readyBuild() {
+        // Home Root
+        if (!fs.existsSync(generatedIconHome)) {
+            fs.mkdirSync(generatedIconHome)
         }
-
+        // IconType Root
+        if (!fs.existsSync(this.generatedIconRoot)) {
+            fs.mkdirSync(this.generatedIconRoot)
+        }
+        // Icon Folder
         if (!fs.existsSync(this.generatedIconPath)) {
             fs.mkdirSync(this.generatedIconPath)
         }
-
-        this.generatedIconRoot = generatedIconRoot
     }
 
     get svgPath() {
