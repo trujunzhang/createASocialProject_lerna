@@ -36,10 +36,9 @@ import {
   NHThumbnail,
   // Typography
   NHTypography,
-    // Vector icons
-    FeatherIcons 
+  // Vector icons
+  FeatherIcons
 } from '@app/nb-demo-shared-components'
-
 
 export const stackRouteConfigs = {
   Home: { screen: Home },
@@ -74,8 +73,8 @@ export const stackRouteConfigs = {
 
   IconSetsList: { screen: IconSetsList },
 
-    // Vector icons
-    FeatherIcons : { screen: FeatherIcons  }
+  // Vector icons
+  FeatherIcons: { screen: FeatherIcons }
 }
 
 /* const initialRouteName = 'Home' */
