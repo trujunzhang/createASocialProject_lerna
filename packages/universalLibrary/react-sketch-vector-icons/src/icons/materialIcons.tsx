@@ -2,9 +2,12 @@ import * as React from 'react'
 import { View, Text, Svg } from 'react-sketchapp'
 import { IconProps } from 'react-native-vector-icons/Icon'
 import * as svgJsonObject from '../glyphmapsJS/MaterialIcons.json'
-import { getSvgDataByIconName } from './utils/iconsJsonHelper'
+import {
+  getSvgDataByIconName,
+  adjustSketchIconSize
+} from './utils'
 
-interface IMaterialIconsProps {}
+interface IMaterialIconsProps { }
 interface IMaterialIconsState {
   pathData: string | null
 }
@@ -25,16 +28,29 @@ export class MaterialIcons extends React.Component<IconProps, IMaterialIconsStat
   }
 
   render() {
-    const { name, size, color } = this.props
+    const { name, size: lastSize, color, style } = this.props
     const { pathData } = this.state
     if (!!pathData) {
       // console.log('MaterialIcons:  ', JSON.stringify(this.props))
+      const size = adjustSketchIconSize(lastSize as number)
+
+      // console.log('MaterialIcons:  ', JSON.stringify(this.props.style))
+      console.log('MaterialIcons(lastSize):  ' + lastSize + ', size: ' + size)
+
       return (
-        <Svg height={size} width={size}>
-          <Svg.G fill={color} fillRule="evenodd" viewBox={`0 0 ${size} ${size}`}>
-            <Svg.Path d={pathData} />
-          </Svg.G>
-        </Svg>
+        <View name={'svg-' + name} style={[
+          style, {
+            width: size,
+            height: size,
+            // backgroundColor: 'red'
+          }]}>
+          <Svg
+            height={size} width={size}>
+            <Svg.G fill={color} fillRule="evenodd" viewBox={`0 0 ${size} ${size}`}>
+              <Svg.Path d={pathData} />
+            </Svg.G>
+          </Svg>
+        </View>
       )
     }
 
