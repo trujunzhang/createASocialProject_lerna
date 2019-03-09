@@ -43,7 +43,7 @@ export class FeatherIcons extends React.Component<any, any> {
                             {'book'}
                         </Text>
                         <Icon type={IconVectorTypeFeather} name="book" style={{ color: '#ffc125' }} />
-                    </ListItem>
+                    </ListItem> 
                     <ListItem>
                         <Text numberOfLines={1} style={styles.iconText}>
                             {'check'}

@@ -22,10 +22,13 @@
     "build:all": "npm run build:types && npm run build:js",
     "build-lib": "yarn build.clean && yarn build:all & yarn postbuild",
     "build.current": "yarn build-lib",
-    "postinstall": "yarn build-lib"
+    "postinstall": "yarn build-lib",
+    " ##  the following is generating automatically!  ## ": "",
+    "generate.vectors": "run-s  generate:*",
+    "generate:feather": "node ./bin/buildFeather"
   },
   "dependencies": {
-    "feather-icons": "4.19.0",
+    "react-feather": "1.1.6",
     "material-icons": "0.3.0",
     "@types/react-native-vector-icons": "4.6.4",
     "react-sketchapp": "2.0.0",
@@ -43,7 +46,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "@svgr/core": "3.1.0",
+    "feather-icons": "^4.19.0",
     "glob": "7.1.2",
     "@types/node": "11.10.4",
     "babel-plugin-module-resolver": "3.2.0",
