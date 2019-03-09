@@ -104,9 +104,9 @@ glob(featherIconsPath, (err, icons) => {
     fs.writeFileSync(location, component, 'utf-8')
 
     const exportString = `export ${ComponentName} from './icons/${id}';\r\n`
-    fs.appendFileSync(path.join(rootDir, 'src', mainTS), exportString, 'utf-8')
+    fs.appendFileSync(mainTSPath, exportString, 'utf-8')
 
     const exportTypeString = `export const ${ComponentName}: Icon;\n`
-    fs.appendFileSync(path.join(rootDir, 'src', mainTypings), exportTypeString, 'utf-8')
+    fs.appendFileSync(mainTypingsPath, exportTypeString, 'utf-8')
   })
 })
