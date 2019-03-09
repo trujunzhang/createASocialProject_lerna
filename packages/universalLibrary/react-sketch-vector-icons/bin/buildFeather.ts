@@ -21,19 +21,19 @@ interface Props extends SVGAttributes<SVGElement> {
 type Icon = ComponentType<Props>;
 `
 
-const mainTS = 'index.ts'
-const mainTypings = 'index.d.ts'
+const generatedIconPath = `${generatedIconHome}/feather`
+const mainTSPath = `${generatedIconPath}/index.ts`
+const mainTypingsPath = `${generatedIconPath}/index.d.ts`
 const featherIconsPath = `${rootDir}/node_modules/feather-icons/dist/icons/**.svg`
 
-const generatedIconPath = `${generatedIconHome}/feather`
 
 if (!fs.existsSync(generatedIconPath)) {
   fs.mkdirSync(generatedIconPath)
 }
 
 glob(featherIconsPath, (err, icons) => {
-  fs.writeFileSync(path.join(rootDir, 'src', mainTS), '', 'utf-8')
-  fs.writeFileSync(path.join(rootDir, 'src', mainTypings), initialTypeDefinitions, 'utf-8')
+  fs.writeFileSync(mainTSPath, '', 'utf-8')
+  fs.writeFileSync(mainTypingsPath, initialTypeDefinitions, 'utf-8')
 
   icons.forEach((i) => {
     const svg = fs.readFileSync(i, 'utf-8')
@@ -70,11 +70,11 @@ glob(featherIconsPath, (err, icons) => {
         const { color, size, ...otherProps } = props;
         return (
           ${$('svg')
-            .toString()
-            .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
-            .replace('width="24"', 'width={size}')
-            .replace('height="24"', 'height={size}')
-            .replace('otherProps="..."', '{...otherProps}')}
+        .toString()
+        .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
+        .replace('width="24"', 'width={size}')
+        .replace('height="24"', 'height={size}')
+        .replace('otherProps="..."', '{...otherProps}')}
         )
       };
 

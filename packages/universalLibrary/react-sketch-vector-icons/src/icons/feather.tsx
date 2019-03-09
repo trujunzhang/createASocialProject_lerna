@@ -2,7 +2,7 @@ import * as React from 'react'
 import { View, Text } from 'react-sketchapp'
 import { IconProps } from 'react-native-vector-icons/Icon'
 
-import { Camera } from 'react-feather';
+import { Camera } from 'react-feather'
 
 export class Feather extends React.Component<IconProps, any> {
   render() {
