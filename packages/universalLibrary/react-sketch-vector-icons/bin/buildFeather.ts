@@ -62,11 +62,12 @@ glob(buildHelper.svgPath, (err, icons) => {
     const element = `
       import * as React from 'react';
       import * as PropTypes from 'prop-types';
+      import { Svg } from 'react-sketchapp'
 
       export const ${ComponentName} = (props) => {
         const { color, size, ...otherProps } = props;
         return (
-          ${$('svg')
+          ${$('Svg')
         .toString()
         .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
         .replace('width="24"', 'width={size}')

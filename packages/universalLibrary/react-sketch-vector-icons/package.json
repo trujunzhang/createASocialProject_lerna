@@ -29,7 +29,6 @@
     "generate:feather": "yarn compile.bin && node ./generate/buildFeather"
   },
   "dependencies": {
-    "react-feather": "1.1.6",
     "material-icons": "0.3.0",
     "@types/react-native-vector-icons": "4.6.4",
     "react-sketchapp": "2.0.0",

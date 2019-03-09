@@ -4,7 +4,7 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 import * as svgJsonObject from '../glyphmapsJS/MaterialIcons.json'
 import { getSvgDataByIconName, adjustSketchIconSize } from './utils'
 
-interface IMaterialIconsProps {}
+interface IMaterialIconsProps { }
 interface IMaterialIconsState {
   pathData: string | null
 }
