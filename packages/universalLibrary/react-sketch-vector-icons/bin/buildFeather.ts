@@ -1,10 +1,10 @@
-const fs = require('fs');
-const glob = require('glob');
-const camelcase = require('camelcase');
-const uppercamelcase = require('uppercamelcase');
-const path = require('path');
-const cheerio = require('cheerio');
-const prettier = require('prettier');
+import fs from 'fs';
+import glob from 'glob';
+import camelcase from 'camelcase';
+import uppercamelcase from 'uppercamelcase';
+import path from 'path';
+import cheerio from 'cheerio';
+import prettier from 'prettier';
 
 const rootDir = path.join(__dirname, '..');
 

@@ -25,7 +25,7 @@
     "postinstall": "yarn build-lib",
     " ##  the following is generating automatically!  ## ": "",
     "generate.vectors": "run-s  generate:*",
-    "generate:feather": "node ./bin/buildFeather"
+    "generate:feather": "tsc ./bin/buildFeather && node ./bin/buildFeather"
   },
   "dependencies": {
     "react-feather": "1.1.6",
