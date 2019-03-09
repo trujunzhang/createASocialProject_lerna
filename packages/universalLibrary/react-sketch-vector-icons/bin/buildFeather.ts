@@ -21,11 +21,15 @@ interface Props extends SVGAttributes<SVGElement> {
 type Icon = ComponentType<Props>;
 `
 
-const generatedIconPath = `${generatedIconHome}/feather`
-const mainTSPath = `${generatedIconPath}/index.ts`
-const mainTypingsPath = `${generatedIconPath}/index.d.ts`
 const featherIconsPath = `${rootDir}/node_modules/feather-icons/dist/icons/**.svg`
+const generatedIconRoot = `${generatedIconHome}/feather`
+const generatedIconPath = `${generatedIconRoot}/feather/icons`
+const mainTSPath = `${generatedIconRoot}/index.ts`
+const mainTypingsPath = `${generatedIconRoot}/index.d.ts`
 
+if (!fs.existsSync(generatedIconRoot)) {
+  fs.mkdirSync(generatedIconRoot)
+}
 
 if (!fs.existsSync(generatedIconPath)) {
   fs.mkdirSync(generatedIconPath)
