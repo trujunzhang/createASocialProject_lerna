@@ -1,4 +1,4 @@
-import CamelCase from 'camelCase'
+import CamelCase from 'camelcase'
 
 export class UpperCaseStringUtils {
   static toCamelClassName(name: string) {
