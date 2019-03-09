@@ -36,4 +36,5 @@ yarn-error.log*
 /bin/*.jsx
 
 # svg icons generated automatically
+/generate/**
 /src/generate/**
