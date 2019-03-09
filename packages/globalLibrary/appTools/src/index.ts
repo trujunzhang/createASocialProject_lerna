@@ -8,6 +8,7 @@ export * from './axiosUtils'
 export * from './routeParserUtils'
 export * from './numeralUtils'
 export * from './colorUtils'
+export * from './upperCaseStringUtils'
 
 // Vendor
 export * from './vendor'

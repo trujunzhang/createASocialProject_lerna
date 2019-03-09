@@ -8,9 +8,7 @@ import prettier from 'prettier'
 
 const rootDir = path.join(__dirname, '..')
 
-import {
-  BuildHelper
-} from './utils'
+import { BuildHelper } from './utils'
 
 const initialTypeDefinitions = `/// <reference types="react" />
 import { ComponentType, SVGAttributes } from 'react';
@@ -62,12 +60,12 @@ glob(buildHelper.svgPath, (err, icons) => {
     const element = `
       import * as React from 'react';
       import * as PropTypes from 'prop-types';
-      import { Svg } from 'react-sketchapp'
+      import { Svg as svg } from 'react-sketchapp';
 
       export const ${ComponentName} = (props) => {
         const { color, size, ...otherProps } = props;
         return (
-          ${$('Svg')
+          ${$('svg')
         .toString()
         .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
         .replace('width="24"', 'width={size}')
@@ -97,7 +95,14 @@ glob(buildHelper.svgPath, (err, icons) => {
       parser: 'flow'
     })
 
-    fs.writeFileSync(location, component, 'utf-8')
+    const fixedComponent = component
+      .replace(/<path/g, '<svg.Path')
+      .replace(/<circle/g, '<svg.Circle')
+      .replace(/<polyline/g, '<svg.Polyline')
+      .replace(/<rect/g, '<svg.Rect')
+      .replace(/<line/g, '<svg.Line')
+
+    fs.writeFileSync(location, fixedComponent, 'utf-8')
 
     const exportString = `export * from './icons/${id}'\r\n`
     fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
