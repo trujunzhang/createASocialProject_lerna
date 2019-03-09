@@ -9,6 +9,9 @@ import prettier from 'prettier'
 const rootDir = path.join(__dirname, '..')
 
 import { generatedIconHome } from './buildConst'
+import {
+  BuildHelper
+} from './utils'
 
 const initialTypeDefinitions = `/// <reference types="react" />
 import { ComponentType, SVGAttributes } from 'react';
@@ -21,23 +24,14 @@ interface Props extends SVGAttributes<SVGElement> {
 type Icon = ComponentType<Props>;
 `
 
-const featherIconsPath = `${rootDir}/node_modules/feather-icons/dist/icons/**.svg`
-const generatedIconRoot = `${generatedIconHome}/feather`
-const generatedIconPath = `${generatedIconRoot}/icons`
-const mainTSPath = `${generatedIconRoot}/index.ts`
-const mainTypingsPath = `${generatedIconRoot}/index.d.ts`
+const buildHelper = new BuildHelper({
+  svgPath: `${rootDir}/node_modules/feather-icons/dist/icons/**.svg`,
+  iconType: 'feather'
+})
 
-if (!fs.existsSync(generatedIconRoot)) {
-  fs.mkdirSync(generatedIconRoot)
-}
-
-if (!fs.existsSync(generatedIconPath)) {
-  fs.mkdirSync(generatedIconPath)
-}
-
-glob(featherIconsPath, (err, icons) => {
-  fs.writeFileSync(mainTSPath, '', 'utf-8')
-  fs.writeFileSync(mainTypingsPath, initialTypeDefinitions, 'utf-8')
+glob(buildHelper.svgPath, (err, icons) => {
+  fs.writeFileSync(buildHelper.mainTSPath, '', 'utf-8')
+  fs.writeFileSync(buildHelper.mainTypingsPath, initialTypeDefinitions, 'utf-8')
 
   icons.forEach((i) => {
     const svg = fs.readFileSync(i, 'utf-8')
@@ -47,7 +41,7 @@ glob(featherIconsPath, (err, icons) => {
       xmlMode: true
     })
     const fileName = path.basename(i).replace('.svg', '.tsx')
-    const location = path.join(generatedIconPath, fileName)
+    const location = path.join(buildHelper.generatedIconPath, fileName)
 
     $('*').each((index, el) => {
       Object.keys(el.attribs).forEach((x) => {
@@ -108,9 +102,9 @@ glob(featherIconsPath, (err, icons) => {
     fs.writeFileSync(location, component, 'utf-8')
 
     const exportString = `export ${ComponentName} from './icons/${id}';\r\n`
-    fs.appendFileSync(mainTSPath, exportString, 'utf-8')
+    fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
 
     const exportTypeString = `export const ${ComponentName}: Icon;\n`
-    fs.appendFileSync(mainTypingsPath, exportTypeString, 'utf-8')
+    fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
   })
 })
