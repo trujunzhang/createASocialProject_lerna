@@ -23,7 +23,7 @@ type Icon = ComponentType<Props>;
 
 const featherIconsPath = `${rootDir}/node_modules/feather-icons/dist/icons/**.svg`
 const generatedIconRoot = `${generatedIconHome}/feather`
-const generatedIconPath = `${generatedIconRoot}/feather/icons`
+const generatedIconPath = `${generatedIconRoot}/icons`
 const mainTSPath = `${generatedIconRoot}/index.ts`
 const mainTypingsPath = `${generatedIconRoot}/index.d.ts`
 
