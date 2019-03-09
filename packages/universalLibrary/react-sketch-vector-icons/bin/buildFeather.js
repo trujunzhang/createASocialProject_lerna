@@ -50,7 +50,7 @@ glob(
         xmlMode: true,
       });
       const fileName = path.basename(i).replace('.svg', '.tsx');
-      const location = path.join(rootDir, generatedIconPath, fileName);
+      const location = path.join(generatedIconPath, fileName);
 
       $('*').each((index, el) => {
         Object.keys(el.attribs).forEach(x => {

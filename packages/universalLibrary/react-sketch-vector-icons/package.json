@@ -46,7 +46,10 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "feather-icons": "^4.19.0",
+    "feather-icons": "4.19.0",
+    "prettier": "1.13.7",
+    "uppercamelcase": "3.0.0",
+    "cheerio": "1.0.0-rc.1",
     "glob": "7.1.2",
     "@types/node": "11.10.4",
     "babel-plugin-module-resolver": "3.2.0",
