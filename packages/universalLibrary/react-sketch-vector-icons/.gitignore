@@ -30,6 +30,10 @@ yarn-error.log*
 # jetbrains
 /.idea
 
-# Compiled typescript.
-# **/*.js
-# **/*.jsx
+
+# bin
+/bin/*.js
+/bin/*.jsx
+
+# svg icons generated automatically
+/src/generate/**
