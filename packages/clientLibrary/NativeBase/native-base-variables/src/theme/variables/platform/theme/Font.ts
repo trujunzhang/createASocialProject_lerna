@@ -1,10 +1,10 @@
 import { IFontVariables, IFontFuncVariables } from '../../../../types'
 
-import { appThemeDefaultVariables, fontSizeBase } from '../appVariables'
+import { platformThemeDefaultVariables, fontSizeBase } from '../platformVariables'
 export const fontVariables: IFontVariables = {
   // Font
   DefaultFontSize: 16,
-  fontFamily: appThemeDefaultVariables.fontFamily,
+  fontFamily: platformThemeDefaultVariables.fontFamily,
   fontSizeBase
 }
 

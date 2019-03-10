@@ -1,10 +1,10 @@
 import { platform } from '../../utils'
 import { IIconVariables } from '../../../../types'
 
-import { appThemeDefaultVariables } from '../appVariables'
+import { platformThemeDefaultVariables } from '../platformVariables'
 export const iconVariables: IIconVariables = {
   // Icon
-  iconFamily: appThemeDefaultVariables.iconFamily,
+  iconFamily: platformThemeDefaultVariables.iconFamily,
   iconFontSize: platform === 'ios' ? 28 : 28,
   iconHeaderSize: 24
 }

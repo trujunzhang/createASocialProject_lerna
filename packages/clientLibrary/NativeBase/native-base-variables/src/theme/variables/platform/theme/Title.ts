@@ -1,10 +1,10 @@
 import { ITitleVariables } from '../../../../types'
 
-import { appThemeDefaultVariables } from '../appVariables'
+import { platformThemeDefaultVariables } from '../platformVariables'
 
 export const titleVariables: ITitleVariables = {
   // Title
-  titleFontfamily: appThemeDefaultVariables.titleFontfamily,
+  titleFontfamily: platformThemeDefaultVariables.titleFontfamily,
 
   titleFontSize: 17,
   titleFontColor: '#000',

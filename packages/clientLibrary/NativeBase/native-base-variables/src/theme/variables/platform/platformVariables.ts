@@ -13,7 +13,7 @@ export const inverseTextColor = '#fff'
 export const iconFontSize = platform === 'ios' ? 28 : 28
 export const fontSizeBase = 15
 
-export const appThemeDefaultVariables: IThemeDefaultVariables = {
+export const platformThemeDefaultVariables: IThemeDefaultVariables = {
   iconFamily: 'MaterialIcons',
   fontFamily: ProximaFontFamily.family,
   btnFontFamily: ProximaFontFamily.fontFace.medium,

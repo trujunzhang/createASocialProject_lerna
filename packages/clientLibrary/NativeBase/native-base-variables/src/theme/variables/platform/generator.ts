@@ -4,20 +4,20 @@ import {
   IIconVectorVariables
 } from '../../../types'
 
-import { appThemeDefaultVariables } from './appVariables'
-import { appThemeVariables } from './appThemeVariables'
+import { platformThemeDefaultVariables } from './platformVariables'
+import { platformThemeVariables } from './platformThemeVariables'
 
-export const generatorForAppThemeVariables = (
+export const generatorForPlatformThemeVariables = (
   iconVectorVariable: IIconVectorVariables,
   themeDefaultVariables?: IThemeDefaultVariables
 ): themeVariablesWithIconVector => {
-  const nextAppThemeVariables = appThemeVariables
+  const nextAppThemeVariables = platformThemeVariables
   const variableWithIcons = {
     ...nextAppThemeVariables,
     ...iconVectorVariable
   }
 
-  const defaultVariables = themeDefaultVariables || appThemeDefaultVariables
+  const defaultVariables = themeDefaultVariables || platformThemeDefaultVariables
   return {
     ...variableWithIcons,
     ...defaultVariables

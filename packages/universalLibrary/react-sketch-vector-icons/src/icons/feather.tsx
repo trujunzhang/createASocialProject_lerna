@@ -22,7 +22,7 @@ export class Feather extends React.Component<IconProps, any> {
 
     return (
       <View name={'feather-' + name}>
-        <FeatherIcon color={color} size={lastSize} />
+        <FeatherIcon color={color} size={lastSize as number} />
       </View>
     )
   }

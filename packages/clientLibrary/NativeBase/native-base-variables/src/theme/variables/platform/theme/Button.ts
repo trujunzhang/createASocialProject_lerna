@@ -1,10 +1,10 @@
 import { IButtonVariables, IButtonColorVariables, IButtonFuncVariables } from '../../../../types'
 import {
-  appThemeDefaultVariables,
+  platformThemeDefaultVariables,
   inverseTextColor,
   iconFontSize,
   fontSizeBase
-} from '../appVariables'
+} from '../platformVariables'
 import { platform } from '../../utils'
 
 // Color
@@ -21,7 +21,7 @@ const brandTwitter = '#00aced'
 
 export const buttonVariables: IButtonVariables = {
   // Button
-  btnFontFamily: appThemeDefaultVariables.btnFontFamily,
+  btnFontFamily: platformThemeDefaultVariables.btnFontFamily,
   btnDisabledBg: '#b5b5b5',
   buttonPadding: 6
 }
