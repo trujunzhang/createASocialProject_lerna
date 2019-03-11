@@ -39,7 +39,7 @@ export default class App extends React.Component<{}, IAppState> {
       ProximaFontFamily.fontFace.medium
     ] = require('./static/fonts/proxima/proxima-nova-600.ttf')
     fontSource[RobotoFontFamily.family] = require('./static/fonts/roboto/Roboto-Medium.ttf')
-    // fontSource[ProximaFontFamily .family] = require('./static/fonts/proxima/proxima-nova-600.ttf')
+    fontSource[ProximaFontFamily.family] = require('./static/fonts/proxima/proxima-nova-600.ttf')
     return fontSource
   }
 
