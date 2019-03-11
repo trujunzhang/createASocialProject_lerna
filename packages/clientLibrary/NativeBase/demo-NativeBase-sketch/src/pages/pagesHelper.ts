@@ -11,8 +11,8 @@ import {
   FeatherIcons
 } from '@app/nb-demo-shared-components'
 // export const CurrentPage = NHButton
-// export const CurrentPage = IconBtn
-export const CurrentPage = FeatherIcons
+export const CurrentPage = IconBtn
+// export const CurrentPage = FeatherIcons
 // export const CurrentPage = FullButton
 
 // export const CurrentPage = SketchButton
