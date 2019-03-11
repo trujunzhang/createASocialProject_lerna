@@ -29,12 +29,12 @@ const themeDefaultVariables: IThemeDefaultVariables = {
   titleFontfamily: currentFontFamily.fontFace.medium
 }
 
-export const platformVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
+export const sketchAppVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
   iconVectorVariable,
   themeDefaultVariables
 )
 
-const appStyles = getThemeStyle(platformVariables)
+const appStyles = getThemeStyle(sketchAppVariables)
 
 export class Setup extends React.Component {
   render() {
