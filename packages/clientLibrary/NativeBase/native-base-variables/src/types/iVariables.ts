@@ -145,7 +145,7 @@ export interface IHeaderVariables {
   toolbarPaddingTop: number
   toolbarParallaxHeight: number
   toolbarParallaxPaddingTop: number
-  toolbarSearchIconSize: 14
+  toolbarSearchIconSize: number
   toolbarInputColor: string
   searchBarHeight: number
   searchBarInputHeight: number

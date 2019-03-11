@@ -8,14 +8,14 @@ import {
 import { platform } from '../../utils'
 
 // Color
-export const brandPrimary = '#1ca0d8'
+export const brandPrimary = platform === 'ios' ? '#007aff' : '#3F51B5'
+export const brandInfo = '#62B1F6'
+export const brandSuccess = '#5cb85c'
+export const brandDanger = '#d9534f'
+export const brandWarning = '#f0ad4e'
+export const brandDark = '#000'
+export const brandLight = '#f4f4f4'
 
-const brandInfo = '#62B1F6'
-const brandSuccess = '#5cb85c'
-const brandDanger = '#d9534f'
-const brandWarning = '#f0ad4e'
-const brandDark = '#000'
-const brandLight = '#999'
 const brandFacebook = '#3b5998'
 const brandTwitter = '#00aced'
 

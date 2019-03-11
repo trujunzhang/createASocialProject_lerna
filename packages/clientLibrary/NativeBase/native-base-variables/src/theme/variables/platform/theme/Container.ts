@@ -1,6 +1,6 @@
 import { IContainerVariables } from '../../../../types'
 
 export const containerVariables: IContainerVariables = {
-  // Container
+  //Container
   containerBgColor: '#fff'
 }

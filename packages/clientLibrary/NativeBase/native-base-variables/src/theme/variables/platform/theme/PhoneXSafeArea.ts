@@ -1,7 +1,7 @@
 import { IIPhoneXSafeAreaVariables } from '../../../../types'
 
 export const iPhoneXSafeAreaVariables: IIPhoneXSafeAreaVariables = {
-  // iPhoneX SafeArea
+  //iPhoneX SafeArea
   Inset: {
     portrait: {
       topInset: 24,

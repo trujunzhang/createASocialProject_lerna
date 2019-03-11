@@ -66,11 +66,11 @@ glob(buildHelper.svgPath, (err, icons) => {
         const { color, size, ...otherProps } = props;
         return (
           ${$('svg')
-        .toString()
-        .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
-        .replace('width="24"', 'width={size}')
-        .replace('height="24"', 'height={size}')
-        .replace('otherProps="..."', '{...otherProps}')}
+            .toString()
+            .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
+            .replace('width="24"', 'width={size}')
+            .replace('height="24"', 'height={size}')
+            .replace('otherProps="..."', '{...otherProps}')}
         )
       };
 

@@ -1,7 +1,7 @@
 import { IAccordionVariables } from '../../../../types'
 
 export const accordionVariables: IAccordionVariables = {
-  // Accordion
+  //Accordion
   headerStyle: '#edebed',
   iconStyle: '#000',
   contentStyle: '#f5f4f5',

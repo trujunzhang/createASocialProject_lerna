@@ -4,7 +4,7 @@ const textColor = '#000'
 
 export const textVariables: ITextVariables = {
   // Text
-  textColor,
+  textColor: '#000',
   inverseTextColor: '#fff',
   noteFontSize: 14
 }
