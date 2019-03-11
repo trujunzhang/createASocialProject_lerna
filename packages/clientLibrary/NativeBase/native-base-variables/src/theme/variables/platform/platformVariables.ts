@@ -19,3 +19,8 @@ export const platformThemeDefaultVariables: IThemeDefaultVariables = {
   btnFontFamily: platform === 'ios' ? 'System' : RobotoFontFamily.fontFace.medium,
   titleFontfamily: ProximaFontFamily.fontFace.medium
 }
+
+/**
+ *  for library "@app/native-base",
+ */
+export const platformVariables = platformThemeDefaultVariables

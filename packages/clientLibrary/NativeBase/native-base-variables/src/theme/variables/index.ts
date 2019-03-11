@@ -1,8 +1,11 @@
-import { themeVariables } from '../../types'
-
-import { appThemeVariables } from './app'
-
 export * from './app'
 export * from './platform'
+export * from './material'
+export * from './commonColor'
 
-export const platformVariables: themeVariables = appThemeVariables
+/*
+ * only for demo apps(expo/sketch)
+ *
+ */
+
+export * from './demo'

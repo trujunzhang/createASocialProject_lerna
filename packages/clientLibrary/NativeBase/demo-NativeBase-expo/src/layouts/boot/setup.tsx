@@ -6,10 +6,10 @@ import { vectorIcons } from './vectorIcons'
 
 import {
   themeVariablesWithIconVector,
-  generatorForAppThemeVariables
+  generatorThemeVariablesForDemo
 } from '@app/native-base-variables'
 
-export const platformVariables: themeVariablesWithIconVector = generatorForAppThemeVariables({
+export const platformVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo({
   iconRenderComponents: () => {
     return vectorIcons
     // return null

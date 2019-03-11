@@ -9,7 +9,10 @@ import { Root } from '@app/native-base'
 
 import { AppContainer } from './src/root/rootNavigator'
 
-import { ProximaFontFamily } from '@app/native-base-variables'
+import { ProximaFontFamily, RobotoFontFamily } from '@app/native-base-variables'
+
+const currentFontFamily = RobotoFontFamily.family
+// const currentFontFamily = ProximaFontFamily .family
 
 const CurrentPage = AppContainer
 
@@ -35,7 +38,8 @@ export default class App extends React.Component<{}, IAppState> {
     fontSource[
       ProximaFontFamily.fontFace.medium
     ] = require('./static/fonts/proxima/proxima-nova-600.ttf')
-    fontSource[ProximaFontFamily.family] = require('./static/fonts/proxima/proxima-nova-600.ttf')
+    fontSource[RobotoFontFamily.family] = require('./static/fonts/roboto/Roboto-Medium.ttf')
+    // fontSource[ProximaFontFamily .family] = require('./static/fonts/proxima/proxima-nova-600.ttf')
     return fontSource
   }
 

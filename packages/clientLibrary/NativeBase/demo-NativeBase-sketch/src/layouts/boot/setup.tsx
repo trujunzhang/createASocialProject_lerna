@@ -8,7 +8,7 @@ import {
   IIconVectorVariables,
   IThemeDefaultVariables,
   themeVariablesWithIconVector,
-  generatorForAppThemeVariables,
+  generatorThemeVariablesForDemo,
   ProximaFontFamily,
   RobotoFontFamily
 } from '@app/native-base-variables'
@@ -29,7 +29,7 @@ const themeDefaultVariables: IThemeDefaultVariables = {
   titleFontfamily: currentFontFamily.fontFace.medium
 }
 
-export const platformVariables: themeVariablesWithIconVector = generatorForAppThemeVariables(
+export const platformVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
   iconVectorVariable,
   themeDefaultVariables
 )
