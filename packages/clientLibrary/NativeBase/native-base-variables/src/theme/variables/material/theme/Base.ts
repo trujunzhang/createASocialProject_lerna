@@ -1,7 +1,7 @@
 import { IBaseVariables } from '../../../../types'
-import { material } from '../../utils'
+import { platform } from '../../utils'
 
 export const baseVariables: IBaseVariables = {
-  materialStyle: undefined,
-  material
+  platformStyle: undefined,
+  platform
 }

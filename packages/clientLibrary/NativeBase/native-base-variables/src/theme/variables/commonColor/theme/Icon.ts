@@ -1,10 +1,10 @@
-import { commonColor } from '../../utils'
+import { platform } from '../../utils'
 import { IIconVariables } from '../../../../types'
 
 import { commonColorThemeDefaultVariables } from '../commonColorVariables'
 export const iconVariables: IIconVariables = {
   // Icon
   iconFamily: commonColorThemeDefaultVariables.iconFamily,
-  iconFontSize: commonColor === 'ios' ? 30 : 28,
-  iconHeaderSize: commonColor === 'ios' ? 33 : 24
+  iconFontSize: platform === 'ios' ? 30 : 28,
+  iconHeaderSize: platform === 'ios' ? 33 : 24
 }

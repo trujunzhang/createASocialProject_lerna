@@ -1,5 +1,5 @@
 import { IListVariables } from '../../../../types'
-import { material } from '../../utils'
+import { platform } from '../../utils'
 
 export const listVariables: IListVariables = {
   // List
@@ -7,9 +7,9 @@ export const listVariables: IListVariables = {
   listBorderColor: '#c9c9c9',
   listDividerBg: '#f4f4f4',
   listBtnUnderlayColor: '#DDD',
-  listItemPadding: material === 'ios' ? 10 : 12,
+  listItemPadding: platform === 'ios' ? 10 : 12,
   listNoteColor: '#808080',
   listNoteSize: 13,
 
-  listItemSelected: material === 'ios' ? '#007aff' : '#3F51B5'
+  listItemSelected: platform === 'ios' ? '#007aff' : '#3F51B5'
 }

@@ -1,7 +1,7 @@
 import { IBaseVariables } from '../../../../types'
-import { commonColor } from '../../utils'
+import { platform } from '../../utils'
 
 export const baseVariables: IBaseVariables = {
-  commonColorStyle: undefined,
-  commonColor
+  platformStyle: undefined,
+  platform
 }

@@ -5,10 +5,10 @@ import {
   iconFontSize,
   fontSizeBase
 } from '../commonColorVariables'
-import { commonColor } from '../../utils'
+import { platform } from '../../utils'
 
 // Color
-export const brandPrimary = commonColor === 'ios' ? '#007aff' : '#3F51B5'
+export const brandPrimary = platform === 'ios' ? '#007aff' : '#3F51B5'
 export const brandInfo = '#62B1F6'
 export const brandSuccess = '#5cb85c'
 export const brandDanger = '#d9534f'
@@ -77,7 +77,7 @@ export const buttonFuncVariables: IButtonFuncVariables = {
     return brandFacebook
   },
   btnTextSize: () => {
-    return commonColor === 'ios' ? fontSizeBase * 1.1 : fontSizeBase - 1
+    return platform === 'ios' ? fontSizeBase * 1.1 : fontSizeBase - 1
   },
   btnTextSizeLarge: () => {
     return fontSizeBase * 1.5
