@@ -5,6 +5,9 @@ import Home from '../screens/home'
 import { IconSetsList } from '../screens/vectorIcons'
 
 import {
+  // For demo
+  CurrentRNDemoPage,
+  // List home
   Header,
   NHFooter as Footer,
   NHPickerPage as NHPicker,
@@ -79,7 +82,7 @@ export const stackRouteConfigs = {
 
 /* const initialRouteName = 'Home' */
 // Vector icons
-const initialRouteName = 'FeatherIcons'
+const initialRouteName = CurrentRNDemoPage
 
 // Buttons
 /* const initialRouteName = 'IconBtn' */
