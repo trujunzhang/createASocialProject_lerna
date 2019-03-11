@@ -5,7 +5,7 @@ import { platform, deviceWidth, deviceHeight } from '../../utils'
 
 export const otherVariables: IOtherVariables = {
   // Other
-  borderRadiusBase: platform === 'ios' ? 5 : 2,
+  borderRadiusBase: 2,
   borderWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
   contentPadding: 10,
   dropdownLinkColor: '#414142',

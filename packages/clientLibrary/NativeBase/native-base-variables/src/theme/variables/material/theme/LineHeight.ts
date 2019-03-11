@@ -7,5 +7,5 @@ export const lineHeightVariables: ILineHeightVariables = {
   lineHeightH1: 32,
   lineHeightH2: 27,
   lineHeightH3: 22,
-  lineHeight: platform === 'ios' ? 20 : 24
+  lineHeight: 24
 }

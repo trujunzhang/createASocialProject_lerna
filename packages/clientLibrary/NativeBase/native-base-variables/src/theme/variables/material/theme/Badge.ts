@@ -5,5 +5,5 @@ export const badgeVariables: IBadgeVariables = {
   // Badge
   badgeBg: '#ED1727',
   badgeColor: '#fff',
-  badgePadding: platform === 'ios' ? 3 : 0
+  badgePadding: 0
 }

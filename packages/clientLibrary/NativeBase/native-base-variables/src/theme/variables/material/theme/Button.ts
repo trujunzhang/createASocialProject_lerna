@@ -8,7 +8,7 @@ import {
 import { platform } from '../../utils'
 
 // Color
-export const brandPrimary = platform === 'ios' ? '#007aff' : '#3F51B5'
+export const brandPrimary = '#3F51B5'
 export const brandInfo = '#62B1F6'
 export const brandSuccess = '#5cb85c'
 export const brandDanger = '#d9534f'

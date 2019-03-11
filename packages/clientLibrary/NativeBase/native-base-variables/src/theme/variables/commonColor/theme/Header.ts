@@ -21,8 +21,9 @@ export const headerVariables: IHeaderVariables = {
   searchBarHeight: platform === 'ios' ? 30 : 40,
   searchBarInputHeight: platform === 'ios' ? 30 : 50,
   toolbarBtnTextColor: platform === 'ios' ? '#007aff' : '#fff',
+  iosStatusbar: 'dark-content',
   toolbarDefaultBorder: platform === 'ios' ? '#a7a6ab' : '#3F51B5',
-  iosStatusbar: platform === 'ios' ? 'dark-content' : 'light-content',
+
   toolbarPaddingTop: platform === 'ios' ? 18 : 0 + currentStatusBarHeight,
   toolbarParallaxHeight: platform === 'ios' ? 64 : 56 + currentStatusBarHeight,
   toolbarParallaxPaddingTop: platform === 'ios' ? 18 : 0 + currentStatusBarHeight
