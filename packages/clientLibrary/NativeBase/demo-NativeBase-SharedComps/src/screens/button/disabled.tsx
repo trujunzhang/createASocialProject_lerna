@@ -20,8 +20,10 @@ export class DisabledButton extends React.Component<any, any> {
             <React.Fragment>
 
                 <View style={{ paddingHorizontal: 20, padding: 10 }}>
-                    <Button disabled style={styles.mb15}>
-                        <Text>Default</Text>
+                    <Button style={styles.mb15}>
+                        <Text style={[{
+backgroundColor:'red'
+                        }]}>Default</Text>
                     </Button>
                 </View>
             </React.Fragment>
