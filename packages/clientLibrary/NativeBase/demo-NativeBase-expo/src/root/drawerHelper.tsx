@@ -43,7 +43,11 @@ import {
   FeatherIcons
 } from '@app/nb-demo-shared-components'
 
+import { baseRouterConfs } from './rootrouterConfigsModels'
+
 export const stackRouteConfigs = {
+  ...baseRouterConfs,
+
   Home: { screen: Home },
   Anatomy: { screen: NHAnatomy },
   Header: { screen: Header },
