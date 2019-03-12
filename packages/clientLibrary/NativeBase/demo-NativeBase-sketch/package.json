@@ -22,7 +22,7 @@
     "typescript": "echo 'typescript watch'",
     "typescript:once": "tsc",
     "build:js": "yarn typescript:once",
-    "build.current": "yarn build:all",
+    "build.current.pending": "yarn build:all",
     "typescript:clean": "rm -rf ./.ts-compiled"
   },
   "dependencies": {

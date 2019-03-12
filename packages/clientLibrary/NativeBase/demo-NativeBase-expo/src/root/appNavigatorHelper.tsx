@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation'
 
 import { stackRouteConfigs, stackConfig } from './drawerHelper'
 
-import { baseRouterConfs } from './rootrouterConfigsModels'
+import { baseRouterConfs } from './routerConfigsModels'
 
 const DraftsStack = createStackNavigator(stackRouteConfigs, stackConfig)
 export const appRouteConfigs = {

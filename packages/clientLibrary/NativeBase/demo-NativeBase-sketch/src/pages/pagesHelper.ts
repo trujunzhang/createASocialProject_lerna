@@ -6,7 +6,7 @@ import {
   // Button
   CurrentRNDemoPage
 } from '@app/nb-demo-shared-components'
-export const CurrentPage = CurrentRNDemoPage
+export const CurrentPage = CurrentRNDemoPage.screen
 
 // Local debug nativebase
 import { NBDebugButton } from '../nbConponents'

@@ -5,8 +5,10 @@ import Home from '../screens/home'
 import { IconSetsList } from '../screens/vectorIcons'
 
 import {
-  // For demo
-  CurrentRNDemoPage,
+  fixRouteNameExist
+} from './utils'
+
+import {
   // List home
   Header,
   NHFooter as Footer,
@@ -43,7 +45,7 @@ import {
   FeatherIcons
 } from '@app/nb-demo-shared-components'
 
-import { baseRouterConfs } from './rootrouterConfigsModels'
+import { baseRouterConfs } from './routerConfigsModels'
 
 export const stackRouteConfigs = {
   ...baseRouterConfs,
@@ -84,9 +86,11 @@ export const stackRouteConfigs = {
   FeatherIcons: { screen: FeatherIcons }
 }
 
+
 /* const initialRouteName = 'Home' */
 // Vector icons
-const initialRouteName = CurrentRNDemoPage
+/* const initialRouteName = 'DefaultButton' */
+const initialRouteName = fixRouteNameExist(stackRouteConfigs)
 
 // Buttons
 /* const initialRouteName = 'IconBtn' */
