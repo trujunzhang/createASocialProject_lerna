@@ -34,18 +34,44 @@ import {
     ListItemFabObject,
     ListItemFooterObject,
     ListItemFormObject,
+
+
  } from '@app/nb-demo-shared-components'
 
 const DraftsStack = createStackNavigator(stackRouteConfigs, stackConfig)
 export const appRouteConfigs = {
-  Drawer: { screen: DraftsStack },
+    Drawer: { screen: DraftsStack },
     IconList: { screen: IconList },
 
-...ListItemHeaderObject,
-    ...ListItemFooterObject ,
-    ... ListItemButtonObject ,
-    ... ListItemCardObject ,
-
+    // Advanced
+    ...ListItemHeaderObject,
+    ...ListItemIconObject,
+    ...ListItemListObject,
+    ...ListItemListSwipeObject,
+    ...ListItemPickerObject,
+    ...ListItemRadioObject,
+    ...ListItemSearchBarObject,
+    ...ListItemSegmentObject,
+    ...ListItemSpinnerObject,
+    ...ListItemTabObject,
+    // Base
+    ...ListItemLayoutObject,
+    ...ListItemThumbnailObject,
+    ...ListItemToastObject,
+    ...ListItemTypographyObject,
+    // Screens
+    ...ListItemAccordionObject,
+    ...ListItemActionSheetObject,
+    ...ListItemAnatomyObject,
+    ...ListItemBadgeObject,
+    ...ListItemButtonObject,
+    ...ListItemCardObject,
+    ...ListItemCheckboxObject,
+    ...ListItemDatePickerObject,
+    ...ListItemDeckSwiperObject,
+    ...ListItemFabObject,
+    ...ListItemFooterObject,
+    ...ListItemFormObject,
 
 
 
