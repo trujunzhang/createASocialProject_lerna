@@ -78,7 +78,6 @@ export const platformThemeVariables: themeVariables = {
   ...titleVariables
 }
 
-
 /**
  *  for library "@app/native-base",
  */

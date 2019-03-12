@@ -4,7 +4,7 @@ import { ColorListView } from '../artboard'
 // Buttons
 import {
   // Button
-  CurrentRNDemoPage,
+  CurrentRNDemoPage
 } from '@app/nb-demo-shared-components'
 export const CurrentPage = CurrentRNDemoPage
 
