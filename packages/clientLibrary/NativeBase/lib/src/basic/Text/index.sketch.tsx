@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
 import { ViewStyle, StyleSheet } from 'react-primitives'
-import { Text as RNText, TextProps } from 'react-primitives'
+import { View, Text as RNText, TextProps } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 
 import { connectStyle } from '@app/native-base-shoutem-theme'
@@ -31,16 +31,25 @@ class Text extends React.Component<ITextProps, any> {
       text = children
     }
 
-    const nextStyle = StyleSheet.flatten(style)
+    const nextStyle: any = StyleSheet.flatten(style)
     let nextProps: ITextProps = _.clone(this.props)
     nextProps.style = nextStyle
 
-    console.log('next style: ', JSON.stringify(style))
+    /* console.log('next style: ', JSON.stringify(style)) */
+
+    const textStyle = {
+      fontSize: nextStyle.fontSize,
+      fontFamily: nextStyle.fontFsmily,
+      fontWeight: nextStyle.fontWeight,
+      color: nextStyle.color
+    }
+
+    /* console.log('text style: ', JSON.stringify(textStyle)) */
 
     return (
-      <RNText ref={(c) => (this._root = c)} {...nextProps}>
-        {text}
-      </RNText>
+      <View ref={(c) => (this._root = c)} style={nextStyle}>
+        <RNText style={textStyle}>{text}</RNText>
+      </View>
     )
   }
 }

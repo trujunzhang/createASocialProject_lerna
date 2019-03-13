@@ -82,8 +82,7 @@ export class NBDebugButton extends React.Component<any, any> {
             ]}
             iconLeft
             onPress={() => this.props.navigation.openDrawer()}>
-            <Icon name="arrow-back" />
-            <Text>Lets Go!</Text>
+            <Text>Hello World!</Text>
           </Button>
         </View>
       </Content>

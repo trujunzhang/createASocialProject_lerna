@@ -15,7 +15,7 @@ import {
 import styles from './styles'
 
 export class DisabledButton extends React.Component<any, any> {
-  renderContent() {
+  renderContentxxx() {
     return (
       <React.Fragment>
         <View style={{ paddingHorizontal: 20, padding: 10 }}>
@@ -34,7 +34,7 @@ export class DisabledButton extends React.Component<any, any> {
     )
   }
 
-  renderContentxxx() {
+  renderContent() {
     return (
       <React.Fragment>
         <View style={{ paddingHorizontal: 20, padding: 10 }}>
