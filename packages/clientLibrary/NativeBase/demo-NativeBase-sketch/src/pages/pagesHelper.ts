@@ -12,6 +12,5 @@ import {
 import { NBDebugButton } from '../nbConponents'
 // export const CurrentPage = NBDebugButton
 
-
 import { SadText } from '../sketchAppDocument'
 export const CurrentPage = SadText

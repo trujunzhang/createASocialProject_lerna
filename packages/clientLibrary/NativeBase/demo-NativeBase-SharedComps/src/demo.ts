@@ -19,9 +19,7 @@ import {
   DisabledButton
 } from './screens'
 
-import {
-  ListItemButtonObject
-} from './screens'
+import { ListItemButtonObject } from './screens'
 
 const currentListObject = ListItemButtonObject
 const getCurrentPage = (index: number): ICurrentRNDemoPage => {

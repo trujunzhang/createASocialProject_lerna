@@ -4,9 +4,7 @@ import Home from '../screens/home'
 
 import { IconSetsList } from '../screens/vectorIcons'
 
-import {
-  fixRouteNameExist
-} from './utils'
+import { fixRouteNameExist } from './utils'
 
 import {
   // List home
@@ -85,7 +83,6 @@ export const stackRouteConfigs = {
   // Vector icons
   FeatherIcons: { screen: FeatherIcons }
 }
-
 
 /* const initialRouteName = 'Home' */
 // Vector icons

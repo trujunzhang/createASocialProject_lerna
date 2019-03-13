@@ -9,34 +9,34 @@ import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
 
 export interface ITextProps extends TextProps {
-    style?: ViewStyle | Array<ViewStyle>
-    uppercase: boolean
+  style?: ViewStyle | Array<ViewStyle>
+  uppercase: boolean
 }
 class Text extends React.Component<ITextProps, any> {
-    private _root: any
+  private _root: any
 
-    render() {
-        const { uppercase, children } = this.props
+  render() {
+    const { uppercase, children } = this.props
 
-        let text
-        if (uppercase) {
-            text = React.Children.map(children, (child) => {
-                if (_.isString(child)) {
-                    return _.toUpper(child)
-                } else {
-                    return child
-                }
-            })
+    let text
+    if (uppercase) {
+      text = React.Children.map(children, (child) => {
+        if (_.isString(child)) {
+          return _.toUpper(child)
         } else {
-            text = children
+          return child
         }
-
-        return (
-            <RNText ref={(c) => (this._root = c)} {...this.props}>
-                {text}
-            </RNText>
-        )
+      })
+    } else {
+      text = children
     }
+
+    return (
+      <RNText ref={(c) => (this._root = c)} {...this.props}>
+        {text}
+      </RNText>
+    )
+  }
 }
 
 //Text.propTypes = {
@@ -45,8 +45,8 @@ class Text extends React.Component<ITextProps, any> {
 // style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
 //};
 
-; (Text as any).defaultProps = {
-    uppercase: false
+;(Text as any).defaultProps = {
+  uppercase: false
 }
 
 const StyledText = connectStyle('NativeBase.Text', {}, mapPropsToStyleNames)(Text)
