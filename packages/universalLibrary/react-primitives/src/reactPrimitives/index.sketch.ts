@@ -4,7 +4,7 @@ import { allInjectionModel } from '../injection/react-sketchapp'
 
 export const ReactPrimitivesHelper = new Generator(allInjectionModel).end()
 
-import { View, Text, Image, StyleSheet } from 'react-sketchapp'
+import { StyleSheet } from 'react-sketchapp'
 
 export { StyleSheet }
 
