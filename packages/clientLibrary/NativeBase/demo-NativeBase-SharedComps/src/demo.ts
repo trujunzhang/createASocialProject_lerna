@@ -20,8 +20,7 @@ const getCurrentPage = (index: number): ICurrentRNDemoPage => {
   }
 }
 
-// export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(8)
-export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(9)
+export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(4)
 
 import { FeatherIcons } from './vectorIcons'
 // export const CurrentRNDemoPage:ICurrentRNDemoPage = {

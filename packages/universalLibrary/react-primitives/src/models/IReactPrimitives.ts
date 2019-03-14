@@ -1,7 +1,6 @@
 import {
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel

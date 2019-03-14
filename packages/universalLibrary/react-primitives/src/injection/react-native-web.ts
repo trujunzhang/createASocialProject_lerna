@@ -1,6 +1,6 @@
 import { Animated, Easing, View, Text, Image } from 'react-native-web'
 
-import { IReactPrimitivesModel, IInjectionBaseModel, IInjectionTextModel } from '../models'
+import { IReactPrimitivesModel, IInjectionBaseModel } from '../models'
 
 // TODO: figure out a more appropriate way to get StyleSheet.resolve, or potentially remove the
 // API alltogether.
@@ -23,12 +23,4 @@ const injectionBaseModel: IInjectionBaseModel = {
   // StyleSheet: Object.assign(StyleSheet, { resolve })
 }
 
-const injectionTextModel: IInjectionTextModel = {
-  // Text
-  Text
-}
-
-export const allInjectionModel: IReactPrimitivesModel = Object.assign(
-  injectionBaseModel,
-  injectionTextModel
-)
+export const allInjectionModel: IReactPrimitivesModel = Object.assign(injectionBaseModel)

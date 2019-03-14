@@ -1,3 +1,3 @@
-import { TextInputProps } from 'react-native'
+import { TextInputProps, TextProps } from 'react-native'
 
-export { TextInputProps }
+export { TextInputProps, TextProps }

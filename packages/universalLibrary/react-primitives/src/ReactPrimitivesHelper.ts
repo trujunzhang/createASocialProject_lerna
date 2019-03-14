@@ -9,7 +9,6 @@ import {
   IReactPrimitivesModel,
   AllInjectionModel,
   IInjectionBaseModel,
-  IInjectionTextModel,
   IInjectionListModel,
   IInjectionDialogModel,
   IInjectionTouchModel
@@ -24,13 +23,8 @@ export class ReactPrimitivesHelper {
     this.reactPrimitivesModel.Image = model.Image
   }
 
-  private injectionTextModel(model: IInjectionTextModel) {
-    this.reactPrimitivesModel.Text = model.Text
-  }
-
   constructor(allInjectionModel: IReactPrimitivesModel) {
     this.injectionBaseModel(allInjectionModel)
-    this.injectionTextModel(allInjectionModel)
   }
 
   end(): IReactPrimitivesModel {

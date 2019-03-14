@@ -87,22 +87,19 @@ export {
   Easing
 }
 
-// TextInput
-import { TextInput } from './reactPrimitives'
+// Text
+import { TextInput, Text } from './reactPrimitives'
 
 export {
-  // TextInput
-  TextInput
+  // Text
+  TextInput,
+  Text
 }
 
 // ReactPrimitivesHelper
 // ===================================
-import { IInjectionBaseModel, IInjectionTextModel } from './models'
+import { IInjectionBaseModel } from './models'
 
 const { View, Image } = ReactPrimitivesHelper as IInjectionBaseModel
 
 export { View, Image }
-
-const { Text } = ReactPrimitivesHelper as IInjectionTextModel
-
-export { Text }

@@ -81,10 +81,12 @@ export {
   Easing
 }
 
-// TextInput
+// Text
 import { TextInput } from '../components/text/textInput'
+import { Text } from '../components/text/text'
 
 export {
-  // TextInput
-  TextInput
+  // Text
+  TextInput,
+  Text
 }
