@@ -17,14 +17,14 @@ export class Feather extends React.Component<IconProps, any> {
     // console.log('Feather(svgClassName): ', svgClassName)
     // console.log('Feather(lastSize): ', lastSize)
 
-    const FeatherIcon = FeatherIcons[svgClassName]
+    const VectorIcon = FeatherIcons[svgClassName]
 
     // console.log('Feather(icon): ', JSON.stringify(Icon))
     // console.log('Feather(FeatherIcon): ', JSON.stringify(FeatherIcon))
 
     return (
       <View name={ICONNAME + '-' + name}>
-        <FeatherIcon color={color} size={lastSize as number} />
+        <VectorIcon color={color} size={lastSize as number} />
       </View>
     )
   }
