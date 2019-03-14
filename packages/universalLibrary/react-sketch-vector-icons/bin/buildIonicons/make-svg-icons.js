@@ -58,7 +58,7 @@ const makeIcon = (name, item) => {
   ${gTag}{ios
   ? ${ios}
   : ${md}
-  }</g>`
+  }</svg.G>`
 }
 
 /**

@@ -1,10 +1,10 @@
 /**
- * react-svg-ionicons v0.6.0 with svg files from Ionicons v4.5.5
+ * react-svg-ionicons v0.2.2 with svg files from Ionicons v4.5.5
  *
  * 317 dual-mode icons, 62 logo icons.
  *
  * @auhtor aMarCruz <amarcruzbox-git@yahoo.com>
- * @date 2019-03-14T13:45:58Z
+ * @date 2019-03-14T12:29:56Z
  * @license MIT
  */
 import * as React from 'react'

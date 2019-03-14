@@ -82,7 +82,11 @@ ${componentName}.propTypes = {
 }
 
 `
-
 }
 
-buildHelper.buildSvgsFromObjects(initialTypeDefinitions, octicons, getSingleSvgElement, getComponentName)
+buildHelper.buildSvgsFromObjects(
+  initialTypeDefinitions,
+  octicons,
+  getSingleSvgElement,
+  getComponentName
+)

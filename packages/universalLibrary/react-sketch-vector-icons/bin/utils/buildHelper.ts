@@ -61,14 +61,14 @@ export class BuildHelper {
     return `${this.generatedIconRoot}/index.d.ts`
   }
 
-  private onBeforeSavedSvgHook = (initialTypeDefinitions: string,
-  ) => {
+  private onBeforeSavedSvgHook = (initialTypeDefinitions: string) => {
     fs.writeFileSync(this.mainTSPath, '', 'utf-8')
     fs.writeFileSync(this.mainTypingsPath, initialTypeDefinitions, 'utf-8')
   }
-  private onAfterSavedSvgHook = (element: any,
+  private onAfterSavedSvgHook = (
+    element: any,
     model: ISvgFileModel,
-    getComponentName: GetComponentName,
+    getComponentName: GetComponentName
   ) => {
     const { location, iconName } = model
 
@@ -95,7 +95,8 @@ export class BuildHelper {
     initialTypeDefinitions: string,
     getSingleSvgElement: GetSingleSvgElement,
     getComponentName: GetComponentName,
-    icons: any[]) => {
+    icons: any[]
+  ) => {
     this.onBeforeSavedSvgHook(initialTypeDefinitions)
     icons.map((iconPath: string, index: number) => {
       const svgData = fs.readFileSync(iconPath, 'utf-8')
@@ -106,7 +107,7 @@ export class BuildHelper {
       const model: ISvgFileModel = {
         svgData,
         iconName,
-        location,
+        location
       }
 
       const element = getSingleSvgElement(model)
@@ -120,12 +121,7 @@ export class BuildHelper {
     getComponentName: GetComponentName
   ) {
     glob(this.svgPath, (err, icons) => {
-      this.onFetchedSvgList(
-        initialTypeDefinitions,
-        getSingleSvgElement,
-        getComponentName,
-        icons
-      )
+      this.onFetchedSvgList(initialTypeDefinitions, getSingleSvgElement, getComponentName, icons)
     })
   }
 
@@ -141,7 +137,7 @@ export class BuildHelper {
       const model: ISvgFileModel = {
         svgData: '',
         iconName,
-        location,
+        location
       }
       const element = getSingleSvgElement(model)
       this.onAfterSavedSvgHook(element, model, getComponentName)
@@ -157,5 +153,4 @@ export class BuildHelper {
       .replace(/<line/g, '<svg.Line')
     return fixedComponent
   }
-
 }

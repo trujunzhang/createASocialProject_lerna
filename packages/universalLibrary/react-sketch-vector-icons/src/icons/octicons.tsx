@@ -6,8 +6,8 @@ import { UpperCaseStringUtils } from '@app/tools'
 import * as OcticonsIcons from '../generate/octicons'
 const ICONNAME = 'octicons'
 
-interface IOcticonsProps { }
-interface IOcticonsState { }
+interface IOcticonsProps {}
+interface IOcticonsState {}
 
 export class Octicons extends React.Component<IconProps, any> {
   render() {
@@ -18,7 +18,7 @@ export class Octicons extends React.Component<IconProps, any> {
     // console.log('Feather(svgClassName): ', svgClassName)
     // console.log('Feather(lastSize): ', lastSize)
 
-    const VectorIcon = OcticonsIcons[svgClassName + "Icon"]
+    const VectorIcon = OcticonsIcons[svgClassName + 'Icon']
 
     // console.log('Feather(icon): ', JSON.stringify(Icon))
     // console.log('Feather(FeatherIcon): ', JSON.stringify(FeatherIcon))
