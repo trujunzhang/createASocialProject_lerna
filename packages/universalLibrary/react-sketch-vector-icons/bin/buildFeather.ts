@@ -27,8 +27,8 @@ const buildHelper = new BuildHelper({
 })
 
 const buildSingleSvgFunc = (model: ISvgFileModel) => {
-  const { svgPath, svgData: svg, svgId: id, location, tsxFileName: fileName } = model
-  const ComponentName = id === 'github' ? 'GitHub' : uppercamelcase(id)
+  const { svgPath, svgData: svg, iconName, location, tsxFileName: fileName } = model
+  const componentName = iconName === 'github' ? 'GitHub' : uppercamelcase(iconName)
   const $ = cheerio.load(svg, {
     xmlMode: true
   })
@@ -55,7 +55,7 @@ const buildSingleSvgFunc = (model: ISvgFileModel) => {
       import * as PropTypes from 'prop-types';
       import { Svg as svg } from 'react-sketchapp';
 
-      export const ${ComponentName} = (props) => {
+      export const ${componentName} = (props) => {
         const { color, size, ...otherProps } = props;
         return (
           ${$('svg')
@@ -67,7 +67,7 @@ const buildSingleSvgFunc = (model: ISvgFileModel) => {
         )
       };
 
-      ${ComponentName}.propTypes = {
+      ${componentName}.propTypes = {
         color: PropTypes.string,
         size: PropTypes.oneOfType([
           PropTypes.string,
@@ -75,7 +75,7 @@ const buildSingleSvgFunc = (model: ISvgFileModel) => {
         ]),
       }
 
-      ${ComponentName}.defaultProps = {
+      ${componentName}.defaultProps = {
         color: 'currentColor',
         size: '24',
       }
@@ -88,19 +88,14 @@ const buildSingleSvgFunc = (model: ISvgFileModel) => {
     parser: 'flow'
   })
 
-  const fixedComponent = component
-    .replace(/<path/g, '<svg.Path')
-    .replace(/<circle/g, '<svg.Circle')
-    .replace(/<polyline/g, '<svg.Polyline')
-    .replace(/<rect/g, '<svg.Rect')
-    .replace(/<line/g, '<svg.Line')
+  const fixedComponent = buildHelper.fixedComponent(component)
 
   fs.writeFileSync(location, fixedComponent, 'utf-8')
 
-  const exportString = `export * from './icons/${id}'\r\n`
+  const exportString = `export * from './icons/${iconName}'\r\n`
   fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
 
-  const exportTypeString = `export const ${ComponentName}: Icon\n`
+  const exportTypeString = `export const ${componentName}: Icon\n`
   fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
 }
 

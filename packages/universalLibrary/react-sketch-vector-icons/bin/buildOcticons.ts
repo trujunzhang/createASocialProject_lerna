@@ -27,21 +27,21 @@ Object.getOwnPropertyNames(octicons).forEach((iconName) => {
 
   const componentName = `${uppercamelcase(iconName)}${SUFFIX}`
 
-  const jsxSource = `
+  const element = `
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import { Svg as svg } from 'react-sketchapp';
 
 const CLASS_NAME = '${className}'
-export class ${componentName} extends React.Component {
-  render() {
-    let defaults = {
-      height: ${height},
-      width: ${width},
-      viewBox: '${viewBox}',
-      'aria-hidden': ${ariaHidden}
-    }
+export const ${componentName} = (props) => {
+  let defaults: any= {
+    height: ${height},
+    width: ${width},
+    viewBox: '${viewBox}',
+    'aria-hidden': ${ariaHidden}
+  }
 
-    let {className, size} = this.props
+   let {className, size} = props
     if (className) {
       className = CLASS_NAME + ' ' + className
     } else {
@@ -54,20 +54,27 @@ export class ${componentName} extends React.Component {
     }
 
     return (
-      <svg {...defaults} {...this.props} className={className}>
+      <svg {...defaults} {...props} className={className}>
         ${svgContents}
       </svg>
     )
-  }
 }
 ${componentName}.propTypes = {
   className: PropTypes.string
 }
+
 `
 
+  const component = prettier.format(element, {
+    singleQuote: true,
+    trailingComma: 'es5',
+    bracketSpacing: true,
+    parser: 'flow'
+  })
   const location = path.join(buildHelper.generatedIconPath, `${iconName}.tsx`)
 
-  fs.writeFileSync(location, jsxSource)
+  const fixedComponent = buildHelper.fixedComponent(component)
+  fs.writeFileSync(location, fixedComponent, 'utf-8')
 
   const exportString = `export * from './icons/${iconName}'\r\n`.replace('\n\n', '\n')
   fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')

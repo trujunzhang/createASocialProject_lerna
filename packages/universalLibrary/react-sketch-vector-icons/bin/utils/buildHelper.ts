@@ -13,7 +13,7 @@ export type BuildSingleSvgFunc = (model: ISvgFileModel) => any
 export interface ISvgFileModel {
   svgPath: string
   svgData: string
-  svgId: string
+  iconName: string
   location: string
   tsxFileName: string
 }
@@ -77,7 +77,7 @@ export class BuildHelper {
       const model: ISvgFileModel = {
         svgPath: iconPath,
         svgData: svg,
-        svgId: id,
+        iconName: id,
         location,
         tsxFileName: fileName
       }
@@ -113,4 +113,15 @@ export class BuildHelper {
       )
     })
   }
+
+  fixedComponent(component: string) {
+    const fixedComponent = component
+      .replace(/<path/g, '<svg.Path')
+      .replace(/<circle/g, '<svg.Circle')
+      .replace(/<polyline/g, '<svg.Polyline')
+      .replace(/<rect/g, '<svg.Rect')
+      .replace(/<line/g, '<svg.Line')
+    return fixedComponent
+  }
+
 }
