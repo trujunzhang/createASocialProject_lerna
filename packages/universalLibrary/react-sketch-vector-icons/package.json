@@ -27,6 +27,7 @@
     "generate.vectors": "run-s  generate:*",
     "compile.bin": "babel bin --out-dir generate --extensions \".ts,.tsx\"",
     "generate:feather": "yarn compile.bin && node ./generate/buildFeather",
+    "generate:ionicons": "yarn compile.bin && node ./generate/buildIonicons",
     "generate:octicons": "yarn compile.bin && node ./generate/buildocticons"
   },
   "dependencies": {
@@ -48,6 +49,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
+      "ionicons":"4.5.5",
     "octicons": "8.5.0",
     "feather-icons": "4.19.0",
     "prettier": "1.13.7",
