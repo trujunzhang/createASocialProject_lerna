@@ -1,13 +1,3 @@
-import { ReactPrimitivesHelper as Generator } from '../ReactPrimitivesHelper'
-
-import { allInjectionModel } from '../injection/react-native-web'
-
-export const ReactPrimitivesHelper = new Generator(allInjectionModel).end()
-
-import { StyleSheet } from 'react-native-web'
-
-export { StyleSheet }
-
 // List
 import { KeyboardAwareScrollView } from '../components/list/keyboardAwareScrollView'
 import { ScrollView } from '../components/list/scrollView'
@@ -89,4 +79,16 @@ export {
   // Text
   TextInput,
   Text
+}
+
+// Base
+import { StyleSheet } from 'react-native-web'
+import { View } from '../components/base/view'
+import { Image } from '../components/base/image'
+
+export {
+  // Base
+  StyleSheet,
+  View,
+  Image
 }

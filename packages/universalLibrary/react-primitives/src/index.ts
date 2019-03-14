@@ -1,8 +1,3 @@
-import { ReactPrimitivesHelper, StyleSheet } from './reactPrimitives'
-
-// So important here, directly export.
-export { StyleSheet }
-
 import {
   // List
   KeyboardAwareScrollView,
@@ -96,10 +91,12 @@ export {
   Text
 }
 
-// ReactPrimitivesHelper
-// ===================================
-import { IInjectionBaseModel } from './models'
+// Base
+import { StyleSheet, View, Image } from './reactPrimitives'
 
-const { View, Image } = ReactPrimitivesHelper as IInjectionBaseModel
-
-export { View, Image }
+export {
+  // Base
+  StyleSheet,
+  View,
+  Image
+}
