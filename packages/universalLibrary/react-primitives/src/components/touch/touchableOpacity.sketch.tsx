@@ -6,12 +6,12 @@ import { View, StyleSheet } from 'react-sketchapp'
 
 import { convertValidateStyle } from '../utils'
 
-interface ISketchTouchableOpacityState { }
+interface ISketchTouchableOpacityState {}
 
 export class TouchableOpacity extends React.Component<
   TouchableOpacityProps,
   ISketchTouchableOpacityState
-  > {
+> {
   render() {
     const { name, style } = this.props as any
 

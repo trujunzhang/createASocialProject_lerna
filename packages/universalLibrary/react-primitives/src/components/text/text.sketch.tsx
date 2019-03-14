@@ -3,7 +3,7 @@ import { Text as SAText, StyleSheet } from 'react-sketchapp'
 
 import * as React from 'react'
 
-interface ISketchTextState { }
+interface ISketchTextState {}
 
 export class Text extends React.Component<any, ISketchTextState> {
   render() {
@@ -11,7 +11,7 @@ export class Text extends React.Component<any, ISketchTextState> {
 
     // console.log('Text, (style): ', JSON.stringify(nextStyle))
 
-    const nextProps = { ... this.props, style: nextStyle }
+    const nextProps = { ...this.props, style: nextStyle }
     return <SAText {...nextProps}>{(this.props as any).children}</SAText>
   }
 }
