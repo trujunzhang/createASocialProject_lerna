@@ -4,7 +4,6 @@ import camelcase from 'camelcase'
 import uppercamelcase from 'uppercamelcase'
 import path from 'path'
 import cheerio from 'cheerio'
-import prettier from 'prettier'
 
 const rootDir = path.join(__dirname, '..')
 
@@ -26,10 +25,16 @@ const buildHelper = new BuildHelper({
   iconType: 'feather'
 })
 
-const buildSingleSvgFunc = (model: ISvgFileModel) => {
-  const { svgPath, svgData: svg, iconName, location, tsxFileName: fileName } = model
+const getComponentName = (model: ISvgFileModel) => {
+  const { iconName } = model
   const componentName = iconName === 'github' ? 'GitHub' : uppercamelcase(iconName)
-  const $ = cheerio.load(svg, {
+  return componentName
+}
+
+const getSingleSvgElement = (model: ISvgFileModel) => {
+  const { svgData } = model
+  const componentName = getComponentName(model)
+  const $ = cheerio.load(svgData, {
     xmlMode: true
   })
 
@@ -81,22 +86,7 @@ const buildSingleSvgFunc = (model: ISvgFileModel) => {
       }
     `
 
-  const component = prettier.format(element, {
-    singleQuote: true,
-    trailingComma: 'es5',
-    bracketSpacing: true,
-    parser: 'flow'
-  })
-
-  const fixedComponent = buildHelper.fixedComponent(component)
-
-  fs.writeFileSync(location, fixedComponent, 'utf-8')
-
-  const exportString = `export * from './icons/${iconName}'\r\n`
-  fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
-
-  const exportTypeString = `export const ${componentName}: Icon\n`
-  fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
+  return element
 }
 
-buildHelper.buildSvgsFromFiles(initialTypeDefinitions, buildSingleSvgFunc)
+buildHelper.buildSvgsFromFiles(initialTypeDefinitions, getSingleSvgElement, getComponentName)
