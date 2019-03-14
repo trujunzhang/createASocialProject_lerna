@@ -4,7 +4,7 @@
  * 317 dual-mode icons, 62 logo icons.
  *
  * @auhtor aMarCruz <amarcruzbox-git@yahoo.com>
- * @date 2019-03-14T13:06:11Z
+ * @date 2019-03-14T13:18:02Z
  * @license MIT
  */
 import * as React from 'react';

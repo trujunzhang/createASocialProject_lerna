@@ -1,13 +1,19 @@
 const makeTitles = require('./make-titles')
 const makeTypings = require('./make-typings')
 const readSvgFiles = require('./read-svg-files')
+const fs = require('fs')
 const { camelize, ensurePath, distWrite, iconWrite, formatDate } = require('./utils')
-const { IDX_IOS, IDX_MD, PREFIX, ICON_FOLDER, DIST_FOLDER } = require('./constants')
+const { IDX_IOS, IDX_MD, PREFIX, GENERATOR_FOLDER, ICON_FOLDER, ICON_PATH, DIST_FOLDER } = require('./constants')
 
 const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>\n<title>{iconTitle}</title>'
 
-ensurePath(DIST_FOLDER)
-ensurePath(ICON_FOLDER)
+// ensurePath(DIST_FOLDER)
+ensurePath(GENERATOR_FOLDER)
+ensurePath(ICON_PATH)
+
+if (!fs.existsSync(ICON_PATH)) {
+  fs.mkdirSync(ICON_PATH)
+}
 
 /**
  * @typedef {{ [k: string]: string | [string, string] }} SvgPathInfo

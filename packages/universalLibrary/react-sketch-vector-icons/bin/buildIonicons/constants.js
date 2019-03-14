@@ -3,6 +3,7 @@ const path = require('path')
 const ROOT_DIR = path.join(__dirname, '../..')
 
 const DIST_FOLDER = 'bundles'
+const GENERATOR_FOLDER = 'src/generate/ionicons'
 const ICON_FOLDER = 'icons'
 
 module.exports = {
@@ -10,9 +11,10 @@ module.exports = {
   ROOT_DIR,
   DIST_FOLDER,
   ICON_FOLDER,
+  GENERATOR_FOLDER,
 
   DIST_PATH: `${ROOT_DIR}/${DIST_FOLDER}`,
-  ICON_PATH: `${ROOT_DIR}/${ICON_FOLDER}`,
+  ICON_PATH: `${ROOT_DIR}/${GENERATOR_FOLDER}/${ICON_FOLDER}`,
   IONIC_SVG_PATH: `${ROOT_DIR}/node_modules/ionicons/dist/collection/icon/svg`,
 
   /**
