@@ -1445,7 +1445,8 @@ export const NBIcons = {
       active: 'md-home'
     },
     ios: {
-      default: 'ios-home-outline',
+      default_last: 'ios-home-outline',
+      default: 'ios-home',
       active: 'ios-home'
     }
   },

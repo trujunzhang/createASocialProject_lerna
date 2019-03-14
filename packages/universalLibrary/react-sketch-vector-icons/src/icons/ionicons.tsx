@@ -10,7 +10,7 @@ export class Ionicons extends React.Component<IconProps, any> {
     const { name, size: lastSize, color, style } = this.props
 
     const svgClassName = UpperCaseStringUtils.toCamelClassName(name)
-    // console.log('Ionicons(svgClassName): ', svgClassName)
+    console.log('Ionicons(svgClassName): ', svgClassName)
     // console.log('Ionicons(lastSize): ', lastSize)
 
     const VectorIcon = IoniconsIcons[svgClassName]
