@@ -21,7 +21,7 @@
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
     "build:all": "npm run build:types && npm run build:js",
     "build-lib": "yarn build.clean && yarn build:all & yarn postbuild",
-    "build.current.pending": "yarn build-lib",
+    "build.current": "yarn build-lib",
     "postinstall": "yarn build-lib",
     " ##  the following is generating automatically!  ## ": "",
     "generate.vectors": "run-s  generate:*",
@@ -49,7 +49,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
-      "ionicons":"4.5.5",
+    "ionicons": "4.5.5",
     "octicons": "8.5.0",
     "feather-icons": "4.19.0",
     "prettier": "1.13.7",

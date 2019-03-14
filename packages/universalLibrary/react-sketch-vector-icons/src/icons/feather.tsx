@@ -12,7 +12,6 @@ export class Feather extends React.Component<IconProps, any> {
   render() {
     const { name, size: lastSize, color, style } = this.props
 
-    // const FeatherIcon = Camera
     const svgClassName = UpperCaseStringUtils.toCamelClassName(name)
     // console.log('Feather(svgClassName): ', svgClassName)
     // console.log('Feather(lastSize): ', lastSize)
