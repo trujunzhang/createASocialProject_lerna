@@ -15,6 +15,7 @@ module.exports = {
 
   DIST_PATH: `${ROOT_DIR}/${DIST_FOLDER}`,
   ICON_PATH: `${ROOT_DIR}/${GENERATOR_FOLDER}/${ICON_FOLDER}`,
+  mainTSPath: `${ROOT_DIR}/${GENERATOR_FOLDER}/icons.ts`,
   IONIC_SVG_PATH: `${ROOT_DIR}/node_modules/ionicons/dist/collection/icon/svg`,
 
   /**

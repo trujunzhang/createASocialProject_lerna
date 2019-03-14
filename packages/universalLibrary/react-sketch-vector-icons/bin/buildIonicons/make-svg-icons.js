@@ -4,7 +4,7 @@ const readSvgFiles = require('./read-svg-files')
 const fs = require('fs')
 const uppercamelcase = require('uppercamelcase')
 const { camelize, ensurePath, distWrite, iconWrite, formatDate } = require('./utils')
-const { IDX_IOS, IDX_MD, PREFIX, GENERATOR_FOLDER, ICON_FOLDER, ICON_PATH, DIST_FOLDER } = require('./constants')
+const { IDX_IOS, IDX_MD, PREFIX, GENERATOR_FOLDER, ICON_FOLDER, ICON_PATH, DIST_FOLDER, mainTSPath } = require('./constants')
 
 const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>\n<title>{iconTitle}</title>'
 
@@ -142,6 +142,9 @@ const writeFiles = (info, count) => {
 
     // create component for this icon
     createTSX(name, item)
+
+    const exportString = `export * from './icons/${name}'\r\n`.replace('\n\n', '\n')
+    fs.appendFileSync(mainTSPath, exportString, 'utf-8')
   })
 
   makeTitles(names)

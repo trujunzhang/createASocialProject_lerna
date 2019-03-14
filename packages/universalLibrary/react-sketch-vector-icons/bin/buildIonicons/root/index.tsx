@@ -1,8 +1,12 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import invariant from 'invariant'
-import { iconTitles } from './icon-titles'
 import { IconMap, IonIconDefs, IonIconProps, IonIconSizes, IconNames } from './index.d'
+
+export declare const iconTitles: { [k: string]: string }
+
+import { UpperCaseStringUtils } from '@app/tools'
+import * as Icons from './icons'
 
 type Dict<T = any> = { [k: string]: T }
 
@@ -259,7 +263,9 @@ export class IonIcon extends React.PureComponent<IconProps> {
     const name = opts.name
     delete opts.name
 
-    const renderIcon = _Conf.map[name]!
+    const svgClassName = UpperCaseStringUtils.toCamelClassName(name)
+    // const renderIcon = _Conf.map[name]!
+    const renderIcon = Icons[svgClassName]!
     invariant(renderIcon, 'The icon "%s" is not registered.', name)
 
     const iconTitle = opts.title != UNDEF ? opts.title : _Conf.titles[name] || this.titleify(name)
