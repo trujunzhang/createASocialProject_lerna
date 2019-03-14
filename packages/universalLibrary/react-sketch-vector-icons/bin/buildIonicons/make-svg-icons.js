@@ -66,6 +66,8 @@ export default ${temp}
 
   const parm = typeof item === 'string' ? '' : ', ios?: boolean'
   const icon = `import React = require('react')
+  import { Svg as svg } from 'react-sketchapp'
+
 export default (props: object, iconTitle: string${parm}) =>${makeIcon(name, item)}</svg>
 `
   iconWrite(`${name}.tsx`, icon)
