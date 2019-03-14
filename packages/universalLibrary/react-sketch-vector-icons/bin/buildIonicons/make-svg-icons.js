@@ -20,16 +20,26 @@ if (!fs.existsSync(ICON_PATH)) {
  * @typedef {(e: string) => boolean} FilterFn
  */
 
+const fixedComponent = (component) => {
+  const fixedComponent = component
+    .replace(/<path/g, '<svg.Path')
+    .replace(/<circle/g, '<svg.Circle')
+    .replace(/<polyline/g, '<svg.Polyline')
+    .replace(/<rect/g, '<svg.Rect')
+    .replace(/<line/g, '<svg.Line')
+  return fixedComponent
+}
+
 /**
  * Take care of icons with multiple paths, must not close the `<svg>` tag
  * @param {string} name
  * @param {string | string[]} item
  */
 const makeIcon = (name, item) => {
-  const gTag = `<g className="ion-${name}">`
+  const gTag = `<svg.G className="ion-${name}">`
 
   if (typeof item === 'string') {
-    return `\n${REP_TAG}\n${gTag}\n${item}\n</g>`
+    return `\n${REP_TAG}\n${gTag}\n${item}\n</svg.G>`
   }
 
   const ios = item[IDX_IOS].replace(/>\s+</g, '')
@@ -39,8 +49,8 @@ const makeIcon = (name, item) => {
     return `
   ${REP_TAG}
   {ios
-  ? ${gTag}${ios}</g>
-  : ${gTag}${md}</g>}`
+  ? ${gTag}${fixedComponent(ios)}</svg.G>
+  : ${gTag}${fixedComponent(md)}</svg.G>}`
   }
 
   return `
