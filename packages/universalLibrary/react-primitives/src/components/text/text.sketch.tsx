@@ -8,6 +8,9 @@ interface ISketchTextState { }
 export class Text extends React.Component<any, ISketchTextState> {
   render() {
     const nextStyle = StyleSheet.flatten(this.props.style)
+
+    // console.log('Text, (style): ', JSON.stringify(nextStyle))
+
     const nextProps = { ... this.props, style: nextStyle }
     return <SAText {...nextProps}>{(this.props as any).children}</SAText>
   }
