@@ -23,6 +23,7 @@ module.exports = {
   },
   testMatch: ['**/*.test.ts?(x)'],
   testPathIgnorePatterns: allPathIgnorePatterns,
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: true,
   coveragePathIgnorePatterns: allPathIgnorePatterns
