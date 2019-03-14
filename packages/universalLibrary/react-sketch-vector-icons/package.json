@@ -27,7 +27,7 @@
     "generate.vectors": "run-s  generate:*",
     "compile.bin": "babel bin --out-dir generate --extensions \".ts,.tsx\"",
     "generate:feather": "yarn compile.bin && node ./generate/buildFeather",
-    "generate:ionicons": "yarn compile.bin && node ./generate/buildIonicons",
+    "generate:ionicons": "node ./bin/buildIonicons/make-svg-icons",
     "generate:octicons": "yarn compile.bin && node ./generate/buildocticons"
   },
   "dependencies": {
