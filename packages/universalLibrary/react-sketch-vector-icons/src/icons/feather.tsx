@@ -6,6 +6,8 @@ import { UpperCaseStringUtils } from '@app/tools'
 
 import * as FeatherIcons from '../generate/feather'
 
+const ICONNAME = 'feather'
+
 export class Feather extends React.Component<IconProps, any> {
   render() {
     const { name, size: lastSize, color, style } = this.props
@@ -21,7 +23,7 @@ export class Feather extends React.Component<IconProps, any> {
     // console.log('Feather(FeatherIcon): ', JSON.stringify(FeatherIcon))
 
     return (
-      <View name={'feather-' + name}>
+      <View name={ICONNAME + '-' + name}>
         <FeatherIcon color={color} size={lastSize as number} />
       </View>
     )
