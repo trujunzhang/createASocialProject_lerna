@@ -5,7 +5,8 @@ export interface ICurrentRNDemoPage {
 
 import * as Advanced from './advanced'
 
-const currentListObject = Advanced.ListItemHeaderObject
+// const currentListObject = Advanced.ListItemHeaderObject
+const currentListObject = Advanced.ListItemIconObject
 
 import { ListItemButtonObject } from './screens'
 // const currentListObject = ListItemButtonObject
@@ -20,7 +21,7 @@ const getCurrentPage = (index: number): ICurrentRNDemoPage => {
   }
 }
 
-export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(9)
+export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(5)
 
 import { FeatherIcons } from './vectorIcons'
 // export const CurrentRNDemoPage:ICurrentRNDemoPage = {
