@@ -38,3 +38,6 @@ yarn-error.log*
 # svg icons generated automatically
 /generate/**
 /src/generate/**
+
+/bundles/**
+/icons/**

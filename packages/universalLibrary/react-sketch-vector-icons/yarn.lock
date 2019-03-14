@@ -888,6 +888,11 @@
     "@types/istanbul-lib-coverage" "^1.1.0"
     "@types/yargs" "^12.0.9"
 
+"@jsbits/get-package-version@^1.0.3":
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/@jsbits/get-package-version/download/@jsbits/get-package-version-1.0.3.tgz#a47dfd077420beee435580c3bc197931fe3c694c"
+  integrity sha1-pH39B3Qgvu5DVYDDvBl5Mf48aUw=
+
 "@skpm/sketchapp-json-flow-types@^0.2.1":
   version "0.2.1"
   resolved "http://registry.npm.taobao.org/@skpm/sketchapp-json-flow-types/download/@skpm/sketchapp-json-flow-types-0.2.1.tgz#95435d8a6cec4b81cd20672f7e162cded7922f94"

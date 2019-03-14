@@ -49,6 +49,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
+    "@jsbits/get-package-version": "^1.0.3",
     "ionicons": "4.5.5",
     "octicons": "8.5.0",
     "feather-icons": "4.19.0",
