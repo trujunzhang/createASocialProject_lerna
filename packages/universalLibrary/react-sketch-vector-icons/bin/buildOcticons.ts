@@ -8,7 +8,7 @@ import prettier from 'prettier'
 
 const rootDir = path.join(__dirname, '..')
 
-import { BuildHelper } from './utils'
+import { BuildHelper, ISvgModel } from './utils'
 
 // /Users/djzhang/Desktop/upwork-projects/CURRENT/ADOBEXDTutorials/createASocialProject_lerna/packages/universalLibrary/
 // react-sketch-vector-icons/node_modules
@@ -85,3 +85,4 @@ export {${componentName}}
 const indexSource = allComponents.join('\n')
 
 fs.writeFileSync(buildHelper.mainTSPath, indexSource)
+a

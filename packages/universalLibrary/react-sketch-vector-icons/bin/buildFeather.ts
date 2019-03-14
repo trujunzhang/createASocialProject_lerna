@@ -8,7 +8,7 @@ import prettier from 'prettier'
 
 const rootDir = path.join(__dirname, '..')
 
-import { BuildHelper } from './utils'
+import { BuildHelper, ISvgModel } from './utils'
 
 const initialTypeDefinitions = `/// <reference types="react" />
 import { ComponentType, SVGAttributes } from 'react';
@@ -25,6 +25,10 @@ const buildHelper = new BuildHelper({
   svgPath: `${rootDir}/node_modules/feather-icons/dist/icons/**.svg`,
   iconType: 'feather'
 })
+
+const buildComponent = (model: ISvgModel) => {
+  const { svgPath, svgId, tsxFileName } = model
+}
 
 glob(buildHelper.svgPath, (err, icons) => {
   fs.writeFileSync(buildHelper.mainTSPath, '', 'utf-8')

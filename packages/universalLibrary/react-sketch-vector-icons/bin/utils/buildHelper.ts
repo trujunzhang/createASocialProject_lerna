@@ -1,9 +1,18 @@
 import fs from 'fs'
+import path from 'path'
+import glob from 'glob'
 import { generatedIconHome } from './buildConst'
+import { initialTypeDefinitions } from './reactTypes'
 
 export interface IVectorIcconsParams {
   svgPath: string
   iconType: string
+}
+
+export interface ISvgModel {
+  svgPath: string
+  svgId: string
+  tsxFileName: string
 }
 
 export class BuildHelper {
@@ -47,5 +56,26 @@ export class BuildHelper {
 
   get mainTypingsPath() {
     return `${this.generatedIconRoot}/index.d.ts`
+  }
+
+  buildAllSvgs(buildSingleSvgFunc: (model: ISvgModel) => any) {
+    glob(this.svgPath, (err, icons) => {
+      fs.writeFileSync(this.mainTSPath, '', 'utf-8')
+      fs.writeFileSync(this.mainTypingsPath, initialTypeDefinitions, 'utf-8')
+
+      icons.map((iconPath: string, index: number) => {
+        const svg = fs.readFileSync(iconPath, 'utf-8')
+        const id = path.basename(iconPath, '.svg')
+        const fileName = path.basename(iconPath).replace('.svg', '.tsx')
+
+        const model: ISvgModel = {
+          svgPath: iconPath,
+          svgId: id,
+          tsxFileName: fileName
+        }
+
+        buildSingleSvgFunc(model)
+      })
+    })
   }
 }
