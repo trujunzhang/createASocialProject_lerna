@@ -2,14 +2,15 @@ import fs from 'fs'
 import path from 'path'
 import glob from 'glob'
 import { generatedIconHome } from './buildConst'
-import { initialTypeDefinitions } from './reactTypes'
 
 export interface IVectorIcconsParams {
   svgPath: string
   iconType: string
 }
 
-export interface ISvgModel {
+export type BuildSingleSvgFunc = (model: ISvgFileModel) => any
+
+export interface ISvgFileModel {
   svgPath: string
   svgData: string
   svgId: string
@@ -60,27 +61,56 @@ export class BuildHelper {
     return `${this.generatedIconRoot}/index.d.ts`
   }
 
-  buildAllSvgs(buildSingleSvgFunc: (model: ISvgModel) => any) {
+  private onFetchedSvgList = (
+    initialTypeDefinitions: string,
+    buildSingleSvgFunc: BuildSingleSvgFunc,
+    err, icons) => {
+    fs.writeFileSync(this.mainTSPath, '', 'utf-8')
+    fs.writeFileSync(this.mainTypingsPath, initialTypeDefinitions, 'utf-8')
+
+    icons.map((iconPath: string, index: number) => {
+      const svg = fs.readFileSync(iconPath, 'utf-8')
+      const id = path.basename(iconPath, '.svg')
+      const fileName = path.basename(iconPath).replace('.svg', '.tsx')
+
+      const location = path.join(this.generatedIconPath, fileName)
+      const model: ISvgFileModel = {
+        svgPath: iconPath,
+        svgData: svg,
+        svgId: id,
+        location,
+        tsxFileName: fileName
+      }
+
+      buildSingleSvgFunc(model)
+    })
+  }
+
+  buildSvgsFromFiles(
+    initialTypeDefinitions: string,
+    buildSingleSvgFunc: BuildSingleSvgFunc
+  ) {
     glob(this.svgPath, (err, icons) => {
-      fs.writeFileSync(this.mainTSPath, '', 'utf-8')
-      fs.writeFileSync(this.mainTypingsPath, initialTypeDefinitions, 'utf-8')
+      this.onFetchedSvgList(
+        initialTypeDefinitions,
+        buildSingleSvgFunc,
+        err,
+        icons
+      )
+    })
+  }
 
-      icons.map((iconPath: string, index: number) => {
-        const svg = fs.readFileSync(iconPath, 'utf-8')
-        const id = path.basename(iconPath, '.svg')
-        const fileName = path.basename(iconPath).replace('.svg', '.tsx')
-
-        const location = path.join(this.generatedIconPath, fileName)
-        const model: ISvgModel = {
-          svgPath: iconPath,
-          svgData: svg,
-          svgId: id,
-          location,
-          tsxFileName: fileName
-        }
-
-        buildSingleSvgFunc(model)
-      })
+  buildSvgsFromObjects(
+    initialTypeDefinitions: string,
+    buildSingleSvgFunc: BuildSingleSvgFunc
+  ) {
+    glob(this.svgPath, (err, icons) => {
+      this.onFetchedSvgList(
+        initialTypeDefinitions,
+        buildSingleSvgFunc,
+        err,
+        icons
+      )
     })
   }
 }

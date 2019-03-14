@@ -8,7 +8,7 @@ import prettier from 'prettier'
 
 const rootDir = path.join(__dirname, '..')
 
-import { BuildHelper, ISvgModel } from './utils'
+import { BuildHelper, ISvgFileModel } from './utils'
 
 const initialTypeDefinitions = `/// <reference types="react" />
 import { ComponentType, SVGAttributes } from 'react';
@@ -26,7 +26,7 @@ const buildHelper = new BuildHelper({
   iconType: 'feather'
 })
 
-const buildSingleSvgFunc = (model: ISvgModel) => {
+const buildSingleSvgFunc = (model: ISvgFileModel) => {
   const { svgPath, svgData: svg, svgId: id, location, tsxFileName: fileName } = model
   const ComponentName = id === 'github' ? 'GitHub' : uppercamelcase(id)
   const $ = cheerio.load(svg, {
@@ -104,4 +104,4 @@ const buildSingleSvgFunc = (model: ISvgModel) => {
   fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
 }
 
-buildHelper.buildAllSvgs(buildSingleSvgFunc)
+buildHelper.buildSvgsFromFiles(initialTypeDefinitions, buildSingleSvgFunc)

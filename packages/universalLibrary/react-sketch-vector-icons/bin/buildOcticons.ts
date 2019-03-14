@@ -8,10 +8,7 @@ import prettier from 'prettier'
 
 const rootDir = path.join(__dirname, '..')
 
-import { BuildHelper, ISvgModel } from './utils'
-
-// /Users/djzhang/Desktop/upwork-projects/CURRENT/ADOBEXDTutorials/createASocialProject_lerna/packages/universalLibrary/
-// react-sketch-vector-icons/node_modules
+import { BuildHelper, ISvgFileModel } from './utils'
 
 const buildHelper = new BuildHelper({
   svgPath: `${rootDir}/node_modules/octicons/build/svg/**.svg`,
@@ -22,7 +19,7 @@ import octicons from 'octicons'
 
 const SUFFIX = 'Icon'
 
-Object.getOwnPropertyNames(octicons).forEach(function (iconName) {
+Object.getOwnPropertyNames(octicons).forEach((iconName) => {
   let { options, path: svgContents } = octicons[iconName]
   const { width, height, viewBox, class: className, 'aria-hidden': ariaHidden } = options
 
@@ -78,12 +75,3 @@ ${componentName}.propTypes = {
   const exportTypeString = `export const ${componentName}: Icon\n`
   fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
 })
-
-// var allComponents = Object.getOwnPropertyNames(octicons).map(function (iconName) {
-//   const exportString = `export * from './icons/${iconName}'\r`
-//   return exportString
-// })
-
-// const indexSource = allComponents.join('\n')
-
-// fs.writeFileSync(buildHelper.mainTSPath, indexSource)
