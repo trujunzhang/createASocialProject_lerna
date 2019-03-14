@@ -8,7 +8,7 @@ module.exports = {
    * @param {string} dirPath
    * @example ensurePath('dist/icon')
    */
-  ensurePath (dirPath) {
+  ensurePath(dirPath) {
     const list = dirPath.split(/[/\\]/)
     let dir = ROOT_DIR
 
@@ -29,7 +29,7 @@ module.exports = {
    * Convert a string to camelCase
    * @param {string} name
    */
-  camelize (name) {
+  camelize(name) {
     return name.toLowerCase().replace(/-+([a-z])/g, (_, c) => c.toUpperCase())
   },
 
@@ -37,7 +37,7 @@ module.exports = {
    * Convert a string from 'kebab-case' to 'Title Case'
    * @param {string} str
    */
-  kebabToTitle (str) {
+  kebabToTitle(str) {
     return str[0].toUpperCase() +
       str.substr(1).replace(/-+([a-z])/g, (_, c) => ` ${c.toUpperCase()}`)
   },
@@ -46,7 +46,7 @@ module.exports = {
    * Format the date & time
    * @param {Date} [date]
    */
-  formatDate (date) {
+  formatDate(date) {
     return (date || new Date()).toJSON().substr(0, 16).replace('T', ' @ ')
   },
 
@@ -55,8 +55,8 @@ module.exports = {
    * @param {string} name
    * @param {string} content
    */
-  distWrite (name, content) {
-    fs.writeFileSync(`${DIST_PATH}/${name}`, content, 'utf8')
+  distWrite(name, content) {
+    // fs.writeFileSync(`${DIST_PATH}/${name}`, content, 'utf8')
   },
 
   /**
@@ -64,7 +64,7 @@ module.exports = {
    * @param {string} name
    * @param {string} content
    */
-  iconWrite (name, content) {
+  iconWrite(name, content) {
     fs.writeFileSync(`${ICON_PATH}/${name}`, content, 'utf8')
   },
 }
