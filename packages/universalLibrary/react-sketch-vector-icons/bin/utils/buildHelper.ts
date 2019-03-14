@@ -61,45 +61,56 @@ export class BuildHelper {
     return `${this.generatedIconRoot}/index.d.ts`
   }
 
+  private onBeforeSavedSvgHook = (initialTypeDefinitions: string,
+  ) => {
+    fs.writeFileSync(this.mainTSPath, '', 'utf-8')
+    fs.writeFileSync(this.mainTypingsPath, initialTypeDefinitions, 'utf-8')
+  }
+  private onAfterSavedSvgHook = (element: any,
+    model: ISvgFileModel,
+    getComponentName: GetComponentName,
+  ) => {
+    const { location, iconName } = model
+
+    const component = prettier.format(element, {
+      singleQuote: true,
+      trailingComma: 'es5',
+      bracketSpacing: true,
+      parser: 'flow'
+    })
+
+    const fixedComponent = this.fixedComponent(component)
+
+    fs.writeFileSync(location, fixedComponent, 'utf-8')
+
+    const exportString = `export * from './icons/${iconName}'\r\n`.replace('\n\n', '\n')
+    fs.appendFileSync(this.mainTSPath, exportString, 'utf-8')
+
+    const componentName = getComponentName(model)
+    const exportTypeString = `export const ${componentName}: Icon\n`
+    fs.appendFileSync(this.mainTypingsPath, exportTypeString, 'utf-8')
+  }
+
   private onFetchedSvgList = (
     initialTypeDefinitions: string,
     getSingleSvgElement: GetSingleSvgElement,
     getComponentName: GetComponentName,
-    err, icons) => {
-    fs.writeFileSync(this.mainTSPath, '', 'utf-8')
-    fs.writeFileSync(this.mainTypingsPath, initialTypeDefinitions, 'utf-8')
-
+    icons: any[]) => {
+    this.onBeforeSavedSvgHook(initialTypeDefinitions)
     icons.map((iconPath: string, index: number) => {
-      const svg = fs.readFileSync(iconPath, 'utf-8')
+      const svgData = fs.readFileSync(iconPath, 'utf-8')
       const iconName = path.basename(iconPath, '.svg')
       const fileName = path.basename(iconPath).replace('.svg', '.tsx')
 
       const location = path.join(this.generatedIconPath, fileName)
       const model: ISvgFileModel = {
-        svgData: svg,
+        svgData,
         iconName,
         location,
       }
 
       const element = getSingleSvgElement(model)
-
-      const component = prettier.format(element, {
-        singleQuote: true,
-        trailingComma: 'es5',
-        bracketSpacing: true,
-        parser: 'flow'
-      })
-
-      const fixedComponent = this.fixedComponent(component)
-
-      fs.writeFileSync(location, fixedComponent, 'utf-8')
-
-      const exportString = `export * from './icons/${iconName}'\r\n`
-      fs.appendFileSync(this.mainTSPath, exportString, 'utf-8')
-
-      const componentName = getComponentName(model)
-      const exportTypeString = `export const ${componentName}: Icon\n`
-      fs.appendFileSync(this.mainTypingsPath, exportTypeString, 'utf-8')
+      this.onAfterSavedSvgHook(element, model, getComponentName)
     })
   }
 
@@ -113,7 +124,6 @@ export class BuildHelper {
         initialTypeDefinitions,
         getSingleSvgElement,
         getComponentName,
-        err,
         icons
       )
     })
@@ -121,16 +131,18 @@ export class BuildHelper {
 
   buildSvgsFromObjects(
     initialTypeDefinitions: string,
+    objectInstance: any,
     getSingleSvgElement: GetSingleSvgElement,
     getComponentName: GetComponentName
   ) {
-    glob(this.svgPath, (err, icons) => {
-      this.onFetchedSvgList(
-        initialTypeDefinitions,
-        getSingleSvgElement, getComponentName,
-        err,
-        icons
-      )
+    Object.getOwnPropertyNames(objectInstance).forEach((iconName) => {
+      const location = path.join(this.generatedIconPath, `${iconName}.tsx`)
+      const model: ISvgFileModel = {
+        svgData: '',
+        iconName,
+        location,
+      }
+
     })
   }
 
