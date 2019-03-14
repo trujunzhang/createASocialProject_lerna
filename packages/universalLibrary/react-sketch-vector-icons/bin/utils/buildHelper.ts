@@ -11,7 +11,9 @@ export interface IVectorIcconsParams {
 
 export interface ISvgModel {
   svgPath: string
+  svgData: string
   svgId: string
+  location: string
   tsxFileName: string
 }
 
@@ -68,9 +70,12 @@ export class BuildHelper {
         const id = path.basename(iconPath, '.svg')
         const fileName = path.basename(iconPath).replace('.svg', '.tsx')
 
+        const location = path.join(this.generatedIconPath, fileName)
         const model: ISvgModel = {
           svgPath: iconPath,
+          svgData: svg,
           svgId: id,
+          location,
           tsxFileName: fileName
         }
 

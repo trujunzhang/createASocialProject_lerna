@@ -26,42 +26,31 @@ const buildHelper = new BuildHelper({
   iconType: 'feather'
 })
 
-const buildComponent = (model: ISvgModel) => {
-  const { svgPath, svgId, tsxFileName } = model
-}
+const buildSingleSvgFunc = (model: ISvgModel) => {
+  const { svgPath, svgData: svg, svgId: id, location, tsxFileName: fileName } = model
+  const ComponentName = id === 'github' ? 'GitHub' : uppercamelcase(id)
+  const $ = cheerio.load(svg, {
+    xmlMode: true
+  })
 
-glob(buildHelper.svgPath, (err, icons) => {
-  fs.writeFileSync(buildHelper.mainTSPath, '', 'utf-8')
-  fs.writeFileSync(buildHelper.mainTypingsPath, initialTypeDefinitions, 'utf-8')
-
-  icons.forEach((i) => {
-    const svg = fs.readFileSync(i, 'utf-8')
-    const id = path.basename(i, '.svg')
-    const ComponentName = id === 'github' ? 'GitHub' : uppercamelcase(id)
-    const $ = cheerio.load(svg, {
-      xmlMode: true
-    })
-    const fileName = path.basename(i).replace('.svg', '.tsx')
-    const location = path.join(buildHelper.generatedIconPath, fileName)
-
-    $('*').each((index, el) => {
-      Object.keys(el.attribs).forEach((x) => {
-        if (x.includes('-')) {
-          $(el)
-            .attr(camelcase(x), el.attribs[x])
-            .removeAttr(x)
-        }
-        if (x === 'stroke') {
-          $(el).attr(x, 'currentColor')
-        }
-      })
-
-      if (el.name === 'svg') {
-        $(el).attr('otherProps', '...')
+  $('*').each((index, el) => {
+    Object.keys(el.attribs).forEach((x) => {
+      if (x.includes('-')) {
+        $(el)
+          .attr(camelcase(x), el.attribs[x])
+          .removeAttr(x)
+      }
+      if (x === 'stroke') {
+        $(el).attr(x, 'currentColor')
       }
     })
 
-    const element = `
+    if (el.name === 'svg') {
+      $(el).attr('otherProps', '...')
+    }
+  })
+
+  const element = `
       import * as React from 'react';
       import * as PropTypes from 'prop-types';
       import { Svg as svg } from 'react-sketchapp';
@@ -70,11 +59,11 @@ glob(buildHelper.svgPath, (err, icons) => {
         const { color, size, ...otherProps } = props;
         return (
           ${$('svg')
-            .toString()
-            .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
-            .replace('width="24"', 'width={size}')
-            .replace('height="24"', 'height={size}')
-            .replace('otherProps="..."', '{...otherProps}')}
+      .toString()
+      .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
+      .replace('width="24"', 'width={size}')
+      .replace('height="24"', 'height={size}')
+      .replace('otherProps="..."', '{...otherProps}')}
         )
       };
 
@@ -92,26 +81,27 @@ glob(buildHelper.svgPath, (err, icons) => {
       }
     `
 
-    const component = prettier.format(element, {
-      singleQuote: true,
-      trailingComma: 'es5',
-      bracketSpacing: true,
-      parser: 'flow'
-    })
-
-    const fixedComponent = component
-      .replace(/<path/g, '<svg.Path')
-      .replace(/<circle/g, '<svg.Circle')
-      .replace(/<polyline/g, '<svg.Polyline')
-      .replace(/<rect/g, '<svg.Rect')
-      .replace(/<line/g, '<svg.Line')
-
-    fs.writeFileSync(location, fixedComponent, 'utf-8')
-
-    const exportString = `export * from './icons/${id}'\r\n`
-    fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
-
-    const exportTypeString = `export const ${ComponentName}: Icon\n`
-    fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
+  const component = prettier.format(element, {
+    singleQuote: true,
+    trailingComma: 'es5',
+    bracketSpacing: true,
+    parser: 'flow'
   })
-})
+
+  const fixedComponent = component
+    .replace(/<path/g, '<svg.Path')
+    .replace(/<circle/g, '<svg.Circle')
+    .replace(/<polyline/g, '<svg.Polyline')
+    .replace(/<rect/g, '<svg.Rect')
+    .replace(/<line/g, '<svg.Line')
+
+  fs.writeFileSync(location, fixedComponent, 'utf-8')
+
+  const exportString = `export * from './icons/${id}'\r\n`
+  fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
+
+  const exportTypeString = `export const ${ComponentName}: Icon\n`
+  fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
+}
+
+buildHelper.buildAllSvgs(buildSingleSvgFunc)
