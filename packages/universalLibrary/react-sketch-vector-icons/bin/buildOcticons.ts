@@ -18,7 +18,7 @@ const buildHelper = new BuildHelper({
   iconType: 'octicons'
 })
 
-const octicons = require('octicons')
+import octicons from 'octicons'
 
 const SUFFIX = 'Icon'
 
