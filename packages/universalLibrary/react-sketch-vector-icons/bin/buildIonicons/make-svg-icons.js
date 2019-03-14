@@ -2,6 +2,7 @@ const makeTitles = require('./make-titles')
 const makeTypings = require('./make-typings')
 const readSvgFiles = require('./read-svg-files')
 const fs = require('fs')
+const uppercamelcase = require('uppercamelcase')
 const { camelize, ensurePath, distWrite, iconWrite, formatDate } = require('./utils')
 const { IDX_IOS, IDX_MD, PREFIX, GENERATOR_FOLDER, ICON_FOLDER, ICON_PATH, DIST_FOLDER } = require('./constants')
 
@@ -28,6 +29,12 @@ const fixedComponent = (component) => {
     .replace(/<rect/g, '<svg.Rect')
     .replace(/<line/g, '<svg.Line')
   return fixedComponent
+}
+
+
+const getComponentName = (iconName) => {
+  const componentName = uppercamelcase(iconName)
+  return componentName
 }
 
 /**
@@ -74,11 +81,13 @@ export default ${temp}
 `
   // iconWrite(`${name}.d.ts`, type)
 
+  const componentName = getComponentName(name)
+
   const parm = typeof item === 'string' ? '' : ', ios?: boolean'
   const icon = `import * as React from 'react'
   import { Svg as svg } from 'react-sketchapp'
 
-export default (props: object, iconTitle: string${parm}) =>${makeIcon(name, item)}</svg>
+export const ${componentName} = (props: object, iconTitle: string${parm}) =>${makeIcon(name, item)}</svg>
 `
   iconWrite(`${name}.tsx`, icon)
 }
