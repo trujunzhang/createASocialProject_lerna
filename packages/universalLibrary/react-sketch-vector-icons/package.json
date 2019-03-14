@@ -27,7 +27,9 @@
     "generate.vectors": "run-s  generate:*",
     "compile.bin": "babel bin --out-dir generate --extensions \".ts,.tsx\"",
     "generate:feather": "yarn compile.bin && node ./generate/buildFeather",
-    "generate:ionicons": "node ./bin/buildIonicons/make-svg-icons",
+    "ionicons:build": "node ./bin/buildIonicons/make-svg-icons",
+    "ionicons:after": "cpx \"./bin/buildIonicons/root/**/*.*\" ./src/generate/ionicons",
+    "generate:ionicons": "yarn ionicons:build && yarn ionicons:after",
     "generate:octicons": "yarn compile.bin && node ./generate/buildocticons"
   },
   "dependencies": {
@@ -49,6 +51,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
+    "cpx": "1.5.0",
     "@jsbits/get-package-version": "^1.0.3",
     "ionicons": "4.5.5",
     "octicons": "8.5.0",
