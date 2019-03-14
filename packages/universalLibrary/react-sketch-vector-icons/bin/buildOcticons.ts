@@ -15,19 +15,37 @@ const buildHelper = new BuildHelper({
   iconType: 'octicons'
 })
 
+const initialTypeDefinitions = `/// <reference types="react" />
+import { ComponentType, SVGAttributes } from 'react';
+
+interface Props extends SVGAttributes<SVGElement> {
+  className?: string;
+  color?: string;
+  size?: string | number;
+}
+
+type Icon = ComponentType<Props>;
+`
 import octicons from 'octicons'
 
 const SUFFIX = 'Icon'
 
-Object.getOwnPropertyNames(octicons).forEach((iconName) => {
+const getComponentName = (model: ISvgFileModel) => {
+  const { iconName } = model
+  const componentName = `${uppercamelcase(iconName)}${SUFFIX}`
+  return componentName
+}
+
+const getSingleSvgElement = (model: ISvgFileModel) => {
+  const { iconName } = model
   let { options, path: svgContents } = octicons[iconName]
   const { width, height, viewBox, class: className, 'aria-hidden': ariaHidden } = options
 
   svgContents = svgContents.replace(/fill-rule="/g, 'fillRule="')
 
-  const componentName = `${uppercamelcase(iconName)}${SUFFIX}`
+  const componentName = getComponentName(model)
 
-  const element = `
+  return `
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { Svg as svg } from 'react-sketchapp';
@@ -65,20 +83,6 @@ ${componentName}.propTypes = {
 
 `
 
-  const component = prettier.format(element, {
-    singleQuote: true,
-    trailingComma: 'es5',
-    bracketSpacing: true,
-    parser: 'flow'
-  })
-  const location = path.join(buildHelper.generatedIconPath, `${iconName}.tsx`)
+}
 
-  const fixedComponent = buildHelper.fixedComponent(component)
-  fs.writeFileSync(location, fixedComponent, 'utf-8')
-
-  const exportString = `export * from './icons/${iconName}'\r\n`.replace('\n\n', '\n')
-  fs.appendFileSync(buildHelper.mainTSPath, exportString, 'utf-8')
-
-  const exportTypeString = `export const ${componentName}: Icon\n`
-  fs.appendFileSync(buildHelper.mainTypingsPath, exportTypeString, 'utf-8')
-})
+buildHelper.buildSvgsFromObjects(initialTypeDefinitions, octicons, getSingleSvgElement, getComponentName)

@@ -55,7 +55,7 @@ const getSingleSvgElement = (model: ISvgFileModel) => {
     }
   })
 
-  const element = `
+  return `
       import * as React from 'react';
       import * as PropTypes from 'prop-types';
       import { Svg as svg } from 'react-sketchapp';
@@ -86,7 +86,6 @@ const getSingleSvgElement = (model: ISvgFileModel) => {
       }
     `
 
-  return element
 }
 
 buildHelper.buildSvgsFromFiles(initialTypeDefinitions, getSingleSvgElement, getComponentName)

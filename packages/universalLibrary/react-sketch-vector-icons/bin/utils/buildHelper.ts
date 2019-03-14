@@ -135,6 +135,7 @@ export class BuildHelper {
     getSingleSvgElement: GetSingleSvgElement,
     getComponentName: GetComponentName
   ) {
+    this.onBeforeSavedSvgHook(initialTypeDefinitions)
     Object.getOwnPropertyNames(objectInstance).forEach((iconName) => {
       const location = path.join(this.generatedIconPath, `${iconName}.tsx`)
       const model: ISvgFileModel = {
@@ -142,7 +143,8 @@ export class BuildHelper {
         iconName,
         location,
       }
-
+      const element = getSingleSvgElement(model)
+      this.onAfterSavedSvgHook(element, model, getComponentName)
     })
   }
 
