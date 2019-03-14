@@ -1,2 +1,2 @@
 
-export const initialTypeDefinitions = `/// <reference types="react" />
+export const initialTypeDefinitions = `/// <reference types="react" />`
