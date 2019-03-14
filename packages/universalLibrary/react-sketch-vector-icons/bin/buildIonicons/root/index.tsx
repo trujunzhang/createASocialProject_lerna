@@ -1,6 +1,6 @@
-import React = require('react')
-import PropTypes = require('prop-types')
-import invariant = require('invariant')
+import * as React from 'react'
+import * as PropTypes from 'prop-types'
+import invariant from 'invariant'
 import { iconTitles } from './icon-titles'
 import { IconMap, IonIconDefs, IonIconProps, IonIconSizes, IconNames } from './index.d'
 

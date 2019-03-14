@@ -68,14 +68,14 @@ const makeIcon = (name, item) => {
  */
 const createTSX = (name, item) => {
   const temp = camelize(name)
-  const type = `import { SVGIcon } from '..'
+  const type = `import { SVGIcon } from '../index.d'
 declare const ${temp}: SVGIcon
 export default ${temp}
 `
-  iconWrite(`${name}.d.ts`, type)
+  // iconWrite(`${name}.d.ts`, type)
 
   const parm = typeof item === 'string' ? '' : ', ios?: boolean'
-  const icon = `import React = require('react')
+  const icon = `import * as React from 'react'
   import { Svg as svg } from 'react-sketchapp'
 
 export default (props: object, iconTitle: string${parm}) =>${makeIcon(name, item)}</svg>
