@@ -11,8 +11,8 @@
     "ready:definitive": "cpx \"../../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "fix.current": "yarn fix",
-    "test.lib.pending": "jest --env=node --colors --coverage test",
-    "test.current.pending": "yarn test.lib",
+    "test.lib": "jest --env=node --colors --coverage test",
+    "test.current": "yarn test.lib",
     "build.copy.jsons": "cpx \"./src/glyphmapsJS/*.json\" ./dist/glyphmapsJS",
     "postbuild": "yarn build.copy.jsons",
     "build:reset": "rm -rf dist",
@@ -26,8 +26,8 @@
     " ##  the following is generating automatically!  ## ": "",
     "generate.vectors": "run-s  generate:*",
     "compile.bin": "babel bin --out-dir generate --extensions \".ts,.tsx\"",
-      "generate:feather": "yarn compile.bin && node ./generate/buildFeather",
-      "generate:octicons": "yarn compile.bin && node ./generate/buildocticons"
+    "generate:feather": "yarn compile.bin && node ./generate/buildFeather",
+    "generate:octicons": "yarn compile.bin && node ./generate/buildocticons"
   },
   "dependencies": {
     "@app/tools": "*",
@@ -73,6 +73,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
     "@types/react-test-renderer": "16.0.3",
     "react-test-renderer": "16.7.0",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3",
+    "identity-obj-proxy": "3.0.0"
   }
 }

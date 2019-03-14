@@ -19,7 +19,7 @@
     "depenence.update": "ncu -u",
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "test.lib": "jest --env=node --colors --coverage test",
-    "test.current": "yarn test.lib",
+    "test.current.pending": "yarn test.lib",
     "build:reset": "rm -rf dist",
     "build.clean": "yarn build:reset",
     "build:types": "tsc --emitDeclarationOnly -p tsconfig.lib.json",
