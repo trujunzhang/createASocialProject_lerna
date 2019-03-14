@@ -3,25 +3,13 @@ export interface ICurrentRNDemoPage {
   screen: any
 }
 
-// Buttons
-import {
-  // Button
-  NHButton,
-  // item
-  DefaultButton,
-  OutlineButton,
-  RoundedButton,
-  BlockButton,
-  FullButton,
-  CustomButton,
-  TransparentButton,
-  IconBtn,
-  DisabledButton
-} from './screens'
+import * as Advanced from './advanced'
+
+const currentListObject = Advanced.ListItemHeaderObject
 
 import { ListItemButtonObject } from './screens'
+// const currentListObject = ListItemButtonObject
 
-const currentListObject = ListItemButtonObject
 const getCurrentPage = (index: number): ICurrentRNDemoPage => {
   const keys = Object.keys(currentListObject)
   const pageIndex = Math.min(index, keys.length - 1)
@@ -32,27 +20,8 @@ const getCurrentPage = (index: number): ICurrentRNDemoPage => {
   }
 }
 
-export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(10)
-
-// export const CurrentRNDemoPage:ICurrentRNDemoPage = {
-//     name: 'NHButton',
-//     screen:NHButton
-// }
-
-// export const CurrentRNDemoPage:ICurrentRNDemoPage = {
-//     name: 'DefaultButton',
-//     screen: DefaultButton
-// }
-
-// export const CurrentRNDemoPage: ICurrentRNDemoPage = {
-//   name: 'Full',
-//   screen: FullButton
-// }
-
-// export const CurrentRNDemoPage: ICurrentRNDemoPage = {
-//   name: 'IconBtn',
-//   screen: IconBtn
-// }
+// export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(8)
+export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(9)
 
 import { FeatherIcons } from './vectorIcons'
 // export const CurrentRNDemoPage:ICurrentRNDemoPage = {
