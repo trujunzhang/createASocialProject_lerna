@@ -44,7 +44,10 @@
     "react-native-web": "0.10.0",
     "@types/react-sketchapp": "0.12.1",
     "react-sketchapp": "2.0.0",
-    "@skpm/builder": "0.4.0"
+    "@skpm/builder": "0.4.0",
+    "@types/styled-components": "4.1.12",
+    "styled-components": "4.1.3",
+    "styled-icons": "7.4.2"
   },
   "author": "Phuc Nguyen Hoang",
   "license": "MIT",
