@@ -239,9 +239,9 @@ export class IonIcon extends React.PureComponent<IconProps> {
           break
 
         case 'size':
-          // this.expandSize(props, defs.size)
-          props.width = 18
-          props.height = 18
+          this.expandSize(props, defs.size)
+          // props.width = 18
+          // props.height = 18
           break
 
         default:
