@@ -6,7 +6,7 @@ const uppercamelcase = require('uppercamelcase')
 const { camelize, ensurePath, distWrite, iconWrite, formatDate } = require('./utils')
 const { IDX_IOS, IDX_MD, PREFIX, GENERATOR_FOLDER, ICON_FOLDER, ICON_PATH, DIST_FOLDER, mainTSPath } = require('./constants')
 
-const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>\n<title>{iconTitle}</title>'
+const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>\n<svg.Text>{iconTitle}</svg.Text>'
 
 // ensurePath(DIST_FOLDER)
 ensurePath(GENERATOR_FOLDER)
@@ -28,6 +28,8 @@ const fixedComponent = (component) => {
     .replace(/<polyline/g, '<svg.Polyline')
     .replace(/<rect/g, '<svg.Rect')
     .replace(/<line/g, '<svg.Line')
+    .replace(/<title/g, '<svg.Text')
+    .replace(/title>/g, 'svg.Text>')
   return fixedComponent
 }
 

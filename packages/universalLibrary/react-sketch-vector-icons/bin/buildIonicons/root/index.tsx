@@ -258,14 +258,28 @@ export class IonIcon extends React.PureComponent<IconProps> {
     return props
   }
 
+  checkIconPlatform(name: string) {
+    let originName = name
+    let ios = false
+    if (name.indexOf('ios-') !== -1) {
+      originName = name.replace('ios-', '')
+      ios = true
+    }
+    return {
+      originName,
+      ios
+    }
+  }
+
   render() {
     const opts = assign({}, this.props) as IconProps
     const name = opts.name
     delete opts.name
 
-    const svgClassName = UpperCaseStringUtils.toCamelClassName(name)
-    // const renderIcon = _Conf.map[name]!
-    const renderIcon = Icons[svgClassName]!
+    const platformModel = this.checkIconPlatform(name)
+
+    const svgClassName = UpperCaseStringUtils.toCamelClassName(platformModel.originName)
+    const renderIcon = Icons[svgClassName]
     invariant(renderIcon, 'The icon "%s" is not registered.', name)
 
     const iconTitle = opts.title != UNDEF ? opts.title : _Conf.titles[name] || this.titleify(name)
@@ -282,7 +296,7 @@ export class IonIcon extends React.PureComponent<IconProps> {
 
     // Guess whether the "iOS" style should be used with double-style icons.
     // let ios = isMacLike
-    let ios = true
+    let ios = platformModel.ios
     if (opts.mode) {
       ios = opts.mode === 'ios'
       delete opts.mode
