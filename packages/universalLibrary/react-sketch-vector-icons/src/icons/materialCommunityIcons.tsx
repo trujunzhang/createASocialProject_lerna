@@ -4,6 +4,7 @@ import { IconProps } from 'react-native-vector-icons/Icon'
 
 export class MaterialCommunityIcons extends React.Component<IconProps, any> {
   render() {
+    const { name, size: lastSize, color, style } = this.props
     return <Text>{name + 'wh'}</Text>
   }
 }

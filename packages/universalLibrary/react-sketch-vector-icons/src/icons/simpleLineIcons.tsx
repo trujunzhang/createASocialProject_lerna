@@ -7,6 +7,7 @@ interface ISimpleLineIconsState {}
 
 export class SimpleLineIcons extends React.Component<IconProps, any> {
   render() {
+    const { name, size: lastSize, color, style } = this.props
     return <Text>{name + 'wh'}</Text>
   }
 }

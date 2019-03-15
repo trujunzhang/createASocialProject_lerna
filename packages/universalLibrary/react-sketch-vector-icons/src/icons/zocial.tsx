@@ -7,6 +7,7 @@ interface IZocialState {}
 
 export class Zocial extends React.Component<IconProps, any> {
   render() {
+    const { name, size: lastSize, color, style } = this.props
     return <Text>{name + 'wh'}</Text>
   }
 }

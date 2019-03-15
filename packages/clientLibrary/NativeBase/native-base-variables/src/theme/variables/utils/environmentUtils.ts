@@ -5,3 +5,9 @@ export const deviceWidth = !!Dimensions ? Dimensions.get('window').width : 400
 
 // TODO:DJZHANG
 export const platform = Platform.OS
+
+export const vectorIcons = {
+  platformOS: 'Ionicons',
+  Ionicons: 'Ionicons',
+  MaterialIcons: 'MaterialIcons'
+}
