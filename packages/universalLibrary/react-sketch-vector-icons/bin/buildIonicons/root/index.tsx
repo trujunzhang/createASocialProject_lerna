@@ -24,7 +24,7 @@ const UNDEF = undefined
 /**
  * We are running in a Mac-like OS?
  */
-const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
+// const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
 
 /**
  * Shorthand to `Object.keys` that returns a more-sense type.
@@ -89,7 +89,7 @@ const _Conf: IonConf = {
     small: '18px',
     large: '32px'
   },
-  titles: iconTitles,
+  titles: {},
   baseClass: UNDEF
 }
 
@@ -281,7 +281,8 @@ export class IonIcon extends React.PureComponent<IconProps> {
     this.mergeDefs(opts)
 
     // Guess whether the "iOS" style should be used with double-style icons.
-    let ios = isMacLike
+    // let ios = isMacLike
+    let ios = true
     if (opts.mode) {
       ios = opts.mode === 'ios'
       delete opts.mode
