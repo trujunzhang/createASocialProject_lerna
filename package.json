@@ -37,6 +37,8 @@
             "testx.client": "yarn ready:test && lerna run test.client --stream",
             "test.lib": "yarn ready:test && lerna run test.lib  --stream",
             "test.current": "yarn ready:test && lerna run test.current --stream",
+            " *****  The following is for vector icons ****": "",
+            "generate.vectors": "lerna run generate.vectors --scope=@app/react-sketch-vector-icons --stream",
             " *****  The following is for sketch app****": "",
             "app:sketch": "lerna run render:all --scope=app-sketch --stream",
             "app:sketch.build": "lerna run build:js --scope=app-sketch --stream",

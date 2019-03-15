@@ -17,12 +17,16 @@ export class IconFamily extends React.Component<any, any> {
   renderContent() {
     return (
       <Content>
-          <ListItem>
-              <Text style={{ width: 220 }}>Ionicons</Text>
-              <Icon type="Ionicons" name="home" style={{ color: '#999' }} />
-          </ListItem>
         <ListItem>
           <Text style={{ width: 220 }}>Ionicons</Text>
+          <Icon type="Ionicons" name="home" style={{ color: '#999' }} />
+        </ListItem>
+        <ListItem>
+          <Text style={{ width: 220 }}>Entypo</Text>
+          <Icon type="Entypo" name="home" style={{ color: '#999' }} />
+        </ListItem>
+        <ListItem>
+          <Text style={{ width: 220 }}>Octicons</Text>
           <Icon type="Octicons" name="home" style={{ color: '#999' }} />
         </ListItem>
       </Content>
