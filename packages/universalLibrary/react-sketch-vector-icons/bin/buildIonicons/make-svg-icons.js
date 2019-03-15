@@ -4,7 +4,16 @@ const readSvgFiles = require('./read-svg-files')
 const fs = require('fs')
 const uppercamelcase = require('uppercamelcase')
 const { camelize, ensurePath, distWrite, iconWrite, formatDate } = require('./utils')
-const { IDX_IOS, IDX_MD, PREFIX, GENERATOR_FOLDER, ICON_FOLDER, ICON_PATH, DIST_FOLDER, mainTSPath } = require('./constants')
+const {
+  IDX_IOS,
+  IDX_MD,
+  PREFIX,
+  GENERATOR_FOLDER,
+  ICON_FOLDER,
+  ICON_PATH,
+  DIST_FOLDER,
+  mainTSPath
+} = require('./constants')
 
 // const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>\n<svg.Text>{iconTitle}</svg.Text>'
 const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>'
@@ -34,7 +43,6 @@ const fixedComponent = (component) => {
   return fixedComponent
 }
 
-
 const getComponentName = (iconName) => {
   const componentName = uppercamelcase(iconName)
   return componentName
@@ -52,15 +60,15 @@ const makeIcon = (name, item) => {
     return `\n${REP_TAG}\n${gTag}\n${item}\n</svg.G>`
   }
 
-  const ios = item[IDX_IOS].replace(/>\s+</g, '')
-  const md = item[IDX_MD].replace(/>\s+</g, '')
+  const ios = fixedComponent(item[IDX_IOS].replace(/>\s+</g, ''))
+  const md = fixedComponent(item[IDX_MD].replace(/>\s+</g, ''))
 
   if (~ios.indexOf('><') || ~md.indexOf('><')) {
     return `
   ${REP_TAG}
   {ios
-  ? ${gTag}${fixedComponent(ios)}</svg.G>
-  : ${gTag}${fixedComponent(md)}</svg.G>}`
+  ? ${gTag}${ios}</svg.G>
+  : ${gTag}${md}</svg.G>}`
   }
 
   return `
@@ -90,7 +98,10 @@ export default ${temp}
   const icon = `import * as React from 'react'
   import { Svg as svg } from 'react-sketchapp'
 
-export const ${componentName} = (props: object, iconTitle: string${parm}) =>${makeIcon(name, item)}</svg>
+export const ${componentName} = (props: object, iconTitle: string${parm}) =>${makeIcon(
+    name,
+    item
+  )}</svg>
 `
   iconWrite(`${name}.tsx`, icon)
 }
