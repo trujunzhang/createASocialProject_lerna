@@ -4,20 +4,19 @@ import * as React from 'react'
 
 import { View, StyleSheet } from 'react-sketchapp'
 
-import { convertValidateStyle } from '../utils'
+import { getChildStyle } from '../utils'
 
-interface ISketchTouchableOpacityState {}
+interface ISketchTouchableOpacityState { }
 
 export class TouchableOpacity extends React.Component<
   TouchableOpacityProps,
   ISketchTouchableOpacityState
-> {
+  > {
   render() {
     const { name, style } = this.props as any
 
-    const compStyle = convertValidateStyle(style)
-
     // console.log('TouchableOpacity:', JSON.stringify(compStyle))
+    const compStyle = getChildStyle(this.props)
 
     return (
       <View name={name} style={compStyle}>

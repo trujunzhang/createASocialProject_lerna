@@ -16,3 +16,10 @@ export const convertValidateStyle = (style: any) => {
 
   return clean(json)
 }
+
+export const getChildStyle = (props: any) => {
+  const child: any = props.children;
+  const childStyle = child && child.props && child.props.style;
+  const compStyle = convertValidateStyle(childStyle)
+  return compStyle
+}
