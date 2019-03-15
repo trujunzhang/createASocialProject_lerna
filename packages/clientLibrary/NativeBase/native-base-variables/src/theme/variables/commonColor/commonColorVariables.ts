@@ -3,6 +3,7 @@ import { Platform } from 'react-primitives'
 import { IThemeDefaultVariables } from '../../../types'
 
 import { ProximaFontFamily, RobotoFontFamily } from '../../../fonts/appFonts'
+import { AppVectorIcons } from '../utils'
 
 const platform = Platform.OS
 export const fixedHeaderLeftWidth = 64
@@ -14,7 +15,8 @@ export const iconFontSize = platform === 'ios' ? 28 : 28
 export const fontSizeBase = 15
 
 export const commonColorThemeDefaultVariables: IThemeDefaultVariables = {
-  iconFamily: 'Ionicons',
+  iconFamily: AppVectorIcons.platformOS,
+  // iconFamily: 'Ionicons',
   fontFamily: RobotoFontFamily.family,
   btnFontFamily: platform === 'ios' ? 'System' : RobotoFontFamily.fontFace.medium,
   titleFontfamily: ProximaFontFamily.fontFace.medium
