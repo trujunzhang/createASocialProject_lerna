@@ -39,7 +39,7 @@ const isObject = (obj: any) => !!obj && typeof obj === 'object'
 /**
  * Simple `Object.assign`-like function
  */
-const assign = function<T extends Dict, U extends Dict>(dest: T, src?: U) {
+const assign = function <T extends Dict, U extends Dict>(dest: T, src?: U) {
   dest = dest || {}
   if (src) {
     Object.keys(src).forEach((k) => {
@@ -66,7 +66,7 @@ const pack = <T extends Dict>(obj: T) => {
 /**
  * Ensure to get a non-empty `className` as an string.
  */
-const classAsStr = function(klass: string | string[]) {
+const classAsStr = function (klass: string | string[]) {
   if (typeof klass === 'string') {
     return klass
   }
@@ -100,7 +100,7 @@ const _Conf: IonConf = {
  *
  * @param {Object.<string,?Function>} iconMap Object with name-icon translations.
  */
-export const addIcons = function(iconMap: IconMap) {
+export const addIcons = function (iconMap: IconMap) {
   invariant(isObject(iconMap), 'The iconMap must be an object.')
   pack(assign(_Conf.map, iconMap))
 }
@@ -112,7 +112,7 @@ export const addIcons = function(iconMap: IconMap) {
  *
  * @param {Object.<string,*>} defaults Properties to merge.
  */
-export const setDefaults = function(defaults: IonIconDefs) {
+export const setDefaults = function (defaults: IonIconDefs) {
   invariant(isObject(defaults), 'The defaults must be an object.')
   const defs = assign(_Conf.defs, defaults)
 
@@ -133,7 +133,7 @@ export const setDefaults = function(defaults: IonIconDefs) {
  *
  * @param {Object.<string,?string|number>} sizes Object with a sizes map.
  */
-export const setSizes = function(sizes: IonIconSizes) {
+export const setSizes = function (sizes: IonIconSizes) {
   invariant(isObject(sizes), 'The sizes must be an object.')
   pack(assign(_Conf.sizes, sizes))
 }
@@ -143,7 +143,7 @@ export const setSizes = function(sizes: IonIconSizes) {
  *
  * @param {Object.<string,?string>} sizes Object with {icon-name: title} props.
  */
-export const setTitles = function(iconTitles: Dict<string | null>) {
+export const setTitles = function (iconTitles: Dict<string | null>) {
   invariant(isObject(iconTitles), 'The icon titles must be an object.')
   pack(assign(_Conf.titles, iconTitles))
 }
@@ -154,7 +154,7 @@ export const setTitles = function(iconTitles: Dict<string | null>) {
  *
  * @param {string} class or space separated list of classes.
  */
-export const setBaseClass = function(classes: string) {
+export const setBaseClass = function (classes: string) {
   _Conf.baseClass = (classes && classAsStr(classes).trim()) || UNDEF
 }
 
@@ -239,7 +239,9 @@ export class IonIcon extends React.PureComponent<IconProps> {
           break
 
         case 'size':
-          this.expandSize(props, defs.size)
+          // this.expandSize(props, defs.size)
+          props.width = 18
+          props.height = 18
           break
 
         default:
@@ -288,7 +290,7 @@ export class IonIcon extends React.PureComponent<IconProps> {
     const innerRef = opts.innerRef
     if (innerRef !== null) {
       delete opts.innerRef
-      ;(opts as any).ref = innerRef
+        ; (opts as any).ref = innerRef
     }
 
     // name & innerRef are out, merge with defaults before color & size
