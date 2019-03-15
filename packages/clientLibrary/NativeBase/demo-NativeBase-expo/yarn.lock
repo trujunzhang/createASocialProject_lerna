@@ -271,7 +271,7 @@
     "@babel/helper-remap-async-to-generator" "^7.1.0"
     "@babel/plugin-syntax-async-generators" "^7.2.0"
 
-"@babel/plugin-proposal-class-properties@^7.0.0", "@babel/plugin-proposal-class-properties@^7.3.4":
+"@babel/plugin-proposal-class-properties@^7.0.0", "@babel/plugin-proposal-class-properties@^7.1.2":
   version "7.3.4"
   resolved "http://registry.npm.taobao.org/@babel/plugin-proposal-class-properties/download/@babel/plugin-proposal-class-properties-7.3.4.tgz#410f5173b3dc45939f9ab30ca26684d72901405e"
   integrity sha1-QQ9Rc7PcRZOfmrMMomaE1ykBQF4=
@@ -724,7 +724,7 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.12.0"
 
-"@babel/preset-env@^7.3.1":
+"@babel/preset-env@^7.1.2":
   version "7.3.4"
   resolved "http://registry.npm.taobao.org/@babel/preset-env/download/@babel/preset-env-7.3.4.tgz#887cf38b6d23c82f19b5135298bdb160062e33e1"
   integrity sha1-iHzzi20jyC8ZtRNSmL2xYAYuM+E=
@@ -784,7 +784,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/preset-typescript@^7.3.3":
+"@babel/preset-typescript@^7.1.2":
   version "7.3.3"
   resolved "http://registry.npm.taobao.org/@babel/preset-typescript/download/@babel/preset-typescript-7.3.3.tgz#88669911053fa16b2b276ea2ede2ca603b3f307a"
   integrity sha1-iGaZEQU/oWsrJ26i7eLKYDs/MHo=
