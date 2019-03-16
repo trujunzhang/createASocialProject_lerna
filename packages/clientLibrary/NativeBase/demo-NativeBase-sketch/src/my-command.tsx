@@ -34,7 +34,7 @@ const Document = () => (
       flexDirection: 'row',
       flexWrap: 'wrap',
       width: (96 + 8) * 4,
-      backgroundColor: 'blue'
+      // backgroundColor: 'blue'
     }}>
     <App />
   </Artboard>

@@ -43,7 +43,7 @@ export class RnSvgExample extends React.Component<any, any> {
         style={{
           width: 200,
           height: 200,
-          backgroundColor: 'blue'
+          // backgroundColor: 'blue'
         }}>
         <View
           style={[

@@ -47,7 +47,7 @@ export class SketchButton extends React.Component<any, any> {
   render() {
     /* const containerStyle = styles.container */
     const containerStyle = {
-      backgroundColor: 'blue'
+      // backgroundColor: 'blue'
     }
     return (
       <Container style={[containerStyle]}>
