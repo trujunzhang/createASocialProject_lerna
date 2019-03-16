@@ -1,3 +1,5 @@
 import * as SearchBar from './index'
 
-export const ListItemSearchBarObject = {}
+export const ListItemSearchBarObject = {
+    NHSearchbar: { screen: SearchBar.NHSearchbar },
+}

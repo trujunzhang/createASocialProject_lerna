@@ -7,7 +7,8 @@ import * as Advanced from './advanced'
 
 // const currentListObject = Advanced.ListItemHeaderObject
 // const currentListObject = Advanced.ListItemIconObject
-const currentListObject = Advanced.ListItemListObject
+// const currentListObject = Advanced.ListItemListObject
+const currentListObject = Advanced.ListItemSearchBarObject
 
 import { ListItemButtonObject } from './screens'
 // const currentListObject = ListItemButtonObject
@@ -22,7 +23,7 @@ const getCurrentPage = (index: number): ICurrentRNDemoPage => {
   }
 }
 
-export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(3)
+export const CurrentRNDemoPage: ICurrentRNDemoPage = getCurrentPage(1)
 
 import { FeatherIcons } from './vectorIcons'
 // export const CurrentRNDemoPage:ICurrentRNDemoPage = {
