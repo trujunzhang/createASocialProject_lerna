@@ -15,28 +15,22 @@ export class Ionicons extends React.Component<IconProps, any> {
     // console.log('Ionicons(icon): ', JSON.stringify(Icon))
     // console.log('Ionicons(IoniconsIcon): ', JSON.stringify(IoniconsIcon))
 
-    const {
-      width,
-      height
-    } = IonIconFixSize(lastSize as any, name)
+    const { width, height } = IonIconFixSize(lastSize as any, name)
 
     return (
       <View
         style={{
           width: lastSize,
-          height: lastSize,
-        }
-        }>
-        <View style={{
-          flex: 1,
-          // backgroundColor: 'red',
-          alignItems: 'center',
-          justifyContent: 'center',
+          height: lastSize
         }}>
-          <IonIcon name={name as any}
-            width={width}
-            height={height}
-            color={color} />
+        <View
+          style={{
+            flex: 1,
+            // backgroundColor: 'red',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+          <IonIcon name={name as any} width={width} height={height} color={color} />
         </View>
       </View>
     )

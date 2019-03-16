@@ -14,11 +14,18 @@ describe('methods correctly in the commonColorThemeVariables', () => {
       expect(expected).toEqual(value)
     })
 
-    const nextCommonColorThemeVariables = generatorForCommonColorThemeVariables({
-      iconRenderComponents: () => {
-        return null
+    const nextCommonColorThemeVariables = generatorForCommonColorThemeVariables(
+      {
+        iconRenderComponents: () => {
+          return null
+        }
+      },
+      {
+        getKeyboardAwareScrollView: () => {
+          return null
+        }
       }
-    })
+    )
 
     keys.map((key, index) => {
       const expected = commonColorThemeDefaultVariables[key]

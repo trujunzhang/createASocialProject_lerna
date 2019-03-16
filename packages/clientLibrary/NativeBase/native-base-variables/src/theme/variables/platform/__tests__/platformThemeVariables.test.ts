@@ -14,11 +14,18 @@ describe('methods correctly in the platformThemeVariables', () => {
       expect(expected).toEqual(value)
     })
 
-    const nextPlatformThemeVariables = generatorForPlatformThemeVariables({
-      iconRenderComponents: () => {
-        return null
+    const nextPlatformThemeVariables = generatorForPlatformThemeVariables(
+      {
+        iconRenderComponents: () => {
+          return null
+        }
+      },
+      {
+        getKeyboardAwareScrollView: () => {
+          return null
+        }
       }
-    })
+    )
 
     keys.map((key, index) => {
       const expected = platformThemeDefaultVariables[key]

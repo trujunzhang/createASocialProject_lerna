@@ -14,11 +14,18 @@ describe('methods correctly in the materialThemeVariables', () => {
       expect(expected).toEqual(value)
     })
 
-    const nextMaterialThemeVariables = generatorForMaterialThemeVariables({
-      iconRenderComponents: () => {
-        return null
+    const nextMaterialThemeVariables = generatorForMaterialThemeVariables(
+      {
+        iconRenderComponents: () => {
+          return null
+        }
+      },
+      {
+        getKeyboardAwareScrollView: () => {
+          return null
+        }
       }
-    })
+    )
 
     keys.map((key, index) => {
       const expected = materialThemeDefaultVariables[key]

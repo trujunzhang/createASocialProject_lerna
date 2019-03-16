@@ -1,6 +1,7 @@
 import { PlatformOSType } from 'react-primitives'
 
 import { IIconVectorVariables } from './iVectorIcons'
+import { IKeyboardAwareScrollViewVariables } from './iKeyboardAwareScrollView'
 
 // IAppVariables
 
@@ -347,4 +348,7 @@ export interface themeVariables
 
 //  theme variables.
 // ====================
-export interface themeVariablesWithIconVector extends themeVariables, IIconVectorVariables {}
+export interface themeVariablesWithIconVector
+  extends themeVariables,
+    IIconVectorVariables,
+    IKeyboardAwareScrollViewVariables {}
