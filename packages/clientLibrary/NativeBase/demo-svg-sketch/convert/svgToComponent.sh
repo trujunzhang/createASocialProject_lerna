@@ -1,2 +1,3 @@
+CURRENT=`pwd`
 
-svg-to-react-native _ionicons_svg_ios-arrow-back.svg IoniconsIosIcon --output ./components/
+svg-to-react-native --dir svgs/ --output components

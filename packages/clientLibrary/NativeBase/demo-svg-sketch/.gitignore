@@ -37,3 +37,6 @@ src/shared-components/**/*
 # definitive
 @types/*
 @types/**/*
+
+# convert 
+convert/components/**
