@@ -7,7 +7,6 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
 import { platformVariables as variable, themeVariablesWithIconVector } from '@app/native-base-variables'
 
 export interface IContentProps {
-  getKeyboardAwareScrollView: () => any
   style?: ViewStyle | Array<ViewStyle> | any
   /**
    * The theme prop can be applied to any component of NativeBase.
@@ -28,12 +27,51 @@ export interface IContentProps {
 class Content extends React.Component<IContentProps, any> {
   private _root: any
   private _scrollview: any
+  private KeyboardAwareScrollView: any = null
 
   constructor(props) {
     super(props);
     this.state = {
       orientation: "portrait"
     };
+  }
+
+  getKeyboardScrollView() {
+    const variables: themeVariablesWithIconVector = this.context.theme
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
+    if (!!variables.getKeyboardAwareScrollView) {
+      debugger
+      const KeyboardAwareScrollView: any = variables.getKeyboardAwareScrollView()
+      if (!!KeyboardAwareScrollView) {
+        debugger
+        return KeyboardAwareScrollView
+      }
+    }
+    return View
+  }
+
+  setKeyboardScrollView() {
+    const variables: themeVariablesWithIconVector = this.context.theme
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
+    if (!!variables.getKeyboardAwareScrollView) {
+      const KeyboardAwareScrollView: any = variables.getKeyboardAwareScrollView()
+
+      debugger
+      if (!!KeyboardAwareScrollView) {
+        debugger
+        this.KeyboardAwareScrollView = KeyboardAwareScrollView
+      }
+    }
+  }
+
+  componentWillMount() {
+    // this.setKeyboardScrollView()
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    // this.setKeyboardScrollView()
   }
 
   layoutChange(val) {
@@ -108,12 +146,13 @@ class Content extends React.Component<IContentProps, any> {
     }
     return rightPadder;
   }
+
   render() {
     const variables: themeVariablesWithIconVector = this.context.theme
       ? this.context.theme["@@shoutem.theme/themeStyle"].variables
       : variable;
 
-    const KeyboardAwareScrollView: any = this.props.getKeyboardAwareScrollView()
+    const KeyboardAwareScrollView: any = this.getKeyboardScrollView()
     return isIphoneX() ? (
       <KeyboardAwareScrollView
         automaticallyAdjustContentInsets={false}
