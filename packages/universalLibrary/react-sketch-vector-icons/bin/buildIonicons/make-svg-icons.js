@@ -16,7 +16,7 @@ const {
 } = require('./constants')
 
 // const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>\n<svg.Text>{iconTitle}</svg.Text>'
-const REP_TAG = PREFIX.slice(0, -1) + ' {...props}>'
+const REP_TAG = PREFIX.slice(0, -1) + ' width={width} height={height} fill={fillColor}>'
 
 // ensurePath(DIST_FOLDER)
 ensurePath(GENERATOR_FOLDER)
@@ -98,7 +98,7 @@ export default ${temp}
   const icon = `import * as React from 'react'
   import { Svg as svg } from 'react-sketchapp'
 
-export const ${componentName} = (props: object, iconTitle: string${parm}) =>${makeIcon(
+export const ${componentName} = (width: number, height: number, fillColor: string${parm}) =>${makeIcon(
     name,
     item
   )}</svg>

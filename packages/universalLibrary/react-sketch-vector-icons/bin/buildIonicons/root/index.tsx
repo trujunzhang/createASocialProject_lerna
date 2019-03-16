@@ -105,10 +105,10 @@ export class IonIcon extends React.PureComponent<IconProps> {
       size = _Conf.sizes[size] || size
     }
     if (opts.width === UNDEF) {
-      // opts.width = size
+      opts.width = size
     }
     if (opts.height === UNDEF) {
-      // opts.height = size
+      opts.height = size
     }
   }
 
@@ -152,8 +152,6 @@ export class IonIcon extends React.PureComponent<IconProps> {
 
         case 'size':
           this.expandSize(props, defs.size)
-          // props.width = 18
-          // props.height = 18
           break
 
         default:
@@ -173,49 +171,39 @@ export class IonIcon extends React.PureComponent<IconProps> {
   }
 
   checkIconPlatform(name: string) {
-    let originName = name
+    let originalName = name
     let ios = false
     if (name.indexOf('ios-') !== -1) {
-      originName = name.replace('ios-', '')
+      originalName = name.replace('ios-', '')
       ios = true
     }
+    const svgClassName = UpperCaseStringUtils.toCamelClassName(originalName)
+    const renderIcon = Icons[svgClassName]
     return {
-      originName,
+      originalName,
+      renderIcon,
       ios
     }
   }
 
+
   render() {
-    const opts = assign({}, this.props) as IconProps
-    const name = opts.name
-    delete opts.name
+    console.log('ionicons: (props)', JSON.stringify(this.props))
+    /**
+     * Example icon's props:
+     * {"name":"ios-arrow-back","size":17,"color":"rgba(0, 0, 0, 0.44)"}
+     */
+    const { name, size, color } = this.props
 
     const platformModel = this.checkIconPlatform(name)
 
-    const svgClassName = UpperCaseStringUtils.toCamelClassName(platformModel.originName)
-    const renderIcon = Icons[svgClassName]
+    const renderIcon = platformModel.renderIcon
     invariant(renderIcon, 'The icon "%s" is not registered.', name)
-
-    const iconTitle = opts.title != UNDEF ? opts.title : _Conf.titles[name] || this.titleify(name)
-    delete opts.title
-
-    const innerRef = opts.innerRef
-    if (innerRef !== null) {
-      delete opts.innerRef
-        ; (opts as any).ref = innerRef
-    }
-
-    // name & innerRef are out, merge with defaults before color & size
-    this.mergeDefs(opts)
 
     // Guess whether the "iOS" style should be used with double-style icons.
     // let ios = isMacLike
-    let ios = platformModel.ios
-    if (opts.mode) {
-      ios = opts.mode === 'ios'
-      delete opts.mode
-    }
+    const ios = platformModel.ios
 
-    return renderIcon(opts, iconTitle, ios)
+    return renderIcon(size, size, color, ios)
   }
 }
