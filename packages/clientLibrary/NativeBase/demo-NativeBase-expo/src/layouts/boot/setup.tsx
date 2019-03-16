@@ -5,16 +5,29 @@ import { getThemeStyle } from '@app/nativebase-theme-components'
 import { vectorIcons } from './vectorIcons'
 
 import {
+  IIconVectorVariables,
   themeVariablesWithIconVector,
+  IKeyboardAwareScrollViewVariables,
   generatorThemeVariablesForDemo
 } from '@app/native-base-variables'
 
-export const platformVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo({
+const iconVectorVariable: IIconVectorVariables = {
   iconRenderComponents: () => {
     return vectorIcons
-    // return null
   }
-})
+}
+
+const keyboardAwareScrollViewVariables: IKeyboardAwareScrollViewVariables = {
+  getKeyboardAwareScrollView: () => {
+    return null
+  }
+}
+
+export const platformVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
+  iconVectorVariable,
+  keyboardAwareScrollViewVariables
+)
+
 
 export class Setup extends React.Component {
   render() {
