@@ -12,5 +12,6 @@ export const CurrentPage = CurrentRNDemoPage.screen
 import { NBDebugButton } from '../nbConponents'
 // export const CurrentPage = NBDebugButton
 
-import { SadText } from '../sketchAppDocument'
+import * as SketchApp from '../sketchAppDocument'
 // export const CurrentPage = SadText
+// export const CurrentPage = SketchApp.IoniconsSvg

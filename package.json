@@ -46,7 +46,7 @@
             "expo:ios": "lerna run expo:ios --scope=app-client --stream",
             "  *****  The following is for web ****": "",
             "dev-all": "lerna run dev-all --scope=app-web --stream",
-            "  *****  The following is for apps ****": "",
+            "  *****  The following is for apps ****e": "",
             "fix": "lerna run fix",
             "fix.current": "lerna run fix.current --stream",
             "all:current": "run-s  *.current",

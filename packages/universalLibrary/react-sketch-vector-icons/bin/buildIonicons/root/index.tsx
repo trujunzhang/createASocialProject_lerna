@@ -49,30 +49,6 @@ const assign = function <T extends Dict, U extends Dict>(dest: T, src?: U) {
   return dest as T & U
 }
 
-/**
- * Deep remotion of `null` and `undefined` values of an object.
- */
-const pack = <T extends Dict>(obj: T) => {
-  keyArray(obj).forEach((k) => {
-    if (obj[k] == null) {
-      delete obj[k]
-    } else if (typeof obj[k] === 'object') {
-      obj[k] = pack(obj[k])
-    }
-  })
-  return obj as T
-}
-
-/**
- * Ensure to get a non-empty `className` as an string.
- */
-const classAsStr = function (klass: string | string[]) {
-  if (typeof klass === 'string') {
-    return klass
-  }
-  invariant(Array.isArray(klass), 'className must be a string or array.')
-  return klass.filter(Boolean).join(' ')
-}
 
 /**
  * Internal configuration object.
@@ -93,70 +69,6 @@ const _Conf: IonConf = {
   baseClass: UNDEF
 }
 
-/**
- * Merge the given icons with the existent ones.
- *
- * To remove existing icons, set its value to `null` of `undefined`.
- *
- * @param {Object.<string,?Function>} iconMap Object with name-icon translations.
- */
-export const addIcons = function (iconMap: IconMap) {
-  invariant(isObject(iconMap), 'The iconMap must be an object.')
-  pack(assign(_Conf.map, iconMap))
-}
-
-/**
- * Merge the given values with the current defaults.
- *
- * Values with `null` or `undefined` will remove the existing property.
- *
- * @param {Object.<string,*>} defaults Properties to merge.
- */
-export const setDefaults = function (defaults: IonIconDefs) {
-  invariant(isObject(defaults), 'The defaults must be an object.')
-  const defs = assign(_Conf.defs, defaults)
-
-  // check and format class names, if any
-  if (defs.className) {
-    defs.className = classAsStr(defs.className).trim() || UNDEF
-  }
-
-  // cleanup empty properties
-  pack(defs)
-}
-
-/**
- * Reset the table of named sizes.
- *
- * You can use custom names here, to remove the prdefined names, 'small'
- * and 'large', set them to `null` or `undefined`.
- *
- * @param {Object.<string,?string|number>} sizes Object with a sizes map.
- */
-export const setSizes = function (sizes: IonIconSizes) {
-  invariant(isObject(sizes), 'The sizes must be an object.')
-  pack(assign(_Conf.sizes, sizes))
-}
-
-/**
- * Add icon titles to the icon-name -> title transtations.
- *
- * @param {Object.<string,?string>} sizes Object with {icon-name: title} props.
- */
-export const setTitles = function (iconTitles: Dict<string | null>) {
-  invariant(isObject(iconTitles), 'The icon titles must be an object.')
-  pack(assign(_Conf.titles, iconTitles))
-}
-
-/**
- * Class or space separated classes to add to the `className` property
- * of all the icons, in addition to the default or specific one.
- *
- * @param {string} class or space separated list of classes.
- */
-export const setBaseClass = function (classes: string) {
-  _Conf.baseClass = (classes && classAsStr(classes).trim()) || UNDEF
-}
 
 /**
  * Renders a SVG Ionicon
@@ -193,10 +105,10 @@ export class IonIcon extends React.PureComponent<IconProps> {
       size = _Conf.sizes[size] || size
     }
     if (opts.width === UNDEF) {
-      opts.width = size
+      // opts.width = size
     }
     if (opts.height === UNDEF) {
-      opts.height = size
+      // opts.height = size
     }
   }
 
