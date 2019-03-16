@@ -3421,6 +3421,18 @@ react-is@^16.3.2, react-is@^16.8.1:
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
   integrity sha1-kPM2pow6KaCWo9ZIq4DofsYUgqI=
 
+react-native-svg-uri@1.2.3:
+  version "1.2.3"
+  resolved "http://registry.npm.taobao.org/react-native-svg-uri/download/react-native-svg-uri-1.2.3.tgz#2f67f30564068a0fee68a751845332a5185a1aab"
+  integrity sha1-L2fzBWQGig/uaKdRhFMypRhaGqs=
+  dependencies:
+    xmldom "^0.1.22"
+
+react-native-svg@^9.3.3:
+  version "9.3.3"
+  resolved "http://registry.npm.taobao.org/react-native-svg/download/react-native-svg-9.3.3.tgz#6e94b7d1e2eee1fad23e6af317be68d6db16e5a0"
+  integrity sha1-bpS30eLu4frSPmrzF75o1tsW5aA=
+
 react-sketchapp@2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/react-sketchapp/download/react-sketchapp-2.0.0.tgz#8dd148a2a2b56776f1fa9cc5e248b8e82ab6d4fe"
@@ -4444,6 +4456,11 @@ wrappy@1:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/wrappy/download/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+xmldom@^0.1.22:
+  version "0.1.27"
+  resolved "http://registry.npm.taobao.org/xmldom/download/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
+  integrity sha1-1QH5ezvbQDr4757MIFcxh6rawOk=
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.1"
