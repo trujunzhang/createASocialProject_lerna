@@ -7,7 +7,6 @@ import { vectorIcons } from './vectorIcons'
 
 import {
   IIconVectorVariables,
-  IKeyboardAwareScrollViewVariables,
   IThemeDefaultVariables,
   themeVariablesWithIconVector,
   generatorThemeVariablesForDemo,
@@ -25,11 +24,6 @@ const iconVectorVariable: IIconVectorVariables = {
   }
 }
 
-const keyboardAwareScrollViewVariables: IKeyboardAwareScrollViewVariables = {
-  getKeyboardAwareScrollView: () => {
-    return View
-  }
-}
 
 const themeDefaultVariables: IThemeDefaultVariables = {
   iconFamily: AppVectorIcons.platformOS,
@@ -41,7 +35,6 @@ const themeDefaultVariables: IThemeDefaultVariables = {
 
 export const sketchAppVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
   iconVectorVariable,
-  keyboardAwareScrollViewVariables,
   themeDefaultVariables
 )
 

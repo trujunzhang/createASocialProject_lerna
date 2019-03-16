@@ -8,7 +8,6 @@ import { vectorIcons } from './vectorIcons'
 import {
   IIconVectorVariables,
   themeVariablesWithIconVector,
-  IKeyboardAwareScrollViewVariables,
   generatorThemeVariablesForDemo
 } from '@app/native-base-variables'
 
@@ -18,15 +17,8 @@ const iconVectorVariable: IIconVectorVariables = {
   }
 }
 
-const keyboardAwareScrollViewVariables: IKeyboardAwareScrollViewVariables = {
-  getKeyboardAwareScrollView: () => {
-    return KeyboardAwareScrollView
-  }
-}
-
 export const platformVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
   iconVectorVariable,
-  keyboardAwareScrollViewVariables
 )
 
 export class Setup extends React.Component {
