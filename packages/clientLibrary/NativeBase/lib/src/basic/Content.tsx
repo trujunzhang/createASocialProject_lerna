@@ -27,7 +27,7 @@ export interface IContentProps {
 class Content extends React.Component<IContentProps, any> {
   private _root: any
   private _scrollview: any
-  private KeyboardAwareScrollView: any = View
+  private KeyboardAwareScrollView: any = null
 
   constructor(props) {
     super(props);
@@ -53,6 +53,13 @@ class Content extends React.Component<IContentProps, any> {
   componentWillMount() {
     this.setKeyboardScrollView()
   }
+
+  componentWillUpdate(nextProps, nextState) {
+    if (!this.KeyboardAwareScrollView) {
+      this.setKeyboardScrollView()
+    }
+  }
+
   layoutChange(val) {
     let maxComp = Math.max(variable.deviceWidth, variable.deviceHeight);
     if (val.width >= maxComp) this.setState({ orientation: "landscape" });
@@ -130,7 +137,7 @@ class Content extends React.Component<IContentProps, any> {
       ? this.context.theme["@@shoutem.theme/themeStyle"].variables
       : variable;
 
-    const KeyboardAwareScrollView: any = this.KeyboardAwareScrollView
+    const KeyboardAwareScrollView: any = this.KeyboardAwareScrollView || View
     return isIphoneX() ? (
       <KeyboardAwareScrollView
         automaticallyAdjustContentInsets={false}

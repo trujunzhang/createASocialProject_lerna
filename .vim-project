@@ -1,5 +1,7 @@
 
-    "build.current": "yarn build-lib",
+
+generatorThemeVariablesForDemo
+
 
 
 "@types/react-dom": "16.0.11",

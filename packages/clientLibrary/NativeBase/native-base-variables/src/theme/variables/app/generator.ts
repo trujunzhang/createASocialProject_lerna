@@ -20,9 +20,13 @@ export const generatorForAppThemeVariables = (
   }
 
   const defaultVariables = themeDefaultVariables || appThemeDefaultVariables
-  return {
+  const variables = {
     ...variableWithIcons,
     ...keyboardAwareScrollViewVariables,
     ...defaultVariables
   }
+
+  // const KeyboardAwareScrollView: any = variables.getKeyboardAwareScrollView()
+
+  return variables
 }
