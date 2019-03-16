@@ -3,7 +3,9 @@ import { render, Artboard, Text, View } from 'react-sketchapp';
 
 import * as SvgPage from './icons'
 
-const CurrentPage: any = SvgPage.SvgExample
+// const CurrentPage: any = SvgPage.SvgExample
+const CurrentPage: any = SvgPage.IosArrowBack
+
 
 const Document = () => (
   <Artboard
