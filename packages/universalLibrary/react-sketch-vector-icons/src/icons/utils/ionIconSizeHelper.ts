@@ -7,6 +7,10 @@ const iconsRatios = {
     'ios-arrow-back': {
         width: 57,
         height: 100
+    },
+    'ios-arrow-forward': {
+        width: 57,
+        height: 100
     }
 }
 
