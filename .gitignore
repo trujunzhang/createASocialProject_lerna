@@ -38,8 +38,6 @@ coverage/**/*
 
 .expo/*
 
-static/
-
 .check/*
 
 # Sketch app.
