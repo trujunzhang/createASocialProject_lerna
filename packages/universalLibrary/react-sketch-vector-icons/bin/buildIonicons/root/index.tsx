@@ -39,7 +39,7 @@ const isObject = (obj: any) => !!obj && typeof obj === 'object'
 /**
  * Simple `Object.assign`-like function
  */
-const assign = function <T extends Dict, U extends Dict>(dest: T, src?: U) {
+const assign = function<T extends Dict, U extends Dict>(dest: T, src?: U) {
   dest = dest || {}
   if (src) {
     Object.keys(src).forEach((k) => {
@@ -48,7 +48,6 @@ const assign = function <T extends Dict, U extends Dict>(dest: T, src?: U) {
   }
   return dest as T & U
 }
-
 
 /**
  * Internal configuration object.
@@ -68,7 +67,6 @@ const _Conf: IonConf = {
   titles: {},
   baseClass: UNDEF
 }
-
 
 /**
  * Renders a SVG Ionicon
@@ -185,7 +183,6 @@ export class IonIcon extends React.PureComponent<IconProps> {
       ios
     }
   }
-
 
   render() {
     console.log('ionicons: (props)', JSON.stringify(this.props))

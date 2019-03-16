@@ -11,7 +11,7 @@ import {
   generatorThemeVariablesForDemo,
   ProximaFontFamily,
   RobotoFontFamily,
-    AppVectorIcons 
+  AppVectorIcons
 } from '@app/native-base-variables'
 
 const currentFontFamily = ProximaFontFamily
@@ -24,7 +24,7 @@ const iconVectorVariable: IIconVectorVariables = {
 }
 
 const themeDefaultVariables: IThemeDefaultVariables = {
-    iconFamily: AppVectorIcons  .platformOS,
+  iconFamily: AppVectorIcons.platformOS,
   // iconFamily: 'MaterialIcons',
   fontFamily: currentFontFamily.family,
   btnFontFamily: currentFontFamily.fontFace.medium,

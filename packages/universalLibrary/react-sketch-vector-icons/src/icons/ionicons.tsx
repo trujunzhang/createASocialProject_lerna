@@ -15,10 +15,11 @@ export class Ionicons extends React.Component<IconProps, any> {
     // console.log('Ionicons(IoniconsIcon): ', JSON.stringify(IoniconsIcon))
 
     return (
-      <View style={{
-        justifyContent: 'center',
-        backgroundColor: '#ecf0f1',
-      }}>
+      <View
+        style={{
+          justifyContent: 'center',
+          backgroundColor: '#ecf0f1'
+        }}>
         <IonIcon name={name as any} size={(lastSize || 12) - 8} color={color} />
       </View>
     )
