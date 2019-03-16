@@ -1,7 +1,7 @@
 import {
   // For demo
   CurrentRNDemoPage
-} from '@app/nb-demo-shared-components'
+} from '@app/nb-demo-universal-components'
 
 export const fixRouteNameExist = (routeConfigs: any) => {
   const screenKeys = Object.keys(routeConfigs)

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { colorList } from '@app/shared-components'
+import { colorList } from '@app/universal-components'
 import chroma from 'chroma-js'
 
 // take a hex and give us a nice text color to put over it

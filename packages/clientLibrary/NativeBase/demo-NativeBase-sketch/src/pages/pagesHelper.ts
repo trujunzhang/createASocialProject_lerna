@@ -5,7 +5,7 @@ import { ColorListView } from '../artboard'
 import {
   // Button
   CurrentRNDemoPage
-} from '@app/nb-demo-shared-components'
+} from '@app/nb-demo-universal-components'
 export const CurrentPage = CurrentRNDemoPage.screen
 
 // Local debug nativebase

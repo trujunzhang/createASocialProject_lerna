@@ -30,7 +30,7 @@ import {
   ListItemFabObject,
   ListItemFooterObject,
   ListItemFormObject
-} from '@app/nb-demo-shared-components'
+} from '@app/nb-demo-universal-components'
 
 export const baseRouterConfs = {
   // VectorIcons

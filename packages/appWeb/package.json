@@ -3,7 +3,6 @@
   "version": "2.0.0",
   "scripts": {
     "ready.assets.pending": "run-s  ready:*",
-    "ready:appSharedComps": "cpx \"../appLibrary/appSharedComps/src/**/*.*\" ./src/shared-components",
     "dev": "next",
     "dev-all": "next",
     "build": "next build",
@@ -11,7 +10,7 @@
   },
   "back": {},
   "dependencies": {
-    "@app/shared-components": "*",
+    "@app/universal-components": "*",
     "@types/next": "^2.4.8",
     "@types/react-native": "0.57.27",
     "@types/react": "16.4.8",

@@ -30,7 +30,7 @@ production-cloud/*
 /coverage
 
 # libs
-src/shared-components/**/*
+src/universal-components/**/*
 
 
 # definitive

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StyleSheet, Text, View } from 'react-primitives'
-import { Swatch, colorList, textColorList } from '@app/shared-components'
+import { Swatch, colorList, textColorList } from '@app/universal-components'
 
 export const ColorListView = () => {
   const views: any = Object.keys(colorList).map((color) => (

@@ -1,10 +1,10 @@
 {
-  "name": "@app/shared-components",
+  "name": "@app/universal-components",
   "version": "0.6.0",
   "description": "",
   "author": "",
   "license": "MIT",
-  "repository": "/@app/shared-components",
+  "repository": "/@app/universal-components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

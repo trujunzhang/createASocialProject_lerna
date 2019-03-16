@@ -2,7 +2,7 @@
   "name": "@app/native-base-shoutem-theme",
   "version": "0.2.2",
   "license": "MIT",
-  "repository": "/@app/shared-components",
+  "repository": "/@app/universal-components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
