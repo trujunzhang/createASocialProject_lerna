@@ -3,17 +3,17 @@ import * as React from 'react';
 
 import { View, Text } from 'react-sketchapp'
 import { Svg, render } from 'react-sketchapp';
-import SvgUri from 'react-native-svg-uri';
+// import SvgUri from 'react-native-svg-uri';
 
-export const IosArrowBackyyy = (props) => {
-  return (
-    <SvgUri
-      width="200"
-      height="200"
-      source={{ uri: 'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg' }}
-    />
-  );
-}
+// export const IosArrowBackyyy = (props) => {
+//   return (
+//     <SvgUri
+//       width="200"
+//       height="200"
+//       source={{ uri: 'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg' }}
+//     />
+//   );
+// }
 
 export const IosArrowBack = (props) => {
   return (
