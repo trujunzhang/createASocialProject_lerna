@@ -2,13 +2,13 @@ import * as React from 'react'
 
 import { View, Text } from 'react-primitives'
 
-interface SwatchProps {
+interface ISwatchProps {
   name: string
   hex: string
   textColor: string
 }
 
-export const Swatch = ({ name, hex, textColor }: SwatchProps) => (
+export const Swatch = ({ name, hex, textColor }: ISwatchProps) => (
   <View
     name={`Swatch ${name}`}
     style={{
