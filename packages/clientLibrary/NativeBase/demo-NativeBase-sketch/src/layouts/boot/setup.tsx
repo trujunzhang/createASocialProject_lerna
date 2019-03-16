@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { StyleProvider } from '@app/native-base'
+import { View } from 'react-primitives'
 
 import { getThemeStyle } from '@app/nativebase-theme-components'
 import { vectorIcons } from './vectorIcons'
@@ -26,7 +27,7 @@ const iconVectorVariable: IIconVectorVariables = {
 
 const keyboardAwareScrollViewVariables: IKeyboardAwareScrollViewVariables = {
   getKeyboardAwareScrollView: () => {
-    return null
+    return View
   }
 }
 

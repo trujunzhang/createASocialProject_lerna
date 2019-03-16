@@ -1,11 +1,10 @@
 import * as React from 'react'
 
 import * as PropTypes from 'prop-types'
-import { View, ViewStyle } from 'react-primitives'
+import { View, ViewStyle, StatusBar, StatusBarStyle, StyleSheet, isIphoneX } from 'react-primitives'
 import { connectStyle } from '@app/native-base-shoutem-theme'
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames'
-// import { isIphoneX, KeyboardAwareScrollView } from '../utils/base'
-import { platformVariables as variable } from '@app/native-base-variables'
+import { platformVariables as variable, themeVariablesWithIconVector } from '@app/native-base-variables'
 
 export interface IContentProps {
   style?: ViewStyle | Array<ViewStyle> | any
@@ -28,32 +27,49 @@ export interface IContentProps {
 class Content extends React.Component<IContentProps, any> {
   private _root: any
   private _scrollview: any
-  static contextTypes = {
-    theme: PropTypes.object
-  }
+  private KeyboardAwareScrollView: any = View
+
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      orientation: 'portrait'
+      orientation: "portrait"
+    };
+  }
+
+  setKeyboardScrollView() {
+    const variables: themeVariablesWithIconVector = this.context.theme
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
+    if (!!variables.getKeyboardAwareScrollView) {
+      const KeyboardAwareScrollView: any = variables.getKeyboardAwareScrollView()
+
+      if (!!KeyboardAwareScrollView) {
+        debugger
+        this.KeyboardAwareScrollView = KeyboardAwareScrollView
+      }
     }
   }
+
+  componentWillMount() {
+    this.setKeyboardScrollView()
+  }
   layoutChange(val) {
-    let maxComp = Math.max(variable.deviceWidth, variable.deviceHeight)
-    if (val.width >= maxComp) this.setState({ orientation: 'landscape' })
+    let maxComp = Math.max(variable.deviceWidth, variable.deviceHeight);
+    if (val.width >= maxComp) this.setState({ orientation: "landscape" });
     else {
-      this.setState({ orientation: 'portrait' })
+      this.setState({ orientation: "portrait" });
     }
   }
 
   calculateLeft(mode, inSet) {
-    let inset: any = null
+    let inset: any = null;
     if (inSet !== undefined) {
-      inset = inSet
+      inset = inSet;
     } else {
-      inset = variable.Inset
+      inset = variable.Inset;
     }
-    const InsetValues = mode === 'portrait' ? inset.portrait : inset.landscape
-    let leftPadder = null
+    const InsetValues = mode === "portrait" ? inset.portrait : inset.landscape;
+    let leftPadder = null;
     if (this.props.style[1] !== undefined) {
       if (
         this.props.style[1].padding !== undefined ||
@@ -62,29 +78,30 @@ class Content extends React.Component<IContentProps, any> {
         leftPadder =
           (this.props.style[1].paddingLeft
             ? this.props.style[1].paddingLeft
-            : this.props.style[1].padding) + InsetValues.leftInset
+            : this.props.style[1].padding) + InsetValues.leftInset;
       }
     } else if (
       this.props.style.padding !== undefined ||
       this.props.style.paddingLeft !== undefined
     ) {
       leftPadder =
-        (this.props.style.paddingLeft ? this.props.style.paddingLeft : this.props.style.padding) +
-        InsetValues.leftInset
+        (this.props.style.paddingLeft
+          ? this.props.style.paddingLeft
+          : this.props.style.padding) + InsetValues.leftInset;
     } else {
-      leftPadder = InsetValues.leftInset
+      leftPadder = InsetValues.leftInset;
     }
-    return leftPadder
+    return leftPadder;
   }
   calculateRight(mode, inSet) {
-    let inset: any = null
+    let inset: any = null;
     if (inSet !== undefined) {
-      inset = inSet
+      inset = inSet;
     } else {
-      inset = variable.Inset
+      inset = variable.Inset;
     }
-    const InsetValues = mode === 'portrait' ? inset.portrait : inset.landscape
-    let rightPadder = null
+    const InsetValues = mode === "portrait" ? inset.portrait : inset.landscape;
+    let rightPadder = null;
     if (this.props.style[1] !== undefined) {
       if (
         this.props.style[1].padding !== undefined ||
@@ -93,77 +110,79 @@ class Content extends React.Component<IContentProps, any> {
         rightPadder =
           (this.props.style[1].paddingRight
             ? this.props.style[1].paddingRight
-            : this.props.style[1].padding) + InsetValues.rightInset
+            : this.props.style[1].padding) + InsetValues.rightInset;
       }
     } else if (
       this.props.style.padding !== undefined ||
       this.props.style.paddingRight !== undefined
     ) {
       rightPadder =
-        (this.props.style.paddingRight ? this.props.style.paddingRight : this.props.style.padding) +
-        InsetValues.rightInset
+        (this.props.style.paddingRight
+          ? this.props.style.paddingRight
+          : this.props.style.padding) + InsetValues.rightInset;
     } else {
-      rightPadder = InsetValues.rightInset
+      rightPadder = InsetValues.rightInset;
     }
-    return rightPadder
+    return rightPadder;
   }
-
   render() {
-    // const variables = this.context.theme
-    //     ? this.context.theme["@@shoutem.theme/themeStyle"].variables
-    //     : variable;
-    return <View name="content">{this.props.children}</View>
-  }
+    const variables: themeVariablesWithIconVector = this.context.theme
+      ? this.context.theme["@@shoutem.theme/themeStyle"].variables
+      : variable;
 
-  // render() {
-  //   const variables = this.context.theme
-  //     ? this.context.theme['@@shoutem.theme/themeStyle'].variables
-  //     : variable
-  //   return isIphoneX() ? (
-  //     <KeyboardAwareScrollView
-  //       automaticallyAdjustContentInsets={false}
-  //       resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
-  //       keyboardShouldPersistTaps={
-  //         this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
-  //       }
-  //       ref={(c) => {
-  //         this._scrollview = c
-  //         this._root = c
-  //       }}
-  //       {...this.props}
-  //       onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}
-  //       style={[
-  //         this.props.style,
-  //         {
-  //           paddingLeft: this.calculateLeft(this.state.orientation, variables.Inset)
-  //         }
-  //       ]}
-  //       contentContainerStyle={[
-  //         { padding: this.props.padder ? variables.contentPadding : undefined },
-  //         this.props.contentContainerStyle
-  //       ]}>
-  //       {this.props.children}
-  //     </KeyboardAwareScrollView>
-  //   ) : (
-  //       <KeyboardAwareScrollView
-  //         automaticallyAdjustContentInsets={false}
-  //         resetScrollToCoords={(this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }) as any}
-  //         keyboardShouldPersistTaps={
-  //           this.props.keyboardShouldPersistTaps ? this.props.keyboardShouldPersistTaps : 'handled'
-  //         }
-  //         ref={(c) => {
-  //           this._scrollview = c
-  //           this._root = c
-  //         }}
-  //         {...this.props}
-  //         contentContainerStyle={[
-  //           { padding: this.props.padder ? variables.contentPadding : undefined },
-  //           this.props.contentContainerStyle
-  //         ]}>
-  //         {this.props.children}
-  //       </KeyboardAwareScrollView>
-  //     )
-  // }
+    const KeyboardAwareScrollView: any = this.KeyboardAwareScrollView
+    return isIphoneX() ? (
+      <KeyboardAwareScrollView
+        automaticallyAdjustContentInsets={false}
+        resetScrollToCoords={
+          this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }
+        }
+        keyboardShouldPersistTaps={
+          this.props.keyboardShouldPersistTaps
+            ? this.props.keyboardShouldPersistTaps
+            : "handled"
+        }
+        ref={c => {
+          this._scrollview = c;
+          this._root = c;
+        }}
+        {...this.props}
+        onLayout={e => this.layoutChange(e.nativeEvent.layout)}
+        style={[
+          this.props.style,
+          {
+            paddingLeft: this.calculateLeft(
+              this.state.orientation,
+              variables.Inset
+            )
+          }
+        ]}
+        contentContainerStyle={[{ padding: this.props.padder ? variables.contentPadding : undefined }, this.props.contentContainerStyle]}
+      >
+        {this.props.children}
+      </KeyboardAwareScrollView>
+    ) : (
+        <KeyboardAwareScrollView
+          automaticallyAdjustContentInsets={false}
+          resetScrollToCoords={
+            this.props.disableKBDismissScroll ? null : { x: 0, y: 0 }
+          }
+          keyboardShouldPersistTaps={
+            this.props.keyboardShouldPersistTaps
+              ? this.props.keyboardShouldPersistTaps
+              : "handled"
+          }
+          ref={c => {
+            this._scrollview = c;
+            this._root = c;
+          }}
+          {...this.props}
+          contentContainerStyle={[{ padding: this.props.padder ? variables.contentPadding : undefined }, this.props.contentContainerStyle]}
+        >
+          {this.props.children}
+        </KeyboardAwareScrollView>
+      );
+  }
 }
 
 // Content.propTypes = {

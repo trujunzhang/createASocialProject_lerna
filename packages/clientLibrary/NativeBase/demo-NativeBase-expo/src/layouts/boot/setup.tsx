@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { StyleProvider } from '@app/native-base'
 
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { getThemeStyle } from '@app/nativebase-theme-components'
 import { vectorIcons } from './vectorIcons'
 
@@ -19,7 +20,7 @@ const iconVectorVariable: IIconVectorVariables = {
 
 const keyboardAwareScrollViewVariables: IKeyboardAwareScrollViewVariables = {
   getKeyboardAwareScrollView: () => {
-    return null
+    return KeyboardAwareScrollView
   }
 }
 
@@ -27,7 +28,6 @@ export const platformVariables: themeVariablesWithIconVector = generatorThemeVar
   iconVectorVariable,
   keyboardAwareScrollViewVariables
 )
-
 
 export class Setup extends React.Component {
   render() {

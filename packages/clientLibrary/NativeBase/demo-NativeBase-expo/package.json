@@ -23,6 +23,7 @@
     "@app/nativebase-theme-components": "*",
     "@app/native-base": "*",
     "@app/nb-demo-shared-components": "*",
+    "react-native-keyboard-aware-scroll-view": "0.8.0",
     "@types/react": "16.7.18",
     "@expo/vector-icons": "9.0.0",
     "@types/react-native": "0.57.27",
