@@ -26,12 +26,7 @@ yarn-error.log*
 # Do not include compiled css
 *.css
 
-
 # jetbrains
 /.idea
-
-# Compiled typescript.
-**/*.js
-**/*.jsx
 
 @types/
