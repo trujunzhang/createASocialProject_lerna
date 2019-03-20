@@ -33,6 +33,7 @@ static/
 # libs
 src/universal-components/**/*
 
+.ts-compiled
 
 # definitive
 @types/*

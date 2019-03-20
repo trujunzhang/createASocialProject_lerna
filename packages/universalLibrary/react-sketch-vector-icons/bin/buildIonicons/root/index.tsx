@@ -185,7 +185,7 @@ export class IonIcon extends React.PureComponent<IconProps> {
   }
 
   render() {
-    console.log('ionicons: (props)', JSON.stringify(this.props))
+    // console.log('ionicons: (props)', JSON.stringify(this.props))
     /**
      * Example icon's props:
      * {"name":"ios-arrow-back","size":17,"color":"rgba(0, 0, 0, 0.44)"}

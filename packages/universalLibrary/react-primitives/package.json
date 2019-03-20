@@ -3,12 +3,10 @@
   "version": "0.6.0",
   "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "typings": "./index.d.ts",
   "scripts": {
     "depenence.update": "ncu -u",
-    "rm.assets": "rm -rf @types",
-    "ready.assets": "run-s  ready:*",
-    "ready:definitive": "cpx \"../../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
     "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
     "fix.current": "yarn fix",
     "test.lib.pending": "jest --env=node --colors --coverage test",
