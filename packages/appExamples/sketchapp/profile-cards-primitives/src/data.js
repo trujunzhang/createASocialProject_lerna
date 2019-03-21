@@ -3,7 +3,7 @@ import path from 'path'
 
 const rootDir = path.join(__dirname, '..')
 
-const localImageUrl = 'file://${rootDir}/assets/6frGyDyA_400x400.jpg'
+const localImageUrl = `file://${rootDir}/assets/6frGyDyA_400x400.jpg`
 
 export default [
   {

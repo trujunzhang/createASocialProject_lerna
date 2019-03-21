@@ -4,79 +4,81 @@
  * 317 dual-mode icons, 62 logo icons.
  *
  * @auhtor aMarCruz <amarcruzbox-git@yahoo.com>
- * @date 2019-03-16T02:39:20Z
+ * @date 2019-03-21T07:58:36Z
  * @license MIT
  */
-import * as React from 'react'
+import * as React from 'react';
 
-type Dict<T = any> = { [k: string]: T }
+type Dict<T = any> = { [k: string]: T };
 
 // tslint:disable-next-line:ban-types
-export type Nullable<T> = { [K in keyof T]: (Object extends T[K] ? Nullable<T[K]> : T[K]) | null }
-export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+export type Nullable<T> = { [K in keyof T]: (Object extends T[K] ? Nullable<T[K]> : T[K]) | null };
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 /**
  * SVG icon renderizer.
  */
 export interface SVGIcon {
-  (opts: object, iconTitle: string, ios?: boolean): JSX.Element
+  (opts: object, iconTitle: string, ios?: boolean): JSX.Element;
 }
 
 /**
  * IonIcon class properties and attributes.
  */
-export interface IonIconProps<T extends string>
-  extends Omit<React.SVGAttributes<SVGSVGElement>, 'xmlns' | 'viewBox' | 'children'> {
+export interface IonIconProps<T extends string> extends
+    Omit<React.SVGAttributes<SVGSVGElement>, 'xmlns' | 'viewBox' | 'children'> {
   /**
    * The name with which the icon was registered.
    */
-  name: T
+  name: T;
   /**
    * Color for `fill` and `stroke`, in any format accepted by CSS.
    */
-  color?: string
+  color?: string;
   /**
    * Value for `width` and `height`, any format accepted by CSS.
    */
-  size?: string | number
+  size?: string | number;
   /**
    * Icon style, overrides automatic detection of the platform.
    */
-  mode?: 'ios' | 'md'
+  mode?: 'ios' | 'md';
   /**
    * Overrides the default icon title (icon name in Title Case).
    */
-  title?: string
+  title?: string;
   /**
    * React `ref` to the `<svg>` element.
    */
-  innerRef?: React.Ref<SVGSVGElement>
+  innerRef?: React.Ref<SVGSVGElement>;
 }
 
 /**
  * Bundle with name to icon translations
  */
-export type IconMap = { [K in IconNames]?: SVGIcon }
+export type IconMap = { [K in IconNames]?: SVGIcon };
 
 /**
  * Allows to accept custom names in addIcons.
  */
-export type CustomIconMap = Dict<SVGIcon | null | undefined>
+export type CustomIconMap = Dict<SVGIcon | null | undefined>;
 
 /**
  * Possible defaults
  */
-export interface IonIconDefs extends Omit<IonIconProps<''>, 'name' | 'title' | 'innerRef'> {}
+export interface IonIconDefs extends Omit<IonIconProps<''>, 'name' | 'title' | 'innerRef'> {
+}
 
 /**
  * Size aliases
  */
-export type IonIconSizes = Dict<string | number | undefined>
+export type IonIconSizes = Dict<string | number | undefined>;
 
 /**
  * Main component to render a SVG ionicon.
  */
-export declare class IonIcon extends React.PureComponent<IonIconProps<IconNames>> {}
+export declare class IonIcon extends React.PureComponent<IonIconProps<IconNames>> {
+}
 
 /**
  * Merge the given icons with the existent ones.
@@ -85,7 +87,7 @@ export declare class IonIcon extends React.PureComponent<IonIconProps<IconNames>
  *
  * @param iconMap Object with name-icon translations.
  */
-export function addIcons(iconMap: Nullable<IconMap> & CustomIconMap): void
+export function addIcons(iconMap: Nullable<IconMap> & CustomIconMap): void;
 
 /**
  * Merge the given values with the current defaults.
@@ -94,7 +96,7 @@ export function addIcons(iconMap: Nullable<IconMap> & CustomIconMap): void
  *
  * @param defaults Properties to merge.
  */
-export function setDefaults(defaults: Nullable<IonIconDefs>): void
+export function setDefaults(defaults: Nullable<IonIconDefs>): void;
 
 /**
  * Reset the table of named sizes.
@@ -104,14 +106,14 @@ export function setDefaults(defaults: Nullable<IonIconDefs>): void
  *
  * @param sizes Object with a sizes map.
  */
-export function setSizes(sizes: Nullable<IonIconSizes>): void
+export function setSizes(sizes: Nullable<IonIconSizes>): void;
 
 /**
  * Add icon titles to the icon-name -> title transtations.
  *
  * @param sizes Object with a {icon-name: title} props.
  */
-export function setTitles(iconTitles: Dict<string | null>): void
+export function setTitles(iconTitles: Dict<string | null>): void;
 
 /**
  * Class or space separated classes to add to the `className` property
@@ -119,7 +121,7 @@ export function setTitles(iconTitles: Dict<string | null>): void
  *
  * @param class Class or space separated list of classes.
  */
-export function setBaseClass(classes: string): void
+export function setBaseClass(classes: string): void;
 
 /**
  * Icon names
@@ -504,3 +506,4 @@ export type IconNames =
   | 'wifi'
   | 'wine'
   | 'woman'
+;
