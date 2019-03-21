@@ -1,7 +1,9 @@
 
 import path from 'path'
 
-const rootDir = path.join(__dirname, '..')
+// const rootDir = path.join(__dirname, '..')
+const rootDir =
+  '/Users/djzhang/Desktop/upwork-projects/CURRENT/ADOBEXDTutorials/createASocialProject_lerna/packages/appExamples/sketchapp/profile-cards-primitives'
 
 const localImageUrl = `file://${rootDir}/assets/6frGyDyA_400x400.jpg`
 
@@ -33,8 +35,8 @@ export default [
     // 'an equal command of technology and form • functional programming (oc)cultist • design tools @airbnbdesign',
     location: 'California',
     url: 'weirdwideweb.jon.gold',
-    // profile_image_url: localImageUrl
-    profile_image_url:
-      'file:///Users/djzhang/Desktop/upwork-projects/CURRENT/ADOBEXDTutorials/createASocialProject_lerna/packages/appExamples/sketchapp/profile-cards-primitives/assets/6frGyDyA_400x400.jpg'
+    profile_image_url: localImageUrl
+    // profile_image_url:
+    // 'file:///Users/djzhang/Desktop/upwork-projects/CURRENT/ADOBEXDTutorials/createASocialProject_lerna/packages/appExamples/sketchapp/profile-cards-primitives/assets/6frGyDyA_400x400.jpg'
   }
 ]
