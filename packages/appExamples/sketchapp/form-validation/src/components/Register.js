@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   register: {
     backgroundColor: colors.LightGrey,
     padding: spacing.Large,
-    boxSizing: 'border-box',
+    // boxSizing: 'border-box',
   },
   heading: {
     color: colors.Purple,
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     fontFamily,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: spacing.Medium,
-    width: 300,
+    // marginBottom: spacing.Medium,
+    // width: 300,
   },
 });
 
