@@ -1,3 +1,15 @@
+const nativeBaseAlias = {
+            '@appUtils': './packages/clientLibrary/NativeBase/lib/src/utils',
+            '@appBasic': './packages/clientLibrary/NativeBase/lib/src/basic',
+            '@appTheme': './packages/clientLibrary/NativeBase/lib/src/theme',
+            '@appVariables': './packages/clientLibrary/NativeBase/lib/src/variables'
+}
+
+const defaultAlias = {
+  // 'native-base-shoutem-theme/*': './packages/clientLibrary/NativeBase/native-base-shoutem-theme/src/*',
+  'native-base-shoutem-theme': './packages/clientLibrary/NativeBase/native-base-shoutem-theme/src'
+};
+
 module.exports = function (api) {
   if (!!api) {
     api.cache(true)
@@ -20,19 +32,14 @@ module.exports = function (api) {
     plugins: [
       ["@babel/plugin-proposal-class-properties", { "loose": true }],
       ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }],
-      [
-        "@babel/plugin-transform-runtime",
-        {
-
-        }
-      ],
+      ["@babel/plugin-transform-runtime",{}],
       [
         "module-resolver",
         {
           "cwd": "babelrc",
           "alias": {
-            '@appUtils': './src/utils',
-            '@appDevices': './src/devices',
+            ...defaultAlias,
+            ...nativeBaseAlias,
             '@appVendor': './src/vendor'
           },
           extensions: [

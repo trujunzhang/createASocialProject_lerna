@@ -1,12 +1,29 @@
 {
-  "extends": "../../../tsconfig",
+  "extends": "../../../../tsconfig",
   "compilerOptions": {
-    "baseUrl": "../../../",
+    "baseUrl": "../../../../",
     "paths": {
-      "@material-ui/core": ["packages/material-ui/src"],
-      "@material-ui/core/*": ["packages/material-ui/src/*"],
-      "@material-ui/styles": ["packages/material-ui-styles/src"],
-      "@material-ui/styles/*": ["packages/material-ui-styles/src/*"]
+      "@appUtils/*": [
+        "packages/clientLibrary/NativeBase/lib/src/utils/*"
+      ],
+      "@appBasic/*": [
+        "packages/clientLibrary/NativeBase/lib/src/basic/*"
+      ],
+      "@appTheme/*": [
+        "packages/clientLibrary/NativeBase/lib/src/theme/*"
+      ],
+      "@appVariables/*": [
+        "packages/clientLibrary/NativeBase/lib/src/variables/*"
+      ],
+      "@app/tools": [
+        "packages/globalLibrary/appTools"
+      ],
+      "native-base-shoutem-theme/*": [
+        "packages/clientLibrary/NativeBase/native-base-shoutem-theme/src/*"
+      ],
+      "native-base-shoutem-theme": [
+        "packages/clientLibrary/NativeBase/native-base-shoutem-theme/src"
+      ]
     }
   }
 }

@@ -89,7 +89,12 @@
       },
      "workspaces": [
     "packages/globalLibrary/appTools/*",
-    "packages/universalLibrary/react-primitives"
+    "packages/universalLibrary/react-primitives",
+    "packages/universalLibrary/react-sketch-vector-icons",
+    "packages/clientLibrary/NativeBase/native-base-shoutem-theme",
+    "packages/clientLibrary/NativeBase/react-native-easy-grid",
+    "packages/clientLibrary/NativeBase/lib",
+    "packages/clientLibrary/NativeBase/demo-NativeBase-SharedComps"
   ]
 
 }

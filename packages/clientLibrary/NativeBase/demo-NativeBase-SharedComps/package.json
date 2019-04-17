@@ -17,18 +17,13 @@
         "build:reset": "rm -rf dist",
         "build:clean": "yarn build:reset",
         "build:types": "rm -rf dist/__types__ && tsc --emitDeclarationOnly -p tsconfig.lib.json",
-        "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
+        "build:js": "babel  --config-file ../../../../babel.config.js   src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
         "build:all": "yarn build:types && yarn build:js",
         "build-lib": "yarn build:clean && yarn build:all",
         "postinstall.pending": "yarn build-lib",
         "build.current.pending": "yarn build:js"
     },
     "dependencies": {
-        "react-primitives": "*",
-        "react-native-easy-grid": "*",
-        "@app/types": "*",
-        "@app/tools": "*",
-        "@app/native-base": "*",
         "@types/react-native": "0.57.27",
         "@types/react": "16.4.8",
         "@types/react-dom": "16.0.11",
@@ -45,7 +40,6 @@
         "react-native-web": "*"
     },
     "devDependencies": {
-        "@app/mocks": "*",
         "react-sketchapp": "2.0.0",
         "@types/node": "11.10.4",
         "@babel/plugin-proposal-decorators": "7.4.0",

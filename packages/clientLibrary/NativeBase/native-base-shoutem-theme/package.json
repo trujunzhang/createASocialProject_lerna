@@ -2,7 +2,7 @@
     "name": "native-base-shoutem-theme",
     "version": "0.2.2",
     "license": "MIT",
-    "main": "dist/index.js",
+    "main": "./src/index.ts",
     "types": "dist/__types__/index.d.ts",
     "scripts": {
         "depenence.update": "ncu -u",
@@ -16,15 +16,13 @@
         "build:reset": "rm -rf dist",
         "build:clean": "yarn build:reset",
         "build:types": "rm -rf dist/__types__ && tsc --emitDeclarationOnly -p tsconfig.lib.json",
-        "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
+        "build:js": "babel --config-file ../../../../babel.config.js src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
         "build:all": "yarn build:types && yarn build:js",
         "build-lib": "yarn build:clean && yarn build:all",
         "postinstall.pending": "yarn build-lib",
         "build.current.pending": "yarn build:js"
     },
     "dependencies": {
-        "@app/types": "*",
-        "@app/tools": "*",
         "@types/hoist-non-react-statics": "3.0.1",
         "hoist-non-react-statics": "3.2.1",
         "@types/react": "16.4.8",

@@ -5,7 +5,7 @@
     "description": "Essential cross-platform UI components for React Native",
     "license": "Apache-2.0",
     "private": false,
-    "main": "dist/index.js",
+    "main": "./src/index.ts",
     "types": "dist/__types__/index.d.ts",
     "scripts": {
         "depenence.update": "ncu -u",
@@ -17,16 +17,13 @@
         "build:reset": "rm -rf dist",
         "build:clean": "yarn build:reset",
         "build:types": "rm -rf dist/__types__ && tsc --emitDeclarationOnly -p tsconfig.lib.json",
-        "build:js": "babel  --config-file ../../../babel.config.js  src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
+        "build:js": "babel  --config-file ../../../../babel.config.js  src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
         "build:all": "yarn build:types && yarn build:js",
         "build-lib": "yarn build:clean && yarn build:all",
-        "postinstall": "yarn build-lib",
+        "postinstall.pending": "yarn build-lib",
         "build.current.pending": "yarn build-lib"
     },
     "dependencies": {
-        "react-primitives": "*",
-        "native-base-shoutem-theme": "*",
-        "@app/tools": "*",
         "create-react-class": "15.6.3",
         "@types/prop-types": "15.5.8",
         "prop-types": "15.6.2",
