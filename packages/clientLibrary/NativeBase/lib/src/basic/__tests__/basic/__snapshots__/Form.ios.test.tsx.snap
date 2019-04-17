@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Disabled Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Error Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Fixed Label Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Floating Label Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Icon Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Inline Label Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Placeholder Label Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Regular Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Rounded Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Stacked Label Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Success Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders Textarea Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderBottomColor": "#cccccc",
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": 1,
+        "borderLeftColor": "#cccccc",
+        "borderLeftStyle": "solid",
+        "borderLeftWidth": 1,
+        "borderRightColor": "#cccccc",
+        "borderRightStyle": "solid",
+        "borderRightWidth": 1,
+        "borderTopColor": "#cccccc",
+        "borderTopStyle": "solid",
+        "borderTopWidth": 1,
+        "boxSizing": "border-box",
+        "fontFamily": "Helvetica",
+        "fontSize": 16,
+        "lineHeight": 16,
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "width": 300,
+      }
+    }
+  >
+    <text />
+  </view>
+</view>
+`;
+
+exports[`renders Underline Input 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;

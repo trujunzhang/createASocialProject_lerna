@@ -1,44 +1,36 @@
 import * as React from 'react'
-
 import * as PropTypes from 'prop-types'
-// import createReactClass from "create-react-class";
+import createReactClass from 'create-react-class'
 import { LodashUtils as _ } from '@app/tools'
-import { connectStyle, StyleProvider } from '@app/native-base-shoutem-theme'
-import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
-import { platformVariables as variable } from '@app/native-base-variables'
-import { TabHeading, Text, TabContainer } from './../../index'
-import { ViewProps, ViewStyle, View } from 'react-primitives'
+import { connectStyle, StyleProvider } from 'native-base-shoutem-theme'
+import { mapPropsToStyleNames } from '@app/tools'
+import { IThemeVariables } from '@app/tools' // typings
+import { platformVariables as variable } from '@appVariables/theme/variables/platform' // variables // [variable]
 
-const Button = require('./Button')
+import { TabHeading } from '../TabHeading'
+import { Text } from '../Text'
+import { TabContainer } from '../TabContainer'
 
-export interface IDefaultTabBarProps extends ViewProps {
-  goToPage?: Function
-  activeTab?: number
-  tabs?: Array<any> | any
-  backgroundColor?: string
-  activeTextColor?: string
-  inactiveTextColor?: string
-  scrollOffset?: number
-  style?: ViewStyle
-  tabStyle?: ViewStyle | any
-  tabsContainerStyle?: ViewStyle | any
-  renderTab?: Function
-  underlineStyle?: ViewStyle
-  onScroll?: Function
+import { StyleSheet, View, Animated, Platform } from 'react-primitives'
+import { Button } from '@appBasic/Button'
 
-  tabContainerStyle?: any
-  containerWidth?: any
-  scrollValue?: any
-  activeTabStyle?: any
-  textStyle?: any
-  activeTextStyle?: any
-  tabHeaderStyle?: any
-}
-
-class DefaultTabBar extends React.Component<IDefaultTabBarProps, any> {
-  static contextTypes = {
+const DefaultTabBar = createReactClass({
+  propTypes: {
+    // goToPage: PropTypes.func,
+    // activeTab: PropTypes.number,
+    // tabs: PropTypes.array,
+    // backgroundColor: PropTypes.string,
+    // activeTextColor: PropTypes.string,
+    // inactiveTextColor: PropTypes.string,
+    // tabStyle: ViewPropTypes.style,
+    // renderTab: PropTypes.func,
+    // underlineStyle: ViewPropTypes.style,
+    // tabContainerStyle: ViewPropTypes.style
+  },
+  contextTypes: {
     theme: PropTypes.object
-  }
+  },
+
   getDefaultProps() {
     return {
       activeTextColor: variable.topTabBarActiveTextColor,
@@ -46,9 +38,9 @@ class DefaultTabBar extends React.Component<IDefaultTabBarProps, any> {
       backgroundColor: null,
       tabFontSize: variable.tabFontSize
     }
-  }
+  },
 
-  renderTabOption(name, page) {}
+  renderTabOption(name, page) {},
 
   renderTab(
     name,
@@ -86,10 +78,10 @@ class DefaultTabBar extends React.Component<IDefaultTabBarProps, any> {
         </Button>
       )
     }
-  }
+  },
 
   render() {
-    const variables = this.context.theme
+    const variables: IThemeVariables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     const platformStyle = variables.platformStyle
@@ -129,28 +121,11 @@ class DefaultTabBar extends React.Component<IDefaultTabBarProps, any> {
             variables.tabFontSize
           )
         })}
-        <View style={[tabUnderlineStyle, { left }, this.props.underlineStyle] as any} />
+        <Animated.View style={[tabUnderlineStyle, { left }, this.props.underlineStyle]} />
       </TabContainer>
     )
   }
-}
-
-// DefaultTabBar.propTypes = {
-//   goToPage: PropTypes.func,
-//   activeTab: PropTypes.number,
-//   tabs: PropTypes.array,
-//   backgroundColor: PropTypes.string,
-//   activeTextColor: PropTypes.string,
-//   inactiveTextColor: PropTypes.string,
-//   tabStyle: ViewPropTypes.style,
-//   renderTab: PropTypes.func,
-//   underlineStyle: ViewPropTypes.style,
-//   tabContainerStyle: ViewPropTypes.style
-// }
-
-// DefaultTabBar.contextTypes = {
-// theme: PropTypes.object
-// }
+})
 
 // module.exports = DefaultTabBar;
 const StyledTab = connectStyle('NativeBase.DefaultTabBar', {}, mapPropsToStyleNames)(DefaultTabBar)

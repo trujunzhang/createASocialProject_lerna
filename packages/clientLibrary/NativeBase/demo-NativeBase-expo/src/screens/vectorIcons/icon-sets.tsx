@@ -16,34 +16,34 @@ import {
   Zocial
 } from '@expo/vector-icons'
 
-import {
-  AntDGlyphs,
-  EntypoGlyphs,
-  EvilIconsGlyphs,
-  FeatherGlyphs,
-  FontAwesomeGlyphs,
-  // FontAwesome5Glyphs,
-  FoundationGlyphs,
-  IoniconsGlyphs,
-  MaterialIconsGlyphs,
-  MaterialCommunityIconsGlyphs,
-  OcticonsGlyphs,
-  ZocialGlyphs
-} from './vectorIcons'
+// import {
+//   AntDGlyphs,
+//   EntypoGlyphs,
+//   EvilIconsGlyphs,
+//   FeatherGlyphs,
+//   FontAwesomeGlyphs,
+//   // FontAwesome5Glyphs,
+//   FoundationGlyphs,
+//   IoniconsGlyphs,
+//   MaterialIconsGlyphs,
+//   MaterialCommunityIconsGlyphs,
+//   OcticonsGlyphs,
+//   ZocialGlyphs
+// } from './vectorIcons'
 
 const GLYPH_MAPS = {
-  AntDesign: AntDGlyphs,
-  Entypo: EntypoGlyphs,
-  EvilIcons: EvilIconsGlyphs,
-  Feather: FeatherGlyphs,
-  FontAwesome: FontAwesomeGlyphs,
-  // FontAwesome5: FontAwesome5Glyphs,
-  Foundation: FoundationGlyphs,
-  Ionicons: IoniconsGlyphs,
-  MaterialIcons: MaterialIconsGlyphs,
-  MaterialCommunityIcons: MaterialCommunityIconsGlyphs,
-  Octicons: OcticonsGlyphs,
-  Zocial: ZocialGlyphs
+  // AntDesign: AntDGlyphs,
+  // Entypo: EntypoGlyphs,
+  // EvilIcons: EvilIconsGlyphs,
+  // Feather: FeatherGlyphs,
+  // FontAwesome: FontAwesomeGlyphs,
+  // // FontAwesome5: FontAwesome5Glyphs,
+  // Foundation: FoundationGlyphs,
+  // Ionicons: IoniconsGlyphs,
+  // MaterialIcons: MaterialIconsGlyphs,
+  // MaterialCommunityIcons: MaterialCommunityIconsGlyphs,
+  // Octicons: OcticonsGlyphs,
+  // Zocial: ZocialGlyphs
 }
 
 const ICON_SETS = {
@@ -67,13 +67,13 @@ const ICON_SETS = {
 const groupGlyphNames = (glyphMap: any) =>
   Object.values(groupBy((name) => glyphMap[name])(Object.keys(glyphMap)))
 
-const transformIconSets = pipe(
-  toPairs,
-  map(([name, component]) => ({
-    name,
-    component,
-    glyphNames: groupGlyphNames(GLYPH_MAPS[name])
-  }))
-)
+// const transformIconSets = pipe(
+//   toPairs,
+//   map(([name, component]) => ({
+//     name,
+//     component,
+//     glyphNames: groupGlyphNames(GLYPH_MAPS[name])
+//   }))
+// )
 
-export default transformIconSets(ICON_SETS)
+// export default transformIconSets(ICON_SETS)

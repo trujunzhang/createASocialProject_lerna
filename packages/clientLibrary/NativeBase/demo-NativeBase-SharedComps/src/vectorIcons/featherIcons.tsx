@@ -10,9 +10,9 @@ import {
   Left,
   Body,
   Right,
-  ListItem,
-  IconVectorTypeFeather
+  ListItem
 } from '@app/native-base'
+import { IconVectorTypeFeather } from '@app/tools'
 import styles from './styles'
 
 export class FeatherIcons extends React.Component<any, any> {

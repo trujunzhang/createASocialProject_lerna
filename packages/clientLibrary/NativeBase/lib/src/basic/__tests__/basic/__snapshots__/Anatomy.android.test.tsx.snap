@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders anatomy 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-menu
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      />
+    </view>
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Content goes here
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Footer
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;

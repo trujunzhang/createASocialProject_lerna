@@ -1,14 +1,22 @@
-export * from './md5Utils'
-export * from './momentUtils'
-export * from './underscoreUtils'
-export * from './slugifyUtils'
-export * from './queryStringUtils'
-export * from './lodashUtils'
-export * from './axiosUtils'
-export * from './routeParserUtils'
-export * from './numeralUtils'
-export * from './colorUtils'
-export * from './upperCaseStringUtils'
+export * from './i18'
+export * from './relativeTime'
+export * from './utils'
 
 // Vendor
 export * from './vendor'
+
+// View's Utils
+export * from './viewUtils'
+
+// Web's Utils
+export * from './webUtils'
+
+/**
+ *
+ * Global cache for vectorIcons, KeyboardAwareScrollView.
+ *
+ */
+export * from './global'
+
+// Devices
+export * from './devices'

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders searchbar 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Search
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;

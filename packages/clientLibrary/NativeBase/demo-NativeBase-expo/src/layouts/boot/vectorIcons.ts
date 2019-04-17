@@ -1,21 +1,29 @@
-import {
-  AntDesign,
-  Entypo,
-  EvilIcons,
-  Feather,
-  FontAwesome,
-  // FontAwesome5,
-  Foundation,
-  Ionicons,
-  MaterialIcons,
-  MaterialCommunityIcons,
-  Octicons,
-  SimpleLineIcons,
-  Zocial
-} from '@expo/vector-icons'
+import * as ExpoVectorIcons from '@expo/vector-icons'
 
-import { IVectorIcons } from '@app/native-base-variables'
-export const vectorIcons: IVectorIcons = {
+const {
+  AntDesign,
+  Entypo,
+  EvilIcons,
+  Feather,
+  FontAwesome,
+  // FontAwesome5,
+  Foundation,
+  Ionicons,
+  MaterialIcons,
+  MaterialCommunityIcons,
+  Octicons,
+  SimpleLineIcons,
+  Zocial
+} = ExpoVectorIcons
+
+import {
+  setCachDict,
+  CACHE_VECTOR_ICONS,
+  VectorIconsDictWithNull,
+  IVectorIconsDict
+} from '@app/tools'
+
+const vectorIcons: IVectorIconsDict = {
   AntDesign,
   Entypo,
   EvilIcons,
@@ -29,4 +37,8 @@ export const vectorIcons: IVectorIcons = {
   Octicons,
   SimpleLineIcons,
   Zocial
+}
+
+export const setVectorIconsCachDict = () => {
+  setCachDict(CACHE_VECTOR_ICONS, vectorIcons)
 }

@@ -38,7 +38,7 @@ import {
   List,
   ListItem
 } from '@app/native-base'
-import ICON_SETS from './icon-sets'
+// import ICON_SETS from './icon-sets'
 
 import { renderPostActionButton } from './renderPostActionButton'
 
@@ -150,7 +150,7 @@ const renderStyling = ({ item }) => (
 export default class IconSetsList extends React.PureComponent<any, any> {
   state = {
     sections: [
-      { title: 'ICON SETS', data: ICON_SETS },
+      // { title: 'ICON SETS', data: ICON_SETS },
       { title: 'BUTTONS', data: [{}], renderItem: renderButton }
       // { title: 'INLINE', data: INLINE, renderItem: renderInline },
       // { title: 'STYLING', data: STYLING, renderItem: renderStyling },

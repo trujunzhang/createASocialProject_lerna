@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Header and Content Style Accordion 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+</view>
+`;
+
+exports[`renders Icon and Expanded Icon Accordion 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+</view>
+`;
+
+exports[`renders Icon and Expanded Icon Style Accordion 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+</view>
+`;
+
+exports[`renders Regular Accordion 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+</view>
+`;

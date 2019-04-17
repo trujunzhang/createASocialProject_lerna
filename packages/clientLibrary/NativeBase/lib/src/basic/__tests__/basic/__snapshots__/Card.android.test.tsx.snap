@@ -1,0 +1,974 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Card Header and Footer 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            NativeBase
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              NativeBase is a free and open source framework that enable developers to build high-quality mobile apps using React Native iOS and Android apps with a fusion of ES6.
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              NativeBase builds a layer on top of React Native that provides you with basic set of components for mobile application development.
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Get on the mobile fast track with NativeBase, the fastest-growing platform and tool set for iOS and Android development.
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            GeekyAnts
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Card Image 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <image
+            name="Image"
+            resizeMode="Fill"
+            source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+            style={Object {}}
+          />
+          <view
+            name="body"
+            style={Object {}}
+          >
+            <view
+              name="View"
+              style={Object {}}
+            >
+              <text
+                style={Object {}}
+              >
+                NativeBase
+              </text>
+            </view>
+            <view
+              name="View"
+              style={Object {}}
+            >
+              <text
+                style={Object {}}
+              >
+                GeekyAnts
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <image
+          name="Image"
+          resizeMode="Fill"
+          source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+          style={
+            Object {
+              "flex": 1,
+              "height": 200,
+              "resizeMode": "cover",
+            }
+          }
+        />
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "paddingBottom": 0,
+            "paddingTop": 0,
+          }
+        }
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="TouchableOpacity: "
+          />
+        </view>
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="TouchableOpacity: "
+          />
+        </view>
+        <view
+          name="right"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              11h ago
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Card List 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Social Applications
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              logo-googleplus
+            </text>
+          </view>
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Google Plus
+            </text>
+          </view>
+        </view>
+        <view
+          name="right"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-forward
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              logo-facebook
+            </text>
+          </view>
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              facebook
+            </text>
+          </view>
+        </view>
+        <view
+          name="right"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-forward
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              logo-twitter
+            </text>
+          </view>
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Twitter
+            </text>
+          </view>
+        </view>
+        <view
+          name="right"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-forward
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              logo-reddit
+            </text>
+          </view>
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Reddit
+            </text>
+          </view>
+        </view>
+        <view
+          name="right"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-forward
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              logo-linkedin
+            </text>
+          </view>
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              LinkedIn
+            </text>
+          </view>
+        </view>
+        <view
+          name="right"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-forward
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              logo-youtube
+            </text>
+          </view>
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              YouTube
+            </text>
+          </view>
+        </view>
+        <view
+          name="right"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-forward
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Card Showcase 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <image
+            name="Image"
+            resizeMode="Fill"
+            source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+            style={Object {}}
+          />
+          <view
+            name="body"
+            style={Object {}}
+          >
+            <view
+              name="View"
+              style={Object {}}
+            >
+              <text
+                style={Object {}}
+              >
+                NativeBase
+              </text>
+            </view>
+            <view
+              name="View"
+              style={Object {}}
+            >
+              <text
+                style={Object {}}
+              >
+                April 15, 2016
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <image
+            name="Image"
+            resizeMode="Fill"
+            source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": 150,
+                "marginBottom": 5,
+                "marginTop": 5,
+                "resizeMode": "cover",
+                "width": 350.8474576271187,
+              }
+            }
+          />
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              NativeBase is a free and source framework that enable developers to build high-quality mobile apps using React Native iOS and Android apps with a fusion of ES6. NativeBase builds a layer on top of React Native that provides you with basic set of components for mobile application development.
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "paddingBottom": 0,
+            "paddingTop": 0,
+          }
+        }
+      >
+        <view
+          name="left"
+          style={Object {}}
+        >
+          <view
+            name="TouchableOpacity: "
+          />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders basic Card 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              This is just a basic card with some text to boot.
+            </text>
+          </view>
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Like it? Keep Scrolling...
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders bordered CardItem 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            NativeBase
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              NativeBase is a free and open source framework that enable developers to build high-quality mobile apps using React Native iOS and Android apps with a fusion of ES6.
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              NativeBase builds a layer on top of React Native that provides you with basic set of components for mobile application development.
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Get on the mobile fast track with NativeBase, the fastest-growing platform and tool set for iOS and Android development.
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            GeekyAnts
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders button CardItem 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            NativeBase
+          </text>
+        </view>
+      </view>
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            GeekyAnts
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders transparent Card 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <view
+          name="body"
+          style={Object {}}
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              This is just a transparent card with some text to boot.
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;

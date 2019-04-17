@@ -1,9 +1,11 @@
 import * as React from 'react'
-import { TouchableOpacity } from 'react-primitives'
+// const React = require('react')
+// const ReactNative = require('react-native')
 
-const Button = (props) => {
+import { TouchableOpacity, View } from 'react-primitives'
+export const Button = (props) => {
   return <TouchableOpacity {...props}>{props.children}</TouchableOpacity>
 }
 
-module.exports = Button
+// module.exports = Button;
 //export default Button;

@@ -8,9 +8,9 @@ Below you'll find information about performing common tasks. The most recent ver
 * [Available Scripts](#available-scripts)
   * [npm start](#npm-start)
   * [npm test](#npm-test)
-  * [npm run ios](#npm-run-ios)
-  * [npm run android](#npm-run-android)
-  * [npm run eject](#npm-run-eject)
+  * [yarn ios](#npm-run-ios)
+  * [yarn android](#npm-run-android)
+  * [yarn eject](#npm-run-eject)
 * [Writing and Running Tests](#writing-and-running-tests)
 * [Environment Variables](#environment-variables)
   * [Configuring Packager IP Address](#configuring-packager-ip-address)
@@ -57,11 +57,11 @@ yarn start --reset-cache
 
 Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
 
-#### `npm run ios`
+#### `yarn ios`
 
 Like `npm start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.
 
-#### `npm run android`
+#### `yarn android`
 
 Like `npm start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). We also recommend installing Genymotion as your Android emulator. Once you've finished setting up the native build environment, there are two options for making the right copy of `adb` available to Create React Native App:
 
@@ -76,7 +76,7 @@ Like `npm start`, but also attempts to open your app on a connected Android devi
 2. Add the Genymotion tools directory to your path (instructions for [Mac](http://osxdaily.com/2014/08/14/add-new-path-to-path-command-line/), [Linux](http://www.computerhope.com/issues/ch001647.htm), and [Windows](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
 3. Make sure that you can run adb from your terminal.
 
-#### `npm run eject`
+#### `yarn eject`
 
 This will start the process of "ejecting" from Create React Native App's build scripts. You'll be asked a couple of questions about how you'd like to build your project.
 
@@ -136,7 +136,7 @@ To add a local dependency to the correct Flow version to a Create React Native A
 2. Run `npm install --save-dev flow-bin@x.y.z` (or `yarn add --dev flow-bin@x.y.z`), where `x.y.z` is the .flowconfig version number.
 3. Add `"flow": "flow"` to the `scripts` section of your `package.json`.
 
-Now you can run `npm run flow` (or `yarn flow`) to check the files for type errors.
+Now you can run `yarn flow` (or `yarn flow`) to check the files for type errors.
 You can optionally use a [plugin for your IDE or editor](https://flow.org/en/docs/editors/) for a better integrated experience.
 
 To learn more about Flow, check out [its documentation](https://flow.org/).
@@ -164,7 +164,7 @@ You can also use a service like [Expo's standalone builds](https://docs.expo.io/
 
 If you want to build and deploy your app yourself, you'll need to eject from CRNA and use Xcode and Android Studio.
 
-This is usually as simple as running `npm run eject` in your project, which will walk you through the process. Make sure to install `react-native-cli` and follow the [native code getting started guide for React Native](https://facebook.github.io/react-native/docs/getting-started.html).
+This is usually as simple as running `yarn eject` in your project, which will walk you through the process. Make sure to install `react-native-cli` and follow the [native code getting started guide for React Native](https://facebook.github.io/react-native/docs/getting-started.html).
 
 #### Should I Use ExpoKit?
 
@@ -200,7 +200,7 @@ If you're not able to load the `http` URL in your phone's web browser, try using
 
 ### iOS Simulator won't open
 
-If you're on a Mac, there are a few errors that users sometimes see when attempting to `npm run ios`:
+If you're on a Mac, there are a few errors that users sometimes see when attempting to `yarn ios`:
 
 * "non-zero exit code: 107"
 * "You may need to install Xcode" but it is already installed

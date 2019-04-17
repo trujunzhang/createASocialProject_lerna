@@ -1,4 +1,9 @@
 import * as React from 'react'
+
+import { setVectorIconsCachDict } from './src/layouts/boot/vectorIcons'
+
+setVectorIconsCachDict()
+
 import { View } from 'react-native'
 import { AppLoading, Asset, Permissions } from 'expo'
 import * as Font from 'expo-font'
@@ -9,7 +14,7 @@ import { Root } from '@app/native-base'
 
 import { AppContainer } from './src/root/rootNavigator'
 
-import { ProximaFontFamily, RobotoFontFamily } from '@app/native-base-variables'
+import { ProximaFontFamily, RobotoFontFamily } from '@app/native-base' // variables
 
 const currentFontFamily = RobotoFontFamily.family
 // const currentFontFamily = ProximaFontFamily .family
@@ -32,8 +37,8 @@ export default class App extends React.Component<{}, IAppState> {
 
   get fontObject() {
     const fontSource = {
-      FontAwesome: require('@expo/vector-icons/fonts/FontAwesome.ttf'),
-      MaterialIcons: require('@expo/vector-icons/fonts/MaterialIcons.ttf')
+      // FontAwesome: require('@expo/vector-icons/src/vendor/Fonts/FontAwesome.ttf'),
+      // MaterialIcons: require('@expo/vector-icons/src/vendor/Fonts/MaterialIcons.ttf')
     }
     fontSource[
       ProximaFontFamily.fontFace.medium

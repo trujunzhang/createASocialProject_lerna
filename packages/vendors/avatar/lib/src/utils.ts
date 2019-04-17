@@ -1,11 +1,17 @@
-export function fetch(url: string, successCb: (data: any) => any, errorCb: (status: any) => any) {
+export function fetchJson(
+  url: string,
+  successCb: (data: any) => any,
+  errorCb: (status: any) => any
+) {
   const request = new XMLHttpRequest()
   request.onreadystatechange = () => {
     if (request.readyState === 4) {
       if (request.status === 200) {
         const data = JSON.parse(request.responseText)
+        // console.log('fetch json:', JSON.stringify(data))
         successCb(data)
       } else {
+        // console.log('fetch json(error):', request.status)
         errorCb(request.status)
       }
     }

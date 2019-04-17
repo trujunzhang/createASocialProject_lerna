@@ -1,4 +1,4 @@
-import { fetch } from '../utils'
+import { fetchJson } from '../utils'
 
 export interface IGoogleBaseSource {
   googleId?: string
@@ -27,7 +27,7 @@ export class GoogleSource {
     // return
     // }
 
-    fetch(
+    fetchJson(
       url,
       (data: any) => {
         const src = data.entry.gphoto$thumbnail.$t

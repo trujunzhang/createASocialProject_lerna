@@ -1,35 +1,35 @@
 import * as React from 'react'
-
 import * as PropTypes from 'prop-types'
-import { ViewStyle } from 'react-primitives'
-import { View, ViewProps, StyleSheet } from 'react-primitives'
-import { connectStyle } from '@app/native-base-shoutem-theme'
-import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
-import { isIphoneX } from '../../utils/base'
-import { platformVariables as variable } from '@app/native-base-variables'
+import { View, StatusBar, StyleSheet } from 'react-primitives'
+import { connectStyle } from 'native-base-shoutem-theme'
+import { mapPropsToStyleNames } from '@app/tools'
+import { IThemeVariables } from '@app/tools' // typings
+import { platformVariables as variable } from '@appVariables/theme/variables/platform' // variables // [variable]
 
-import { HeaderStatusBar } from '../HeaderStatusBar'
 import { LodashUtils as _ } from '@app/tools'
+import { isIphoneX } from 'react-primitives'
 
-export interface IHeaderProps extends ViewProps {
-  style?: ViewStyle | Array<ViewStyle> | any
-  searchBar: boolean
+import { HeaderProps } from './Header'
+
+export interface HeaderDefaultProps {
   noStatusBar: boolean
-  rounded: boolean
 }
-class Header extends React.Component<IHeaderProps, any> {
+
+class Header extends React.Component<HeaderProps, any> {
   private _root: any
+  public static defaultProps: Partial<HeaderDefaultProps> = {
+    noStatusBar: false
+  }
+
   static contextTypes = {
     theme: PropTypes.object
   }
-
   constructor(props) {
     super(props)
     this.state = {
       orientation: 'portrait'
     }
   }
-
   layoutChange(val) {
     let maxComp = Math.max(variable.deviceWidth, variable.deviceHeight)
     if (val.width >= maxComp) this.setState({ orientation: 'landscape' })
@@ -37,7 +37,6 @@ class Header extends React.Component<IHeaderProps, any> {
       this.setState({ orientation: 'portrait' })
     }
   }
-
   calculateHeight(mode, inSet) {
     let inset: any = null
     if (inSet != undefined) {
@@ -47,19 +46,20 @@ class Header extends React.Component<IHeaderProps, any> {
     }
     const InsetValues = mode === 'portrait' ? inset.portrait : inset.landscape
     let oldHeight = null
-    if (this.props.style.height != undefined) {
-      oldHeight = this.props.style.height
-    } else if (this.props.style[1]) {
-      oldHeight = this.props.style[1].height
-        ? this.props.style[1].height
-        : this.props.style[0].height
-    } else {
-      oldHeight = this.props.style[0].height
+    if (!!this.props.style) {
+      if ((this.props.style as any).height != undefined) {
+        oldHeight = (this.props.style as any).height
+      } else if (this.props.style[1]) {
+        oldHeight = this.props.style[1].height
+          ? this.props.style[1].height
+          : this.props.style[0].height
+      } else if (this.props.style[0]) {
+        oldHeight = this.props.style[0].height
+      }
     }
     let height = oldHeight + InsetValues.topInset
     return height
   }
-
   calculatePadder(mode, inSet) {
     let inset: any = null
     if (inSet != undefined) {
@@ -69,7 +69,7 @@ class Header extends React.Component<IHeaderProps, any> {
     }
     const InsetValues = mode === 'portrait' ? inset.portrait : inset.landscape
     let topPadder = null
-    let style: any = StyleSheet.flatten(this.props.style)
+    let style: any = StyleSheet.flatten(this.props.style as any)
     if (style.padding !== undefined || style.paddingTop !== undefined) {
       topPadder = (style.paddingTop ? style.paddingTop : style.padding) + InsetValues.topInset
     } else {
@@ -78,61 +78,66 @@ class Header extends React.Component<IHeaderProps, any> {
     return topPadder
   }
 
-  shouldShowStatusBar() {
-    const { noStatusBar } = this.props
-    if (noStatusBar === undefined) {
-      return true
-    }
-    if (noStatusBar === true) {
-      return false
-    }
-    return true
-  }
-
   renderStatusBar() {
-    if (this.shouldShowStatusBar() === false) {
+    const { noStatusBar } = this.props as HeaderDefaultProps
+    if (noStatusBar) {
       return null
     }
-
-    return <HeaderStatusBar />
-  }
-
-  renderCommon() {
-    return <View name="common-header" ref={(c) => (this._root = c)} {...this.props} />
-  }
-
-  renderForIphoneX() {
-    const variables = this.context.theme
+    const variables: IThemeVariables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
+    const platformStyle = variables.platformStyle
     return (
-      <View
-        name="iphonx-header"
-        ref={(c) => (this._root = c)}
-        {...this.props}
-        style={[
-          this.props.style,
-          {
-            height: this.calculateHeight(this.state.orientation, variables.Inset),
-            paddingTop: this.calculatePadder(this.state.orientation, variables.Inset)
-          }
-        ]}
+      <StatusBar
+        name={'statusBar'}
+        backgroundColor={
+          this.props.androidStatusBarColor
+            ? (this.props.androidStatusBarColor as any)
+            : (variables.statusBarColor as any)
+        }
+        barStyle={
+          this.props.iosBarStyle
+            ? (this.props.iosBarStyle as any)
+            : platformStyle === 'material'
+            ? 'light-content'
+            : variables.iosStatusbar
+        }
+        translucent={this.props.transparent ? true : this.props.translucent}
       />
     )
   }
 
-  renderContent() {
-    if (isIphoneX()) {
-      return this.renderForIphoneX()
-    }
-    return this.renderCommon()
+  renderForIphoneX() {
+    const variables: IThemeVariables = this.context.theme
+      ? this.context.theme['@@shoutem.theme/themeStyle'].variables
+      : variable
+    return (
+      <View
+        name={'header-iosX'}
+        ref={(c) => (this._root = c)}
+        {...this.props}
+        style={
+          [
+            this.props.style,
+            {
+              height: this.calculateHeight(this.state.orientation, variables.Inset),
+              paddingTop: this.calculatePadder(this.state.orientation, variables.Inset)
+            }
+          ] as any
+        }
+      />
+    )
+  }
+
+  renderForNormal() {
+    return <View name={'header-other'} ref={(c) => (this._root = c)} {...this.props} />
   }
 
   render() {
     return (
-      <View name="header" onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
+      <View name={'header'} onLayout={(e) => this.layoutChange(e.nativeEvent.layout)}>
         {this.renderStatusBar()}
-        {this.renderContent()}
+        {isIphoneX() ? this.renderForIphoneX() : this.renderForNormal()}
       </View>
     )
   }
@@ -142,7 +147,6 @@ class Header extends React.Component<IHeaderProps, any> {
 //   ...ViewPropTypes,
 //   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
 //   searchBar: PropTypes.bool,
-//   noStatusBar: PropTypes.bool,
 //   rounded: PropTypes.bool
 // }
 

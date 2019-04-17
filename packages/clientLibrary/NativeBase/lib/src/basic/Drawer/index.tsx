@@ -1,57 +1,19 @@
 import * as React from 'react'
+// TODO:DJZHANG(NB)
+const RNDrawer: any = null
+// import RNDrawer from 'react-native-drawer'
 
-import { View, ScaledSize, ViewStyle } from 'react-primitives'
-// import RNDrawer from "react-native-drawer";
+import * as PropTypes from 'prop-types'
 
-/**
- * vendor react-native-drawer
- */
-export interface IDrawerStyles {
-  drawer?: ViewStyle | Array<ViewStyle>
-  main?: ViewStyle | Array<ViewStyle>
-  drawerOverlay?: ViewStyle | Array<ViewStyle>
-  mainOverlay?: ViewStyle | Array<ViewStyle>
-}
+import { DrawerProps } from './Drawer'
 
-export interface IDrawerProps {
-  acceptDoubleTap?: boolean
-  acceptPan?: boolean
-  acceptTap?: boolean
-  captureGestures?: boolean
-  children?: any
-  open?: boolean
-  closedDrawerOffset?: number
-  content?: any
-  deviceScreen?: ScaledSize
-  disabled?: boolean
-  initializeOpen?: boolean
-  negotiatePan?: boolean
-  onClose?: Function
-  onCloseStart?: Function
-  onOpen?: Function
-  onOpenStart?: Function
-  openDrawerOffset?: number
-  openDrawerThreshold?: number
-  panCloseMask?: number
-  panOpenMask?: number
-  panStartCompensation?: boolean
-  relativeDrag?: boolean
-  side?: 'left' | 'right'
-  styles?: IDrawerStyles
-  tapToClose?: boolean
-  tweenDuration?: number
-  tweenEasing?: string
-  tweenHandler?: Function
-  type?: 'overlay' | 'static' | 'displace'
-}
-
-export default class Drawer extends React.Component<IDrawerProps, any> {
+export default class Drawer extends React.Component<DrawerProps, any> {
+  private _root: any
   constructor(props) {
     super(props)
   }
   render() {
-    // return <RNDrawer ref={c => (this._root = c)} {...this.props} />;
-    return null
+    return <RNDrawer ref={(c) => (this._root = c)} {...this.props} />
   }
 }
 
@@ -71,7 +33,7 @@ export default class Drawer extends React.Component<IDrawerProps, any> {
     mainOverlay: {
       opacity: 0,
       backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      elevation: 8
+      elevation: 0
     }
   },
   tweenHandler: (ratio) => ({

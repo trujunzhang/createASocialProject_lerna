@@ -80,7 +80,7 @@ import {
   IconVectorTypeOcticons,
   IconVectorTypeSimpleLineIcons,
   IconVectorTypeZocial
-} from '@app/native-base'
+} from '@app/tools'
 
 interface IButtonItem {
   name: string

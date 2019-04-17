@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Typography 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Header One
+    </text>
+  </view>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Header Two
+    </text>
+  </view>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Header Three
+    </text>
+  </view>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Default
+    </text>
+  </view>
+</view>
+`;

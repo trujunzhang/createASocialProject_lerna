@@ -1,0 +1,905 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Header noLeft 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Cancel
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header noShadow 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header No Shadow
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-menu
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header span 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header Span
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      />
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with Custom background color 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={
+        Object {
+          "backgroundColor": "#dc4239",
+        }
+      }
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+              "color": "#FFF",
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Custom Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      />
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with Icon & Text Button 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="TouchableOpacity: "
+        />
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Cancel
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with Icon Button & Text Button 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Cancel
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with Icon Buttons 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-menu
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with Text Buttons 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              Cancel
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with Title and Subtitle 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Title
+          </text>
+        </view>
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Subtitle
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      />
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with multiple Icon Button 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-arrow-back
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-search
+            </text>
+          </view>
+        </view>
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-heart
+            </text>
+          </view>
+        </view>
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-more
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Header with only Title 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      />
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Header
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      />
+    </view>
+  </view>
+</view>
+`;

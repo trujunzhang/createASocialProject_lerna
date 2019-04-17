@@ -1,13 +1,12 @@
 module.exports = function (api) {
   if (!!api) {
-    api.cache(false)
+    api.cache(true)
   }
   return {
     presets: [
       [
         "@babel/preset-env",
         {
-          "useBuiltIns": "entry"
         }
       ],
       "@babel/preset-typescript"
@@ -18,10 +17,7 @@ module.exports = function (api) {
       [
         "@babel/plugin-transform-runtime",
         {
-          corejs: false,
-          helpers: true,
-          regenerator: true,
-          useESModules: false
+
         }
       ],
       [

@@ -1,22 +1,17 @@
 import * as React from 'react'
-import { View, TouchableOpacity, TouchableOpacityProps } from 'react-primitives'
+import { View, TouchableOpacity, StyleSheet } from 'react-primitives'
 import computeProps from '../Utils/computeProps'
 
-export interface IColProps extends TouchableOpacityProps {
-  style?: any
-  size?: number
-}
+import { IColProps } from './IComponents'
 
 export class Col extends React.Component<IColProps, any> {
   private _root: any
   prepareRootProps() {
+    var flattenedStyle: any = StyleSheet.flatten(this.props.style)
+
     var type = {
       flexDirection: 'column',
-      flex: this.props.size
-        ? this.props.size
-        : this.props.style && (this.props.style as any).width
-        ? 0
-        : 1
+      flex: this.props.size ? this.props.size : flattenedStyle && flattenedStyle.width ? 0 : 1
     }
 
     var defaultProps = {

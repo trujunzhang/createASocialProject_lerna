@@ -52,7 +52,7 @@ export class NHBadge extends React.Component<any, any> {
           <Badge primary style={styles.mb}>
             <Icon name="star" style={{ fontSize: 15, color: '#fff', lineHeight: 20 }} />
           </Badge>
-          <Badge style={{ backgroundColor: 'black' }} textStyle={{ color: 'white' }}>
+          <Badge style={{ backgroundColor: 'black' }} textStyle={{ color: 'white' } as any}>
             <Text>1866</Text>
           </Badge>
         </Content>

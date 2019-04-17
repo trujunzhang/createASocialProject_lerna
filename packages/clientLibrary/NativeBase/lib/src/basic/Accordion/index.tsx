@@ -1,25 +1,17 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import {
-  Animated,
-  TouchableWithoutFeedback,
-  FlatList,
-  ViewProps,
-  StyleSheet,
-  View,
-  ViewStyle
-} from 'react-primitives'
-import { Text } from '../Text'
-import { Icon } from '../Icon'
-import { platformVariables as variable } from '@app/native-base-variables'
+import { Animated, TouchableWithoutFeedback, FlatList, StyleSheet, View } from 'react-primitives'
+import { Text } from '@appBasic/Text'
+import { Icon } from '@appBasic/Icon'
 
-export interface IDefaultHeaderProps extends ViewProps {
-  headerStyle?: ViewStyle | Array<ViewStyle>
-  title: string
-}
+import { IThemeVariables } from '@app/tools' // typings
+
+import { platformVariables as variable } from '@appVariables/theme/variables/platform' // variables // [variable]
+
+import { AccordionProps } from './Accordion'
+
 class DefaultHeader extends React.Component<any, any> {
   render() {
-    const variables = this.context.theme
+    const variables: IThemeVariables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     return (
@@ -59,7 +51,7 @@ class DefaultHeader extends React.Component<any, any> {
 
 class DefaultContent extends React.Component<any, any> {
   render() {
-    const variables = this.context.theme
+    const variables: IThemeVariables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     return (
@@ -134,7 +126,7 @@ class AccordionItem extends React.Component<any, any> {
   }
 }
 
-export class Accordion extends React.Component<any, any> {
+export class Accordion extends React.Component<AccordionProps, any> {
   state = { selected: undefined }
   setSelected(index) {
     if (this.state.selected === index) {
@@ -149,7 +141,7 @@ export class Accordion extends React.Component<any, any> {
   }
 
   render() {
-    const variables = this.context.theme
+    const variables: IThemeVariables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     return (

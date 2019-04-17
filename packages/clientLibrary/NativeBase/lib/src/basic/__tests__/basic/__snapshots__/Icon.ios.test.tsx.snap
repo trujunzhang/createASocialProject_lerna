@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Icon and Icons with icon family 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          logo-apple
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Ionicons
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          ios-home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Entypo
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Feather
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          FontAwesome
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Foundation
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Material Icons
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Material Community Icons
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Octicons
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Zocial
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          dropbox
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Simple Line Icons
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          home
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Evil Icons
+        </text>
+      </view>
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          trophy
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+`;

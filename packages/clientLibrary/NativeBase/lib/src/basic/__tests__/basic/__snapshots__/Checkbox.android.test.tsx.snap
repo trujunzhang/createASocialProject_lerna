@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders checkbox 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Lunch Break
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Daily Stand Up
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;

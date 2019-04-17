@@ -10,9 +10,9 @@ import {
   Left,
   Right,
   Body,
-  Text,
-  IconVectorTypeIonicons
+  Text
 } from '@app/native-base'
+import { IconVectorTypeIonicons } from '@app/tools'
 
 const mb15 = {
   marginTop: 15,
@@ -64,23 +64,25 @@ export class NBDebugButton extends React.Component<any, any> {
     return (
       <Content padder>
         <View
-          name={'debug-button'}
-          style={[
-            {
-              flexDirection: 'row',
-              justifyContent: 'space-between'
-            },
-            {
-              backgroundColor: 'orange'
-            }
-          ]}>
+          style={
+            [
+              {
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+              },
+              {
+                backgroundColor: 'orange'
+              }
+            ] as any
+          }>
           <Button
             style={[
               {
-                backgroundColor: 'blue'
+                // backgroundColor: 'blue'
               }
             ]}
             iconLeft
+            success
             onPress={() => this.props.navigation.openDrawer()}>
             <Text>Hello World!</Text>
           </Button>

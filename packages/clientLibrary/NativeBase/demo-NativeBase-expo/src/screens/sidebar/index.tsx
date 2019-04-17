@@ -9,9 +9,10 @@ import {
   Container,
   Left,
   Right,
-  Badge,
-  IconVectorTypeIonicons
+  Badge
 } from '@app/native-base'
+import { IconVectorTypeIonicons } from '@app/tools'
+
 import styles from './style'
 
 const drawerCover = require('../../../assets/drawer-cover.png')

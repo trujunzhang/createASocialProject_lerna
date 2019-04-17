@@ -2,34 +2,21 @@ import * as React from 'react'
 import { StyleProvider } from '@app/native-base'
 import { View } from 'react-primitives'
 
-import { getThemeStyle } from '@app/nativebase-theme-components'
+import { getThemeStyle } from '@app/native-base'
 import { vectorIcons } from './vectorIcons'
 
 import {
-  IIconVectorVariables,
-  IKeyboardAwareScrollViewVariables,
   IThemeDefaultVariables,
-  themeVariablesWithIconVector,
-  generatorThemeVariablesForDemo,
+  IThemeVariables,
+  generatorForAppThemeVariables,
+  generatorForMaterialThemeVariables,
   ProximaFontFamily,
   RobotoFontFamily,
   AppVectorIcons
-} from '@app/native-base-variables'
+} from '@app/native-base' // variables
 
 const currentFontFamily = ProximaFontFamily
 // const currentFontFamily = RobotoFontFamily
-
-const iconVectorVariable: IIconVectorVariables = {
-  iconRenderComponents: () => {
-    return vectorIcons
-  }
-}
-
-const keyboardAwareScrollViewVariables: IKeyboardAwareScrollViewVariables = {
-  getKeyboardAwareScrollView: () => {
-    return View
-  }
-}
 
 const themeDefaultVariables: IThemeDefaultVariables = {
   iconFamily: AppVectorIcons.platformOS,
@@ -39,11 +26,7 @@ const themeDefaultVariables: IThemeDefaultVariables = {
   titleFontfamily: currentFontFamily.fontFace.medium
 }
 
-export const sketchAppVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
-  iconVectorVariable,
-  keyboardAwareScrollViewVariables,
-  themeDefaultVariables
-)
+export const sketchAppVariables: IThemeVariables = generatorForMaterialThemeVariables()
 
 const appStyles = getThemeStyle(sketchAppVariables)
 

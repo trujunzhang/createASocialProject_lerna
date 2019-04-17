@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Spinner 1`] = `
+<view
+  name="container"
+  style={Object {}}
+/>
+`;

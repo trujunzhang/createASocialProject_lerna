@@ -1,43 +1,15 @@
 import * as React from 'react'
-
 import * as PropTypes from 'prop-types'
-import { View, Animated, PanResponder, ViewProps, ViewStyle } from 'react-primitives'
+import { View, Animated, PanResponder } from 'react-primitives'
 import clamp from 'clamp'
-import { connectStyle } from '@app/native-base-shoutem-theme'
-import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
+import { connectStyle } from 'native-base-shoutem-theme'
+import { mapPropsToStyleNames } from '@app/tools'
 
-export interface IDeckSwiperProps extends ViewProps {
-  style?: ViewStyle | Array<ViewStyle>
-  /**
-   * Array<any>
-   */
-  dataSource?: Array<any> | any
-  /**
-   * Direction of iteration for elements
-   * Default: iterates in backward direction
-   */
-  onSwipeLeft?: any
-  /**
-   * Direction of iteration for elements
-   * Default: iterates in forward direction
-   */
-  onSwipeRight?: any
-  /**
-   * Takes a data entry from the data source and should return a renderable component to be rendered as the row.
-   */
-  renderItem?: any
-  renderEmpty?: any
-  renderTop?: any
-  renderBottom?: any
-
-  looping?: any
-  onSwiping?: any
-}
 const SWIPE_THRESHOLD = 120
 
-class DeckSwiper extends React.Component<IDeckSwiperProps, any> {
+class DeckSwiper extends React.Component<any, any> {
   private _root: any
-  private _panResponder: any
+  _panResponder: any
 
   constructor(props) {
     super(props)
@@ -338,13 +310,9 @@ class DeckSwiper extends React.Component<IDeckSwiperProps, any> {
 
 // DeckSwiper.propTypes = {
 //   ...ViewPropTypes,
-//   style: PropTypes.oneOfType([
-//     PropTypes.object,
-//     PropTypes.number,
-//     PropTypes.array
-//   ]),
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
 //   dataSource: PropTypes.array
-// };
+// }
 
 const StyledDeckSwiper = connectStyle('NativeBase.DeckSwiper', {}, mapPropsToStyleNames)(DeckSwiper)
 

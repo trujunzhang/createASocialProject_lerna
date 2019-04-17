@@ -3,51 +3,25 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 
 import { Platform } from 'react-primitives'
-import { connectStyle } from '@app/native-base-shoutem-theme'
+import { connectStyle } from 'native-base-shoutem-theme'
 
 import { IconNB } from '../IconNB'
-import { NBIcons as ic } from './NBIcons'
-import { platformVariables as variable } from '@app/native-base-variables'
+import { ic } from './NBIcons'
+import { IThemeVariables } from '@app/tools' // typings
+import { platformVariables as variable } from '@appVariables/theme/variables/platform' // variables // [variable]
+
 import { LodashUtils as _ } from '@app/tools'
 
-import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
+import { mapPropsToStyleNames } from '@app/tools'
 
-/**
- * see Widget Icon.js
- */
-export interface IIconProps {
-  name: string
-  iconSize?: number
-  iconColor?: string
-  type?: string
-  // | 'Entypo'
-  // | 'EvilIcons'
-  // | 'Feather'
-  // | 'FontAwesome'
-  // | 'Foundation'
-  // | 'Ionicons'
-  // | 'MaterialCommunityIcons'
-  // | 'MaterialIcons'
-  // | 'Octicons'
-  // | 'SimpleLineIcons'
-  // | 'Zocial'
-  // TODO position attribute of ReactNative.FlexStyle hasn't another position values without "absolute" and "relative"
-  style?: any
-  onPress?: (e?: any) => any
-  active?: boolean
-  ios?: string
-  android?: string
-}
-
-class Icon extends React.Component<IIconProps, any> {
-  private _root: any
-
+class Icon extends React.Component<any, any> {
   static contextTypes = {
     theme: PropTypes.object
   }
+  private _root: any
 
   getName() {
-    const variables = this.context.theme
+    const variables: IThemeVariables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable
     const platformStyle = variables.platformStyle
@@ -107,15 +81,15 @@ class Icon extends React.Component<IIconProps, any> {
   }
 }
 
-//Icon.propTypes = {
-//	...IconNB.propTypes,
-//	style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
-//	name: PropTypes.string,
-//	ios: PropTypes.string,
-//	android: PropTypes.string,
-//	active: PropTypes.bool,
-//	type: PropTypes.string,
-// };
+// Icon.propTypes = {
+//   ...IconNB.propTypes,
+//   style: PropTypes.oneOfType([PropTypes.object, PropTypes.number, PropTypes.array]),
+//   name: PropTypes.string,
+//   ios: PropTypes.string,
+//   android: PropTypes.string,
+//   active: PropTypes.bool,
+//   type: PropTypes.string
+// }
 
 const StyledIcon = connectStyle('NativeBase.Icon', {}, mapPropsToStyleNames)(Icon)
 

@@ -1,53 +1,34 @@
 import * as React from 'react'
-
 import * as PropTypes from 'prop-types'
-import { ViewStyle, View } from 'react-primitives'
-import { connectStyle } from '@app/native-base-shoutem-theme'
-import { Left } from '../Left'
-import { Right } from '../Right'
-import { Body } from '../Body'
-import { ListItem } from '../ListItem'
-import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
+import {
+  // Animated,
+  // PanResponder,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  View
+} from 'react-primitives'
+import { connectStyle } from 'native-base-shoutem-theme'
+import { Text } from '@appBasic/Text'
+import { Left } from '@appBasic/Left'
+import { Right } from '@appBasic/Right'
+import { Body } from '@appBasic/Body'
+import { ListItem } from '@appBasic/ListItem'
+import { mapPropsToStyleNames } from '@app/tools'
+
+import { SwipeRowProps, ISwipRowState } from './SwipeRow'
 
 const PREVIEW_OPEN_DELAY = 700
 const PREVIEW_CLOSE_DELAY = 300
 
-export interface ISwipeRowProps {
-  leftOpenValue?: number | any
-  rightOpenValue?: number | any
-  closeOnRowPress?: boolean
-  disableLeftSwipe?: boolean
-  disableRightSwipe?: boolean
-  recalculateHiddenLayout?: boolean
-  preview?: boolean
-  previewDuration?: number
-  directionalDistanceChangeThreshold?: number | any
-  swipeToOpenPercent?: number | any
-  stopLeftSwipe?: number
-  stopRightSwipe?: number
-  onRowOpen?: Function
-  onRowClose?: Function
-  left?: React.ReactElement<any>
-  // body?: React.ReactElement<any>
-  body?: any
-  right?: React.ReactElement<any>
-  style?: ViewStyle
-
-  // custom
-  swipeGestureBegan?: any
-  setScrollEnabled?: any
-  previewOpenValue?: any
-  friction?: any
-  tension?: any
-  onRowDidOpen?: any
-  onRowDidClose?: any
-  list?: any
-}
-class SwipeRow extends React.Component<ISwipeRowProps, any> {
+class SwipeRow extends React.Component<SwipeRowProps, ISwipRowState> {
   private _root: any
   private horizontalSwipeGestureBegan: any
+  private swipeInitialX: any
   private parentScrollEnabled: any
   private ranPreview: any
+  // private _translateX: any
+  // private _panResponder: any
 
   static defaultProps = {
     leftOpenValue: 0,
@@ -61,9 +42,10 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
     directionalDistanceChangeThreshold: 2,
     swipeToOpenPercent: 50
   }
-  constructor(props) {
+  constructor(props: SwipeRowProps) {
     super(props)
     this.horizontalSwipeGestureBegan = false
+    this.swipeInitialX = null
     this.parentScrollEnabled = true
     this.ranPreview = false
     this.state = {
@@ -75,8 +57,6 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
 
   componentWillMount() {}
 
-  getPreviewAnimation(toValue, delay) {}
-
   onContentLayout(e) {
     this.setState({
       dimensionsSet: !this.props.recalculateHiddenLayout,
@@ -86,16 +66,20 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
 
     if (this.props.preview && !this.ranPreview) {
       this.ranPreview = true
-      let previewOpenValue = this.props.previewOpenValue || this.props.rightOpenValue * 0.5
+      let previewOpenValue = this.props.previewOpenValue || (this.props.rightOpenValue || 0) * 0.5
     }
   }
 
   handleOnMoveShouldSetPanResponder(e, gs) {
     const { dx } = gs
-    return Math.abs(dx) > this.props.directionalDistanceChangeThreshold
+    return Math.abs(dx) > (this.props.directionalDistanceChangeThreshold || 0)
   }
 
-  handlePanResponderMove(e, gestureState) {}
+  handlePanResponderMove(e, gestureState) {
+    const { dx, dy } = gestureState
+    const absDx = Math.abs(dx)
+    const absDy = Math.abs(dy)
+  }
 
   handlePanResponderEnd(e, gestureState) {}
 
@@ -106,6 +90,14 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
     this.manuallySwipeRow(0)
   }
 
+  openLeftRow() {
+    // this.manuallySwipeRow(this.props.leftOpenValue)
+  }
+
+  openRightRow() {
+    // this.manuallySwipeRow(this.props.rightOpenValue)
+  }
+
   manuallySwipeRow(toValue) {
     if (toValue === 0) {
       this.props.onRowClose && this.props.onRowClose()
@@ -114,14 +106,8 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
     }
 
     // reset everything
+    this.swipeInitialX = null
     this.horizontalSwipeGestureBegan = false
-  }
-
-  renderBody() {
-    if (typeof this.props.body === 'function') {
-      return this.props.body()
-    }
-    return this.props.body
   }
 
   renderMainContent() {
@@ -134,14 +120,11 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
             zIndex: 2
           }}>
           {!this.props.list ? (
-            <ListItem list style={this.props.style}>
-              {this.renderBody()}
+            <ListItem list style={[this.props.style]}>
+              {this.props.body}
             </ListItem>
           ) : (
-            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-              {' '}
-              {this.renderBody()}
-            </View>
+            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>{this.props.body}</View>
           )}
         </View>
       )
@@ -152,16 +135,15 @@ class SwipeRow extends React.Component<ISwipeRowProps, any> {
           style={{
             zIndex: 2
           }}>
-          {!this.props.list ? (
-            <ListItem list style={this.props.style}>
-              {this.renderBody()}
-            </ListItem>
-          ) : (
-            <View style={[{ backgroundColor: '#FFF' }, this.props.style]}>
-              {' '}
-              {this.renderBody()}
-            </View>
-          )}
+          <View
+            style={[
+              {
+                backgroundColor: '#FFF'
+              },
+              this.props.style
+            ]}>
+            {this.props.body}
+          </View>
         </View>
       )
     }

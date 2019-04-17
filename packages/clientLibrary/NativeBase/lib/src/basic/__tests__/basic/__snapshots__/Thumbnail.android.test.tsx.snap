@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default shape thumbnail 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <image
+    name="Image"
+    resizeMode="Fill"
+    source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+    style={Object {}}
+  />
+  <image
+    name="Image"
+    resizeMode="Fill"
+    source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+    style={Object {}}
+  />
+  <image
+    name="Image"
+    resizeMode="Fill"
+    source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+    style={Object {}}
+  />
+</view>
+`;
+
+exports[`renders square shape thumbnail 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <image
+    name="Image"
+    resizeMode="Fill"
+    source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+    style={Object {}}
+  />
+  <image
+    name="Image"
+    resizeMode="Fill"
+    source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+    style={Object {}}
+  />
+  <image
+    name="Image"
+    resizeMode="Fill"
+    source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+    style={Object {}}
+  />
+</view>
+`;

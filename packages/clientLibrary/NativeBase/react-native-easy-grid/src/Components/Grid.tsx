@@ -3,9 +3,7 @@ import { View, TouchableOpacity, TouchableOpacityProps } from 'react-primitives'
 import computeProps from '../Utils/computeProps'
 import { Row } from './Row'
 
-export interface IGridProps extends TouchableOpacityProps {
-  style?: any
-}
+import { IGridProps } from './IComponents'
 
 export class Grid extends React.Component<IGridProps, any> {
   private _root: any
@@ -24,7 +22,7 @@ export class Grid extends React.Component<IGridProps, any> {
 
   ifRow() {
     var row = false
-    React.Children.forEach(this.props.children, function(child: any) {
+    React.Children.forEach(this.props.children, (child: any) => {
       if (child && child.type == Row) row = true
     })
     return row

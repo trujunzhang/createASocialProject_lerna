@@ -1,7 +1,12 @@
 import * as React from 'react'
-import { View } from 'react-primitives'
+// const React = require('react')
+// const ReactNative = require('react-native')
+const { Component } = React
+import { View, StyleSheet } from 'react-primitives'
 
-const StaticContainer = require('./StaticContainer')
+import { StaticContainer } from '@appBasic/Tabs/StaticContainer'
+
+// const StaticContainer = require('./StaticContainer')
 
 const SceneComponent = (Props) => {
   const { shouldUpdated, ...props } = Props

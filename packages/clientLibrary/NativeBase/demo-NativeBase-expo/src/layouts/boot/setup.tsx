@@ -1,33 +1,12 @@
 import * as React from 'react'
 import { StyleProvider } from '@app/native-base'
 
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { getThemeStyle } from '@app/nativebase-theme-components'
-import { vectorIcons } from './vectorIcons'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { getThemeStyle } from '@app/native-base'
 
-import {
-  IIconVectorVariables,
-  themeVariablesWithIconVector,
-  IKeyboardAwareScrollViewVariables,
-  generatorThemeVariablesForDemo
-} from '@app/native-base-variables'
+import { IThemeVariables, generatorForAppThemeVariables } from '@app/native-base' // variables
 
-const iconVectorVariable: IIconVectorVariables = {
-  iconRenderComponents: () => {
-    return vectorIcons
-  }
-}
-
-const keyboardAwareScrollViewVariables: IKeyboardAwareScrollViewVariables = {
-  getKeyboardAwareScrollView: () => {
-    return KeyboardAwareScrollView
-  }
-}
-
-export const platformVariables: themeVariablesWithIconVector = generatorThemeVariablesForDemo(
-  iconVectorVariable,
-  keyboardAwareScrollViewVariables
-)
+export const platformVariables: IThemeVariables = generatorForAppThemeVariables()
 
 export class Setup extends React.Component {
   render() {

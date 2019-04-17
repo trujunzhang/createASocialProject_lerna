@@ -1,11 +1,8 @@
 import * as React from 'react'
 import { StyleSheet, Text, View } from 'react-primitives'
-import { Swatch, colorList, textColorList } from '@app/universal-components'
 
 export const ColorListView = () => {
-  const views: any = Object.keys(colorList).map((color) => (
-    <Swatch name={color} hex={colorList[color]} textColor={textColorList[color]} key={color} />
-  ))
+  const views: any = Object.keys([]).map((color) => <View />)
 
   return (
     <React.Fragment>

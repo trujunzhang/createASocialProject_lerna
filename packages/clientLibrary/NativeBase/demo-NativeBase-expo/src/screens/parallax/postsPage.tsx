@@ -9,12 +9,12 @@ import {
   View,
   Text,
   IPageToolbarParams,
-  ListSwipeHelper,
   nbPageToolbarIcons,
   nbToolbarIcons,
   getToolbarNormalParams,
   ParallaxPageScrollLayout
 } from '@app/native-base'
+import { ListSwipeHelper } from '@app/tools'
 
 const window = Dimensions.get('window')
 

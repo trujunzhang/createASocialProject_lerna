@@ -1,6 +1,7 @@
+// var React = require('react')
 import * as React from 'react'
 
-class StaticContainer extends React.Component<any, any> {
+export class StaticContainer extends React.Component<any, any> {
   shouldComponentUpdate(nextProps: any): boolean {
     return !!nextProps.shouldUpdate
   }
@@ -14,5 +15,5 @@ class StaticContainer extends React.Component<any, any> {
   }
 }
 
-module.exports = StaticContainer
+// module.exports = StaticContainer;
 //export default StaticContainer;

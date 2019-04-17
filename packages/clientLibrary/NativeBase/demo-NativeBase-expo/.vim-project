@@ -1,0 +1,5 @@
+
+
+export interface IProps extends ViewProps {
+    style?: ReactNative.ViewStyle | Array<ReactNative.ViewStyle>
+}

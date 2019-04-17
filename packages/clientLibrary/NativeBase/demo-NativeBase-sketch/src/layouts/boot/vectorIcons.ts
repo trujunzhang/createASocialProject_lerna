@@ -14,16 +14,14 @@ import {
   Zocial
 } from '@app/react-sketch-vector-icons'
 
-// import * as crypto from 'styled-icons/crypto'
-// import * as Feather from 'styled-icons/feather'
-// import * as material from 'styled-icons/material'
-// import * as Octicons from 'styled-icons/octicons'
-// import * as typicons from 'styled-icons/typicons'
+import {
+  setCachDict,
+  CACHE_VECTOR_ICONS,
+  VectorIconsDictWithNull,
+  IVectorIconsDict
+} from '@app/tools'
 
-// import { feather as Feather, octicons as Octicons } from 'styled-icons'
-
-import { IVectorIcons } from '@app/native-base-variables'
-export const vectorIcons: IVectorIcons = {
+export const vectorIcons: IVectorIconsDict = {
   AntDesign,
   Entypo,
   EvilIcons,
@@ -37,4 +35,8 @@ export const vectorIcons: IVectorIcons = {
   Octicons,
   SimpleLineIcons,
   Zocial
+}
+
+export const setVectorIconsCachDict = () => {
+  setCachDict(CACHE_VECTOR_ICONS, vectorIcons)
 }

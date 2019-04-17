@@ -1,0 +1,1423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders block button 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Light
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Info
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Primary
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Warning
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Danger
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Dark
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders custom size button 1`] = `
+<view
+  name="View"
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Default Small
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success Default
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Dark large
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders disabled button 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Default
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Outline
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Rounded
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Custom
+      </text>
+    </view>
+  </view>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Block
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Full
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders full button 1`] = `
+<view
+  name="View"
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Light
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Info
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Primary
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Warning
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Danger
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Dark
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders icon button 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        ios-arrow-down
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        ios-arrow-up
+      </text>
+    </view>
+  </view>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        ios-trash
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        ios-trash
+      </text>
+    </view>
+  </view>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        ios-warning
+      </text>
+    </view>
+  </view>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        ios-alert
+      </text>
+    </view>
+  </view>
+  <view
+    name="TouchableOpacity: "
+  />
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        ios-cog
+      </text>
+    </view>
+  </view>
+  <view
+    name="TouchableOpacity: "
+  />
+</view>
+`;
+
+exports[`renders outline button 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Light
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Info
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Primary
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Warning
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Danger
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderBottomWidth": 1,
+        "borderLeftWidth": 1,
+        "borderRightWidth": 1,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+        "borderTopWidth": 1,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Dark
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders regular button 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Light
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Info
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Primary
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Warning
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Danger
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Dark
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders rounded button 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Light
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Info
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Primary
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Warning
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Danger
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Dark
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders transparent button 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Light
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Info
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Primary
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Warning
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Danger
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Dark
+      </text>
+    </view>
+  </view>
+</view>
+`;

@@ -5,5 +5,7 @@
 -/android/build
 -/android/app/build
 -/build
+-/dist
 -/production-cloud
 -/production-server
+-/src/icons

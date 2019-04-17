@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Toast Text style 1`] = `
+<view
+  name="View"
+  style={
+    Object {
+      "borderBottomLeftRadius": 2,
+      "borderBottomRightRadius": 2,
+      "borderTopLeftRadius": 2,
+      "borderTopRightRadius": 2,
+    }
+  }
+>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Toast
+    </text>
+  </view>
+</view>
+`;
+
+exports[`renders Toast Type 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Default Toast
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Success Toast
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Warning Toast
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Danger Toast
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Toast button style 1`] = `
+<view
+  name="View"
+  style={
+    Object {
+      "borderBottomLeftRadius": 2,
+      "borderBottomRightRadius": 2,
+      "borderTopLeftRadius": 2,
+      "borderTopRightRadius": 2,
+    }
+  }
+>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Toast
+    </text>
+  </view>
+</view>
+`;
+
+exports[`renders Toast position 1`] = `
+<view
+  name="keyboardAwareScrollView"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Top Toast
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={
+      Object {
+        "borderBottomLeftRadius": 2,
+        "borderBottomRightRadius": 2,
+        "borderTopLeftRadius": 2,
+        "borderTopRightRadius": 2,
+      }
+    }
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        Bottom Toast
+      </text>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Toast with duration 1`] = `
+<view
+  name="View"
+  style={
+    Object {
+      "borderBottomLeftRadius": 2,
+      "borderBottomRightRadius": 2,
+      "borderTopLeftRadius": 2,
+      "borderTopRightRadius": 2,
+    }
+  }
+>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Toast
+    </text>
+  </view>
+</view>
+`;
+
+exports[`renders default Toast 1`] = `
+<view
+  name="View"
+  style={
+    Object {
+      "borderBottomLeftRadius": 2,
+      "borderBottomRightRadius": 2,
+      "borderTopLeftRadius": 2,
+      "borderTopRightRadius": 2,
+    }
+  }
+>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Toast
+    </text>
+  </view>
+</view>
+`;

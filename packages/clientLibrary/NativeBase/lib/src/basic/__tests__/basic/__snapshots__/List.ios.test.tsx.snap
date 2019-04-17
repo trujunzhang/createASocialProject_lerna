@@ -1,0 +1,1639 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Basic List 1`] = `
+<view
+  name="View"
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Simon Mignolet
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Nathaniel Clyne
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Dejan Lovren
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Mama Sakho
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Alberto Moreno
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Emre Can
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Joe Allen
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Phil Coutinho
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem avatar 1`] = `
+<view
+  name="View"
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <image
+          name="Image"
+          resizeMode="Fill"
+          source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+          style={Object {}}
+        />
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Kumar Pratik
+          </text>
+        </view>
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Its time to build a difference . .
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              View
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <image
+          name="Image"
+          resizeMode="Fill"
+          source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+          style={Object {}}
+        />
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Kumar Sanket
+          </text>
+        </view>
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            One needs courage to be happy and smiling all time . . 
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              View
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem icon 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "backgroundColor": "#FF9501",
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              plane
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Airplane Mode
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      />
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "backgroundColor": "#007AFF",
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-bluetooth
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Bluetooth
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            On
+          </text>
+        </view>
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "backgroundColor": "#4CDA64",
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-phone-portrait
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Mobile Data
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="TouchableOpacity: "
+        />
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "backgroundColor": "#FD3C2D",
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-notifications
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Notifications
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-arrow-forward
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "backgroundColor": "#5855D6",
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-moon
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Do Not Disturb
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Yes
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "backgroundColor": "#8F8E93",
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              ios-cog
+            </text>
+          </view>
+        </view>
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Software Update
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "backgroundColor": "#FD3C2D",
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              2
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem itemDivider 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          A
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Aaron Bennet
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Ali Connors
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Angana Ghosh
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          B
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Bradley Horowitz
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Brian Swetland
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Brittany Kelso
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem itemHeader 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          COMEDY
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Hangover
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Horrible Bosses
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Cop Out
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          HORROR
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          The Evil Dead
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Residential Evil
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Conjuring
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem noIndent 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={
+        Object {
+          "backgroundColor": "#cde1f9",
+        }
+      }
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Caroline Aaron
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Urbino Cendre
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Lee Allen
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem selected 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Caroline Aaron
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Urbino Cendre
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Lee Allen
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem separator 1`] = `
+<view
+  name="View"
+  style={Object {}}
+>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        MIDFIELD
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Caroline Aaron
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Urbino Cendre
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Lee Allen
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <text
+        style={Object {}}
+      >
+        MIDFIELD
+      </text>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Caroline Aaron
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Urbino Cendre
+        </text>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={Object {}}
+      >
+        <text
+          style={Object {}}
+        >
+          Lee Allen
+        </text>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders ListItem thumbnail 1`] = `
+<view
+  name="View"
+>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <image
+          name="Image"
+          resizeMode="Fill"
+          source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+          style={Object {}}
+        />
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Kumar Pratik
+          </text>
+        </view>
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Its time to build a difference . .
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              View
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    name="View"
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="left"
+        style={Object {}}
+      >
+        <image
+          name="Image"
+          resizeMode="Fill"
+          source="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg=="
+          style={Object {}}
+        />
+      </view>
+      <view
+        name="body"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Kumar Sanket
+          </text>
+        </view>
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            One needs courage to be happy and smiling all time . . 
+          </text>
+        </view>
+      </view>
+      <view
+        name="right"
+        style={Object {}}
+      >
+        <view
+          name="View"
+          style={
+            Object {
+              "borderBottomLeftRadius": 2,
+              "borderBottomRightRadius": 2,
+              "borderTopLeftRadius": 2,
+              "borderTopRightRadius": 2,
+            }
+          }
+        >
+          <view
+            name="View"
+            style={Object {}}
+          >
+            <text
+              style={Object {}}
+            >
+              View
+            </text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;

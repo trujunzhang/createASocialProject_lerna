@@ -1,68 +1,62 @@
 import * as React from 'react'
-
 import * as PropTypes from 'prop-types'
-import computeProps from '../../utils/computeProps'
+import computeProps from '@appUtils/computeProps'
 // import Button from './../Button';
 import {
   Platform,
-  // Animated,
+  Animated,
   Dimensions,
   TouchableOpacity,
   TouchableNativeFeedback,
   View,
-  ViewStyle,
   StyleSheet
 } from 'react-primitives'
-import { Icon } from '../Icon'
-import { IconNB } from '../IconNB'
-import { Button } from '../Button'
-import { platformVariables as variables } from '@app/native-base-variables'
+import { Icon } from '@appBasic/Icon'
+import { IconNB } from '@appBasic/IconNB'
+import { Button } from '@appBasic/Button'
+
+import { IThemeVariables } from '@app/tools' // typings
+import { platformVariables as variables } from '@appVariables/theme/variables/platform' // variables // [variables]
+
 import { LodashUtils as _ } from '@app/tools'
-import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
-import { connectStyle } from '@app/native-base-shoutem-theme'
+import { mapPropsToStyleNames } from '@app/tools'
+import { connectStyle } from 'native-base-shoutem-theme'
 
-// const { height, width } = Dimensions.get('window')
+const { height, width } = Dimensions.get('window')
 
-// const AnimatedFab = Animated.createAnimatedComponent(Button)
+const AnimatedFab = Animated.createAnimatedComponent(Button)
 
-export interface IFabProps {
-  active?: boolean
-  direction?: 'down' | 'up' | 'left' | 'right'
-  containerStyle?: ViewStyle | Array<ViewStyle>
-  onPress?: () => void
-  position?: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
-  style?: ViewStyle
-}
-class Fab extends React.Component<IFabProps, any> {
+class Fab extends React.Component<any, any> {
+  // props: Animated.props & {
+  //   pos?: string
+  //   top?: number
+  //   left?: number
+  //   right?: number
+  //   bottom?: number
+  // }
+
   private _root: any
   private containerHeight: any
   private containerWidth: any
   private buttonScale: any
   private activeTimer: any
 
-  // props: Animated.props & {
-  //   position: ?string
-  // };
-
   // state: {
-  //   buttons: void | React$Element<Button>,
+  //   buttons: void | React$Element<Button>
   //   active: boolean
-  // };
+  // }
   constructor(props) {
     super(props)
-    // this.containerHeight = new Animated.Value(56)
-    // this.containerWidth = new Animated.Value(0)
-    // this.buttonScale = new Animated.Value(0)
+    this.containerHeight = new Animated.Value(56)
+    this.containerWidth = new Animated.Value(0)
+    this.buttonScale = new Animated.Value(0)
     this.state = {
       buttons: undefined,
       active: false
     }
   }
 
-  fabTopValue(
-    pos
-    // ): ?{ top: ?number, bottom: ?number, left: ?number, right: ?number } {
-  ) {
+  fabTopValue(pos: any): any {
     if (pos === 'topLeft') {
       return {
         top: 20,
@@ -92,15 +86,9 @@ class Fab extends React.Component<IFabProps, any> {
         right: 20
       }
     }
-    return {
-      top: undefined,
-      bottom: undefined,
-      left: undefined,
-      right: undefined
-    }
   }
 
-  fabOtherBtns(direction, i): any {
+  fabOtherBtns(direction: any, i?: any): any {
     if (direction === 'up') {
       return {
         top: undefined,
@@ -176,9 +164,9 @@ class Fab extends React.Component<IFabProps, any> {
         width: 40,
         left: 7,
         borderRadius: 20,
-        // transform: this.state.active
-        //   ? [{ scale: new Animated.Value(1) }]
-        //   : [{ scale: this.buttonScale }],
+        transform: this.state.active
+          ? [{ scale: new Animated.Value(1) }]
+          : [{ scale: this.buttonScale }],
         marginBottom: 10,
         backgroundColor: 'blue'
       }
@@ -215,7 +203,7 @@ class Fab extends React.Component<IFabProps, any> {
 
     return _.merge(this.getInitialStyle().buttonStyle, StyleSheet.flatten(child.props.style), type)
   }
-  prepareButtonProps(child: any, index: number): any {
+  prepareButtonProps(child?: any, i?: any): any {
     var inp = _.clone(child.props)
     delete inp.style
 
@@ -263,51 +251,49 @@ class Fab extends React.Component<IFabProps, any> {
   }
 
   renderButtons() {
-    return null
-  }
-  // renderButtonsxxx() {
-  //   let childrenArray = React.Children.toArray(this.props.children)
-  //   // let icon = _.remove(childrenArray, item => {
-  //   // 	if (item.type == Icon) {
-  //   // 		return true;
-  //   // 	}
-  //   // });
+    let childrenArray = React.Children.toArray(this.props.children)
+    // let icon = _.remove(childrenArray, item => {
+    // 	if (item.type == Icon) {
+    // 		return true;
+    // 	}
+    // });
 
-  //   let newChildren: any = []
-  //   {
-  //     childrenArray.slice(1).map((child: any, i) => {
-  //       newChildren.push(
-  //         <AnimatedFab
-  //           style={this.getOtherButtonStyle(child, i)}
-  //           {...this.prepareButtonProps(child, i)}
-  //           fabButton={true}
-  //           key={i}>
-  //           {child.props.children}
-  //         </AnimatedFab>
-  //       )
-  //     })
-  //   }
-  //   return newChildren
-  // }
+    let newChildren: any = []
+
+    {
+      childrenArray.slice(1).map((child: any, i) => {
+        newChildren.push(
+          <AnimatedFab
+            style={this.getOtherButtonStyle(child, i)}
+            {...this.prepareButtonProps(child, i)}
+            fabButton={true}
+            key={i}>
+            {child.props.children}
+          </AnimatedFab>
+        )
+      })
+    }
+    return newChildren
+  }
   upAnimate() {
-    // if (!this.props.active) {
-    //   Animated.spring(this.containerHeight, {
-    //     toValue: this.state.buttons * 51.3 + 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 1
-    //   }).start()
-    // } else {
-    //   this.setState({
-    //     active: false
-    //   })
-    //   Animated.spring(this.containerHeight, {
-    //     toValue: 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 0
-    //   }).start()
-    // }
+    if (!this.props.active) {
+      Animated.spring(this.containerHeight, {
+        toValue: this.state.buttons * 51.3 + 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 1
+      }).start()
+    } else {
+      this.setState({
+        active: false
+      })
+      Animated.spring(this.containerHeight, {
+        toValue: 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 0
+      }).start()
+    }
   }
   // componentWillReceiveProps(nextProps) {
   // 	const { props: { direction, position } } = this;
@@ -327,66 +313,66 @@ class Fab extends React.Component<IFabProps, any> {
   // }
 
   leftAnimate() {
-    // if (!this.props.active) {
-    //   Animated.spring(this.containerWidth, {
-    //     toValue: this.state.buttons * 51.3 + 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 1
-    //   }).start()
-    // } else {
-    //   this.setState({
-    //     active: false
-    //   })
-    //   Animated.spring(this.containerHeight, {
-    //     toValue: 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 0
-    //   }).start()
-    // }
+    if (!this.props.active) {
+      Animated.spring(this.containerWidth, {
+        toValue: this.state.buttons * 51.3 + 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 1
+      }).start()
+    } else {
+      this.setState({
+        active: false
+      })
+      Animated.spring(this.containerHeight, {
+        toValue: 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 0
+      }).start()
+    }
   }
 
   rightAnimate() {
-    // if (!this.props.active) {
-    //   Animated.spring(this.containerWidth, {
-    //     toValue: this.state.buttons * 51.3 + 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 1
-    //   }).start()
-    // } else {
-    //   this.setState({
-    //     active: false
-    //   })
-    //   Animated.spring(this.containerHeight, {
-    //     toValue: 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 0
-    //   }).start()
-    // }
+    if (!this.props.active) {
+      Animated.spring(this.containerWidth, {
+        toValue: this.state.buttons * 51.3 + 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 1
+      }).start()
+    } else {
+      this.setState({
+        active: false
+      })
+      Animated.spring(this.containerHeight, {
+        toValue: 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 0
+      }).start()
+    }
   }
 
   downAnimate() {
-    // if (!this.props.active) {
-    //   Animated.spring(this.containerHeight, {
-    //     toValue: 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 1
-    //   }).start()
-    // } else {
-    //   this.setState({
-    //     active: false
-    //   })
-    //   Animated.spring(this.containerHeight, {
-    //     toValue: 56
-    //   }).start()
-    //   Animated.spring(this.buttonScale, {
-    //     toValue: 0
-    //   }).start()
-    // }
+    if (!this.props.active) {
+      Animated.spring(this.containerHeight, {
+        toValue: 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 1
+      }).start()
+    } else {
+      this.setState({
+        active: false
+      })
+      Animated.spring(this.containerHeight, {
+        toValue: 56
+      }).start()
+      Animated.spring(this.buttonScale, {
+        toValue: 0
+      }).start()
+    }
   }
   _animate() {
     const {
@@ -424,25 +410,26 @@ class Fab extends React.Component<IFabProps, any> {
       props: { active }
     } = this
 
-    return null
-
-    // return (
-    //   <Animated.View style={this.getContainerStyle()}>
-    //     {this.renderButtons()}
-    //     {Platform.OS === 'ios' || variables.androidRipple === false || Platform['Version'] <= 21 ? (
-    //       <TouchableOpacity
-    //         onPress={() => this.fabOnPress()}
-    //         {...this.prepareFabProps()}
-    //         activeOpacity={1}>
-    //         {this.renderFab()}
-    //       </TouchableOpacity>
-    //     ) : (
-    //         <TouchableNativeFeedback onPress={() => this.fabOnPress()} {...this.prepareFabProps()}>
-    //           <View style={[this.getInitialStyle().fab, this.props.style]}>{this.renderFab()}</View>
-    //         </TouchableNativeFeedback>
-    //       )}
-    //   </Animated.View>
-    // )
+    return (
+      <Animated.View style={this.getContainerStyle()}>
+        {this.renderButtons()}
+        {Platform.OS === 'ios' || variables.androidRipple === false || Platform['Version'] <= 21 ? (
+          <TouchableOpacity
+            onPress={() => this.fabOnPress()}
+            {...this.prepareFabProps()}
+            activeOpacity={1}>
+            {this.renderFab()}
+          </TouchableOpacity>
+        ) : (
+          <TouchableNativeFeedback
+            onPress={() => this.fabOnPress()}
+            background={TouchableNativeFeedback.Ripple(variables.androidRippleColor, false)}
+            {...this.prepareFabProps()}>
+            <View style={[this.getInitialStyle().fab, this.props.style]}>{this.renderFab()}</View>
+          </TouchableNativeFeedback>
+        )}
+      </Animated.View>
+    )
   }
 }
 const StyledFab = connectStyle('NativeBase.Fab', {}, mapPropsToStyleNames)(Fab)

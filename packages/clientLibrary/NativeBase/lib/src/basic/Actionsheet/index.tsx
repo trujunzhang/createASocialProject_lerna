@@ -6,28 +6,23 @@ import {
   Platform,
   ActionSheetIOS,
   TouchableOpacity,
-  ViewProps,
-  ViewStyle,
   FlatList,
   Dimensions
 } from 'react-primitives'
-import { connectStyle } from '@app/native-base-shoutem-theme'
-import { Text } from '../Text'
-import { Button } from '../Button'
-import { ViewNB } from '../View'
-import { Icon } from '../Icon'
-import { Left } from '../Left'
-import { Right } from '../Right'
-import { Body } from '../Body'
-import { ListItem } from '../ListItem'
-import mapPropsToStyleNames from '../../utils/mapPropsToStyleNames'
+import { connectStyle } from 'native-base-shoutem-theme'
+import { Text } from '@appBasic/Text'
+import { Button } from '@appBasic/Button'
+import { ViewNB } from '@appBasic/View'
+import { Icon } from '@appBasic/Icon'
+import { Left } from '@appBasic/Left'
+import { Right } from '@appBasic/Right'
+import { Body } from '@appBasic/Body'
+import { ListItem } from '@appBasic/ListItem'
+import { mapPropsToStyleNames } from '@app/tools'
 
-export interface IActionSheetContainerProps extends ViewProps {
-  style?: ViewStyle | Array<ViewStyle>
-  autoHide: boolean
-  duration: number
-}
-class ActionSheetContainer extends React.Component<IActionSheetContainerProps | any, any> {
+import { ActionSheetContainerProps } from './Actionsheet'
+
+class ActionSheetContainer extends React.Component<ActionSheetContainerProps, any> {
   constructor(props) {
     super(props)
     this.state = {
@@ -102,7 +97,7 @@ class ActionSheetContainer extends React.Component<IActionSheetContainerProps | 
             style={{
               backgroundColor: '#fff',
               minHeight: 56,
-              height: this.state.length * 80,
+              height: this.state.items.length * 80,
               maxHeight: Dimensions.get('window').height / 2,
               padding: 15,
               elevation: 4
@@ -115,8 +110,7 @@ class ActionSheetContainer extends React.Component<IActionSheetContainerProps | 
               }}
               data={this.state.items}
               keyExtractor={(item, index) => String(index)}
-              renderItem={(props: any) => {
-                const { index, item } = props
+              renderItem={({ index, item }: any) => {
                 return typeof this.state.items[0] === 'string' ? (
                   <ListItem
                     onPress={() => {
@@ -176,4 +170,6 @@ const StyledActionSheetContainer = connectStyle(
   mapPropsToStyleNames
 )(ActionSheetContainer)
 
-export { StyledActionSheetContainer as ActionSheetContainer }
+const ActionSheet = StyledActionSheetContainer
+
+export { ActionSheet, StyledActionSheetContainer as ActionSheetContainer }

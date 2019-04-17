@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ActionSheet 1`] = `
+<view
+  name="View"
+  style={
+    Object {
+      "borderBottomLeftRadius": 2,
+      "borderBottomRightRadius": 2,
+      "borderTopLeftRadius": 2,
+      "borderTopRightRadius": 2,
+    }
+  }
+>
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <text
+      style={Object {}}
+    >
+      Actionsheet
+    </text>
+  </view>
+</view>
+`;

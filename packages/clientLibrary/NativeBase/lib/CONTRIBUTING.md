@@ -149,7 +149,7 @@ Check the procedure to setup the Development Environment for NativeBase.
 	```
 	npm install
 
-	npm run transpile
+	yarn transpile
 	```
   
 -	Revert back the changes done to `package.json`.

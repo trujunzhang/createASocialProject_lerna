@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Footer with Badge 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="TouchableOpacity: "
+      />
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Footer with Icon and Text 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="TouchableOpacity: "
+      />
+      <view
+        name="TouchableOpacity: "
+      />
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders Footer with Icons 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-apps
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-camera
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-compass
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            ios-contact
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
+
+exports[`renders basic Footer 1`] = `
+<view
+  name="container"
+  style={Object {}}
+>
+  <view
+    name="header"
+  >
+    <view
+      name="statusBar"
+    />
+    <view
+      name="header-other"
+      style={Object {}}
+    />
+  </view>
+  <view
+    name="keyboardAwareScrollView"
+    style={Object {}}
+  />
+  <view
+    name="View"
+    style={Object {}}
+  >
+    <view
+      name="View"
+      style={Object {}}
+    >
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Apps
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Camera
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Navigate
+          </text>
+        </view>
+      </view>
+      <view
+        name="View"
+        style={
+          Object {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2,
+          }
+        }
+      >
+        <view
+          name="View"
+          style={Object {}}
+        >
+          <text
+            style={Object {}}
+          >
+            Contact
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+`;
