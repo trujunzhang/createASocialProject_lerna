@@ -26,4 +26,5 @@ Picker.Item = createReactClass({
   }
 })
 
+// export { StyledPickerNB as PickerNB }
 export { Picker }

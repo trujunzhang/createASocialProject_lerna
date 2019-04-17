@@ -63,9 +63,9 @@
             "  *****  The following is demo sketch****": "",
             "demo.sketch.render": "lerna run render --scope=form-validation --stream",
             "  *****  The following is demo nativebase ****": "",
-            "demo.nativebase.cache.reset": "watchman watch-del-all && yarn cache clean && lerna run reset:cache --stream",
+            "demo.nativebase.expo:cache.reset": "watchman watch-del-all && yarn cache clean && lerna run reset:cache --stream",
             "demo.nativebase.expo:ios": "yarn ready.ios && lerna run expo:ios --scope=expo-nativebase-demo --stream",
             "demo.nativebase.expo:android": "yarn ready.android && lerna run expo:android --scope=expo-nativebase-demo --stream",
-            "demo.nativebase.sketch": "lerna run render:watch --scope=sketch-nativebase-demo --stream"
+            "demo.nativebase.expo:sketch": "lerna run render:watch --scope=sketch-nativebase-demo --stream"
       }
 }

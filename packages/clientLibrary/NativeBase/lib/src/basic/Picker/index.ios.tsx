@@ -1,7 +1,8 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import createReactClass from 'create-react-class'
-import { Picker, Modal, View, FlatList, Dimensions } from 'react-primitives'
+import {  Modal, View, FlatList, Dimensions } from 'react-primitives'
+import { Picker as RNPicker } from 'react-primitives'
 import { LodashUtils as _ } from '@app/tools'
 import { Text } from '@appBasic/Text'
 import { List } from '@appBasic/List'
@@ -225,7 +226,9 @@ class PickerNB extends React.Component<any, any> {
   }
 }
 
-;(PickerNB as any).Item = createReactClass({
+const StyledPickerNB = connectStyle('NativeBase.PickerNB', {}, mapPropsToStyleNames)(PickerNB)
+const Picker: any = StyledPickerNB
+Picker.Item = createReactClass({
   render() {
     return <Picker.Item {...this.props()} />
   }
@@ -236,6 +239,5 @@ class PickerNB extends React.Component<any, any> {
 // renderButton: PropTypes.func
 // }
 
-const StyledPickerNB = connectStyle('NativeBase.PickerNB', {}, mapPropsToStyleNames)(PickerNB)
-
-export { StyledPickerNB as PickerNB }
+// export { StyledPickerNB as PickerNB }
+export { Picker }
