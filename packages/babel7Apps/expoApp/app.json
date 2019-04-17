@@ -7,10 +7,10 @@
     "sdkVersion": "32.0.0",
     "version": "1.0.1",
     "primaryColor": "#fff",
-    "icon": "./static/icons/app-icon.png",
+    "icon": "./assets/app-icon.png",
     "splash": {
       "resizeMode": "contain",
-      "image": "./static/icons/loading-icon.png"
+      "image": "./assets/app-icon.png"
     },
     "packagerOpts": {
       "assetExts": [

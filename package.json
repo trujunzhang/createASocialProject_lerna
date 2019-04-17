@@ -85,7 +85,9 @@
             "demo.nativebase.expo:cache.reset": "watchman watch-del-all && yarn cache clean && lerna run reset:cache --stream",
             "demo.nativebase.expo:ios": "yarn ready.ios && lerna run expo:ios --scope=expo-nativebase-demo --stream",
             "demo.nativebase.expo:android": "yarn ready.android && lerna run expo:android --scope=expo-nativebase-demo --stream",
-            "demo.nativebase.expo:sketch": "lerna run render:watch --scope=sketch-nativebase-demo --stream"
+            "demo.nativebase.expo:sketch": "lerna run render:watch --scope=sketch-nativebase-demo --stream",
+            "  *****  The following is for babel7 demos ****": "",
+            "babel7-client-expo:ios": "lerna run expo:ios --scope=babel7-client-expo --stream"
       },
      "workspaces": [
     "packages/globalLibrary/appTools/*",
