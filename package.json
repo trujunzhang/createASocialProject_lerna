@@ -88,7 +88,8 @@
             "demo.nativebase.expo:sketch": "lerna run render:watch --scope=sketch-nativebase-demo --stream"
       },
      "workspaces": [
-    "packages/globalLibrary/appTools/*"
+    "packages/globalLibrary/appTools/*",
+    "packages/universalLibrary/react-primitives"
   ]
 
 }

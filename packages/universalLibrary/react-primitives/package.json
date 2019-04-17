@@ -16,11 +16,10 @@
         "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
         "build:all": "yarn build:types && yarn build:js",
         "build-lib": "yarn build:clean && yarn build:all",
-        "postinstall.pending": "yarn build-lib",
-        "build.current.pending": "yarn build:js"
+        "postinstall": "yarn build-lib",
+        "build.current": "yarn build-lib"
     },
     "dependencies": {
-        "@app/tools": "*",
         "animated": "0.2.2",
         "asap": "2.0.5",
         "create-react-class": "15.6.2",

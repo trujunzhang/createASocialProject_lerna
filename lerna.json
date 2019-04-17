@@ -7,7 +7,8 @@
     "packages/appClient"
   ],
   "packages": [
-    "packages/globalLibrary/appTools/*"
+    "packages/globalLibrary/appTools/*",
+    "packages/universalLibrary/react-primitives"
   ],
   "packages.now": [
     "packages/globalLibrary/**/*",
