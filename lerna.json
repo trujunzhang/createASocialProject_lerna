@@ -11,7 +11,8 @@
     "packages/vendors/**/lib",
     "packages/globalLibrary/**/*",
     "packages/appLibrary/**/*",
-    "packages/clientLibrary/**/*"
+    "packages/clientLibrary/**/*",
+    "packages/appClient"
   ],
   "useWorkspaces": false,
   "npmClient": "yarn",

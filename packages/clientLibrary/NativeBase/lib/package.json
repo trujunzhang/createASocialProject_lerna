@@ -20,7 +20,7 @@
         "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
         "build:all": "yarn build:types && yarn build:js",
         "build-lib": "yarn build:clean && yarn build:all",
-        "postinstall.pending": "yarn build-lib",
+        "postinstall": "yarn build-lib",
         "build.current.pending": "yarn build-lib"
     },
     "dependencies": {

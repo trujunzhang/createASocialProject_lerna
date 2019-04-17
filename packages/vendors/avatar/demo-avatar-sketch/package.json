@@ -1,9 +1,10 @@
 {
-    "name": "sketch-nativebase-demo",
+    "name": "demo-avatar-sketch",
     "version": "2.0.0",
+    "author": "Phuc Nguyen Hoang",
     "license": "MIT",
     "skpm": {
-        "main": "nativebase.sketchplugin",
+        "main": "avatar.sketchplugin",
         "manifest": "./manifest.json"
     },
     "scripts": {
@@ -13,12 +14,14 @@
         "ready.assets.pending": "run-s  ready:*",
         "build": "yarn typescript:once && skpm-build",
         "watch": "skpm-build --watch & yarn typescript",
+        "copy:expo-components:reset": "rm -rf src/components",
+        "copy:expo-components": "cpx \"../demo-avatar-expo/src/components/**/*.*\" ./src/components",
+        "render:pre": "yarn copy:expo-components:reset && yarn copy:expo-components",
         "render": "skpm-build --watch --run & yarn typescript",
         "render:once": "yarn typescript:once && skpm-build --run",
-        "render:watch": "skpm-build --watch --run",
-        "render:all.now": "yarn render:once",
+        "render:all": "yarn render:pre && yarn render:once",
         "build:all": "yarn build && skpm-link",
-        "postinstall": "yarn build:all",
+        "postinstall.peding": "yarn build:all",
         "typescript.last": "tsc --watch",
         "typescript": "echo 'typescript watch'",
         "typescript:once": "tsc",
@@ -28,10 +31,9 @@
     },
     "dependencies": {
         "react-primitives": "*",
-        "@app/react-sketch-vector-icons": "*",
+        "@app/avatar": "*",
         "@app/tools": "*",
-        "@app/native-base": "*",
-        "@app/nb-demo-universal-components": "*",
+        "react-native-easy-grid": "*",
         "@sentry/browser": "4.6.4",
         "@types/react-dom": "16.0.11",
         "react-dom": "16.7.0",
