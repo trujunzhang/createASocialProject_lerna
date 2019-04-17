@@ -7,14 +7,17 @@
     "packages/appClient"
   ],
   "packages": [
+    "packages/globalLibrary/appTools/*"
+  ],
+  "packages.now": [
+    "packages/globalLibrary/**/*",
     "packages/universalLibrary/**",
     "packages/vendors/**/lib",
-    "packages/globalLibrary/**/*",
     "packages/appLibrary/**/*",
     "packages/clientLibrary/**/*",
     "packages/appClient"
   ],
-  "useWorkspaces": false,
+  "useWorkspaces": true,
   "npmClient": "yarn",
   "version": "1.0.0"
 }

@@ -1,4 +1,4 @@
-import { LodashUtils as _ } from '@appUtils/lodashUtils'
+import { LodashUtils as _ } from '../../utils/lodashUtils'
 
 import * as IphonesResource from '../resources/apple/iPhone'
 

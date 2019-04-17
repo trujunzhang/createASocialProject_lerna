@@ -17,7 +17,7 @@
         "build:reset": "rm -rf dist",
         "build:clean": "yarn build:reset",
         "build:types": "rm -rf dist/__types__ && tsc --emitDeclarationOnly -p tsconfig.lib.json",
-        "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
+        "build:js": "babel  --config-file ../../../babel.config.js  src --out-dir dist --extensions \".ts,.tsx\" --ignore \"**/__tests__\" --source-maps inline",
         "build:all": "yarn build:types && yarn build:js",
         "build-lib": "yarn build:clean && yarn build:all",
         "postinstall": "yarn build-lib",
