@@ -1,0 +1,17 @@
+topLevelCommentId
+
+import { I18nextProvider } from 'react-i18next'
+
+import { I18nextProvider } from '@app/tools'
+
+import { TranslationFunction, withNamespaces} from '@app/tools'
+
+import i18next from 'i18next' // Without "* as" here.
+import { withNamespaces } from 'react-i18next'
+
+import { TranslationFunction } from 'i18next'
+
+  static getDetailedMaintainTaskLink(task) {
+
+
+// PagesLinker 

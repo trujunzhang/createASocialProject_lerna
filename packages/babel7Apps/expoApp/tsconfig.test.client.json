@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "jsx": "react", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+  },
+  "exclude": [
+    "production-server/**",
+    "production-cloud/**",
+    ".next",
+    ".check",
+    "config",
+    "pages",
+    "static",
+    "styles"
+  ]
+}

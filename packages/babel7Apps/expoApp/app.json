@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Politicl",
+    "description": "",
+    "slug": "Politicl",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "version": "1.0.1",
+    "primaryColor": "#fff",
+    "icon": "./static/icons/app-icon.png",
+    "splash": {
+      "resizeMode": "contain",
+      "image": "./static/icons/loading-icon.png"
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "ttf",
+        "otf"
+      ]
+    },
+    "facebookScheme": "fb185174771986249",
+    "facebookAppId": "185174771986249",
+    "facebookDisplayName": "Politicl",
+    "android": {
+      "package": "com.app.politicl",
+      "versionCode": 7
+    },
+    "ios": {
+      "supportsTablet": true,
+      "loadJSInBackgroundExperimental": true,
+      "bundleIdentifier": "com.app.politicl",
+      "buildNumber": "7"
+    },
+    "orientation": "portrait"
+  }
+}

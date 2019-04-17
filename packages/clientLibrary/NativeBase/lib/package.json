@@ -6,7 +6,7 @@
     "license": "Apache-2.0",
     "private": false,
     "main": "./src/index.ts",
-    "types": "dist/__types__/index.d.ts",
+    "types.pending": "dist/__types__/index.d.ts",
     "scripts": {
         "depenence.update": "ncu -u",
         "fix": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",

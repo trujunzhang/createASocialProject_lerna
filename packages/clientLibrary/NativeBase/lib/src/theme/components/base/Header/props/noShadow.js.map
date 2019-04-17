@@ -1,0 +1,1 @@
+{"version":3,"file":"noShadow.js","sourceRoot":"","sources":["noShadow.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU,aAAa,CAAC,SAA0B,EAAE,QAAQ,EAAE,aAAa;IAC/E,OAAO;QACL,SAAS,EAAE,CAAC;QACZ,WAAW,EAAE,IAAI;QACjB,YAAY,EAAE,IAAI;QAClB,YAAY,EAAE,IAAI;QAClB,aAAa,EAAE,IAAI;KACpB,CAAA;AACH,CAAC"}

@@ -1,0 +1,34 @@
+{
+    "name": "babel7-client-expo",
+    "version": "2.0.0",
+    "license": "MIT",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+        "reset:cache": "expo r -c",
+        "rm.assets": "rm -rf @types",
+        "ready.assets": "run-s  ready:*",
+        "ready:definitive": "cpx \"../../globalLibrary/appDefinitive/@types/**/*.*\" ./@types",
+        "ready:copy_static": "cpx \"../../appWeb/static/**/*.*\" ./static",
+        "expo:android:hashes": "expo fetch:android:hashes",
+        "expo:publish": "expo publish",
+        "expo:start": " expo start",
+        "expo:android": " expo start --android",
+        "expo:ios": " expo start --ios",
+        "fix": "run-s fix:*",
+        "fix:prettier": "prettier --no-semi --single-quote --write '**/*.ts{,x}'",
+        "postinstall": "rndebugger-open --expo"
+    },
+    "dependencies": {
+        "@types/react": "16.4.8",
+        "@types/react-native": "0.57.27",
+        "react": "16.5.0",
+        "react-native": "file:///Users/djzhang/Documents/Organizations/TERMS/Expo/sdk/sdk-32.0.0.tar.gz",
+        "expo": "32.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "11.10.4",
+        "schedule": "0.4.0",
+        "babel-preset-expo": "5.0.0",
+        "react-native-debugger-open": "0.3.17"
+    }
+}

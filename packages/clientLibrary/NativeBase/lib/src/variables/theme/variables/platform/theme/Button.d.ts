@@ -1,0 +1,11 @@
+import { IButtonVariables, IButtonColorVariables, IButtonFuncVariables } from '@app/tools';
+export declare const brandPrimary: string;
+export declare const brandInfo = "#62B1F6";
+export declare const brandSuccess = "#5cb85c";
+export declare const brandDanger = "#d9534f";
+export declare const brandWarning = "#f0ad4e";
+export declare const brandDark = "#000";
+export declare const brandLight = "#f4f4f4";
+export declare const buttonVariables: IButtonVariables;
+export declare const buttonColorVariables: IButtonColorVariables;
+export declare const buttonFuncVariables: IButtonFuncVariables;

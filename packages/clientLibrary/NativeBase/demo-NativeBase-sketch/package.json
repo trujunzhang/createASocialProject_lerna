@@ -27,11 +27,6 @@
         "build.current.pending": "yarn build:all"
     },
     "dependencies": {
-        "react-primitives": "*",
-        "@app/react-sketch-vector-icons": "*",
-        "@app/tools": "*",
-        "@app/native-base": "*",
-        "@app/nb-demo-universal-components": "*",
         "@sentry/browser": "4.6.4",
         "@types/react-dom": "16.0.11",
         "react-dom": "16.7.0",

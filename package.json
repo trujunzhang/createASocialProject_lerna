@@ -94,7 +94,8 @@
     "packages/clientLibrary/NativeBase/native-base-shoutem-theme",
     "packages/clientLibrary/NativeBase/react-native-easy-grid",
     "packages/clientLibrary/NativeBase/lib",
-    "packages/clientLibrary/NativeBase/demo-NativeBase-SharedComps"
+    "packages/clientLibrary/NativeBase/demo-NativeBase-SharedComps",
+    "packages/babel7Apps/expoApp"
   ]
 
 }

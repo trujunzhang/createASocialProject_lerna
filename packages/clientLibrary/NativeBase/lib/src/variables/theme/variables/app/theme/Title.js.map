@@ -1,0 +1,1 @@
+{"version":3,"file":"Title.js","sourceRoot":"","sources":["Title.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,wBAAwB,EAAE,MAAM,iBAAiB,CAAA;AAE1D,MAAM,CAAC,MAAM,cAAc,GAAoB;IAC7C,QAAQ;IACR,eAAe,EAAE,wBAAwB,CAAC,eAAe;IAEzD,aAAa,EAAE,EAAE;IACjB,cAAc,EAAE,MAAM;IACtB,gBAAgB,EAAE,EAAE;IACpB,aAAa,EAAE,MAAM;CACtB,CAAA"}
